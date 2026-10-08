@@ -6,6 +6,8 @@
 
 ## 从这里开始
 
+版本源码固定为 [`v0.1.0`](https://github.com/kimihiro-dev/innodb-go-reader/tree/v0.1.0)；[发布说明](docs/releases/v0.1.0.md) · [多平台编译与手动发布](docs/RELEASING.md)。
+
 使用命令行工具请先读 [命令行使用指南](docs/CLI.md)：七个命令的功能、参数、可复制示例、查询/分区清单、导出格式与失败处理。
 
 首版基线（2026-09-30）已冻结：[支持矩阵与API契约](docs/format/83-release-support-matrix.md) · [构建、复验与故障定位](docs/format/84-release-validation.md)。

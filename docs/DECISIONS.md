@@ -674,3 +674,16 @@ CLI新增--manifest用于metadata/export/check（仅rows范围），与原单ibd
 - 接续TODO第54项；推送现有提交后核对远端哈希，再提交并同步验收状态文档。
 
 推送验收完成：通过SSH正常建立远端main并设置origin/main跟踪关系，首轮远端main与本地HEAD均为 `f43797a2337e3f22e4efd06a7cce6e0431eaf43d`。源码、固定夹具和已有提交完整保留；仅新增仓库本地SSH配置与准确的项目状态记录。完成状态文档随收尾提交正常推送，并再次核对最终HEAD/远端一致和干净工作区；没有新增解析变更，无需重复先前已通过的构建/CLI测试。
+
+## 2026-10-08：固定v0.1.0源码并准备手动Release
+
+- 问题：用稳定版本标签标识当前已交付源码，并提供用户手动创建GitHub Release所需的多平台编译命令和发布说明。用户已授权创建/推送源码标签，明确由用户手动添加Release。
+- 采用附注标签 `v0.1.0`，固定本轮开始时已推送的 `116de5046aa94b379ce4d2e0711e34be9766c397`。发布说明、构建指引和状态记录作为后续main文档提交，不改变该源码快照；后续修订使用新版本，不移动已推送标签。
+- 新增 `docs/releases/v0.1.0.md` 和 `docs/RELEASING.md`，README提供入口。编译命令从标签导出的源码构建macOS/Linux/Windows的amd64和arm64六组二进制，CGO_ENABLED=0、-trimpath；提供tar.gz/zip归档与SHA256SUMS，不将构建产物加入Git。
+- 已核对go.mod、现有CLI和首版支持矩阵，现有Git、Go、tar/zip及SHA256工具足够；无新依赖。版本体现在源码标签和资产文件名，不新增--version、构建注入、自动发布工作流或稳定API承诺。
+- 未采用给新增文档提交打标签：本次明确固定既有当前源码。未采用自动创建Release或上传资产：用户要求手动完成。未采用仅改文件名后宣称多平台运行支持：必须区分交叉编译与目标平台运行验证。
+- 验收：六组构建、归档及校验命令实际通过；本机darwin/arm64样本烟测，其他目标只记录编译证据；发布说明与支持矩阵一致，本地链接有效，源码/夹具未改。正常推送main文档和标签，核对远端标签解引用为上述固定提交；不创建GitHub Release。
+
+归档核对发现macOS tar默认附加AppleDouble文件；打包命令设置COPYFILE_DISABLE=1，去掉这类本机元数据，使每个包仅包含对应程序，重新生成匹配资产的SHA256SUMS。
+
+验收完成：Go1.25.7在macOS ARM64执行文档中的完整Bash命令，六平台编译通过；Mach-O/ELF/PE格式和GOOS/GOARCH/CGO_ENABLED/-trimpath信息正确，四个tar.gz与两个zip各仅包含对应程序，Unix执行权限及全部SHA256通过。本机--help/metadata/check/export四项烟测通过，lesson_rows四行精确值和JSONL end一致。v0.1.0附注标签已正常推送，远端标签对象及解引用提交均与本地一致，固定116de5046aa94b379ce4d2e0711e34be9766c397；文档在main单独提交。未改Go/夹具，未创建GitHub Release，未重复既有长回归。

@@ -665,3 +665,12 @@ CLI新增--manifest用于metadata/export/check（仅rows范围），与原单ibd
 - 验收：构建CLI和现有CLI专项测试通过，核对暂存内容/忽略规则与文件规模；创建本地提交，正常推送并核对远端 `main` 与本地提交哈希一致。若认证不可用，先完成可审阅的本地提交，再请求恢复GitHub认证。
 
 本地验证完成：CLI构建与 `go test ./internal/cli`（实际3.380秒）通过。初始提交 `7edb6dd` 包含3069文件、约20.03MiB，其中2809个testdata文件和110个Go文件；已重新核对提交内容、忽略规则及干净工作区。正常推送实际因GitHub HTTPS凭据缺失失败；钥匙串无可用github.com凭据，SSH agent无已加载密钥，未写入远端。需用户在本机配置认证后继续推送/验收，不将本地提交等同远端完成。
+
+## 2026-10-08：使用用户新增SSH密钥重试推送
+
+- 用户已将本机GitHub专用SSH公钥添加到账号，并明确要求重试。使用对应专用密钥验证，GitHub成功认证为 `kimihiro-dev`；不更换提交作者或重建已有提交。
+- 当前网络关闭github.com的22端口连接，采用[GitHub官方443端口SSH入口](https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port)，origin改为 `ssh://git@ssh.github.com:443/kimihiro-dev/innodb-go-reader.git`。仅在当前仓库配置SSH密钥选择，不修改用户全局Git/SSH配置。
+- 主机公钥从GitHub官方HTTPS元数据获取并严格核对，保存于本地 `.git/github_known_hosts`；私钥不复制或提交。保留严格主机检查，正常推送main，不强制覆盖任何远端历史。
+- 接续TODO第54项；推送现有提交后核对远端哈希，再提交并同步验收状态文档。
+
+推送验收完成：通过SSH正常建立远端main并设置origin/main跟踪关系，首轮远端main与本地HEAD均为 `f43797a2337e3f22e4efd06a7cce6e0431eaf43d`。源码、固定夹具和已有提交完整保留；仅新增仓库本地SSH配置与准确的项目状态记录。完成状态文档随收尾提交正常推送，并再次核对最终HEAD/远端一致和干净工作区；没有新增解析变更，无需重复先前已通过的构建/CLI测试。

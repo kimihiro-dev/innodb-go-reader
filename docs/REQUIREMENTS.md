@@ -309,4 +309,4 @@ InspectTable 提取单表身份、列/索引与根页验证报告；支持时提
 
 用户要求为当前项目建立Git版本管理，并提交至 [kimihiro-dev/innodb-go-reader](https://github.com/kimihiro-dev/innodb-go-reader)。包含当前源码、文档、示例、脚本和固定测试资产，排除本地缓存/系统文件；不扩展解析功能。验收为本地提交成功、正常推送成功及远端与本地提交哈希一致。
 
-当前本地初始化与初始提交已完成；远端推送等待本机GitHub认证，尚未满足远端交付验收。进度见TODO第54项。
+本项已完成：当前项目已通过SSH正常推送至用户仓库main分支，首轮远端哈希与本地f43797a一致，main已跟踪origin/main；完成状态文档随收尾提交同步。验收记录见TODO第54项和DECISIONS同日SSH重试条目。

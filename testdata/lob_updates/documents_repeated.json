@@ -1,0 +1,21 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "j",
+      "type": "JSON",
+      "nullable": true
+    },
+    {
+      "name": "n",
+      "type": "INT"
+    }
+  ],
+  "root_page": 4,
+  "index_id": 891,
+  "space_id": 667,
+  "primary_key": "id"
+}

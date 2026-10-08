@@ -1,0 +1,26 @@
+{
+  "columns": [
+    {
+      "name": "k",
+      "type": "DATE",
+      "descending": false
+    },
+    {
+      "name": "sequence",
+      "type": "INT",
+      "descending": true
+    },
+    {
+      "name": "payload",
+      "type": "VARCHAR",
+      "max_chars": 1500
+    }
+  ],
+  "primary_keys": [
+    "k",
+    "sequence"
+  ],
+  "index_id": 799,
+  "space_id": 588,
+  "root_page": 4
+}

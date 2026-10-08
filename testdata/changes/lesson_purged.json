@@ -1,0 +1,23 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "n",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "v",
+      "type": "VARCHAR",
+      "max_chars": 1500,
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 878,
+  "space_id": 655,
+  "primary_key": "id"
+}

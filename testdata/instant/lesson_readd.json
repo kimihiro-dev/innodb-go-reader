@@ -1,0 +1,101 @@
+{
+  "columns": [
+    {
+      "name": "a",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 30
+    },
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "d",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 30
+    },
+    {
+      "name": "b",
+      "type": "INT"
+    },
+    {
+      "name": "e",
+      "type": "VARBINARY",
+      "max_bytes": 20
+    }
+  ],
+  "root_page": 4,
+  "index_id": 902,
+  "space_id": 678,
+  "primary_key": "id",
+  "instant": {
+    "version": 3,
+    "fields": [
+      {
+        "position": 0,
+        "column": 1
+      },
+      {
+        "position": 3,
+        "column": -1,
+        "dropped": 2,
+        "dropped_column": {
+          "name": "!hidden!_dropped_v2_p3_a",
+          "type": "VARCHAR",
+          "nullable": true,
+          "max_chars": 30
+        }
+      },
+      {
+        "position": 4,
+        "column": 3
+      },
+      {
+        "position": 5,
+        "column": -1,
+        "dropped": 2,
+        "dropped_column": {
+          "name": "!hidden!_dropped_v2_p5_payload",
+          "type": "LONGTEXT",
+          "nullable": true
+        }
+      },
+      {
+        "position": 6,
+        "column": -1,
+        "added": 1,
+        "dropped": 2,
+        "dropped_column": {
+          "name": "!hidden!_dropped_v2_p6_c",
+          "type": "INT"
+        }
+      },
+      {
+        "position": 7,
+        "column": 2,
+        "added": 1,
+        "default": {
+          "null": true
+        }
+      },
+      {
+        "position": 8,
+        "column": 4,
+        "added": 1,
+        "default": {
+          "data": "AP8="
+        }
+      },
+      {
+        "position": 9,
+        "column": 0,
+        "added": 3,
+        "default": {
+          "data": "YWdhaW4="
+        }
+      }
+    ]
+  }
+}

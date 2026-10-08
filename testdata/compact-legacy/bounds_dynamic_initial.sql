@@ -1,0 +1,5 @@
+bounds_dynamic	CREATE TABLE `bounds_dynamic` (
+  `id` int NOT NULL,
+  `payload` longblob,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC

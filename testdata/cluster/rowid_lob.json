@@ -1,0 +1,27 @@
+{
+  "columns": [
+    {
+      "name": "n",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "text",
+      "type": "VARCHAR",
+      "max_chars": 32,
+      "nullable": true
+    },
+    {
+      "name": "blob",
+      "type": "MEDIUMBLOB",
+      "nullable": true
+    }
+  ],
+  "clustered_key": {
+    "name": "PRIMARY",
+    "hidden_row_id": true
+  },
+  "index_id": 868,
+  "space_id": 649,
+  "root_page": 4
+}

@@ -1,0 +1,236 @@
+{
+  "columns": [
+    {
+      "name": "m8",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 10
+    },
+    {
+      "name": "m7",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 10
+    },
+    {
+      "name": "m6",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 10
+    },
+    {
+      "name": "m5",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 10
+    },
+    {
+      "name": "m4",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 10
+    },
+    {
+      "name": "m3",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 10
+    },
+    {
+      "name": "m2",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 10
+    },
+    {
+      "name": "m1",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 10
+    },
+    {
+      "name": "m0",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 10
+    },
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "padding",
+      "type": "VARCHAR",
+      "max_chars": 1600
+    }
+  ],
+  "root_page": 4,
+  "index_id": 904,
+  "space_id": 680,
+  "primary_key": "id",
+  "instant": {
+    "version": 2,
+    "fields": [
+      {
+        "position": 0,
+        "column": 9
+      },
+      {
+        "position": 3,
+        "column": 10
+      },
+      {
+        "position": 4,
+        "column": -1,
+        "dropped": 2,
+        "dropped_column": {
+          "name": "!hidden!_dropped_v2_p4_n0",
+          "type": "INT",
+          "nullable": true
+        }
+      },
+      {
+        "position": 5,
+        "column": -1,
+        "dropped": 2,
+        "dropped_column": {
+          "name": "!hidden!_dropped_v2_p5_n1",
+          "type": "INT",
+          "nullable": true
+        }
+      },
+      {
+        "position": 6,
+        "column": -1,
+        "dropped": 2,
+        "dropped_column": {
+          "name": "!hidden!_dropped_v2_p6_n2",
+          "type": "INT",
+          "nullable": true
+        }
+      },
+      {
+        "position": 7,
+        "column": -1,
+        "dropped": 2,
+        "dropped_column": {
+          "name": "!hidden!_dropped_v2_p7_n3",
+          "type": "INT",
+          "nullable": true
+        }
+      },
+      {
+        "position": 8,
+        "column": -1,
+        "dropped": 2,
+        "dropped_column": {
+          "name": "!hidden!_dropped_v2_p8_n4",
+          "type": "INT",
+          "nullable": true
+        }
+      },
+      {
+        "position": 9,
+        "column": -1,
+        "dropped": 2,
+        "dropped_column": {
+          "name": "!hidden!_dropped_v2_p9_n5",
+          "type": "INT",
+          "nullable": true
+        }
+      },
+      {
+        "position": 10,
+        "column": -1,
+        "dropped": 2,
+        "dropped_column": {
+          "name": "!hidden!_dropped_v2_p10_n6",
+          "type": "INT",
+          "nullable": true
+        }
+      },
+      {
+        "position": 11,
+        "column": -1,
+        "dropped": 2,
+        "dropped_column": {
+          "name": "!hidden!_dropped_v2_p11_n7",
+          "type": "INT",
+          "nullable": true
+        }
+      },
+      {
+        "position": 12,
+        "column": 0,
+        "added": 1,
+        "default": {
+          "data": "eA=="
+        }
+      },
+      {
+        "position": 13,
+        "column": 1,
+        "added": 1,
+        "default": {
+          "data": "eA=="
+        }
+      },
+      {
+        "position": 14,
+        "column": 2,
+        "added": 1,
+        "default": {
+          "data": "eA=="
+        }
+      },
+      {
+        "position": 15,
+        "column": 3,
+        "added": 1,
+        "default": {
+          "data": "eA=="
+        }
+      },
+      {
+        "position": 16,
+        "column": 4,
+        "added": 1,
+        "default": {
+          "data": "eA=="
+        }
+      },
+      {
+        "position": 17,
+        "column": 5,
+        "added": 1,
+        "default": {
+          "data": "eA=="
+        }
+      },
+      {
+        "position": 18,
+        "column": 6,
+        "added": 1,
+        "default": {
+          "data": "eA=="
+        }
+      },
+      {
+        "position": 19,
+        "column": 7,
+        "added": 1,
+        "default": {
+          "data": "eA=="
+        }
+      },
+      {
+        "position": 20,
+        "column": 8,
+        "added": 1,
+        "default": {
+          "data": "eA=="
+        }
+      }
+    ]
+  }
+}

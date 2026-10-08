@@ -1,0 +1,57 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "BIGINT",
+      "unsigned": true,
+      "invisible": true
+    },
+    {
+      "name": "a",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "txt",
+      "type": "LONGTEXT",
+      "nullable": true
+    },
+    {
+      "name": "stored_n",
+      "type": "INT",
+      "nullable": true,
+      "invisible": true,
+      "generation_expression": "(`a` * 2)"
+    },
+    {
+      "name": "stored_text",
+      "type": "LONGTEXT",
+      "nullable": true,
+      "generation_expression": "concat(`txt`,`txt`)"
+    },
+    {
+      "name": "secret",
+      "type": "VARBINARY",
+      "max_bytes": 20,
+      "nullable": true,
+      "invisible": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 161,
+  "space_id": 9,
+  "primary_key": "id",
+  "virtual_columns": [
+    {
+      "name": "virt",
+      "ordinal": 3,
+      "expression": "(`a` + 1)"
+    },
+    {
+      "name": "vt",
+      "ordinal": 8,
+      "expression": "left(`txt`,3)",
+      "invisible": true
+    }
+  ]
+}

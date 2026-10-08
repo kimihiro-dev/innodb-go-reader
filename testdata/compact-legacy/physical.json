@@ -1,0 +1,178 @@
+[
+  {
+    "name": "lesson_compact_initial",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 5,
+    "deleted": 0
+  },
+  {
+    "name": "lesson_compact_grown",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 5,
+    "deleted": 0
+  },
+  {
+    "name": "lesson_compact_mixed_formats",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 5,
+    "deleted": 0
+  },
+  {
+    "name": "lesson_compact_shrunk",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "lesson_compact_null_deleted",
+    "rows": 2,
+    "pages": 1,
+    "level": 0,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "bounds_compact_initial",
+    "rows": 14,
+    "pages": 5,
+    "level": 1,
+    "external": 5,
+    "deleted": 0
+  },
+  {
+    "name": "tree_compact_initial",
+    "rows": 600,
+    "pages": 102,
+    "level": 1,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "tree_compact_instant",
+    "rows": 601,
+    "pages": 102,
+    "level": 1,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "tree_compact_rebuilt",
+    "rows": 601,
+    "pages": 102,
+    "level": 1,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "hidden_compact_initial",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 2,
+    "deleted": 0
+  },
+  {
+    "name": "composite_compact_initial",
+    "rows": 100,
+    "pages": 25,
+    "level": 2,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "lesson_dynamic_initial",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 5,
+    "deleted": 0
+  },
+  {
+    "name": "lesson_dynamic_grown",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 5,
+    "deleted": 0
+  },
+  {
+    "name": "lesson_dynamic_mixed_formats",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 5,
+    "deleted": 0
+  },
+  {
+    "name": "lesson_dynamic_shrunk",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "lesson_dynamic_null_deleted",
+    "rows": 2,
+    "pages": 1,
+    "level": 0,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "bounds_dynamic_initial",
+    "rows": 14,
+    "pages": 5,
+    "level": 1,
+    "external": 5,
+    "deleted": 0
+  },
+  {
+    "name": "tree_dynamic_initial",
+    "rows": 600,
+    "pages": 102,
+    "level": 1,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "tree_dynamic_instant",
+    "rows": 601,
+    "pages": 102,
+    "level": 1,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "tree_dynamic_rebuilt",
+    "rows": 601,
+    "pages": 102,
+    "level": 1,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "hidden_dynamic_initial",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 2,
+    "deleted": 0
+  },
+  {
+    "name": "composite_dynamic_initial",
+    "rows": 100,
+    "pages": 25,
+    "level": 2,
+    "external": 0,
+    "deleted": 0
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "tools": {
+    "innochecksum": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/innochecksum  Ver 8.0.45 for macos15 on arm64 (MySQL Community Server - GPL)",
+    "ibd2sdi": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/ibd2sdi  Ver 8.0.45 for macos15 on arm64 (MySQL Community Server - GPL)"
+  },
+  "cases": [
+    {
+      "name": "composite_lesson",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 8
+    },
+    {
+      "name": "composite_empty",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 0
+    },
+    {
+      "name": "composite_types",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 3
+    },
+    {
+      "name": "composite_lob",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 3
+    },
+    {
+      "name": "composite_tree",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 600
+    },
+    {
+      "name": "composite_deep",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 3000
+    }
+  ]
+}

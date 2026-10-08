@@ -1,0 +1,35 @@
+{
+  "columns": [
+    {
+      "name": "payload",
+      "type": "VARCHAR",
+      "max_chars": 256,
+      "nullable": true
+    },
+    {
+      "name": "c",
+      "type": "INT"
+    },
+    {
+      "name": "a",
+      "type": "SMALLINT"
+    },
+    {
+      "name": "n",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "b",
+      "type": "SMALLINT"
+    }
+  ],
+  "primary_keys": [
+    "a",
+    "b",
+    "c"
+  ],
+  "index_id": 448,
+  "space_id": 237,
+  "root_page": 4
+}

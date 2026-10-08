@@ -1,0 +1,80 @@
+{
+  "tools": {
+    "innochecksum": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/innochecksum  Ver 8.0.45 for macos15 on arm64 (MySQL Community Server - GPL)",
+    "ibd2sdi": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/ibd2sdi  Ver 8.0.45 for macos15 on arm64 (MySQL Community Server - GPL)"
+  },
+  "cases": [
+    {
+      "name": "geometry_lesson",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 10
+    },
+    {
+      "name": "geometry_point",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 2
+    },
+    {
+      "name": "geometry_linestring",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 2
+    },
+    {
+      "name": "geometry_polygon",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 2
+    },
+    {
+      "name": "geometry_multipoint",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 2
+    },
+    {
+      "name": "geometry_multilinestring",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 2
+    },
+    {
+      "name": "geometry_multipolygon",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 2
+    },
+    {
+      "name": "geometry_geometrycollection",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 2
+    },
+    {
+      "name": "geometry_srid",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 2
+    },
+    {
+      "name": "geometry_zero",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 1
+    },
+    {
+      "name": "geometry_large",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 1
+    },
+    {
+      "name": "geometry_tree",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 600
+    }
+  ]
+}

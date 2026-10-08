@@ -1,0 +1,36 @@
+{
+  "columns": [
+    {
+      "name": "tenant",
+      "type": "INT"
+    },
+    {
+      "name": "code",
+      "type": "VARCHAR",
+      "max_chars": 16,
+      "charset": "latin1",
+      "collation": "latin1_bin",
+      "descending": true
+    },
+    {
+      "name": "seq",
+      "type": "BIGINT",
+      "unsigned": true
+    },
+    {
+      "name": "payload",
+      "type": "VARCHAR",
+      "max_chars": 1600,
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 196,
+  "space_id": 42,
+  "primary_keys": [
+    "tenant",
+    "code",
+    "seq"
+  ],
+  "row_format": "COMPACT"
+}

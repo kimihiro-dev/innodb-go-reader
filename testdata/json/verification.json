@@ -1,0 +1,46 @@
+{
+  "innochecksum_version": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/innochecksum  Ver 8.0.45 for macos15 on arm64 (MySQL Community Server - GPL)",
+  "ibd2sdi_version": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/ibd2sdi  Ver 8.0.45 for macos15 on arm64 (MySQL Community Server - GPL)",
+  "cases": [
+    {
+      "name": "json_lesson",
+      "rows": 23,
+      "innochecksum_exit": 0,
+      "sdi_objects": 2,
+      "ordinary_cli": "SQL exact numeric/semantic match",
+      "typed_cli": "SQL NULL distinct from JSON null"
+    },
+    {
+      "name": "json_opaque",
+      "rows": 3,
+      "innochecksum_exit": 0,
+      "sdi_objects": 2,
+      "ordinary_cli": "SQL exact numeric/semantic match",
+      "typed_cli": "SQL NULL distinct from JSON null"
+    },
+    {
+      "name": "json_boundaries",
+      "rows": 7,
+      "innochecksum_exit": 0,
+      "sdi_objects": 2,
+      "ordinary_cli": "SQL exact numeric/semantic match",
+      "typed_cli": "SQL NULL distinct from JSON null"
+    },
+    {
+      "name": "json_large",
+      "rows": 3,
+      "innochecksum_exit": 0,
+      "sdi_objects": 2,
+      "ordinary_cli": "SQL exact numeric/semantic match",
+      "typed_cli": "SQL NULL distinct from JSON null"
+    },
+    {
+      "name": "json_tree",
+      "rows": 600,
+      "innochecksum_exit": 0,
+      "sdi_objects": 2,
+      "ordinary_cli": "SQL exact numeric/semantic match",
+      "typed_cli": "SQL NULL distinct from JSON null"
+    }
+  ]
+}

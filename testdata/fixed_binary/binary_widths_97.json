@@ -1,0 +1,126 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    },
+    {
+      "name": "b97",
+      "type": "BINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 97
+    },
+    {
+      "name": "b98",
+      "type": "BINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 98
+    },
+    {
+      "name": "b99",
+      "type": "BINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 99
+    },
+    {
+      "name": "b100",
+      "type": "BINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 100
+    },
+    {
+      "name": "b101",
+      "type": "BINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 101
+    },
+    {
+      "name": "b102",
+      "type": "BINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 102
+    },
+    {
+      "name": "b103",
+      "type": "BINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 103
+    },
+    {
+      "name": "b104",
+      "type": "BINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 104
+    },
+    {
+      "name": "b105",
+      "type": "BINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 105
+    },
+    {
+      "name": "b106",
+      "type": "BINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 106
+    },
+    {
+      "name": "b107",
+      "type": "BINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 107
+    },
+    {
+      "name": "b108",
+      "type": "BINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 108
+    },
+    {
+      "name": "b109",
+      "type": "BINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 109
+    },
+    {
+      "name": "b110",
+      "type": "BINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 110
+    },
+    {
+      "name": "b111",
+      "type": "BINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 111
+    },
+    {
+      "name": "b112",
+      "type": "BINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 112
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 166,
+  "space_id": 14,
+  "root_page": 4
+}

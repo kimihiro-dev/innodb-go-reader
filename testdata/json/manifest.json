@@ -1,0 +1,61 @@
+{
+  "database": "innodb_reader_json_2bf7dabe3618",
+  "generated_at": "2026-09-16T01:00:30.841151+00:00",
+  "cases": [
+    {
+      "name": "json_lesson",
+      "rows": 23,
+      "bytes": 114688,
+      "sha256": "5ea5c806500eca20eca34ebac2acb561cd4b1d7e6c0e93b8e420e50fcc153c63",
+      "index_id": 406,
+      "space_id": 195,
+      "root_page": 4
+    },
+    {
+      "name": "json_opaque",
+      "rows": 3,
+      "bytes": 114688,
+      "sha256": "7146a234c965d8c642086c7e8f3785cfd4801afe7f3ea2b1982b78fe4ae7c06f",
+      "index_id": 407,
+      "space_id": 196,
+      "root_page": 4
+    },
+    {
+      "name": "json_boundaries",
+      "rows": 7,
+      "bytes": 163840,
+      "sha256": "c6cc949229acca82353834e45f107666a8c77f80772e4fa535eb0c9330d345c9",
+      "index_id": 408,
+      "space_id": 197,
+      "root_page": 4
+    },
+    {
+      "name": "json_large",
+      "rows": 3,
+      "bytes": 376832,
+      "sha256": "0e82b481cb31f64321176cff04cdb0189e7ba346a231376d4df21a4b0856bf01",
+      "index_id": 409,
+      "space_id": 198,
+      "root_page": 4
+    },
+    {
+      "name": "json_tree",
+      "rows": 600,
+      "bytes": 262144,
+      "sha256": "cffddf1ae505d00d8295f6338b905493b2f061eaf8adbee57d1129893c2da099",
+      "index_id": 410,
+      "space_id": 199,
+      "root_page": 4
+    }
+  ],
+  "status": "verified",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1,
+    "sql_mode": "STRICT_TRANS_TABLES",
+    "time_zone": "+00:00"
+  }
+}

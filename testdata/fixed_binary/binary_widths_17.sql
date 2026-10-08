@@ -1,0 +1,20 @@
+CREATE TABLE `binary_widths_17` (
+  `id` int NOT NULL,
+  `b17` binary(17) DEFAULT NULL,
+  `b18` binary(18) DEFAULT NULL,
+  `b19` binary(19) DEFAULT NULL,
+  `b20` binary(20) DEFAULT NULL,
+  `b21` binary(21) DEFAULT NULL,
+  `b22` binary(22) DEFAULT NULL,
+  `b23` binary(23) DEFAULT NULL,
+  `b24` binary(24) DEFAULT NULL,
+  `b25` binary(25) DEFAULT NULL,
+  `b26` binary(26) DEFAULT NULL,
+  `b27` binary(27) DEFAULT NULL,
+  `b28` binary(28) DEFAULT NULL,
+  `b29` binary(29) DEFAULT NULL,
+  `b30` binary(30) DEFAULT NULL,
+  `b31` binary(31) DEFAULT NULL,
+  `b32` binary(32) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;

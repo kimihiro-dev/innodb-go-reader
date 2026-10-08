@@ -1,0 +1,168 @@
+{
+  "database": "innodb_reader_generated_d64ef4eedc8a",
+  "generated_at": "2026-09-18T05:49:51.269267+00:00",
+  "cases": [
+    {
+      "name": "stored_values_initial",
+      "table": "stored_values",
+      "phase": "initial",
+      "rows": 3,
+      "unordered": false,
+      "sha256": "1f303b1dcf6494c1f94c65730f6c9de48c7fb4743cc1023a72de4c7078c9a734",
+      "bytes": 114688,
+      "version": 0,
+      "reject": false
+    },
+    {
+      "name": "stored_values_updated_visible",
+      "table": "stored_values",
+      "phase": "updated_visible",
+      "rows": 3,
+      "unordered": false,
+      "sha256": "ae31092381f0901b49c4319576b510e2a23f64bae66e308e34cda8974ee2a545",
+      "bytes": 114688,
+      "version": 0,
+      "reject": false
+    },
+    {
+      "name": "mixed_initial",
+      "table": "mixed",
+      "phase": "initial",
+      "rows": 3,
+      "unordered": false,
+      "sha256": "36246e5ebe59b31d1b921e3421a0cd21b370f72f7e14c16485e0f66483586025",
+      "bytes": 245760,
+      "version": 0,
+      "reject": false
+    },
+    {
+      "name": "mixed_instant",
+      "table": "mixed",
+      "phase": "instant",
+      "rows": 4,
+      "unordered": false,
+      "sha256": "385a9e94779963276833273be6d138541a13909f855bf84f29ad4d3ec73712a9",
+      "bytes": 245760,
+      "version": 1,
+      "reject": false
+    },
+    {
+      "name": "mixed_changed",
+      "table": "mixed",
+      "phase": "changed",
+      "rows": 3,
+      "unordered": false,
+      "sha256": "5acde62a68ef99c37a3ee2fb81bb90fcbc86a059d1eb010604e7c00df160858f",
+      "bytes": 393216,
+      "version": 2,
+      "reject": false
+    },
+    {
+      "name": "mixed_rebuilt",
+      "table": "mixed",
+      "phase": "rebuilt",
+      "rows": 3,
+      "unordered": false,
+      "sha256": "2c537341df722fb4981029da3702f9b5041bb224162369063367505c3cea4236",
+      "bytes": 262144,
+      "version": 0,
+      "reject": false
+    },
+    {
+      "name": "mixed_no_virtual",
+      "table": "mixed",
+      "phase": "no_virtual",
+      "rows": 3,
+      "unordered": false,
+      "sha256": "d40d1e206fce5159853d3b93126d578d376900dcca71a985d8e373c146ef32fd",
+      "bytes": 262144,
+      "version": 0,
+      "reject": false
+    },
+    {
+      "name": "tree_initial",
+      "table": "tree",
+      "phase": "initial",
+      "rows": 600,
+      "unordered": false,
+      "sha256": "05d5b577adfd19e155e99db9d8124d23b3d2522b352b461e68e01eb74f52c42d",
+      "bytes": 10485760,
+      "version": 0,
+      "reject": false
+    },
+    {
+      "name": "tree_instant",
+      "table": "tree",
+      "phase": "instant",
+      "rows": 601,
+      "unordered": false,
+      "sha256": "d4f07a4d4ecd57e2d1377ebc607bb246c9db0b24dd153cab0f2986ab98e77eec",
+      "bytes": 10485760,
+      "version": 1,
+      "reject": false
+    },
+    {
+      "name": "hidden_initial",
+      "table": "hidden",
+      "phase": "initial",
+      "rows": 3,
+      "unordered": true,
+      "sha256": "5e39d60e6279ea5271441e44ce5e392275e7d6493597e3314a1d90b6f70e6c90",
+      "bytes": 114688,
+      "version": 0,
+      "reject": false
+    },
+    {
+      "name": "unique_stored_initial",
+      "table": "unique_stored",
+      "phase": "initial",
+      "rows": 3,
+      "unordered": false,
+      "sha256": "e7c3623dcea22e88b066f9d163e770a1d75fa806683d34abffb70d773862fc94",
+      "bytes": 114688,
+      "version": 0,
+      "reject": false
+    },
+    {
+      "name": "empty_values_initial",
+      "table": "empty_values",
+      "phase": "initial",
+      "rows": 0,
+      "unordered": false,
+      "sha256": "4be0892c038525617316904bf59180f83bf22904f85f69d612ebe79885044532",
+      "bytes": 114688,
+      "version": 0,
+      "reject": false
+    },
+    {
+      "name": "indexed_initial",
+      "table": "indexed",
+      "phase": "initial",
+      "rows": 3,
+      "unordered": false,
+      "sha256": "3f6a6c708213dc602d2fdd5a29c0bef9a95a042fe83f067cce607012f05d7a30",
+      "bytes": 131072,
+      "version": 0,
+      "reject": false
+    },
+    {
+      "name": "functional_rejected",
+      "table": "functional",
+      "phase": "rejected",
+      "rows": 1,
+      "unordered": false,
+      "sha256": "8ca856c7c3a327036811b259060021480d18bae4adf05b6996e5afaf87f04e36",
+      "bytes": 131072,
+      "version": 0,
+      "reject": true
+    }
+  ],
+  "status": "captured",
+  "environment": {
+    "datadir": "/private/tmp/innodb-generated-stage30/instance/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1
+  }
+}

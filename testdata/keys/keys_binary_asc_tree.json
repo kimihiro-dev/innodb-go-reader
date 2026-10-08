@@ -1,0 +1,32 @@
+{
+  "columns": [
+    {
+      "name": "k",
+      "type": "BINARY",
+      "max_bytes": 8,
+      "descending": false
+    },
+    {
+      "name": "tie",
+      "type": "INT"
+    },
+    {
+      "name": "sequence",
+      "type": "INT",
+      "descending": true
+    },
+    {
+      "name": "payload",
+      "type": "VARCHAR",
+      "max_chars": 1500
+    }
+  ],
+  "primary_keys": [
+    "k",
+    "tie",
+    "sequence"
+  ],
+  "index_id": 791,
+  "space_id": 580,
+  "root_page": 4
+}

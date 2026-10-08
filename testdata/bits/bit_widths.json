@@ -1,0 +1,462 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    },
+    {
+      "name": "b1",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 1
+    },
+    {
+      "name": "b2",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 2
+    },
+    {
+      "name": "b3",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 3
+    },
+    {
+      "name": "b4",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 4
+    },
+    {
+      "name": "b5",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 5
+    },
+    {
+      "name": "b6",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 6
+    },
+    {
+      "name": "b7",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 7
+    },
+    {
+      "name": "b8",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 8
+    },
+    {
+      "name": "b9",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 9
+    },
+    {
+      "name": "b10",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 10
+    },
+    {
+      "name": "b11",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 11
+    },
+    {
+      "name": "b12",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 12
+    },
+    {
+      "name": "b13",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 13
+    },
+    {
+      "name": "b14",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 14
+    },
+    {
+      "name": "b15",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 15
+    },
+    {
+      "name": "b16",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 16
+    },
+    {
+      "name": "b17",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 17
+    },
+    {
+      "name": "b18",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 18
+    },
+    {
+      "name": "b19",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 19
+    },
+    {
+      "name": "b20",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 20
+    },
+    {
+      "name": "b21",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 21
+    },
+    {
+      "name": "b22",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 22
+    },
+    {
+      "name": "b23",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 23
+    },
+    {
+      "name": "b24",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 24
+    },
+    {
+      "name": "b25",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 25
+    },
+    {
+      "name": "b26",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 26
+    },
+    {
+      "name": "b27",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 27
+    },
+    {
+      "name": "b28",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 28
+    },
+    {
+      "name": "b29",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 29
+    },
+    {
+      "name": "b30",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 30
+    },
+    {
+      "name": "b31",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 31
+    },
+    {
+      "name": "b32",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 32
+    },
+    {
+      "name": "b33",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 33
+    },
+    {
+      "name": "b34",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 34
+    },
+    {
+      "name": "b35",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 35
+    },
+    {
+      "name": "b36",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 36
+    },
+    {
+      "name": "b37",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 37
+    },
+    {
+      "name": "b38",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 38
+    },
+    {
+      "name": "b39",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 39
+    },
+    {
+      "name": "b40",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 40
+    },
+    {
+      "name": "b41",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 41
+    },
+    {
+      "name": "b42",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 42
+    },
+    {
+      "name": "b43",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 43
+    },
+    {
+      "name": "b44",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 44
+    },
+    {
+      "name": "b45",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 45
+    },
+    {
+      "name": "b46",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 46
+    },
+    {
+      "name": "b47",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 47
+    },
+    {
+      "name": "b48",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 48
+    },
+    {
+      "name": "b49",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 49
+    },
+    {
+      "name": "b50",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 50
+    },
+    {
+      "name": "b51",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 51
+    },
+    {
+      "name": "b52",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 52
+    },
+    {
+      "name": "b53",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 53
+    },
+    {
+      "name": "b54",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 54
+    },
+    {
+      "name": "b55",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 55
+    },
+    {
+      "name": "b56",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 56
+    },
+    {
+      "name": "b57",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 57
+    },
+    {
+      "name": "b58",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 58
+    },
+    {
+      "name": "b59",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 59
+    },
+    {
+      "name": "b60",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 60
+    },
+    {
+      "name": "b61",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 61
+    },
+    {
+      "name": "b62",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 62
+    },
+    {
+      "name": "b63",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 63
+    },
+    {
+      "name": "b64",
+      "type": "BIT",
+      "nullable": true,
+      "max_chars": 0,
+      "bit_length": 64
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 157,
+  "space_id": 5,
+  "root_page": 4
+}

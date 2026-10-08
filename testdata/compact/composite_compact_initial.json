@@ -1,0 +1,28 @@
+{
+  "columns": [
+    {
+      "name": "seq",
+      "type": "INT"
+    },
+    {
+      "name": "k",
+      "type": "VARBINARY",
+      "max_bytes": 767,
+      "descending": true
+    },
+    {
+      "name": "txt",
+      "type": "VARCHAR",
+      "max_chars": 1000,
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 188,
+  "space_id": 34,
+  "primary_keys": [
+    "k",
+    "seq"
+  ],
+  "row_format": "COMPACT"
+}

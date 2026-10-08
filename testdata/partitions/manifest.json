@@ -1,0 +1,348 @@
+{
+  "database": "innodb_reader_partition_9e39b58bcfab",
+  "generated_at": "2026-09-29T00:48:14.491927+00:00",
+  "status": "captured",
+  "cases": [
+    {
+      "name": "range_empty",
+      "table": "ranges",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "range_empty-p0.partition.gz",
+          "bytes": 131072,
+          "sha256": "1e70bc7b1685547e17eee0d2f20f6caa7d9e355dd442e746c9917dc67b454e4f",
+          "rows": 0
+        },
+        {
+          "partition": "p1",
+          "file": "range_empty-p1.partition.gz",
+          "bytes": 131072,
+          "sha256": "4efdcf97bb838e1fcbec3b17854afba649e39c4855ec067d7128dc33bcffe9b3",
+          "rows": 0
+        },
+        {
+          "partition": "p2",
+          "file": "range_empty-p2.partition.gz",
+          "bytes": 131072,
+          "sha256": "4b2257415da2c3db0cd4c41de70f9d7bba4eeedc292e3fdc0273120d3224a9c2",
+          "rows": 0
+        }
+      ],
+      "rows": 0
+    },
+    {
+      "name": "ranges",
+      "table": "ranges",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "ranges-p0.partition.gz",
+          "bytes": 475136,
+          "sha256": "cdae1fdfb937aebecb36d5a76a7f5dfadba7ad66fa519dbf517031807e00c9c9",
+          "rows": 500
+        },
+        {
+          "partition": "p1",
+          "file": "ranges-p1.partition.gz",
+          "bytes": 147456,
+          "sha256": "8170233b0b4a6f13838880137a8dd37b8a7fa0e4c9b23b3957c8fd085f85280d",
+          "rows": 500
+        },
+        {
+          "partition": "p2",
+          "file": "ranges-p2.partition.gz",
+          "bytes": 131072,
+          "sha256": "4b2257415da2c3db0cd4c41de70f9d7bba4eeedc292e3fdc0273120d3224a9c2",
+          "rows": 0
+        }
+      ],
+      "rows": 1000
+    },
+    {
+      "name": "lists",
+      "table": "lists",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "lists-p0.partition.gz",
+          "bytes": 147456,
+          "sha256": "9b04e67491e966b20b6bc393a2af82ed4753702b89a0a429cd60b21afc7a27be",
+          "rows": 16
+        },
+        {
+          "partition": "p1",
+          "file": "lists-p1.partition.gz",
+          "bytes": 131072,
+          "sha256": "24c4f4198a12826e0a9b2b264ef4c33a4446b52f6b615a5a3fcbabc0acb485e3",
+          "rows": 14
+        },
+        {
+          "partition": "p2",
+          "file": "lists-p2.partition.gz",
+          "bytes": 131072,
+          "sha256": "9c4efa99d83dd3b51c4e0120412c4f2289b25281cb65f3276d845cb82a346e94",
+          "rows": 0
+        }
+      ],
+      "rows": 30
+    },
+    {
+      "name": "hashes",
+      "table": "hashes",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "hashes-p0.partition.gz",
+          "bytes": 147456,
+          "sha256": "67a6b29e7d772905c92dcf318e62ae9c2c6339b3d65deda9284171f46278b029",
+          "rows": 11
+        },
+        {
+          "partition": "p1",
+          "file": "hashes-p1.partition.gz",
+          "bytes": 131072,
+          "sha256": "c33bdc94d2148fcfad95f194623d19808fdd27df63242f54d1d112ca6235d0c8",
+          "rows": 10
+        },
+        {
+          "partition": "p2",
+          "file": "hashes-p2.partition.gz",
+          "bytes": 131072,
+          "sha256": "e253edade63a0a3d1adefdc3c354d07faf56068c2964d562487191624905722b",
+          "rows": 9
+        }
+      ],
+      "rows": 30
+    },
+    {
+      "name": "keys_table",
+      "table": "keys_table",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "keys_table-p0.partition.gz",
+          "bytes": 131072,
+          "sha256": "3fa74bcff315a9476a8419ceedc3f87ce1f5f68009ad220ef7c184f69e719a5f",
+          "rows": 8
+        },
+        {
+          "partition": "p1",
+          "file": "keys_table-p1.partition.gz",
+          "bytes": 147456,
+          "sha256": "f78a19be427cddf9911aa7af12ab18f936735ca0adf168664d8cd932a723792d",
+          "rows": 12
+        },
+        {
+          "partition": "p2",
+          "file": "keys_table-p2.partition.gz",
+          "bytes": 131072,
+          "sha256": "57da792112f6a7452fee363fee8cc438edd5dec6f712f3e8c37e4ba02ca870c6",
+          "rows": 10
+        }
+      ],
+      "rows": 30
+    },
+    {
+      "name": "compact_rows",
+      "table": "compact_rows",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "compact_rows-p0.partition.gz",
+          "bytes": 147456,
+          "sha256": "9f72d9566660584daabbac4987ca9912ae64e56c7c6201ceb2f7ac1d2bf93d9f",
+          "rows": 20
+        },
+        {
+          "partition": "p1",
+          "file": "compact_rows-p1.partition.gz",
+          "bytes": 131072,
+          "sha256": "2a18f3cf777c16b428dfcfb1f14baf4bd709d9c7030f952a63c64aee4372be78",
+          "rows": 10
+        }
+      ],
+      "rows": 30
+    },
+    {
+      "name": "hidden_rows",
+      "table": "hidden_rows",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "hidden_rows-p0.partition.gz",
+          "bytes": 147456,
+          "sha256": "1b904776c4b6f81eb2e897030ccce0486a1c4366ef82334bbc1e79f5d3371050",
+          "rows": 15
+        },
+        {
+          "partition": "p1",
+          "file": "hidden_rows-p1.partition.gz",
+          "bytes": 131072,
+          "sha256": "e10a3c45e85c53deb056e2219adc15b62b39de9cc8bbc2c0deebc994cbbf27d7",
+          "rows": 15
+        }
+      ],
+      "rows": 30
+    },
+    {
+      "name": "virtual_rows",
+      "table": "virtual_rows",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "virtual_rows-p0.partition.gz",
+          "bytes": 147456,
+          "sha256": "f9beae2d09a418e7860bdc90c5e0851b175dc17958d1d67ac33e22d58358e802",
+          "rows": 15
+        },
+        {
+          "partition": "p1",
+          "file": "virtual_rows-p1.partition.gz",
+          "bytes": 131072,
+          "sha256": "06260c5f632f9a1cf3de57d8cacef6175294b144f2b47c2ad72837229fc7edcf",
+          "rows": 15
+        }
+      ],
+      "rows": 30
+    },
+    {
+      "name": "sub_rows",
+      "table": "sub_rows",
+      "supported": false,
+      "files": [
+        {
+          "partition": "p0sp0",
+          "file": "sub_rows-p0sp0.partition.gz",
+          "bytes": 147456,
+          "sha256": "1c95b371791edb3c0171173f10541e902aaa9d5c2bdcd6186d93b8c1aa0e13fb",
+          "rows": 10
+        },
+        {
+          "partition": "p0sp1",
+          "file": "sub_rows-p0sp1.partition.gz",
+          "bytes": 131072,
+          "sha256": "3f1596ad735c6c35f91be4fcfe94c0e552cf953897fd7e458bfc6dc2146d7b2c",
+          "rows": 10
+        },
+        {
+          "partition": "p1sp0",
+          "file": "sub_rows-p1sp0.partition.gz",
+          "bytes": 131072,
+          "sha256": "f008b06c6edb6b2e32c4f85aaf4ddfd097bfdc6713c5b6180f73e6648e7b95ee",
+          "rows": 5
+        },
+        {
+          "partition": "p1sp1",
+          "file": "sub_rows-p1sp1.partition.gz",
+          "bytes": 131072,
+          "sha256": "e8930face62b8b716e51e7a076e693eba643ab4d32f73015b6232eabf16f2030",
+          "rows": 5
+        }
+      ],
+      "rows": 30
+    },
+    {
+      "name": "range_rebuilt",
+      "table": "ranges",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "range_rebuilt-p0.partition.gz",
+          "bytes": 475136,
+          "sha256": "c0963c94f28f814c193afde2a6cb8b923fa0a3430a2d12226fb8c421202d244d",
+          "rows": 500
+        },
+        {
+          "partition": "p1",
+          "file": "range_rebuilt-p1.partition.gz",
+          "bytes": 147456,
+          "sha256": "8170233b0b4a6f13838880137a8dd37b8a7fa0e4c9b23b3957c8fd085f85280d",
+          "rows": 500
+        },
+        {
+          "partition": "p2",
+          "file": "range_rebuilt-p2.partition.gz",
+          "bytes": 131072,
+          "sha256": "4b2257415da2c3db0cd4c41de70f9d7bba4eeedc292e3fdc0273120d3224a9c2",
+          "rows": 0
+        }
+      ],
+      "rows": 1000
+    },
+    {
+      "name": "range_exchanged",
+      "table": "ranges",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "range_exchanged-p0.partition.gz",
+          "bytes": 131072,
+          "sha256": "efe0879d4d6c286b4866e285c6f0415cef29376e739c31b9856580e37b0f3ed8",
+          "rows": 2
+        },
+        {
+          "partition": "p1",
+          "file": "range_exchanged-p1.partition.gz",
+          "bytes": 147456,
+          "sha256": "8170233b0b4a6f13838880137a8dd37b8a7fa0e4c9b23b3957c8fd085f85280d",
+          "rows": 500
+        },
+        {
+          "partition": "p2",
+          "file": "range_exchanged-p2.partition.gz",
+          "bytes": 131072,
+          "sha256": "4b2257415da2c3db0cd4c41de70f9d7bba4eeedc292e3fdc0273120d3224a9c2",
+          "rows": 0
+        }
+      ],
+      "rows": 502
+    },
+    {
+      "name": "range_rebuilt_nonanchor",
+      "table": "ranges",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "range_rebuilt_nonanchor-p0.partition.gz",
+          "bytes": 131072,
+          "sha256": "96c46b329787772cc8663ce8be1b59dec87f8dc890dfc4bac570c8e526558f97",
+          "rows": 2
+        },
+        {
+          "partition": "p1",
+          "file": "range_rebuilt_nonanchor-p1.partition.gz",
+          "bytes": 147456,
+          "sha256": "452820ac6c2a1cd61b88359d025250a2249e7ee3ae7ec48a170ebb17cdda1254",
+          "rows": 500
+        },
+        {
+          "partition": "p2",
+          "file": "range_rebuilt_nonanchor-p2.partition.gz",
+          "bytes": 131072,
+          "sha256": "4b2257415da2c3db0cd4c41de70f9d7bba4eeedc292e3fdc0273120d3224a9c2",
+          "rows": 0
+        }
+      ],
+      "rows": 502
+    }
+  ],
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1
+  }
+}

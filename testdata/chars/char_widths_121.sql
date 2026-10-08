@@ -1,0 +1,12 @@
+CREATE TABLE `char_widths_121` (
+  `id` int NOT NULL,
+  `c121` char(121) DEFAULT NULL,
+  `c122` char(122) DEFAULT NULL,
+  `c123` char(123) DEFAULT NULL,
+  `c124` char(124) DEFAULT NULL,
+  `c125` char(125) DEFAULT NULL,
+  `c126` char(126) DEFAULT NULL,
+  `c127` char(127) DEFAULT NULL,
+  `c128` char(128) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;

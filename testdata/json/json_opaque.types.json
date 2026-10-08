@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "types": [
+      "DECIMAL",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 2,
+    "types": [
+      "DECIMAL",
+      "DATE",
+      "TIME",
+      "DATETIME"
+    ]
+  },
+  {
+    "id": 3,
+    "types": [
+      "BLOB",
+      "BLOB",
+      "BLOB",
+      null
+    ]
+  }
+]

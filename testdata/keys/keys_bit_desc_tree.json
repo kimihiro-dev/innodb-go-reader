@@ -1,0 +1,27 @@
+{
+  "columns": [
+    {
+      "name": "k",
+      "type": "BIT",
+      "bit_length": 64,
+      "descending": true
+    },
+    {
+      "name": "sequence",
+      "type": "INT",
+      "descending": true
+    },
+    {
+      "name": "payload",
+      "type": "VARCHAR",
+      "max_chars": 1500
+    }
+  ],
+  "primary_keys": [
+    "k",
+    "sequence"
+  ],
+  "index_id": 798,
+  "space_id": 587,
+  "root_page": 4
+}

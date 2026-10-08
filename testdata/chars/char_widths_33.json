@@ -1,0 +1,62 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    },
+    {
+      "name": "c33",
+      "type": "CHAR",
+      "nullable": true,
+      "max_chars": 33
+    },
+    {
+      "name": "c34",
+      "type": "CHAR",
+      "nullable": true,
+      "max_chars": 34
+    },
+    {
+      "name": "c35",
+      "type": "CHAR",
+      "nullable": true,
+      "max_chars": 35
+    },
+    {
+      "name": "c36",
+      "type": "CHAR",
+      "nullable": true,
+      "max_chars": 36
+    },
+    {
+      "name": "c37",
+      "type": "CHAR",
+      "nullable": true,
+      "max_chars": 37
+    },
+    {
+      "name": "c38",
+      "type": "CHAR",
+      "nullable": true,
+      "max_chars": 38
+    },
+    {
+      "name": "c39",
+      "type": "CHAR",
+      "nullable": true,
+      "max_chars": 39
+    },
+    {
+      "name": "c40",
+      "type": "CHAR",
+      "nullable": true,
+      "max_chars": 40
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 372,
+  "space_id": 163,
+  "root_page": 4
+}

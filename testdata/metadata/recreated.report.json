@@ -1,0 +1,155 @@
+{
+  "Database": "innodb_reader_metadata_2b94e27b44eb",
+  "Name": "sample",
+  "TableID": 1256,
+  "Source": {
+    "Type": 1,
+    "ID": 582
+  },
+  "Columns": [
+    {
+      "Name": "id",
+      "DDType": 4,
+      "CollationID": 8,
+      "Charset": "latin1",
+      "Hidden": 1,
+      "Nullable": false,
+      "Unsigned": false,
+      "CharLength": 11,
+      "Precision": 10,
+      "Scale": 0,
+      "FSP": 0
+    },
+    {
+      "Name": "score",
+      "DDType": 4,
+      "CollationID": 8,
+      "Charset": "latin1",
+      "Hidden": 1,
+      "Nullable": true,
+      "Unsigned": false,
+      "CharLength": 11,
+      "Precision": 10,
+      "Scale": 0,
+      "FSP": 0
+    },
+    {
+      "Name": "name",
+      "DDType": 16,
+      "CollationID": 255,
+      "Charset": "utf8mb4",
+      "Hidden": 1,
+      "Nullable": true,
+      "Unsigned": false,
+      "CharLength": 128,
+      "Precision": 0,
+      "Scale": 0,
+      "FSP": 0
+    },
+    {
+      "Name": "DB_TRX_ID",
+      "DDType": 10,
+      "CollationID": 63,
+      "Charset": "binary",
+      "Hidden": 2,
+      "Nullable": false,
+      "Unsigned": false,
+      "CharLength": 6,
+      "Precision": 0,
+      "Scale": 0,
+      "FSP": 0
+    },
+    {
+      "Name": "DB_ROLL_PTR",
+      "DDType": 9,
+      "CollationID": 63,
+      "Charset": "binary",
+      "Hidden": 2,
+      "Nullable": false,
+      "Unsigned": false,
+      "CharLength": 7,
+      "Precision": 0,
+      "Scale": 0,
+      "FSP": 0
+    }
+  ],
+  "Indexes": [
+    {
+      "Name": "PRIMARY",
+      "Type": 1,
+      "Algorithm": 2,
+      "ID": 403,
+      "SpaceID": 194,
+      "RootPage": 4,
+      "Level": 0,
+      "RootVerified": true,
+      "Elements": [
+        {
+          "ordinal_position": 1,
+          "column_opx": 0,
+          "length": 4,
+          "order": 2,
+          "hidden": false
+        },
+        {
+          "ordinal_position": 2,
+          "column_opx": 3,
+          "length": 4294967295,
+          "order": 2,
+          "hidden": true
+        },
+        {
+          "ordinal_position": 3,
+          "column_opx": 4,
+          "length": 4294967295,
+          "order": 2,
+          "hidden": true
+        },
+        {
+          "ordinal_position": 4,
+          "column_opx": 1,
+          "length": 4294967295,
+          "order": 2,
+          "hidden": true
+        },
+        {
+          "ordinal_position": 5,
+          "column_opx": 2,
+          "length": 4294967295,
+          "order": 2,
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "Name": "idx_score",
+      "Type": 3,
+      "Algorithm": 2,
+      "ID": 405,
+      "SpaceID": 194,
+      "RootPage": 5,
+      "Level": 0,
+      "RootVerified": true,
+      "Elements": [
+        {
+          "ordinal_position": 1,
+          "column_opx": 1,
+          "length": 4,
+          "order": 2,
+          "hidden": false
+        },
+        {
+          "ordinal_position": 2,
+          "column_opx": 0,
+          "length": 4294967295,
+          "order": 2,
+          "hidden": true
+        }
+      ]
+    }
+  ],
+  "Schema": null,
+  "Issues": [
+    "only one primary index is supported for row reading"
+  ]
+}

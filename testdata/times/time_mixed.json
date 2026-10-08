@@ -1,0 +1,96 @@
+{
+  "columns": [
+    {
+      "name": "t0",
+      "type": "TIME",
+      "nullable": true,
+      "max_chars": 0,
+      "fsp": 0
+    },
+    {
+      "name": "t1",
+      "type": "TIME",
+      "nullable": true,
+      "max_chars": 0,
+      "fsp": 1
+    },
+    {
+      "name": "t2",
+      "type": "TIME",
+      "nullable": true,
+      "max_chars": 0,
+      "fsp": 2
+    },
+    {
+      "name": "t3",
+      "type": "TIME",
+      "nullable": true,
+      "max_chars": 0,
+      "fsp": 3
+    },
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    },
+    {
+      "name": "t4",
+      "type": "TIME",
+      "nullable": true,
+      "max_chars": 0,
+      "fsp": 4
+    },
+    {
+      "name": "t5",
+      "type": "TIME",
+      "nullable": true,
+      "max_chars": 0,
+      "fsp": 5
+    },
+    {
+      "name": "t6",
+      "type": "TIME",
+      "nullable": true,
+      "max_chars": 0,
+      "fsp": 6
+    },
+    {
+      "name": "t7",
+      "type": "TIME",
+      "nullable": true,
+      "max_chars": 0,
+      "fsp": 0
+    },
+    {
+      "name": "t8",
+      "type": "TIME",
+      "nullable": true,
+      "max_chars": 0,
+      "fsp": 1
+    },
+    {
+      "name": "stamp",
+      "type": "DATETIME",
+      "nullable": true,
+      "max_chars": 0,
+      "fsp": 6
+    },
+    {
+      "name": "note",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 32
+    },
+    {
+      "name": "body",
+      "type": "TEXT",
+      "nullable": true,
+      "max_chars": 0
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 344,
+  "space_id": 135,
+  "root_page": 4
+}

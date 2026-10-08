@@ -1,0 +1,26 @@
+{
+  "columns": [
+    {
+      "name": "nullable",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "b",
+      "type": "INT"
+    },
+    {
+      "name": "a",
+      "type": "INT"
+    }
+  ],
+  "clustered_key": {
+    "name": "z_chosen",
+    "columns": [
+      "b"
+    ]
+  },
+  "index_id": 871,
+  "space_id": 652,
+  "root_page": 4
+}

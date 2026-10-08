@@ -1,0 +1,85 @@
+{
+  "database": "innodb_reader_fixture_0d4169df4215",
+  "generated_at": "2026-09-14T01:28:57.289145+00:00",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1,
+    "sql_mode": ""
+  },
+  "snapshot": "Same session: FOR EXPORT, SELECT, copy, UNLOCK",
+  "cases": [
+    {
+      "name": "enum_1",
+      "rows": 3,
+      "index_id": 357,
+      "space_id": 148,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "370bb5762a26b7c88597837e4fa9643c94e90a37b2618846d7cca12b56e0d1b9"
+    },
+    {
+      "name": "enum_255",
+      "rows": 257,
+      "index_id": 358,
+      "space_id": 149,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "fbe58b782ae7ebec17ec92861a96f050a70727232f4675af77fe01b5c0aa606a"
+    },
+    {
+      "name": "enum_256",
+      "rows": 258,
+      "index_id": 359,
+      "space_id": 150,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "8d1c49c1332805c0d512adf220ea25dee6e1eacd380b67702a6926515133cb5c"
+    },
+    {
+      "name": "enum_65535",
+      "rows": 8,
+      "index_id": 360,
+      "space_id": 151,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 573440,
+      "sha256": "2b691f7ec718d96c6a633cfc81d8617ab94ddf669d8ffaa47e57fd1015847b46"
+    },
+    {
+      "name": "enum_labels",
+      "rows": 10,
+      "index_id": 361,
+      "space_id": 152,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "54f3b59f9733c5c0dfe7f3e580e4d1be1ee8fcf1db7d28a701726a29fff19d1e"
+    },
+    {
+      "name": "enum_mixed",
+      "rows": 4,
+      "index_id": 362,
+      "space_id": 153,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 163840,
+      "sha256": "78f92cdd13166961323ab458a49b28eeaf2e542e09ae3ac0e593e56e6be0984b"
+    },
+    {
+      "name": "enum_tree",
+      "rows": 600,
+      "index_id": 363,
+      "space_id": 154,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 393216,
+      "sha256": "4016e3c853664ff114bd23961230bee69e886287293f54205b382e917cc96b53"
+    }
+  ]
+}

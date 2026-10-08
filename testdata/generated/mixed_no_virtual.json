@@ -1,0 +1,47 @@
+{
+  "columns": [
+    {
+      "name": "added",
+      "type": "INT"
+    },
+    {
+      "name": "id",
+      "type": "BIGINT",
+      "unsigned": true,
+      "invisible": true
+    },
+    {
+      "name": "a",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "txt",
+      "type": "LONGTEXT",
+      "nullable": true
+    },
+    {
+      "name": "stored_n",
+      "type": "INT",
+      "nullable": true,
+      "invisible": true,
+      "generation_expression": "(`a` * 2)"
+    },
+    {
+      "name": "stored_text",
+      "type": "LONGTEXT",
+      "nullable": true,
+      "generation_expression": "concat(`txt`,`txt`)"
+    },
+    {
+      "name": "tail",
+      "type": "VARCHAR",
+      "max_chars": 30,
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 162,
+  "space_id": 10,
+  "primary_key": "id"
+}

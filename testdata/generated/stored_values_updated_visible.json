@@ -1,0 +1,42 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "a",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "text",
+      "type": "VARCHAR",
+      "max_chars": 40,
+      "nullable": true
+    },
+    {
+      "name": "twice",
+      "type": "INT",
+      "nullable": true,
+      "generation_expression": "(`a` * 2)"
+    },
+    {
+      "name": "label",
+      "type": "VARCHAR",
+      "max_chars": 90,
+      "nullable": true,
+      "generation_expression": "concat(`text`,_utf8mb4':',`a`)"
+    },
+    {
+      "name": "secret",
+      "type": "VARBINARY",
+      "max_bytes": 12,
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 160,
+  "space_id": 8,
+  "primary_key": "id"
+}

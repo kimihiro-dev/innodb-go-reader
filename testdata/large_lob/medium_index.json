@@ -1,0 +1,20 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    },
+    {
+      "name": "data",
+      "type": "MEDIUMBLOB",
+      "nullable": true,
+      "max_chars": 0
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 297,
+  "space_id": 88,
+  "root_page": 4
+}

@@ -1,0 +1,38 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "c",
+      "type": "CHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 1
+    },
+    {
+      "name": "v",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 1
+    },
+    {
+      "name": "t",
+      "type": "TINYTEXT",
+      "nullable": true,
+      "charset": "latin1"
+    },
+    {
+      "name": "note",
+      "type": "VARCHAR",
+      "max_chars": 32,
+      "nullable": true
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 441,
+  "space_id": 230,
+  "root_page": 4
+}

@@ -1,0 +1,91 @@
+{
+  "columns": [
+    {
+      "name": "tinyint_s",
+      "type": "TINYINT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": false
+    },
+    {
+      "name": "tinyint_u",
+      "type": "TINYINT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": true
+    },
+    {
+      "name": "smallint_s",
+      "type": "SMALLINT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": false
+    },
+    {
+      "name": "smallint_u",
+      "type": "SMALLINT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": true
+    },
+    {
+      "name": "mediumint_s",
+      "type": "MEDIUMINT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": false
+    },
+    {
+      "name": "id",
+      "type": "BIGINT",
+      "nullable": false,
+      "max_chars": 0,
+      "unsigned": true
+    },
+    {
+      "name": "mediumint_u",
+      "type": "MEDIUMINT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": true
+    },
+    {
+      "name": "int_s",
+      "type": "INT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": false
+    },
+    {
+      "name": "int_u",
+      "type": "INT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": true
+    },
+    {
+      "name": "bigint_s",
+      "type": "BIGINT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": false
+    },
+    {
+      "name": "bigint_u",
+      "type": "BIGINT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": true
+    },
+    {
+      "name": "text",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 63
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 278,
+  "space_id": 69,
+  "root_page": 4
+}

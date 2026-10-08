@@ -1,0 +1,62 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    },
+    {
+      "name": "v0",
+      "type": "VARCHAR",
+      "nullable": false,
+      "max_chars": 63
+    },
+    {
+      "name": "v1",
+      "type": "VARCHAR",
+      "nullable": false,
+      "max_chars": 63
+    },
+    {
+      "name": "v2",
+      "type": "VARCHAR",
+      "nullable": false,
+      "max_chars": 63
+    },
+    {
+      "name": "v3",
+      "type": "VARCHAR",
+      "nullable": false,
+      "max_chars": 63
+    },
+    {
+      "name": "v4",
+      "type": "VARCHAR",
+      "nullable": false,
+      "max_chars": 63
+    },
+    {
+      "name": "v5",
+      "type": "VARCHAR",
+      "nullable": false,
+      "max_chars": 63
+    },
+    {
+      "name": "v6",
+      "type": "VARCHAR",
+      "nullable": false,
+      "max_chars": 63
+    },
+    {
+      "name": "v7",
+      "type": "VARCHAR",
+      "nullable": false,
+      "max_chars": 63
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 258,
+  "space_id": 49,
+  "root_page": 4
+}

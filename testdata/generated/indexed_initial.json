@@ -1,0 +1,24 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "a",
+      "type": "INT",
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 167,
+  "space_id": 15,
+  "primary_key": "id",
+  "virtual_columns": [
+    {
+      "name": "v",
+      "ordinal": 3,
+      "expression": "(`a` + 1)"
+    }
+  ]
+}

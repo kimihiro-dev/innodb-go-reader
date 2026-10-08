@@ -1,0 +1,195 @@
+{
+  "database": "innodb_reader_fixture_3b57ac397814",
+  "generated_at": "2026-09-14T01:15:12.188920+00:00",
+  "environment": {
+    "datadir": "/tmp/innodb-bit-stage13/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1,
+    "sql_mode": "STRICT_TRANS_TABLES"
+  },
+  "snapshot": "Same session: FOR EXPORT, SELECT, copy, UNLOCK",
+  "cases": [
+    {
+      "name": "binary_widths_1",
+      "rows": 6,
+      "index_id": 160,
+      "space_id": 8,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "c86cf286317eb6089a1846bdc5a8928a57a3ea632ba9de149d5c8e6c602f628c"
+    },
+    {
+      "name": "binary_widths_17",
+      "rows": 6,
+      "index_id": 161,
+      "space_id": 9,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "3c64e14d6e4fd5c93380f7c5ce360e6ba37a9c1203937b1ea272dca0a37dbb4e"
+    },
+    {
+      "name": "binary_widths_33",
+      "rows": 6,
+      "index_id": 162,
+      "space_id": 10,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "1fdd6a7614f527367028ade379edba309c67cee0f19d482c5392ccdc7f5a42f2"
+    },
+    {
+      "name": "binary_widths_49",
+      "rows": 6,
+      "index_id": 163,
+      "space_id": 11,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "dff846b3a44907980ccb6af2eb1cbd5fed9ef8bc30b294c05deab4300610894f"
+    },
+    {
+      "name": "binary_widths_65",
+      "rows": 6,
+      "index_id": 164,
+      "space_id": 12,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "344730b7ed4c9f6593ab8bf8085898855ffe5aeb28d1d185e6698b580e57f8df"
+    },
+    {
+      "name": "binary_widths_81",
+      "rows": 6,
+      "index_id": 165,
+      "space_id": 13,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "e3f4caf67b915bbe282d54e45b3f30c89133f8eb1681a848d07eacaaecaece10"
+    },
+    {
+      "name": "binary_widths_97",
+      "rows": 6,
+      "index_id": 166,
+      "space_id": 14,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "e73adc2e7c36bf6e87792193b4bafebedd4d1a743fa260b245b882445fb03544"
+    },
+    {
+      "name": "binary_widths_113",
+      "rows": 6,
+      "index_id": 167,
+      "space_id": 15,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "f393eb2cc4182e23a4ac3ee1adef7342b8f87ce7f1fe38efeaf974d92ad052f1"
+    },
+    {
+      "name": "binary_widths_129",
+      "rows": 6,
+      "index_id": 168,
+      "space_id": 16,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "a836187f8da8e8a5a00e243cde770f898ddfdd4212e70b1c574b18943843aec8"
+    },
+    {
+      "name": "binary_widths_145",
+      "rows": 6,
+      "index_id": 169,
+      "space_id": 17,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "85c3c6606f20894f9cb2e3525568db36a9e1cd3abb8ea328d48c15fcd9c8822c"
+    },
+    {
+      "name": "binary_widths_161",
+      "rows": 6,
+      "index_id": 170,
+      "space_id": 18,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "31bf1eb6d638fe3e919cfbfe4bc9a0b46b4bfe3f2c6ab10780b4ac746d36f404"
+    },
+    {
+      "name": "binary_widths_177",
+      "rows": 6,
+      "index_id": 171,
+      "space_id": 19,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "70d47049bbf1c546e33546ea8e26867c873c710b177f728ea33f10b6ef5d46ac"
+    },
+    {
+      "name": "binary_widths_193",
+      "rows": 6,
+      "index_id": 172,
+      "space_id": 20,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 131072,
+      "sha256": "1a07abd5a35d6db77fe139ee222c5a5f0d81abc3500068d6292b917e4b9c1330"
+    },
+    {
+      "name": "binary_widths_209",
+      "rows": 6,
+      "index_id": 173,
+      "space_id": 21,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 131072,
+      "sha256": "ea6a3699b132b48abeb606179f589df9ea304b1cc8e1a33c26442b1fa2256380"
+    },
+    {
+      "name": "binary_widths_225",
+      "rows": 6,
+      "index_id": 174,
+      "space_id": 22,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 131072,
+      "sha256": "1cca0ba8a14fef556d317fe32165d38b54ef731c5c76c3d79d1f941736ca1edd"
+    },
+    {
+      "name": "binary_widths_241",
+      "rows": 6,
+      "index_id": 175,
+      "space_id": 23,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 131072,
+      "sha256": "965f45e94c6e0c56abbdeaa6306e11b7b145862b803e96ce3bba7846e925b415"
+    },
+    {
+      "name": "binary_mixed",
+      "rows": 4,
+      "index_id": 176,
+      "space_id": 24,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 163840,
+      "sha256": "8f5bb16925cf256b16b26f57c77de8b98bd4efbefb8d151fee14b2a2dff89be5"
+    },
+    {
+      "name": "binary_tree",
+      "rows": 600,
+      "index_id": 177,
+      "space_id": 25,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 9437184,
+      "sha256": "53584e429bff3cae09324197018b42a92c8ac2f59df59027a2b03366295e744d"
+    }
+  ]
+}

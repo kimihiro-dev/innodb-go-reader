@@ -1,0 +1,110 @@
+{
+  "database": "innodb_reader_secondary_12402f8b6069",
+  "generated_at": "2026-09-21T00:51:26.473206+00:00",
+  "status": "captured",
+  "cases": [
+    {
+      "name": "tiny",
+      "rows": 181,
+      "indexes": 1,
+      "rowid": false,
+      "sha256": "0b05e46f3f35eb1a9e857812f8d19072bacfb1381afb4f33e39cdcb4edfd8b8f",
+      "bytes": 131072
+    },
+    {
+      "name": "empty",
+      "rows": 0,
+      "indexes": 1,
+      "rowid": false,
+      "sha256": "7c32aa421ed0887c96c806fc9422e7ecaf2166797c8548e65bc20d472024a2f7",
+      "bytes": 131072
+    },
+    {
+      "name": "integer",
+      "rows": 2500,
+      "indexes": 2,
+      "rowid": false,
+      "sha256": "289de892128bfa554d074547dfb49574546ad0963d19c6e911cc3f1e89524fe8",
+      "bytes": 491520
+    },
+    {
+      "name": "deep",
+      "rows": 2000,
+      "indexes": 1,
+      "rowid": false,
+      "sha256": "c7da2b485ba110c13fc16c6436eca0143fab350dcc2e4d6842dabeb1a6b83d50",
+      "bytes": 15728640
+    },
+    {
+      "name": "overlap",
+      "rows": 120,
+      "indexes": 2,
+      "rowid": false,
+      "sha256": "0027bdb7f4f5fdbc2967766c149ff9909c9701364a7df341ca1cbe757d1f901b",
+      "bytes": 163840
+    },
+    {
+      "name": "wide_prefix",
+      "rows": 10,
+      "indexes": 1,
+      "rowid": false,
+      "sha256": "4d40ad0d06a21d5dd8187e371f9da7055e46d148620b9808adfac8a6ac5d3a06",
+      "bytes": 131072
+    },
+    {
+      "name": "compact",
+      "rows": 80,
+      "indexes": 2,
+      "rowid": false,
+      "sha256": "1afa759a5247f330893316979a6e7482d5023e2e5486782465bf52ae08d0938a",
+      "bytes": 180224
+    },
+    {
+      "name": "rowid",
+      "rows": 5,
+      "indexes": 2,
+      "rowid": true,
+      "sha256": "9eab4111352c9d615dc82b160dbc69aff734cb47bfff89c583be3a783bfe5d7a",
+      "bytes": 147456
+    },
+    {
+      "name": "unique_cluster",
+      "rows": 100,
+      "indexes": 2,
+      "rowid": false,
+      "sha256": "39b989a4faec5e946e40317b77d939faf2886cdc686bf624a9d7d98d7f8235d5",
+      "bytes": 147456
+    },
+    {
+      "name": "generated",
+      "rows": 160,
+      "indexes": 1,
+      "rowid": false,
+      "sha256": "986bd251701f38ae3aa91b65893bbaaf94fef59e19a919f0b7dd3301a085e5d0",
+      "bytes": 131072
+    },
+    {
+      "name": "scalars",
+      "rows": 3,
+      "indexes": 3,
+      "rowid": false,
+      "sha256": "fec01e5b82c96d1b18c5d7e7d244043b6a85bb7eab9b2c3ee714519f66886691",
+      "bytes": 163840
+    },
+    {
+      "name": "changes",
+      "rows": 90,
+      "indexes": 2,
+      "rowid": false,
+      "sha256": "26ecf519d973d4484ea1b763448688b3b4057a82d27a702a1b5da581ac790576",
+      "bytes": 147456
+    }
+  ],
+  "environment": {
+    "datadir": "/private/tmp/innodb-generated-stage30/instance/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1
+  }
+}

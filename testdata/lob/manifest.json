@@ -1,0 +1,44 @@
+{
+  "database": "innodb_reader_fixture_f340b8050b59",
+  "generated_at": "2026-09-10T01:16:44.810006+00:00",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1
+  },
+  "snapshot": "Same session: FOR EXPORT, SELECT, copy, UNLOCK",
+  "cases": [
+    {
+      "name": "lob_sizes",
+      "rows": 8,
+      "index_id": 286,
+      "space_id": 77,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 311296,
+      "sha256": "4daac453375a9af2eab6c140363b08b874763098d392aef6ad0913e548252015"
+    },
+    {
+      "name": "lob_text",
+      "rows": 4,
+      "index_id": 287,
+      "space_id": 78,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 196608,
+      "sha256": "d4b830ea1162009cf348e283d4efe852ea1c60ec4b2cb87f180015a74e94efd6"
+    },
+    {
+      "name": "lob_mixed_tree",
+      "rows": 80,
+      "index_id": 288,
+      "space_id": 79,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 12582912,
+      "sha256": "aa2178fbfd8e8d3849f609a589241e35d74ee8875279a1bd4dc67efcd011c9ec"
+    }
+  ]
+}

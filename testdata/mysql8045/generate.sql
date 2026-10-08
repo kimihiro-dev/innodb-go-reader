@@ -1,0 +1,15 @@
+CREATE DATABASE `innodb_reader_fixture_5969d1f08e72`;
+USE `innodb_reader_fixture_5969d1f08e72`;
+CREATE TABLE `lesson_rows` (`id` INT NOT NULL, `score` INT NULL, `name` VARCHAR(32) NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB ROW_FORMAT=DYNAMIC DEFAULT CHARSET=utf8mb4 ENCRYPTION='N';
+INSERT INTO `lesson_rows` VALUES (7,0,''),(-3,42,'InnoDB'),(12,-5,'你好'),(2,NULL,NULL);
+CREATE TABLE `empty_rows` (`id` INT NOT NULL, `score` INT NULL, `name` VARCHAR(32) NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB ROW_FORMAT=DYNAMIC DEFAULT CHARSET=utf8mb4 ENCRYPTION='N';
+CREATE TABLE `single_row` (`id` INT NOT NULL, `score` INT NULL, `name` VARCHAR(32) NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB ROW_FORMAT=DYNAMIC DEFAULT CHARSET=utf8mb4 ENCRYPTION='N';
+INSERT INTO `single_row` VALUES (1,NULL,'单行😀');
+CREATE TABLE `boundary_rows` (`id` INT NOT NULL, `score` INT NULL, `name` VARCHAR(32) NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB ROW_FORMAT=DYNAMIC DEFAULT CHARSET=utf8mb4 ENCRYPTION='N';
+INSERT INTO `boundary_rows` VALUES (-2147483648,2147483647,REPEAT('😀',32)),(2147483647,-2147483648,REPEAT('a',32)),(0,0,NULL),(-1,NULL,''),(1,NULL,'非空'),(2,5,'');
+CREATE TABLE `null_bitmap_rows` (`n0` INT NULL, `n1` INT NULL, `n2` INT NULL, `n3` INT NULL, `n4` INT NULL, `n5` INT NULL, `n6` INT NULL, `n7` INT NULL, `n8` INT NULL, `name` VARCHAR(32) NULL, `id` INT NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB ROW_FORMAT=DYNAMIC DEFAULT CHARSET=utf8mb4 ENCRYPTION='N';
+INSERT INTO `null_bitmap_rows` VALUES (NULL,1,NULL,3,NULL,5,NULL,7,NULL,'九列',2),(0,NULL,2,NULL,4,NULL,6,NULL,8,NULL,-2);
+CREATE TABLE `directory_rows` (`id` INT NOT NULL, `score` INT NULL, `name` VARCHAR(32) NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB ROW_FORMAT=DYNAMIC DEFAULT CHARSET=utf8mb4 ENCRYPTION='N';
+INSERT INTO `directory_rows` VALUES (39,39,'row39'),(38,38,'row38'),(37,37,'row37'),(36,36,'row36'),(35,35,'row35'),(34,34,'row34'),(33,33,'row33'),(32,32,'row32'),(31,31,'row31'),(30,30,'row30'),(29,29,'row29'),(28,28,'row28'),(27,27,'row27'),(26,26,'row26'),(25,25,'row25'),(24,24,'row24'),(23,23,'row23'),(22,22,'row22'),(21,21,'row21'),(20,20,'row20'),(19,19,'row19'),(18,18,'row18'),(17,17,'row17'),(16,16,'row16'),(15,15,'row15'),(14,14,'row14'),(13,13,'row13'),(12,12,'row12'),(11,11,'row11'),(10,10,'row10'),(9,9,'row9'),(8,8,'row8'),(7,7,'row7'),(6,6,'row6'),(5,5,'row5'),(4,4,'row4'),(3,3,'row3'),(2,2,'row2'),(1,1,'row1'),(0,0,'row0');
+CREATE TABLE `variable_rows` (`id` INT NOT NULL, `left_text` VARCHAR(63) NULL, `right_text` VARCHAR(32) NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB ROW_FORMAT=DYNAMIC DEFAULT CHARSET=utf8mb4 ENCRYPTION='N';
+INSERT INTO `variable_rows` VALUES (3,REPEAT('😀',63),'终'),(1,'左','右'),(2,NULL,''),(4,'',NULL);

@@ -1,0 +1,29 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    },
+    {
+      "name": "value",
+      "type": "ENUM",
+      "nullable": true,
+      "max_chars": 0,
+      "enum_values": [
+        "",
+        "ready",
+        "中文😀",
+        "2",
+        "a'b",
+        "slash\\path",
+        "a,b"
+      ]
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 361,
+  "space_id": 152,
+  "root_page": 4
+}

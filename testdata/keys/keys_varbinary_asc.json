@@ -1,0 +1,21 @@
+{
+  "columns": [
+    {
+      "name": "k",
+      "type": "VARBINARY",
+      "max_bytes": 8,
+      "descending": false
+    },
+    {
+      "name": "tie",
+      "type": "INT"
+    }
+  ],
+  "primary_keys": [
+    "k",
+    "tie"
+  ],
+  "index_id": 720,
+  "space_id": 509,
+  "root_page": 4
+}

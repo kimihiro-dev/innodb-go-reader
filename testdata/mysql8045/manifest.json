@@ -1,0 +1,77 @@
+{
+  "database": "innodb_reader_fixture_5969d1f08e72",
+  "generated_at": "2026-09-09T01:34:55.199880+00:00",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1
+  },
+  "snapshot": "Same session: FOR EXPORT, SELECT, copy, UNLOCK",
+  "cases": [
+    {
+      "name": "lesson_rows",
+      "rows": 4,
+      "index_id": 249,
+      "space_id": 40,
+      "root_page": 4,
+      "bytes": 114688,
+      "sha256": "16ce56bac7c881db15f075dc97d67ede6ce09a763c65449b068f0b79fa8fa678"
+    },
+    {
+      "name": "empty_rows",
+      "rows": 0,
+      "index_id": 250,
+      "space_id": 41,
+      "root_page": 4,
+      "bytes": 114688,
+      "sha256": "b523148b9eddc50b2ebdb2fcc9fa9b2ba0f1ec0d9e99c2b9884d8416490d495a"
+    },
+    {
+      "name": "single_row",
+      "rows": 1,
+      "index_id": 251,
+      "space_id": 42,
+      "root_page": 4,
+      "bytes": 114688,
+      "sha256": "c9abe3606005cad34d02af32cafdf064fb89824d155107efce167dd56eb45396"
+    },
+    {
+      "name": "boundary_rows",
+      "rows": 6,
+      "index_id": 252,
+      "space_id": 43,
+      "root_page": 4,
+      "bytes": 114688,
+      "sha256": "4fc3e7bafd4add020f08af535ba6f3d25f62511c03a572c1f0385f4a813cbff1"
+    },
+    {
+      "name": "null_bitmap_rows",
+      "rows": 2,
+      "index_id": 253,
+      "space_id": 44,
+      "root_page": 4,
+      "bytes": 114688,
+      "sha256": "84e7523b0fd28e2cdd529eeaaae1c9ac5e3f55bf6168de48eb20f7f6e3aafe82"
+    },
+    {
+      "name": "directory_rows",
+      "rows": 40,
+      "index_id": 254,
+      "space_id": 45,
+      "root_page": 4,
+      "bytes": 114688,
+      "sha256": "0328dd2a209fd8ee49b6f345fc77e5e29532ab819a0cf2e59df80a975eda9259"
+    },
+    {
+      "name": "variable_rows",
+      "rows": 4,
+      "index_id": 255,
+      "space_id": 46,
+      "root_page": 4,
+      "bytes": 114688,
+      "sha256": "b30212d86401c8c0494a7401103f0f0ba802513c00212cf49ab8c1fd94a4bfcf"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "columns": [
+    {
+      "name": "k",
+      "type": "DATETIME",
+      "fsp": 3,
+      "descending": true
+    }
+  ],
+  "primary_key": "k",
+  "index_id": 751,
+  "space_id": 540,
+  "root_page": 4
+}

@@ -1,0 +1,75 @@
+{
+  "database": "innodb_reader_fixture_0e5bc55c533d",
+  "generated_at": "2026-09-10T06:03:09.782776+00:00",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1
+  },
+  "snapshot": "Same session: FOR EXPORT, SELECT, copy, UNLOCK",
+  "cases": [
+    {
+      "name": "all_lob_types",
+      "rows": 7,
+      "index_id": 295,
+      "space_id": 86,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "81dd0b5049261f174d51f43ea9473baf81795bc2e7e7fd862dc60854db116671"
+    },
+    {
+      "name": "text_blob",
+      "rows": 3,
+      "index_id": 296,
+      "space_id": 87,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 229376,
+      "sha256": "9e1ea5fbdb0c40d54ef119a47a4a52a9dd8ac954331a7974822ed3eddf9093eb"
+    },
+    {
+      "name": "medium_index",
+      "rows": 4,
+      "index_id": 297,
+      "space_id": 88,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 11534336,
+      "sha256": "088ed2a12976590434ba40b97589e98055c73c1faeae481e176d4e2192a0b354"
+    },
+    {
+      "name": "large_text",
+      "rows": 1,
+      "index_id": 298,
+      "space_id": 89,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 5242880,
+      "sha256": "724fc2de3d81c80817a8281777082e86e208dbbf32193e96fe54f6108f7fbe06"
+    },
+    {
+      "name": "long_limit",
+      "rows": 1,
+      "index_id": 299,
+      "space_id": 90,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 19922944,
+      "sha256": "468569a81c841fdeb86c9d59c4b67b9da3f40c28e16322cbc78aaf60f8657273"
+    },
+    {
+      "name": "long_over_limit",
+      "rows": 1,
+      "expected_error": "value_limit",
+      "index_id": 300,
+      "space_id": 91,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 19922944,
+      "sha256": "9f3f6bf480901ae9c546c2f3ef80cf31f26a54bacce3a2cdd541c796c1ab56d0"
+    }
+  ]
+}

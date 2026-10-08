@@ -1,0 +1,87 @@
+{
+  "columns": [
+    {
+      "name": "c",
+      "type": "INT"
+    },
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "d",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 30
+    },
+    {
+      "name": "a",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 30
+    },
+    {
+      "name": "b",
+      "type": "INT"
+    },
+    {
+      "name": "payload",
+      "type": "LONGTEXT",
+      "nullable": true
+    },
+    {
+      "name": "e",
+      "type": "VARBINARY",
+      "max_bytes": 20
+    }
+  ],
+  "root_page": 4,
+  "index_id": 902,
+  "space_id": 678,
+  "primary_key": "id",
+  "instant": {
+    "version": 1,
+    "fields": [
+      {
+        "position": 0,
+        "column": 1
+      },
+      {
+        "position": 3,
+        "column": 3
+      },
+      {
+        "position": 4,
+        "column": 4
+      },
+      {
+        "position": 5,
+        "column": 5
+      },
+      {
+        "position": 6,
+        "column": 0,
+        "added": 1,
+        "default": {
+          "data": "gAAATQ=="
+        }
+      },
+      {
+        "position": 7,
+        "column": 2,
+        "added": 1,
+        "default": {
+          "null": true
+        }
+      },
+      {
+        "position": 8,
+        "column": 6,
+        "added": 1,
+        "default": {
+          "data": "AP8="
+        }
+      }
+    ]
+  }
+}

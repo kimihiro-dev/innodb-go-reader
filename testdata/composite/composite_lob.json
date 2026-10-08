@@ -1,0 +1,30 @@
+{
+  "columns": [
+    {
+      "name": "a",
+      "type": "INT"
+    },
+    {
+      "name": "doc",
+      "type": "MEDIUMTEXT",
+      "nullable": true
+    },
+    {
+      "name": "c",
+      "type": "BIGINT",
+      "unsigned": true
+    },
+    {
+      "name": "b",
+      "type": "TINYINT"
+    }
+  ],
+  "primary_keys": [
+    "a",
+    "b",
+    "c"
+  ],
+  "index_id": 447,
+  "space_id": 236,
+  "root_page": 4
+}

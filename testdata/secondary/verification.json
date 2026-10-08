@@ -1,0 +1,107 @@
+{
+  "files": 12,
+  "snapshot_rows": 5249,
+  "indexes": 20,
+  "records": 8150,
+  "deleted": 60,
+  "pages": 216,
+  "tool_directory": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin",
+  "cases": [
+    {
+      "name": "tiny",
+      "sha256": "0b05e46f3f35eb1a9e857812f8d19072bacfb1381afb4f33e39cdcb4edfd8b8f",
+      "indexes": 1,
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "empty",
+      "sha256": "7c32aa421ed0887c96c806fc9422e7ecaf2166797c8548e65bc20d472024a2f7",
+      "indexes": 1,
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "integer",
+      "sha256": "289de892128bfa554d074547dfb49574546ad0963d19c6e911cc3f1e89524fe8",
+      "indexes": 2,
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "deep",
+      "sha256": "c7da2b485ba110c13fc16c6436eca0143fab350dcc2e4d6842dabeb1a6b83d50",
+      "indexes": 1,
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "overlap",
+      "sha256": "0027bdb7f4f5fdbc2967766c149ff9909c9701364a7df341ca1cbe757d1f901b",
+      "indexes": 2,
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "wide_prefix",
+      "sha256": "4d40ad0d06a21d5dd8187e371f9da7055e46d148620b9808adfac8a6ac5d3a06",
+      "indexes": 1,
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "compact",
+      "sha256": "1afa759a5247f330893316979a6e7482d5023e2e5486782465bf52ae08d0938a",
+      "indexes": 2,
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "rowid",
+      "sha256": "9eab4111352c9d615dc82b160dbc69aff734cb47bfff89c583be3a783bfe5d7a",
+      "indexes": 2,
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "unique_cluster",
+      "sha256": "39b989a4faec5e946e40317b77d939faf2886cdc686bf624a9d7d98d7f8235d5",
+      "indexes": 2,
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "generated",
+      "sha256": "986bd251701f38ae3aa91b65893bbaaf94fef59e19a919f0b7dd3301a085e5d0",
+      "indexes": 1,
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "scalars",
+      "sha256": "fec01e5b82c96d1b18c5d7e7d244043b6a85bb7eab9b2c3ee714519f66886691",
+      "indexes": 3,
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "changes",
+      "sha256": "26ecf519d973d4484ea1b763448688b3b4057a82d27a702a1b5da581ac790576",
+      "indexes": 2,
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    }
+  ]
+}

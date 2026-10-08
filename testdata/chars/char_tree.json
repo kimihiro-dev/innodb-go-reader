@@ -1,0 +1,32 @@
+{
+  "columns": [
+    {
+      "name": "value",
+      "type": "CHAR",
+      "nullable": true,
+      "max_chars": 255
+    },
+    {
+      "name": "id",
+      "type": "BIGINT",
+      "nullable": false,
+      "max_chars": 0
+    },
+    {
+      "name": "short_value",
+      "type": "CHAR",
+      "nullable": true,
+      "max_chars": 3
+    },
+    {
+      "name": "note",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 100
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 401,
+  "space_id": 192,
+  "root_page": 4
+}

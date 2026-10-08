@@ -1,0 +1,34 @@
+{
+  "columns": [
+    {
+      "name": "doc",
+      "type": "MEDIUMTEXT",
+      "nullable": true
+    },
+    {
+      "name": "tie",
+      "type": "INT",
+      "descending": true
+    },
+    {
+      "name": "k",
+      "type": "VARBINARY",
+      "max_bytes": 768
+    },
+    {
+      "name": "text",
+      "type": "VARCHAR",
+      "max_chars": 32,
+      "collation": "utf8mb4_bin",
+      "descending": true
+    }
+  ],
+  "primary_keys": [
+    "text",
+    "k",
+    "tie"
+  ],
+  "index_id": 772,
+  "space_id": 561,
+  "root_page": 4
+}

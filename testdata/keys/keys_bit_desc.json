@@ -1,0 +1,14 @@
+{
+  "columns": [
+    {
+      "name": "k",
+      "type": "BIT",
+      "bit_length": 64,
+      "descending": true
+    }
+  ],
+  "primary_key": "k",
+  "index_id": 725,
+  "space_id": 514,
+  "root_page": 4
+}

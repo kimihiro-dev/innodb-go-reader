@@ -1,0 +1,21 @@
+{
+  "columns": [
+    {
+      "name": "k",
+      "type": "BINARY",
+      "max_bytes": 8,
+      "descending": true
+    },
+    {
+      "name": "tie",
+      "type": "INT"
+    }
+  ],
+  "primary_keys": [
+    "k",
+    "tie"
+  ],
+  "index_id": 719,
+  "space_id": 508,
+  "root_page": 4
+}

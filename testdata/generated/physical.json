@@ -1,0 +1,106 @@
+[
+  {
+    "name": "stored_values_initial",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "stored_values_updated_visible",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "mixed_initial",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 2,
+    "deleted": 0
+  },
+  {
+    "name": "mixed_instant",
+    "rows": 4,
+    "pages": 1,
+    "level": 0,
+    "external": 2,
+    "deleted": 0
+  },
+  {
+    "name": "mixed_changed",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 2,
+    "deleted": 0
+  },
+  {
+    "name": "mixed_rebuilt",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 2,
+    "deleted": 0
+  },
+  {
+    "name": "mixed_no_virtual",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 2,
+    "deleted": 0
+  },
+  {
+    "name": "tree_initial",
+    "rows": 600,
+    "pages": 102,
+    "level": 1,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "tree_instant",
+    "rows": 601,
+    "pages": 102,
+    "level": 1,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "hidden_initial",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "unique_stored_initial",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "empty_values_initial",
+    "rows": 0,
+    "pages": 1,
+    "level": 0,
+    "external": 0,
+    "deleted": 0
+  },
+  {
+    "name": "indexed_initial",
+    "rows": 3,
+    "pages": 1,
+    "level": 0,
+    "external": 0,
+    "deleted": 0
+  }
+]

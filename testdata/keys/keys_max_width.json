@@ -1,0 +1,13 @@
+{
+  "columns": [
+    {
+      "name": "k",
+      "type": "VARBINARY",
+      "max_bytes": 3072
+    }
+  ],
+  "primary_key": "k",
+  "index_id": 845,
+  "space_id": 634,
+  "root_page": 4
+}

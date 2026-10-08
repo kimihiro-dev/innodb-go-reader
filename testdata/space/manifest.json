@@ -1,0 +1,38 @@
+{
+  "database": "innodb_reader_space_2b493d901bb5",
+  "generated_at": "2026-09-22T06:54:37.081583+00:00",
+  "status": "captured",
+  "cases": [
+    {
+      "name": "empty",
+      "bytes": 131072,
+      "sha256": "707b3db49f08038c4ce9e6c38443c350d0542ccfe6c782f71e39f9b5b5e8425a",
+      "rows": 0
+    },
+    {
+      "name": "grown",
+      "bytes": 285212672,
+      "sha256": "058eb5a23ffb682eb78d1394926e46c74200f67925942174ba2203880189ba8b",
+      "rows": 17000
+    },
+    {
+      "name": "deleted",
+      "bytes": 285212672,
+      "sha256": "1d517b322c1da7f5da6f3ebce37839ece3b34b068557c7423f25e34e596e13cf",
+      "rows": 10
+    },
+    {
+      "name": "rebuilt",
+      "bytes": 294912,
+      "sha256": "259b0a7fc8042b6e69fa5687458557fd550c057b3bfa7c6054b0fb7e3952c3b3",
+      "rows": 10
+    }
+  ],
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1
+  }
+}

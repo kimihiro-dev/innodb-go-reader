@@ -1,0 +1,70 @@
+{
+  "database": "innodb_reader_composite_25c6d3d89012",
+  "generated_at": "2026-09-17T00:45:32.279052+00:00",
+  "cases": [
+    {
+      "name": "composite_lesson",
+      "rows": 8,
+      "bytes": 114688,
+      "sha256": "733bb2db8ab54a93f7bac44189b3d28f0214f8818fdd5ba99a5008208383aae1",
+      "index_id": 444,
+      "space_id": 233,
+      "root_page": 4
+    },
+    {
+      "name": "composite_empty",
+      "rows": 0,
+      "bytes": 114688,
+      "sha256": "ea85d2a921fecd6fdffe65ff7348c16dbe1be2aa358b7afc5681595efbb0a938",
+      "index_id": 445,
+      "space_id": 234,
+      "root_page": 4
+    },
+    {
+      "name": "composite_types",
+      "rows": 3,
+      "bytes": 114688,
+      "sha256": "cefa0b404d3e89ffe6014f99208049c6787e677961c7b29fad0e8c1369c0acb9",
+      "index_id": 446,
+      "space_id": 235,
+      "root_page": 4
+    },
+    {
+      "name": "composite_lob",
+      "rows": 3,
+      "bytes": 163840,
+      "sha256": "b39f4ccb9a6ba455f852ab0393ee9116a55a56e4522151b7ecf49345120d4000",
+      "index_id": 447,
+      "space_id": 236,
+      "root_page": 4
+    },
+    {
+      "name": "composite_tree",
+      "rows": 600,
+      "bytes": 294912,
+      "sha256": "ccb29f71125f74a4fab72eb4b8f234d37335d84c2cd60d932becafcae87317f7",
+      "index_id": 448,
+      "space_id": 237,
+      "root_page": 4
+    },
+    {
+      "name": "composite_deep",
+      "rows": 3000,
+      "bytes": 12582912,
+      "sha256": "f4ead7011a63d15a86914c3417c69ec009790b2862bb60e2ffa2bbcd49fa04fd",
+      "index_id": 449,
+      "space_id": 238,
+      "root_page": 4
+    }
+  ],
+  "status": "captured",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1,
+    "sql_mode": "STRICT_TRANS_TABLES",
+    "time_zone": "+00:00"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "columns": [
+    {
+      "name": "k0",
+      "type": "TINYINT",
+      "unsigned": false
+    },
+    {
+      "name": "k1",
+      "type": "TINYINT",
+      "unsigned": true
+    },
+    {
+      "name": "k2",
+      "type": "SMALLINT",
+      "unsigned": false
+    },
+    {
+      "name": "k3",
+      "type": "SMALLINT",
+      "unsigned": true
+    },
+    {
+      "name": "k4",
+      "type": "MEDIUMINT",
+      "unsigned": false
+    },
+    {
+      "name": "k5",
+      "type": "MEDIUMINT",
+      "unsigned": true
+    },
+    {
+      "name": "k6",
+      "type": "INT",
+      "unsigned": false
+    },
+    {
+      "name": "k7",
+      "type": "INT",
+      "unsigned": true
+    },
+    {
+      "name": "k8",
+      "type": "BIGINT",
+      "unsigned": false
+    },
+    {
+      "name": "k9",
+      "type": "BIGINT",
+      "unsigned": true
+    }
+  ],
+  "primary_keys": [
+    "k9",
+    "k8",
+    "k7",
+    "k6",
+    "k5",
+    "k4",
+    "k3",
+    "k2",
+    "k1",
+    "k0"
+  ],
+  "index_id": 446,
+  "space_id": 235,
+  "root_page": 4
+}

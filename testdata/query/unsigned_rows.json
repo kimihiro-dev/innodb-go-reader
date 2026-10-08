@@ -1,0 +1,18 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "BIGINT",
+      "unsigned": true
+    },
+    {
+      "name": "payload",
+      "type": "INT",
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 197,
+  "space_id": 43,
+  "primary_key": "id"
+}

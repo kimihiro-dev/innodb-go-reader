@@ -1,0 +1,521 @@
+{
+  "database": "innodb_reader_lob_updates_5d9c5681a7cc",
+  "generated_at": "2026-09-17T07:44:47.192641+00:00",
+  "cases": [
+    {
+      "name": "values_before",
+      "table": "values",
+      "phase": "before",
+      "rows": 4,
+      "unordered": false,
+      "bytes": 4194304,
+      "sha256": "f69496cdeb1363deef2c740cedfa38dc982b7e2d91e569ec63509d362ab72ebf",
+      "physical": {
+        "Rows": 4,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "json_storage": [],
+      "root_page": 4,
+      "index_id": 890,
+      "space_id": 666
+    },
+    {
+      "name": "values_inherited",
+      "table": "values",
+      "phase": "inherited",
+      "rows": 4,
+      "unordered": false,
+      "bytes": 4194304,
+      "sha256": "e695c0bc6f4d9bff8cc448c47293718c9d73bee66be5b8bc1de96cb572afa1fb",
+      "physical": {
+        "Rows": 4,
+        "DeleteMarked": 1,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "json_storage": [],
+      "root_page": 4,
+      "index_id": 890,
+      "space_id": 666
+    },
+    {
+      "name": "values_replace",
+      "table": "values",
+      "phase": "replace",
+      "rows": 4,
+      "unordered": false,
+      "bytes": 9437184,
+      "sha256": "d17915c4733a497e72f3675700a3ccd36b4ca9eb04ffcb7fa0f2b4b71d61819b",
+      "physical": {
+        "Rows": 4,
+        "DeleteMarked": 1,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "json_storage": [],
+      "root_page": 4,
+      "index_id": 890,
+      "space_id": 666
+    },
+    {
+      "name": "values_shrink",
+      "table": "values",
+      "phase": "shrink",
+      "rows": 4,
+      "unordered": false,
+      "bytes": 9437184,
+      "sha256": "dc1e462d1e3123595129db6b1bfd57fd829cfbe3c41c6508b8a77db5aff43992",
+      "physical": {
+        "Rows": 4,
+        "DeleteMarked": 1,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 78,
+        "RootLevel": 0
+      },
+      "json_storage": [],
+      "root_page": 4,
+      "index_id": 890,
+      "space_id": 666
+    },
+    {
+      "name": "values_regrow",
+      "table": "values",
+      "phase": "regrow",
+      "rows": 4,
+      "unordered": false,
+      "bytes": 9437184,
+      "sha256": "68f664a464db3e22b8f2a056a61af7070681d83e6f7c3a1faedfa20ca4ba9ee7",
+      "physical": {
+        "Rows": 4,
+        "DeleteMarked": 1,
+        "Pages": 1,
+        "FreePages": 1,
+        "GarbageBytes": 114,
+        "RootLevel": 0
+      },
+      "json_storage": [],
+      "root_page": 4,
+      "index_id": 890,
+      "space_id": 666
+    },
+    {
+      "name": "values_deleted",
+      "table": "values",
+      "phase": "deleted",
+      "rows": 3,
+      "unordered": false,
+      "bytes": 9437184,
+      "sha256": "119eb20869075171fae85699c1bd4351dabb7d86401595b26c5ec90729a03628",
+      "physical": {
+        "Rows": 3,
+        "DeleteMarked": 2,
+        "Pages": 1,
+        "FreePages": 1,
+        "GarbageBytes": 114,
+        "RootLevel": 0
+      },
+      "json_storage": [],
+      "root_page": 4,
+      "index_id": 890,
+      "space_id": 666
+    },
+    {
+      "name": "values_purged",
+      "table": "values",
+      "phase": "purged",
+      "rows": 3,
+      "unordered": false,
+      "bytes": 9437184,
+      "sha256": "21855df0b6d143de3e868ee17510545861403f0ca9a9065dff8339d7c889730f",
+      "physical": {
+        "Rows": 3,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 1,
+        "GarbageBytes": 256,
+        "RootLevel": 0
+      },
+      "json_storage": [],
+      "root_page": 4,
+      "index_id": 890,
+      "space_id": 666
+    },
+    {
+      "name": "documents_before",
+      "table": "documents",
+      "phase": "before",
+      "rows": 3,
+      "unordered": false,
+      "bytes": 540672,
+      "sha256": "2494c563805bc5c1c870da861b55cfee981d46563bd28079360d016cf3d3d48a",
+      "physical": {
+        "Rows": 3,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "json_storage": [
+        [
+          1,
+          63865,
+          0
+        ],
+        [
+          2,
+          350066,
+          0
+        ],
+        [
+          3,
+          155,
+          0
+        ]
+      ],
+      "root_page": 4,
+      "index_id": 891,
+      "space_id": 667
+    },
+    {
+      "name": "documents_small",
+      "table": "documents",
+      "phase": "small",
+      "rows": 3,
+      "unordered": false,
+      "bytes": 557056,
+      "sha256": "63acb76b67d9403e837c589e804b1a85f971efc1fa85587a312f6845956b512b",
+      "physical": {
+        "Rows": 3,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "json_storage": [
+        [
+          1,
+          63865,
+          0
+        ],
+        [
+          2,
+          350066,
+          0
+        ],
+        [
+          3,
+          155,
+          0
+        ]
+      ],
+      "root_page": 4,
+      "index_id": 891,
+      "space_id": 667
+    },
+    {
+      "name": "documents_large",
+      "table": "documents",
+      "phase": "large",
+      "rows": 3,
+      "unordered": false,
+      "bytes": 4194304,
+      "sha256": "92fd88108e3b77c12844cbd7d1864b653fcc332c0cbde1b77783d0ce108e883f",
+      "physical": {
+        "Rows": 3,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "json_storage": [
+        [
+          1,
+          63865,
+          0
+        ],
+        [
+          2,
+          350066,
+          0
+        ],
+        [
+          3,
+          155,
+          0
+        ]
+      ],
+      "root_page": 4,
+      "index_id": 891,
+      "space_id": 667
+    },
+    {
+      "name": "documents_repeated",
+      "table": "documents",
+      "phase": "repeated",
+      "rows": 3,
+      "unordered": false,
+      "bytes": 13631488,
+      "sha256": "80b1e3221944905a0a1bc1338de378adc546586572f8e14e2cb380a6ca3471b0",
+      "physical": {
+        "Rows": 3,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "json_storage": [
+        [
+          1,
+          63865,
+          0
+        ],
+        [
+          2,
+          350067,
+          0
+        ],
+        [
+          3,
+          155,
+          0
+        ]
+      ],
+      "root_page": 4,
+      "index_id": 891,
+      "space_id": 667
+    },
+    {
+      "name": "documents_holes",
+      "table": "documents",
+      "phase": "holes",
+      "rows": 3,
+      "unordered": false,
+      "bytes": 14680064,
+      "sha256": "1c3551f6336222ef5989b317d57b55fead45d69a16447f40eb21cb71e8b75820",
+      "physical": {
+        "Rows": 3,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "json_storage": [
+        [
+          1,
+          63865,
+          60811
+        ],
+        [
+          2,
+          350067,
+          0
+        ],
+        [
+          3,
+          155,
+          56
+        ]
+      ],
+      "root_page": 4,
+      "index_id": 891,
+      "space_id": 667
+    },
+    {
+      "name": "documents_reuse",
+      "table": "documents",
+      "phase": "reuse",
+      "rows": 3,
+      "unordered": false,
+      "bytes": 14680064,
+      "sha256": "4dcd8b8053dafa8988bbf5757fd1f69a0d133623e8a5bca271457b124798506e",
+      "physical": {
+        "Rows": 3,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "json_storage": [
+        [
+          1,
+          63865,
+          43810
+        ],
+        [
+          2,
+          350067,
+          0
+        ],
+        [
+          3,
+          155,
+          42
+        ]
+      ],
+      "root_page": 4,
+      "index_id": 891,
+      "space_id": 667
+    },
+    {
+      "name": "documents_history_purged",
+      "table": "documents",
+      "phase": "history_purged",
+      "rows": 3,
+      "unordered": false,
+      "bytes": 14680064,
+      "sha256": "c90263f38220335586c1dd278dee94a46debb442a8334dc9fbbb8642f4220816",
+      "physical": {
+        "Rows": 3,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "json_storage": [
+        [
+          1,
+          63865,
+          43810
+        ],
+        [
+          2,
+          350067,
+          0
+        ],
+        [
+          3,
+          155,
+          42
+        ]
+      ],
+      "root_page": 4,
+      "index_id": 891,
+      "space_id": 667
+    },
+    {
+      "name": "documents_grow",
+      "table": "documents",
+      "phase": "grow",
+      "rows": 3,
+      "unordered": false,
+      "bytes": 14680064,
+      "sha256": "8700d30620b8dbc586efbb1dbbc93c52dd2cf5e9110855f77164a2edde9420d7",
+      "physical": {
+        "Rows": 3,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "json_storage": [
+        [
+          1,
+          63865,
+          43810
+        ],
+        [
+          2,
+          400066,
+          0
+        ],
+        [
+          3,
+          155,
+          42
+        ]
+      ],
+      "root_page": 4,
+      "index_id": 891,
+      "space_id": 667
+    },
+    {
+      "name": "documents_deleted",
+      "table": "documents",
+      "phase": "deleted",
+      "rows": 2,
+      "unordered": false,
+      "bytes": 14680064,
+      "sha256": "6d7a2ca0cb6293e5a7b66c68797c02b13ec6a087a8c7338dd1df72f5edbe256e",
+      "physical": {
+        "Rows": 2,
+        "DeleteMarked": 1,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "json_storage": [
+        [
+          2,
+          400066,
+          0
+        ],
+        [
+          3,
+          155,
+          42
+        ]
+      ],
+      "root_page": 4,
+      "index_id": 891,
+      "space_id": 667
+    },
+    {
+      "name": "documents_purged",
+      "table": "documents",
+      "phase": "purged",
+      "rows": 2,
+      "unordered": false,
+      "bytes": 14680064,
+      "sha256": "3caa8a67b6c7f087eb292dac7cc67882de87a9697f26c6a26f673bb0a4ee8a73",
+      "physical": {
+        "Rows": 2,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 1,
+        "GarbageBytes": 49,
+        "RootLevel": 0
+      },
+      "json_storage": [
+        [
+          2,
+          400066,
+          0
+        ],
+        [
+          3,
+          155,
+          42
+        ]
+      ],
+      "root_page": 4,
+      "index_id": 891,
+      "space_id": 667
+    }
+  ],
+  "status": "captured",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1
+  }
+}

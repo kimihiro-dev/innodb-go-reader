@@ -1,0 +1,124 @@
+{
+  "database": "innodb_reader_geometry_c7eae7464cb2",
+  "generated_at": "2026-09-16T06:06:36.231842+00:00",
+  "cases": [
+    {
+      "name": "geometry_lesson",
+      "rows": 10,
+      "bytes": 114688,
+      "sha256": "e6b698c57b6de9c1226449f2d12776c76fd034ae87f2cfd3d5667d7b7e5e68e5",
+      "index_id": 411,
+      "space_id": 200,
+      "root_page": 4
+    },
+    {
+      "name": "geometry_point",
+      "rows": 2,
+      "bytes": 114688,
+      "sha256": "85b3347b67d98df73334f3a5e7d9c0eaff20d0fa7cd29f5aab6836f4b3fec515",
+      "index_id": 412,
+      "space_id": 201,
+      "root_page": 4
+    },
+    {
+      "name": "geometry_linestring",
+      "rows": 2,
+      "bytes": 114688,
+      "sha256": "40e5c50cc3b5b69169e1cb2f09c50e3983068f9ba2ec8caf566a32fb41dc6ff0",
+      "index_id": 413,
+      "space_id": 202,
+      "root_page": 4
+    },
+    {
+      "name": "geometry_polygon",
+      "rows": 2,
+      "bytes": 114688,
+      "sha256": "45bf9f35419dcf3f7c62fd7b22f3ddcf1d8b27cdfd75619c46ccb888b5266982",
+      "index_id": 414,
+      "space_id": 203,
+      "root_page": 4
+    },
+    {
+      "name": "geometry_multipoint",
+      "rows": 2,
+      "bytes": 114688,
+      "sha256": "21545c9c9340cdd4d30d1446a409d892e996e253a6a915e6d3b2863f01fc7dce",
+      "index_id": 415,
+      "space_id": 204,
+      "root_page": 4
+    },
+    {
+      "name": "geometry_multilinestring",
+      "rows": 2,
+      "bytes": 114688,
+      "sha256": "6b1c557cfc5c25f45c8d2e789e84327c2518ffaac14d5e5b90baea2f3bd19218",
+      "index_id": 416,
+      "space_id": 205,
+      "root_page": 4
+    },
+    {
+      "name": "geometry_multipolygon",
+      "rows": 2,
+      "bytes": 114688,
+      "sha256": "bdba60d2dd2beafaaae844c4b84a084c058be145b480307371b1731c8053a987",
+      "index_id": 417,
+      "space_id": 206,
+      "root_page": 4
+    },
+    {
+      "name": "geometry_geometrycollection",
+      "rows": 2,
+      "bytes": 114688,
+      "sha256": "bc26f46f97f1c1cd37355f9ff539bf9bd3aff66a5bcca85174760c610db88639",
+      "index_id": 418,
+      "space_id": 207,
+      "root_page": 4
+    },
+    {
+      "name": "geometry_srid",
+      "rows": 2,
+      "bytes": 114688,
+      "sha256": "7ef35354ec62d2af3db84cfb7322230094dff3cbadba9579d6acce6554ae0b9f",
+      "index_id": 419,
+      "space_id": 208,
+      "root_page": 4
+    },
+    {
+      "name": "geometry_zero",
+      "rows": 1,
+      "bytes": 114688,
+      "sha256": "7ebc6b564600556e7a7cb1c6de26dfcbacbde1a5a71faabd1a9c5a67db8917b2",
+      "index_id": 420,
+      "space_id": 209,
+      "root_page": 4
+    },
+    {
+      "name": "geometry_large",
+      "rows": 1,
+      "bytes": 196608,
+      "sha256": "9cafa3b6d7e2797d3eaaca4424d251ba84e9eac8c2dbcf7c4c2197eff83b022f",
+      "index_id": 421,
+      "space_id": 210,
+      "root_page": 4
+    },
+    {
+      "name": "geometry_tree",
+      "rows": 600,
+      "bytes": 196608,
+      "sha256": "5102258f524356f3d0f75523310b92db44f8cc47b77cfbc62f03fa7c23ab661f",
+      "index_id": 422,
+      "space_id": 211,
+      "root_page": 4
+    }
+  ],
+  "status": "captured",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1,
+    "sql_mode": "STRICT_TRANS_TABLES",
+    "time_zone": "+00:00"
+  }
+}

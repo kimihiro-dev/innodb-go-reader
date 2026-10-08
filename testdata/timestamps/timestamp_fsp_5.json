@@ -1,0 +1,21 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    },
+    {
+      "name": "value",
+      "type": "TIMESTAMP",
+      "nullable": true,
+      "max_chars": 0,
+      "fsp": 5
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 351,
+  "space_id": 142,
+  "root_page": 4
+}

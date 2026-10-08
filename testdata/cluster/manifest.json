@@ -1,0 +1,118 @@
+{
+  "database": "innodb_reader_cluster_4fbb5a8ad9f7",
+  "generated_at": "2026-09-17T01:36:55.675193+00:00",
+  "cases": [
+    {
+      "name": "rowid_lesson",
+      "rows": 4,
+      "unordered": true,
+      "bytes": 114688,
+      "sha256": "233852ab40e1d46baf9d291ba49e5841d3bfd05110a65f791455823284ca4393",
+      "index_id": 862,
+      "space_id": 645,
+      "root_page": 4
+    },
+    {
+      "name": "rowid_empty",
+      "rows": 0,
+      "unordered": true,
+      "bytes": 114688,
+      "sha256": "a71f6fddd2db8e4515cb5c26ac5a40a8cbd640ce95e11ae754b7c07a9dc78290",
+      "index_id": 863,
+      "space_id": 646,
+      "root_page": 4
+    },
+    {
+      "name": "rowid_nullable_unique",
+      "rows": 3,
+      "unordered": true,
+      "bytes": 131072,
+      "sha256": "0c4721ad53922d2b3a307dc801d073febcabe64907697a757b9e3dc106f4dab2",
+      "index_id": 864,
+      "space_id": 647,
+      "root_page": 4
+    },
+    {
+      "name": "rowid_prefix_unique",
+      "rows": 2,
+      "unordered": true,
+      "bytes": 131072,
+      "sha256": "db4d420a4d3945243cf61849a3da3ca5f4e7e9b956d427289b600ef5597a253d",
+      "index_id": 866,
+      "space_id": 648,
+      "root_page": 4
+    },
+    {
+      "name": "rowid_lob",
+      "rows": 3,
+      "unordered": true,
+      "bytes": 229376,
+      "sha256": "6d0eedc4e8c3ac30d03a204d63a6cc4f6f8259584a82fea8f5e944fcdf3a511b",
+      "index_id": 868,
+      "space_id": 649,
+      "root_page": 4
+    },
+    {
+      "name": "rowid_deep",
+      "rows": 12000,
+      "unordered": true,
+      "bytes": 37748736,
+      "sha256": "c185b50b0d2dfda5c1de8d57500ac848a286460550ac8891704fae666cad0cef",
+      "index_id": 869,
+      "space_id": 650,
+      "root_page": 4
+    },
+    {
+      "name": "unique_single",
+      "rows": 3,
+      "unordered": false,
+      "bytes": 114688,
+      "sha256": "97772c921fe58b993a910725f760a7c5f12939e0fbc102dc57fecb0c6cefb757",
+      "index_id": 870,
+      "space_id": 651,
+      "root_page": 4
+    },
+    {
+      "name": "unique_multiple",
+      "rows": 3,
+      "unordered": false,
+      "bytes": 147456,
+      "sha256": "357d16c45e4ef8281188de7e51d384cc96b28baa0b7d1cfbbb0e23fe7213b8d4",
+      "index_id": 871,
+      "space_id": 652,
+      "root_page": 4
+    },
+    {
+      "name": "unique_text_tree",
+      "rows": 600,
+      "unordered": false,
+      "bytes": 9437184,
+      "sha256": "57203f383de100a27b74995f07405bad558e0fa7da6bf9e6e28472c38b03ad28",
+      "index_id": 874,
+      "space_id": 653,
+      "root_page": 4
+    },
+    {
+      "name": "primary_secondary",
+      "rows": 3,
+      "unordered": false,
+      "bytes": 131072,
+      "sha256": "963a2c5b3a1bf75dd1c216394c8ef14cec1fcf150d992f27ee2b4a593f062070",
+      "index_id": 876,
+      "space_id": 654,
+      "root_page": 4
+    }
+  ],
+  "status": "captured",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1,
+    "sql_require_primary_key": false,
+    "sql_generate_invisible_primary_key": false,
+    "sql_mode": "STRICT_TRANS_TABLES",
+    "time_zone": "+00:00"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "columns": [
+    {
+      "name": "k",
+      "type": "YEAR",
+      "descending": true
+    }
+  ],
+  "primary_key": "k",
+  "index_id": 729,
+  "space_id": 518,
+  "root_page": 4
+}

@@ -1,0 +1,53 @@
+{
+  "tools": {
+    "ibd2sdi": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/ibd2sdi  Ver 8.0.45 for macos15 on arm64 (MySQL Community Server - GPL)",
+    "innochecksum": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/innochecksum  Ver 8.0.45 for macos15 on arm64 (MySQL Community Server - GPL)"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "sha256": "684ca6efa097e5821dbf8abd104b6961ab826a9f33794c594ba256321d4216a2",
+      "innochecksum_exit": 0,
+      "official_sdi_objects": 2,
+      "cli_rows": 4,
+      "cli_exit": 0,
+      "cli_error": ""
+    },
+    {
+      "name": "added",
+      "sha256": "2e203ef27c48ed50f14ad2e6511cf4093df2ce0b351302ef7c5ea83ffefcb54c",
+      "innochecksum_exit": 0,
+      "official_sdi_objects": 2,
+      "cli_rows": 0,
+      "cli_exit": 1,
+      "cli_error": "unsupported InnoDB layout: only one primary index is supported for row reading"
+    },
+    {
+      "name": "dropped",
+      "sha256": "aab92d19af341580f9b0aa0498dbc9ba0d17d6f1e9d2dce435df15a6182d5fa7",
+      "innochecksum_exit": 0,
+      "official_sdi_objects": 2,
+      "cli_rows": 4,
+      "cli_exit": 0,
+      "cli_error": ""
+    },
+    {
+      "name": "recreated",
+      "sha256": "d21e914397dbc179ec8e421df84162d512a4f281906f8bcb1f0436a4c3e259c1",
+      "innochecksum_exit": 0,
+      "official_sdi_objects": 2,
+      "cli_rows": 0,
+      "cli_exit": 1,
+      "cli_error": "unsupported InnoDB layout: only one primary index is supported for row reading"
+    },
+    {
+      "name": "final",
+      "sha256": "beb923cbf4a773bc9be0bdc31c13cfd548cc6625c0a251bea83acd2d3b7d6694",
+      "innochecksum_exit": 0,
+      "official_sdi_objects": 2,
+      "cli_rows": 4,
+      "cli_exit": 0,
+      "cli_error": ""
+    }
+  ]
+}

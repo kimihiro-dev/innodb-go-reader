@@ -1,0 +1,24 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "doc",
+      "type": "POINT",
+      "nullable": true,
+      "srid": 0
+    },
+    {
+      "name": "note",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 32
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 420,
+  "space_id": 209,
+  "root_page": 4
+}

@@ -1,0 +1,74 @@
+{
+  "columns": [
+    {
+      "name": "n0",
+      "type": "INT",
+      "nullable": true,
+      "max_chars": 0
+    },
+    {
+      "name": "n1",
+      "type": "INT",
+      "nullable": true,
+      "max_chars": 0
+    },
+    {
+      "name": "n2",
+      "type": "INT",
+      "nullable": true,
+      "max_chars": 0
+    },
+    {
+      "name": "n3",
+      "type": "INT",
+      "nullable": true,
+      "max_chars": 0
+    },
+    {
+      "name": "n4",
+      "type": "INT",
+      "nullable": true,
+      "max_chars": 0
+    },
+    {
+      "name": "n5",
+      "type": "INT",
+      "nullable": true,
+      "max_chars": 0
+    },
+    {
+      "name": "n6",
+      "type": "INT",
+      "nullable": true,
+      "max_chars": 0
+    },
+    {
+      "name": "n7",
+      "type": "INT",
+      "nullable": true,
+      "max_chars": 0
+    },
+    {
+      "name": "n8",
+      "type": "INT",
+      "nullable": true,
+      "max_chars": 0
+    },
+    {
+      "name": "name",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 32
+    },
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 253,
+  "space_id": 44,
+  "root_page": 4
+}

@@ -1,0 +1,60 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    },
+    {
+      "name": "s0",
+      "type": "SET",
+      "nullable": true,
+      "max_chars": 0,
+      "set_values": [
+        "",
+        "a",
+        "b"
+      ]
+    },
+    {
+      "name": "s1",
+      "type": "SET",
+      "nullable": true,
+      "max_chars": 0,
+      "set_values": [
+        "a",
+        "",
+        "b"
+      ]
+    },
+    {
+      "name": "s2",
+      "type": "SET",
+      "nullable": true,
+      "max_chars": 0,
+      "set_values": [
+        "a",
+        "b",
+        ""
+      ]
+    },
+    {
+      "name": "s3",
+      "type": "SET",
+      "nullable": true,
+      "max_chars": 0,
+      "set_values": [
+        "中文😀",
+        "ready",
+        "2",
+        "a'b",
+        "slash\\path"
+      ]
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 365,
+  "space_id": 156,
+  "root_page": 4
+}

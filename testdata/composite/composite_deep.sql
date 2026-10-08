@@ -1,0 +1,20 @@
+composite_deep	CREATE TABLE `composite_deep` (
+  `k0` bigint NOT NULL,
+  `k1` bigint unsigned NOT NULL,
+  `k2` bigint NOT NULL,
+  `k3` bigint unsigned NOT NULL,
+  `k4` bigint NOT NULL,
+  `k5` bigint unsigned NOT NULL,
+  `k6` bigint NOT NULL,
+  `k7` bigint unsigned NOT NULL,
+  `k8` bigint NOT NULL,
+  `k9` bigint unsigned NOT NULL,
+  `k10` bigint NOT NULL,
+  `k11` bigint unsigned NOT NULL,
+  `k12` bigint NOT NULL,
+  `k13` bigint unsigned NOT NULL,
+  `k14` bigint NOT NULL,
+  `k15` bigint unsigned NOT NULL,
+  `payload` varchar(1500) DEFAULT NULL,
+  PRIMARY KEY (`k0`,`k1`,`k2`,`k3`,`k4`,`k5`,`k6`,`k7`,`k8`,`k9`,`k10`,`k11`,`k12`,`k13`,`k14`,`k15`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC

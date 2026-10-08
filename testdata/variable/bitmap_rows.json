@@ -1,0 +1,79 @@
+{
+  "columns": [
+    {
+      "name": "v0",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 128
+    },
+    {
+      "name": "v1",
+      "type": "VARBINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 512
+    },
+    {
+      "name": "v2",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 128
+    },
+    {
+      "name": "v3",
+      "type": "VARBINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 512
+    },
+    {
+      "name": "v4",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 128
+    },
+    {
+      "name": "v5",
+      "type": "VARBINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 512
+    },
+    {
+      "name": "v6",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 128
+    },
+    {
+      "name": "v7",
+      "type": "VARBINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 512
+    },
+    {
+      "name": "v8",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 128
+    },
+    {
+      "name": "v9",
+      "type": "VARBINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 512
+    },
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 280,
+  "space_id": 71,
+  "root_page": 4
+}

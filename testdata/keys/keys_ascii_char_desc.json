@@ -1,0 +1,34 @@
+{
+  "columns": [
+    {
+      "name": "before",
+      "type": "VARCHAR",
+      "max_chars": 12
+    },
+    {
+      "name": "tie",
+      "type": "INT",
+      "descending": false
+    },
+    {
+      "name": "k",
+      "type": "CHAR",
+      "max_chars": 80,
+      "charset": "ascii",
+      "collation": "ascii_bin",
+      "descending": true
+    },
+    {
+      "name": "n",
+      "type": "INT",
+      "nullable": true
+    }
+  ],
+  "primary_keys": [
+    "k",
+    "tie"
+  ],
+  "index_id": 711,
+  "space_id": 500,
+  "root_page": 4
+}

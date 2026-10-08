@@ -1,0 +1,23 @@
+tree	CREATE TABLE `tree` (
+  `id` int NOT NULL,
+  `padding` varchar(1600) NOT NULL,
+  `v0` int GENERATED ALWAYS AS ((`id` + 0)) VIRTUAL,
+  `v1` int GENERATED ALWAYS AS ((`id` + 1)) VIRTUAL,
+  `v2` int GENERATED ALWAYS AS ((`id` + 2)) VIRTUAL,
+  `v3` int GENERATED ALWAYS AS ((`id` + 3)) VIRTUAL,
+  `v4` int GENERATED ALWAYS AS ((`id` + 4)) VIRTUAL,
+  `v5` int GENERATED ALWAYS AS ((`id` + 5)) VIRTUAL,
+  `v6` int GENERATED ALWAYS AS ((`id` + 6)) VIRTUAL,
+  `v7` int GENERATED ALWAYS AS ((`id` + 7)) VIRTUAL,
+  `v8` int GENERATED ALWAYS AS ((`id` + 8)) VIRTUAL,
+  `copy` varchar(1600) GENERATED ALWAYS AS (reverse(`padding`)) STORED,
+  `n0` int DEFAULT NULL,
+  `n1` int DEFAULT NULL,
+  `n2` int DEFAULT NULL,
+  `n3` int DEFAULT NULL,
+  `n4` int DEFAULT NULL,
+  `n5` int DEFAULT NULL,
+  `n6` int DEFAULT NULL,
+  `n7` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC

@@ -1,0 +1,8 @@
+goos: darwin
+goarch: arm64
+pkg: innodb-go-reader
+cpu: Apple M4
+BenchmarkTableScan/Read-10         	       3	  35981403 ns/op	133457557 B/op	  178543 allocs/op
+BenchmarkTableScan/Scan-10         	       3	  33679083 ns/op	121940224 B/op	  180359 allocs/op
+PASS
+ok  	innodb-go-reader	0.894s

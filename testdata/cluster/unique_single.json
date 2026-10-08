@@ -1,0 +1,24 @@
+{
+  "columns": [
+    {
+      "name": "text",
+      "type": "VARCHAR",
+      "max_chars": 32,
+      "nullable": true
+    },
+    {
+      "name": "id",
+      "type": "BIGINT",
+      "unsigned": true
+    }
+  ],
+  "clustered_key": {
+    "name": "u",
+    "columns": [
+      "id"
+    ]
+  },
+  "index_id": 870,
+  "space_id": 651,
+  "root_page": 4
+}

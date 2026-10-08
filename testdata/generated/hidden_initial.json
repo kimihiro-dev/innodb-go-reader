@@ -1,0 +1,36 @@
+{
+  "columns": [
+    {
+      "name": "a",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "stored_n",
+      "type": "INT",
+      "nullable": true,
+      "generation_expression": "(`a` * 2)"
+    },
+    {
+      "name": "secret",
+      "type": "VARCHAR",
+      "max_chars": 20,
+      "nullable": true,
+      "invisible": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 164,
+  "space_id": 12,
+  "clustered_key": {
+    "name": "PRIMARY",
+    "hidden_row_id": true
+  },
+  "virtual_columns": [
+    {
+      "name": "v",
+      "ordinal": 2,
+      "expression": "(`a` + 1)"
+    }
+  ]
+}

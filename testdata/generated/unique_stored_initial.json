@@ -1,0 +1,29 @@
+{
+  "columns": [
+    {
+      "name": "a",
+      "type": "INT"
+    },
+    {
+      "name": "stored_n",
+      "type": "INT",
+      "generation_expression": "(`a` + 1)"
+    }
+  ],
+  "root_page": 4,
+  "index_id": 165,
+  "space_id": 13,
+  "clustered_key": {
+    "name": "actual",
+    "columns": [
+      "stored_n"
+    ]
+  },
+  "virtual_columns": [
+    {
+      "name": "v",
+      "ordinal": 2,
+      "expression": "(`a` - 1)"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "a",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 30
+    },
+    {
+      "name": "b",
+      "type": "INT"
+    },
+    {
+      "name": "payload",
+      "type": "LONGTEXT",
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 902,
+  "space_id": 678,
+  "primary_key": "id"
+}

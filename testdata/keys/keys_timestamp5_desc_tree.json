@@ -1,0 +1,27 @@
+{
+  "columns": [
+    {
+      "name": "k",
+      "type": "TIMESTAMP",
+      "fsp": 5,
+      "descending": true
+    },
+    {
+      "name": "sequence",
+      "type": "INT",
+      "descending": true
+    },
+    {
+      "name": "payload",
+      "type": "VARCHAR",
+      "max_chars": 1500
+    }
+  ],
+  "primary_keys": [
+    "k",
+    "sequence"
+  ],
+  "index_id": 838,
+  "space_id": 627,
+  "root_page": 4
+}

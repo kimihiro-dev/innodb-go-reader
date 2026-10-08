@@ -1,0 +1,111 @@
+{
+  "columns": [
+    {
+      "name": "k0",
+      "type": "BIGINT",
+      "unsigned": false
+    },
+    {
+      "name": "k1",
+      "type": "BIGINT",
+      "unsigned": true
+    },
+    {
+      "name": "k2",
+      "type": "BIGINT",
+      "unsigned": false
+    },
+    {
+      "name": "k3",
+      "type": "BIGINT",
+      "unsigned": true
+    },
+    {
+      "name": "k4",
+      "type": "BIGINT",
+      "unsigned": false
+    },
+    {
+      "name": "k5",
+      "type": "BIGINT",
+      "unsigned": true
+    },
+    {
+      "name": "k6",
+      "type": "BIGINT",
+      "unsigned": false
+    },
+    {
+      "name": "k7",
+      "type": "BIGINT",
+      "unsigned": true
+    },
+    {
+      "name": "k8",
+      "type": "BIGINT",
+      "unsigned": false
+    },
+    {
+      "name": "k9",
+      "type": "BIGINT",
+      "unsigned": true
+    },
+    {
+      "name": "k10",
+      "type": "BIGINT",
+      "unsigned": false
+    },
+    {
+      "name": "k11",
+      "type": "BIGINT",
+      "unsigned": true
+    },
+    {
+      "name": "k12",
+      "type": "BIGINT",
+      "unsigned": false
+    },
+    {
+      "name": "k13",
+      "type": "BIGINT",
+      "unsigned": true
+    },
+    {
+      "name": "k14",
+      "type": "BIGINT",
+      "unsigned": false
+    },
+    {
+      "name": "k15",
+      "type": "BIGINT",
+      "unsigned": true
+    },
+    {
+      "name": "payload",
+      "type": "VARCHAR",
+      "max_chars": 1500,
+      "nullable": true
+    }
+  ],
+  "primary_keys": [
+    "k0",
+    "k1",
+    "k2",
+    "k3",
+    "k4",
+    "k5",
+    "k6",
+    "k7",
+    "k8",
+    "k9",
+    "k10",
+    "k11",
+    "k12",
+    "k13",
+    "k14",
+    "k15"
+  ],
+  "index_id": 449,
+  "space_id": 238,
+  "root_page": 4
+}

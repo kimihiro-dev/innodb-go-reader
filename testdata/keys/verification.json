@@ -1,0 +1,1159 @@
+{
+  "cases": [
+    {
+      "name": "keys_utf8mb4_char_asc",
+      "rows": 15,
+      "sha256": "131a63b666f980a5d16382536850b4b62b2f625910647caee445c09a2ecc8132",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_utf8mb4_char_desc",
+      "rows": 15,
+      "sha256": "66371962bb0e0035964372748db5301b1439ffdf408ba0cd9a93d76f3af62292",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_utf8mb4_varchar_asc",
+      "rows": 15,
+      "sha256": "99e7f0d41f1817a49c41716350602708d6aa017c7dc0dccd328b1a4117737acc",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_utf8mb4_varchar_desc",
+      "rows": 15,
+      "sha256": "050c6c6c353337c09dd42409278556e491874dc5ce0cc50c4c0a3c1501e921c7",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_utf8mb3_char_asc",
+      "rows": 14,
+      "sha256": "69c2ac496f00ac2c35d664a699322477ea624632c97fc70ed2596407f752d1fb",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_utf8mb3_char_desc",
+      "rows": 14,
+      "sha256": "c40de14cdcd7ccf891392dfa37cb17e25423fd7b9935632fbd1b24d4f32b3ad0",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_utf8mb3_varchar_asc",
+      "rows": 14,
+      "sha256": "09b304abdf6e023b272c987fd146fa52945d18dc213da00fcea715372b3ec07a",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_utf8mb3_varchar_desc",
+      "rows": 14,
+      "sha256": "901d8e6652702f36f43e264e704a8e002ab3c9cc8fd942b3f3f5da3f5f8cea25",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_ascii_char_asc",
+      "rows": 10,
+      "sha256": "6bfcc49439708566506e766303112b4a8d04f6e5f939141568370672eef29359",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_ascii_char_desc",
+      "rows": 10,
+      "sha256": "0d8bc116db76a26b24c9bb3e3add2ea3ca99ac991cabbe0ba0e7ccb39bdaaac7",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_ascii_varchar_asc",
+      "rows": 10,
+      "sha256": "9e3c77b7c535e6847404cca0987b3aa3c10daa8cbcccd70e8930a4c90c2a2e00",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_ascii_varchar_desc",
+      "rows": 10,
+      "sha256": "dbc03eac0d4d13f6d0ac9f43c9a8fb6265d5f8f4086c3d79b60efc58f907f1b2",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_latin1_char_asc",
+      "rows": 13,
+      "sha256": "0ab8a9ce2bd38ee91fc78a69429b254e00019c783bfa8ad6c0f9dc9e51fc49b0",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_latin1_char_desc",
+      "rows": 13,
+      "sha256": "1ab2debc108607684dea36552399956cadfea7d0f76029dbb8504434f7469fd9",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_latin1_varchar_asc",
+      "rows": 13,
+      "sha256": "5d8ca58b8b456513a0ebe4905f6a5a686fd01ccf10a9cdcc46608656dabe83a6",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_latin1_varchar_desc",
+      "rows": 13,
+      "sha256": "d56a523a0ca0e862cb9e173549661a6a7ae04fd93c9ff65b315995f7b6e69ce3",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_binary_asc",
+      "rows": 8,
+      "sha256": "a797ae61c363e5a5b8deb9665947c8da424266b02e0b6f4471f7b1a22f66b7ef",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_binary_desc",
+      "rows": 8,
+      "sha256": "d99624f9c612f014ac90e0cde61516aa8aa2a36287152e54380a1ac547ffb6f8",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_varbinary_asc",
+      "rows": 8,
+      "sha256": "0974d1c762f57361a2e0d9749922db40e76819cccc397788d4f6dcf3f69ded67",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_varbinary_desc",
+      "rows": 8,
+      "sha256": "e709b6f97c77efa951a55a79c8eddc3e845a451fdbcd052f0c782c13e0d3b240",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_decimal_asc",
+      "rows": 5,
+      "sha256": "c1eaab20e9ee32c7b8f5ef798ccb9774d672f18c8939d66b49fe70565c5c0822",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_decimal_desc",
+      "rows": 5,
+      "sha256": "1ef680c24dc6f8a554156df5334ac182bb5e12f72ff297e06f4de9008e253391",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_bit_asc",
+      "rows": 4,
+      "sha256": "bedf3c0e3fa055de6b8d6d81b803efebdebcc9b51ef9424a2ad697385d022985",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_bit_desc",
+      "rows": 4,
+      "sha256": "62dd6b5a5db8e545fa9a02395f17b916142b5690bed33d91d55aadcbe5c1beab",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_date_asc",
+      "rows": 4,
+      "sha256": "4c7e458b77d3bc0da17be5f4e30b7e8fa29196e53aa84ebc7e9f90a401c64c3c",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_date_desc",
+      "rows": 4,
+      "sha256": "e76d0f5be8b444b596390141f8816abeeec0ce60a7e26b482efe05e36d28b208",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_year_asc",
+      "rows": 4,
+      "sha256": "6044519a0b83c81e2b3069b45f94721cda02bf627af97304b12d5eaa51201997",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_year_desc",
+      "rows": 4,
+      "sha256": "0da624fece3cc2cd4baad653fdc8b303044490fffa01d8d3c9d153dcc9562d45",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time0_asc",
+      "rows": 5,
+      "sha256": "e4645a96716972897763c41e7ddb7fef5da08fb683be302de94c710872f464ce",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time0_desc",
+      "rows": 5,
+      "sha256": "e4ece0f0fea5ae98b2ae761b1e1e23bfb81398529295916196918bd01d612fc1",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime0_asc",
+      "rows": 3,
+      "sha256": "5f931354abd6a746dca351114cf72b4dd5a14f41915ab47e11ba2252a6308783",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime0_desc",
+      "rows": 3,
+      "sha256": "b9e30de06b78afed04e3d34b77891d26fa3993b99bb6e75393482aa690e4c134",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp0_asc",
+      "rows": 3,
+      "sha256": "e6690e6da7bd82400bb3f438cf0c4185b1b5889a386748710c8d9f635e19d036",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp0_desc",
+      "rows": 3,
+      "sha256": "a2020acde205d94dc322728ed6c537a0e9047f18114cdec21bb41c246c0cb6d7",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time1_asc",
+      "rows": 5,
+      "sha256": "11433ebf14452953449b7e13c5373fbf25d80db62caf0bfd557cc88f20f702e6",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time1_desc",
+      "rows": 5,
+      "sha256": "123650b87b95f9976a054f2647ca0f7795e8e8076b00253c9791ab10f5b2d589",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime1_asc",
+      "rows": 3,
+      "sha256": "1f787c84ccca0c01f874d8f51908c81865d83e34c72e3cc69b30559c1307f1e1",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime1_desc",
+      "rows": 3,
+      "sha256": "8f9a1bf19626b090525b333faa33f081304739478147733f79fed9e8bb23e3ca",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp1_asc",
+      "rows": 3,
+      "sha256": "7bc8f9653dd95a75d12fed2c0928063095b02652c9f67d4a04d496335ed09b0c",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp1_desc",
+      "rows": 3,
+      "sha256": "0cb261b1ce98ab03885e630088030ab0c4acce8a3b72117b4638af13222045a9",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time2_asc",
+      "rows": 5,
+      "sha256": "5f28bedd76a1596eb2fae35b17c69e56331f8a34ece7f7058e072f9e37586672",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time2_desc",
+      "rows": 5,
+      "sha256": "c7cfaba309f11926e136cd2f8449c891f7e7abfb1a0f893f9409cb34aae1303a",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime2_asc",
+      "rows": 3,
+      "sha256": "44adb36ac8829c6b6ee8f6e03dd146e1893c3d2735e1ff4de904665ea065ccba",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime2_desc",
+      "rows": 3,
+      "sha256": "a2f01a238e994bfb0c47869f4caab61f8b1aab855424c4cbff988f173574ac9c",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp2_asc",
+      "rows": 3,
+      "sha256": "17e1bd696827d28bd24d23863366ae425f0deb0695a7ca3db9da574f5b8193db",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp2_desc",
+      "rows": 3,
+      "sha256": "3c40fd559a29e0d53090b83935f646fb38c4a3ab878775b45912951a50ddac25",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time3_asc",
+      "rows": 5,
+      "sha256": "71162df0626d284cbf7b6de393a0d7f5f1f4b192cda0a83a1905702a56366bcd",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time3_desc",
+      "rows": 5,
+      "sha256": "ab5486cefedbd97644baa2f3ae23902f66a1c4d52cf8e179ce25b9ac19364236",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime3_asc",
+      "rows": 3,
+      "sha256": "f43e3cc447640dea8ca1aa1fa95c52cfe28e193a7040d3e5e62e6df9eae29482",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime3_desc",
+      "rows": 3,
+      "sha256": "11b0f40014fe1785ea2eb547033abd7baea7963f8fdc198319d3e52c949ab25d",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp3_asc",
+      "rows": 3,
+      "sha256": "89c9a587571b3c9b26e2b8943e59bcd79afc588f803c51e69fc0de01663edb98",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp3_desc",
+      "rows": 3,
+      "sha256": "3fb21bdf4c2e0e87e960c54ac1f1f21f29538b3b4c3c67119201a95590da4ec9",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time4_asc",
+      "rows": 5,
+      "sha256": "9b64e8732881324af2ea8422157f6fce7d3b1fb6b6a50290d5304cf7fcdbbe6b",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time4_desc",
+      "rows": 5,
+      "sha256": "c6af7d27a87be59a6caa7f24b9fa0cd8c9df7cdb9bed2bdf28842abff600fe7c",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime4_asc",
+      "rows": 3,
+      "sha256": "bbf5aa9faf4ae358db91ef92ed6e597523ea071eb63cb4e0eead75be57c749c9",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime4_desc",
+      "rows": 3,
+      "sha256": "21429a2573e931c7a7636f3d4471969a62adc69cbf8808aab54fff5d644d4752",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp4_asc",
+      "rows": 3,
+      "sha256": "457c257cceab282087abd712085a7abe7b0d47617c6d0c7145767d8dff969c82",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp4_desc",
+      "rows": 3,
+      "sha256": "7e3e1fb5f48a52e76d4e76bba5a5e19b9ec833b0827aa165b103ab47205e410f",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time5_asc",
+      "rows": 5,
+      "sha256": "db9145bc7752bb93e60170e71687da99adfda87010a1e8ed65d470f3cb69944a",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time5_desc",
+      "rows": 5,
+      "sha256": "b4de996cc216b96947c7715d0cf129dedd06c3757981ed73865e4005d9f76035",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime5_asc",
+      "rows": 3,
+      "sha256": "fc15f91a06919d17799d0a0a3e57d292382a8ae69d238e1ffcb9ab5bffc8928c",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime5_desc",
+      "rows": 3,
+      "sha256": "37f545a13956eef5e2e140eee23b9be1e83ce26638fa15d4d2ea69290636ef6a",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp5_asc",
+      "rows": 3,
+      "sha256": "e95e7b451d159bacd48c9e1bee94b9ae4230d64024bf7ed60849339662ef6a75",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp5_desc",
+      "rows": 3,
+      "sha256": "f0c19fae0c07166e73b5fb4f6c0ccc7415caea23046c84e3482a0c1093b975dc",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time6_asc",
+      "rows": 5,
+      "sha256": "dbd58d75d37097f35e4343e0837a5213a67b02bba7e0ee3b4e69ed76dc4d6767",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time6_desc",
+      "rows": 5,
+      "sha256": "17625fdd101ee7115afa1b95af21107c1946fc020133ccf4d5678911973bb76f",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime6_asc",
+      "rows": 3,
+      "sha256": "2fd8b6ee9369446e07d60e2b5f4af6d5af481fdad8f55c122265c3058cdbd2f6",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime6_desc",
+      "rows": 3,
+      "sha256": "6efca419aae54409a5465b2cc59681fc580895097f219e1fd2c15bd949d8ca4d",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp6_asc",
+      "rows": 3,
+      "sha256": "a5869d762bddbb4b8dda3934d38e498bfc058358e0dc7af15de91fe2319accf5",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp6_desc",
+      "rows": 3,
+      "sha256": "c052749610d2bd0e595c2dedf0e3c78f703addfe14b5de00ac3e4848a9544485",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_lesson",
+      "rows": 3,
+      "sha256": "4b5e96ea4f540883d49d841e7b8473f2cad90a1b4c18dacfff8471de8c53b3b7",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_empty",
+      "rows": 0,
+      "sha256": "e57eb64dba0c5008ce856e803daad165c05c76a5dcea85a4173d682cbe20db09",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_deep",
+      "rows": 3000,
+      "sha256": "a81f0d102eae3aa003b460f3a2ecdd5cf9eb108ef8c5c4b27349ea60e9967efe",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_utf8mb4_char_asc_tree",
+      "rows": 300,
+      "sha256": "c43b52f46bab218fff490cdd926ce248f227e8e73476275b6bf7c0ce638b6056",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_utf8mb4_char_desc_tree",
+      "rows": 300,
+      "sha256": "cbff58bf976178f183a08268fc853038ad7125830f95edac34c02973b4224369",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_utf8mb4_varchar_asc_tree",
+      "rows": 300,
+      "sha256": "c18f95d0d197c7b051678de65f5ac4f9d1b4d49a9944c3b1585b66281de51486",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_utf8mb4_varchar_desc_tree",
+      "rows": 300,
+      "sha256": "18f9062239becc5e7303cd242fdc6f084a06aa936005e3a6472e4e35f19d066b",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_utf8mb3_char_asc_tree",
+      "rows": 300,
+      "sha256": "31b010d0650034926a3f007cc9ae4150231f2e599a88ba6caaf29b4a4101fdde",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_utf8mb3_char_desc_tree",
+      "rows": 300,
+      "sha256": "eed88f1defc7190af57e3b1872d7b1edf7c920d0ae9412b5987ea3a4a53817ca",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_utf8mb3_varchar_asc_tree",
+      "rows": 300,
+      "sha256": "d16039726002bc50fc9afe74ccf44d73883ed94057d088695c819ebf238790fe",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_utf8mb3_varchar_desc_tree",
+      "rows": 300,
+      "sha256": "7f53c874276230f7f81c7386d9b98e97ef493754c35f1cd09d4e576c5ba704af",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_ascii_char_asc_tree",
+      "rows": 300,
+      "sha256": "e05ba95bcaf3b0f514fff21ba4942e2d15c1d7e49e5a121d750b316a1e90e431",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_ascii_char_desc_tree",
+      "rows": 300,
+      "sha256": "411b12c5be0e953cce18692b22e2da6ab5aa7b06b0f4ff2388c3f95264f96b1c",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_ascii_varchar_asc_tree",
+      "rows": 300,
+      "sha256": "e0fabeb46209b3c18920f56a9c545ac23e7352bc8a69a14ebfa465b8f0c3fba0",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_ascii_varchar_desc_tree",
+      "rows": 300,
+      "sha256": "b4039d38a9514418860c9a980271be2bc05f9c00c213d200a2b694bcb1424176",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_latin1_char_asc_tree",
+      "rows": 300,
+      "sha256": "fb7ddb1f662a632e9c488ca8ac7967177cb042a19abb0c33a5d45f73f5f6b39e",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_latin1_char_desc_tree",
+      "rows": 300,
+      "sha256": "db0cd851c6ef9b9748926540d53de78d86524d2f2ef263338d83f7a028bf0a18",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_latin1_varchar_asc_tree",
+      "rows": 300,
+      "sha256": "3b376d9221a3e43664b43147a3ff29cff58a30fb4ad03c14173e4d94aeccc704",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_latin1_varchar_desc_tree",
+      "rows": 300,
+      "sha256": "fd218e9cd6ab76fda9ddc43f64ee8953e0ab431f1210e8af087910322283c1ec",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_binary_asc_tree",
+      "rows": 300,
+      "sha256": "c2d78ddf4fd2ba89865491d1ba51f55a71d5f6b59b07fde13927e43f2abdce81",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_binary_desc_tree",
+      "rows": 300,
+      "sha256": "4c084469b9586dba3e99dedb5acf29131576c73a4c609bffa2eeefe9d28629db",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_varbinary_asc_tree",
+      "rows": 300,
+      "sha256": "61c816ae585ecb77d7840c6b77748f56cfc69c0a4c385a41e5286a8b3491f85b",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_varbinary_desc_tree",
+      "rows": 300,
+      "sha256": "46293384d12bafa5307604fe2926a2c717b72fddaa98c0ca40d47b97dd279e6c",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_decimal_asc_tree",
+      "rows": 300,
+      "sha256": "bd59ab28dab82a436b9512374d8c47273c0e1dd9c12fbc78e0036f42130cf97a",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_decimal_desc_tree",
+      "rows": 300,
+      "sha256": "e3cb25029815a8e627ca274a92307a63efeaf49ab07117ce87db4da989ae3d8d",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_bit_asc_tree",
+      "rows": 300,
+      "sha256": "4991a9b006903ec237840fc2f2b213cc76e3f96c0f77b62e2dc93e73f914b569",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_bit_desc_tree",
+      "rows": 300,
+      "sha256": "c4dc2959f1926fb22cafb23e965be2dc6ebfb16cdbfc9aafd6eac8d51cff0161",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_date_asc_tree",
+      "rows": 300,
+      "sha256": "d1c3355d3fe6dd77b532e04d3198a546a04a9e64f741b8bb03b8cf4317560a80",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_date_desc_tree",
+      "rows": 300,
+      "sha256": "2f0164aad630def24bcd369bd9018eb09a7834b2d8e6dc679f0fb4992367efe1",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_year_asc_tree",
+      "rows": 300,
+      "sha256": "e539f9886dccc1f209f727b06328e3bbe27d257eed2f15c1088b79e076d9a8eb",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_year_desc_tree",
+      "rows": 300,
+      "sha256": "02e1d32580f4b14c1e4ea60e26c1a2b980a207fe5a0268e0c8aa21e522f089e7",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time0_asc_tree",
+      "rows": 300,
+      "sha256": "c5b79e98c6742eeff817a9fa963318b005f41746b9cedbb297dfbde826db6ab0",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time0_desc_tree",
+      "rows": 300,
+      "sha256": "601782980b936651f850faa4e188949a3fee54572850db65e04409f3565bd8b1",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime0_asc_tree",
+      "rows": 300,
+      "sha256": "b1de6850585808c70760a0aee29067ed637639b9452a6449eef9e25d7337c8f4",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime0_desc_tree",
+      "rows": 300,
+      "sha256": "ef4710ef197afe30a59a92b218d2d08ca6385b61d2a29ffe67f75969fe71b7ac",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp0_asc_tree",
+      "rows": 300,
+      "sha256": "824b750b8e1a2fd33f8c2e73c7ddd2b7400fa0a3951a3e108f1a5cb435217aa6",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp0_desc_tree",
+      "rows": 300,
+      "sha256": "53ccf5dc2d88a8df8499bb151ac482cd0cc1f474fff97fd9d7f2abad0f3b59c9",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time1_asc_tree",
+      "rows": 300,
+      "sha256": "72f358d2e62eec9d08915a8a34f7d217b00a193637aa9b738aa350d1f2d7ca2c",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time1_desc_tree",
+      "rows": 300,
+      "sha256": "6858957656ba2a62258f2a7cee4f834d941337097c55d9895c78c020b421b41d",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime1_asc_tree",
+      "rows": 300,
+      "sha256": "a27d73c70159973fff87db6ed9d228027f39e4ebf7228ca6c811450bac4c4112",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime1_desc_tree",
+      "rows": 300,
+      "sha256": "60dbcbe3f2f0d3f795737908e9d65411dbc7413d407294f87f5ac6b940deaa2f",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp1_asc_tree",
+      "rows": 300,
+      "sha256": "10a48c88237252195f6801e47146cc5965e587e6c2513fff16005e02c1042a7f",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp1_desc_tree",
+      "rows": 300,
+      "sha256": "f6dac57c0e4b608ad8dca60bc70acd6ff854b6bf5f94fdd25f62f369299a752d",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time2_asc_tree",
+      "rows": 300,
+      "sha256": "9aa724bd8e650604d65de0826e5201fdd6c8ae07757d5fb1991ad0b04ab6d584",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time2_desc_tree",
+      "rows": 300,
+      "sha256": "357b3854632d66987655b4fadd296df551a52b3bb58bf91c94f93b674acb2a58",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime2_asc_tree",
+      "rows": 300,
+      "sha256": "76d8833b7850688733f5da5f68efd2c24fe70082213477efe7cd843f77736189",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime2_desc_tree",
+      "rows": 300,
+      "sha256": "3ac578e83aedd5b2ce0aecc077e38f92b4372e7831ec9b161076514151d32602",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp2_asc_tree",
+      "rows": 300,
+      "sha256": "60a9d1a274ae4d87d948e180df009fbd775a05f20c6df24c24aab7f7703d42b9",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp2_desc_tree",
+      "rows": 300,
+      "sha256": "04dfaf6d63d1ad296de0dcf1823118f9ba1a2c71fbe61b61aa5052b533290cd9",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time3_asc_tree",
+      "rows": 300,
+      "sha256": "7efde294b5967e3c0e2d2135a9f07d97a218a991004de1bfee98a1226970b165",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time3_desc_tree",
+      "rows": 300,
+      "sha256": "f3b04fc97a934a2ec000ab8244e17e57a6534c7f7107b535460c039d33ce1807",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime3_asc_tree",
+      "rows": 300,
+      "sha256": "39d7bf5c7fab1fc914997b767fb278dc35914cbaaf1c2b63d303a5ec22c08128",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime3_desc_tree",
+      "rows": 300,
+      "sha256": "992a4e4bc345383e8ac1aa8e496109936e922ccde7af075bb66eb3807c5b2c5e",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp3_asc_tree",
+      "rows": 300,
+      "sha256": "cb126e8c8aa10a165982de36acd42b95b63add709e5f1ab00bda66c052d7c203",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp3_desc_tree",
+      "rows": 300,
+      "sha256": "178611442fe6d1187c88536188f9ae64ed8e751f0fb80589e2a04f0cac1a289b",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time4_asc_tree",
+      "rows": 300,
+      "sha256": "51d3a9f2f306136cea89c5a434a5dd0951324c3f4b7ac76d49e57f4c24f3c226",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time4_desc_tree",
+      "rows": 300,
+      "sha256": "d59986f426acf83dc3366bb43362b57c8d102967828d36c88ba00cc287f57982",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime4_asc_tree",
+      "rows": 300,
+      "sha256": "fe1b97c7077f5f73c80209ced6b2f01faf214d4f303b123b05c5582d7756b483",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime4_desc_tree",
+      "rows": 300,
+      "sha256": "88a6b75308d8b78cb56fcaac8eefafa2bdb0ed7330ebf44c03528e3accfc9d49",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp4_asc_tree",
+      "rows": 300,
+      "sha256": "cd834c5dab3ca6fe16609988bd476ca8c0a501c1c8c2244a434247ad825faf9c",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp4_desc_tree",
+      "rows": 300,
+      "sha256": "95622d87e0e14fdb6f25eb578757cd5a18e292dc9aa157ad5296b12e67aee3d6",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time5_asc_tree",
+      "rows": 300,
+      "sha256": "5b44b19d29ee7f9419d5b650e7cf61c14668dfb75955cddcc2e59862e2d75613",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time5_desc_tree",
+      "rows": 300,
+      "sha256": "d47d11d2fda9e8e18e7bf80451cf01b9144c0321f86388400d6e041d0940821f",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime5_asc_tree",
+      "rows": 300,
+      "sha256": "a475d399424d69f33a92f54d8e9fb55f1b727c0b9aa3216ee05ca89fdb4b50b4",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime5_desc_tree",
+      "rows": 300,
+      "sha256": "8c3ba0507b4e544ef5010fb48d15a823018de4034519b759e86d65aaf0771d41",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp5_asc_tree",
+      "rows": 300,
+      "sha256": "4a4d41fa8d98d04272c40e6882145e643efb4ed11c8ab08eb790f607a4cc5cd3",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp5_desc_tree",
+      "rows": 300,
+      "sha256": "2b48429b4d38379dd679c5fda8b8d4fd6aa9d265dc782955d9e5218f1d75aa82",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time6_asc_tree",
+      "rows": 300,
+      "sha256": "269810e1eba80a58c8e2cd7cda7ef98990d6b8a8cf6eb588b169f9c536b8d04f",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_time6_desc_tree",
+      "rows": 300,
+      "sha256": "893d6a7b93a470eef07bc42c9e503f1c771843a86fe222048b8907ee0ec6b460",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime6_asc_tree",
+      "rows": 300,
+      "sha256": "8602bf4368173e46c1853e4d764347350711f5fea4965392218c68d5fdcbe108",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_datetime6_desc_tree",
+      "rows": 300,
+      "sha256": "baac3ea35456fb12365511bbd19f659a6bf7004f6a52aae08ab3153ddc939570",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp6_asc_tree",
+      "rows": 300,
+      "sha256": "035d3a896460fd55c576d9f59adff7a4d949b77e350785ebe05137c10a1741e5",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_timestamp6_desc_tree",
+      "rows": 300,
+      "sha256": "dad2b5c30748f4d4dc74861ce1e91b1037f2b710320b4d4f5c2d8a23bc5a6a8d",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "keys_max_width",
+      "rows": 2,
+      "sha256": "2cf11d7fd26ea9cd5d9f866ffea3a76294a2d4fbe8415802a5099f3a5f32d331",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    }
+  ],
+  "files": 144,
+  "rows": 24433,
+  "tool_directory": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin"
+}

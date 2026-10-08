@@ -1,0 +1,134 @@
+{
+  "tools": {
+    "innochecksum": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/innochecksum  Ver 8.0.45 for macos15 on arm64 (MySQL Community Server - GPL)",
+    "ibd2sdi": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/ibd2sdi  Ver 8.0.45 for macos15 on arm64 (MySQL Community Server - GPL)"
+  },
+  "cases": [
+    {
+      "name": "charset_utf8mb4_0900_ai_ci",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 6
+    },
+    {
+      "name": "charset_utf8mb4_general_ci",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 6
+    },
+    {
+      "name": "charset_utf8mb4_bin",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 6
+    },
+    {
+      "name": "charset_utf8mb3_general_ci",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 6
+    },
+    {
+      "name": "charset_utf8mb3_bin",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 6
+    },
+    {
+      "name": "charset_ascii_general_ci",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 6
+    },
+    {
+      "name": "charset_ascii_bin",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 6
+    },
+    {
+      "name": "charset_latin1_swedish_ci",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 6
+    },
+    {
+      "name": "charset_latin1_bin",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 6
+    },
+    {
+      "name": "widths_utf8mb4",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 4
+    },
+    {
+      "name": "external_utf8mb4",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 2
+    },
+    {
+      "name": "widths_utf8mb3",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 4
+    },
+    {
+      "name": "external_utf8mb3",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 2
+    },
+    {
+      "name": "widths_ascii",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 4
+    },
+    {
+      "name": "external_ascii",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 2
+    },
+    {
+      "name": "widths_latin1",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 4
+    },
+    {
+      "name": "external_latin1",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 2
+    },
+    {
+      "name": "bytes_ascii",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 128
+    },
+    {
+      "name": "bytes_latin1",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 256
+    },
+    {
+      "name": "charset_utf8_alias",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 2
+    },
+    {
+      "name": "charset_tree",
+      "crc32": true,
+      "sdi_objects": 2,
+      "cli_rows": 600
+    }
+  ]
+}

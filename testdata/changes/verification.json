@@ -1,0 +1,135 @@
+{
+  "cases": [
+    {
+      "name": "lesson_before",
+      "rows": 6,
+      "sha256": "847ffeb673a3f910d4d3c0cd60a7adc062c22652d26dc5b2aa8ba73db48c9fe5",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "lesson_marked",
+      "rows": 5,
+      "sha256": "35189ec1e7a12e05ccd1c2d6f925d80820546f5dce5efcebc4efc90201edb7df",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "lesson_purged",
+      "rows": 5,
+      "sha256": "f914ec383ca6952de6c25fcac453cf6e886bea7b94646bf3b69ac0e4331c3dd5",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "lesson_reused",
+      "rows": 7,
+      "sha256": "16d9b9bceee6a85cc383a919ac9de748876352db41c879bc37e56cad01496c49",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "empty_before",
+      "rows": 20,
+      "sha256": "414fb7be5600048ac5e36f2380e40afdcee835ebc26267c8ad59e2652b6e8cc0",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "empty_marked",
+      "rows": 0,
+      "sha256": "e3479f414782c09b1f6b46e8872385b8024bf2b2e1c91968f93d91826e081225",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "empty_purged",
+      "rows": 0,
+      "sha256": "fa3282415416469f265efbbd1d7d1204a3aef4ed58b91b532fecbeb2b856b8da",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "hidden_before",
+      "rows": 4,
+      "sha256": "952c74f55e51c164f0e8dd90400f100a1aeee545edfc6828d358c520835da12b",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "hidden_marked",
+      "rows": 2,
+      "sha256": "6f919898d0d87c928fa82486954e5e8f92d6b4d2ac587ae19334c8bd7eb025ef",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "hidden_purged",
+      "rows": 2,
+      "sha256": "c502eed9afa36f612ee3931e2aaa1e8dfc6a2fa5f75a5c5e3ff37705fb504326",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "unique_before",
+      "rows": 4,
+      "sha256": "c35a9fb0a864d4958df4c9961c3af183ed7de9ddb424d021b97b2def26447417",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "unique_marked",
+      "rows": 3,
+      "sha256": "1c98c9d52224e4d720962083d84ed9b90f0b83681bc7030a37158d07a3cef61a",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "unique_purged",
+      "rows": 3,
+      "sha256": "13be3c5404e762749dd6601f9dd9dd74349f79dd460b5ba5266df792b57d5bf6",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "tree_before",
+      "rows": 4000,
+      "sha256": "899c3f9a8d621579ae9b9ddc5bf9fdb51e44dc32ae361a4f461b743f4be36081",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "tree_marked",
+      "rows": 10,
+      "sha256": "0ea1057dff25c50c4e535a912b9211d0fe4b4967508dcbbf0ce58bc5bbf1d53f",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "tree_purged",
+      "rows": 10,
+      "sha256": "dee3e45138e3fa588641b1c747a8f25633cac639d044d364e4a3d4627af03cc8",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    }
+  ],
+  "files": 16,
+  "rows": 4081,
+  "tool_directory": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin"
+}

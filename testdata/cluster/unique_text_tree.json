@@ -1,0 +1,32 @@
+{
+  "columns": [
+    {
+      "name": "payload",
+      "type": "VARCHAR",
+      "max_chars": 1200,
+      "nullable": true
+    },
+    {
+      "name": "n",
+      "type": "INT",
+      "descending": true
+    },
+    {
+      "name": "k",
+      "type": "VARCHAR",
+      "max_chars": 100,
+      "collation": "utf8mb4_bin",
+      "descending": true
+    }
+  ],
+  "clustered_key": {
+    "name": "u",
+    "columns": [
+      "k",
+      "n"
+    ]
+  },
+  "index_id": 874,
+  "space_id": 653,
+  "root_page": 4
+}

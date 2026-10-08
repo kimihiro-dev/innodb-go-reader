@@ -1,0 +1,37 @@
+{
+  "columns": [
+    {
+      "name": "added",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "padding",
+      "type": "VARCHAR",
+      "max_chars": 1600
+    },
+    {
+      "name": "copy",
+      "type": "VARCHAR",
+      "max_chars": 1600,
+      "nullable": true,
+      "generation_expression": "reverse(`padding`)"
+    }
+  ],
+  "root_page": 4,
+  "index_id": 157,
+  "space_id": 5,
+  "primary_key": "id",
+  "row_format": "COMPACT",
+  "virtual_columns": [
+    {
+      "name": "v",
+      "ordinal": 4,
+      "expression": "(`id` + 1)"
+    }
+  ]
+}

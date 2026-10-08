@@ -1,0 +1,49 @@
+{
+  "columns": [
+    {
+      "name": "added",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "v",
+      "type": "VARCHAR",
+      "max_chars": 40,
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 906,
+  "space_id": 682,
+  "clustered_key": {
+    "name": "PRIMARY",
+    "hidden_row_id": true
+  },
+  "instant": {
+    "version": 2,
+    "fields": [
+      {
+        "position": 3,
+        "column": 1
+      },
+      {
+        "position": 4,
+        "column": -1,
+        "dropped": 2,
+        "dropped_column": {
+          "name": "!hidden!_dropped_v2_p4_n",
+          "type": "INT",
+          "nullable": true
+        }
+      },
+      {
+        "position": 5,
+        "column": 0,
+        "added": 1,
+        "default": {
+          "data": "gAAAWA=="
+        }
+      }
+    ]
+  }
+}

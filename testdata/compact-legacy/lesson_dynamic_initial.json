@@ -1,0 +1,39 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "txt",
+      "type": "LONGTEXT",
+      "nullable": true
+    },
+    {
+      "name": "bin",
+      "type": "LONGBLOB",
+      "nullable": true
+    },
+    {
+      "name": "v",
+      "type": "VARCHAR",
+      "max_chars": 10000,
+      "nullable": true
+    },
+    {
+      "name": "vb",
+      "type": "VARBINARY",
+      "max_bytes": 24000,
+      "nullable": true
+    },
+    {
+      "name": "j",
+      "type": "JSON",
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 160,
+  "space_id": 8,
+  "primary_key": "id"
+}

@@ -1,0 +1,145 @@
+{
+  "baseline": "2026-09-30",
+  "complete": true,
+  "checks": [
+    {
+      "name": "environment",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.009,
+      "log": "environment.log"
+    },
+    {
+      "name": "platform",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.009,
+      "log": "platform.log"
+    },
+    {
+      "name": "race",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 9.805,
+      "log": "race.log"
+    },
+    {
+      "name": "vet",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.208,
+      "log": "vet.log"
+    },
+    {
+      "name": "FuzzRead",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 12.807,
+      "log": "FuzzRead.log"
+    },
+    {
+      "name": "FuzzPartitionDirectory",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 10.659,
+      "log": "FuzzPartitionDirectory.log"
+    },
+    {
+      "name": "FuzzDecoder",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 10.906,
+      "log": "FuzzDecoder.log"
+    },
+    {
+      "name": "FuzzHTMLReport",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 11.767,
+      "log": "FuzzHTMLReport.log"
+    },
+    {
+      "name": "benchmark",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 1.632,
+      "log": "benchmark.log"
+    },
+    {
+      "name": "memory",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.65,
+      "log": "memory.log"
+    },
+    {
+      "name": "build",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.131,
+      "log": "build.log"
+    },
+    {
+      "name": "check-rows",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.366,
+      "log": "check-rows.log"
+    },
+    {
+      "name": "export",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.023,
+      "log": "export.log"
+    },
+    {
+      "name": "visualize",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.016,
+      "log": "visualize.log"
+    },
+    {
+      "name": "reject-virtual",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "seconds": 0.008,
+      "log": "reject-virtual.log"
+    },
+    {
+      "name": "materialized",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.006,
+      "log": "materialized.log"
+    },
+    {
+      "name": "reject-crc",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "seconds": 0.006,
+      "log": "reject-crc.log"
+    },
+    {
+      "name": "reject-page",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "seconds": 0.004,
+      "log": "reject-page.log"
+    }
+  ],
+  "source": {
+    "files": 113,
+    "sha256": "41ccccefe0dd22691de23fb41c3e8f402d1c4a3b15ffe899cc4f7f4189a738fa"
+  },
+  "testdata": {
+    "files": 2809,
+    "sha256": "440705f965babc538e0c35bbeb38d99559a81a4839031bd529e592151421c22d"
+  },
+  "fixture_counts": {
+    "row": 487,
+    "space": 4,
+    "partition": 34
+  }
+}

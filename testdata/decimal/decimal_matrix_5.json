@@ -1,0 +1,914 @@
+{
+  "columns": [
+    {
+      "name": "d31_5",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 5,
+      "unsigned": false
+    },
+    {
+      "name": "d31_6",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 6,
+      "unsigned": false
+    },
+    {
+      "name": "d31_7",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 7,
+      "unsigned": false
+    },
+    {
+      "name": "d31_8",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 8,
+      "unsigned": false
+    },
+    {
+      "name": "d31_9",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 9,
+      "unsigned": false
+    },
+    {
+      "name": "d31_10",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 10,
+      "unsigned": false
+    },
+    {
+      "name": "d31_11",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 11,
+      "unsigned": false
+    },
+    {
+      "name": "d31_12",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 12,
+      "unsigned": false
+    },
+    {
+      "name": "d31_13",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 13,
+      "unsigned": false
+    },
+    {
+      "name": "d31_14",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 14,
+      "unsigned": false
+    },
+    {
+      "name": "d31_15",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 15,
+      "unsigned": false
+    },
+    {
+      "name": "d31_16",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 16,
+      "unsigned": false
+    },
+    {
+      "name": "d31_17",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 17,
+      "unsigned": false
+    },
+    {
+      "name": "d31_18",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 18,
+      "unsigned": false
+    },
+    {
+      "name": "d31_19",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 19,
+      "unsigned": false
+    },
+    {
+      "name": "d31_20",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 20,
+      "unsigned": false
+    },
+    {
+      "name": "d31_21",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 21,
+      "unsigned": false
+    },
+    {
+      "name": "d31_22",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 22,
+      "unsigned": false
+    },
+    {
+      "name": "d31_23",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 23,
+      "unsigned": false
+    },
+    {
+      "name": "d31_24",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 24,
+      "unsigned": false
+    },
+    {
+      "name": "d31_25",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 25,
+      "unsigned": false
+    },
+    {
+      "name": "d31_26",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 26,
+      "unsigned": false
+    },
+    {
+      "name": "d31_27",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 27,
+      "unsigned": false
+    },
+    {
+      "name": "d31_28",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 28,
+      "unsigned": false
+    },
+    {
+      "name": "d31_29",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 29,
+      "unsigned": false
+    },
+    {
+      "name": "d31_30",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 31,
+      "scale": 30,
+      "unsigned": false
+    },
+    {
+      "name": "d32_0",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 0,
+      "unsigned": false
+    },
+    {
+      "name": "d32_1",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 1,
+      "unsigned": false
+    },
+    {
+      "name": "d32_2",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 2,
+      "unsigned": false
+    },
+    {
+      "name": "d32_3",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 3,
+      "unsigned": false
+    },
+    {
+      "name": "d32_4",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 4,
+      "unsigned": false
+    },
+    {
+      "name": "d32_5",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 5,
+      "unsigned": false
+    },
+    {
+      "name": "d32_6",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 6,
+      "unsigned": false
+    },
+    {
+      "name": "d32_7",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 7,
+      "unsigned": false
+    },
+    {
+      "name": "d32_8",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 8,
+      "unsigned": false
+    },
+    {
+      "name": "d32_9",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 9,
+      "unsigned": false
+    },
+    {
+      "name": "d32_10",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 10,
+      "unsigned": false
+    },
+    {
+      "name": "d32_11",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 11,
+      "unsigned": false
+    },
+    {
+      "name": "d32_12",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 12,
+      "unsigned": false
+    },
+    {
+      "name": "d32_13",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 13,
+      "unsigned": false
+    },
+    {
+      "name": "d32_14",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 14,
+      "unsigned": false
+    },
+    {
+      "name": "d32_15",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 15,
+      "unsigned": false
+    },
+    {
+      "name": "d32_16",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 16,
+      "unsigned": false
+    },
+    {
+      "name": "d32_17",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 17,
+      "unsigned": false
+    },
+    {
+      "name": "d32_18",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 18,
+      "unsigned": false
+    },
+    {
+      "name": "d32_19",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 19,
+      "unsigned": false
+    },
+    {
+      "name": "d32_20",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 20,
+      "unsigned": false
+    },
+    {
+      "name": "d32_21",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 21,
+      "unsigned": false
+    },
+    {
+      "name": "d32_22",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 22,
+      "unsigned": false
+    },
+    {
+      "name": "d32_23",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 23,
+      "unsigned": false
+    },
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    },
+    {
+      "name": "d32_24",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 24,
+      "unsigned": false
+    },
+    {
+      "name": "d32_25",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 25,
+      "unsigned": false
+    },
+    {
+      "name": "d32_26",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 26,
+      "unsigned": false
+    },
+    {
+      "name": "d32_27",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 27,
+      "unsigned": false
+    },
+    {
+      "name": "d32_28",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 28,
+      "unsigned": false
+    },
+    {
+      "name": "d32_29",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 29,
+      "unsigned": false
+    },
+    {
+      "name": "d32_30",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 32,
+      "scale": 30,
+      "unsigned": false
+    },
+    {
+      "name": "d33_0",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 0,
+      "unsigned": false
+    },
+    {
+      "name": "d33_1",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 1,
+      "unsigned": false
+    },
+    {
+      "name": "d33_2",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 2,
+      "unsigned": false
+    },
+    {
+      "name": "d33_3",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 3,
+      "unsigned": false
+    },
+    {
+      "name": "d33_4",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 4,
+      "unsigned": false
+    },
+    {
+      "name": "d33_5",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 5,
+      "unsigned": false
+    },
+    {
+      "name": "d33_6",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 6,
+      "unsigned": false
+    },
+    {
+      "name": "d33_7",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 7,
+      "unsigned": false
+    },
+    {
+      "name": "d33_8",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 8,
+      "unsigned": false
+    },
+    {
+      "name": "d33_9",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 9,
+      "unsigned": false
+    },
+    {
+      "name": "d33_10",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 10,
+      "unsigned": false
+    },
+    {
+      "name": "d33_11",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 11,
+      "unsigned": false
+    },
+    {
+      "name": "d33_12",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 12,
+      "unsigned": false
+    },
+    {
+      "name": "d33_13",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 13,
+      "unsigned": false
+    },
+    {
+      "name": "d33_14",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 14,
+      "unsigned": false
+    },
+    {
+      "name": "d33_15",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 15,
+      "unsigned": false
+    },
+    {
+      "name": "d33_16",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 16,
+      "unsigned": false
+    },
+    {
+      "name": "d33_17",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 17,
+      "unsigned": false
+    },
+    {
+      "name": "d33_18",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 18,
+      "unsigned": false
+    },
+    {
+      "name": "d33_19",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 19,
+      "unsigned": false
+    },
+    {
+      "name": "d33_20",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 20,
+      "unsigned": false
+    },
+    {
+      "name": "d33_21",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 21,
+      "unsigned": false
+    },
+    {
+      "name": "d33_22",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 22,
+      "unsigned": false
+    },
+    {
+      "name": "d33_23",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 23,
+      "unsigned": false
+    },
+    {
+      "name": "d33_24",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 24,
+      "unsigned": false
+    },
+    {
+      "name": "d33_25",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 25,
+      "unsigned": false
+    },
+    {
+      "name": "d33_26",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 26,
+      "unsigned": false
+    },
+    {
+      "name": "d33_27",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 27,
+      "unsigned": false
+    },
+    {
+      "name": "d33_28",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 28,
+      "unsigned": false
+    },
+    {
+      "name": "d33_29",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 29,
+      "unsigned": false
+    },
+    {
+      "name": "d33_30",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 33,
+      "scale": 30,
+      "unsigned": false
+    },
+    {
+      "name": "d34_0",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 34,
+      "scale": 0,
+      "unsigned": false
+    },
+    {
+      "name": "d34_1",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 34,
+      "scale": 1,
+      "unsigned": false
+    },
+    {
+      "name": "d34_2",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 34,
+      "scale": 2,
+      "unsigned": false
+    },
+    {
+      "name": "d34_3",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 34,
+      "scale": 3,
+      "unsigned": false
+    },
+    {
+      "name": "d34_4",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 34,
+      "scale": 4,
+      "unsigned": false
+    },
+    {
+      "name": "d34_5",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 34,
+      "scale": 5,
+      "unsigned": false
+    },
+    {
+      "name": "d34_6",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 34,
+      "scale": 6,
+      "unsigned": false
+    },
+    {
+      "name": "d34_7",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 34,
+      "scale": 7,
+      "unsigned": false
+    },
+    {
+      "name": "d34_8",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 34,
+      "scale": 8,
+      "unsigned": false
+    },
+    {
+      "name": "d34_9",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 34,
+      "scale": 9,
+      "unsigned": false
+    },
+    {
+      "name": "d34_10",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 34,
+      "scale": 10,
+      "unsigned": false
+    },
+    {
+      "name": "d34_11",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 34,
+      "scale": 11,
+      "unsigned": false
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 306,
+  "space_id": 97,
+  "root_page": 4
+}

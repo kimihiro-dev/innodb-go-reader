@@ -1,0 +1,28 @@
+{
+  "columns": [
+    {
+      "name": "k",
+      "type": "DECIMAL",
+      "precision": 65,
+      "scale": 30,
+      "descending": false
+    },
+    {
+      "name": "sequence",
+      "type": "INT",
+      "descending": true
+    },
+    {
+      "name": "payload",
+      "type": "VARCHAR",
+      "max_chars": 1500
+    }
+  ],
+  "primary_keys": [
+    "k",
+    "sequence"
+  ],
+  "index_id": 795,
+  "space_id": 584,
+  "root_page": 4
+}

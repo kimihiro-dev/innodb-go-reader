@@ -1,0 +1,36 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "tiny",
+      "type": "TINYTEXT",
+      "nullable": true,
+      "charset": "utf8mb3"
+    },
+    {
+      "name": "doc",
+      "type": "MEDIUMTEXT",
+      "nullable": true,
+      "charset": "utf8mb3"
+    },
+    {
+      "name": "longdoc",
+      "type": "LONGTEXT",
+      "nullable": true,
+      "charset": "utf8mb3"
+    },
+    {
+      "name": "note",
+      "type": "VARCHAR",
+      "max_chars": 32,
+      "nullable": true
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 435,
+  "space_id": 224,
+  "root_page": 4
+}

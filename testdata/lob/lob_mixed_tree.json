@@ -1,0 +1,34 @@
+{
+  "columns": [
+    {
+      "name": "text",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 6000
+    },
+    {
+      "name": "id",
+      "type": "BIGINT",
+      "nullable": false,
+      "max_chars": 0,
+      "unsigned": true
+    },
+    {
+      "name": "data",
+      "type": "VARBINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 30000
+    },
+    {
+      "name": "tag",
+      "type": "VARCHAR",
+      "nullable": false,
+      "max_chars": 128
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 288,
+  "space_id": 79,
+  "root_page": 4
+}

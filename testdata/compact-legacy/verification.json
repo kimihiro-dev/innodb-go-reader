@@ -1,0 +1,183 @@
+{
+  "cases": [
+    {
+      "name": "lesson_compact_initial",
+      "rows": 3,
+      "sha256": "dfad60e2eaca1334e6c49f2b4beaac4de81e691d9bfeb69a862fba63e56963f8",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "lesson_compact_grown",
+      "rows": 3,
+      "sha256": "575f003e64cc9c078c89c837292d1485d3e2c2153f50c7dc119efd5f1d47b05a",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "lesson_compact_mixed_formats",
+      "rows": 3,
+      "sha256": "023e8796b38aee125409c5eadbaae940f3035b37bb11372b8f0fd17b79b16d30",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "lesson_compact_shrunk",
+      "rows": 3,
+      "sha256": "46875f109b11402cbf27cec142d3d5c4c99d6540557e06da27b23a9a2b3e04a9",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "lesson_compact_null_deleted",
+      "rows": 2,
+      "sha256": "bdf81b64c3c8441bff92ef41408546604cc5e22fa457a7243b6753aa172c6880",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "bounds_compact_initial",
+      "rows": 14,
+      "sha256": "56bf3a63fdbf6e07af25cb68ddc43494df73583d95d1edbba1365e513ec2750d",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "tree_compact_initial",
+      "rows": 600,
+      "sha256": "c0cc0a5abdb16a452743276f1158622dc3d4405a9a7cdb91c51edb9616ec59c7",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "tree_compact_instant",
+      "rows": 601,
+      "sha256": "3da23500511230f2d790f6da84adf96ed817646634b0925e033745e3a26ba163",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "tree_compact_rebuilt",
+      "rows": 601,
+      "sha256": "d3bc6fdce4bda339611b3136ae4a336cef17c9851dc428aa70c98ecf473040d2",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "hidden_compact_initial",
+      "rows": 3,
+      "sha256": "5849e05cfbc3b6e59551439662b938be3a2c0463efe4680cdaa7ee707c3ebdc2",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "composite_compact_initial",
+      "rows": 100,
+      "sha256": "5aff8f757408d7dfed9b2ec429169b100f589c991a31f3b9883650d570b2f1cf",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "lesson_dynamic_initial",
+      "rows": 3,
+      "sha256": "46b5a1d0e2601eec50a93f74596e8f6d3e4ac9d3e57dc50213d807660d28f350",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "lesson_dynamic_grown",
+      "rows": 3,
+      "sha256": "b0291ac886d1581518f9be13cd125be7080dcdb4383144b5c3484b991d2298de",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "lesson_dynamic_mixed_formats",
+      "rows": 3,
+      "sha256": "a1adb793f4c13eecde39e241e4d90c42151db5c5887fe26225ba83c739b49537",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "lesson_dynamic_shrunk",
+      "rows": 3,
+      "sha256": "ea09a92d1fb9c90ad9662cf7fd27fd6bd804288ecff2c0a9ef4c57796edc280b",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "lesson_dynamic_null_deleted",
+      "rows": 2,
+      "sha256": "d5c979f55fad62fb2f2e6368f8eb3417ed13f474ff8e44111bf3d3e3f1171167",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "bounds_dynamic_initial",
+      "rows": 14,
+      "sha256": "6f905cacd3cbf0668de300a750a82e6f467eeb2027111ce9d3e0ddc27322ca1c",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "tree_dynamic_initial",
+      "rows": 600,
+      "sha256": "5394c1aa8a12e423c703a2de3d5932d243323c2c1fec9147858235fa49f97c30",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "tree_dynamic_instant",
+      "rows": 601,
+      "sha256": "143ff27e21202d38dddebe5f2c6476a3f43900fa1b1c17c75ed0876a0e29f379",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "tree_dynamic_rebuilt",
+      "rows": 601,
+      "sha256": "1da8a32f74bf622dd9a5baf0ba56cf0a613a785213de0d079b9e61a1a1980767",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "hidden_dynamic_initial",
+      "rows": 3,
+      "sha256": "7660edc4d5a13c7161ee2e1cb3f747c4918c36235ea30a4053e7652ff515890c",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "composite_dynamic_initial",
+      "rows": 100,
+      "sha256": "563f6e6ed2a4ebba5f002e66b237a1cc712c56bd7c839af932ded43b57334966",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    }
+  ],
+  "files": 22,
+  "rows": 3866,
+  "tool_directory": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin"
+}

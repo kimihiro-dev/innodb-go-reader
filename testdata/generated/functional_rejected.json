@@ -1,0 +1,17 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "a",
+      "type": "INT",
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 169,
+  "space_id": 16,
+  "primary_key": "id"
+}

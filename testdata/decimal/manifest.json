@@ -1,0 +1,204 @@
+{
+  "database": "innodb_reader_fixture_7044725c1e7c",
+  "generated_at": "2026-09-10T06:48:24.431766+00:00",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1
+  },
+  "snapshot": "Same session: FOR EXPORT, SELECT, copy, UNLOCK",
+  "cases": [
+    {
+      "name": "decimal_matrix_0",
+      "rows": 6,
+      "index_id": 301,
+      "space_id": 92,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "b5b0292fed2a1e8fbbce8c769fa31ba0d168331e018be93c2b07d7fc9c1b026e"
+    },
+    {
+      "name": "decimal_matrix_1",
+      "rows": 6,
+      "index_id": 302,
+      "space_id": 93,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "bf4c2c71ac7d290f18ea09398a2a144ceb47f11e880aced2687a9940c60df740"
+    },
+    {
+      "name": "decimal_matrix_2",
+      "rows": 6,
+      "index_id": 303,
+      "space_id": 94,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "a67a3dcf1c6bd7cdbbef47eb52fa3b4c50dc60222b94abe3f0cebf928ab11df0"
+    },
+    {
+      "name": "decimal_matrix_3",
+      "rows": 6,
+      "index_id": 304,
+      "space_id": 95,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "c38ecbabb595269450e63becaac3de72f70c3393f6c71320131d6253d8be8ab6"
+    },
+    {
+      "name": "decimal_matrix_4",
+      "rows": 6,
+      "index_id": 305,
+      "space_id": 96,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "7f8f4ff489e2defcbd8d4a824c861864f0958707b3db9c9d175f1c4629ac918a"
+    },
+    {
+      "name": "decimal_matrix_5",
+      "rows": 6,
+      "index_id": 306,
+      "space_id": 97,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "8e508c0e7ef26cee07ca88492e63e667dd13662e425a543893a43da53875f389"
+    },
+    {
+      "name": "decimal_matrix_6",
+      "rows": 6,
+      "index_id": 307,
+      "space_id": 98,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "b6cafedd4685adf5cccd3703391be251cd9b9d61d04fbcfd205fdbd796b213b8"
+    },
+    {
+      "name": "decimal_matrix_7",
+      "rows": 6,
+      "index_id": 308,
+      "space_id": 99,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "6bc20814cbca5f77f35b134a200d8facbd304cea12e74796f57efbd0d166d352"
+    },
+    {
+      "name": "decimal_matrix_8",
+      "rows": 6,
+      "index_id": 309,
+      "space_id": 100,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "848caf403981174b29406a58c4abf443ec475a589f355ea1158275119cf3bea9"
+    },
+    {
+      "name": "decimal_matrix_9",
+      "rows": 6,
+      "index_id": 310,
+      "space_id": 101,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "4cb392996f2b796ff31473011c08557df4c522974c93ef943e31d29317ad0270"
+    },
+    {
+      "name": "decimal_matrix_10",
+      "rows": 6,
+      "index_id": 311,
+      "space_id": 102,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "c53c1b742387cf03433a9e9a63a3ff3db341017150616156d1eff9dcdc92b9fa"
+    },
+    {
+      "name": "decimal_matrix_11",
+      "rows": 6,
+      "index_id": 312,
+      "space_id": 103,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "6f6a26820bc96a42815abb9a2faf9c6f7c8d10b973b1e993439547e925d94aa2"
+    },
+    {
+      "name": "decimal_matrix_12",
+      "rows": 6,
+      "index_id": 313,
+      "space_id": 104,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "ff41071bd355ffce9cd0e171873895796fd9a51fc3ff133a3100ae1189f599fe"
+    },
+    {
+      "name": "decimal_matrix_13",
+      "rows": 6,
+      "index_id": 314,
+      "space_id": 105,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "800ad23b1aa664d92979c52688d016ab99f4032d6108437efc0c75251d2e9e55"
+    },
+    {
+      "name": "decimal_matrix_14",
+      "rows": 6,
+      "index_id": 315,
+      "space_id": 106,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "392d66aa8b4203e3f590294c6564ec328fca7b1375856de1d84729a2d5ed2255"
+    },
+    {
+      "name": "decimal_matrix_15",
+      "rows": 6,
+      "index_id": 316,
+      "space_id": 107,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "216fa71e568571ceb42fb46f241bba2c1040b4d2a7123c650de5f97442be0738"
+    },
+    {
+      "name": "decimal_unsigned",
+      "rows": 4,
+      "index_id": 317,
+      "space_id": 108,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "4450e155832cc008c52bcf27414b86915be9aa2eca357624b20f7df7b4f7a787"
+    },
+    {
+      "name": "decimal_lesson",
+      "rows": 4,
+      "index_id": 318,
+      "space_id": 109,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 163840,
+      "sha256": "4dda83dc52ea6c9129fd37883db026dc7e46af4fc85b1be5252398db92e49aa3"
+    },
+    {
+      "name": "decimal_tree",
+      "rows": 600,
+      "index_id": 319,
+      "space_id": 110,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 442368,
+      "sha256": "14a7e7dc955718ed1e1f7a83cd56dd26148725585738beb1232ca50923eb6271"
+    }
+  ]
+}

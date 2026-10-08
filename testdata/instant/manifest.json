@@ -1,0 +1,320 @@
+{
+  "database": "innodb_reader_instant_e85d0f225972",
+  "generated_at": "2026-09-18T00:52:39.538999+00:00",
+  "cases": [
+    {
+      "name": "lesson_before",
+      "table": "lesson",
+      "phase": "before",
+      "rows": 2,
+      "unordered": false,
+      "sha256": "452357c34441be46e6c9a3486599ab3936a443796e49622c951598847dd1b80e",
+      "bytes": 196608,
+      "version": 0,
+      "physical": {
+        "Rows": 2,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      }
+    },
+    {
+      "name": "lesson_add",
+      "table": "lesson",
+      "phase": "add",
+      "rows": 3,
+      "unordered": false,
+      "sha256": "8ab181ab33920ed90bee11d7fb5e41007f80f4a5e96fd46ffe870169e82f9329",
+      "bytes": 196608,
+      "version": 1,
+      "physical": {
+        "Rows": 3,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      }
+    },
+    {
+      "name": "lesson_default_changed",
+      "table": "lesson",
+      "phase": "default_changed",
+      "rows": 4,
+      "unordered": false,
+      "sha256": "a17140d6513285ab0fb905c5dafdd463e996e2cdad59f96f22b623fc668f3a65",
+      "bytes": 196608,
+      "version": 1,
+      "physical": {
+        "Rows": 4,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      }
+    },
+    {
+      "name": "lesson_drop",
+      "table": "lesson",
+      "phase": "drop",
+      "rows": 5,
+      "unordered": false,
+      "sha256": "9d0f9ec7381233755794b127a5e8ea757c7d5706624279aa361a2e2dc82f81a7",
+      "bytes": 196608,
+      "version": 2,
+      "physical": {
+        "Rows": 5,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      }
+    },
+    {
+      "name": "lesson_readd",
+      "table": "lesson",
+      "phase": "readd",
+      "rows": 6,
+      "unordered": false,
+      "sha256": "ced472b1c522471dbe24a91eebcf85e45d9504928fe24de4b8ce052b8ea27710",
+      "bytes": 196608,
+      "version": 3,
+      "physical": {
+        "Rows": 6,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      }
+    },
+    {
+      "name": "lesson_updated",
+      "table": "lesson",
+      "phase": "updated",
+      "rows": 5,
+      "unordered": false,
+      "sha256": "1e3e0e74752d1337d6aab006c35ccc697484ffc93e68a8c9153f6957a825ada5",
+      "bytes": 212992,
+      "version": 3,
+      "physical": {
+        "Rows": 5,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 1,
+        "GarbageBytes": 35,
+        "RootLevel": 0
+      }
+    },
+    {
+      "name": "lesson_rebuilt",
+      "table": "lesson",
+      "phase": "rebuilt",
+      "rows": 5,
+      "unordered": false,
+      "sha256": "0907f946864447ca64e0fc490f6099b302d7121b7316225e810ca7dc4f1b71aa",
+      "bytes": 114688,
+      "version": 0,
+      "physical": {
+        "Rows": 5,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      }
+    },
+    {
+      "name": "tree_before",
+      "table": "tree",
+      "phase": "before",
+      "rows": 800,
+      "unordered": false,
+      "sha256": "5f372afac84cbd96169602e718b9153b7b00f88a113d1905cff08a925a2ffdf1",
+      "bytes": 9437184,
+      "version": 0,
+      "physical": {
+        "Rows": 800,
+        "DeleteMarked": 0,
+        "Pages": 69,
+        "FreePages": 1,
+        "GarbageBytes": 7350,
+        "RootLevel": 1
+      }
+    },
+    {
+      "name": "tree_add",
+      "table": "tree",
+      "phase": "add",
+      "rows": 1000,
+      "unordered": false,
+      "sha256": "ef1b1dcc17b2223a977cde4c7331be1e35dca08973b1b8d714df81b4ced7719f",
+      "bytes": 9437184,
+      "version": 1,
+      "physical": {
+        "Rows": 1000,
+        "DeleteMarked": 0,
+        "Pages": 85,
+        "FreePages": 1,
+        "GarbageBytes": 7350,
+        "RootLevel": 1
+      }
+    },
+    {
+      "name": "tree_drop",
+      "table": "tree",
+      "phase": "drop",
+      "rows": 1001,
+      "unordered": false,
+      "sha256": "76ea5ea35b418fec48ef579a1be3e18d23ddc1cdf24d02b120daefc79be46b7a",
+      "bytes": 9437184,
+      "version": 2,
+      "physical": {
+        "Rows": 1001,
+        "DeleteMarked": 0,
+        "Pages": 85,
+        "FreePages": 1,
+        "GarbageBytes": 7350,
+        "RootLevel": 1
+      }
+    },
+    {
+      "name": "tree_rebuilt",
+      "table": "tree",
+      "phase": "rebuilt",
+      "rows": 1001,
+      "unordered": false,
+      "sha256": "47c6d6285c01dfc1cbcbaa4a530ccc37e9e109daaec9b84d12a682545e2efbcd",
+      "bytes": 7340032,
+      "version": 0,
+      "physical": {
+        "Rows": 1001,
+        "DeleteMarked": 0,
+        "Pages": 85,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 1
+      }
+    },
+    {
+      "name": "hidden_add",
+      "table": "hidden",
+      "phase": "add",
+      "rows": 4,
+      "unordered": true,
+      "sha256": "467117b4c3662ea9f2a9b3a11a8c6d943488cd1cb2cc7947d53fc7d28b1661d2",
+      "bytes": 114688,
+      "version": 1,
+      "physical": {
+        "Rows": 4,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      }
+    },
+    {
+      "name": "hidden_drop",
+      "table": "hidden",
+      "phase": "drop",
+      "rows": 5,
+      "unordered": true,
+      "sha256": "b305a91af3ff050dd39e704c87abf6421c553b109fbc5372056a29a68d4834f8",
+      "bytes": 114688,
+      "version": 2,
+      "physical": {
+        "Rows": 5,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      }
+    },
+    {
+      "name": "hidden_rebuilt",
+      "table": "hidden",
+      "phase": "rebuilt",
+      "rows": 5,
+      "unordered": true,
+      "sha256": "e9a86488d3f4b0e0dd007f900e26d0e1f02c9c8e440204f8d069fd3ce1f008b0",
+      "bytes": 114688,
+      "version": 0,
+      "physical": {
+        "Rows": 5,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      }
+    },
+    {
+      "name": "types_defaults",
+      "table": "types",
+      "phase": "defaults",
+      "rows": 2,
+      "unordered": false,
+      "sha256": "f593aa92e370934010c40b246c5924ab793191a1bd1a96a111deafaf946dbce0",
+      "bytes": 114688,
+      "version": 1,
+      "physical": {
+        "Rows": 2,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      }
+    },
+    {
+      "name": "versions_v64",
+      "table": "versions",
+      "phase": "v64",
+      "rows": 34,
+      "unordered": false,
+      "sha256": "49888d7c4d8adc2d925abe48a2d83e5db1a976bcf03a073e8b04ad8efe233ae6",
+      "bytes": 229376,
+      "version": 64,
+      "physical": {
+        "Rows": 34,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      }
+    },
+    {
+      "name": "versions_rebuilt",
+      "table": "versions",
+      "phase": "rebuilt",
+      "rows": 34,
+      "unordered": false,
+      "sha256": "1f31bf6a9a04fd0adfe508f85279e576427aee01608bb18d5490677afc057fa4",
+      "bytes": 114688,
+      "version": 0,
+      "physical": {
+        "Rows": 34,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      }
+    }
+  ],
+  "status": "captured",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1
+  }
+}

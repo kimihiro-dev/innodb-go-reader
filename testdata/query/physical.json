@@ -1,0 +1,23 @@
+[
+  {
+    "name": "signed_rows",
+    "rows": 1801,
+    "pages": 131,
+    "level": 1,
+    "external": 1
+  },
+  {
+    "name": "mixed_rows",
+    "rows": 800,
+    "pages": 74,
+    "level": 1,
+    "external": 0
+  },
+  {
+    "name": "unsigned_rows",
+    "rows": 5,
+    "pages": 1,
+    "level": 0,
+    "external": 0
+  }
+]

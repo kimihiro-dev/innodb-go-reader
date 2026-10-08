@@ -1,0 +1,106 @@
+{
+  "browser_interaction": "User confirmed local browser page navigation, parent/child navigation, record highlighting and LOB navigation on 2026-09-29; no automated browser run (file URL policy).",
+  "cases": [
+    {
+      "name": "lesson",
+      "source": "mysql8045/lesson_rows.ibd",
+      "pages": 7,
+      "tree_pages": 1,
+      "edges": 0,
+      "details": 4,
+      "embedded_pages": [
+        0,
+        4
+      ],
+      "html_bytes": 92438,
+      "api_space_equal": true,
+      "raw_equal": true,
+      "script_syntax": true
+    },
+    {
+      "name": "lob",
+      "source": "variable/external_text.ibd.gz",
+      "pages": 9,
+      "tree_pages": 1,
+      "edges": 0,
+      "details": 2,
+      "embedded_pages": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "html_bytes": 158643,
+      "api_space_equal": true,
+      "raw_equal": true,
+      "script_syntax": true
+    },
+    {
+      "name": "secondary",
+      "source": "secondary/deep.ibd.gz",
+      "pages": 960,
+      "tree_pages": 182,
+      "edges": 181,
+      "details": 10,
+      "embedded_pages": [
+        0,
+        5,
+        313
+      ],
+      "html_bytes": 494491,
+      "api_space_equal": true,
+      "raw_equal": true,
+      "script_syntax": true
+    },
+    {
+      "name": "virtual",
+      "source": "generated/mixed_instant.ibd.gz",
+      "pages": 15,
+      "tree_pages": 1,
+      "edges": 0,
+      "details": 4,
+      "embedded_pages": [
+        0,
+        4,
+        5,
+        6,
+        11,
+        12
+      ],
+      "html_bytes": 228429,
+      "api_space_equal": true,
+      "raw_equal": true,
+      "script_syntax": true
+    },
+    {
+      "name": "space",
+      "source": "space/grown.space.gz",
+      "pages": 17408,
+      "tree_pages": 0,
+      "edges": 0,
+      "details": 0,
+      "embedded_pages": [
+        0
+      ],
+      "html_bytes": 4735223,
+      "api_space_equal": true,
+      "raw_equal": true,
+      "script_syntax": true
+    },
+    {
+      "name": "partition-space",
+      "source": "partitions/ranges-p0.partition.gz",
+      "pages": 29,
+      "tree_pages": 0,
+      "edges": 0,
+      "details": 0,
+      "embedded_pages": [
+        0
+      ],
+      "html_bytes": 65351,
+      "api_space_equal": true,
+      "raw_equal": true,
+      "script_syntax": true
+    }
+  ]
+}

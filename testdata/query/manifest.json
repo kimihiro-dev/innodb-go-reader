@@ -1,0 +1,35 @@
+{
+  "database": "innodb_reader_query_801d543ea403",
+  "generated_at": "2026-09-20T08:43:16.814727+00:00",
+  "status": "captured",
+  "cases": [
+    {
+      "name": "signed_rows",
+      "rows": 1801,
+      "queries": 30,
+      "sha256": "9e56c51d04e55661120b4de695872e9b479c7448421f27a46d09862d2fbce1e6",
+      "bytes": 10485760
+    },
+    {
+      "name": "mixed_rows",
+      "rows": 800,
+      "queries": 40,
+      "sha256": "a499e5e94429f5d1d90be654181b4454a2a1c11c181fd4e7133ad368580fdefb",
+      "bytes": 9437184
+    },
+    {
+      "name": "unsigned_rows",
+      "rows": 5,
+      "queries": 22,
+      "sha256": "ef5c3144cb5cd6c1b7ac2c876b0a1e6e1f29faaa1b58e23512c71d3cd454db78",
+      "bytes": 114688
+    }
+  ],
+  "environment": {
+    "datadir": "/private/tmp/innodb-generated-stage30/instance/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1
+  }
+}

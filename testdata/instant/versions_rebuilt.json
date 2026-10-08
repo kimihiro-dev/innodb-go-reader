@@ -1,0 +1,12 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    }
+  ],
+  "root_page": 4,
+  "index_id": 910,
+  "space_id": 686,
+  "primary_key": "id"
+}

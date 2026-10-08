@@ -1,0 +1,1 @@
+{"command":"export","scope":"current stored rows","complete":false,"preflight_reads":4,"error":"unsupported InnoDB layout: [column virt is VIRTUAL and unmaterialized; use ReadMaterializedAuto explicitly column vt is VIRTUAL and unmaterialized; use ReadMaterializedAuto explicitly]"}

@@ -1,0 +1,45 @@
+{
+  "database": "innodb_reader_fixture_43ee7f373b02",
+  "generated_at": "2026-09-14T01:06:43.933539+00:00",
+  "environment": {
+    "datadir": "/tmp/innodb-bit-stage13/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1,
+    "sql_mode": "STRICT_TRANS_TABLES"
+  },
+  "snapshot": "Same session: FOR EXPORT, SELECT, copy, UNLOCK",
+  "cases": [
+    {
+      "name": "bit_widths",
+      "rows": 69,
+      "index_id": 157,
+      "space_id": 5,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 131072,
+      "sha256": "ef4c6f60de37f02dc00336a0bbb712457e708156db11bd0e30bb646a07973327"
+    },
+    {
+      "name": "bit_mixed",
+      "rows": 4,
+      "index_id": 158,
+      "space_id": 6,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 163840,
+      "sha256": "79c4a4f6f8f325d772840e888b9c88c666962cc8a907e8440078fe69611aaef4"
+    },
+    {
+      "name": "bit_tree",
+      "rows": 600,
+      "index_id": 159,
+      "space_id": 7,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 393216,
+      "sha256": "77dcef189e53e648ceda9d51da081b68feb50c9bb23126d057e2a5831fd6d87f"
+    }
+  ]
+}

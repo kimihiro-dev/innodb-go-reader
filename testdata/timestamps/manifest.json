@@ -1,0 +1,116 @@
+{
+  "database": "innodb_reader_fixture_0a36f4d2b0f5",
+  "generated_at": "2026-09-11T08:16:55.749325+00:00",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1,
+    "sql_mode": "STRICT_TRANS_TABLES",
+    "time_zone": "+00:00"
+  },
+  "snapshot": "Same session: FOR EXPORT, SELECT, copy, UNLOCK",
+  "cases": [
+    {
+      "name": "timestamp_fsp_0",
+      "rows": 12,
+      "index_id": 346,
+      "space_id": 137,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "056f6f57dd94d11268a72fe2ea3b0e1c343765664ee693bf1f96e0d681ab012b"
+    },
+    {
+      "name": "timestamp_fsp_1",
+      "rows": 12,
+      "index_id": 347,
+      "space_id": 138,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "1126856ed422f90785a8dee4b03ac5c8ef8a6cccdd6824fc383ff7af69952129"
+    },
+    {
+      "name": "timestamp_fsp_2",
+      "rows": 12,
+      "index_id": 348,
+      "space_id": 139,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "9f226a216c86cfe6975f5e45e71bf5b74e621e78a44a8d979a591f5fb9550c49"
+    },
+    {
+      "name": "timestamp_fsp_3",
+      "rows": 12,
+      "index_id": 349,
+      "space_id": 140,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "a91058d1431f19a06e5cd64ff5766b9a4cc19af158bd93d7ca0f8dc2f0e2d3ce"
+    },
+    {
+      "name": "timestamp_fsp_4",
+      "rows": 12,
+      "index_id": 350,
+      "space_id": 141,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "9be7f715cacd2e5eb09afa675933f450307d9962e6b2d39ceefaf999a8c02c1f"
+    },
+    {
+      "name": "timestamp_fsp_5",
+      "rows": 12,
+      "index_id": 351,
+      "space_id": 142,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "a2efc453c1d8ec35e4d8a4dfddf794268601b1a31f558186c803846658431cfa"
+    },
+    {
+      "name": "timestamp_fsp_6",
+      "rows": 12,
+      "index_id": 352,
+      "space_id": 143,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "e117b0f569819696da21abd3f5be5a978718f9412af61d31fe435505b10f820e"
+    },
+    {
+      "name": "timestamp_mixed",
+      "rows": 4,
+      "index_id": 353,
+      "space_id": 144,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 163840,
+      "sha256": "c2ed9e36298f3d50c9544d3cdec7e19b0b7a33e86217d2c71236b93841388137"
+    },
+    {
+      "name": "timestamp_tree",
+      "rows": 600,
+      "index_id": 354,
+      "space_id": 145,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 393216,
+      "sha256": "faf181949050cbce6febc545a55a85bfce367c98fd36cc711c68752eb3c9b35f"
+    },
+    {
+      "name": "timestamp_zones",
+      "rows": 3,
+      "index_id": 355,
+      "space_id": 146,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "8bbc353794d52d463f5b73a189f8e2dc4ba09357ad9c12453b67ce1ec485a525"
+    }
+  ]
+}

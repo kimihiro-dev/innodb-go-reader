@@ -1,0 +1,27 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "BIGINT",
+      "descending": true
+    },
+    {
+      "name": "k",
+      "type": "VARBINARY",
+      "max_bytes": 255
+    },
+    {
+      "name": "v",
+      "type": "VARCHAR",
+      "max_chars": 1800,
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 883,
+  "space_id": 659,
+  "primary_keys": [
+    "k",
+    "id"
+  ]
+}

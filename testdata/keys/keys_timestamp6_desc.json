@@ -1,0 +1,14 @@
+{
+  "columns": [
+    {
+      "name": "k",
+      "type": "TIMESTAMP",
+      "fsp": 6,
+      "descending": true
+    }
+  ],
+  "primary_key": "k",
+  "index_id": 771,
+  "space_id": 560,
+  "root_page": 4
+}

@@ -1,0 +1,26 @@
+
+File::snapshot.ibd
+================PAGE TYPE SUMMARY==============
+#PAGE_COUNT	PAGE_TYPE
+===============================================
+      74	Index page
+       1	SDI Index page
+       0	Undo log page
+       1	Inode page
+       0	Insert buffer free list page
+     328	Freshly allocated page
+       2	Insert buffer bitmap
+       0	System page
+       0	Transaction system page
+       1	File Space Header
+       1	Extent descriptor page
+       0	BLOB page
+       0	Compressed BLOB page
+       0	Subsequent Compressed BLOB page
+       0	SDI BLOB page
+       0	Compressed SDI BLOB page
+   17000	Other type of page
+===============================================
+Additional information:
+Undo page type: 0 insert, 0 update, 0 other
+Undo page state: 0 active, 0 cached, 0 to_free, 0 to_purge, 0 prepared, 0 other

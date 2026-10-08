@@ -1,0 +1,34 @@
+{
+  "files": 3,
+  "queries": 358,
+  "rows": 27340,
+  "covered": 7302,
+  "lookups": 24640,
+  "cases": [
+    {
+      "name": "prefixes",
+      "sha256": "879ae205d8ac8ee57025c0e84bd606b726be7dbe923824dd6452d33ec3bc6fc3",
+      "queries": 270,
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "covering",
+      "sha256": "bb37b3fdbc3fb86986dd7601137be070a50ff65689e971c2aa081813cd303dc9",
+      "queries": 76,
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "huge",
+      "sha256": "92974780f53d52a87c94628e8ba8879ac8bcdaf44408603048190837b2a5efc0",
+      "queries": 12,
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    }
+  ],
+  "tool_directory": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin"
+}

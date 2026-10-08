@@ -1,0 +1,119 @@
+{
+  "cases": [
+    {
+      "name": "stored_values_initial",
+      "rows": 3,
+      "sha256": "1f303b1dcf6494c1f94c65730f6c9de48c7fb4743cc1023a72de4c7078c9a734",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "stored_values_updated_visible",
+      "rows": 3,
+      "sha256": "ae31092381f0901b49c4319576b510e2a23f64bae66e308e34cda8974ee2a545",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "mixed_initial",
+      "rows": 3,
+      "sha256": "36246e5ebe59b31d1b921e3421a0cd21b370f72f7e14c16485e0f66483586025",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "mixed_instant",
+      "rows": 4,
+      "sha256": "385a9e94779963276833273be6d138541a13909f855bf84f29ad4d3ec73712a9",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "mixed_changed",
+      "rows": 3,
+      "sha256": "5acde62a68ef99c37a3ee2fb81bb90fcbc86a059d1eb010604e7c00df160858f",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "mixed_rebuilt",
+      "rows": 3,
+      "sha256": "2c537341df722fb4981029da3702f9b5041bb224162369063367505c3cea4236",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "mixed_no_virtual",
+      "rows": 3,
+      "sha256": "d40d1e206fce5159853d3b93126d578d376900dcca71a985d8e373c146ef32fd",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "tree_initial",
+      "rows": 600,
+      "sha256": "05d5b577adfd19e155e99db9d8124d23b3d2522b352b461e68e01eb74f52c42d",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "tree_instant",
+      "rows": 601,
+      "sha256": "d4f07a4d4ecd57e2d1377ebc607bb246c9db0b24dd153cab0f2986ab98e77eec",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "hidden_initial",
+      "rows": 3,
+      "sha256": "5e39d60e6279ea5271441e44ce5e392275e7d6493597e3314a1d90b6f70e6c90",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "unique_stored_initial",
+      "rows": 3,
+      "sha256": "e7c3623dcea22e88b066f9d163e770a1d75fa806683d34abffb70d773862fc94",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "empty_values_initial",
+      "rows": 0,
+      "sha256": "4be0892c038525617316904bf59180f83bf22904f85f69d612ebe79885044532",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "indexed_initial",
+      "rows": 3,
+      "sha256": "3f6a6c708213dc602d2fdd5a29c0bef9a95a042fe83f067cce607012f05d7a30",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "functional_rejected",
+      "rows": 0,
+      "sha256": "8ca856c7c3a327036811b259060021480d18bae4adf05b6996e5afaf87f04e36",
+      "crc32": true,
+      "sdi": true,
+      "cli_rejection": true
+    }
+  ],
+  "files": 14,
+  "rows": 1232,
+  "tool_directory": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin"
+}

@@ -1,0 +1,334 @@
+{
+  "database": "innodb_reader_changes_a6dcd49fc617",
+  "generated_at": "2026-09-17T06:27:50.472877+00:00",
+  "cases": [
+    {
+      "name": "lesson_before",
+      "table": "lesson",
+      "phase": "before",
+      "rows": 6,
+      "unordered": false,
+      "bytes": 114688,
+      "sha256": "847ffeb673a3f910d4d3c0cd60a7adc062c22652d26dc5b2aa8ba73db48c9fe5",
+      "physical": {
+        "Rows": 6,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "root_page": 4,
+      "index_id": 878,
+      "space_id": 655
+    },
+    {
+      "name": "lesson_marked",
+      "table": "lesson",
+      "phase": "marked",
+      "rows": 5,
+      "unordered": false,
+      "bytes": 114688,
+      "sha256": "35189ec1e7a12e05ccd1c2d6f925d80820546f5dce5efcebc4efc90201edb7df",
+      "physical": {
+        "Rows": 5,
+        "DeleteMarked": 2,
+        "Pages": 1,
+        "FreePages": 1,
+        "GarbageBytes": 535,
+        "RootLevel": 0
+      },
+      "root_page": 4,
+      "index_id": 878,
+      "space_id": 655
+    },
+    {
+      "name": "lesson_purged",
+      "table": "lesson",
+      "phase": "purged",
+      "rows": 5,
+      "unordered": false,
+      "bytes": 114688,
+      "sha256": "f914ec383ca6952de6c25fcac453cf6e886bea7b94646bf3b69ac0e4331c3dd5",
+      "physical": {
+        "Rows": 5,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 1,
+        "GarbageBytes": 845,
+        "RootLevel": 0
+      },
+      "root_page": 4,
+      "index_id": 878,
+      "space_id": 655
+    },
+    {
+      "name": "lesson_reused",
+      "table": "lesson",
+      "phase": "reused",
+      "rows": 7,
+      "unordered": false,
+      "bytes": 114688,
+      "sha256": "16d9b9bceee6a85cc383a919ac9de748876352db41c879bc37e56cad01496c49",
+      "physical": {
+        "Rows": 7,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 1,
+        "GarbageBytes": 816,
+        "RootLevel": 0
+      },
+      "root_page": 4,
+      "index_id": 878,
+      "space_id": 655
+    },
+    {
+      "name": "empty_before",
+      "table": "empty",
+      "phase": "before",
+      "rows": 20,
+      "unordered": false,
+      "bytes": 114688,
+      "sha256": "414fb7be5600048ac5e36f2380e40afdcee835ebc26267c8ad59e2652b6e8cc0",
+      "physical": {
+        "Rows": 20,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "root_page": 4,
+      "index_id": 879,
+      "space_id": 656
+    },
+    {
+      "name": "empty_marked",
+      "table": "empty",
+      "phase": "marked",
+      "rows": 0,
+      "unordered": false,
+      "bytes": 114688,
+      "sha256": "e3479f414782c09b1f6b46e8872385b8024bf2b2e1c91968f93d91826e081225",
+      "physical": {
+        "Rows": 0,
+        "DeleteMarked": 20,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "root_page": 4,
+      "index_id": 879,
+      "space_id": 656
+    },
+    {
+      "name": "empty_purged",
+      "table": "empty",
+      "phase": "purged",
+      "rows": 0,
+      "unordered": false,
+      "bytes": 114688,
+      "sha256": "fa3282415416469f265efbbd1d7d1204a3aef4ed58b91b532fecbeb2b856b8da",
+      "physical": {
+        "Rows": 0,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "root_page": 4,
+      "index_id": 879,
+      "space_id": 656
+    },
+    {
+      "name": "hidden_before",
+      "table": "hidden",
+      "phase": "before",
+      "rows": 4,
+      "unordered": true,
+      "bytes": 114688,
+      "sha256": "952c74f55e51c164f0e8dd90400f100a1aeee545edfc6828d358c520835da12b",
+      "physical": {
+        "Rows": 4,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "root_page": 4,
+      "index_id": 880,
+      "space_id": 657
+    },
+    {
+      "name": "hidden_marked",
+      "table": "hidden",
+      "phase": "marked",
+      "rows": 2,
+      "unordered": true,
+      "bytes": 114688,
+      "sha256": "6f919898d0d87c928fa82486954e5e8f92d6b4d2ac587ae19334c8bd7eb025ef",
+      "physical": {
+        "Rows": 2,
+        "DeleteMarked": 2,
+        "Pages": 1,
+        "FreePages": 1,
+        "GarbageBytes": 33,
+        "RootLevel": 0
+      },
+      "root_page": 4,
+      "index_id": 880,
+      "space_id": 657
+    },
+    {
+      "name": "hidden_purged",
+      "table": "hidden",
+      "phase": "purged",
+      "rows": 2,
+      "unordered": true,
+      "bytes": 114688,
+      "sha256": "c502eed9afa36f612ee3931e2aaa1e8dfc6a2fa5f75a5c5e3ff37705fb504326",
+      "physical": {
+        "Rows": 2,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 1,
+        "GarbageBytes": 101,
+        "RootLevel": 0
+      },
+      "root_page": 4,
+      "index_id": 880,
+      "space_id": 657
+    },
+    {
+      "name": "unique_before",
+      "table": "unique",
+      "phase": "before",
+      "rows": 4,
+      "unordered": false,
+      "bytes": 131072,
+      "sha256": "c35a9fb0a864d4958df4c9961c3af183ed7de9ddb424d021b97b2def26447417",
+      "physical": {
+        "Rows": 4,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 0,
+        "GarbageBytes": 0,
+        "RootLevel": 0
+      },
+      "root_page": 4,
+      "index_id": 881,
+      "space_id": 658
+    },
+    {
+      "name": "unique_marked",
+      "table": "unique",
+      "phase": "marked",
+      "rows": 3,
+      "unordered": false,
+      "bytes": 131072,
+      "sha256": "1c98c9d52224e4d720962083d84ed9b90f0b83681bc7030a37158d07a3cef61a",
+      "physical": {
+        "Rows": 3,
+        "DeleteMarked": 2,
+        "Pages": 1,
+        "FreePages": 1,
+        "GarbageBytes": 27,
+        "RootLevel": 0
+      },
+      "root_page": 4,
+      "index_id": 881,
+      "space_id": 658
+    },
+    {
+      "name": "unique_purged",
+      "table": "unique",
+      "phase": "purged",
+      "rows": 3,
+      "unordered": false,
+      "bytes": 131072,
+      "sha256": "13be3c5404e762749dd6601f9dd9dd74349f79dd460b5ba5266df792b57d5bf6",
+      "physical": {
+        "Rows": 3,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 1,
+        "GarbageBytes": 86,
+        "RootLevel": 0
+      },
+      "root_page": 4,
+      "index_id": 881,
+      "space_id": 658
+    },
+    {
+      "name": "tree_before",
+      "table": "tree",
+      "phase": "before",
+      "rows": 4000,
+      "unordered": false,
+      "bytes": 23068672,
+      "sha256": "899c3f9a8d621579ae9b9ddc5bf9fdb51e44dc32ae361a4f461b743f4be36081",
+      "physical": {
+        "Rows": 4000,
+        "DeleteMarked": 0,
+        "Pages": 816,
+        "FreePages": 3,
+        "GarbageBytes": 13875,
+        "RootLevel": 2
+      },
+      "root_page": 4,
+      "index_id": 883,
+      "space_id": 659
+    },
+    {
+      "name": "tree_marked",
+      "table": "tree",
+      "phase": "marked",
+      "rows": 10,
+      "unordered": false,
+      "bytes": 23068672,
+      "sha256": "0ea1057dff25c50c4e535a912b9211d0fe4b4967508dcbbf0ce58bc5bbf1d53f",
+      "physical": {
+        "Rows": 10,
+        "DeleteMarked": 3990,
+        "Pages": 815,
+        "FreePages": 4,
+        "GarbageBytes": 26701,
+        "RootLevel": 2
+      },
+      "root_page": 4,
+      "index_id": 883,
+      "space_id": 659
+    },
+    {
+      "name": "tree_purged",
+      "table": "tree",
+      "phase": "purged",
+      "rows": 10,
+      "unordered": false,
+      "bytes": 23068672,
+      "sha256": "dee3e45138e3fa588641b1c747a8f25633cac639d044d364e4a3d4627af03cc8",
+      "physical": {
+        "Rows": 10,
+        "DeleteMarked": 0,
+        "Pages": 1,
+        "FreePages": 1,
+        "GarbageBytes": 3770,
+        "RootLevel": 0
+      },
+      "root_page": 4,
+      "index_id": 883,
+      "space_id": 659
+    }
+  ],
+  "status": "captured",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1
+  }
+}

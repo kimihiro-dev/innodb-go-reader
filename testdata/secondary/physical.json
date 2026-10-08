@@ -1,0 +1,334 @@
+[
+  {
+    "table": "tiny",
+    "index": "n_idx",
+    "rows": 181,
+    "deleted": 0,
+    "pages": 1,
+    "level": 0,
+    "sample": {
+      "page": 5,
+      "origin": 126,
+      "start": 120,
+      "end": 127,
+      "file_offset": 82046,
+      "header": "0000100017",
+      "payload": "26"
+    }
+  },
+  {
+    "table": "empty",
+    "index": "n_idx",
+    "rows": 0,
+    "deleted": 0,
+    "pages": 1,
+    "level": 0,
+    "sample": null
+  },
+  {
+    "table": "integer",
+    "index": "n_idx",
+    "rows": 2500,
+    "deleted": 0,
+    "pages": 5,
+    "level": 1,
+    "sample": {
+      "page": 12,
+      "origin": 126,
+      "start": 120,
+      "end": 138,
+      "file_offset": 196734,
+      "header": "0000100012",
+      "payload": "800000108000000000000010"
+    }
+  },
+  {
+    "table": "integer",
+    "index": "u_idx",
+    "rows": 2500,
+    "deleted": 0,
+    "pages": 12,
+    "level": 1,
+    "sample": {
+      "page": 15,
+      "origin": 126,
+      "start": 120,
+      "end": 134,
+      "file_offset": 245886,
+      "header": "000010000e",
+      "payload": "8000000000000000"
+    }
+  },
+  {
+    "table": "deep",
+    "index": "b_idx",
+    "rows": 2000,
+    "deleted": 0,
+    "pages": 182,
+    "level": 2,
+    "sample": {
+      "page": 313,
+      "origin": 130,
+      "start": 120,
+      "end": 1048,
+      "file_offset": 5128322,
+      "header": "00001015c0",
+      "payload": "e69687e69687e69687e69687e69687e69687e69687e69687e69687e69687e696"
+    }
+  },
+  {
+    "table": "overlap",
+    "index": "prefix_idx",
+    "rows": 120,
+    "deleted": 0,
+    "pages": 1,
+    "level": 0,
+    "sample": {
+      "page": 5,
+      "origin": 2507,
+      "start": 2500,
+      "end": 2520,
+      "file_offset": 84427,
+      "header": "0003c8ffec",
+      "payload": "61626162303031313980000077"
+    }
+  },
+  {
+    "table": "overlap",
+    "index": "overlap_idx",
+    "rows": 120,
+    "deleted": 0,
+    "pages": 1,
+    "level": 0,
+    "sample": {
+      "page": 6,
+      "origin": 2149,
+      "start": 2143,
+      "end": 2160,
+      "file_offset": 100453,
+      "header": "0003c8ffef",
+      "payload": "8000007761623030313139"
+    }
+  },
+  {
+    "table": "wide_prefix",
+    "index": "v_idx",
+    "rows": 10,
+    "deleted": 0,
+    "pages": 1,
+    "level": 0,
+    "sample": {
+      "page": 5,
+      "origin": 1477,
+      "start": 1471,
+      "end": 1481,
+      "file_offset": 83397,
+      "header": "000050000b",
+      "payload": "80000009"
+    }
+  },
+  {
+    "table": "compact",
+    "index": "c_idx",
+    "rows": 80,
+    "deleted": 0,
+    "pages": 1,
+    "level": 0,
+    "sample": {
+      "page": 5,
+      "origin": 1681,
+      "start": 1674,
+      "end": 1698,
+      "file_offset": 83601,
+      "header": "0002480018",
+      "payload": "e4b8adf09f988030376162202080000047"
+    }
+  },
+  {
+    "table": "compact",
+    "index": "b_idx",
+    "rows": 80,
+    "deleted": 0,
+    "pages": 1,
+    "level": 0,
+    "sample": {
+      "page": 6,
+      "origin": 128,
+      "start": 120,
+      "end": 296,
+      "file_offset": 98432,
+      "header": "00001000b0",
+      "payload": "00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff"
+    }
+  },
+  {
+    "table": "rowid",
+    "index": "n_idx",
+    "rows": 5,
+    "deleted": 0,
+    "pages": 1,
+    "level": 0,
+    "sample": {
+      "page": 5,
+      "origin": 126,
+      "start": 120,
+      "end": 132,
+      "file_offset": 82046,
+      "header": "000010000c",
+      "payload": "000000000400"
+    }
+  },
+  {
+    "table": "rowid",
+    "index": "k_idx",
+    "rows": 5,
+    "deleted": 0,
+    "pages": 1,
+    "level": 0,
+    "sample": {
+      "page": 6,
+      "origin": 173,
+      "start": 166,
+      "end": 182,
+      "file_offset": 98477,
+      "header": "000028ffde",
+      "payload": "e4b8ad000000000403"
+    }
+  },
+  {
+    "table": "unique_cluster",
+    "index": "n_idx",
+    "rows": 100,
+    "deleted": 0,
+    "pages": 1,
+    "level": 0,
+    "sample": {
+      "page": 6,
+      "origin": 126,
+      "start": 120,
+      "end": 134,
+      "file_offset": 98430,
+      "header": "0000100046",
+      "payload": "8000000080000000"
+    }
+  },
+  {
+    "table": "unique_cluster",
+    "index": "u_idx",
+    "rows": 100,
+    "deleted": 0,
+    "pages": 1,
+    "level": 0,
+    "sample": {
+      "page": 5,
+      "origin": 126,
+      "start": 120,
+      "end": 130,
+      "file_offset": 82046,
+      "header": "0000100034",
+      "payload": "80000000"
+    }
+  },
+  {
+    "table": "generated",
+    "index": "g_idx",
+    "rows": 160,
+    "deleted": 0,
+    "pages": 1,
+    "level": 0,
+    "sample": {
+      "page": 5,
+      "origin": 126,
+      "start": 120,
+      "end": 134,
+      "file_offset": 82046,
+      "header": "000010007e",
+      "payload": "8000000080000000"
+    }
+  },
+  {
+    "table": "scalars",
+    "index": "d_idx",
+    "rows": 3,
+    "deleted": 0,
+    "pages": 1,
+    "level": 0,
+    "sample": {
+      "page": 5,
+      "origin": 146,
+      "start": 140,
+      "end": 160,
+      "file_offset": 82066,
+      "header": "000018ffec",
+      "payload": "8000000000000000000080000002"
+    }
+  },
+  {
+    "table": "scalars",
+    "index": "temporal_idx",
+    "rows": 3,
+    "deleted": 0,
+    "pages": 1,
+    "level": 0,
+    "sample": {
+      "page": 6,
+      "origin": 188,
+      "start": 182,
+      "end": 192,
+      "file_offset": 98492,
+      "header": "000020ffe1",
+      "payload": "80000003"
+    }
+  },
+  {
+    "table": "scalars",
+    "index": "bits_idx",
+    "rows": 3,
+    "deleted": 0,
+    "pages": 1,
+    "level": 0,
+    "sample": {
+      "page": 7,
+      "origin": 158,
+      "start": 152,
+      "end": 162,
+      "file_offset": 114846,
+      "header": "000020fff0",
+      "payload": "80000003"
+    }
+  },
+  {
+    "table": "changes",
+    "index": "n_idx",
+    "rows": 90,
+    "deleted": 30,
+    "pages": 1,
+    "level": 0,
+    "sample": {
+      "page": 5,
+      "origin": 420,
+      "start": 414,
+      "end": 428,
+      "file_offset": 82340,
+      "header": "0400b80062",
+      "payload": "8000000080000015"
+    }
+  },
+  {
+    "table": "changes",
+    "index": "k_idx",
+    "rows": 90,
+    "deleted": 30,
+    "pages": 1,
+    "level": 0,
+    "sample": {
+      "page": 6,
+      "origin": 1372,
+      "start": 1366,
+      "end": 1380,
+      "file_offset": 99676,
+      "header": "0502d8fff2",
+      "payload": "6b30383980000059"
+    }
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "columns": [
+    {
+      "name": "k",
+      "type": "DATE",
+      "descending": false
+    }
+  ],
+  "primary_key": "k",
+  "index_id": 726,
+  "space_id": 515,
+  "root_page": 4
+}

@@ -1,0 +1,111 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "padding",
+      "type": "VARCHAR",
+      "max_chars": 1600
+    },
+    {
+      "name": "copy",
+      "type": "VARCHAR",
+      "max_chars": 1600,
+      "nullable": true,
+      "generation_expression": "reverse(`padding`)"
+    },
+    {
+      "name": "n0",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "n1",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "n2",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "n3",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "n4",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "n5",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "n6",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "n7",
+      "type": "INT",
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 163,
+  "space_id": 11,
+  "primary_key": "id",
+  "virtual_columns": [
+    {
+      "name": "v0",
+      "ordinal": 3,
+      "expression": "(`id` + 0)"
+    },
+    {
+      "name": "v1",
+      "ordinal": 4,
+      "expression": "(`id` + 1)"
+    },
+    {
+      "name": "v2",
+      "ordinal": 5,
+      "expression": "(`id` + 2)"
+    },
+    {
+      "name": "v3",
+      "ordinal": 6,
+      "expression": "(`id` + 3)"
+    },
+    {
+      "name": "v4",
+      "ordinal": 7,
+      "expression": "(`id` + 4)"
+    },
+    {
+      "name": "v5",
+      "ordinal": 8,
+      "expression": "(`id` + 5)"
+    },
+    {
+      "name": "v6",
+      "ordinal": 9,
+      "expression": "(`id` + 6)"
+    },
+    {
+      "name": "v7",
+      "ordinal": 10,
+      "expression": "(`id` + 7)"
+    },
+    {
+      "name": "v8",
+      "ordinal": 11,
+      "expression": "(`id` + 8)"
+    }
+  ]
+}

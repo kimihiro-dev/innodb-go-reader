@@ -1,0 +1,124 @@
+{
+  "files": 34,
+  "sdi_objects": 46,
+  "rows_per_format": 3184,
+  "cases": [
+    {
+      "name": "range_empty",
+      "files": 3,
+      "sdi_objects": 4,
+      "crc": true,
+      "sql_table_identity": true,
+      "official_index_identity": true,
+      "jsonl_csv_rows": 0,
+      "check": true
+    },
+    {
+      "name": "ranges",
+      "files": 3,
+      "sdi_objects": 4,
+      "crc": true,
+      "sql_table_identity": true,
+      "official_index_identity": true,
+      "jsonl_csv_rows": 1000,
+      "check": true
+    },
+    {
+      "name": "lists",
+      "files": 3,
+      "sdi_objects": 4,
+      "crc": true,
+      "sql_table_identity": true,
+      "official_index_identity": true,
+      "jsonl_csv_rows": 30,
+      "check": true
+    },
+    {
+      "name": "hashes",
+      "files": 3,
+      "sdi_objects": 4,
+      "crc": true,
+      "sql_table_identity": true,
+      "official_index_identity": true,
+      "jsonl_csv_rows": 30,
+      "check": true
+    },
+    {
+      "name": "keys_table",
+      "files": 3,
+      "sdi_objects": 4,
+      "crc": true,
+      "sql_table_identity": true,
+      "official_index_identity": true,
+      "jsonl_csv_rows": 30,
+      "check": true
+    },
+    {
+      "name": "compact_rows",
+      "files": 2,
+      "sdi_objects": 3,
+      "crc": true,
+      "sql_table_identity": true,
+      "official_index_identity": true,
+      "jsonl_csv_rows": 30,
+      "check": true
+    },
+    {
+      "name": "hidden_rows",
+      "files": 2,
+      "sdi_objects": 3,
+      "crc": true,
+      "sql_table_identity": true,
+      "official_index_identity": true,
+      "jsonl_csv_rows": 30,
+      "check": true
+    },
+    {
+      "name": "virtual_rows",
+      "files": 2,
+      "sdi_objects": 3,
+      "crc": true,
+      "sql_table_identity": true,
+      "official_index_identity": true,
+      "jsonl_csv_rows": 30,
+      "check": true
+    },
+    {
+      "name": "sub_rows",
+      "files": 4,
+      "sdi_objects": 5,
+      "crc": true,
+      "rejected": true
+    },
+    {
+      "name": "range_rebuilt",
+      "files": 3,
+      "sdi_objects": 4,
+      "crc": true,
+      "sql_table_identity": true,
+      "official_index_identity": true,
+      "jsonl_csv_rows": 1000,
+      "check": true
+    },
+    {
+      "name": "range_exchanged",
+      "files": 3,
+      "sdi_objects": 4,
+      "crc": true,
+      "sql_table_identity": true,
+      "official_index_identity": true,
+      "jsonl_csv_rows": 502,
+      "check": true
+    },
+    {
+      "name": "range_rebuilt_nonanchor",
+      "files": 3,
+      "sdi_objects": 4,
+      "crc": true,
+      "sql_table_identity": true,
+      "official_index_identity": true,
+      "jsonl_csv_rows": 502,
+      "check": true
+    }
+  ]
+}

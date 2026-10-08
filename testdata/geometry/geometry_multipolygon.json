@@ -1,0 +1,23 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "doc",
+      "type": "MULTIPOLYGON",
+      "nullable": true
+    },
+    {
+      "name": "note",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 32
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 417,
+  "space_id": 206,
+  "root_page": 4
+}

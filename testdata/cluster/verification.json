@@ -1,0 +1,87 @@
+{
+  "cases": [
+    {
+      "name": "rowid_lesson",
+      "rows": 4,
+      "sha256": "233852ab40e1d46baf9d291ba49e5841d3bfd05110a65f791455823284ca4393",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "rowid_empty",
+      "rows": 0,
+      "sha256": "a71f6fddd2db8e4515cb5c26ac5a40a8cbd640ce95e11ae754b7c07a9dc78290",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "rowid_nullable_unique",
+      "rows": 3,
+      "sha256": "0c4721ad53922d2b3a307dc801d073febcabe64907697a757b9e3dc106f4dab2",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "rowid_prefix_unique",
+      "rows": 2,
+      "sha256": "db4d420a4d3945243cf61849a3da3ca5f4e7e9b956d427289b600ef5597a253d",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "rowid_lob",
+      "rows": 3,
+      "sha256": "6d0eedc4e8c3ac30d03a204d63a6cc4f6f8259584a82fea8f5e944fcdf3a511b",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "rowid_deep",
+      "rows": 12000,
+      "sha256": "c185b50b0d2dfda5c1de8d57500ac848a286460550ac8891704fae666cad0cef",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "unique_single",
+      "rows": 3,
+      "sha256": "97772c921fe58b993a910725f760a7c5f12939e0fbc102dc57fecb0c6cefb757",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "unique_multiple",
+      "rows": 3,
+      "sha256": "357d16c45e4ef8281188de7e51d384cc96b28baa0b7d1cfbbb0e23fe7213b8d4",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "unique_text_tree",
+      "rows": 600,
+      "sha256": "57203f383de100a27b74995f07405bad558e0fa7da6bf9e6e28472c38b03ad28",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    },
+    {
+      "name": "primary_secondary",
+      "rows": 3,
+      "sha256": "963a2c5b3a1bf75dd1c216394c8ef14cec1fcf150d992f27ee2b4a593f062070",
+      "crc32": true,
+      "sdi": true,
+      "cli_sql": true
+    }
+  ],
+  "files": 10,
+  "rows": 12621,
+  "tool_directory": "/Users/kimihiro/workspace/software/mysql-8.0.45/bin"
+}

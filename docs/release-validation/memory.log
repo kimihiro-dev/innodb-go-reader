@@ -1,0 +1,7 @@
+=== RUN   TestScanMemory
+    scan_bench_test.go:62: Read: 12000 retained rows, 58963552 live heap bytes above baseline
+    scan_bench_test.go:96: Scan: 1000 delivered rows, sampled peak 1154320 live heap bytes above baseline, 147 page requests
+    scan_bench_test.go:96: Scan: 12000 delivered rows, sampled peak 1211176 live heap bytes above baseline, 1720 page requests
+--- PASS: TestScanMemory (0.14s)
+PASS
+ok  	innodb-go-reader	0.495s

@@ -1,0 +1,112 @@
+{
+  "columns": [
+    {
+      "name": "added",
+      "type": "INT"
+    },
+    {
+      "name": "id",
+      "type": "BIGINT",
+      "unsigned": true,
+      "invisible": true
+    },
+    {
+      "name": "a",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "txt",
+      "type": "LONGTEXT",
+      "nullable": true
+    },
+    {
+      "name": "stored_n",
+      "type": "INT",
+      "nullable": true,
+      "invisible": true,
+      "generation_expression": "(`a` * 2)"
+    },
+    {
+      "name": "stored_text",
+      "type": "LONGTEXT",
+      "nullable": true,
+      "generation_expression": "concat(`txt`,`txt`)"
+    },
+    {
+      "name": "secret",
+      "type": "VARBINARY",
+      "max_bytes": 20,
+      "nullable": true,
+      "invisible": true
+    },
+    {
+      "name": "tail",
+      "type": "VARCHAR",
+      "max_chars": 30,
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 161,
+  "space_id": 9,
+  "primary_key": "id",
+  "virtual_columns": [
+    {
+      "name": "virt",
+      "ordinal": 4,
+      "expression": "(`a` + 1)"
+    },
+    {
+      "name": "vt",
+      "ordinal": 9,
+      "expression": "left(`txt`,3)",
+      "invisible": true
+    }
+  ],
+  "instant": {
+    "version": 1,
+    "fields": [
+      {
+        "position": 0,
+        "column": 1
+      },
+      {
+        "position": 3,
+        "column": 2
+      },
+      {
+        "position": 4,
+        "column": 3
+      },
+      {
+        "position": 5,
+        "column": 4
+      },
+      {
+        "position": 6,
+        "column": 5
+      },
+      {
+        "position": 7,
+        "column": 6
+      },
+      {
+        "position": 8,
+        "column": 0,
+        "added": 1,
+        "default": {
+          "data": "gAAATQ=="
+        }
+      },
+      {
+        "position": 9,
+        "column": 7,
+        "added": 1,
+        "default": {
+          "null": true
+        }
+      }
+    ]
+  }
+}

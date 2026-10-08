@@ -1,0 +1,18 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "payload",
+      "type": "LONGBLOB",
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 184,
+  "space_id": 30,
+  "primary_key": "id",
+  "row_format": "COMPACT"
+}

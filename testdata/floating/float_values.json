@@ -1,0 +1,28 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    },
+    {
+      "name": "value",
+      "type": "FLOAT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": false
+    },
+    {
+      "name": "positive",
+      "type": "FLOAT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": true
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 320,
+  "space_id": 111,
+  "root_page": 4
+}

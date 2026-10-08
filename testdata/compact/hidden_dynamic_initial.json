@@ -1,0 +1,21 @@
+{
+  "columns": [
+    {
+      "name": "a",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "payload",
+      "type": "LONGTEXT",
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 193,
+  "space_id": 39,
+  "clustered_key": {
+    "name": "PRIMARY",
+    "hidden_row_id": true
+  }
+}

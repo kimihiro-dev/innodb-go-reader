@@ -1,0 +1,33 @@
+{
+  "columns": [
+    {
+      "name": "a",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 30
+    },
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "d",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 30
+    },
+    {
+      "name": "b",
+      "type": "INT"
+    },
+    {
+      "name": "e",
+      "type": "VARBINARY",
+      "max_bytes": 20
+    }
+  ],
+  "root_page": 4,
+  "index_id": 903,
+  "space_id": 679,
+  "primary_key": "id"
+}

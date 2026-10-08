@@ -1,0 +1,114 @@
+{
+  "database": "innodb_reader_fixture_33e1abae3280",
+  "generated_at": "2026-09-09T09:39:01.340709+00:00",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1
+  },
+  "snapshot": "Same session: FOR EXPORT, SELECT, copy, UNLOCK",
+  "cases": [
+    {
+      "name": "tinyint_signed",
+      "rows": 204,
+      "index_id": 269,
+      "space_id": 60,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 163840,
+      "sha256": "49775d732e537f084430094bc07bd4c9f633394c9ceaacfc8eb9f95362041bb5"
+    },
+    {
+      "name": "tinyint_unsigned",
+      "rows": 202,
+      "index_id": 270,
+      "space_id": 61,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 163840,
+      "sha256": "398c9c7e36b39b90f037b54b4a0de5cc68aac208cd5f0d2b82dd50094ab047cc"
+    },
+    {
+      "name": "smallint_signed",
+      "rows": 204,
+      "index_id": 271,
+      "space_id": 62,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 163840,
+      "sha256": "00a5c978c6027222c827af1a856e317478d4cc044c4985eae350573277215154"
+    },
+    {
+      "name": "smallint_unsigned",
+      "rows": 202,
+      "index_id": 272,
+      "space_id": 63,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 163840,
+      "sha256": "f49a9b52f039f136644df90fb79724414ed2f73fd3823fde9dc7d5449863f382"
+    },
+    {
+      "name": "mediumint_signed",
+      "rows": 204,
+      "index_id": 273,
+      "space_id": 64,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 163840,
+      "sha256": "7e2192c4586ba0fac8a00771ea090c637ed6a03872df09a093f1145d22a8b889"
+    },
+    {
+      "name": "mediumint_unsigned",
+      "rows": 202,
+      "index_id": 274,
+      "space_id": 65,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 163840,
+      "sha256": "af278047bfe44028632d87a8614a92a6d7db2b801edcb41516f564bf880665b4"
+    },
+    {
+      "name": "int_signed",
+      "rows": 204,
+      "index_id": 275,
+      "space_id": 66,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 163840,
+      "sha256": "dd14eee2609f02b4f7164d3eb0d0e6ff22c94cc4a0aed82a1e902ba5e5d8436c"
+    },
+    {
+      "name": "int_unsigned",
+      "rows": 202,
+      "index_id": 276,
+      "space_id": 67,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 163840,
+      "sha256": "d478e5c1e6bdc547f1d49f932afbedfdfb909feaa5e53847d6fd447c7660a30f"
+    },
+    {
+      "name": "bigint_signed",
+      "rows": 401,
+      "index_id": 277,
+      "space_id": 68,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 278528,
+      "sha256": "e06d046649537e767d6434d2f3edb2e281940b20e5a2d5a6dcde9b2e83dd023e"
+    },
+    {
+      "name": "bigint_unsigned",
+      "rows": 501,
+      "index_id": 278,
+      "space_id": 69,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 327680,
+      "sha256": "808c85d7a633b62f76ac0fa4745ed9a46cc90b854dfec8a11e78ece53209f592"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "padding",
+      "type": "VARCHAR",
+      "max_chars": 1600
+    },
+    {
+      "name": "copy",
+      "type": "VARCHAR",
+      "max_chars": 1600,
+      "nullable": true,
+      "generation_expression": "reverse(`padding`)"
+    }
+  ],
+  "root_page": 4,
+  "index_id": 162,
+  "space_id": 10,
+  "primary_key": "id",
+  "virtual_columns": [
+    {
+      "name": "v",
+      "ordinal": 3,
+      "expression": "(`id` + 1)"
+    }
+  ]
+}

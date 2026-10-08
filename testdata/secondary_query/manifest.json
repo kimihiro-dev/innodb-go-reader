@@ -1,0 +1,38 @@
+{
+  "database": "innodb_reader_secondary_query_bdd66c509cc1",
+  "generated_at": "2026-09-21T06:30:48.698564+00:00",
+  "status": "captured",
+  "cases": [
+    {
+      "name": "prefixes",
+      "rows": 480,
+      "queries": 270,
+      "sha256": "879ae205d8ac8ee57025c0e84bd606b726be7dbe923824dd6452d33ec3bc6fc3",
+      "bytes": 524288,
+      "full_read_rejected": false
+    },
+    {
+      "name": "covering",
+      "rows": 3000,
+      "queries": 76,
+      "sha256": "bb37b3fdbc3fb86986dd7601137be070a50ff65689e971c2aa081813cd303dc9",
+      "bytes": 327680,
+      "full_read_rejected": false
+    },
+    {
+      "name": "huge",
+      "rows": 2,
+      "queries": 12,
+      "sha256": "92974780f53d52a87c94628e8ba8879ac8bcdaf44408603048190837b2a5efc0",
+      "bytes": 19922944,
+      "full_read_rejected": true
+    }
+  ],
+  "environment": {
+    "datadir": "/private/tmp/innodb-generated-stage30/instance/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1
+  }
+}

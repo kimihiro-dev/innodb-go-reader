@@ -1,0 +1,23 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "doc",
+      "type": "JSON",
+      "nullable": true
+    },
+    {
+      "name": "note",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 32
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 408,
+  "space_id": 197,
+  "root_page": 4
+}

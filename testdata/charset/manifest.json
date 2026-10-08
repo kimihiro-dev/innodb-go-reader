@@ -1,0 +1,205 @@
+{
+  "database": "innodb_reader_charset_c3a4f995f69a",
+  "generated_at": "2026-09-16T09:05:01.502356+00:00",
+  "cases": [
+    {
+      "name": "charset_utf8mb4_0900_ai_ci",
+      "rows": 6,
+      "bytes": 114688,
+      "sha256": "8daa861b36e7748549a2369f03c5ab81a51c0d447c3dcc5379cfcb1a16d183c9",
+      "index_id": 423,
+      "space_id": 212,
+      "root_page": 4
+    },
+    {
+      "name": "charset_utf8mb4_general_ci",
+      "rows": 6,
+      "bytes": 114688,
+      "sha256": "3bec8fba2ab782dc066df22a20be6c9c151da284f0a8ad11d0acf3ba61033a64",
+      "index_id": 424,
+      "space_id": 213,
+      "root_page": 4
+    },
+    {
+      "name": "charset_utf8mb4_bin",
+      "rows": 6,
+      "bytes": 114688,
+      "sha256": "fa2d1189de614058dea0b457610dfeb5a84c4b3a09c5ed0237ab095b37e1c593",
+      "index_id": 425,
+      "space_id": 214,
+      "root_page": 4
+    },
+    {
+      "name": "charset_utf8mb3_general_ci",
+      "rows": 6,
+      "bytes": 114688,
+      "sha256": "b235f8eec14ba2852e6ccda9414c2636a80ee8e974d6b53c1c95cbda468e22a8",
+      "index_id": 426,
+      "space_id": 215,
+      "root_page": 4
+    },
+    {
+      "name": "charset_utf8mb3_bin",
+      "rows": 6,
+      "bytes": 114688,
+      "sha256": "971c49b9ea31e42fc1316fa74b2a67ea9b081b96e30a8382c8275bd8daa6876d",
+      "index_id": 427,
+      "space_id": 216,
+      "root_page": 4
+    },
+    {
+      "name": "charset_ascii_general_ci",
+      "rows": 6,
+      "bytes": 114688,
+      "sha256": "1655a307f44c0a04bfb5bf3965b1dc252924649a6a04c9c659620a0ca7a1dcc7",
+      "index_id": 428,
+      "space_id": 217,
+      "root_page": 4
+    },
+    {
+      "name": "charset_ascii_bin",
+      "rows": 6,
+      "bytes": 114688,
+      "sha256": "1540c70c26d48f582c8b0b8aaac8fc64aad61ac94819f3d48f57611b9a10a6c1",
+      "index_id": 429,
+      "space_id": 218,
+      "root_page": 4
+    },
+    {
+      "name": "charset_latin1_swedish_ci",
+      "rows": 6,
+      "bytes": 114688,
+      "sha256": "36e0625e664df7a5e4976ade2b9f3335778abeb5628f718744f950bdf55f6d10",
+      "index_id": 430,
+      "space_id": 219,
+      "root_page": 4
+    },
+    {
+      "name": "charset_latin1_bin",
+      "rows": 6,
+      "bytes": 114688,
+      "sha256": "0130358ee1e778268442eefe1e6a806dc14ce5777f50ec6887222e37f25e042c",
+      "index_id": 431,
+      "space_id": 220,
+      "root_page": 4
+    },
+    {
+      "name": "widths_utf8mb4",
+      "rows": 4,
+      "bytes": 114688,
+      "sha256": "bd57e792a7494f387898f9603bf97bc39f674a1376294dd87041fc0608127c8a",
+      "index_id": 432,
+      "space_id": 221,
+      "root_page": 4
+    },
+    {
+      "name": "external_utf8mb4",
+      "rows": 2,
+      "bytes": 278528,
+      "sha256": "e16991d813a751c4ce8130a2ae6ca6ff46ef6ec0b08cd5c28ee1222ec13235b3",
+      "index_id": 433,
+      "space_id": 222,
+      "root_page": 4
+    },
+    {
+      "name": "widths_utf8mb3",
+      "rows": 4,
+      "bytes": 114688,
+      "sha256": "df209d967f964e9983a81ea44ff12262f13c527ba617b1f9721ed74261d0d501",
+      "index_id": 434,
+      "space_id": 223,
+      "root_page": 4
+    },
+    {
+      "name": "external_utf8mb3",
+      "rows": 2,
+      "bytes": 229376,
+      "sha256": "f4d2f512442a6c84718b8eb1fb2b894717579d1a257d8bea8f6280d9d3aa2bb5",
+      "index_id": 435,
+      "space_id": 224,
+      "root_page": 4
+    },
+    {
+      "name": "widths_ascii",
+      "rows": 4,
+      "bytes": 114688,
+      "sha256": "80298add46d932cd979ab27b6b7fc86f58c3b5f9f7b0d0163abf16f62878c3df",
+      "index_id": 436,
+      "space_id": 225,
+      "root_page": 4
+    },
+    {
+      "name": "external_ascii",
+      "rows": 2,
+      "bytes": 163840,
+      "sha256": "8ed28fb21c78a265e707310f6f57bd1675630b720c03204c48377e0e21c40239",
+      "index_id": 437,
+      "space_id": 226,
+      "root_page": 4
+    },
+    {
+      "name": "widths_latin1",
+      "rows": 4,
+      "bytes": 114688,
+      "sha256": "a85b060ab5e05638d219158febd3add70efebefe4e736ea14a7176e25f4dc7ba",
+      "index_id": 438,
+      "space_id": 227,
+      "root_page": 4
+    },
+    {
+      "name": "external_latin1",
+      "rows": 2,
+      "bytes": 163840,
+      "sha256": "520611a9bb9ee3d57b9a70eb0605804b04aa3bae64bba98b9a5289c6b2f405c1",
+      "index_id": 439,
+      "space_id": 228,
+      "root_page": 4
+    },
+    {
+      "name": "bytes_ascii",
+      "rows": 128,
+      "bytes": 114688,
+      "sha256": "9c13adaa7831029582376b83fa5321577a2815c36d2ff8cb5908fa4c5f6beab4",
+      "index_id": 440,
+      "space_id": 229,
+      "root_page": 4
+    },
+    {
+      "name": "bytes_latin1",
+      "rows": 256,
+      "bytes": 114688,
+      "sha256": "544a6dcbc794f761fb6644a0b28babebb8da98d476d18e6482fd066dd1e38e7f",
+      "index_id": 441,
+      "space_id": 230,
+      "root_page": 4
+    },
+    {
+      "name": "charset_utf8_alias",
+      "rows": 2,
+      "bytes": 114688,
+      "sha256": "d5ddf5e9ae8e390e8f5c9a4b2850a6d0c5645ac99b29e6c64c865d4d9464e94c",
+      "index_id": 442,
+      "space_id": 231,
+      "root_page": 4
+    },
+    {
+      "name": "charset_tree",
+      "rows": 600,
+      "bytes": 409600,
+      "sha256": "29f515cfe8fc84d9665148ba6f88b99bf62b1a9cf075b2ebd242c8e479c40534",
+      "index_id": 443,
+      "space_id": 232,
+      "root_page": 4
+    }
+  ],
+  "status": "captured",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1,
+    "sql_mode": "STRICT_TRANS_TABLES",
+    "time_zone": "+00:00"
+  }
+}

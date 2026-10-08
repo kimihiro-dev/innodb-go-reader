@@ -1,0 +1,105 @@
+{
+  "database": "innodb_reader_fixture_625d4a88697d",
+  "generated_at": "2026-09-11T07:49:19.561686+00:00",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1,
+    "sql_mode": "ALLOW_INVALID_DATES"
+  },
+  "snapshot": "Same session: FOR EXPORT, SELECT, copy, UNLOCK",
+  "cases": [
+    {
+      "name": "datetime_fsp_0",
+      "rows": 16,
+      "index_id": 328,
+      "space_id": 119,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "e803de428470000f09953779f3d69aa17adaa1d06e3029e531d6a10da8a5d537"
+    },
+    {
+      "name": "datetime_fsp_1",
+      "rows": 16,
+      "index_id": 329,
+      "space_id": 120,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "267fa5effc4f1c600595e30758e5b94d65f090d3fbef3bb285d3bcb5d24c20b1"
+    },
+    {
+      "name": "datetime_fsp_2",
+      "rows": 16,
+      "index_id": 330,
+      "space_id": 121,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "22ea34d8b11753b581f049e477bb124183dc931fee0fd73d79be5742825db187"
+    },
+    {
+      "name": "datetime_fsp_3",
+      "rows": 16,
+      "index_id": 331,
+      "space_id": 122,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "315ceb71193575195b7c401558229a4e100a205f466701d38755de90e7924cbe"
+    },
+    {
+      "name": "datetime_fsp_4",
+      "rows": 16,
+      "index_id": 332,
+      "space_id": 123,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "7897f6f4731bf3f929db0cf44ba55035959b94cc5ba797cf2cedc09c3e413837"
+    },
+    {
+      "name": "datetime_fsp_5",
+      "rows": 16,
+      "index_id": 333,
+      "space_id": 124,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "de31a386ab708c1b887f3f6aaeceb436bd195d52c238e6f55c3910594b81ec23"
+    },
+    {
+      "name": "datetime_fsp_6",
+      "rows": 16,
+      "index_id": 334,
+      "space_id": 125,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "257d6981913464b53b0d99e0580743a1df5c3368b61a142805c5107ed48634c4"
+    },
+    {
+      "name": "datetime_mixed",
+      "rows": 4,
+      "index_id": 335,
+      "space_id": 126,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 163840,
+      "sha256": "14f1fecfe636b528498c70a7a5e32a0ae923d166feeed7b56baf3882472362e5"
+    },
+    {
+      "name": "datetime_tree",
+      "rows": 600,
+      "index_id": 336,
+      "space_id": 127,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 393216,
+      "sha256": "938aba8d7a55b2d6ead5dd9cfc28c1469d689d821a92ec9f631f4f3818bccc32"
+    }
+  ]
+}

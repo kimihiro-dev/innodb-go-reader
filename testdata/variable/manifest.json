@@ -1,0 +1,86 @@
+{
+  "database": "innodb_reader_fixture_00d36aeb9abc",
+  "generated_at": "2026-09-10T00:45:05.595878+00:00",
+  "environment": {
+    "datadir": "/Users/kimihiro/workspace/data/mysql/3306/data/",
+    "version": "8.0.45",
+    "checksum": "crc32",
+    "page_size": 16384,
+    "file_per_table": 1
+  },
+  "snapshot": "Same session: FOR EXPORT, SELECT, copy, UNLOCK",
+  "cases": [
+    {
+      "name": "length_rows",
+      "rows": 10,
+      "index_id": 279,
+      "space_id": 70,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "cc14ea051553d10026c9cc193c04f0838e930cc9d51c97149c00d4885b868b61"
+    },
+    {
+      "name": "bitmap_rows",
+      "rows": 3,
+      "index_id": 280,
+      "space_id": 71,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "9890d7d3ffc4c5b98cda8534140891dd57432f8434a3192a5923ce5a119aefe7"
+    },
+    {
+      "name": "variable_tree",
+      "rows": 350,
+      "index_id": 281,
+      "space_id": 72,
+      "root_page": 4,
+      "root_level": 1,
+      "bytes": 9437184,
+      "sha256": "95a5f568ef8041d82cb62db50d69237698bdcba97e61252f2c8731248e03298d"
+    },
+    {
+      "name": "large_declared",
+      "rows": 2,
+      "index_id": 282,
+      "space_id": 73,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "0bb95e36855a3e629185d2c99c56af8cd811493514885a640c297ed2f3db20e0"
+    },
+    {
+      "name": "empty_variable",
+      "rows": 0,
+      "index_id": 283,
+      "space_id": 74,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 114688,
+      "sha256": "d40b692b695aea607886a54dd73f7dcbd43483d94d942c0030fcdeb18c33a22c"
+    },
+    {
+      "name": "external_text",
+      "rows": 2,
+      "expected_error": "unsupported_external",
+      "index_id": 284,
+      "space_id": 75,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 147456,
+      "sha256": "aca0e3c1b6f9ec8fd112584fbe23a61db5579e1f40176509495cc561d676f9b1"
+    },
+    {
+      "name": "external_binary",
+      "rows": 2,
+      "expected_error": "unsupported_external",
+      "index_id": 285,
+      "space_id": 76,
+      "root_page": 4,
+      "root_level": 0,
+      "bytes": 131072,
+      "sha256": "dd0ff0fb54f0081d570ecb84d84b088e9ac3f7247f9be29dd8acd603cf8477c6"
+    }
+  ]
+}

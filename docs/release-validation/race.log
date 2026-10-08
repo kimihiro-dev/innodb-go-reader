@@ -1,0 +1,17 @@
+ok  	innodb-go-reader	(cached)	coverage: 92.5% of statements
+	innodb-go-reader/cmd/innodb-reader		coverage: 0.0% of statements
+	innodb-go-reader/examples/auto		coverage: 0.0% of statements
+	innodb-go-reader/examples/changes		coverage: 0.0% of statements
+	innodb-go-reader/examples/json		coverage: 0.0% of statements
+	innodb-go-reader/examples/materialized		coverage: 0.0% of statements
+	innodb-go-reader/examples/query		coverage: 0.0% of statements
+	innodb-go-reader/examples/read		coverage: 0.0% of statements
+	innodb-go-reader/examples/scan		coverage: 0.0% of statements
+	innodb-go-reader/examples/sdi		coverage: 0.0% of statements
+	innodb-go-reader/examples/secondary		coverage: 0.0% of statements
+	innodb-go-reader/examples/secondaryquery		coverage: 0.0% of statements
+	innodb-go-reader/examples/space		coverage: 0.0% of statements
+	innodb-go-reader/examples/streamlob		coverage: 0.0% of statements
+ok  	innodb-go-reader/internal/cli	9.003s	coverage: 89.2% of statements
+ok  	innodb-go-reader/rowio	(cached)	coverage: 89.7% of statements
+ok  	innodb-go-reader/visual	(cached)	coverage: 91.4% of statements

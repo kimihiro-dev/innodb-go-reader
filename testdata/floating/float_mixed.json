@@ -1,0 +1,104 @@
+{
+  "columns": [
+    {
+      "name": "f0",
+      "type": "FLOAT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": false
+    },
+    {
+      "name": "f1",
+      "type": "DOUBLE",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": false
+    },
+    {
+      "name": "f2",
+      "type": "FLOAT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": false
+    },
+    {
+      "name": "f3",
+      "type": "DOUBLE",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": false
+    },
+    {
+      "name": "f4",
+      "type": "FLOAT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": false
+    },
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    },
+    {
+      "name": "f5",
+      "type": "DOUBLE",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": false
+    },
+    {
+      "name": "f6",
+      "type": "FLOAT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": false
+    },
+    {
+      "name": "f7",
+      "type": "DOUBLE",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": false
+    },
+    {
+      "name": "f8",
+      "type": "FLOAT",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": false
+    },
+    {
+      "name": "f9",
+      "type": "DOUBLE",
+      "nullable": true,
+      "max_chars": 0,
+      "unsigned": false
+    },
+    {
+      "name": "exact",
+      "type": "DECIMAL",
+      "nullable": true,
+      "max_chars": 0,
+      "precision": 14,
+      "scale": 4
+    },
+    {
+      "name": "note",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 32
+    },
+    {
+      "name": "body",
+      "type": "TEXT",
+      "nullable": true,
+      "max_chars": 0
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 322,
+  "space_id": 113,
+  "root_page": 4
+}

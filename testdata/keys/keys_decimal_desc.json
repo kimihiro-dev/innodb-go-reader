@@ -1,0 +1,15 @@
+{
+  "columns": [
+    {
+      "name": "k",
+      "type": "DECIMAL",
+      "precision": 65,
+      "scale": 30,
+      "descending": true
+    }
+  ],
+  "primary_key": "k",
+  "index_id": 723,
+  "space_id": 512,
+  "root_page": 4
+}

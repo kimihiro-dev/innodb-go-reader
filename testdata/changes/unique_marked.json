@@ -1,0 +1,32 @@
+{
+  "columns": [
+    {
+      "name": "n",
+      "type": "INT",
+      "descending": true
+    },
+    {
+      "name": "k",
+      "type": "VARCHAR",
+      "max_chars": 32,
+      "collation": "utf8mb4_bin",
+      "descending": true
+    },
+    {
+      "name": "v",
+      "type": "VARCHAR",
+      "max_chars": 256,
+      "nullable": true
+    }
+  ],
+  "root_page": 4,
+  "index_id": 881,
+  "space_id": 658,
+  "clustered_key": {
+    "name": "u",
+    "columns": [
+      "k",
+      "n"
+    ]
+  }
+}

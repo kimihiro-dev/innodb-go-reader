@@ -1,0 +1,151 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT"
+    },
+    {
+      "name": "c0",
+      "type": "CHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 0
+    },
+    {
+      "name": "c1",
+      "type": "CHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 1
+    },
+    {
+      "name": "c63",
+      "type": "CHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 63
+    },
+    {
+      "name": "c64",
+      "type": "CHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 64
+    },
+    {
+      "name": "c85",
+      "type": "CHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 85
+    },
+    {
+      "name": "c86",
+      "type": "CHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 86
+    },
+    {
+      "name": "c127",
+      "type": "CHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 127
+    },
+    {
+      "name": "c128",
+      "type": "CHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 128
+    },
+    {
+      "name": "c255",
+      "type": "CHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 255
+    },
+    {
+      "name": "v0",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 0
+    },
+    {
+      "name": "v1",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 1
+    },
+    {
+      "name": "v63",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 63
+    },
+    {
+      "name": "v64",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 64
+    },
+    {
+      "name": "v85",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 85
+    },
+    {
+      "name": "v86",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 86
+    },
+    {
+      "name": "v127",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 127
+    },
+    {
+      "name": "v128",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 128
+    },
+    {
+      "name": "v255",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 255
+    },
+    {
+      "name": "v256",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 256
+    },
+    {
+      "name": "note",
+      "type": "VARCHAR",
+      "max_chars": 32,
+      "nullable": true
+    }
+  ],
+  "primary_key": "id",
+  "index_id": 438,
+  "space_id": 227,
+  "root_page": 4
+}

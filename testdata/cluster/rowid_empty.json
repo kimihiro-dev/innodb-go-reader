@@ -1,0 +1,22 @@
+{
+  "columns": [
+    {
+      "name": "n",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "text",
+      "type": "VARCHAR",
+      "max_chars": 32,
+      "nullable": true
+    }
+  ],
+  "clustered_key": {
+    "name": "PRIMARY",
+    "hidden_row_id": true
+  },
+  "index_id": 863,
+  "space_id": 646,
+  "root_page": 4
+}

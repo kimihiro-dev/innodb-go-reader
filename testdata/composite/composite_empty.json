@@ -1,0 +1,42 @@
+{
+  "columns": [
+    {
+      "name": "text",
+      "type": "VARCHAR",
+      "max_chars": 32,
+      "nullable": true
+    },
+    {
+      "name": "b",
+      "type": "BIGINT",
+      "unsigned": true
+    },
+    {
+      "name": "n",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "a",
+      "type": "SMALLINT"
+    },
+    {
+      "name": "c",
+      "type": "MEDIUMINT"
+    },
+    {
+      "name": "tail",
+      "type": "VARCHAR",
+      "max_chars": 32,
+      "nullable": true
+    }
+  ],
+  "primary_keys": [
+    "a",
+    "b",
+    "c"
+  ],
+  "index_id": 445,
+  "space_id": 234,
+  "root_page": 4
+}

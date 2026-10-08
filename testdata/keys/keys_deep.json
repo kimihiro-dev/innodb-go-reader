@@ -1,0 +1,35 @@
+{
+  "columns": [
+    {
+      "name": "payload",
+      "type": "VARCHAR",
+      "max_chars": 1500,
+      "nullable": true
+    },
+    {
+      "name": "tie",
+      "type": "INT",
+      "descending": true
+    },
+    {
+      "name": "k",
+      "type": "VARCHAR",
+      "max_chars": 192,
+      "collation": "utf8mb4_bin",
+      "descending": true
+    },
+    {
+      "name": "binary",
+      "type": "VARBINARY",
+      "max_bytes": 768
+    }
+  ],
+  "primary_keys": [
+    "k",
+    "binary",
+    "tie"
+  ],
+  "index_id": 774,
+  "space_id": 563,
+  "root_page": 4
+}

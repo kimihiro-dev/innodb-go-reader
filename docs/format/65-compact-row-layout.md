@@ -1,8 +1,10 @@
-# 65 COMPACT 行布局与两种页外格式
+# 65. COMPACT 行布局与两种页外格式
 
 本章目标：从行格式、记录长度和实际页类型三个层次，判断一个长字段如何还原。先读[页外引用](13-lob-reference-and-pages.md)、[更新后的 LOB](59-updated-lob-layout.md)及[手册目录](README.md)中的 INSTANT/生成列章节；本章延续当前物理值契约，不执行历史 MVCC 或 VIRTUAL 表达式。
 
-## 一、行格式与 LOB 格式分别判断
+<a id="一行格式与-lob-格式分别判断"></a>
+
+## 行格式与 LOB 格式分别判断
 
 COMPACT 和 DYNAMIC 都使用 compact 记录头、NULL 位图及逆向变长长度信息，树导航无需另写一套。不同点在页外字段的本地部分：
 
@@ -31,7 +33,9 @@ COMPACT 和 DYNAMIC 都使用 compact 记录头、NULL 位图及逆向变长长�
 
 源码依据为本地官方 8.0.45：`storage/innobase/data/data0data.cc:430–448` 的 local_len；`storage/innobase/lob/lob0impl.cc:1121` 附近按实际页类型分派的读取路径；`storage/innobase/lob/lob0lob.cc:461` 的 debug 写入点。版本固定，不能把另一版本的常量直接套用。
 
-## 二、SDI、空间标志和记录头共同约束
+<a id="二sdi空间标志和记录头共同约束"></a>
+
+## SDI、空间标志和记录头共同约束
 
 自动入口从 DD `row_format=5` 得到 COMPACT，`2` 得到 DYNAMIC，枚举见 `sql/dd/types/table.h:80–87`。`Schema.RowFormat` 省略继续表示 DYNAMIC，显式 COMPACT 必须与文件空间标志吻合。
 
@@ -39,7 +43,9 @@ COMPACT 和 DYNAMIC 都使用 compact 记录头、NULL 位图及逆向变长长�
 
 COMPACT 完整聚簇键每个成员最多 767 字节，总上限仍为 3072。实际配对夹具使用 `VARBINARY(767) DESC, INT`，总宽 771 合法；测试把单个成员改为 768 时拒绝。这里是物理编码上限，不是字符数上限。
 
-## 三、逐字节读取真实 COMPACT 引用
+<a id="三逐字节读取真实-compact-引用"></a>
+
+## 逐字节读取真实 COMPACT 引用
 
 解压 `testdata/compact-legacy/lesson_compact_initial.ibd.gz`。第一条记录的 txt 引用在页 4 的偏移 921，绝对文件位置为 `4×16384+921=66457`。其本地前缀从页内 153 开始，恰好 768 字节；引用如下：
 
@@ -59,7 +65,9 @@ space=29      first=5       version=1      flags/high     suffix=69232
 
 引用第三字段不能单独用于猜格式。先读首个页并检查 CRC、页号、space/type，再解释该字段；旧 BLOB 要求值 38，新 LOB 继续使用版本与活动/历史项检查。
 
-## 四、前缀可以切断字符
+<a id="四前缀可以切断字符"></a>
+
+## 前缀可以切断字符
 
 两个样本的前缀最后 12 字节都是：
 
@@ -69,7 +77,9 @@ f0 9f 98 80 e7 95 8c f0 9f 98 80 e7
 
 结尾 `e7` 只是“界”的 UTF-8 首字节；后缀以 `95 8c` 开始。因此不能分别对前缀、后缀调用字符串解码，也不能补替换字符。先拼接完整原始字节，再复用字符集、JSON 或二进制类型解码。测试显式证明前缀本身不是合法 UTF-8，但完整 SQL 文本精确一致。
 
-## 五、返回值与兼容性
+<a id="五返回值与兼容性"></a>
+
+## 返回值与兼容性
 
 `ExternalField.Offset` 仍指向 20 字节引用，新增独立复制的 `Prefix`。`Length` 仍保存引用中的后缀长度，不改写为完整值长度。旧链返回 `Format="BLOB"`、`HeaderOffset=38`、`Version=0`；新链 Format 为空、HeaderOffset 为 0，Version 保持原契约。Reference 保留原始 20 字节，所以旧链第三字段依然可以从原始字节复核。
 

@@ -1,8 +1,12 @@
-# 54：PAD SPACE、DESC 与多类型树验收
+# 54. PAD SPACE、DESC 与多类型树验收
+
+<a id="54pad-spacedesc-与多类型树验收"></a>
 
 本章在[完整键解码](53-typed-key-layout.md)的基础上，解释同一份字节怎样决定页内顺序和子树范围。核心入口是 [key.go](../../key.go) 的 `compareIndexKey` / `comparePadded`，整个索引始终使用同一套比较器。
 
-## 1. binary 和 `_bin` 不是同一条规则
+<a id="1-binary-和-_bin-不是同一条规则"></a>
+
+## binary 和 `_bin` 不是同一条规则
 
 BINARY/VARBINARY 使用原始字节字典序。相同前缀下，较短的值在前：空值 < `00` < `20`，`61` < `6100` < `6120`。BINARY 的补零是存储值的一部分，不能删除；长度相同并不意味着可以按 C 字符串遇零停止。
 
@@ -20,7 +24,9 @@ BINARY/VARBINARY 使用原始字节字典序。相同前缀下，较短的值在
 
 MySQL 源码依据是 `strings/ctype-bin.cc:175–209` 的 `my_strnncollsp_8bit_bin` 与 `strings/ctype-mb.cc:440` 附近的 `my_strnncollsp_mb_bin`。ASCII/latin1 在单字节编码上比较；有效 UTF-8 的字节序保持 Unicode 码点序，但必须先校验编码。这里没有移植 UCA 权重表，不能据此扩展到 `_ai_ci`、`_0900_bin` 等规则。
 
-## 2. 为什么不能比较返回给调用方的字符串
+<a id="2-为什么不能比较返回给调用方的字符串"></a>
+
+## 为什么不能比较返回给调用方的字符串
 
 MySQL latin1 的 0x80 解码为欧元符号 €，0xff 解码为 ÿ。二者在 latin1_bin 的原编码顺序是 `80 < ff`；如果先转为 UTF-8，再比较其字节，就变成 `e2 82 ac > c3 bf`，顺序相反。
 
@@ -34,7 +40,9 @@ MySQL latin1 的 0x80 解码为欧元符号 €，0xff 解码为 ÿ。二者在 
 
 所以 `Values` 用于展示/业务消费，`TextBytes` 保留文本物理字节，内部键副本用于树比较。CHAR 的 `CharStorage` 仍保存物理文本，`Values` 仍去尾 U+0020；这些已有公开约定不因主键而改变。
 
-## 3. DESC 反转比较，不反转载荷
+<a id="3-desc-反转比较不反转载荷"></a>
+
+## DESC 反转比较，不反转载荷
 
 `storage/innobase/rem/rem0cmp.cc:319–448` 按字段类型比较，再应用 `is_asc`。本阶段每个成员得到比较符号后，若该成员 DESC 就取相反符号。不要把所有元组统一反序，因为 `(a DESC,b ASC)` 与 `(a DESC,b DESC)` 不相同；不要对读到的 DESC 字节做按位取反。
 
@@ -50,7 +58,9 @@ DATE/YEAR 的整数编码、BIT 的大端编码、当前 DATETIME/TIME/TIMESTAMP
 
 负小数的补码/借位已由原 TIME 解码器处理；不能把显示字符串顺序作为数值顺序。FLOAT/DOUBLE 和 ENUM/SET 需要另行确定比较与元数据契约，仍明确拒绝作为键。
 
-## 4. 所有范围必须使用索引顺序
+<a id="4-所有范围必须使用索引顺序"></a>
+
+## 所有范围必须使用索引顺序
 
 页内、跨叶子页、非叶子有限键以及父子 `[L,H)` 范围都使用相同的逐成员比较器。这里的“递增”是按索引定义顺序，不是每个成员的 SQL 自然升序。任意一个检查遗漏 DESC 或 PAD SPACE，都可能错拒绝正常树或接受错误子树。
 
@@ -58,7 +68,9 @@ DATE/YEAR 的整数编码、BIT 的大端编码、当前 DATETIME/TIME/TIMESTAMP
 
 公开的 `NodePointer.Key` 单列仍是一个原类型值，多列仍是按键顺序的 `[]any`；内部范围保存原始成员字节。完整元组比较相等才视为重复主键，单个字符成员 PAD SPACE 相等时必须继续比较后续成员。
 
-## 5. 本阶段真实验收矩阵
+<a id="5-本阶段真实验收矩阵"></a>
+
+## 本阶段真实验收矩阵
 
 最终资产位于 `testdata/keys`，独立数据库为 `innodb_reader_keys_bedf314bb4a3`。生成程序只创建新库、修改生成会话的 sql_mode/time_zone；使用 `FLUSH TABLES ... FOR EXPORT` 锁定快照，复制后解锁。没有修改既有用户表、全局配置或停止原实例。
 
@@ -78,7 +90,9 @@ DATE/YEAR 的整数编码、BIT 的大端编码、当前 DATETIME/TIME/TIMESTAMP
 
 完整 race/vet 通过，核心包覆盖率 93.7%。10 秒预算 fuzz：FuzzKeyOrder 58722 次、FuzzKeyRead 5 次，无失败；文件种子较大，后者仅作为整文件入口冒烟，不能替代上述结构损坏与真实 SQL 验收。
 
-## 6. 复现
+<a id="6-复现"></a>
+
+## 复现
 
 ```sh
 GOCACHE=/tmp/innodb-go-build-cache go test ./...

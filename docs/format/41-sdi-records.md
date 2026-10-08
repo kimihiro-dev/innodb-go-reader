@@ -1,4 +1,4 @@
-# 41 SDI：从页 0 找到元数据 JSON
+# 41. SDI：从页 0 找到元数据 JSON
 
 本章学习不提供用户列定义时，如何从独立表空间找到 SDI，读取 `(type,id)` 记录并还原原始元数据。前置内容是 [页与文件](02-file-to-page.md)、[记录链](03-page-to-record.md)、[索引树](06-index-tree.md) 和 [页校验](39-page-checksum.md)。
 

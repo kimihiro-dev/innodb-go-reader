@@ -1,4 +1,4 @@
-# 37 CHAR：字符数、物理长度与存储空格
+# 37. CHAR：字符数、物理长度与存储空格
 
 本章学习 utf8mb4 CHAR(N) 为什么需要变长长度数组，以及如何同时保留完整物理文本和通常 SQL 显示。前置内容是 [记录列值](04-record-to-values.md)、[变长长度](11-variable-lengths.md) 和 [页外引用](13-lob-reference-and-pages.md)。本章范围为 MySQL 8.0.45、16 KiB、DYNAMIC、新建只插入表、可信 schema；N 为 1..255。
 

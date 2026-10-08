@@ -1,10 +1,12 @@
-# 64 仅物化列接口、NULL位图与验证
+# 64. 仅物化列接口、NULL位图与验证
 
 学习目标：正确使用严格/仅物化入口，理解VIRTUAL为何不占NULL位，并复跑真实SQL与官方工具验证。
 
 前置：[63 生成列的实际存储](63-generated-column-layout.md)、[62 INSTANT验证](62-instant-validation.md)。
 
-## 1. 两种读取契约
+<a id="1-两种读取契约"></a>
+
+## 两种读取契约
 
 | 入口 | 含VIRTUAL表 | 成功结果 |
 |---|---|---|
@@ -34,7 +36,9 @@ for _, column := range view.VirtualColumns {
 
 元数据仍遵守原约定：Issues非空时Schema=nil。若唯一问题是用户VIRTUAL未物化，MaterializedSchema可用且保留VirtualColumns；任何其他未支持特性都使MaterializedSchema也为nil。仅物化入口不会通过过滤错误字符串来绕过检查。文件损坏、LOB失败或I/O失败仍返回nil，无部分结果。
 
-## 2. VIRTUAL不增加NULL位图
+<a id="2-virtual不增加null位图"></a>
+
+## VIRTUAL不增加NULL位图
 
 真实tree表有id、padding、九个VIRTUAL INT、一个可空STORED copy和八个可空普通INT。物化可空列数是9，不是18：
 
@@ -64,13 +68,17 @@ b0 84 b0 84 | 01 fe | 00 00 10 09 7c
 
 INSTANT在最前ADD可空added后，旧行由DefaultColumns=[0]补88；新行有版本字节。非叶子仍按版本0的9个物化可空列保留两字节，不将后来添加列或VIRTUAL错误加入初始位图。
 
-## 3. 二级索引里可能存有虚拟值
+<a id="3-二级索引里可能存有虚拟值"></a>
+
+## 二级索引里可能存有虚拟值
 
 `indexed_initial`具有用户VIRTUAL v及其普通BTREE索引iv；InspectTable报告并核对两个索引根，仅物化输出仍是id/a。即使二级索引保存了某些表达式结果，本阶段也不解析它、不用它给聚簇行补VIRTUAL值，不承诺SQL表达式执行。
 
 函数索引 `KEY fx((a+1))` 的内部hidden=3列与显式用户VIRTUAL不同；真实 `functional_rejected` 由自动完整/仅物化入口同时拒绝。系统hidden=2、已DROP物理列和用户hidden=4也分别处理。
 
-## 4. 真实快照矩阵
+<a id="4-真实快照矩阵"></a>
+
+## 真实快照矩阵
 
 来源为独立临时MySQL8.0.45库 `innodb_reader_generated_d64ef4eedc8a`，仅Unix socket、禁用网络；不是原用户实例。先前原实例因缺凭证无法连接，未尝试改其凭证或数据。临时实例在验证完成后关闭。
 
@@ -90,7 +98,9 @@ INSTANT在最前ADD可空added后，旧行由DefaultColumns=[0]补88；新行有
 
 生成器在每次DDL/DML结束后持有FOR EXPORT锁，锁内复制文件并查询预期，最后UNLOCK；完整执行语句在writer.sql.gz。保留只用于诊断的临时失败采集，不把它们计入正式14份资产。
 
-## 5. 离线复现与损坏测试
+<a id="5-离线复现与损坏测试"></a>
+
+## 离线复现与损坏测试
 
 ```sh
 go test ./...
@@ -106,7 +116,9 @@ python3 scripts/verify_generated_fixtures.py --mysql-bin /Users/kimihiro/workspa
 
 首轮全量race/coverage通过，核心覆盖率94.3%，vet通过；FuzzMaterializedRead十秒预算86,663次执行无失败。新测试追加的元数据分类和旧schema兼容检查另有定向验证。累计425份资产，423份在对应完整或仅物化入口成功读取79,744行，另有既有LOB超限和新增函数索引两份拒绝样本；此累计包含仅物化行，不等于每张表全部SQL列均已恢复。
 
-## 6. 边界
+<a id="6-边界"></a>
+
+## 边界
 
 保持8.0.45/16KiB/DYNAMIC/非压缩非加密独立表空间及已验收的类型、键、LOB和原生INSTANT范围。STORED沿用这些类型的解码能力，不增加任意函数、类型或collation。样本中的VIRTUAL文本使用未纳入物化文本矩阵的collation也可报告，因为本阶段没有解码其值。
 

@@ -1,4 +1,4 @@
-# 45 JSON 列：二进制容器与无损类型树
+# 45. JSON 列：二进制容器与无损类型树
 
 本章的目标是理解为什么JSON列不能当作UTF-8文本直接读取，以及如何从容器目录找到全部存储值。前置知识是[变长字段](11-variable-lengths.md)、[页外引用](13-lob-reference-and-pages.md)和[自动schema](43-sdi-schema.md)。JSON列仍使用InnoDB变长记录和LOB；本章解释取出完整字段字节后的内部格式。
 

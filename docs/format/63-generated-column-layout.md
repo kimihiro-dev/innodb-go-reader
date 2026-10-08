@@ -1,10 +1,12 @@
-# 63 生成列、不可见列与物理字段
+# 63. 生成列、不可见列与物理字段
 
 学习目标：区分表达式、存储结果和SQL可见性，解释为何VIRTUAL不占聚簇载荷，并从真实记录解码STORED生成列。
 
 前置：[04 记录到列值](04-record-to-values.md)、[43 SDI到schema](43-sdi-schema.md)、[61 INSTANT行布局](61-instant-row-layout.md)。本章样本为 `testdata/generated/` 的MySQL8.0.45快照；偏移均为页内偏移，文件绝对偏移为 `页号×16384+页内偏移`。
 
-## 1. 三个概念不能混用
+<a id="1-三个概念不能混用"></a>
+
+## 三个概念不能混用
 
 | 用户列 | 聚簇行中的值 | 本阶段输出 |
 |---|---|---|
@@ -19,7 +21,9 @@ STORED结果本身可以是SQL NULL。VIRTUAL表达式即使在SQL查询时恰�
 
 SDI的 `is_virtual` 与 `generation_expression` 用于分类：生成表达式非空且is_virtual=false表示STORED；is_virtual=true的用户列必须有表达式。表达式只作为元信息保存，不调用SQL、不尝试在Go里执行。
 
-## 2. 从声明列到存储列
+<a id="2-从声明列到存储列"></a>
+
+## 从声明列到存储列
 
 真实 `mixed_initial` 的声明顺序和返回映射如下：
 
@@ -47,7 +51,9 @@ SDI用户列：id a virt txt stored_n stored_text secret vt
 
 `mixed_initial` 的SDI聚簇elements恰好引用0、8、9、1、3、4、5、6：8/9是事务系统列；没有引用2/7的两个VIRTUAL列。解析器核对完整字段列表，不能看到is_virtual就跳过而不核对索引布局。
 
-## 3. 真实STORED字节逐步解码
+<a id="3-真实stored字节逐步解码"></a>
+
+## 真实STORED字节逐步解码
 
 `stored_values_initial` 首行位于页4，Start120、origin129、End172，文件数据起点为 `4×16384+129=65665`。
 
@@ -85,7 +91,9 @@ SDI用户列：id a virt txt stored_n stored_text secret vt
 
 修改a/text之后，`stored_values_updated_visible` 的SQL与物理STORED值同步变化；将secret改为VISIBLE只改变列属性，解析器仍返回它。不能因为SELECT *的显示范围改变而调整物理字段长度。
 
-## 4. 页外生成值与INSTANT
+<a id="4-页外生成值与instant"></a>
+
+## 页外生成值与INSTANT
 
 `mixed_initial` 首行有两个页外字段：txt与stored_text。前者为42,000字节，后者为84,000字节；两列各自有20字节引用、各自的LOB活动块来源。存储的重复文本通过LOB路径恢复，不通过CONCAT生成。记录头前的实际字节是：
 

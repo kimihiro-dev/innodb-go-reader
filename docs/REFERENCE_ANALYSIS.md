@@ -1,10 +1,12 @@
 # InnoDB Java Reader 1.0.10 调研与 Go 分阶段建议
 
-调研日期：2026-09-09。状态：参考实现分析已完成；Go 实现范围尚未确认。
+调研日期：2026-09-09。状态：已完成的历史调研；本文建议只代表当时提案。当前 Go 范围见 [项目需求](REQUIREMENTS.md)与[支持矩阵](format/83-release-support-matrix.md)。
 
 规划更新：本文的页检查器优先路线为历史建议。用户随后明确数据还原优先并要求逐步讲解文档；当前路线以 [第一阶段计划](STAGE_PLANS.md#stage-1) 和项目需求/决策文档为准，本文源码调研结论继续保留。
 
-## 1. 结论
+<a id="1-结论"></a>
+
+## 结论
 
 参考项目是一个以单表 `.ibd` 为输入、依赖外部表结构的只读页检查和索引记录读取库，并提供 CLI、数据导出及页热力图。它包含真正的 B+ 树点查与范围遍历，不只是逐页扫描；但不是完整 SQL 引擎，也不是实现事务恢复和一致性快照的备份工具。
 
@@ -14,7 +16,9 @@
 
 推荐先做独立的 Go 页检查器，再增加有限类型的行扫描和索引查询。以下阶段均为建议，不代表已批准实施范围。
 
-## 2. 分析依据与验证程度
+<a id="2-分析依据与验证程度"></a>
+
+## 分析依据与验证程度
 
 - 主要依据：调研时使用的InnoDB Java Reader 1.0.10源码快照，现以[GitHub固定提交](https://github.com/alibaba/innodb-java-reader/tree/8f8dad1aa16439a116f07f544e55c96501032b9a)提供导航。[README](https://github.com/alibaba/innodb-java-reader/blob/8f8dad1aa16439a116f07f544e55c96501032b9a/README.md)、[根POM第11行](https://github.com/alibaba/innodb-java-reader/blob/8f8dad1aa16439a116f07f544e55c96501032b9a/pom.xml#L11)及下文源码链接均固定到该版本。
 - [上游1.0.10标签](https://github.com/alibaba/innodb-java-reader/tree/1.0.10)已核对为提交`8f8dad1aa16439a116f07f544e55c96501032b9a`（2026-09-30）。本次迁移通过GitHub文件树的Git blob SHA逐一核对链接涉及的文件与调研快照一致；不据此宣称全仓库逐文件一致，也不引用持续变化的主分支行号。
@@ -24,7 +28,9 @@
 
 下文具体源码均链接到固定提交；**C**表示[核心源码目录](https://github.com/alibaba/innodb-java-reader/tree/8f8dad1aa16439a116f07f544e55c96501032b9a/innodb-java-reader/src/main/java/com/alibaba/innodb/java/reader)，**T**表示[测试源码目录](https://github.com/alibaba/innodb-java-reader/tree/8f8dad1aa16439a116f07f544e55c96501032b9a/innodb-java-reader/src/test/java/com/alibaba/innodb/java/reader)。带行号的引用可直接跳转到对应位置，无需保留本地Java目录。
 
-## 3. 模块划分
+<a id="3-模块划分"></a>
+
+## 模块划分
 
 | 模块 | 职责 | Go 项目可借鉴的部分 |
 |---|---|---|
@@ -49,7 +55,9 @@ TableReaderFactory / TableReaderImpl
 
 `TableDef`、`Column` 描述逻辑结构；`SliceInput` 提供字节读取；`IndexServiceImpl` 同时承担索引算法与记录解码。Go 版本可按职责逐步拆分，但无需预先建立一套与 Java 对应的接口和工厂。
 
-## 4. 已实现能力
+<a id="4-已实现能力"></a>
+
+## 已实现能力
 
 | 能力 | 具体范围 | 主要源码依据 |
 |---|---|---|
@@ -99,7 +107,9 @@ CLI 支持输出文件、分隔符/引号/表头选项和页信息 JSON 展示�
 
 LSN 热力图反映页面 LSN 分布；填充率基于页内空间统计。它们不是 MySQL 缓冲池访问频率或实时读写热点监控。
 
-## 5. 明确限制与兼容性风险
+<a id="5-明确限制与兼容性风险"></a>
+
+## 明确限制与兼容性风险
 
 | 边界 | 核查结果 | 对 Go 版本的启示 |
 |---|---|---|
@@ -121,7 +131,9 @@ LSN 热力图反映页面 LSN 分布；填充率基于页内空间统计。它�
 
 MySQL 8.0.29 起 INSTANT ADD/DROP COLUMN 引入新的行版本处理，这与本地 8.0.18 测试资源存在实际版本差距。[MySQL 官方 Online DDL 文档](https://dev.mysql.com/doc/refman/8.0/en/innodb-online-ddl-operations.html)
 
-## 6. 可复用测试资产
+<a id="6-可复用测试资产"></a>
+
+## 可复用测试资产
 
 核心测试目录包括类型边界、超过 8 个 nullable 列、复合/字符串/隐藏主键、全非空唯一键作为聚簇键、多层 B+ 树、范围与升降序迭代、二级索引、删除后读取、旧页外字段、CRC 等用例。资源目录共找到 129 个 `.ibd`/`.sql` 文件（合计，不是 129 个测试场景）。
 
@@ -134,7 +146,9 @@ MySQL 8.0.29 起 INSTANT ADD/DROP COLUMN 引入新的行版本处理，这与本
 1. 固定二进制夹具：页/字段已知字节、截断文件、越界页号、损坏字段，适合离线单元测试。
 2. 本地 8.0.45 生成夹具：保存 SQL、实际表属性、查询结果、索引根页与快照过程，用于端到端对照。
 
-## 7. 本地环境实测
+<a id="7-本地环境实测"></a>
+
+## 本地环境实测
 
 只读查询成功；未创建表、未修改数据、未执行 FLUSH/锁表或停库。
 
@@ -157,7 +171,9 @@ Socket：`/Users/kimihiro/workspace/data/mysql/3306/data/mysqld_3306.sock`。
 
 后续宜使用专用测试表。在适用的独立表空间表上，可在同一会话执行并持有 `FLUSH TABLES ... FOR EXPORT` 的锁，复制文件及记录基准后再 `UNLOCK TABLES`，或使用其他经过验证的一致快照方案；不能让获取锁的客户端先退出再复制。本轮仅提出流程，未执行。[MySQL 官方表空间导出说明](https://dev.mysql.com/doc/refman/8.0/en/innodb-table-import.html)
 
-## 8. Go 标准库与依赖调查
+<a id="8-go-标准库与依赖调查"></a>
+
+## Go 标准库与依赖调查
 
 当前项目没有 `go.mod`、Go 源码或现有 Go 依赖。已检查本机 Go 1.25.7 标准库：
 
@@ -172,7 +188,9 @@ Socket：`/Users/kimihiro/workspace/data/mysql/3306/data/mysqld_3306.sock`。
 
 Java 核心 POM 依赖 JSqlParser、Guava、Commons、Jackson 等；不应逐个寻找 Go 等价物。首个页检查阶段可以仅用标准库；在需要行解码时，先显式提供最小 schema，比立刻引入完整 MySQL SQL parser 更简单。尚未选择第三方依赖。
 
-## 9. 分阶段建议及验收目标（待确认）
+<a id="9-分阶段建议及验收目标待确认"></a>
+
+## 分阶段建议及验收目标（待确认）
 
 | 阶段 | 建议范围 | 验收方法 |
 |---|---|---|

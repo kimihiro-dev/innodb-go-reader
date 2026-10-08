@@ -1,8 +1,10 @@
-# 68 LOB 分块、资源预算与内存验收
+# 68. LOB 分块、资源预算与内存验收
 
 本章目标：不物化完整LOB也能读取原始字节，并区分预算、累计分配、存活内存和进程RSS。先读[流式协议](67-streaming-contract.md)及[新旧页外格式](65-compact-row-layout.md)。
 
-## 一、逐行流式不等于字段分块
+<a id="一逐行流式不等于字段分块"></a>
+
+## 逐行流式不等于字段分块
 
 Scan逐行交付完整Record：文本仍是string，二进制仍是[]byte，JSON仍是JSONValue。每个字段必须先完整解码，因而继续受16 MiB物化上限约束。
 
@@ -21,7 +23,9 @@ Scan逐行交付完整Record：文本仍是string，二进制仍是[]byte，JSON
 
 前缀首先输出，随后按逻辑值顺序输出页外块。单块最多一个页的载荷，可能切断UTF-8字符或二进制JSON对象。StreamLOB不验证完整文本/JSON/GEOMETRY类型；需要类型值时使用现有物化路径。
 
-## 二、同一条校验路径
+<a id="二同一条校验路径"></a>
+
+## 同一条校验路径
 
 `lob.go:walkExternal`根据实际首页类型分派新LOB和旧BLOB；物化readExternal只是在外层累积块并保存Chunks。COMPACT仍把768字节本地前缀接在后缀之前。
 
@@ -29,7 +33,9 @@ Scan逐行交付完整Record：文本仍是string，二进制仍是[]byte，JSON
 
 每个块只表示已通过目前涉及的检查，后续页错误仍可能导致整条流失败。只有LOBReport.Complete与nil错误共同确认整链结束。Bytes/Blocks统计已调用回调的字节/块数，包括返回错误的那一块。
 
-## 三、超过16 MiB的真实原始流
+<a id="三超过16-mib的真实原始流"></a>
+
+## 超过16 MiB的真实原始流
 
 复用已有 `testdata/large_lob/long_over_limit.ibd.gz`，不修改其“类型物化超限”的拒绝属性。根页4的首条记录origin=128，INT主键4字节、事务字段6字节、roll pointer7字节后，是页内145、绝对65681处的20字节引用：
 
@@ -50,7 +56,9 @@ go run ./examples/streamlob /tmp/long-over.ibd \
 
 COMPACT前缀的跨字符证据继续使用第65章：前缀末字节为e7，后缀首两个字节为95 8c，合起来才是“界”。分块接口不补字符，也不替调用方选择字符编码。
 
-## 四、预算的计量对象
+<a id="四预算的计量对象"></a>
+
+## 预算的计量对象
 
 ScanOptions的零值使用下列默认值；提高预算必须显式赋值。缓存为-1表示禁用，其他小于-1的值拒绝。
 
@@ -69,7 +77,9 @@ ScanOptions的零值使用下列默认值；提高预算必须显式赋值。缓
 
 LRU以页偏移为键，只缓存成功的完整页读取。命中仍复制到本次读取缓冲并执行原有页校验；回调不能修改缓存。淘汰复用旧缓存页缓冲，避免遍历每个新页都再分配一个缓存载荷。MaxPageReads在命中前计数，故缓存不会绕过遍历预算。报告PhysicalReads计实际底层调用次数（包括失败调用），CacheHits计命中；两者之和为接受的PageReads。
 
-## 五、内存结果怎样读
+<a id="五内存结果怎样读"></a>
+
+## 内存结果怎样读
 
 在darwin/arm64、Apple M4上，使用12000行的真实rowid_deep表，输入文件已在内存中；测量基线扣除输入与测试框架，回调不保留事件。通过主动GC在第1行、每128行及终点采样存活堆：
 
@@ -88,7 +98,9 @@ INNODB_SCAN_MEMORY=1 go test -run '^TestScanMemory$' -v
 go test -run '^$' -bench '^BenchmarkTableScan$' -benchtime=3x -benchmem
 ```
 
-## 六、验证与边界
+<a id="六验证与边界"></a>
+
+## 验证与边界
 
 ```sh
 go test ./...

@@ -1,8 +1,12 @@
-# 50：零长度字段、跨页字符与字符集验收
+# 50. 零长度字段、跨页字符与字符集验收
+
+<a id="50零长度字段跨页字符与字符集验收"></a>
 
 前章说明编码和 CHAR 布局，本章关注容易漏掉的零长度字段、跨 LOB 块字符，以及怎样证明解码器没有吞掉字节或替换字符。
 
-## 1. 长度为零不等于 NULL，也不等于没有长度元数据
+<a id="1-长度为零不等于-null也不等于没有长度元数据"></a>
+
+## 长度为零不等于 NULL，也不等于没有长度元数据
 
 真实新建表支持 CHAR(0)、BINARY(0)、VARCHAR(0)、VARBINARY(0)。这四种列的非 NULL 值没有载荷字节，但本版本的记录中仍各消费一个值为零的长度元数据字节。
 
@@ -35,7 +39,9 @@ id=2 位于页 4，Start=158、origin=172、End=209，实际元数据：
 
 查询辅助 map 时要用 `value, ok := map[index]`，不要仅根据空字符串或长度零判断 NULL。原始字节与调用方输入缓冲独立，后续修改文件缓冲不会改变返回的 TextBytes。
 
-## 2. UTF-8 字符可以跨 LOB 块
+<a id="2-utf-8-字符可以跨-lob-块"></a>
+
+## UTF-8 字符可以跨 LOB 块
 
 [external_utf8mb3](../../testdata/charset/external_utf8mb3.ibd.gz) 的 id=2 保存 TINYTEXT、MEDIUMTEXT、LONGTEXT 三列“中”的重复文本。MEDIUMTEXT 是 20000 个字符、60000 字节；LONGTEXT 是 21000 个字符、63000 字节。
 
@@ -61,7 +67,9 @@ space=224    first=9      version=1    总长度=60000
 
 四个字符集的页外夹具共八个真实页外字段；ASCII 与 latin1 同样沿用完整 LOB 路径。TextBytes 保存拼接后的全部原始数据，物理块来源仍在 Record.External，二者职责不同。
 
-## 3. 夹具矩阵与 SQL 预期
+<a id="3-夹具矩阵与-sql-预期"></a>
+
+## 夹具矩阵与 SQL 预期
 
 本轮在原测试实例新建专用库 `innodb_reader_charset_c3a4f995f69a`，共 21 个快照、1064 行，完整清单见 [manifest.json](../../testdata/charset/manifest.json)。
 
@@ -88,7 +96,9 @@ SQL 预期包含：
 
 生成器 [generate_charset_fixtures.py](../../scripts/generate_charset_fixtures.py) 记录实际 SQL、SHOW CREATE TABLE、SQL 索引元信息、版本和配置。每张表保持 `FLUSH TABLES ... FOR EXPORT` 锁期间查询和复制，再在同一连接解锁。只设置生成会话 sql_mode/time_zone；未改既有表、全局配置或停止实例。密码仅使用 MYSQL_PWD 环境变量。
 
-## 4. 损坏和兼容性测试
+<a id="4-损坏和兼容性测试"></a>
+
+## 损坏和兼容性测试
 
 [charset_test.go](../../charset_test.go) 验证自动/手工 schema、完整读取结果、真实 SQL 预期、原始字节及 SHA256。SQL 数值预期用精确数值方式比较，不通过 float64 中转序号或掩码。
 
@@ -98,7 +108,9 @@ SQL 预期包含：
 
 旧测试中“CHAR/BINARY/VARCHAR/VARBINARY 长度零必须拒绝”的断言已随本阶段契约更新；负长度和其他非法属性仍拒绝。旧 utf8mb4 数据、默认 schema、字符串结果保持兼容；新增 TextBytes 对所有受支持 CHAR/VARCHAR/TEXT 生效。旧阶段文档中的未支持说明是当时的历史边界。
 
-## 5. 复现与本阶段边界
+<a id="5-复现与本阶段边界"></a>
+
+## 复现与本阶段边界
 
 ```sh
 GOCACHE=/tmp/innodb-go-build-cache go test ./...

@@ -1,8 +1,10 @@
-# 72 二级索引整树接口与独立验收
+# 72. 二级索引整树接口与独立验收
 
 本章目标：安全使用独立二级记录模型，区分当前二级项与删除标记，并用SQL、官方工具和损坏测试验证整树结果。字段排列、NULL、前缀与真实字节见[第71章](71-secondary-record-layout.md)。
 
-## 一、完整读取与同步扫描
+<a id="一完整读取与同步扫描"></a>
+
+## 完整读取与同步扫描
 
 ```go
 // 按SDI中的准确索引名选一棵二级树。
@@ -46,7 +48,9 @@ MaxRows计当前二级记录，删除标记不占它；MaxRowBytes限制当前�
 
 非索引VIRTUAL列不影响物化索引项的解释，InspectSecondary基于既有MaterializedSchema核对来源；若所选索引本身引用VIRTUAL仍拒绝。并不由此放宽函数索引、未知表布局或其他既有元数据限制。
 
-## 二、真实矩阵
+<a id="二真实矩阵"></a>
+
+## 真实矩阵
 
 12份新快照来自MySQL8.0.45隔离临时库 `innodb_reader_secondary_12402f8b6069`。共有5249条当前聚簇行，选定20棵二级树，合计8150条当前二级项、60条delete-mark、216个二级页。
 
@@ -69,7 +73,9 @@ MaxRows计当前二级记录，删除标记不占它；MaxRowBytes限制当前�
 
 聚簇定位键还要能解析到已经通过SQL验证的聚簇结果。这个检查覆盖字段映射和ROW_ID，但不冒充SQL可直接读取隐藏ROW_ID。rowid表的独立SQL只验证可见二级字段与重复次数；隐藏定位值单独与物理聚簇身份核对。
 
-## 三、delete-mark不是SQL当前行
+<a id="三delete-mark不是sql当前行"></a>
+
+## delete-mark不是SQL当前行
 
 changes初始插入id=0..99，n=id%7，k为带三位编号的字符串。一个独立全局一致性读视图保留旧版本；写会话修改id<20的n和k，再删除id>=90，提交后采集FOR EXPORT快照。读视图不在目标表上持有元数据锁，避免阻塞导出。采集后提交保持会话并正常关闭临时实例。
 
@@ -79,7 +85,9 @@ changes初始插入id=0..99，n=id%7，k为带三位编号的字符串。一个�
 
 二级记录没有逐行DB_TRX_ID和DB_ROLL_PTR，不能把聚簇DeletedRecord的事务字段照搬过来填零。SecondaryRecord的Raw/Header/DeleteMarked保存实际证据。发生未支持标志、键序重复或未知布局时仍报错，不用delete-mark绕过解码检查。
 
-## 四、分层验证与损坏注入
+<a id="四分层验证与损坏注入"></a>
+
+## 分层验证与损坏注入
 
 `TestSecondarySQL` 对照全部真实矩阵，核验原始SHA、整表SQL、二级SQL、显式/Auto与完整/扫描一致性、定位映射及删除集合。`TestSecondaryExisting` 复用第26阶段已交付资产，包含DESC聚簇后缀和可空唯一键，原文件不改。
 
@@ -91,7 +99,9 @@ changes初始插入id=0..99，n=id%7，k为带三位编号的字符串。一个�
 
 10秒预算FuzzSecondaryPage完成395387次执行，无失败。它在真实tiny根页副本上变异字节、重封装CRC并检查解析不崩溃、错误无部分返回；不是历史版本兼容证明。全量race/coverage和vet通过，核心覆盖率93.8%；补充删除键集合的定向race也通过。
 
-## 五、复跑和边界
+<a id="五复跑和边界"></a>
+
+## 复跑和边界
 
 ```sh
 go test ./...

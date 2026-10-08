@@ -1,10 +1,6 @@
 # InnoDB 物理文件解析手册
 
-这份手册和 Go 实现一起演进。已完成单页行还原、多页多层聚簇索引扫描，以及全部整数类型、页内变长字段、TEXT/BLOB、跨页初始与更新后非压缩 LOB 、DECIMAL 精确小数、FLOAT/DOUBLE 、DATE/YEAR 、DATETIME 小数秒、TIME 负时长、TIMESTAMP UTC 、BIT 位字段、BINARY 定长二进制、ENUM 字典、SET 位掩码及 utf8mb4 CHAR 存储空格解析，并在读取路径验证 CRC32C/头尾 LSN，支持独立提取 SDI 原始元数据、生成受支持表的schema并自动读行，也可解析JSON列的容器、精确数值和opaque类型树，以及空间列的SRID/WKB与二维几何结构；字符列支持utf8mb4、utf8mb3、ascii、MySQL latin1和零宽字段，聚簇主键支持1..16列多类型元组和每成员ASC/DESC，字符键限四个已验收_bin规则；支持无显式主键时的唯一非空聚簇键和隐藏DB_ROW_ID，允许普通二级索引共存，并通过独立接口解析受支持的二级物理记录。支持受控写事务已结束快照中的页内UPDATE/DELETE、更新后LOB当前值和JSON部分更新空洞，并分开返回当前物理行和删除摘要。支持原生INSTANT ADD/DROP的混合行版本、物理列映射和历史默认补全。支持STORED/INVISIBLE物化列及显式仅物化读取入口，VIRTUAL单独报告、不伪装SQL NULL。你不需要先读 Java 参考代码，也不必先理解整个 InnoDB 存储引擎。
-
-当前首版范围统一见[第83章](83-release-support-matrix.md)，构建、复验、独立证据与故障定位见[第84章](84-release-validation.md)。旧章节的阶段性限制保留作学习上下文。
-
-操作工具请读[命令行使用指南](../CLI.md)：集中说明七个正式命令、参数、查询与分区清单、导出格式，并提供固定样本使用示例。
+按真实样本逐步解释文件、页、记录、列、索引、LOB 与元数据。当前范围见[第 83 章](83-release-support-matrix.md)，复验和故障定位见[第 84 章](84-release-validation.md)；旧章的限制保留教学历史，不能当作现行兼容性。操作示例见[CLI 指南](../CLI.md)，全部文档入口见[文档导航](../README.md)。
 
 ## 阅读顺序
 
@@ -116,7 +112,7 @@
 
 ## 源码与阅读方式
 
-Go 入口：`schema.go` 定义可信元数据与边界，`sdi.go` 提取原始元数据，`metadata.go` 映射schema并核对索引根，`materialized.go` 显式读取物化列并返回未物化说明，`charset.go` 处理字符集与文本布局，`geometry.go` 解码空间值与坐标树，`json.go` 解码二进制JSON并生成类型树与普通视图，`checksum.go` 验证校验和，`page.go` 读取页，`integer.go` 解码整数，`decimal.go` 解码精确小数，`float.go` 解码浮点数，`date.go` 解码日期与年份，`datetime.go` 解码 DATETIME 与小数秒，`time.go` 解码 TIME 时长，`timestamp.go` 解码 UTC 时间点，`bit.go` 解码位字段，`enum.go` 解码枚举标签与序号，`set.go` 解码集合与位掩码，`variable.go` 解码变长元数据，`lob.go` 还原页外值，`record.go` 还原页内记录，`key.go` 比较主键元组，`tree.go` 遍历整树并解码导航记录。每章先解释结构，再指出相应函数；测试见 `reader_test.go`、`tree_test.go`、`integer_test.go`、`variable_test.go`、`lob_test.go`、`large_lob_test.go`、`decimal_test.go`、`float_test.go`、`date_test.go`、`datetime_test.go`、`time_test.go`、`timestamp_test.go`、`bit_test.go`、`fixed_binary_test.go`、`enum_test.go`、`set_test.go`、`char_test.go`、`checksum_test.go`、`sdi_test.go`、`metadata_test.go`、`json_test.go`、`geometry_test.go`、`charset_test.go`、`composite_test.go`。原 parseLeaf 已扩展为 parseIndex，原页内 Read 逻辑移至 decodePage。
+每章给出相关 Go 入口和测试位置。阅读顺序为结构解释 → 真实字节 → 解码结果 → 验证和边界；源码定位以对应章节为准，不在目录重复维护函数清单。
 
 格式核查使用 MySQL 官方 **mysql-8.0.45** 标签：
 

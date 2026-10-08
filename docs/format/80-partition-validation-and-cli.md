@@ -1,6 +1,8 @@
 # 80. 分区集合的命令、验证与失败
 
-## 学习目标
+<a id="学习目标"></a>
+
+## 学习目标与前置概念
 
 使用清单导出完整逻辑表，区分分区顺序和全局键序，验证缺文件、重建后混配和后段失败。前置为[第79章](79-partition-collection-layout.md)及[JSONL/CSV协议](77-cli-and-lossless-export.md)。
 

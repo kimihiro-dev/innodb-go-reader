@@ -1,10 +1,12 @@
-# 61 INSTANT ADD/DROP：逻辑列序与物理行版本
+# 61. INSTANT ADD/DROP：逻辑列序与物理行版本
 
 学习目标：在同一页中读出不同DDL时期写入的行，理解新增列为什么可能没有任何本地字节，以及删除列为什么仍影响旧记录的偏移。
 
 前置：[03 记录](03-page-to-record.md)、[04 列值](04-record-to-values.md)、[43 SDI到schema](43-sdi-schema.md)、[57 delete-mark](57-delete-mark-layout.md)。这里的行版本是DDL布局版本，与事务版本、LOB版本均不同。
 
-## 1. “即时”改变了什么
+<a id="1-即时改变了什么"></a>
+
+## “即时”改变了什么
 
 INSTANT ADD/DROP修改数据字典，不要求重写所有既有记录。因此不能把当前 `SHOW CREATE TABLE` 的列序直接套在所有记录上。
 
@@ -30,7 +32,9 @@ ALTER TABLE lesson ADD a VARCHAR(30) NULL DEFAULT 'again' FIRST,
 
 这些操作产生布局版本1、2、3。只改SQL默认值没有增加行布局版本；旧行也不会追溯采用99。
 
-## 2. 三套顺序
+<a id="2-三套顺序"></a>
+
+## 三套顺序
 
 在 `lesson_readd` 中当前用户列顺序为 `a,id,d,b,e`，但完整物理位置如下：
 
@@ -61,7 +65,9 @@ Added <= v，并且（未DROP 或 v < Dropped）
 
 系统字段和完整聚簇键位置固定。本阶段不借INSTANT实现主键变更、前缀聚簇键或生成列。
 
-## 3. SDI中的真实证据
+<a id="3-sdi中的真实证据"></a>
+
+## SDI中的真实证据
 
 以下摘自交付快照 `lesson_readd.sdi.json.gz`，省略容易变化的table_id：
 
@@ -80,7 +86,9 @@ e：default=00ff;physical_pos=8;...;version_added=1;
 
 默认值为InnoDB字段编码的十六进制，不是SQL显示文本或MySQL客户端行编码。`storage/innobase/dict/dict0dd.cc:83–127`实现hex编解码，2255–2355附近先转换为InnoDB字段字节，再写入default/default_null及physical_pos。
 
-## 4. 一字节行版本放在哪里
+<a id="4-一字节行版本放在哪里"></a>
+
+## 一字节行版本放在哪里
 
 COMPACT记录头仍为origin前5字节：
 
@@ -134,7 +142,9 @@ e长2  d=NULL  v2  固定头
 
 a/payload/c都已DROP，不再占位。`lesson_readd` 的版本3记录Start316、origin325，开头为 `05 02 01 03 40 ...`：新a长5，e长2，d=NULL，版本3。新a在载荷末尾，内容 `616761696e` 即again，却位于返回Values的第0列。
 
-## 5. 已删除列的LOB为何不读取
+<a id="5-已删除列的lob为何不读取"></a>
+
+## 已删除列的LOB为何不读取
 
 版本0行仍携带payload的20字节本地引用，即使当前DDL已无payload。定位后续字段需要知道这个引用占20字节，但不需要读取它指向的历史LOB。
 
@@ -142,7 +152,9 @@ a/payload/c都已DROP，不再占位。`lesson_readd` 的版本3记录Start316�
 
 delete-mark行也仍只输出本地摘要；布局版本用于准确计算Start/End，但不补用户默认值或宣称恢复删除行。RowVersion可以从摘要的Raw与Header定位。
 
-## 6. 代码和API
+<a id="6-代码和api"></a>
+
+## 代码和API
 
 - `Schema.Instant *InstantLayout`：nil为普通布局；Version是当前版本，Fields列出所有用户物理字段，系统字段不重复存储。
 - `InstantField.Position`：包含键与系统字段的完整物理位置；Column为当前SQL列下标。DROP字段用Column=-1和DroppedColumn保存类型。

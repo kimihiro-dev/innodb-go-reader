@@ -1,8 +1,12 @@
-# 47：空间列的 SRID、WKB 与坐标树
+# 47. 空间列的 SRID、WKB 与坐标树
+
+<a id="47空间列的-sridwkb-与坐标树"></a>
 
 本章从真实 POINT 记录出发，解释怎样把一个空间字段完整还原成 SRID、坐标和几何层次。前置知识是[变长字段](11-variable-lengths.md)、[页外 LOB](13-lob-reference-and-pages.md)及[自动 schema](43-sdi-schema.md)。验收过程见[第 48 章](48-geometry-validation.md)。
 
-## 1. 一列几何值的三层结构
+<a id="1-一列几何值的三层结构"></a>
+
+## 一列几何值的三层结构
 
 空间值是聚簇记录中的一个普通字段，不等于空间索引。当前表只有整数主键；读取空间值不需要构建 R-tree。
 
@@ -30,7 +34,9 @@ SRID 标识空间参考系统；它不是坐标数、字节长度或几何类型
 
 注意：SRID 没有包含在 `GeometryValue.WKB` 中。要恢复整个字段，用小端写入 SRID，再拼接 WKB。返回的 WKB 是独立副本，可以核对每一位，而不是将坐标重新编码得到的近似证据。
 
-## 2. 逐字节还原真实 POINT
+<a id="2-逐字节还原真实-point"></a>
+
+## 逐字节还原真实 POINT
 
 使用 [geometry_point.ibd.gz](../../testdata/geometry/geometry_point.ibd.gz)，SQL 定义为 `id INT PRIMARY KEY, doc POINT NULL, note VARCHAR(32)`。id=1 是 NULL；id=2 是 `POINT(12.5 -7.25)`。
 
@@ -69,7 +75,9 @@ GeometryValue{
 
 页内 doc 为 `[183,208)`，note 为 `[208,222)`，note 的原始 ASCII 是 `after-geometry`。这也独立检验了字段边界，防止解码器读对坐标却吞掉后续列。
 
-## 3. 七类 WKB 的共同语法
+<a id="3-七类-wkb-的共同语法"></a>
+
+## 七类 WKB 的共同语法
 
 以下偏移相对于**当前 WKB 节点**，不是整个字段；每个节点均有自己的五字节头。
 
@@ -105,7 +113,9 @@ SRID=0         POLYGON           两个环        第一环五点
 
 id=8 是包含 Point 和嵌套 GeometryCollection 的集合。其层次被保存在 `Geometries` 中，而不是展平成点数组。每个子节点的 ByteOrder 也保留；真实存储均是小端，混合大小端由合成测试单独验证。
 
-## 4. SQL NULL 与合法空几何
+<a id="4-sql-null-与合法空几何"></a>
+
+## SQL NULL 与合法空几何
 
 `geometry_lesson` 的 id=9 是空 GeometryCollection，页内字段起点=1126：
 
@@ -119,7 +129,9 @@ id=8 是包含 Point 和嵌套 GeometryCollection 的集合。其层次被保存
 
 这些检查只保证基本结构，不判断自交、环方向、洞是否位于外环内或拓扑有效性。坐标必须有限；负零及有限浮点位模式通过原始 WKB 保留，结构树也保留负零符号。
 
-## 5. SRID 4326：文件顺序与 SQL 输出顺序
+<a id="5-srid-4326文件顺序与-sql-输出顺序"></a>
+
+## SRID 4326：文件顺序与 SQL 输出顺序
 
 [geometry_srid](../../testdata/geometry/geometry_srid.sql) 声明 `POINT SRID 4326`。第一行使用：
 
@@ -146,7 +158,9 @@ e6 10 00 00 01 01 00 00 00
 
 默认 SQL 输出会依据 SRS 的轴定义处理顺序；文件值解码不应再次交换轴。这里的经纬度解释仅针对已核查的 4326 例子，不代表任意 SRID 的 X 都是经度。
 
-## 6. 自动 schema 与实现入口
+<a id="6-自动-schema-与实现入口"></a>
+
+## 自动 schema 与实现入口
 
 实际 SDI：DD type=30、collation_id=63、char_length=4294967295；`options` 中 `geom_type=0..7` 分别代表一般 GEOMETRY 和七种具体类型。不能只凭 DD type=30 猜成 POINT。
 

@@ -1,8 +1,10 @@
-# 70 查询键编码与独立验收
+# 70. 查询键编码与独立验收
 
 本章目标：区分用户输入值、物理键字节和 SQL 比较语义；用真实快照证明查询结果正确，并证明它确实跳过无关子树。导航算法和报告契约见[第69章](69-key-query-navigation.md)。
 
-## 一、输入键必须可精确解释
+<a id="一输入键必须可精确解释"></a>
+
+## 输入键必须可精确解释
 
 `query_key.go` 将查询值编码为既有 `key.go` 比较器使用的物理键，不另造一套 SQL 隐式转换。查询开始时独立复制归一化后的键，回调修改调用方原键不改变进行中的选择。
 
@@ -19,7 +21,9 @@
 
 字符输入统一UTF-8，但比较使用列的实际编码。MySQL latin1的欧元符号映射为单字节0x80，不能按UTF-8的E2 82 AC比较；ascii和utf8mb3也必须检查编码范围。方向由既有比较器逐成员应用，不能预先把查询键反码后再次应用DESC。CHAR显示值会去除尾空格，键比较仍按已验收_bin规则的PAD SPACE语义。
 
-## 二、三份真实快照与92条独立SQL
+<a id="二三份真实快照与92条独立sql"></a>
+
+## 三份真实快照与92条独立SQL
 
 `testdata/query/manifest.json` 保存原始解压文件SHA、行数、版本和环境；`*.expected.json.gz` 是SQL整表预期，`*.queries.json.gz` 同时保存请求、独立SQL及结果。不是把Go全表结果过滤后当作唯一基准。
 
@@ -51,7 +55,9 @@ CONVERT(CONVERT(X'E282AC' USING utf8mb4) USING latin1) COLLATE latin1_bin
 
 快照来自隔离临时MySQL8.0.45实例的新库 `innodb_reader_query_801d543ea403`，写入提交后通过FOR EXPORT复制。临时实例已正常关闭；没有改动原实例、既有用户表或全局配置。官方innochecksum严格CRC32、ibd2sdi、Go SDI/物化/查询CLI均通过，工具路径及逐资产结果见verification.json；physical.json为Go派生结构统计，不冒充独立SQL证据。
 
-## 三、现有资产回归与错误验证
+<a id="三现有资产回归与错误验证"></a>
+
+## 现有资产回归与错误验证
 
 全部472份资产中470份成功恢复90082行，2份既有类型/布局拒绝继续保留。查询矩阵对成功资产执行无界、反向、1386次点查和686次范围/limit对照；482次完整前导列前缀查询覆盖不同长度、反向和PAD SPACE。已有COMPACT、INSTANT、STORED/VIRTUAL、隐藏ROW_ID、更新/delete-mark及各键类型均复用原始快照。
 
@@ -61,7 +67,9 @@ CONVERT(CONVERT(X'E282AC' USING utf8mb4) USING latin1) COLLATE latin1_bin
 
 本次全量race/coverage通过，核心覆盖率94.4%，vet通过。10秒预算FuzzQueryRanges执行55923次，以独立整数谓词计算范围/Reverse/Limit预期；FuzzQueryKeys执行1943449次，验证被接受的规范字符串与已有解码器往返一致。fuzz执行次数与机器和语料有关，不是性能基准。
 
-## 四、复跑与CLI
+<a id="四复跑与cli"></a>
+
+## 复跑与CLI
 
 在仓库根目录执行：
 

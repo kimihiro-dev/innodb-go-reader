@@ -1,4 +1,4 @@
-# 27 TIMESTAMP：四字节秒数与 UTC
+# 27. TIMESTAMP：四字节秒数与 UTC
 
 本章目标：从真实记录中找到 TIMESTAMP 字节，恢复秒数和小数，解释为什么它与 DATETIME 的时区行为不同。前置知识是 [记录与列值](04-record-to-values.md)、[DATETIME 小数秒](23-datetime-encoding.md)；负时长见 [TIME](25-time-encoding.md)。
 

@@ -1,8 +1,12 @@
-# 48：空间值的页外读取、验证与边界
+# 48. 空间值的页外读取、验证与边界
+
+<a id="48空间值的页外读取验证与边界"></a>
 
 本章接续[第 47 章](47-geometry-storage.md)，解释为什么“成功打印坐标”还不足以证明空间列读取正确，以及怎样逐层验证。
 
-## 1. 真实夹具与独立预期
+<a id="1-真实夹具与独立预期"></a>
+
+## 真实夹具与独立预期
 
 [manifest](../../testdata/geometry/manifest.json) 保存 12 个不可变快照的哈希、行数、space/index/root 和实例配置。MySQL 版本为 8.0.45，16 KiB 页、crc32、file-per-table、DYNAMIC。新建专用库 `innodb_reader_geometry_c7eae7464cb2`；原实例继续运行，没有修改既有表或全局配置。
 
@@ -30,7 +34,9 @@ SQL 预期独立保存：
 
 MySQL `ST_GeometryType` 用 `GEOMCOLLECTION` 拼写，本 API 使用完整 `GEOMETRYCOLLECTION`；测试仅将这个已知别名归一化。SQL GeoJSON 仅用作独立验证，不是新增的公共输出 API。通用任意浮点数据仍以 WKB 位模式为精确依据。
 
-## 2. 从 20 字节引用恢复大 LineString
+<a id="2-从-20-字节引用恢复大-linestring"></a>
+
+## 从 20 字节引用恢复大 LineString
 
 `geometry_large` 的 id=1 位于页 4 origin=129。doc 从页内 146 开始，局部只有如下 20 字节：
 
@@ -63,7 +69,9 @@ SRID=0      LINESTRING     点数=0x1770=6000
 
 `Record.End=180` 仍只描述聚簇页内记录；`Result.Pages` 对这个表仍只有根叶子页。LOB 的六个块通过 External 单独报告，不混入聚簇树访问顺序。
 
-## 3. 解析防护与错误约定
+<a id="3-解析防护与错误约定"></a>
+
+## 解析防护与错误约定
 
 解码前检查 16 MiB 单值上限。所有计数先与剩余字节及资源预算比较，再分配内存；坐标数使用足够宽的整数比较，避免恶意 uint32 计数溢出或巨量分配。
 
@@ -84,7 +92,9 @@ SRID=0      LINESTRING     点数=0x1770=6000
 
 公开入口损坏测试分别修改页内 POINT 与页外 LineString 的 WKB 字节序。修改后重新计算页 CRC，因此能确认错误来自字段解析，而非只被页校验挡住。所有错误都检查没有部分返回。
 
-## 4. 复现与验收证据
+<a id="4-复现与验收证据"></a>
+
+## 复现与验收证据
 
 离线执行，不需要运行 MySQL：
 

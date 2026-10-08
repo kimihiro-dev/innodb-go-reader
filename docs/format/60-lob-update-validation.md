@@ -1,10 +1,12 @@
-# 60 JSON更新空洞与LOB真实验收
+# 60. JSON更新空洞与LOB真实验收
 
 学习目标：理解JSON部分修改为什么能保持总长度，却改变逻辑内容；区分容器内部空洞、LOB历史块和聚簇页garbage。
 
 前置：[45 二进制JSON](45-binary-json.md)、[59 更新后的LOB](59-updated-lob-layout.md)。JSON返回值继续使用已确认的 `JSONValue` 类型树，SQL NULL为nil，JSON null是节点。
 
-## 1. 长度不变，内容可以变短
+<a id="1-长度不变内容可以变短"></a>
+
+## 长度不变，内容可以变短
 
 二进制JSON容器中的偏移相对**去掉类型标签后的容器起点**，多字节数字是小端。这与LOB引用的大端数字不同。
 
@@ -21,7 +23,9 @@
 
 这些字节是JSON容器内的未引用空间，不是聚簇记录free链，也不是LOB历史版本项；三个层级必须分开解释。
 
-## 2. 页内JSON的真实155字节例子
+<a id="2-页内json的真实155字节例子"></a>
+
+## 页内JSON的真实155字节例子
 
 `documents_before` 的id3没有页外引用。其JSON开头的真实字节是：
 
@@ -59,7 +63,9 @@ a的40字节字符串缩为1字节，留下39字节；c[0]原18字节缩为1字�
 
 页外id1同样有空洞：完整LOB始终63865字节；holes阶段SQL空闲60811字节，reuse阶段空闲43810字节。读取时应先完整还原63865字节，再依JSON内部偏移还原逻辑类型树。
 
-## 3. 交付的真实快照矩阵
+<a id="3-交付的真实快照矩阵"></a>
+
+## 交付的真实快照矩阵
 
 资产位于 `testdata/lob_updates/`，来源库 `innodb_reader_lob_updates_5d9c5681a7cc`，MySQL8.0.45。共17快照、54行；同一行出现在多份快照中，所以不是54个不同逻辑实体。
 
@@ -84,7 +90,9 @@ a的40字节字符串缩为1字节，留下39字节；c[0]原18字节缩为1字�
 - `*.sql`、`writer.sql.gz`、`holder.sql.gz`：建表定义和完整实际采集语句，不含密码。
 - `verification.json`：官方CRC/SDI和CLI与SQL对照结果。
 
-## 4. 如何验证实现没有“碰巧读对”
+<a id="4-如何验证实现没有碰巧读对"></a>
+
+## 如何验证实现没有“碰巧读对”
 
 `lob_update_test.go` 对每份文件校验SHA、官方SDI、自动/手工schema和完整Read结果。TEXT按文本与原字节来源对照，BLOB转HEX，JSON的普通视图按精确有理数比较SQL，并检查从Chunks重新拼接的数据可还原相同类型树。旧JSON测试继续覆盖具体opaque/DECIMAL类型。
 
@@ -108,7 +116,9 @@ python3 scripts/verify_key_fixtures.py --mysql-bin /Users/kimihiro/workspace/sof
 
 实测结果：17文件官方严格CRC32、34个SDI对象和54行CLI/SQL全部通过。完整 `go test -race -cover ./...` 通过（核心94.2%），vet通过；10秒预算FuzzUpdatedLOB执行31980次、FuzzJSON执行700008次，无失败。累计394份资产中393份成功读取74596行，另1份保持超限拒绝。
 
-## 5. 边界
+<a id="5-边界"></a>
+
+## 边界
 
 本阶段读取当前存储值，不做事务提交判定、undo回放、历史任意时刻读取、旧格式/压缩/加密LOB。delete-mark仍只有本地摘要，不恢复删除值。历史数据页和未访问空间不属于本次CRC检查范围；读当前值成功不等于全文件所有旧页都健康。
 

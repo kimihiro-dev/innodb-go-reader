@@ -1,8 +1,10 @@
-# 66 旧 BLOB 页链与 COMPACT 验证
+# 66. 旧 BLOB 页链与 COMPACT 验证
 
 本章接[COMPACT 行布局](65-compact-row-layout.md)。目标是手工走完一条旧链，说明哪些证据支持恢复出的完整值，并复跑配对验收。
 
-## 一、旧链页头
+<a id="一旧链页头"></a>
+
+## 旧链页头
 
 在 debug 路径真实样本 `testdata/compact-legacy/lesson_compact_initial.ibd.gz` 中，首条 txt 的首页为 5。绝对位置 `5×16384=81920`，页内字节如下：
 
@@ -20,7 +22,9 @@
 
 普通样本的页 5 则为 type=24，第一块位于 696，长度 15680；下一块在页 6 偏移 49，长度 16327。它们来自新 LOB 索引项，不允许用旧链的 46/16330 常量解释。
 
-## 二、读取算法与失败条件
+<a id="二读取算法与失败条件"></a>
+
+## 读取算法与失败条件
 
 1. 检查引用和整值预算：非零后缀、空间身份、有效首页、已知状态、前缀加后缀不超过列容量及 16 MiB。
 2. 检查首个页的 CRC/LSN、页号、space 和 type，分派新/旧格式。旧引用头偏移必须为 38。
@@ -30,7 +34,9 @@
 
 公开读取入口在任何失败时不返回部分结果。结构损坏测试先重算 CRC，以确保错误抵达链检查；另有不重封装的位翻转专门验证校验和拒绝。测试覆盖循环、0/越界 next、提前结束、零/过大块长、错误 space/type、头偏移、being-modified 标志、错误后缀长度、非法文本前缀及 RowFormat 不匹配。前缀所有权、列容量和包含前缀的资源上限另有直接测试。
 
-## 三、样本矩阵
+<a id="三样本矩阵"></a>
+
+## 样本矩阵
 
 普通 writer 与官方 debug `lob_insert_noindex` writer 各 22 份快照、3866 行。每组内部的 COMPACT/DYNAMIC 执行相同逻辑 SQL，保存独立 hand schema、SQL 结果、完整 ibd、官方 SDI、DDL、索引身份和 writer SQL。
 
@@ -48,7 +54,9 @@ debug 组的 mixed_formats 快照先关闭会话调试点再更新 txt，同一�
 
 SQL 按完整聚簇键排序；隐藏键表按包含重复计数的多重集合比较。二进制值对照 HEX；JSON 使用普通视图和精确数字语义比较。测试还核对每个 Reference、Prefix、Chunk 的源文件切片，重新拼接后必须等于类型值。
 
-## 四、离线复跑
+<a id="四离线复跑"></a>
+
+## 离线复跑
 
 在仓库根目录运行：
 
@@ -65,6 +73,8 @@ python3 scripts/verify_compact_fixtures.py --mysql-bin /path/to/mysql-8.0.45/bin
 
 重新采集使用 `scripts/generate_compact_fixtures.py --mysql /path/to/mysql --socket /path/to/mysql.sock --out /new/directory`；debug 实例另加 `--legacy`，程序验证版本为 8.0.45-debug。输出目录必须新建。生成器只创建独立新库并设置会话变量，使用 FOR EXPORT 复制；生产实例不应直接照搬 debug 配置。
 
-## 五、适用范围
+<a id="五适用范围"></a>
+
+## 适用范围
 
 本阶段覆盖 MySQL 8.0.45 的 16 KiB 非压缩非加密独立表空间，两种行格式、上述当前值与 DDL 组合。旧 BLOB 样本是官方同版本 debug 写入路径产生的实际文件，不能作为 5.7 或任意旧版本兼容的证据。REDUNDANT、压缩 BLOB、MVCC 历史恢复和 VIRTUAL 求值继续不在范围内。资源限制仍按单值和现有整树 API 执行；流式读取属于下一阶段。

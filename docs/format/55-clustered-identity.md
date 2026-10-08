@@ -1,8 +1,12 @@
-# 55：没有 PRIMARY KEY，InnoDB 怎样组织整行
+# 55. 没有 PRIMARY KEY，InnoDB 怎样组织整行
+
+<a id="55没有-primary-keyinnodb-怎样组织整行"></a>
 
 前置知识是第 51–54 章的完整聚簇键、物理字段顺序及树范围。本章解决一个更早的问题：表没有显式 PRIMARY KEY 时，到底哪棵树包含完整用户行？验收和重复行身份见[第 56 章](56-rowid-layout-validation.md)。
 
-## 1. 三种聚簇身份
+<a id="1-三种聚簇身份"></a>
+
+## 三种聚簇身份
 
 InnoDB 每张表都有聚簇索引，其叶子保存完整行。聚簇不等于 SQL 中一定存在显式主键。
 
@@ -21,7 +25,9 @@ InnoDB 每张表都有聚簇索引，其叶子保存完整行。聚簇不等于 
 - `storage/innobase/handler/ha_innodb.cc:14937–15022`：没有候选时添加隐藏列/索引，并为聚簇记录追加事务字段和其余用户列。
 - `storage/innobase/dict/dict0dd.cc:3187–3207`：创建运行时 GEN_CLUST_INDEX 或先创建所选用户索引。
 
-## 2. 不按建表文本顺序或名字猜测
+<a id="2-不按建表文本顺序或名字猜测"></a>
+
+## 不按建表文本顺序或名字猜测
 
 真实 `unique_multiple` 的声明顺序是：
 
@@ -43,7 +49,9 @@ nullable 列可以为 NULL，b、a 都为 NOT NULL。最终快照的 SQL `INFORM
 
 解析器检查首个索引是否属于支持的聚簇候选，再核对它的完整元素列表：键列在前、事务列居中、剩余用户列在后。不会重新按名字或支持类型筛选候选。显式 PRIMARY 出现在非首位、聚簇字段缺失或顺序不符，都不能提供可读 Schema。
 
-## 3. 隐藏索引的两个名字
+<a id="3-隐藏索引的两个名字"></a>
+
+## 隐藏索引的两个名字
 
 `rowid_lesson` 没有任何用户索引，真实 SDI 中却存在：
 
@@ -60,7 +68,9 @@ nullable 列可以为 NULL，b、a 都为 NOT NULL。最终快照的 SQL `INFORM
 
 元素 length=4294967295 是 DD 隐藏元素的标记，并不表示载荷有四十多亿字节。DB_ROW_ID 的物理宽度仍然固定为 6。实现同时核对列属性、索引隐藏状态、元素数量、顺序和方向，不依赖名字单独识别。
 
-## 4. Schema 保留显式与隐式的区别
+<a id="4-schema-保留显式与隐式的区别"></a>
+
+## Schema 保留显式与隐式的区别
 
 旧显式主键继续使用 `primary_key` 或 `primary_keys`，已有手工 schema 无需修改。无显式主键使用新字段：
 
@@ -80,7 +90,9 @@ nullable 列可以为 NULL，b、a 都为 NOT NULL。最终快照的 SQL `INFORM
 
 `Record.RowID` 是 `*uint64`：隐藏键行有值，用户列聚簇键行是 nil。`Values` 始终只有 SQL 用户列，顺序不变。隐藏键的 `NodePointer.Key` 为 uint64，用户键继续按原类型返回。
 
-## 5. 本阶段允许二级索引共存的确切含义
+<a id="5-本阶段允许二级索引共存的确切含义"></a>
+
+## 本阶段允许二级索引共存的确切含义
 
 用户已确认放宽旧限制：普通 BTREE 二级索引存在时，可以读取其表的聚簇数据。`IndexMetadata.Clustered` 标识 SDI 首个索引角色，`Hidden` 保留 DD 隐藏状态；`Issues` 仍表达整体不支持或不一致问题。
 

@@ -1,8 +1,12 @@
-# 57：delete-mark 不等于空闲记录
+# 57. delete-mark 不等于空闲记录
+
+<a id="57delete-mark-不等于空闲记录"></a>
 
 本章从同一张表的连续快照学习 UPDATE、DELETE 怎样改变物理记录。前置知识是记录链、页目录、NULL/变长元数据和聚簇键；完整验收与树收缩见[第 58 章](58-change-snapshot-validation.md)。
 
-## 1. 三种状态分开理解
+<a id="1-三种状态分开理解"></a>
+
+## 三种状态分开理解
 
 | 状态 | 是否仍在 infimum→supremum 记录链 | 是否计入 PAGE_N_RECS | 本阶段输出 |
 |---|---|---|---|
@@ -14,7 +18,9 @@ delete-mark 是记录头的标志，并不是“next 指针已把记录摘掉”
 
 因此解析顺序是：先按完整物理链还原布局，验证目录、堆、空间和所有键顺序；到结果收集阶段，再分开普通行和删除摘要。跨叶子页顺序也覆盖被标记记录，而不是只比较最终返回的普通行。
 
-## 2. 0x20 标志位不占新的载荷字节
+<a id="2-0x20-标志位不占新的载荷字节"></a>
+
+## 0x20 标志位不占新的载荷字节
 
 普通 COMPACT 记录头是 origin 前五字节。本阶段只额外允许头首字节中的 `0x20`，不改变后续字段布局：
 
@@ -27,7 +33,9 @@ delete-mark 是记录头的标志，并不是“next 指针已把记录摘掉”
 
 源码：`storage/innobase/rem/rec.h:121` 定义 `REC_INFO_DELETED_FLAG=0x20`；`storage/innobase/include/rem0rec.ic:353–394` 读取/设置该位。以下引用均相对本地 MySQL 8.0.45 源码根。
 
-## 3. 真实删除记录的完整位置
+<a id="3-真实删除记录的完整位置"></a>
+
+## 真实删除记录的完整位置
 
 `testdata/changes/lesson` 的列为 `id INT PRIMARY KEY, n INT NULL, v VARCHAR(1500) NULL`。`lesson_before` 有 id=1..6，每个 v 为 127 个 a。随后提交一组更新：改变长度、NULL 状态，删除 id=3，将 id=4 改为 40，删除并重插 id=5。
 
@@ -47,7 +55,9 @@ delete-mark 是记录头的标志，并不是“next 指针已把记录摘掉”
 
 本地残留在这个受控案例中恰好能与变更前 SQL 内容对照，但 API 不把它包装成“恢复出的历史行”：删除时事务字段已经改变，复杂类型可能涉及旧页外版本，完整历史还需要 undo 和可见性规则。
 
-## 4. UPDATE 不保证 origin 不变
+<a id="4-update-不保证-origin-不变"></a>
+
+## UPDATE 不保证 origin 不变
 
 同表各行的位置变化如下：
 
@@ -61,7 +71,9 @@ delete-mark 是记录头的标志，并不是“next 指针已把记录摘掉”
 
 id=1 的新 `Start=1050, Offset=1058, End=1207`，而旧位置进入 free/碎片管理。id=2 的新 `Start=275, Offset=281, End=298`，两列 NULL 后仅剩键和事务字段。正确解析应从当前链指针、位图和长度数组计算位置，不能缓存上一快照的行偏移。
 
-## 5. purge 才会从在链记录数中移除删除记录
+<a id="5-purge-才会从在链记录数中移除删除记录"></a>
+
+## purge 才会从在链记录数中移除删除记录
 
 同一根页在四个实际快照中的状态：
 
@@ -78,7 +90,9 @@ purge 前，id=3 和旧 id=4 各占 155 字节。purge 后垃圾字节增加 `84
 
 源码 `storage/innobase/page/page0cur.cc:2380–2427` 将删除记录从链中摘除；`storage/innobase/include/page0page.ic:890–921` 将其加入 PAGE_FREE、增加 PAGE_GARBAGE 并减少 PAGE_N_RECS。free 指向的是空闲记录 origin，垃圾量还包括碎片；不能只用 free 链长度估算垃圾字节，更不能把全部残留强行解码为历史行。
 
-## 6. 删除摘要的 API 语义
+<a id="6-删除摘要的-api-语义"></a>
+
+## 删除摘要的 API 语义
 
 `Result.DeletedRecords` 的成员为 `DeletedRecord`，包含 PageNumber、Start/Offset/End、Header、完整 Key、可选 RowID、Transaction/RollPointer 和独立 `Raw`。Raw 覆盖本地 `[Start,End)`，包括长度、位图、头和本地载荷；其 origin 相对 Raw 的下标是 `Offset−Start`。
 

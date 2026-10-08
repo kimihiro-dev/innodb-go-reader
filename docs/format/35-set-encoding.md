@@ -1,4 +1,4 @@
-# 35 SET：成员字典与位掩码
+# 35. SET：成员字典与位掩码
 
 本章目标：从 SET 的整数位掩码恢复选中的成员，理解它与 ENUM、BIT 的区别，并保留仅靠显示字符串无法表达的状态。前置知识见 [BIT](29-bit-encoding.md)、[ENUM](33-enum-encoding.md) 和 [记录列值](04-record-to-values.md)。
 

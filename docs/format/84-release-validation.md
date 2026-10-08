@@ -89,7 +89,6 @@ gzip -dc testdata/generated/mixed_instant.ibd.gz > /tmp/release-virtual.ibd
 
 最终执行记录见[首版验收报告](../release-validation/report.json)，具体环境、缓存状态、fuzz次数、基准与存活堆以同目录日志为准。
 
-
 本次结果（Go1.25.7，darwin/arm64，Apple M4）：完整race通过，核心/rowio/visual命中有效缓存，CLI重新执行9.003秒；覆盖率分别92.5%/89.7%/91.4%/89.2%。vet通过；Read/PartitionDirectory/Decoder/HTMLReport四项主动fuzz分别347914/7244/605370/18160次无失败。
 
 3次基准Read约35.981ms、133457557 B/op，Scan约33.679ms、121940224 B/op；Read保留12000行的存活堆58963552字节，Scan1000/12000行采样峰值1154320/1211176字节。源码/夹具指纹一致，正常导出、VIRTUAL显式物化与拒绝、CRC/页号拒绝、失败覆盖保护全部通过。复验脚本自身的失败报告与现有目录保护另用隔离临时目录检查通过。

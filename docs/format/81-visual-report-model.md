@@ -1,6 +1,8 @@
 # 81. 离线报告：从空间到索引与字节
 
-## 学习目标与层级
+<a id="学习目标与层级"></a>
+
+## 学习目标与前置概念
 
 把已有解析结果变成可追溯的图和页详情，并明确图没有验证什么。前置为[页与记录](03-page-to-record.md)、[LOB](13-lob-reference-and-pages.md)、[空间分析](75-space-allocation-layout.md)和[正式CLI](77-cli-and-lossless-export.md)。
 

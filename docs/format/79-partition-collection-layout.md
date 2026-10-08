@@ -1,6 +1,8 @@
 # 79. 分区表：逻辑定义与多个物理文件
 
-## 学习目标与前置知识
+<a id="学习目标与前置知识"></a>
+
+## 学习目标与前置概念
 
 理解一张逻辑表为什么需要多个不同身份的表空间，以及怎样从完整文件集合恢复行流。本章建立在[SDI记录](41-sdi-records.md)、[自动schema](43-sdi-schema.md)、[索引根验证](44-metadata-roots-validation.md)和[流式协议](67-streaming-contract.md)上。
 

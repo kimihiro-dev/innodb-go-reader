@@ -1,4 +1,4 @@
-# 31 BINARY：定长二进制、补零与记录定位
+# 31. BINARY：定长二进制、补零与记录定位
 
 本章目标：从真实记录恢复 BINARY 的全部字节，区分固定宽度、变长字段、空输入和 NULL。前置知识见 [记录到列值](04-record-to-values.md)、[变长字段](11-variable-lengths.md)；验证与复现见 [下一章](32-binary-validation.md)。
 

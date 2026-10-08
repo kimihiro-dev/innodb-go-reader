@@ -1,8 +1,12 @@
-# 49：字符集、原始字节与 CHAR 布局
+# 49. 字符集、原始字节与 CHAR 布局
+
+<a id="49字符集原始字节与-char-布局"></a>
 
 本章解决两个问题：同一字节怎样变成正确的文字，以及字符集为什么会改变 CHAR 的物理布局。前置知识是[变长字段](11-variable-lengths.md)、[CHAR 空格](37-char-encoding.md)和[SDI 到 schema](43-sdi-schema.md)。[第 50 章](50-charset-validation.md)给出零宽字段、LOB 和验证方法。
 
-## 1. 字节、编码、排序规则分别负责什么
+<a id="1-字节编码排序规则分别负责什么"></a>
+
+## 字节、编码、排序规则分别负责什么
 
 ```text
 记录头 / NULL 位 / 固定宽度或变长长度
@@ -32,7 +36,9 @@ Go string 是字节序列，语言本身不保证里面是 UTF-8；本 API 明�
 
 这里的 Charset 是 schema 中的小写名称。SQL 的 `utf8` 别名在 8.0.45 SDI 中表现为 utf8mb3 对应的 collation；手工 schema 的 `charset:"utf8"` 也按 utf8mb3 解释。不要把这个别名理解为支持四字节 emoji。
 
-## 2. MySQL latin1 不等于 ISO-8859-1
+<a id="2-mysql-latin1-不等于-iso-8859-1"></a>
+
+## MySQL latin1 不等于 ISO-8859-1
 
 官方 `strings/ctype-latin1.cc:116–166` 明确使用 CP1252，且将 CP1252 的五个未定义位置映射为同码点控制字符。
 
@@ -50,7 +56,9 @@ Go string 是字节序列，语言本身不保证里面是 UTF-8；本 API 明�
 
 id=130 的 origin=5547，字段起点=5564，三个 `81` 解码成 U+0081，不变成问号，也不丢弃。SQL 独立输出经 `CONVERT(... USING utf8mb4)` 验证，不依赖 Go 解码器生成预期。
 
-## 3. 单字节 CHAR(N) 是定长字段
+<a id="3-单字节-charn-是定长字段"></a>
+
+## 单字节 CHAR(N) 是定长字段
 
 以 [charset_latin1_bin](../../testdata/charset/charset_latin1_bin.sql) 的 id=6 为例。字段依次是：
 
@@ -91,7 +99,9 @@ record.TextBytes[1]   // []byte{0x80,0x20,0x20,0x20,0x20}
 
 此时 CharStorage 的 Go 字节长度是 7，原始 TextBytes 长度是 5。只有后者能直接对应物理偏移。
 
-## 4. UTF-8 CHAR(N) 仍使用变长元数据
+<a id="4-utf-8-charn-仍使用变长元数据"></a>
+
+## UTF-8 CHAR(N) 仍使用变长元数据
 
 单字节字符集的 `mbminlen=mbmaxlen=1`。UTF-8 每字符长度不固定，因此在当前 COMPACT/DYNAMIC 记录中，CHAR 参与变长长度数组。
 
@@ -126,7 +136,9 @@ f0 9f 98 80 20   “😀 ”，仍五字节
 - 若物理字节长度大于 N，末尾不应继续存在 20，否则没有遵循当前去空格格式。
 - CHAR 的 Values 只裁剪 U+0020，不裁剪制表符、换行或其他 Unicode 空白。
 
-## 5. 最大字节数决定长度元数据
+<a id="5-最大字节数决定长度元数据"></a>
+
+## 最大字节数决定长度元数据
 
 VARCHAR(N) 中 N 是字符数，不是字节数。其物理最大字节数为 `N×charsetWidth`：
 
@@ -143,7 +155,9 @@ TINYTEXT 虽然最大也是 255 字节，仍沿用 DATA_BLOB 的大列长度规�
 
 当前声明限制为 CHAR 0..255 字符、VARCHAR 0..floor(65535/字符宽度) 字符；BINARY 0..255 字节、VARBINARY 0..65535 字节。声明上限不保证所有列组合满足 MySQL 行大小限制；页外值仍有本项目 16 MiB 单值预算。
 
-## 6. SDI 与字典列
+<a id="6-sdi-与字典列"></a>
+
+## SDI 与字典列
 
 自动入口只映射实测排序规则：
 

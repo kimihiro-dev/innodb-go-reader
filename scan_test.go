@@ -57,9 +57,17 @@ func TestScanAllFixtures(t *testing.T) {
 			b := scanFixture(t, path)
 			r := bytes.NewReader(b)
 			size := int64(len(b))
-			want, werr := ReadMaterializedAuto(r, size)
 			got := &Result{Records: make([]Record, 0)}
-			report, err := ScanMaterializedAuto(context.Background(), r, size, ScanOptions{}, collectScan(got))
+			var want *MaterializedResult
+			var report ScanReport
+			var err, werr error
+			if schema := mysql57Schema(t, path); schema != nil {
+				want, werr = ReadMaterialized(r, size, *schema)
+				report, err = ScanMaterialized(context.Background(), r, size, *schema, ScanOptions{}, collectScan(got))
+			} else {
+				want, werr = ReadMaterializedAuto(r, size)
+				report, err = ScanMaterializedAuto(context.Background(), r, size, ScanOptions{}, collectScan(got))
+			}
 			if werr != nil {
 				if err == nil || report.Complete {
 					t.Fatal("accepted rejected input", err)
@@ -117,7 +125,7 @@ func TestScanAllFixtures(t *testing.T) {
 			rows += len(got.Records)
 		})
 	}
-	if successful != 484 || rejected != 3 || rows != 98811 {
+	if successful != 528 || rejected != 3 || rows != 101019 {
 		t.Fatalf("files=%d rejected=%d rows=%d", successful, rejected, rows)
 	}
 	t.Logf("%d successful, %d rejected, %d rows, %d external values", successful, rejected, rows, external)

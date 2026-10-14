@@ -1,0 +1,84 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "5.7.10",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "database": "innodb_partition_f43dbae5932a",
+  "table": "sub_rows",
+  "directory": [
+    {
+      "sub": "s0",
+      "name": "p0",
+      "method": "RANGE",
+      "ordinal": 1,
+      "expression": "n"
+    },
+    {
+      "sub": "s1",
+      "name": "p0",
+      "method": "RANGE",
+      "ordinal": 1,
+      "expression": "n"
+    },
+    {
+      "sub": "s2",
+      "name": "p1",
+      "method": "RANGE",
+      "ordinal": 2,
+      "expression": "n"
+    },
+    {
+      "sub": "s3",
+      "name": "p1",
+      "method": "RANGE",
+      "ordinal": 2,
+      "expression": "n"
+    }
+  ],
+  "physical": [
+    {
+      "name": "innodb_partition_f43dbae5932a/sub_rows#P#p0#SP#s0",
+      "path": "./innodb_partition_f43dbae5932a/sub_rows#P#p0#SP#s0.ibd",
+      "space": 193,
+      "table_id": 211
+    },
+    {
+      "name": "innodb_partition_f43dbae5932a/sub_rows#P#p0#SP#s1",
+      "path": "./innodb_partition_f43dbae5932a/sub_rows#P#p0#SP#s1.ibd",
+      "space": 194,
+      "table_id": 212
+    },
+    {
+      "name": "innodb_partition_f43dbae5932a/sub_rows#P#p1#SP#s2",
+      "path": "./innodb_partition_f43dbae5932a/sub_rows#P#p1#SP#s2.ibd",
+      "space": 195,
+      "table_id": 213
+    },
+    {
+      "name": "innodb_partition_f43dbae5932a/sub_rows#P#p1#SP#s3",
+      "path": "./innodb_partition_f43dbae5932a/sub_rows#P#p1#SP#s3.ibd",
+      "space": 196,
+      "table_id": 214
+    }
+  ],
+  "columns": [
+    {
+      "name": "id",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "payload",
+      "type": "longtext",
+      "extra": ""
+    }
+  ],
+  "partitions": {}
+}

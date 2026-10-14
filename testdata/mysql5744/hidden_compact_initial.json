@@ -1,0 +1,23 @@
+{
+  "row_format": "COMPACT",
+  "columns": [
+    {
+      "name": "seq",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "payload",
+      "type": "LONGTEXT",
+      "nullable": true,
+      "charset": "utf8mb4"
+    }
+  ],
+  "root_page": 3,
+  "index_id": 73,
+  "space_id": 56,
+  "clustered_key": {
+    "name": "GEN_CLUST_INDEX",
+    "hidden_row_id": true
+  }
+}

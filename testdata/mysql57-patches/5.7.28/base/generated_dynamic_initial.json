@@ -1,0 +1,34 @@
+{
+  "row_format": "DYNAMIC",
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false
+    },
+    {
+      "name": "base",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "s",
+      "type": "INT",
+      "nullable": true,
+      "generation_expression": "(`base` + 1)"
+    }
+  ],
+  "root_page": 3,
+  "index_id": 67,
+  "space_id": 36,
+  "virtual_columns": [
+    {
+      "name": "v",
+      "ordinal": 3,
+      "expression": "(`base` + 100)"
+    }
+  ],
+  "primary_keys": [
+    "id"
+  ]
+}

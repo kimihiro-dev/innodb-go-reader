@@ -1,0 +1,14 @@
+{
+  "checked": 3397,
+  "unchanged_assets_and_prior_evidence": 3129,
+  "changed_existing_files": [
+    "docs/DECISIONS.md",
+    "docs/HISTORY.md",
+    "docs/README.md",
+    "docs/REQUIREMENTS.md",
+    "docs/TODO.md",
+    "docs/format/75-space-allocation-layout.md",
+    "docs/format/README.md"
+  ],
+  "existing_implementation_unchanged": true
+}

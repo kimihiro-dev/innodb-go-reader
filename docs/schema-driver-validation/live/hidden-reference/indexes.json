@@ -1,0 +1,36 @@
+[
+  {
+    "Name": "n_idx",
+    "Unique": false,
+    "RowFormat": "COMPACT",
+    "SpaceID": 28,
+    "IndexID": 52,
+    "RootPage": 4,
+    "Fields": [
+      {
+        "Column": 0,
+        "Definition": {
+          "name": "n",
+          "type": "INT",
+          "nullable": true
+        },
+        "PrefixBytes": 0,
+        "RowID": false
+      },
+      {
+        "Column": -1,
+        "Definition": {
+          "name": "DB_ROW_ID",
+          "type": "BINARY",
+          "max_bytes": 6
+        },
+        "PrefixBytes": 0,
+        "RowID": true
+      }
+    ],
+    "UserFields": 1,
+    "ClusteredFields": [
+      1
+    ]
+  }
+]

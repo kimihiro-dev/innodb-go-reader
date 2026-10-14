@@ -1,0 +1,23 @@
+--- FAIL: TestSpaceAssets (1.52s)
+    space_test.go:41: assets 795
+FAIL
+FAIL	innodb-go-reader	42.351s
+?   	innodb-go-reader/cmd/innodb-reader	[no test files]
+?   	innodb-go-reader/examples/auto	[no test files]
+?   	innodb-go-reader/examples/changes	[no test files]
+?   	innodb-go-reader/examples/json	[no test files]
+?   	innodb-go-reader/examples/materialized	[no test files]
+?   	innodb-go-reader/examples/query	[no test files]
+?   	innodb-go-reader/examples/read	[no test files]
+?   	innodb-go-reader/examples/scan	[no test files]
+?   	innodb-go-reader/examples/sdi	[no test files]
+?   	innodb-go-reader/examples/secondary	[no test files]
+?   	innodb-go-reader/examples/secondaryquery	[no test files]
+?   	innodb-go-reader/examples/space	[no test files]
+?   	innodb-go-reader/examples/streamlob	[no test files]
+ok  	innodb-go-reader/internal/cli	4.533s
+ok  	innodb-go-reader/internal/mysql57	1.864s
+ok  	innodb-go-reader/rowio	17.247s
+ok  	innodb-go-reader/stats	3.761s
+ok  	innodb-go-reader/visual	4.606s
+FAIL

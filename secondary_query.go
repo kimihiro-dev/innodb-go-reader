@@ -295,6 +295,11 @@ func querySecondary(ctx context.Context, r io.ReaderAt, size int64, table *Schem
 					}
 				}
 			}
+			if s.LegacyInstant != nil {
+				for _, col := range cluster.DefaultColumns {
+					sourceBytes += uint64(len(s.LegacyInstant.Defaults[col-s.LegacyInstant.Columns].Data))
+				}
+			}
 			if e = checkBytes(); e != nil {
 				return e
 			}

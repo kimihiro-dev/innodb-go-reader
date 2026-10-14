@@ -1,0 +1,163 @@
+[
+  {
+    "Name": "px",
+    "Unique": false,
+    "RowFormat": "DYNAMIC",
+    "SpaceID": 38,
+    "IndexID": 72,
+    "RootPage": 4,
+    "Fields": [
+      {
+        "Column": 0,
+        "Definition": {
+          "name": "k",
+          "type": "VARBINARY",
+          "nullable": false,
+          "max_chars": 0,
+          "max_bytes": 24
+        },
+        "PrefixBytes": 3,
+        "RowID": false
+      },
+      {
+        "Column": 3,
+        "Definition": {
+          "collation": "utf8mb4_bin",
+          "charset": "utf8mb4",
+          "name": "name",
+          "type": "VARCHAR",
+          "nullable": true,
+          "max_chars": 40
+        },
+        "PrefixBytes": 8,
+        "RowID": false
+      },
+      {
+        "Column": 0,
+        "Definition": {
+          "name": "k",
+          "type": "VARBINARY",
+          "nullable": false,
+          "max_chars": 0,
+          "max_bytes": 24
+        },
+        "PrefixBytes": 0,
+        "RowID": false
+      },
+      {
+        "Column": 1,
+        "Definition": {
+          "name": "id",
+          "type": "INT",
+          "nullable": false,
+          "max_chars": 0
+        },
+        "PrefixBytes": 0,
+        "RowID": false
+      }
+    ],
+    "UserFields": 2,
+    "ClusteredFields": [
+      2,
+      3
+    ]
+  },
+  {
+    "Name": "dedup",
+    "Unique": false,
+    "RowFormat": "DYNAMIC",
+    "SpaceID": 38,
+    "IndexID": 73,
+    "RootPage": 5,
+    "Fields": [
+      {
+        "Column": 2,
+        "Definition": {
+          "name": "n",
+          "type": "INT",
+          "nullable": true,
+          "max_chars": 0
+        },
+        "PrefixBytes": 0,
+        "RowID": false
+      },
+      {
+        "Column": 0,
+        "Definition": {
+          "name": "k",
+          "type": "VARBINARY",
+          "nullable": false,
+          "max_chars": 0,
+          "max_bytes": 24
+        },
+        "PrefixBytes": 0,
+        "RowID": false
+      },
+      {
+        "Column": 1,
+        "Definition": {
+          "name": "id",
+          "type": "INT",
+          "nullable": false,
+          "max_chars": 0
+        },
+        "PrefixBytes": 0,
+        "RowID": false
+      }
+    ],
+    "UserFields": 3,
+    "ClusteredFields": [
+      1,
+      2
+    ]
+  },
+  {
+    "Name": "s",
+    "Unique": false,
+    "RowFormat": "DYNAMIC",
+    "SpaceID": 38,
+    "IndexID": 74,
+    "RootPage": 6,
+    "Fields": [
+      {
+        "Column": 2,
+        "Definition": {
+          "name": "n",
+          "type": "INT",
+          "nullable": true,
+          "max_chars": 0
+        },
+        "PrefixBytes": 0,
+        "RowID": false
+      },
+      {
+        "Column": 0,
+        "Definition": {
+          "name": "k",
+          "type": "VARBINARY",
+          "nullable": false,
+          "max_chars": 0,
+          "max_bytes": 24
+        },
+        "PrefixBytes": 0,
+        "RowID": false
+      },
+      {
+        "Column": 1,
+        "Definition": {
+          "name": "id",
+          "type": "INT",
+          "nullable": false,
+          "max_chars": 0
+        },
+        "PrefixBytes": 0,
+        "RowID": false
+      }
+    ],
+    "UserFields": 1,
+    "ClusteredFields": [
+      1,
+      2
+    ]
+  }
+]

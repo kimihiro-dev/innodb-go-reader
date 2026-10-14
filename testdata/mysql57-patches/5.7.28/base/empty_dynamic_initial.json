@@ -1,0 +1,23 @@
+{
+  "row_format": "DYNAMIC",
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false
+    },
+    {
+      "name": "payload",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "utf8mb4",
+      "max_chars": 40
+    }
+  ],
+  "root_page": 3,
+  "index_id": 69,
+  "space_id": 38,
+  "primary_keys": [
+    "id"
+  ]
+}

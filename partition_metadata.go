@@ -1,10 +1,11 @@
 package innodb
 
 import (
-	"bytes"
 	"encoding/json"
 	"fmt"
 	"reflect"
+	"sort"
+	"strings"
 	"unicode/utf8"
 )
 
@@ -68,6 +69,12 @@ func inspectPartitionSet(reader *scanReader, inputs []PartitionInput) (*Partitio
 		spaces[sdi.SpaceID] = true
 		f := partitionSDI{input: in, sdi: &SDIResult{SpaceID: sdi.SpaceID}}
 		spaceFound := false
+		for _, rec := range sdi.DeletedRecords {
+			if len(rec.JSON) > MaxSDITotalBytes-total {
+				return nil, nil, fmt.Errorf("%w: collection SDI bytes", ErrLimit)
+			}
+			total += len(rec.JSON)
+		}
 		for _, rec := range sdi.Records {
 			if len(rec.JSON) > MaxSDITotalBytes-total {
 				return nil, nil, fmt.Errorf("%w: collection SDI bytes", ErrLimit)
@@ -77,7 +84,7 @@ func inspectPartitionSet(reader *scanReader, inputs []PartitionInput) (*Partitio
 			if err = decodeMetadata(rec.JSON, &e, "mysqld_version_id dd_version sdi_version dd_object_type dd_object"); err != nil {
 				return nil, nil, err
 			}
-			if e.MySQL != 80045 || e.DD != 80023 || e.Version != 80019 {
+			if !supportedSDIVersion(e) {
 				return nil, nil, fmt.Errorf("%w: partition SDI version", ErrUnsupported)
 			}
 			switch e.Kind {
@@ -150,7 +157,11 @@ func inspectPartitionSet(reader *scanReader, inputs []PartitionInput) (*Partitio
 			return nil, nil, err
 		}
 		var p ddPartition
-		if err := decodeMetadata(raw, &p, "name number se_private_id parent_partition_id engine se_private_data indexes subpartitions"); err != nil {
+		required := "name number se_private_id parent_partition_id engine se_private_data indexes subpartitions"
+		if anchorEnvelope.MySQL < 80019 {
+			required = "name number se_private_id parent_partition_id engine se_private_data indexes"
+		}
+		if err := decodeMetadata(raw, &p, required); err != nil {
 			return nil, nil, err
 		}
 		if len(p.Subpartitions) > 0 {
@@ -169,6 +180,29 @@ func inspectPartitionSet(reader *scanReader, inputs []PartitionInput) (*Partitio
 	}
 	if parts[0].Name != anchorName {
 		return fail("Table SDI is not in the first partition")
+	}
+	columnOwner := parts[0].ID
+	if anchorEnvelope.MySQL == 80011 || anchorEnvelope.MySQL == 80012 {
+		// Early creation/partial rebuild writes the shared owner from a
+		// visited partition, rather than always from the first partition.
+		if len(table.Columns) == 0 {
+			return fail("missing shared columns")
+		}
+		var column ddColumn
+		if err := json.Unmarshal(table.Columns[0], &column); err != nil {
+			return nil, nil, err
+		}
+		properties, err := metadataProperties(column.Private)
+		if err != nil {
+			return nil, nil, err
+		}
+		columnOwner, err = propertyUint(properties, "table_id", 64)
+		if err != nil {
+			return nil, nil, err
+		}
+		if !ids[columnOwner] {
+			return fail("shared column owner is absent from partition directory")
+		}
 	}
 	for i, p := range parts {
 		f := files[p.Name]
@@ -231,23 +265,80 @@ func inspectPartitionSet(reader *scanReader, inputs []PartitionInput) (*Partitio
 			return nil, nil, err
 		}
 		for k, v := range pp {
-			if old, ok := tp[k]; ok && old != v {
-				return fail("conflicting table/partition private properties")
-			}
-		}
-		// Real first-version partitions have empty private data or autoinc only;
-		// do not normalize arbitrary unrecognized property encodings.
-		for k := range pp {
-			if k != "autoinc" {
+			if k != "autoinc" && k != "version" && k != "instant_col" {
 				return nil, nil, fmt.Errorf("%w: partition private attribute %s", ErrUnsupported, k)
 			}
-		}
-		if p.Private != "" {
-			if table.Private != "" && !bytes.Equal([]byte(table.Private), []byte(p.Private)) {
-				return fail("different table/partition properties")
+			if old, ok := tp[k]; ok && old != v && k != "instant_col" {
+				return fail("conflicting table/partition private properties")
 			}
-			adapted["se_private_data"], _ = json.Marshal(p.Private)
+			if k != "instant_col" {
+				tp[k] = v
+			}
 		}
+		if _, legacy := tp["instant_col"]; legacy {
+			minimum, err := propertyUint(tp, "instant_col", 16)
+			if err != nil {
+				return nil, nil, err
+			}
+			columns := append([]json.RawMessage(nil), table.Columns...)
+			stored := uint64(0)
+			for _, raw := range columns {
+				var c ddColumn
+				if err := json.Unmarshal(raw, &c); err != nil {
+					return nil, nil, err
+				}
+				if !c.Virtual && c.Hidden != 2 {
+					stored++
+				}
+			}
+			original := stored
+			if _, ok := pp["instant_col"]; ok {
+				original, err = propertyUint(pp, "instant_col", 16)
+				if err != nil {
+					return nil, nil, err
+				}
+			}
+			if minimum >= stored || original < minimum || original > stored {
+				return fail("partition INSTANT column count")
+			}
+			if _, ok := pp["instant_col"]; ok {
+				tp["instant_col"] = pp["instant_col"]
+			} else {
+				delete(tp, "instant_col")
+			}
+			position := uint64(0)
+			for j, raw := range columns {
+				var c ddColumn
+				if err := json.Unmarshal(raw, &c); err != nil {
+					return nil, nil, err
+				}
+				if c.Virtual || c.Hidden == 2 {
+					continue
+				}
+				if position >= minimum && position < original {
+					properties, err := metadataProperties(c.Private)
+					if err != nil {
+						return nil, nil, err
+					}
+					delete(properties, "default")
+					delete(properties, "default_null")
+					var object metadataObject
+					if err := json.Unmarshal(raw, &object); err != nil {
+						return nil, nil, err
+					}
+					object["se_private_data"], _ = json.Marshal(partitionProperties(properties))
+					columns[j], err = json.Marshal(object)
+					if err != nil {
+						return nil, nil, err
+					}
+				}
+				position++
+			}
+			adapted["columns"], _ = json.Marshal(columns)
+		} else if _, ok := pp["instant_col"]; ok {
+			return fail("partition INSTANT lacks logical minimum")
+		}
+		adapted["se_private_data"], _ = json.Marshal(partitionProperties(tp))
 		adapted["indexes"], _ = json.Marshal(indexes)
 		object, err := json.Marshal(adapted)
 		if err != nil {
@@ -267,7 +358,7 @@ func inspectPartitionSet(reader *scanReader, inputs []PartitionInput) (*Partitio
 		synthetic := *f.sdi
 		synthetic.Records = append(append([]SDIRecord{}, f.sdi.Records...), adaptedRecord)
 		selectPartition(reader, f.input)
-		meta, err := inspectSDITableWithColumnOwner(reader, f.input.Size, &synthetic, parts[0].ID)
+		meta, err := inspectSDITableWithColumnOwner(reader, f.input.Size, &synthetic, columnOwner)
 		if err != nil {
 			return nil, nil, fmt.Errorf("partition %s: %w", p.Name, err)
 		}
@@ -285,4 +376,22 @@ func inspectPartitionSet(reader *scanReader, inputs []PartitionInput) (*Partitio
 		ordered[i] = orderedPartition{PartitionInput: f.input, tableID: p.ID}
 	}
 	return set, ordered, nil
+}
+
+// Preserve escaped property values while adapting only documented attributes.
+func partitionProperties(properties map[string]string) string {
+	keys := make([]string, 0, len(properties))
+	for key := range properties {
+		keys = append(keys, key)
+	}
+	sort.Strings(keys)
+	escape := strings.NewReplacer("\\", "\\\\", ";", "\\;", "=", "\\=")
+	var out strings.Builder
+	for _, key := range keys {
+		out.WriteString(escape.Replace(key))
+		out.WriteByte('=')
+		out.WriteString(escape.Replace(properties[key]))
+		out.WriteByte(';')
+	}
+	return out.String()
 }

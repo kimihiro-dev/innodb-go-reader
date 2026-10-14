@@ -1,0 +1,9 @@
+--- 5.7.28/sql/json_binary.h
++++ 5.7.44/sql/json_binary.h
+@@ -2,5 +2,5 @@
+ #define JSON_BINARY_INCLUDED
+ 
+-/* Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved.
++/* Copyright (c) 2015, 2023, Oracle and/or its affiliates.
+ 
+    This program is free software; you can redistribute it and/or modify

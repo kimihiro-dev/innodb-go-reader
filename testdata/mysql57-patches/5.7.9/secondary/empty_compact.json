@@ -1,0 +1,21 @@
+{
+  "row_format": "COMPACT",
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false
+    },
+    {
+      "name": "n",
+      "type": "INT",
+      "nullable": true
+    }
+  ],
+  "root_page": 3,
+  "index_id": 109,
+  "space_id": 59,
+  "primary_keys": [
+    "id"
+  ]
+}

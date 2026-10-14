@@ -1,0 +1,24 @@
+=== RUN   TestLegacyInstantDamage
+=== RUN   TestLegacyInstantDamage/count-small
+=== RUN   TestLegacyInstantDamage/count-large
+=== RUN   TestLegacyInstantDamage/two-byte-noncanonical
+=== RUN   TestLegacyInstantDamage/mixed-flags
+=== RUN   TestLegacyInstantDamage/min-flag
+=== RUN   TestLegacyInstantDamage/original-count
+=== RUN   TestLegacyInstantDamage/default-count
+=== RUN   TestLegacyInstantDamage/null-not-null
+=== RUN   TestLegacyInstantDamage/default-width
+--- PASS: TestLegacyInstantDamage (0.00s)
+    --- PASS: TestLegacyInstantDamage/count-small (0.00s)
+    --- PASS: TestLegacyInstantDamage/count-large (0.00s)
+    --- PASS: TestLegacyInstantDamage/two-byte-noncanonical (0.00s)
+    --- PASS: TestLegacyInstantDamage/mixed-flags (0.00s)
+    --- PASS: TestLegacyInstantDamage/min-flag (0.00s)
+    --- PASS: TestLegacyInstantDamage/original-count (0.00s)
+    --- PASS: TestLegacyInstantDamage/default-count (0.00s)
+    --- PASS: TestLegacyInstantDamage/null-not-null (0.00s)
+    --- PASS: TestLegacyInstantDamage/default-width (0.00s)
+=== RUN   TestMySQL8011ZeroLOBEntryBoundary
+--- PASS: TestMySQL8011ZeroLOBEntryBoundary (0.00s)
+PASS
+ok  	innodb-go-reader	0.935s

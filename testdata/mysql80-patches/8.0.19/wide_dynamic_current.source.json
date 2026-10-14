@@ -1,0 +1,660 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.19",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "columns": [
+    {
+      "name": "id",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n0",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n1",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n2",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n3",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n4",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n5",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n6",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n7",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n8",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n9",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n10",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n11",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n12",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n13",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n14",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n15",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n16",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n17",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n18",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n19",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n20",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n21",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n22",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n23",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n24",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n25",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n26",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n27",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n28",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n29",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n30",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n31",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n32",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n33",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n34",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n35",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n36",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n37",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n38",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n39",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n40",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n41",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n42",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n43",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n44",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n45",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n46",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n47",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n48",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n49",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n50",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n51",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n52",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n53",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n54",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n55",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n56",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n57",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n58",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n59",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n60",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n61",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n62",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n63",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n64",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n65",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n66",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n67",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n68",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n69",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n70",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n71",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n72",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n73",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n74",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n75",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n76",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n77",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n78",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n79",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n80",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n81",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n82",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n83",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n84",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n85",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n86",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n87",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n88",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n89",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n90",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n91",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n92",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n93",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n94",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n95",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n96",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n97",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n98",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n99",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n100",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n101",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n102",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n103",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n104",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n105",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n106",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n107",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n108",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n109",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n110",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n111",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n112",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n113",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n114",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n115",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n116",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n117",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n118",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n119",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n120",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n121",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n122",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n123",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n124",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n125",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "a",
+      "type": "int",
+      "extra": ""
+    }
+  ],
+  "indexes": [
+    {
+      "name": "PRIMARY",
+      "index_id": 201,
+      "space_id": 46,
+      "root_page": 4
+    }
+  ],
+  "table": "wide_dynamic",
+  "database": "innodb_reader_80_08123feb413d"
+}

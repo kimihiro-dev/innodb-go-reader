@@ -1,0 +1,13 @@
+{
+  "partition.go": "5ae230e95d010f7b95e230feb92d7f20b102041a49aaffc92bf3d123d2960c92",
+  "partition_metadata.go": "bff92c9e3c02955c27f9d45d1c7b95c941c0398eeff19c47c2a5e7a37089a388",
+  "partition_schema.go": "44ec123a3f99dfa930d0cf0bdd7a0f59bef9e3ca845ca080603c5f047d0662ec",
+  "metadata.go": "f683a6140c1fe21d3576dae0cbdcf2e6542e2968a0e1a3074979e053ddc9515f",
+  "internal/cli/partition.go": "4bc268db1290dd9eb5d602c2b140fc238da2c78d514aeca0da8109217d3b6460",
+  "internal/cli/partition_prepare.go": "9f47105db523326d1928630b78c5a45c4a0a00cafaecb7e6e7176cbff0dde7b4",
+  "internal/cli/prepare.go": "d99092e3f6aefd6c6c51d3c31dcdbb54b7ac7f4a0d92580d38b30c316e5b99da",
+  "internal/cli/run.go": "95cde186dc94fbb8970916c82695f20f34c8fa4e1568f7528e347412eb37c1d5",
+  "internal/mysql57/collect.go": "bab6f1ca381df221c93c63417790becd0f580a96c0fda5f302f5a683e2dc75c4",
+  "internal/mysql57/partitions.go": "6e3a1c13f8ec498a391d4d77ad492fc1b66e43634432ebe9f83f692e068e6b76",
+  "scripts/generate_partition_patch_fixtures.py": "d71c73cd6a655525b2aafbcd145fa5b9b7486782c057ec02fafc2eb554cbe88b"
+}

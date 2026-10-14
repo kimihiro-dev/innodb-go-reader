@@ -1,0 +1,91 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.19",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "database": "innodb_partition_673afd0975a1",
+  "table": "hashes_dynamic",
+  "directory": [
+    {
+      "sub": null,
+      "name": "p0",
+      "method": "HASH",
+      "ordinal": 1,
+      "expression": "`n`"
+    },
+    {
+      "sub": null,
+      "name": "p1",
+      "method": "HASH",
+      "ordinal": 2,
+      "expression": "`n`"
+    },
+    {
+      "sub": null,
+      "name": "p2",
+      "method": "HASH",
+      "ordinal": 3,
+      "expression": "`n`"
+    }
+  ],
+  "physical": [
+    {
+      "name": "innodb_partition_673afd0975a1/hashes_dynamic#p#p0",
+      "path": "./innodb_partition_673afd0975a1/hashes_dynamic#p#p0.ibd",
+      "space": 126,
+      "table_id": 1187
+    },
+    {
+      "name": "innodb_partition_673afd0975a1/hashes_dynamic#p#p1",
+      "path": "./innodb_partition_673afd0975a1/hashes_dynamic#p#p1.ibd",
+      "space": 127,
+      "table_id": 1188
+    },
+    {
+      "name": "innodb_partition_673afd0975a1/hashes_dynamic#p#p2",
+      "path": "./innodb_partition_673afd0975a1/hashes_dynamic#p#p2.ibd",
+      "space": 128,
+      "table_id": 1189
+    }
+  ],
+  "columns": [
+    {
+      "name": "id",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "v",
+      "type": "varchar",
+      "extra": ""
+    },
+    {
+      "name": "payload",
+      "type": "longtext",
+      "extra": ""
+    },
+    {
+      "name": "b",
+      "type": "longblob",
+      "extra": ""
+    },
+    {
+      "name": "d",
+      "type": "decimal",
+      "extra": ""
+    },
+    {
+      "name": "j",
+      "type": "json",
+      "extra": ""
+    }
+  ],
+  "partitions": {}
+}

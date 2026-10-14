@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-14",
+  "status": "complete",
+  "versions": {
+    "5.7.10": {
+      "collections": 18,
+      "supported_collections": 17,
+      "physical_files": 55,
+      "supported_files": 51,
+      "supported_SQL_rows": 838
+    },
+    "5.7.11": {
+      "collections": 18,
+      "supported_collections": 17,
+      "physical_files": 55,
+      "supported_files": 51,
+      "supported_SQL_rows": 838
+    },
+    "5.7.12": {
+      "collections": 18,
+      "supported_collections": 17,
+      "physical_files": 55,
+      "supported_files": 51,
+      "supported_SQL_rows": 838
+    },
+    "5.7.28": {
+      "collections": 18,
+      "supported_collections": 17,
+      "physical_files": 55,
+      "supported_files": 51,
+      "supported_SQL_rows": 838
+    },
+    "5.7.43": {
+      "collections": 18,
+      "supported_collections": 17,
+      "physical_files": 55,
+      "supported_files": 51,
+      "supported_SQL_rows": 838
+    },
+    "5.7.44": {
+      "collections": 18,
+      "supported_collections": 17,
+      "physical_files": 55,
+      "supported_files": 51,
+      "supported_SQL_rows": 838
+    },
+    "5.7.9": {
+      "collections": 18,
+      "supported_collections": 17,
+      "physical_files": 55,
+      "supported_files": 51,
+      "supported_SQL_rows": 838
+    },
+    "8.0.11": {
+      "collections": 18,
+      "supported_collections": 16,
+      "physical_files": 55,
+      "supported_files": 48,
+      "supported_SQL_rows": 827
+    },
+    "8.0.12": {
+      "collections": 22,
+      "supported_collections": 19,
+      "physical_files": 67,
+      "supported_files": 57,
+      "supported_SQL_rows": 816
+    },
+    "8.0.16": {
+      "collections": 22,
+      "supported_collections": 20,
+      "physical_files": 67,
+      "supported_files": 60,
+      "supported_SQL_rows": 839
+    },
+    "8.0.19": {
+      "collections": 22,
+      "supported_collections": 20,
+      "physical_files": 67,
+      "supported_files": 60,
+      "supported_SQL_rows": 839
+    },
+    "8.0.23": {
+      "collections": 24,
+      "supported_collections": 22,
+      "physical_files": 73,
+      "supported_files": 66,
+      "supported_SQL_rows": 843
+    },
+    "8.0.28": {
+      "collections": 24,
+      "supported_collections": 23,
+      "physical_files": 73,
+      "supported_files": 69,
+      "supported_SQL_rows": 854
+    },
+    "8.0.30": {
+      "collections": 26,
+      "supported_collections": 25,
+      "physical_files": 79,
+      "supported_files": 75,
+      "supported_SQL_rows": 860
+    },
+    "8.0.45": {
+      "collections": 26,
+      "supported_collections": 25,
+      "physical_files": 79,
+      "supported_files": 75,
+      "supported_SQL_rows": 860
+    }
+  },
+  "supported_collections": 289,
+  "supported_files": 867,
+  "supported_SQL_rows": 12604,
+  "physical_files": 945,
+  "go_test": "passed",
+  "affected_race": "passed",
+  "vet": "passed",
+  "CLI": "passed",
+  "limitations": [
+    "subpartitions/LINEAR/COLUMNS/other KEY variants",
+    "collection query/routing/global key merge",
+    "8.0.12 first-partition rebuild stale column owner",
+    "8.0.11/12/16/19/23 EXCHANGE multiple valid Table SDI",
+    "5.7 online filename-encoded identifiers",
+    "unvalidated patch/type/DDL combinations or upgraded mixed files"
+  ],
+  "CLI_supported_collections": 289,
+  "driver_live_successful_collections": 105,
+  "driver_live_subpartition_rejections": 7,
+  "official_innochecksum_files": 945,
+  "affected_final_CLI_collections": 33,
+  "static_builds": "darwin/arm64, linux/amd64, windows/amd64 passed",
+  "existing_assets": "9245 unchanged",
+  "final_negative_reproduction": "original-default-red.log; original-default-green.log",
+  "documentation": "passed",
+  "git_diff_check": "passed",
+  "containers": "15 stopped; data retained",
+  "logs": {
+    "go_test": "final-go-test.log",
+    "affected_race": "final-race.log",
+    "vet": "final-vet.log",
+    "final_CLI": "final-cli.log",
+    "original_column_default_red": "original-default-red.log",
+    "original_column_default_green": "original-default-green.log"
+  },
+  "CLI_rejected_SDI_collections": 14
+}

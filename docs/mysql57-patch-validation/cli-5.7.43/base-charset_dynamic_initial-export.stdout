@@ -1,0 +1,5 @@
+{"kind":"schema","schema":{"version":1,"columns":[{"name":"id","type":"INT","nullable":false,"max_chars":0},{"charset":"ascii","name":"a","type":"CHAR","nullable":true,"max_chars":5},{"charset":"latin1","name":"l","type":"VARCHAR","nullable":true,"max_chars":20},{"charset":"utf8","name":"u","type":"VARCHAR","nullable":true,"max_chars":20}],"physical":false}}
+{"kind":"row","values":[{"type":"int32","value":"1"},{"type":"string","value":"a"},{"type":"string","value":"€ÿ"},{"type":"string","value":"界"}]}
+{"kind":"row","values":[{"type":"int32","value":"2"},{"type":"string","value":""},{"type":"string","value":""},{"type":"string","value":""}]}
+{"kind":"row","values":[{"type":"int32","value":"3"},{"type":"null"},{"type":"null"},{"type":"null"}]}
+{"kind":"end","rows":"3"}

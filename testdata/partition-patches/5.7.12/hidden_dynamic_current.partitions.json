@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "mysql_version": "5.7.12",
+  "database": "innodb_partition_05d0cb024e0c",
+  "table": "hidden_dynamic",
+  "partition_type": 1,
+  "expression": "n",
+  "partitions": [
+    {
+      "name": "p0",
+      "number": 0,
+      "table_id": 183,
+      "schema": {
+        "row_format": "DYNAMIC",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INT",
+            "nullable": true
+          },
+          {
+            "name": "n",
+            "type": "INT",
+            "nullable": true
+          },
+          {
+            "name": "payload",
+            "type": "LONGTEXT",
+            "nullable": true,
+            "charset": "utf8mb4"
+          }
+        ],
+        "root_page": 3,
+        "index_id": 327,
+        "space_id": 165,
+        "clustered_key": {
+          "name": "GEN_CLUST_INDEX",
+          "hidden_row_id": true
+        }
+      },
+      "indexes": [
+        {
+          "Name": "s",
+          "Unique": false,
+          "RowFormat": "DYNAMIC",
+          "SpaceID": 165,
+          "IndexID": 328,
+          "RootPage": 4,
+          "Fields": [
+            {
+              "Column": 1,
+              "Definition": {
+                "name": "n",
+                "type": "INT",
+                "nullable": true
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            },
+            {
+              "Column": -1,
+              "Definition": {
+                "name": "DB_ROW_ID",
+                "type": "BINARY",
+                "max_bytes": 6
+              },
+              "PrefixBytes": 0,
+              "RowID": true
+            }
+          ],
+          "UserFields": 1,
+          "ClusteredFields": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "p1",
+      "number": 1,
+      "table_id": 184,
+      "schema": {
+        "row_format": "DYNAMIC",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INT",
+            "nullable": true
+          },
+          {
+            "name": "n",
+            "type": "INT",
+            "nullable": true
+          },
+          {
+            "name": "payload",
+            "type": "LONGTEXT",
+            "nullable": true,
+            "charset": "utf8mb4"
+          }
+        ],
+        "root_page": 3,
+        "index_id": 329,
+        "space_id": 166,
+        "clustered_key": {
+          "name": "GEN_CLUST_INDEX",
+          "hidden_row_id": true
+        }
+      },
+      "indexes": [
+        {
+          "Name": "s",
+          "Unique": false,
+          "RowFormat": "DYNAMIC",
+          "SpaceID": 166,
+          "IndexID": 330,
+          "RootPage": 4,
+          "Fields": [
+            {
+              "Column": 1,
+              "Definition": {
+                "name": "n",
+                "type": "INT",
+                "nullable": true
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            },
+            {
+              "Column": -1,
+              "Definition": {
+                "name": "DB_ROW_ID",
+                "type": "BINARY",
+                "max_bytes": 6
+              },
+              "PrefixBytes": 0,
+              "RowID": true
+            }
+          ],
+          "UserFields": 1,
+          "ClusteredFields": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "p2",
+      "number": 2,
+      "table_id": 185,
+      "schema": {
+        "row_format": "DYNAMIC",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INT",
+            "nullable": true
+          },
+          {
+            "name": "n",
+            "type": "INT",
+            "nullable": true
+          },
+          {
+            "name": "payload",
+            "type": "LONGTEXT",
+            "nullable": true,
+            "charset": "utf8mb4"
+          }
+        ],
+        "root_page": 3,
+        "index_id": 331,
+        "space_id": 167,
+        "clustered_key": {
+          "name": "GEN_CLUST_INDEX",
+          "hidden_row_id": true
+        }
+      },
+      "indexes": [
+        {
+          "Name": "s",
+          "Unique": false,
+          "RowFormat": "DYNAMIC",
+          "SpaceID": 167,
+          "IndexID": 332,
+          "RootPage": 4,
+          "Fields": [
+            {
+              "Column": 1,
+              "Definition": {
+                "name": "n",
+                "type": "INT",
+                "nullable": true
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            },
+            {
+              "Column": -1,
+              "Definition": {
+                "name": "DB_ROW_ID",
+                "type": "BINARY",
+                "max_bytes": 6
+              },
+              "PrefixBytes": 0,
+              "RowID": true
+            }
+          ],
+          "UserFields": 1,
+          "ClusteredFields": [
+            1
+          ]
+        }
+      ]
+    }
+  ]
+}

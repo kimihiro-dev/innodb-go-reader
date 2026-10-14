@@ -261,21 +261,42 @@ func inspectSDITable(r io.ReaderAt, size int64, sdi *SDIResult) (*TableMetadata,
 	return inspectSDITableWithColumnOwner(r, size, sdi, 0)
 }
 
-// Partitions share columns owned by the first physical partition. Zero retains
-// the ordinary single-table identity check. The collection validator supplies
-// a nonzero owner only after validating the complete partition directory.
+func supportedSDIVersion(e ddEnvelope) bool {
+	switch e.MySQL {
+	case 80011:
+		return e.DD == 80011 && e.Version == 1
+	case 80012:
+		return e.DD == 80012 && e.Version == 1
+	case 80016:
+		return e.DD == 80016 && e.Version == 80016
+	case 80019:
+		return e.DD == 80017 && e.Version == 80019
+	case 80023, 80028, 80030, 80045:
+		return e.DD == 80023 && e.Version == 80019
+	}
+	return false
+}
+
+// Partitions share one column owner. Zero retains the ordinary single-table
+// identity check. The collection validator supplies a nonzero owner from its
+// validated directory; early patches may use a member other than the first.
 func inspectSDITableWithColumnOwner(r io.ReaderAt, size int64, sdi *SDIResult, columnOwner uint64) (*TableMetadata, error) {
 	m := &TableMetadata{Issues: make([]string, 0)}
 	issue := func(s string) { m.Issues = append(m.Issues, s) }
 	var tableRaw, spaceRaw json.RawMessage
+	var envelope ddEnvelope
 	for _, rec := range sdi.Records {
 		var e ddEnvelope
 		if err := decodeMetadata(rec.JSON, &e, "mysqld_version_id dd_version sdi_version dd_object_type dd_object"); err != nil {
 			return nil, err
 		}
-		if e.MySQL != 80045 || e.DD != 80023 || e.Version != 80019 {
-			issue("SDI content version is outside 80045/80023/80019")
+		if !supportedSDIVersion(e) {
+			issue("SDI content version tuple is unsupported")
 		}
+		if envelope.MySQL != 0 && (envelope.MySQL != e.MySQL || envelope.DD != e.DD || envelope.Version != e.Version) {
+			issue("inconsistent SDI content versions")
+		}
+		envelope = e
 		switch e.Kind {
 		case "Table":
 			if tableRaw != nil || rec.Key.Type != 1 {
@@ -324,7 +345,18 @@ func inspectSDITableWithColumnOwner(r io.ReaderAt, size int64, sdi *SDIResult, c
 		return nil, err
 	}
 	for k := range tp {
-		if k != "autoinc" {
+		switch k {
+		case "autoinc":
+		case "instant_col":
+			if _, err := propertyUint(tp, k, 16); err != nil {
+				return nil, err
+			}
+		case "version":
+			// Dynamic metadata version, independent of INSTANT row versions.
+			if _, err := propertyUint(tp, k, 64); err != nil {
+				return nil, err
+			}
+		default:
 			issue("table private attribute requires unsupported layout: " + k)
 		}
 	}
@@ -332,7 +364,9 @@ func inspectSDITableWithColumnOwner(r io.ReaderAt, size int64, sdi *SDIResult, c
 	if err != nil {
 		return nil, err
 	}
-	if opt["encrypt_type"] != "N" {
+	early := envelope.MySQL == 80011 || envelope.MySQL == 80012
+	_, hasEncryptType := opt["encrypt_type"]
+	if opt["encrypt_type"] != "N" && !(early && !hasEncryptType) {
 		issue("table encryption option is not N")
 	}
 	sp, err := metadataProperties(space.Private)
@@ -361,7 +395,9 @@ func inspectSDITableWithColumnOwner(r io.ReaderAt, size int64, sdi *SDIResult, c
 	if err != nil {
 		return nil, err
 	}
-	if sop["encryption"] != "N" || sp["state"] != "normal" || len(space.Files) != 1 {
+	_, hasEncryption := sop["encryption"]
+	_, hasState := sp["state"]
+	if (sop["encryption"] != "N" && !(early && !hasEncryption)) || (sp["state"] != "normal" && !(early && !hasState)) || len(space.Files) != 1 {
 		issue("tablespace encryption/state/file count unsupported")
 	}
 	if len(space.Files) == 1 {
@@ -486,7 +522,22 @@ func inspectSDITableWithColumnOwner(r io.ReaderAt, size int64, sdi *SDIResult, c
 			continue
 		}
 		userPositions = append(userPositions, i)
-		converted, reason, err := metadataColumn(*c)
+		definition := *c
+		// Early DD stores the eight-byte SQL field descriptor length for
+		// BLOB/JSON/geometry, rather than the declared payload capacity.
+		if early && definition.Length == 8 {
+			switch definition.Type {
+			case 24:
+				definition.Length = 255
+			case 25:
+				definition.Length = 16777215
+			case 26, 30, 31:
+				definition.Length = 4294967295
+			case 27:
+				definition.Length = 65535
+			}
+		}
+		converted, reason, err := metadataColumn(definition)
 		if err != nil {
 			return nil, err
 		}
@@ -514,11 +565,24 @@ func inspectSDITableWithColumnOwner(r io.ReaderAt, size int64, sdi *SDIResult, c
 		entry := IndexMetadata{Name: idx.Name, Type: idx.Type, Algorithm: idx.Algorithm, Clustered: i == 0, Hidden: idx.Hidden}
 		for j, raw := range idx.Elements {
 			var e IndexElement
-			if err := decodeMetadata(raw, &e, "ordinal_position length order hidden column_opx"); err != nil {
+			required := "ordinal_position length order hidden column_opx"
+			if early {
+				required = "ordinal_position length order column_opx"
+			}
+			if err := decodeMetadata(raw, &e, required); err != nil {
 				return nil, err
 			}
 			if e.Ordinal != j+1 || e.Column < 0 || e.Column >= len(columns) {
 				return nil, fmt.Errorf("%w: index element position", ErrCorrupt)
+			}
+			// SDI v1 omits Index_element::m_hidden. InnoDB appends
+			// system/nonkey fields to clustered indexes and PK fields to secondary.
+			if early {
+				if i == 0 {
+					e.Hidden = idx.Hidden || columns[e.Column].Hidden == 2 || e.Length == uint64(^uint32(0))
+				} else {
+					e.Hidden = e.Length == uint64(^uint32(0))
+				}
 			}
 			entry.Elements = append(entry.Elements, e)
 		}
@@ -688,7 +752,7 @@ func inspectSDITableWithColumnOwner(r io.ReaderAt, size int64, sdi *SDIResult, c
 	}
 
 	if len(m.Issues) == 0 {
-		reason, err := metadataInstant(&schema, columns)
+		reason, err := metadataInstant(&schema, columns, tp)
 		if err != nil {
 			return nil, err
 		}
@@ -757,7 +821,7 @@ func metadataColumn(c ddColumn) (Column, string, error) {
 		out.SRID = c.SRID
 	case 31:
 		out.Type = "JSON"
-		if c.Collation != 63 || c.Length != 4294967295 {
+		if (c.Collation != 63 && c.Collation != 46) || c.Length != 4294967295 {
 			return out, "JSON binary collation/capacity unsupported", nil
 		}
 	case 5:

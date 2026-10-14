@@ -1,0 +1,266 @@
+{
+  "database": "innodb_reader_57b_reject_3b7b52593dc5",
+  "results": [
+    {
+      "table": "collation",
+      "rejected": true,
+      "reason": "unsupported secondary collation: utf8mb4_general_ci"
+    },
+    {
+      "table": "floating",
+      "rejected": true,
+      "reason": "unsupported secondary key type: DOUBLE"
+    },
+    {
+      "table": "blob",
+      "rejected": true,
+      "reason": "unsupported secondary key type: BLOB"
+    },
+    {
+      "table": "virtual",
+      "rejected": true,
+      "reason": "FULLTEXT/SPATIAL/indexed VIRTUAL layouts unsupported"
+    },
+    {
+      "table": "overlap",
+      "complete_prefix": true,
+      "indexes": [
+        {
+          "Name": "s",
+          "Unique": false,
+          "RowFormat": "DYNAMIC",
+          "SpaceID": 159,
+          "IndexID": 302,
+          "RootPage": 4,
+          "Fields": [
+            {
+              "Column": 0,
+              "Definition": {
+                "name": "k",
+                "type": "VARBINARY",
+                "nullable": false,
+                "max_bytes": 8
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            },
+            {
+              "Column": 1,
+              "Definition": {
+                "name": "id",
+                "type": "INT",
+                "nullable": false
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            }
+          ],
+          "UserFields": 2,
+          "ClusteredFields": [
+            0,
+            1
+          ]
+        }
+      ],
+      "source": {
+        "environment": {
+          "charset": "utf8mb4",
+          "datadir": "/var/lib/mysql/",
+          "version": "5.7.44",
+          "checksum": "strict_crc32",
+          "sql_mode": "STRICT_ALL_TABLES,NO_ENGINE_SUBSTITUTION",
+          "collation": "utf8mb4_bin",
+          "page_size": 16384,
+          "time_zone": "+00:00",
+          "file_per_table": 1
+        },
+        "database": "innodb_reader_57b_reject_3b7b52593dc5",
+        "table": "overlap",
+        "columns": [
+          {
+            "fsp": null,
+            "name": "k",
+            "type": "varbinary",
+            "bytes": 8,
+            "chars": 8,
+            "extra": "",
+            "scale": null,
+            "charset": null,
+            "ordinal": 1,
+            "nullable": "NO",
+            "collation": null,
+            "precision": null,
+            "expression": "",
+            "column_type": "varbinary(8)"
+          },
+          {
+            "fsp": null,
+            "name": "id",
+            "type": "int",
+            "bytes": null,
+            "chars": null,
+            "extra": "",
+            "scale": 0,
+            "charset": null,
+            "ordinal": 2,
+            "nullable": "NO",
+            "collation": null,
+            "precision": 10,
+            "expression": "",
+            "column_type": "int(11)"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "PRIMARY",
+            "type": 3,
+            "fields": 2,
+            "index_id": 301,
+            "space_id": 159,
+            "table_id": 179,
+            "root_page": 3
+          },
+          {
+            "name": "s",
+            "type": 0,
+            "fields": 2,
+            "index_id": 302,
+            "space_id": 159,
+            "table_id": 179,
+            "root_page": 4
+          }
+        ],
+        "clustered_fields": [
+          {
+            "name": "k",
+            "position": 0
+          },
+          {
+            "name": "id",
+            "position": 1
+          }
+        ],
+        "statistics": [
+          {
+            "name": "PRIMARY",
+            "type": "BTREE",
+            "order": "A",
+            "column": "k",
+            "prefix": null,
+            "unique": true,
+            "position": 1
+          },
+          {
+            "name": "PRIMARY",
+            "type": "BTREE",
+            "order": "A",
+            "column": "id",
+            "prefix": null,
+            "unique": true,
+            "position": 2
+          },
+          {
+            "name": "s",
+            "type": "BTREE",
+            "order": "A",
+            "column": "k",
+            "prefix": null,
+            "unique": false,
+            "position": 1
+          },
+          {
+            "name": "s",
+            "type": "BTREE",
+            "order": "A",
+            "column": "id",
+            "prefix": null,
+            "unique": false,
+            "position": 2
+          }
+        ],
+        "tablespace": {
+          "flags": 33,
+          "page_size": 16384,
+          "space_type": "Single",
+          "zip_page_size": 0
+        },
+        "datafiles": [
+          {
+            "path": "./innodb_reader_57b_reject_3b7b52593dc5/overlap.ibd"
+          }
+        ],
+        "dictionary": {
+          "columns": 5
+        },
+        "secondary_fields": {
+          "s": [
+            {
+              "name": "k",
+              "position": 0
+            },
+            {
+              "name": "id",
+              "position": 1
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "sql": [
+    "SET SESSION time_zone='+00:00';",
+    "SET SESSION sql_mode='STRICT_ALL_TABLES,NO_ENGINE_SUBSTITUTION';",
+    "CREATE DATABASE `innodb_reader_57b_reject_3b7b52593dc5` CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;",
+    "USE `innodb_reader_57b_reject_3b7b52593dc5`;",
+    "CREATE TABLE `collation`(id INT PRIMARY KEY,v VARCHAR(20) COLLATE utf8mb4_general_ci,KEY s(v)) ROW_FORMAT=DYNAMIC;",
+    "SELECT HEX(CAST(JSON_OBJECT('version',VERSION(),'page_size',@@innodb_page_size,'file_per_table',@@innodb_file_per_table,'checksum',@@innodb_checksum_algorithm,'datadir',@@datadir,'charset',@@character_set_server,'collation',@@collation_server,'sql_mode',@@sql_mode,'time_zone',@@time_zone) AS CHAR CHARACTER SET utf8mb4)) ;",
+    "SELECT HEX(CAST(JSON_OBJECT('engine',ENGINE,'row_format',ROW_FORMAT,'type',TABLE_TYPE) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f336237623532353933646335' USING utf8mb4) AND TABLE_NAME=CONVERT(X'636f6c6c6174696f6e' USING utf8mb4);",
+    "SELECT HEX(CAST(JSON_OBJECT('name',COLUMN_NAME,'type',DATA_TYPE,'column_type',COLUMN_TYPE,'nullable',IS_NULLABLE,'charset',CHARACTER_SET_NAME,'collation',COLLATION_NAME,'chars',CHARACTER_MAXIMUM_LENGTH,'bytes',CHARACTER_OCTET_LENGTH,'precision',NUMERIC_PRECISION,'scale',NUMERIC_SCALE,'fsp',DATETIME_PRECISION,'extra',EXTRA,'expression',GENERATION_EXPRESSION,'ordinal',ORDINAL_POSITION) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f336237623532353933646335' USING utf8mb4) AND TABLE_NAME=CONVERT(X'636f6c6c6174696f6e' USING utf8mb4) ORDER BY ORDINAL_POSITION;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',i.NAME,'index_id',i.INDEX_ID,'space_id',i.SPACE,'root_page',i.PAGE_NO,'type',i.TYPE,'fields',i.N_FIELDS,'table_id',i.TABLE_ID) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_INDEXES i JOIN INFORMATION_SCHEMA.INNODB_SYS_TABLES t ON t.TABLE_ID=i.TABLE_ID WHERE t.NAME=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f3362376235323539336463352f636f6c6c6174696f6e' USING utf8mb4) ORDER BY i.INDEX_ID;",
+    "SELECT HEX(CAST(JSON_OBJECT('columns',N_COLS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_TABLES WHERE TABLE_ID=175;",
+    "SELECT HEX(CAST(JSON_OBJECT('flags',FLAG,'page_size',PAGE_SIZE,'zip_page_size',ZIP_PAGE_SIZE,'space_type',SPACE_TYPE) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_TABLESPACES WHERE SPACE=155;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',NAME,'position',POS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_FIELDS WHERE INDEX_ID=293 ORDER BY POS;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',INDEX_NAME,'column',COLUMN_NAME,'position',SEQ_IN_INDEX,'prefix',SUB_PART,'order',COLLATION,'unique',NON_UNIQUE=0,'type',INDEX_TYPE) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.STATISTICS WHERE TABLE_SCHEMA=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f336237623532353933646335' USING utf8mb4) AND TABLE_NAME=CONVERT(X'636f6c6c6174696f6e' USING utf8mb4) ORDER BY INDEX_NAME,SEQ_IN_INDEX;",
+    "SELECT HEX(CAST(JSON_OBJECT('path',PATH) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_DATAFILES WHERE SPACE=155;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',NAME,'position',POS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_FIELDS WHERE INDEX_ID=294 ORDER BY POS;",
+    "CREATE TABLE `floating`(id INT PRIMARY KEY,v DOUBLE,KEY s(v)) ROW_FORMAT=DYNAMIC;",
+    "SELECT HEX(CAST(JSON_OBJECT('version',VERSION(),'page_size',@@innodb_page_size,'file_per_table',@@innodb_file_per_table,'checksum',@@innodb_checksum_algorithm,'datadir',@@datadir,'charset',@@character_set_server,'collation',@@collation_server,'sql_mode',@@sql_mode,'time_zone',@@time_zone) AS CHAR CHARACTER SET utf8mb4)) ;",
+    "SELECT HEX(CAST(JSON_OBJECT('engine',ENGINE,'row_format',ROW_FORMAT,'type',TABLE_TYPE) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f336237623532353933646335' USING utf8mb4) AND TABLE_NAME=CONVERT(X'666c6f6174696e67' USING utf8mb4);",
+    "SELECT HEX(CAST(JSON_OBJECT('name',COLUMN_NAME,'type',DATA_TYPE,'column_type',COLUMN_TYPE,'nullable',IS_NULLABLE,'charset',CHARACTER_SET_NAME,'collation',COLLATION_NAME,'chars',CHARACTER_MAXIMUM_LENGTH,'bytes',CHARACTER_OCTET_LENGTH,'precision',NUMERIC_PRECISION,'scale',NUMERIC_SCALE,'fsp',DATETIME_PRECISION,'extra',EXTRA,'expression',GENERATION_EXPRESSION,'ordinal',ORDINAL_POSITION) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f336237623532353933646335' USING utf8mb4) AND TABLE_NAME=CONVERT(X'666c6f6174696e67' USING utf8mb4) ORDER BY ORDINAL_POSITION;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',i.NAME,'index_id',i.INDEX_ID,'space_id',i.SPACE,'root_page',i.PAGE_NO,'type',i.TYPE,'fields',i.N_FIELDS,'table_id',i.TABLE_ID) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_INDEXES i JOIN INFORMATION_SCHEMA.INNODB_SYS_TABLES t ON t.TABLE_ID=i.TABLE_ID WHERE t.NAME=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f3362376235323539336463352f666c6f6174696e67' USING utf8mb4) ORDER BY i.INDEX_ID;",
+    "SELECT HEX(CAST(JSON_OBJECT('columns',N_COLS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_TABLES WHERE TABLE_ID=176;",
+    "SELECT HEX(CAST(JSON_OBJECT('flags',FLAG,'page_size',PAGE_SIZE,'zip_page_size',ZIP_PAGE_SIZE,'space_type',SPACE_TYPE) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_TABLESPACES WHERE SPACE=156;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',NAME,'position',POS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_FIELDS WHERE INDEX_ID=295 ORDER BY POS;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',INDEX_NAME,'column',COLUMN_NAME,'position',SEQ_IN_INDEX,'prefix',SUB_PART,'order',COLLATION,'unique',NON_UNIQUE=0,'type',INDEX_TYPE) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.STATISTICS WHERE TABLE_SCHEMA=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f336237623532353933646335' USING utf8mb4) AND TABLE_NAME=CONVERT(X'666c6f6174696e67' USING utf8mb4) ORDER BY INDEX_NAME,SEQ_IN_INDEX;",
+    "SELECT HEX(CAST(JSON_OBJECT('path',PATH) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_DATAFILES WHERE SPACE=156;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',NAME,'position',POS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_FIELDS WHERE INDEX_ID=296 ORDER BY POS;",
+    "CREATE TABLE `blob`(id INT PRIMARY KEY,v BLOB,KEY s(v(10))) ROW_FORMAT=DYNAMIC;",
+    "SELECT HEX(CAST(JSON_OBJECT('version',VERSION(),'page_size',@@innodb_page_size,'file_per_table',@@innodb_file_per_table,'checksum',@@innodb_checksum_algorithm,'datadir',@@datadir,'charset',@@character_set_server,'collation',@@collation_server,'sql_mode',@@sql_mode,'time_zone',@@time_zone) AS CHAR CHARACTER SET utf8mb4)) ;",
+    "SELECT HEX(CAST(JSON_OBJECT('engine',ENGINE,'row_format',ROW_FORMAT,'type',TABLE_TYPE) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f336237623532353933646335' USING utf8mb4) AND TABLE_NAME=CONVERT(X'626c6f62' USING utf8mb4);",
+    "SELECT HEX(CAST(JSON_OBJECT('name',COLUMN_NAME,'type',DATA_TYPE,'column_type',COLUMN_TYPE,'nullable',IS_NULLABLE,'charset',CHARACTER_SET_NAME,'collation',COLLATION_NAME,'chars',CHARACTER_MAXIMUM_LENGTH,'bytes',CHARACTER_OCTET_LENGTH,'precision',NUMERIC_PRECISION,'scale',NUMERIC_SCALE,'fsp',DATETIME_PRECISION,'extra',EXTRA,'expression',GENERATION_EXPRESSION,'ordinal',ORDINAL_POSITION) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f336237623532353933646335' USING utf8mb4) AND TABLE_NAME=CONVERT(X'626c6f62' USING utf8mb4) ORDER BY ORDINAL_POSITION;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',i.NAME,'index_id',i.INDEX_ID,'space_id',i.SPACE,'root_page',i.PAGE_NO,'type',i.TYPE,'fields',i.N_FIELDS,'table_id',i.TABLE_ID) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_INDEXES i JOIN INFORMATION_SCHEMA.INNODB_SYS_TABLES t ON t.TABLE_ID=i.TABLE_ID WHERE t.NAME=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f3362376235323539336463352f626c6f62' USING utf8mb4) ORDER BY i.INDEX_ID;",
+    "SELECT HEX(CAST(JSON_OBJECT('columns',N_COLS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_TABLES WHERE TABLE_ID=177;",
+    "SELECT HEX(CAST(JSON_OBJECT('flags',FLAG,'page_size',PAGE_SIZE,'zip_page_size',ZIP_PAGE_SIZE,'space_type',SPACE_TYPE) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_TABLESPACES WHERE SPACE=157;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',NAME,'position',POS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_FIELDS WHERE INDEX_ID=297 ORDER BY POS;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',INDEX_NAME,'column',COLUMN_NAME,'position',SEQ_IN_INDEX,'prefix',SUB_PART,'order',COLLATION,'unique',NON_UNIQUE=0,'type',INDEX_TYPE) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.STATISTICS WHERE TABLE_SCHEMA=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f336237623532353933646335' USING utf8mb4) AND TABLE_NAME=CONVERT(X'626c6f62' USING utf8mb4) ORDER BY INDEX_NAME,SEQ_IN_INDEX;",
+    "SELECT HEX(CAST(JSON_OBJECT('path',PATH) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_DATAFILES WHERE SPACE=157;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',NAME,'position',POS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_FIELDS WHERE INDEX_ID=298 ORDER BY POS;",
+    "CREATE TABLE `virtual`(id INT PRIMARY KEY,v INT,g INT AS(v+1) VIRTUAL,KEY s(g)) ROW_FORMAT=DYNAMIC;",
+    "SELECT HEX(CAST(JSON_OBJECT('version',VERSION(),'page_size',@@innodb_page_size,'file_per_table',@@innodb_file_per_table,'checksum',@@innodb_checksum_algorithm,'datadir',@@datadir,'charset',@@character_set_server,'collation',@@collation_server,'sql_mode',@@sql_mode,'time_zone',@@time_zone) AS CHAR CHARACTER SET utf8mb4)) ;",
+    "SELECT HEX(CAST(JSON_OBJECT('engine',ENGINE,'row_format',ROW_FORMAT,'type',TABLE_TYPE) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f336237623532353933646335' USING utf8mb4) AND TABLE_NAME=CONVERT(X'7669727475616c' USING utf8mb4);",
+    "SELECT HEX(CAST(JSON_OBJECT('name',COLUMN_NAME,'type',DATA_TYPE,'column_type',COLUMN_TYPE,'nullable',IS_NULLABLE,'charset',CHARACTER_SET_NAME,'collation',COLLATION_NAME,'chars',CHARACTER_MAXIMUM_LENGTH,'bytes',CHARACTER_OCTET_LENGTH,'precision',NUMERIC_PRECISION,'scale',NUMERIC_SCALE,'fsp',DATETIME_PRECISION,'extra',EXTRA,'expression',GENERATION_EXPRESSION,'ordinal',ORDINAL_POSITION) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f336237623532353933646335' USING utf8mb4) AND TABLE_NAME=CONVERT(X'7669727475616c' USING utf8mb4) ORDER BY ORDINAL_POSITION;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',i.NAME,'index_id',i.INDEX_ID,'space_id',i.SPACE,'root_page',i.PAGE_NO,'type',i.TYPE,'fields',i.N_FIELDS,'table_id',i.TABLE_ID) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_INDEXES i JOIN INFORMATION_SCHEMA.INNODB_SYS_TABLES t ON t.TABLE_ID=i.TABLE_ID WHERE t.NAME=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f3362376235323539336463352f7669727475616c' USING utf8mb4) ORDER BY i.INDEX_ID;",
+    "CREATE TABLE overlap(k VARBINARY(8) NOT NULL,id INT NOT NULL,PRIMARY KEY(k,id),KEY s(k(8),id));",
+    "SELECT HEX(CAST(JSON_OBJECT('version',VERSION(),'page_size',@@innodb_page_size,'file_per_table',@@innodb_file_per_table,'checksum',@@innodb_checksum_algorithm,'datadir',@@datadir,'charset',@@character_set_server,'collation',@@collation_server,'sql_mode',@@sql_mode,'time_zone',@@time_zone) AS CHAR CHARACTER SET utf8mb4)) ;",
+    "SELECT HEX(CAST(JSON_OBJECT('engine',ENGINE,'row_format',ROW_FORMAT,'type',TABLE_TYPE) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f336237623532353933646335' USING utf8mb4) AND TABLE_NAME=CONVERT(X'6f7665726c6170' USING utf8mb4);",
+    "SELECT HEX(CAST(JSON_OBJECT('name',COLUMN_NAME,'type',DATA_TYPE,'column_type',COLUMN_TYPE,'nullable',IS_NULLABLE,'charset',CHARACTER_SET_NAME,'collation',COLLATION_NAME,'chars',CHARACTER_MAXIMUM_LENGTH,'bytes',CHARACTER_OCTET_LENGTH,'precision',NUMERIC_PRECISION,'scale',NUMERIC_SCALE,'fsp',DATETIME_PRECISION,'extra',EXTRA,'expression',GENERATION_EXPRESSION,'ordinal',ORDINAL_POSITION) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f336237623532353933646335' USING utf8mb4) AND TABLE_NAME=CONVERT(X'6f7665726c6170' USING utf8mb4) ORDER BY ORDINAL_POSITION;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',i.NAME,'index_id',i.INDEX_ID,'space_id',i.SPACE,'root_page',i.PAGE_NO,'type',i.TYPE,'fields',i.N_FIELDS,'table_id',i.TABLE_ID) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_INDEXES i JOIN INFORMATION_SCHEMA.INNODB_SYS_TABLES t ON t.TABLE_ID=i.TABLE_ID WHERE t.NAME=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f3362376235323539336463352f6f7665726c6170' USING utf8mb4) ORDER BY i.INDEX_ID;",
+    "SELECT HEX(CAST(JSON_OBJECT('columns',N_COLS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_TABLES WHERE TABLE_ID=179;",
+    "SELECT HEX(CAST(JSON_OBJECT('flags',FLAG,'page_size',PAGE_SIZE,'zip_page_size',ZIP_PAGE_SIZE,'space_type',SPACE_TYPE) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_TABLESPACES WHERE SPACE=159;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',NAME,'position',POS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_FIELDS WHERE INDEX_ID=301 ORDER BY POS;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',INDEX_NAME,'column',COLUMN_NAME,'position',SEQ_IN_INDEX,'prefix',SUB_PART,'order',COLLATION,'unique',NON_UNIQUE=0,'type',INDEX_TYPE) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.STATISTICS WHERE TABLE_SCHEMA=CONVERT(X'696e6e6f64625f7265616465725f3537625f72656a6563745f336237623532353933646335' USING utf8mb4) AND TABLE_NAME=CONVERT(X'6f7665726c6170' USING utf8mb4) ORDER BY INDEX_NAME,SEQ_IN_INDEX;",
+    "SELECT HEX(CAST(JSON_OBJECT('path',PATH) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_DATAFILES WHERE SPACE=159;",
+    "SELECT HEX(CAST(JSON_OBJECT('name',NAME,'position',POS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_FIELDS WHERE INDEX_ID=302 ORDER BY POS;"
+  ],
+  "complete": true
+}

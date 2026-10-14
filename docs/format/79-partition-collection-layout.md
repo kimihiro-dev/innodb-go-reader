@@ -110,4 +110,4 @@ Scan在预检成功后首次回调`PartitionEvent{Metadata: set}`；后续每个
 
 `PartitionScanReport.Complete`只在所有分区完成后为true；CompletedPartitions只计完整结束的分区。中途损坏、I/O错误、预算耗尽、回调错误、ErrStopped或取消均保留已经交付的前缀并返回错误；预检通过不代表后续所有数据页已检查，也不证明SQL事务可见性。
 
-[下一章](80-partition-validation-and-cli.md)给出命令、生命周期身份变化和验收方法。
+[下一章](80-partition-validation-and-cli.md)给出读取命令、生命周期身份变化和验收方法；后续新增manifest生成入口见[第91章](91-cli-input-preparation.md)。

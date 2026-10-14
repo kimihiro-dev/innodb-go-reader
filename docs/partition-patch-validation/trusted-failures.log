@@ -1,0 +1,52 @@
+=== RUN   TestTrustedPartitionDefinitionFailures
+=== RUN   TestTrustedPartitionDefinitionFailures/mysql-version
+=== RUN   TestTrustedPartitionDefinitionFailures/database
+=== RUN   TestTrustedPartitionDefinitionFailures/method
+=== RUN   TestTrustedPartitionDefinitionFailures/order
+=== RUN   TestTrustedPartitionDefinitionFailures/space-id
+=== RUN   TestTrustedPartitionDefinitionFailures/index-id
+=== RUN   TestTrustedPartitionDefinitionFailures/columns
+=== RUN   TestTrustedPartitionDefinitionFailures/name
+=== RUN   TestTrustedPartitionDefinitionFailures/table-id
+=== RUN   TestTrustedPartitionDefinitionFailures/indexes
+=== RUN   TestTrustedPartitionDefinitionFailures/descending
+=== RUN   TestTrustedPartitionDefinitionFailures/instant
+=== RUN   TestTrustedPartitionDefinitionFailures/missing
+=== RUN   TestTrustedPartitionDefinitionFailures/version
+--- PASS: TestTrustedPartitionDefinitionFailures (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/mysql-version (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/database (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/method (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/order (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/space-id (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/index-id (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/columns (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/name (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/table-id (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/indexes (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/descending (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/instant (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/missing (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/version (0.00s)
+=== RUN   TestTrustedPartitionPhysicalFailures
+=== RUN   TestTrustedPartitionPhysicalFailures/missing
+=== RUN   TestTrustedPartitionPhysicalFailures/extra
+=== RUN   TestTrustedPartitionPhysicalFailures/duplicate
+=== RUN   TestTrustedPartitionPhysicalFailures/wrong-name
+=== RUN   TestTrustedPartitionPhysicalFailures/swapped-file
+=== RUN   TestTrustedPartitionPhysicalFailures/checksum
+=== RUN   TestTrustedPartitionPhysicalFailures/wrong-root
+=== RUN   TestTrustedPartitionPhysicalFailures/wrong-secondary-root
+--- PASS: TestTrustedPartitionPhysicalFailures (0.00s)
+    --- PASS: TestTrustedPartitionPhysicalFailures/missing (0.00s)
+    --- PASS: TestTrustedPartitionPhysicalFailures/extra (0.00s)
+    --- PASS: TestTrustedPartitionPhysicalFailures/duplicate (0.00s)
+    --- PASS: TestTrustedPartitionPhysicalFailures/wrong-name (0.00s)
+    --- PASS: TestTrustedPartitionPhysicalFailures/swapped-file (0.00s)
+    --- PASS: TestTrustedPartitionPhysicalFailures/checksum (0.00s)
+    --- PASS: TestTrustedPartitionPhysicalFailures/wrong-root (0.00s)
+    --- PASS: TestTrustedPartitionPhysicalFailures/wrong-secondary-root (0.00s)
+=== RUN   TestTrustedPartitionControlAndOwnership
+--- PASS: TestTrustedPartitionControlAndOwnership (0.00s)
+PASS
+ok  	innodb-go-reader	0.717s

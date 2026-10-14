@@ -113,8 +113,22 @@ id(4) → DB_TRX_ID(6) → DB_ROLL_PTR(7) → score(4或NULL) → name(变长或
 2. `metadataColumn` 映射类型；只有无Issues且原schema校验通过时，报告才有非nil的Schema。
 3. `ReadAuto` 使用该Schema调用原Read；错误时不返回部分行。原显式Read仍可使用。
 
-报告列保留DD类型、原始长度/精度/unsigned/nullable、字符集编号及隐藏属性；索引报告见下一章。元数据解释暂限已验证版本80045/80023/80019。不支持特性能够被当前结构解释时保留Issues；缺失关键字段、非法数字、重复键或身份冲突报ErrCorrupt，无法唯一定位Table/Tablespace等报ErrUnsupported，均不返回部分报告。它不是任意MySQL版本的数据字典浏览器。
+报告列保留DD类型、原始长度/精度/unsigned/nullable、字符集编号及隐藏属性；索引报告见下一章。首版元数据限80045/80023/80019，当前源码新增准确补丁组合及早期属性归一，见[第93章](93-mysql80-patch-compatibility.md)。不支持特性能够被当前结构解释时保留Issues；缺失关键字段、非法数字、重复键或身份冲突报ErrCorrupt，无法唯一定位Table/Tablespace等报ErrUnsupported，均不返回部分报告。它不是任意MySQL版本的数据字典浏览器。
 
 关键键必须精确存在且非null。零、false、空字典与缺失值有区别；解码器不会让Go零值掩盖缺失元数据，也不会让JSON大小写宽松匹配覆盖规范键。私有属性按转义的 `key=value;` 语法读取，不是SQL表达式。
 
 最后，SDI描述布局，不能证明事务提交状态、只插入历史或快照一致性；自动schema没有解除前面章节的输入限制。
+
+## 表级动态元数据版本（2026-10-09 修正）
+
+表对象的 `se_private_data` 可以同时包含 `autoinc` 和 `version`。用户提供文件的只读副本中提取到的实际属性为：
+
+```text
+autoinc=0;version=2;
+```
+
+这里的 `version` 对应 MySQL 的 `DD_TABLE_VERSION`，表示动态元数据版本。官方 [dd_set_autoinc](https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/dict/dict0dd.cc#L1608)更新 AUTO_INCREMENT 元数据时维护该值，让已提交更新之后的旧缓存失效；它不描述用户行字段位置，也不等同于 MySQL 发行版本或 INSTANT 的逐行版本。
+
+早期实现只放行表级 `autoinc`，因而将正常 `version` 报为 `table private attribute requires unsupported layout: version`。修正后通过现有 `propertyUint` 严格校验可选 `version` 的无符号十进制 uint64 范围，不将它加入用户列或改变行解码。缺失属性兼容，空值、负数、非十进制、溢出和重复键报 `ErrCorrupt`；未知私有属性仍拒绝。2026-10-14的旧式`instant_col`扩展见[第93章](93-mysql80-patch-compatibility.md)，不由本次动态版本修正隐式接纳。
+
+回归使用原 `lesson_rows` 的合成 SDI 副本，用户行字节不变；合法动态版本的自动 Read/Scan 与原结果一致。原始 SQL 预期属于既有真实夹具，本次 SDI 修改单独标为合成输入。实现入口见 [metadata.go](../../metadata.go)，测试见 [metadata_test.go](../../metadata_test.go)，范围见[当前矩阵](83-release-support-matrix.md#表级动态元数据版本修正)。

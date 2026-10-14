@@ -1,0 +1,436 @@
+{
+  "version": 1,
+  "mysql_version": "5.7.12",
+  "database": "innodb_partition_05d0cb024e0c",
+  "table": "hashes_compact",
+  "partition_type": 1,
+  "expression": "n",
+  "partitions": [
+    {
+      "name": "p0",
+      "number": 0,
+      "table_id": 198,
+      "schema": {
+        "row_format": "COMPACT",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INT",
+            "nullable": false
+          },
+          {
+            "name": "n",
+            "type": "INT",
+            "nullable": false
+          },
+          {
+            "name": "v",
+            "type": "VARCHAR",
+            "nullable": true,
+            "charset": "utf8mb4",
+            "max_chars": 40
+          },
+          {
+            "name": "payload",
+            "type": "LONGTEXT",
+            "nullable": true,
+            "charset": "utf8mb4"
+          },
+          {
+            "name": "b",
+            "type": "LONGBLOB",
+            "nullable": true
+          },
+          {
+            "name": "d",
+            "type": "DECIMAL",
+            "nullable": true,
+            "precision": 24,
+            "scale": 8
+          },
+          {
+            "name": "j",
+            "type": "JSON",
+            "nullable": true
+          }
+        ],
+        "root_page": 3,
+        "index_id": 360,
+        "space_id": 180,
+        "primary_keys": [
+          "id",
+          "n"
+        ]
+      },
+      "indexes": [
+        {
+          "Name": "s",
+          "Unique": false,
+          "RowFormat": "COMPACT",
+          "SpaceID": 180,
+          "IndexID": 361,
+          "RootPage": 4,
+          "Fields": [
+            {
+              "Column": 1,
+              "Definition": {
+                "name": "n",
+                "type": "INT",
+                "nullable": false
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            },
+            {
+              "Column": 0,
+              "Definition": {
+                "name": "id",
+                "type": "INT",
+                "nullable": false
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            }
+          ],
+          "UserFields": 1,
+          "ClusteredFields": [
+            1,
+            0
+          ]
+        },
+        {
+          "Name": "px",
+          "Unique": false,
+          "RowFormat": "COMPACT",
+          "SpaceID": 180,
+          "IndexID": 362,
+          "RootPage": 5,
+          "Fields": [
+            {
+              "Column": 2,
+              "Definition": {
+                "name": "v",
+                "type": "VARCHAR",
+                "nullable": true,
+                "charset": "utf8mb4",
+                "max_chars": 40,
+                "collation": "utf8mb4_bin"
+              },
+              "PrefixBytes": 12,
+              "RowID": false
+            },
+            {
+              "Column": 0,
+              "Definition": {
+                "name": "id",
+                "type": "INT",
+                "nullable": false
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            },
+            {
+              "Column": 1,
+              "Definition": {
+                "name": "n",
+                "type": "INT",
+                "nullable": false
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            }
+          ],
+          "UserFields": 2,
+          "ClusteredFields": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "p1",
+      "number": 1,
+      "table_id": 199,
+      "schema": {
+        "row_format": "COMPACT",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INT",
+            "nullable": false
+          },
+          {
+            "name": "n",
+            "type": "INT",
+            "nullable": false
+          },
+          {
+            "name": "v",
+            "type": "VARCHAR",
+            "nullable": true,
+            "charset": "utf8mb4",
+            "max_chars": 40
+          },
+          {
+            "name": "payload",
+            "type": "LONGTEXT",
+            "nullable": true,
+            "charset": "utf8mb4"
+          },
+          {
+            "name": "b",
+            "type": "LONGBLOB",
+            "nullable": true
+          },
+          {
+            "name": "d",
+            "type": "DECIMAL",
+            "nullable": true,
+            "precision": 24,
+            "scale": 8
+          },
+          {
+            "name": "j",
+            "type": "JSON",
+            "nullable": true
+          }
+        ],
+        "root_page": 3,
+        "index_id": 363,
+        "space_id": 181,
+        "primary_keys": [
+          "id",
+          "n"
+        ]
+      },
+      "indexes": [
+        {
+          "Name": "s",
+          "Unique": false,
+          "RowFormat": "COMPACT",
+          "SpaceID": 181,
+          "IndexID": 364,
+          "RootPage": 4,
+          "Fields": [
+            {
+              "Column": 1,
+              "Definition": {
+                "name": "n",
+                "type": "INT",
+                "nullable": false
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            },
+            {
+              "Column": 0,
+              "Definition": {
+                "name": "id",
+                "type": "INT",
+                "nullable": false
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            }
+          ],
+          "UserFields": 1,
+          "ClusteredFields": [
+            1,
+            0
+          ]
+        },
+        {
+          "Name": "px",
+          "Unique": false,
+          "RowFormat": "COMPACT",
+          "SpaceID": 181,
+          "IndexID": 365,
+          "RootPage": 5,
+          "Fields": [
+            {
+              "Column": 2,
+              "Definition": {
+                "name": "v",
+                "type": "VARCHAR",
+                "nullable": true,
+                "charset": "utf8mb4",
+                "max_chars": 40,
+                "collation": "utf8mb4_bin"
+              },
+              "PrefixBytes": 12,
+              "RowID": false
+            },
+            {
+              "Column": 0,
+              "Definition": {
+                "name": "id",
+                "type": "INT",
+                "nullable": false
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            },
+            {
+              "Column": 1,
+              "Definition": {
+                "name": "n",
+                "type": "INT",
+                "nullable": false
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            }
+          ],
+          "UserFields": 2,
+          "ClusteredFields": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "p2",
+      "number": 2,
+      "table_id": 200,
+      "schema": {
+        "row_format": "COMPACT",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INT",
+            "nullable": false
+          },
+          {
+            "name": "n",
+            "type": "INT",
+            "nullable": false
+          },
+          {
+            "name": "v",
+            "type": "VARCHAR",
+            "nullable": true,
+            "charset": "utf8mb4",
+            "max_chars": 40
+          },
+          {
+            "name": "payload",
+            "type": "LONGTEXT",
+            "nullable": true,
+            "charset": "utf8mb4"
+          },
+          {
+            "name": "b",
+            "type": "LONGBLOB",
+            "nullable": true
+          },
+          {
+            "name": "d",
+            "type": "DECIMAL",
+            "nullable": true,
+            "precision": 24,
+            "scale": 8
+          },
+          {
+            "name": "j",
+            "type": "JSON",
+            "nullable": true
+          }
+        ],
+        "root_page": 3,
+        "index_id": 366,
+        "space_id": 182,
+        "primary_keys": [
+          "id",
+          "n"
+        ]
+      },
+      "indexes": [
+        {
+          "Name": "s",
+          "Unique": false,
+          "RowFormat": "COMPACT",
+          "SpaceID": 182,
+          "IndexID": 367,
+          "RootPage": 4,
+          "Fields": [
+            {
+              "Column": 1,
+              "Definition": {
+                "name": "n",
+                "type": "INT",
+                "nullable": false
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            },
+            {
+              "Column": 0,
+              "Definition": {
+                "name": "id",
+                "type": "INT",
+                "nullable": false
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            }
+          ],
+          "UserFields": 1,
+          "ClusteredFields": [
+            1,
+            0
+          ]
+        },
+        {
+          "Name": "px",
+          "Unique": false,
+          "RowFormat": "COMPACT",
+          "SpaceID": 182,
+          "IndexID": 368,
+          "RootPage": 5,
+          "Fields": [
+            {
+              "Column": 2,
+              "Definition": {
+                "name": "v",
+                "type": "VARCHAR",
+                "nullable": true,
+                "charset": "utf8mb4",
+                "max_chars": 40,
+                "collation": "utf8mb4_bin"
+              },
+              "PrefixBytes": 12,
+              "RowID": false
+            },
+            {
+              "Column": 0,
+              "Definition": {
+                "name": "id",
+                "type": "INT",
+                "nullable": false
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            },
+            {
+              "Column": 1,
+              "Definition": {
+                "name": "n",
+                "type": "INT",
+                "nullable": false
+              },
+              "PrefixBytes": 0,
+              "RowID": false
+            }
+          ],
+          "UserFields": 2,
+          "ClusteredFields": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  ]
+}

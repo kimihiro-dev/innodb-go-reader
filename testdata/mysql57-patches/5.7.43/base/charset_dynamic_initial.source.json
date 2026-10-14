@@ -1,0 +1,123 @@
+{
+  "environment": {
+    "charset": "utf8mb4",
+    "datadir": "/var/lib/mysql/",
+    "version": "5.7.43",
+    "checksum": "strict_crc32",
+    "sql_mode": "STRICT_ALL_TABLES,NO_ENGINE_SUBSTITUTION",
+    "collation": "utf8mb4_bin",
+    "page_size": 16384,
+    "time_zone": "+00:00",
+    "file_per_table": 1
+  },
+  "database": "innodb_reader_57_3ccc22da87d9",
+  "table": "charset_dynamic",
+  "columns": [
+    {
+      "fsp": null,
+      "name": "id",
+      "type": "int",
+      "bytes": null,
+      "chars": null,
+      "extra": "",
+      "scale": 0,
+      "charset": null,
+      "ordinal": 1,
+      "nullable": "NO",
+      "collation": null,
+      "precision": 10,
+      "expression": "",
+      "column_type": "int(11)"
+    },
+    {
+      "fsp": null,
+      "name": "a",
+      "type": "char",
+      "bytes": 5,
+      "chars": 5,
+      "extra": "",
+      "scale": null,
+      "charset": "ascii",
+      "ordinal": 2,
+      "nullable": "YES",
+      "collation": "ascii_general_ci",
+      "precision": null,
+      "expression": "",
+      "column_type": "char(5)"
+    },
+    {
+      "fsp": null,
+      "name": "l",
+      "type": "varchar",
+      "bytes": 20,
+      "chars": 20,
+      "extra": "",
+      "scale": null,
+      "charset": "latin1",
+      "ordinal": 3,
+      "nullable": "YES",
+      "collation": "latin1_swedish_ci",
+      "precision": null,
+      "expression": "",
+      "column_type": "varchar(20)"
+    },
+    {
+      "fsp": null,
+      "name": "u",
+      "type": "varchar",
+      "bytes": 60,
+      "chars": 20,
+      "extra": "",
+      "scale": null,
+      "charset": "utf8",
+      "ordinal": 4,
+      "nullable": "YES",
+      "collation": "utf8_general_ci",
+      "precision": null,
+      "expression": "",
+      "column_type": "varchar(20)"
+    }
+  ],
+  "indexes": [
+    {
+      "name": "PRIMARY",
+      "type": 3,
+      "fields": 1,
+      "index_id": 58,
+      "space_id": 33,
+      "table_id": 53,
+      "root_page": 3
+    }
+  ],
+  "clustered_fields": [
+    {
+      "name": "id",
+      "position": 0
+    }
+  ],
+  "statistics": [
+    {
+      "name": "PRIMARY",
+      "type": "BTREE",
+      "order": "A",
+      "column": "id",
+      "prefix": null,
+      "unique": true,
+      "position": 1
+    }
+  ],
+  "tablespace": {
+    "flags": 33,
+    "page_size": 16384,
+    "space_type": "Single",
+    "zip_page_size": 0
+  },
+  "datafiles": [
+    {
+      "path": "./innodb_reader_57_3ccc22da87d9/charset_dynamic.ibd"
+    }
+  ],
+  "dictionary": {
+    "columns": 7
+  }
+}

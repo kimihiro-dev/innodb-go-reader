@@ -1,0 +1,40 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.19",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "columns": [
+    {
+      "name": "id",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "t",
+      "type": "longtext",
+      "extra": ""
+    },
+    {
+      "name": "b",
+      "type": "longblob",
+      "extra": ""
+    },
+    {
+      "name": "j",
+      "type": "json",
+      "extra": ""
+    }
+  ],
+  "indexes": [
+    {
+      "name": "PRIMARY",
+      "index_id": 207,
+      "space_id": 52,
+      "root_page": 4
+    }
+  ],
+  "table": "lob_compact",
+  "database": "innodb_reader_80_08123feb413d"
+}

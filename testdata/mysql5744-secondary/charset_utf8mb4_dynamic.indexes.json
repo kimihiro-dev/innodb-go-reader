@@ -1,0 +1,53 @@
+[
+  {
+    "Name": "secondary",
+    "Unique": false,
+    "RowFormat": "DYNAMIC",
+    "SpaceID": 143,
+    "IndexID": 262,
+    "RootPage": 4,
+    "Fields": [
+      {
+        "Column": 2,
+        "Definition": {
+          "name": "v",
+          "type": "VARCHAR",
+          "nullable": true,
+          "charset": "utf8mb4",
+          "max_chars": 30,
+          "collation": "utf8mb4_bin"
+        },
+        "PrefixBytes": 8,
+        "RowID": false
+      },
+      {
+        "Column": 0,
+        "Definition": {
+          "name": "k",
+          "type": "CHAR",
+          "nullable": false,
+          "charset": "utf8mb4",
+          "max_chars": 8,
+          "collation": "utf8mb4_bin"
+        },
+        "PrefixBytes": 0,
+        "RowID": false
+      },
+      {
+        "Column": 1,
+        "Definition": {
+          "name": "id",
+          "type": "INT",
+          "nullable": false
+        },
+        "PrefixBytes": 0,
+        "RowID": false
+      }
+    ],
+    "UserFields": 1,
+    "ClusteredFields": [
+      1,
+      2
+    ]
+  }
+]

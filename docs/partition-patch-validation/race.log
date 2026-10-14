@@ -1,0 +1,3 @@
+ok  	innodb-go-reader	54.183s
+ok  	innodb-go-reader/internal/mysql57	3.419s
+ok  	innodb-go-reader/internal/cli	3.970s

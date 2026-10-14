@@ -1,0 +1,31 @@
+{
+  "row_format": "DYNAMIC",
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    },
+    {
+      "name": "k",
+      "type": "VARBINARY",
+      "nullable": false,
+      "max_chars": 0,
+      "max_bytes": 767
+    },
+    {
+      "charset": "utf8mb4",
+      "name": "payload",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 1200
+    }
+  ],
+  "primary_keys": [
+    "id"
+  ],
+  "root_page": 3,
+  "space_id": 43,
+  "index_id": 84
+}

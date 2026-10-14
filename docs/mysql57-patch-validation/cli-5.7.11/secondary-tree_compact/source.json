@@ -1,0 +1,140 @@
+{
+  "capture": "metadata only; caller must prevent concurrent DDL and pair a stable snapshot",
+  "clustered_fields": [
+    {
+      "name": "id",
+      "position": 0
+    }
+  ],
+  "columns": [
+    {
+      "fsp": null,
+      "name": "id",
+      "type": "int",
+      "bytes": null,
+      "chars": null,
+      "extra": "",
+      "scale": 0,
+      "charset": null,
+      "ordinal": 1,
+      "nullable": "NO",
+      "collation": null,
+      "precision": 10,
+      "expression": "",
+      "column_type": "int(11)"
+    },
+    {
+      "fsp": null,
+      "name": "k",
+      "type": "varbinary",
+      "bytes": 767,
+      "chars": 767,
+      "extra": "",
+      "scale": null,
+      "charset": null,
+      "ordinal": 2,
+      "nullable": "NO",
+      "collation": null,
+      "precision": null,
+      "expression": "",
+      "column_type": "varbinary(767)"
+    },
+    {
+      "fsp": null,
+      "name": "payload",
+      "type": "varchar",
+      "bytes": 4800,
+      "chars": 1200,
+      "extra": "",
+      "scale": null,
+      "charset": "utf8mb4",
+      "ordinal": 3,
+      "nullable": "YES",
+      "collation": "utf8mb4_bin",
+      "precision": null,
+      "expression": "",
+      "column_type": "varchar(1200)"
+    }
+  ],
+  "connection": {
+    "address": "127.0.0.1:59796",
+    "network": "tcp",
+    "tls": false,
+    "user": "schema_reader"
+  },
+  "database": "innodb_reader_57b_dbee1bbf5a33",
+  "datafiles": [
+    {
+      "path": "./innodb_reader_57b_dbee1bbf5a33/tree_compact.ibd"
+    }
+  ],
+  "dictionary": {
+    "columns": 6
+  },
+  "environment": {
+    "charset": "utf8mb4",
+    "datadir": "/var/lib/mysql/",
+    "version": "5.7.11",
+    "checksum": "strict_crc32",
+    "sql_mode": "STRICT_ALL_TABLES,NO_ENGINE_SUBSTITUTION",
+    "collation": "utf8mb4_bin",
+    "page_size": 16384,
+    "time_zone": "+00:00",
+    "file_per_table": 1
+  },
+  "indexes": [
+    {
+      "name": "PRIMARY",
+      "type": 3,
+      "fields": 1,
+      "index_id": 107,
+      "space_id": 58,
+      "table_id": 78,
+      "root_page": 3
+    },
+    {
+      "name": "secondary",
+      "type": 0,
+      "fields": 1,
+      "index_id": 108,
+      "space_id": 58,
+      "table_id": 78,
+      "root_page": 4
+    }
+  ],
+  "secondary_fields": {
+    "secondary": [
+      {
+        "name": "k",
+        "position": 0
+      }
+    ]
+  },
+  "statistics": [
+    {
+      "name": "PRIMARY",
+      "type": "BTREE",
+      "order": "A",
+      "column": "id",
+      "prefix": null,
+      "unique": true,
+      "position": 1
+    },
+    {
+      "name": "secondary",
+      "type": "BTREE",
+      "order": "A",
+      "column": "k",
+      "prefix": null,
+      "unique": false,
+      "position": 1
+    }
+  ],
+  "table": "tree_compact",
+  "tablespace": {
+    "flags": 0,
+    "page_size": 16384,
+    "space_type": "Single",
+    "zip_page_size": 0
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "environment": {
+    "charset": "utf8mb4",
+    "datadir": "/var/lib/mysql/",
+    "version": "5.7.9",
+    "checksum": "strict_crc32",
+    "sql_mode": "STRICT_ALL_TABLES,NO_ENGINE_SUBSTITUTION",
+    "collation": "utf8mb4_bin",
+    "page_size": 16384,
+    "time_zone": "+00:00",
+    "file_per_table": 1
+  },
+  "database": "innodb_reader_57_0a6134e09035",
+  "table": "empty_compact",
+  "columns": [
+    {
+      "fsp": null,
+      "name": "id",
+      "type": "int",
+      "bytes": null,
+      "chars": null,
+      "extra": "",
+      "scale": 0,
+      "charset": null,
+      "ordinal": 1,
+      "nullable": "NO",
+      "collation": null,
+      "precision": 10,
+      "expression": "",
+      "column_type": "int(11)"
+    },
+    {
+      "fsp": null,
+      "name": "payload",
+      "type": "varchar",
+      "bytes": 160,
+      "chars": 40,
+      "extra": "",
+      "scale": null,
+      "charset": "utf8mb4",
+      "ordinal": 2,
+      "nullable": "YES",
+      "collation": "utf8mb4_bin",
+      "precision": null,
+      "expression": "",
+      "column_type": "varchar(40)"
+    }
+  ],
+  "indexes": [
+    {
+      "name": "PRIMARY",
+      "type": 3,
+      "fields": 1,
+      "index_id": 58,
+      "space_id": 41,
+      "table_id": 61,
+      "root_page": 3
+    }
+  ],
+  "clustered_fields": [
+    {
+      "name": "id",
+      "position": 0
+    }
+  ],
+  "statistics": [
+    {
+      "name": "PRIMARY",
+      "type": "BTREE",
+      "order": "A",
+      "column": "id",
+      "prefix": null,
+      "unique": true,
+      "position": 1
+    }
+  ],
+  "tablespace": {
+    "flags": 0,
+    "page_size": 16384,
+    "space_type": "Single",
+    "zip_page_size": 0
+  },
+  "datafiles": [
+    {
+      "path": "./innodb_reader_57_0a6134e09035/empty_compact.ibd"
+    }
+  ],
+  "dictionary": {
+    "columns": 5
+  }
+}

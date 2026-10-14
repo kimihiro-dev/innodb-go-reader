@@ -1,0 +1,689 @@
+[
+  {
+    "version": "8.0.28",
+    "fixture": "instant_dynamic_mixed",
+    "page_zero_writer": 80028,
+    "table_private": "instant_col=2;",
+    "columns": [
+      [
+        "id",
+        "table_id=1113;"
+      ],
+      [
+        "v",
+        "table_id=1113;"
+      ],
+      [
+        "a",
+        "default=80000007;table_id=1113;"
+      ],
+      [
+        "b",
+        "default_null=1;table_id=1113;"
+      ],
+      [
+        "c",
+        "default=e7958cf09f9880;table_id=1113;"
+      ],
+      [
+        "d",
+        "default=8000002a;table_id=1113;"
+      ],
+      [
+        "DB_TRX_ID",
+        "table_id=1113;"
+      ],
+      [
+        "DB_ROLL_PTR",
+        "table_id=1113;"
+      ]
+    ],
+    "records": [
+      {
+        "page": 4,
+        "origin": 267,
+        "absolute_offset": 65803,
+        "header": "800030ff8e",
+        "preceding_bytes": "07030006",
+        "info_flags": 128,
+        "field_count": 6
+      },
+      {
+        "page": 4,
+        "origin": 153,
+        "absolute_offset": 65689,
+        "header": "000018001a",
+        "preceding_bytes": "6f6c6401",
+        "info_flags": 0,
+        "field_count": null
+      },
+      {
+        "page": 4,
+        "origin": 179,
+        "absolute_offset": 65715,
+        "header": "8000200028",
+        "preceding_bytes": "03060006",
+        "info_flags": 128,
+        "field_count": 6
+      },
+      {
+        "page": 4,
+        "origin": 219,
+        "absolute_offset": 65755,
+        "header": "800028ff95",
+        "preceding_bytes": "04030008",
+        "info_flags": 128,
+        "field_count": 8
+      }
+    ]
+  },
+  {
+    "version": "8.0.28",
+    "fixture": "wide_dynamic_current",
+    "page_zero_writer": 80028,
+    "table_private": "instant_col=127;",
+    "columns": [
+      [
+        "id",
+        "table_id=1115;"
+      ],
+      [
+        "n0",
+        "table_id=1115;"
+      ],
+      [
+        "n1",
+        "table_id=1115;"
+      ],
+      [
+        "n2",
+        "table_id=1115;"
+      ],
+      [
+        "n3",
+        "table_id=1115;"
+      ],
+      [
+        "n4",
+        "table_id=1115;"
+      ],
+      [
+        "n5",
+        "table_id=1115;"
+      ],
+      [
+        "n6",
+        "table_id=1115;"
+      ],
+      [
+        "n7",
+        "table_id=1115;"
+      ],
+      [
+        "n8",
+        "table_id=1115;"
+      ],
+      [
+        "n9",
+        "table_id=1115;"
+      ],
+      [
+        "n10",
+        "table_id=1115;"
+      ],
+      [
+        "n11",
+        "table_id=1115;"
+      ],
+      [
+        "n12",
+        "table_id=1115;"
+      ],
+      [
+        "n13",
+        "table_id=1115;"
+      ],
+      [
+        "n14",
+        "table_id=1115;"
+      ],
+      [
+        "n15",
+        "table_id=1115;"
+      ],
+      [
+        "n16",
+        "table_id=1115;"
+      ],
+      [
+        "n17",
+        "table_id=1115;"
+      ],
+      [
+        "n18",
+        "table_id=1115;"
+      ],
+      [
+        "n19",
+        "table_id=1115;"
+      ],
+      [
+        "n20",
+        "table_id=1115;"
+      ],
+      [
+        "n21",
+        "table_id=1115;"
+      ],
+      [
+        "n22",
+        "table_id=1115;"
+      ],
+      [
+        "n23",
+        "table_id=1115;"
+      ],
+      [
+        "n24",
+        "table_id=1115;"
+      ],
+      [
+        "n25",
+        "table_id=1115;"
+      ],
+      [
+        "n26",
+        "table_id=1115;"
+      ],
+      [
+        "n27",
+        "table_id=1115;"
+      ],
+      [
+        "n28",
+        "table_id=1115;"
+      ],
+      [
+        "n29",
+        "table_id=1115;"
+      ],
+      [
+        "n30",
+        "table_id=1115;"
+      ],
+      [
+        "n31",
+        "table_id=1115;"
+      ],
+      [
+        "n32",
+        "table_id=1115;"
+      ],
+      [
+        "n33",
+        "table_id=1115;"
+      ],
+      [
+        "n34",
+        "table_id=1115;"
+      ],
+      [
+        "n35",
+        "table_id=1115;"
+      ],
+      [
+        "n36",
+        "table_id=1115;"
+      ],
+      [
+        "n37",
+        "table_id=1115;"
+      ],
+      [
+        "n38",
+        "table_id=1115;"
+      ],
+      [
+        "n39",
+        "table_id=1115;"
+      ],
+      [
+        "n40",
+        "table_id=1115;"
+      ],
+      [
+        "n41",
+        "table_id=1115;"
+      ],
+      [
+        "n42",
+        "table_id=1115;"
+      ],
+      [
+        "n43",
+        "table_id=1115;"
+      ],
+      [
+        "n44",
+        "table_id=1115;"
+      ],
+      [
+        "n45",
+        "table_id=1115;"
+      ],
+      [
+        "n46",
+        "table_id=1115;"
+      ],
+      [
+        "n47",
+        "table_id=1115;"
+      ],
+      [
+        "n48",
+        "table_id=1115;"
+      ],
+      [
+        "n49",
+        "table_id=1115;"
+      ],
+      [
+        "n50",
+        "table_id=1115;"
+      ],
+      [
+        "n51",
+        "table_id=1115;"
+      ],
+      [
+        "n52",
+        "table_id=1115;"
+      ],
+      [
+        "n53",
+        "table_id=1115;"
+      ],
+      [
+        "n54",
+        "table_id=1115;"
+      ],
+      [
+        "n55",
+        "table_id=1115;"
+      ],
+      [
+        "n56",
+        "table_id=1115;"
+      ],
+      [
+        "n57",
+        "table_id=1115;"
+      ],
+      [
+        "n58",
+        "table_id=1115;"
+      ],
+      [
+        "n59",
+        "table_id=1115;"
+      ],
+      [
+        "n60",
+        "table_id=1115;"
+      ],
+      [
+        "n61",
+        "table_id=1115;"
+      ],
+      [
+        "n62",
+        "table_id=1115;"
+      ],
+      [
+        "n63",
+        "table_id=1115;"
+      ],
+      [
+        "n64",
+        "table_id=1115;"
+      ],
+      [
+        "n65",
+        "table_id=1115;"
+      ],
+      [
+        "n66",
+        "table_id=1115;"
+      ],
+      [
+        "n67",
+        "table_id=1115;"
+      ],
+      [
+        "n68",
+        "table_id=1115;"
+      ],
+      [
+        "n69",
+        "table_id=1115;"
+      ],
+      [
+        "n70",
+        "table_id=1115;"
+      ],
+      [
+        "n71",
+        "table_id=1115;"
+      ],
+      [
+        "n72",
+        "table_id=1115;"
+      ],
+      [
+        "n73",
+        "table_id=1115;"
+      ],
+      [
+        "n74",
+        "table_id=1115;"
+      ],
+      [
+        "n75",
+        "table_id=1115;"
+      ],
+      [
+        "n76",
+        "table_id=1115;"
+      ],
+      [
+        "n77",
+        "table_id=1115;"
+      ],
+      [
+        "n78",
+        "table_id=1115;"
+      ],
+      [
+        "n79",
+        "table_id=1115;"
+      ],
+      [
+        "n80",
+        "table_id=1115;"
+      ],
+      [
+        "n81",
+        "table_id=1115;"
+      ],
+      [
+        "n82",
+        "table_id=1115;"
+      ],
+      [
+        "n83",
+        "table_id=1115;"
+      ],
+      [
+        "n84",
+        "table_id=1115;"
+      ],
+      [
+        "n85",
+        "table_id=1115;"
+      ],
+      [
+        "n86",
+        "table_id=1115;"
+      ],
+      [
+        "n87",
+        "table_id=1115;"
+      ],
+      [
+        "n88",
+        "table_id=1115;"
+      ],
+      [
+        "n89",
+        "table_id=1115;"
+      ],
+      [
+        "n90",
+        "table_id=1115;"
+      ],
+      [
+        "n91",
+        "table_id=1115;"
+      ],
+      [
+        "n92",
+        "table_id=1115;"
+      ],
+      [
+        "n93",
+        "table_id=1115;"
+      ],
+      [
+        "n94",
+        "table_id=1115;"
+      ],
+      [
+        "n95",
+        "table_id=1115;"
+      ],
+      [
+        "n96",
+        "table_id=1115;"
+      ],
+      [
+        "n97",
+        "table_id=1115;"
+      ],
+      [
+        "n98",
+        "table_id=1115;"
+      ],
+      [
+        "n99",
+        "table_id=1115;"
+      ],
+      [
+        "n100",
+        "table_id=1115;"
+      ],
+      [
+        "n101",
+        "table_id=1115;"
+      ],
+      [
+        "n102",
+        "table_id=1115;"
+      ],
+      [
+        "n103",
+        "table_id=1115;"
+      ],
+      [
+        "n104",
+        "table_id=1115;"
+      ],
+      [
+        "n105",
+        "table_id=1115;"
+      ],
+      [
+        "n106",
+        "table_id=1115;"
+      ],
+      [
+        "n107",
+        "table_id=1115;"
+      ],
+      [
+        "n108",
+        "table_id=1115;"
+      ],
+      [
+        "n109",
+        "table_id=1115;"
+      ],
+      [
+        "n110",
+        "table_id=1115;"
+      ],
+      [
+        "n111",
+        "table_id=1115;"
+      ],
+      [
+        "n112",
+        "table_id=1115;"
+      ],
+      [
+        "n113",
+        "table_id=1115;"
+      ],
+      [
+        "n114",
+        "table_id=1115;"
+      ],
+      [
+        "n115",
+        "table_id=1115;"
+      ],
+      [
+        "n116",
+        "table_id=1115;"
+      ],
+      [
+        "n117",
+        "table_id=1115;"
+      ],
+      [
+        "n118",
+        "table_id=1115;"
+      ],
+      [
+        "n119",
+        "table_id=1115;"
+      ],
+      [
+        "n120",
+        "table_id=1115;"
+      ],
+      [
+        "n121",
+        "table_id=1115;"
+      ],
+      [
+        "n122",
+        "table_id=1115;"
+      ],
+      [
+        "n123",
+        "table_id=1115;"
+      ],
+      [
+        "n124",
+        "table_id=1115;"
+      ],
+      [
+        "n125",
+        "table_id=1115;"
+      ],
+      [
+        "a",
+        "default=80000007;table_id=1115;"
+      ],
+      [
+        "DB_TRX_ID",
+        "table_id=1115;"
+      ],
+      [
+        "DB_ROLL_PTR",
+        "table_id=1115;"
+      ]
+    ],
+    "records": [
+      {
+        "page": 4,
+        "origin": 141,
+        "absolute_offset": 65677,
+        "header": "0000100028",
+        "preceding_bytes": "ffffffff",
+        "info_flags": 0,
+        "field_count": null
+      },
+      {
+        "page": 4,
+        "origin": 181,
+        "absolute_offset": 65717,
+        "header": "800018ffbb",
+        "preceding_bytes": "ffff8280",
+        "info_flags": 128,
+        "field_count": 130
+      }
+    ]
+  },
+  {
+    "version": "8.0.11",
+    "fixture": "lob_dynamic_insert",
+    "page_zero_writer": 80011,
+    "table_private": "",
+    "columns": [
+      [
+        "id",
+        "table_id=1076;"
+      ],
+      [
+        "t",
+        "table_id=1076;"
+      ],
+      [
+        "b",
+        "table_id=1076;"
+      ],
+      [
+        "j",
+        "table_id=1076;"
+      ],
+      [
+        "DB_TRX_ID",
+        "table_id=1076;"
+      ],
+      [
+        "DB_ROLL_PTR",
+        "table_id=1076;"
+      ]
+    ],
+    "records": [
+      {
+        "page": 4,
+        "origin": 132,
+        "absolute_offset": 65668,
+        "header": "0000100056",
+        "preceding_bytes": "c014c000",
+        "info_flags": 0,
+        "field_count": null
+      },
+      {
+        "page": 4,
+        "origin": 218,
+        "absolute_offset": 65754,
+        "header": "000018001c",
+        "preceding_bytes": "05000000",
+        "info_flags": 0,
+        "field_count": null
+      },
+      {
+        "page": 4,
+        "origin": 246,
+        "absolute_offset": 65782,
+        "header": "000020ff7a",
+        "preceding_bytes": "00040007",
+        "info_flags": 0,
+        "field_count": null
+      }
+    ]
+  }
+]

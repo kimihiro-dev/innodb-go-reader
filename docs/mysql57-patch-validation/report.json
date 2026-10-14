@@ -1,0 +1,170 @@
+{
+  "status": "complete",
+  "date": "2026-10-14",
+  "source": "current workspace; not committed or published",
+  "toolchain": "go version go1.25.7 darwin/arm64",
+  "added_versions": [
+    "5.7.9",
+    "5.7.10",
+    "5.7.11",
+    "5.7.12",
+    "5.7.28",
+    "5.7.43"
+  ],
+  "validated_versions": [
+    "5.7.9",
+    "5.7.10",
+    "5.7.11",
+    "5.7.12",
+    "5.7.28",
+    "5.7.43",
+    "5.7.44"
+  ],
+  "original_assets": {
+    "files": 3398,
+    "changed": []
+  },
+  "source_audit": {
+    "files_per_version": 9,
+    "baseline": "5.7.44",
+    "versions_compared": 7,
+    "binary_json_grammar": "byte identical across all seven sources; format-summary.json",
+    "server_binaries": "official published images, not compiled from the supplied source"
+  },
+  "independent_evidence": {
+    "snapshots": 264,
+    "rows": 13248,
+    "secondary_indexes": 228,
+    "secondary_sql_queries": 1392,
+    "per_version": {
+      "snapshots": 44,
+      "rows": 2208,
+      "secondary_indexes": 38,
+      "secondary_sql_queries": 232
+    },
+    "schema_models": "264 independent new models and 44 existing models",
+    "snapshot_method": "independent FOR EXPORT helper; product schema is metadata only"
+  },
+  "live": {
+    "schema_collections": 264,
+    "metadata_reads": 264,
+    "export_reads": 264,
+    "secondary_checks": 228,
+    "native_unix_socket_collections": 6,
+    "TLS_1_2_verified": [
+      "5.7.28",
+      "5.7.43"
+    ],
+    "early_tls_rejected": {
+      "5.7.9": "only TLS 1.0 in this image",
+      "5.7.10": "max TLS 1.1 in this image",
+      "5.7.11": "max TLS 1.1 in this image",
+      "5.7.12": "max TLS 1.1 in this image"
+    },
+    "runtime_PATH": "empty for macOS CLI and Linux native socket product",
+    "unsupported_layout_rejections": 42,
+    "passwords_in_argv_or_artifacts": false
+  },
+  "checks": [
+    {
+      "command": "go test . -run ^TestMySQL57PatchFixtures$ -v -count=1",
+      "status": "passed",
+      "log": "patch-tests.log"
+    },
+    {
+      "command": "go test ./... -count=1",
+      "status": "passed",
+      "log": "full-tests.log"
+    },
+    {
+      "command": "go test -race ./internal/mysql57 ./internal/cli -count=1",
+      "status": "passed",
+      "log": "race.log"
+    },
+    {
+      "command": "go test ./internal/mysql57 -count=1 (after encryption/zip guard inputs added)",
+      "status": "passed",
+      "log": "collector-tests.log"
+    },
+    {
+      "command": "go vet ./...",
+      "status": "passed",
+      "log": "vet.log"
+    },
+    {
+      "command": "CGO_ENABLED=0 go build ./cmd/innodb-reader (darwin/arm64)",
+      "status": "passed",
+      "log": "build-native.log"
+    },
+    {
+      "command": "CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build ./cmd/innodb-reader",
+      "status": "passed; Linux binary executed for six native socket collections"
+    },
+    {
+      "command": "CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build ./cmd/innodb-reader",
+      "status": "passed; cross compilation only",
+      "log": "build-windows.log"
+    },
+    {
+      "command": "python3 scripts/check_docs.py",
+      "status": "passed",
+      "log": "docs.log"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed",
+      "log": "diff-check.log"
+    }
+  ],
+  "cache": {
+    "GOMODCACHE": "/tmp/innodb-driver-module-cache",
+    "GOCACHE": "/tmp/innodb-version-go-cache",
+    "GOTOOLCHAIN": "local",
+    "GOPROXY": "off"
+  },
+  "test_counts": {
+    "existing_complete_read_matrix": 528,
+    "new_explicit_patch_fixtures": 264,
+    "recursive_space_assets": 795
+  },
+  "limitations": [
+    "No inference to intermediate untested patches",
+    "All data remain stable 16 KiB private uncompressed unencrypted DYNAMIC/COMPACT tables",
+    "Early TLS limit belongs to the tested image build; custom OpenSSL builds may differ",
+    "No FRM/system tablespace discovery, partition expansion, undo/redo/MVCC recovery",
+    "Column/key widths and combinations limited to independent fixture evidence",
+    "CLI export verifies protocol and row count; exact SQL cells checked in Go physical tests",
+    "Windows is compile-only; Linux server images and native Unix socket binary ran under amd64 emulation on ARM64 Docker host"
+  ],
+  "binaries": {
+    "darwin-arm64": "be1f50fb35e344efc76d3914ef1f1063e75eab8b924d1db07fbb0f5d05a89fc9",
+    "linux-amd64": "78ff310e794e98a6ccd2e378edb6c39bfbc392f9f2f764904aeba24013981f45",
+    "windows-amd64": "a52fa16ba0de20b4f79c8f24820b56b25ebfb4c798607eb9a2d236ffa39e6047"
+  },
+  "test_environment_cleanup": {
+    "5.7.9": {
+      "container": "innodb-patch-5-7-9-3fe44c",
+      "state": "stopped; data retained for independent verification"
+    },
+    "5.7.10": {
+      "container": "innodb-patch-5-7-10-09720d",
+      "state": "stopped; data retained for independent verification"
+    },
+    "5.7.11": {
+      "container": "innodb-patch-5-7-11-f69965",
+      "state": "stopped; data retained for independent verification"
+    },
+    "5.7.12": {
+      "container": "innodb-patch-5-7-12-6c91ea",
+      "state": "stopped; data retained for independent verification"
+    },
+    "5.7.28": {
+      "container": "innodb-patch-5-7-28-b92c26",
+      "state": "stopped; data retained for independent verification"
+    },
+    "5.7.43": {
+      "container": "innodb-patch-5-7-43-f12c9e",
+      "state": "stopped; data retained for independent verification"
+    }
+  }
+}

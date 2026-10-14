@@ -88,10 +88,20 @@
 | [80 分区命令与验证](80-partition-validation-and-cli.md) | 如何验证完整性、来源和重建后身份？ | 已实现、已验证 |
 | [81 离线可视化模型](81-visual-report-model.md) | 空间、树与字节如何保持可追溯？ | 已实现，已验证 |
 | [82 报告命令与验证](82-visual-report-validation.md) | 如何生成报告并验证导航和失败范围？ | 已实现，已验证 |
-| [83 首版支持矩阵](83-release-support-matrix.md) | 如何判断文件范围并选择正确入口？ | 已冻结，已核对 |
+| [83 首版支持矩阵](83-release-support-matrix.md) | 如何判断文件范围并选择正确入口？ | 首版基线与后续扩展，已核对 |
 | [84 首版交付与复验](84-release-validation.md) | 如何构建、重跑验收并定位失败？ | 已交付，已验证 |
+| [85 统计模型与指标](85-statistics-model-and-metrics.md) | 六视图如何从物理字段得到精确统计？ | 已实现，已验证 |
+| [86 统计验证](86-statistics-validation.md) | 如何核对字节、精度、筛选及失败输出？ | 已实现，已验证 |
+| [87 MySQL 5.7 显式元数据](87-mysql57-explicit-schema.md) | 如何在没有SDI时采集schema、读取旧BLOB并验证5.7文件？ | 已实现，已验证 |
+| [88 MySQL 5.7 二级与钻取](88-mysql57-secondary-indexes.md) | 如何补齐聚簇定位、核对前缀字节并进行覆盖/回表查询和索引钻取？ | 已实现，已验证 |
+| [89 MySQL 5.7 系统空间](89-mysql57-system-tablespace.md) | 如何定位旧字典、事务槽、change buffer和双写页？ | 知识文档，源码/样本核对 |
+| [90 MySQL 8.0 系统空间](90-mysql80-system-tablespace.md) | mysql.ibd、独立undo/双写/redo如何迁移，哪些旧入口仍保留？ | 知识文档，源码/样本核对 |
+| [91 CLI输入准备](91-cli-input-preparation.md) | 如何采集可信定义并生成完整分区清单？ | 已实现，已验证 |
+| [92 5.7补丁兼容](92-mysql57-patch-compatibility.md) | 哪些明确补丁已验证，源码/物理布局和TLS连接有什么差异？ | 已实现、已验证 |
+| [93 8.0补丁兼容](93-mysql80-patch-compatibility.md) | SDI版本、旧INSTANT字段计数及早期LOB如何兼容？ | 已实现、已验证 |
+| [94 分区版本兼容](94-partition-version-compatibility.md) | 5.7可信目录与8.0补丁SDI如何验证完整集合？ | 已实现、已验证 |
 
-01–05 章保留第一阶段样本及当时的支持边界；第二阶段扩展以 06–08 章为准，第三阶段整数扩展以 09–10 章为准，第四阶段页内变长字段以 11–12 章为准，第五阶段初始非压缩 LOB 以 13–14 章为准，第六阶段 TEXT/BLOB 与多页索引以 15–16 章为准，第七阶段精确小数以 17–18 章为准，第八阶段浮点以 19–20 章为准，第九阶段日期与年份以 21–22 章为准，第十阶段 DATETIME 以 23–24 章为准，第十一阶段 TIME 以 25–26 章为准，第十二阶段 TIMESTAMP 以 27–28 章为准，第十三阶段 BIT 以 29–30 章为准，第十四阶段 BINARY 以 31–32 章为准，第十五阶段 ENUM 以 33–34 章为准，第十六阶段 SET 以 35–36 章为准，第十七阶段 CHAR 以 37–38 章为准，第十八阶段读取时校验以 39–40 章为准，第十九阶段SDI提取以41–42章为准，第二十阶段自动schema以43–44章为准，第二十一阶段JSON以45–46章为准。后续阶段以本目录及阶段计划的最新状态为准，二级查询见73–74章，当前不能读取任意 MySQL 表。
+按主题和前置概念阅读上表章节；样本中的版本和局部假设用于解释物理格式，当前支持及限制统一见第83章。各章的真实字节、源码入口与验证方法直接用于理解现有实现。
 
 ## 贯穿案例与记号
 
@@ -114,7 +124,7 @@
 
 每章给出相关 Go 入口和测试位置。阅读顺序为结构解释 → 真实字节 → 解码结果 → 验证和边界；源码定位以对应章节为准，不在目录重复维护函数清单。
 
-格式核查使用 MySQL 官方 **mysql-8.0.45** 标签：
+01–86章格式核查主要使用 MySQL 官方 **mysql-8.0.45** 标签；5.7扩展与系统空间教材另分别核查 **mysql-5.7.44 / mysql-8.0.45**：
 
 - [page0types.h](https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/include/page0types.h)：页头字段、数据区和系统记录位置。
 - [rem0rec.ic](https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/include/rem0rec.ic)：记录头与 next-record 计算。
@@ -122,4 +132,4 @@
 - [fil0fil.h](https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/include/fil0fil.h)：FIL 页头。
 - [mach0data.ic](https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/include/mach0data.ic)：整数的物理编码。
 
-这些源文件已在实现时下载核对。Java 1.0.10 用于辅助理解，其行为不代替 MySQL 8.0.45 的格式定义。
+这些源文件按章节在实施或教材编写时核对。89–90章是系统空间背景知识，其源码/固定字段核对不代表读取器已实现系统空间解析或恢复。Java 1.0.10 用于辅助理解，其行为不代替官方版本的格式定义。

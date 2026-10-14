@@ -1,0 +1,14 @@
+[
+  {
+    "version": "5.7.43",
+    "source": "https://repo.mysql.com/yum/mysql-5.7-community/el/7/x86_64/mysql-community-server-5.7.43-1.el7.x86_64.rpm",
+    "sha256": "0de7ec869d1cf6c5b1c993b5128bad29abc6b79115ae4dfab657633f017e94fb",
+    "tool": "innochecksum Ver 5.7.43, for Linux (x86_64)"
+  },
+  {
+    "version": "5.7.44",
+    "source": "https://repo.mysql.com/yum/mysql-5.7-community/el/7/x86_64/mysql-community-server-5.7.44-1.el7.x86_64.rpm",
+    "sha256": "491f239d9376062d911b5376fa631f6657f8136591253927c467d7070ae1b148",
+    "tool": "innochecksum Ver 5.7.44, for Linux (x86_64)"
+  }
+]

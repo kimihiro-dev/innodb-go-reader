@@ -1,0 +1,32 @@
+{
+  "row_format": "DYNAMIC",
+  "columns": [
+    {
+      "name": "k",
+      "type": "CHAR",
+      "nullable": false,
+      "charset": "ascii",
+      "max_chars": 8,
+      "collation": "ascii_bin"
+    },
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false
+    },
+    {
+      "name": "v",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "ascii",
+      "max_chars": 30
+    }
+  ],
+  "root_page": 3,
+  "index_id": 74,
+  "space_id": 42,
+  "primary_keys": [
+    "k",
+    "id"
+  ]
+}

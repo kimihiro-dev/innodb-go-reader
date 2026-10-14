@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-14",
+  "go": "go version go1.25.7 darwin/arm64",
+  "GOMODCACHE": "/tmp/innodb-driver-module-cache",
+  "GOCACHE": "/tmp/innodb-version-go-cache",
+  "GOTOOLCHAIN": "local",
+  "GOPROXY": "off",
+  "build_CGO_ENABLED": 0
+}

@@ -1,0 +1,7 @@
+{
+  "version": "8.0.45",
+  "actual_version": "8.0.45",
+  "container": "innodb-partition-8-0-45-74b7fd",
+  "image": "mysql:8.0.45",
+  "image_id": "sha256:4af1f8815716546f5b12410f7621f37f93db8dd11a184706ef59111930b8c2ff"
+}

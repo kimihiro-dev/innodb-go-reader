@@ -1,0 +1,50 @@
+{
+  "row_format": "DYNAMIC",
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    },
+    {
+      "charset": "utf8mb4",
+      "name": "txt",
+      "type": "LONGTEXT",
+      "nullable": true,
+      "max_chars": 0
+    },
+    {
+      "name": "bin",
+      "type": "LONGBLOB",
+      "nullable": true,
+      "max_chars": 0
+    },
+    {
+      "charset": "utf8mb4",
+      "name": "v",
+      "type": "VARCHAR",
+      "nullable": true,
+      "max_chars": 8000
+    },
+    {
+      "name": "vb",
+      "type": "VARBINARY",
+      "nullable": true,
+      "max_chars": 0,
+      "max_bytes": 20000
+    },
+    {
+      "name": "j",
+      "type": "JSON",
+      "nullable": true,
+      "max_chars": 0
+    }
+  ],
+  "primary_keys": [
+    "id"
+  ],
+  "root_page": 3,
+  "space_id": 26,
+  "index_id": 48
+}

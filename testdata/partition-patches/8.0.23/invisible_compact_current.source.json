@@ -1,0 +1,76 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.23",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "database": "innodb_partition_2eef9c4b5e52",
+  "table": "invisible_compact",
+  "directory": [
+    {
+      "sub": null,
+      "name": "P0",
+      "method": "RANGE",
+      "ordinal": 1,
+      "expression": "`n`"
+    },
+    {
+      "sub": null,
+      "name": "p1",
+      "method": "RANGE",
+      "ordinal": 2,
+      "expression": "`n`"
+    },
+    {
+      "sub": null,
+      "name": "empty_p",
+      "method": "RANGE",
+      "ordinal": 3,
+      "expression": "`n`"
+    }
+  ],
+  "physical": [
+    {
+      "name": "innodb_partition_2eef9c4b5e52/invisible_compact#p#p0",
+      "path": "./innodb_partition_2eef9c4b5e52/invisible_compact#p#p0.ibd",
+      "space": 175,
+      "table_id": 1238
+    },
+    {
+      "name": "innodb_partition_2eef9c4b5e52/invisible_compact#p#p1",
+      "path": "./innodb_partition_2eef9c4b5e52/invisible_compact#p#p1.ibd",
+      "space": 176,
+      "table_id": 1239
+    },
+    {
+      "name": "innodb_partition_2eef9c4b5e52/invisible_compact#p#empty_p",
+      "path": "./innodb_partition_2eef9c4b5e52/invisible_compact#p#empty_p.ibd",
+      "space": 177,
+      "table_id": 1240
+    }
+  ],
+  "columns": [
+    {
+      "name": "id",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "a",
+      "type": "int",
+      "extra": "INVISIBLE"
+    },
+    {
+      "name": "s",
+      "type": "bigint",
+      "extra": "STORED GENERATED INVISIBLE"
+    }
+  ],
+  "partitions": {}
+}

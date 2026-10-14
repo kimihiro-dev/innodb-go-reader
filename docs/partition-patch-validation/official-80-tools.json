@@ -1,0 +1,9 @@
+{
+  "version": "8.0.45",
+  "source": "https://repo.mysql.com/yum/mysql-8.0-community/el/9/x86_64/mysql-community-server-8.0.45-1.el9.x86_64.rpm",
+  "sha256": "029631eb502ed81f459ca7dbead32effdf10ea4e63240803f4db9db208207389",
+  "tools": [
+    "ibd2sdi",
+    "innochecksum"
+  ]
+}

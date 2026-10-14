@@ -1,0 +1,225 @@
+{
+  "capture": "metadata only; caller must prevent concurrent DDL and pair a stable snapshot",
+  "clustered_fields": [
+    {
+      "name": "id",
+      "position": 0
+    }
+  ],
+  "columns": [
+    {
+      "fsp": null,
+      "name": "id",
+      "type": "int",
+      "bytes": null,
+      "chars": null,
+      "extra": "",
+      "scale": 0,
+      "charset": null,
+      "ordinal": 1,
+      "nullable": "NO",
+      "collation": null,
+      "precision": 10,
+      "expression": "",
+      "column_type": "int(11)"
+    },
+    {
+      "fsp": null,
+      "name": "n",
+      "type": "int",
+      "bytes": null,
+      "chars": null,
+      "extra": "",
+      "scale": 0,
+      "charset": null,
+      "ordinal": 2,
+      "nullable": "YES",
+      "collation": null,
+      "precision": 10,
+      "expression": "",
+      "column_type": "int(11)"
+    },
+    {
+      "fsp": null,
+      "name": "name",
+      "type": "varchar",
+      "bytes": 160,
+      "chars": 40,
+      "extra": "",
+      "scale": null,
+      "charset": "utf8mb4",
+      "ordinal": 3,
+      "nullable": "YES",
+      "collation": "utf8mb4_bin",
+      "precision": null,
+      "expression": "",
+      "column_type": "varchar(40)"
+    },
+    {
+      "fsp": null,
+      "name": "e",
+      "type": "enum",
+      "bytes": 28,
+      "chars": 7,
+      "extra": "",
+      "scale": null,
+      "charset": "utf8mb4",
+      "ordinal": 4,
+      "nullable": "YES",
+      "collation": "utf8mb4_bin",
+      "precision": null,
+      "expression": "",
+      "column_type": "enum('','界','O''Brien')"
+    },
+    {
+      "fsp": null,
+      "name": "s",
+      "type": "set",
+      "bytes": 12,
+      "chars": 3,
+      "extra": "",
+      "scale": null,
+      "charset": "utf8mb4",
+      "ordinal": 5,
+      "nullable": "YES",
+      "collation": "utf8mb4_bin",
+      "precision": null,
+      "expression": "",
+      "column_type": "set('界','a')"
+    },
+    {
+      "fsp": null,
+      "name": "vb",
+      "type": "varbinary",
+      "bytes": 40,
+      "chars": 40,
+      "extra": "",
+      "scale": null,
+      "charset": null,
+      "ordinal": 6,
+      "nullable": "YES",
+      "collation": null,
+      "precision": null,
+      "expression": "",
+      "column_type": "varbinary(40)"
+    }
+  ],
+  "connection": {
+    "address": "/tmp/innodb-driver-proxy-54359.sock",
+    "network": "unix",
+    "tls": false,
+    "user": "schema_reader"
+  },
+  "database": "lesson",
+  "datafiles": [
+    {
+      "path": "./lesson/t.ibd"
+    }
+  ],
+  "dictionary": {
+    "columns": 9
+  },
+  "environment": {
+    "charset": "latin1",
+    "datadir": "/var/lib/mysql/",
+    "version": "5.7.44",
+    "checksum": "crc32",
+    "sql_mode": "STRICT_ALL_TABLES,NO_ENGINE_SUBSTITUTION",
+    "collation": "latin1_swedish_ci",
+    "page_size": 16384,
+    "time_zone": "+00:00",
+    "file_per_table": 1
+  },
+  "indexes": [
+    {
+      "name": "PRIMARY",
+      "type": 3,
+      "fields": 1,
+      "index_id": 48,
+      "space_id": 27,
+      "table_id": 47,
+      "root_page": 3
+    },
+    {
+      "name": "px",
+      "type": 0,
+      "fields": 2,
+      "index_id": 49,
+      "space_id": 27,
+      "table_id": 47,
+      "root_page": 4
+    },
+    {
+      "name": "sn",
+      "type": 0,
+      "fields": 1,
+      "index_id": 50,
+      "space_id": 27,
+      "table_id": 47,
+      "root_page": 5
+    }
+  ],
+  "secondary_fields": {
+    "px": [
+      {
+        "name": "name",
+        "position": 0
+      },
+      {
+        "name": "n",
+        "position": 1
+      }
+    ],
+    "sn": [
+      {
+        "name": "n",
+        "position": 0
+      }
+    ]
+  },
+  "statistics": [
+    {
+      "name": "PRIMARY",
+      "type": "BTREE",
+      "order": "A",
+      "column": "id",
+      "prefix": null,
+      "unique": true,
+      "position": 1
+    },
+    {
+      "name": "px",
+      "type": "BTREE",
+      "order": "A",
+      "column": "name",
+      "prefix": 3,
+      "unique": false,
+      "position": 1
+    },
+    {
+      "name": "px",
+      "type": "BTREE",
+      "order": "A",
+      "column": "n",
+      "prefix": null,
+      "unique": false,
+      "position": 2
+    },
+    {
+      "name": "sn",
+      "type": "BTREE",
+      "order": "A",
+      "column": "n",
+      "prefix": null,
+      "unique": false,
+      "position": 1
+    }
+  ],
+  "table": "t",
+  "tablespace": {
+    "flags": 33,
+    "page_size": 16384,
+    "space_type": "Single",
+    "zip_page_size": 0
+  }
+}

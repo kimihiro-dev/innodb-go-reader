@@ -1,0 +1,734 @@
+=== RUN   TestPartitionMetadataDamage
+=== RUN   TestPartitionMetadataDamage/object
+=== RUN   TestPartitionMetadataDamage/logical-id
+=== RUN   TestPartitionMetadataDamage/name
+=== RUN   TestPartitionMetadataDamage/duplicate-position
+=== RUN   TestPartitionMetadataDamage/partition-id
+=== RUN   TestPartitionMetadataDamage/logical-physical
+=== RUN   TestPartitionMetadataDamage/column-layout
+=== RUN   TestPartitionMetadataDamage/logical-tablespace
+=== RUN   TestPartitionMetadataDamage/no-index
+=== RUN   TestPartitionMetadataDamage/expression
+=== RUN   TestPartitionMetadataDamage/nested
+=== RUN   TestPartitionMetadataDamage/duplicate-opx
+=== RUN   TestPartitionMetadataDamage/physical-table
+=== RUN   TestPartitionMetadataDamage/version
+=== RUN   TestPartitionMetadataDamage/missing-directory
+=== RUN   TestPartitionMetadataDamage/position
+=== RUN   TestPartitionMetadataDamage/index-count
+=== RUN   TestPartitionMetadataDamage/private-conflict
+=== RUN   TestPartitionMetadataDamage/column-owner
+=== RUN   TestPartitionMetadataDamage/logical-private-null
+=== RUN   TestPartitionMetadataDamage/subpartition
+=== RUN   TestPartitionMetadataDamage/method
+=== RUN   TestPartitionMetadataDamage/engine
+=== RUN   TestPartitionMetadataDamage/missing-number
+=== RUN   TestPartitionMetadataDamage/parent
+=== RUN   TestPartitionMetadataDamage/index-opx
+=== RUN   TestPartitionMetadataDamage/space-ref
+=== RUN   TestPartitionMetadataDamage/private-unknown
+--- PASS: TestPartitionMetadataDamage (0.08s)
+    --- PASS: TestPartitionMetadataDamage/object (0.00s)
+    --- PASS: TestPartitionMetadataDamage/logical-id (0.00s)
+    --- PASS: TestPartitionMetadataDamage/name (0.00s)
+    --- PASS: TestPartitionMetadataDamage/duplicate-position (0.00s)
+    --- PASS: TestPartitionMetadataDamage/partition-id (0.00s)
+    --- PASS: TestPartitionMetadataDamage/logical-physical (0.00s)
+    --- PASS: TestPartitionMetadataDamage/column-layout (0.00s)
+    --- PASS: TestPartitionMetadataDamage/logical-tablespace (0.00s)
+    --- PASS: TestPartitionMetadataDamage/no-index (0.00s)
+    --- PASS: TestPartitionMetadataDamage/expression (0.00s)
+    --- PASS: TestPartitionMetadataDamage/nested (0.00s)
+    --- PASS: TestPartitionMetadataDamage/duplicate-opx (0.00s)
+    --- PASS: TestPartitionMetadataDamage/physical-table (0.00s)
+    --- PASS: TestPartitionMetadataDamage/version (0.00s)
+    --- PASS: TestPartitionMetadataDamage/missing-directory (0.00s)
+    --- PASS: TestPartitionMetadataDamage/position (0.00s)
+    --- PASS: TestPartitionMetadataDamage/index-count (0.00s)
+    --- PASS: TestPartitionMetadataDamage/private-conflict (0.00s)
+    --- PASS: TestPartitionMetadataDamage/column-owner (0.01s)
+    --- PASS: TestPartitionMetadataDamage/logical-private-null (0.00s)
+    --- PASS: TestPartitionMetadataDamage/subpartition (0.00s)
+    --- PASS: TestPartitionMetadataDamage/method (0.00s)
+    --- PASS: TestPartitionMetadataDamage/engine (0.00s)
+    --- PASS: TestPartitionMetadataDamage/missing-number (0.00s)
+    --- PASS: TestPartitionMetadataDamage/parent (0.00s)
+    --- PASS: TestPartitionMetadataDamage/index-opx (0.00s)
+    --- PASS: TestPartitionMetadataDamage/space-ref (0.00s)
+    --- PASS: TestPartitionMetadataDamage/private-unknown (0.00s)
+=== RUN   TestPartitionPatchFixtures
+=== RUN   TestPartitionPatchFixtures/5.7.10/ranges_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.10/lists_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.10/hashes_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.10/keys_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.10/hidden_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.10/generated_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.10/autoinc_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.10/ranges_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.10/lists_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.10/hashes_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.10/keys_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.10/hidden_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.10/generated_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.10/autoinc_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.10/tree_current
+=== RUN   TestPartitionPatchFixtures/5.7.10/ranges_dynamic_rebuild_first
+=== RUN   TestPartitionPatchFixtures/5.7.10/ranges_dynamic_exchange
+=== RUN   TestPartitionPatchFixtures/5.7.10/sub_rows_current
+=== RUN   TestPartitionPatchFixtures/5.7.11/ranges_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.11/lists_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.11/hashes_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.11/keys_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.11/hidden_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.11/generated_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.11/autoinc_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.11/ranges_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.11/lists_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.11/hashes_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.11/keys_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.11/hidden_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.11/generated_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.11/autoinc_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.11/tree_current
+=== RUN   TestPartitionPatchFixtures/5.7.11/ranges_dynamic_rebuild_first
+=== RUN   TestPartitionPatchFixtures/5.7.11/ranges_dynamic_exchange
+=== RUN   TestPartitionPatchFixtures/5.7.11/sub_rows_current
+=== RUN   TestPartitionPatchFixtures/5.7.12/ranges_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.12/lists_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.12/hashes_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.12/keys_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.12/hidden_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.12/generated_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.12/autoinc_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.12/ranges_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.12/lists_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.12/hashes_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.12/keys_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.12/hidden_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.12/generated_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.12/autoinc_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.12/tree_current
+=== RUN   TestPartitionPatchFixtures/5.7.12/ranges_dynamic_rebuild_first
+=== RUN   TestPartitionPatchFixtures/5.7.12/ranges_dynamic_exchange
+=== RUN   TestPartitionPatchFixtures/5.7.12/sub_rows_current
+=== RUN   TestPartitionPatchFixtures/5.7.28/ranges_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.28/lists_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.28/hashes_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.28/keys_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.28/hidden_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.28/generated_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.28/autoinc_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.28/ranges_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.28/lists_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.28/hashes_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.28/keys_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.28/hidden_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.28/generated_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.28/autoinc_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.28/tree_current
+=== RUN   TestPartitionPatchFixtures/5.7.28/ranges_dynamic_rebuild_first
+=== RUN   TestPartitionPatchFixtures/5.7.28/ranges_dynamic_exchange
+=== RUN   TestPartitionPatchFixtures/5.7.28/sub_rows_current
+=== RUN   TestPartitionPatchFixtures/5.7.43/ranges_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.43/lists_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.43/hashes_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.43/keys_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.43/hidden_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.43/generated_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.43/autoinc_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.43/ranges_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.43/lists_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.43/hashes_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.43/keys_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.43/hidden_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.43/generated_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.43/autoinc_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.43/tree_current
+=== RUN   TestPartitionPatchFixtures/5.7.43/ranges_dynamic_rebuild_first
+=== RUN   TestPartitionPatchFixtures/5.7.43/ranges_dynamic_exchange
+=== RUN   TestPartitionPatchFixtures/5.7.43/sub_rows_current
+=== RUN   TestPartitionPatchFixtures/5.7.44/ranges_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.44/lists_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.44/hashes_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.44/keys_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.44/hidden_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.44/generated_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.44/autoinc_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.44/ranges_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.44/lists_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.44/hashes_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.44/keys_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.44/hidden_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.44/generated_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.44/autoinc_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.44/tree_current
+=== RUN   TestPartitionPatchFixtures/5.7.44/ranges_dynamic_rebuild_first
+=== RUN   TestPartitionPatchFixtures/5.7.44/ranges_dynamic_exchange
+=== RUN   TestPartitionPatchFixtures/5.7.44/sub_rows_current
+=== RUN   TestPartitionPatchFixtures/5.7.9/ranges_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.9/lists_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.9/hashes_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.9/keys_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.9/hidden_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.9/generated_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.9/autoinc_dynamic_current
+=== RUN   TestPartitionPatchFixtures/5.7.9/ranges_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.9/lists_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.9/hashes_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.9/keys_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.9/hidden_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.9/generated_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.9/autoinc_compact_current
+=== RUN   TestPartitionPatchFixtures/5.7.9/tree_current
+=== RUN   TestPartitionPatchFixtures/5.7.9/ranges_dynamic_rebuild_first
+=== RUN   TestPartitionPatchFixtures/5.7.9/ranges_dynamic_exchange
+=== RUN   TestPartitionPatchFixtures/5.7.9/sub_rows_current
+=== RUN   TestPartitionPatchFixtures/8.0.11/ranges_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.11/lists_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.11/hashes_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.11/keys_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.11/hidden_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.11/generated_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.11/autoinc_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.11/ranges_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.11/lists_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.11/hashes_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.11/keys_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.11/hidden_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.11/generated_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.11/autoinc_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.11/tree_current
+=== RUN   TestPartitionPatchFixtures/8.0.11/ranges_dynamic_rebuild_first
+=== RUN   TestPartitionPatchFixtures/8.0.11/ranges_dynamic_exchange
+=== RUN   TestPartitionPatchFixtures/8.0.11/sub_rows_current
+=== RUN   TestPartitionPatchFixtures/8.0.12/ranges_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.12/lists_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.12/hashes_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.12/keys_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.12/hidden_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.12/generated_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.12/autoinc_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.12/instant_dynamic_add
+=== RUN   TestPartitionPatchFixtures/8.0.12/instant_dynamic_partial_rebuild
+=== RUN   TestPartitionPatchFixtures/8.0.12/ranges_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.12/lists_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.12/hashes_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.12/keys_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.12/hidden_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.12/generated_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.12/autoinc_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.12/instant_compact_add
+=== RUN   TestPartitionPatchFixtures/8.0.12/instant_compact_partial_rebuild
+=== RUN   TestPartitionPatchFixtures/8.0.12/tree_current
+=== RUN   TestPartitionPatchFixtures/8.0.12/ranges_dynamic_rebuild_first
+=== RUN   TestPartitionPatchFixtures/8.0.12/ranges_dynamic_exchange
+=== RUN   TestPartitionPatchFixtures/8.0.12/sub_rows_current
+=== RUN   TestPartitionPatchFixtures/8.0.16/ranges_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.16/lists_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.16/hashes_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.16/keys_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.16/hidden_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.16/generated_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.16/autoinc_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.16/instant_dynamic_add
+=== RUN   TestPartitionPatchFixtures/8.0.16/instant_dynamic_partial_rebuild
+=== RUN   TestPartitionPatchFixtures/8.0.16/ranges_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.16/lists_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.16/hashes_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.16/keys_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.16/hidden_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.16/generated_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.16/autoinc_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.16/instant_compact_add
+=== RUN   TestPartitionPatchFixtures/8.0.16/instant_compact_partial_rebuild
+=== RUN   TestPartitionPatchFixtures/8.0.16/tree_current
+=== RUN   TestPartitionPatchFixtures/8.0.16/ranges_dynamic_rebuild_first
+=== RUN   TestPartitionPatchFixtures/8.0.16/ranges_dynamic_exchange
+=== RUN   TestPartitionPatchFixtures/8.0.16/sub_rows_current
+=== RUN   TestPartitionPatchFixtures/8.0.19/ranges_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.19/lists_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.19/hashes_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.19/keys_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.19/hidden_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.19/generated_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.19/autoinc_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.19/instant_dynamic_add
+=== RUN   TestPartitionPatchFixtures/8.0.19/instant_dynamic_partial_rebuild
+=== RUN   TestPartitionPatchFixtures/8.0.19/ranges_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.19/lists_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.19/hashes_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.19/keys_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.19/hidden_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.19/generated_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.19/autoinc_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.19/instant_compact_add
+=== RUN   TestPartitionPatchFixtures/8.0.19/instant_compact_partial_rebuild
+=== RUN   TestPartitionPatchFixtures/8.0.19/tree_current
+=== RUN   TestPartitionPatchFixtures/8.0.19/ranges_dynamic_rebuild_first
+=== RUN   TestPartitionPatchFixtures/8.0.19/ranges_dynamic_exchange
+=== RUN   TestPartitionPatchFixtures/8.0.19/sub_rows_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/ranges_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/lists_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/hashes_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/keys_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/hidden_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/generated_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/autoinc_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/invisible_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/instant_dynamic_add
+=== RUN   TestPartitionPatchFixtures/8.0.23/instant_dynamic_partial_rebuild
+=== RUN   TestPartitionPatchFixtures/8.0.23/ranges_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/lists_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/hashes_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/keys_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/hidden_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/generated_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/autoinc_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/invisible_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/instant_compact_add
+=== RUN   TestPartitionPatchFixtures/8.0.23/instant_compact_partial_rebuild
+=== RUN   TestPartitionPatchFixtures/8.0.23/tree_current
+=== RUN   TestPartitionPatchFixtures/8.0.23/ranges_dynamic_rebuild_first
+=== RUN   TestPartitionPatchFixtures/8.0.23/ranges_dynamic_exchange
+=== RUN   TestPartitionPatchFixtures/8.0.23/sub_rows_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/ranges_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/lists_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/hashes_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/keys_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/hidden_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/generated_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/autoinc_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/invisible_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/instant_dynamic_add
+=== RUN   TestPartitionPatchFixtures/8.0.28/instant_dynamic_partial_rebuild
+=== RUN   TestPartitionPatchFixtures/8.0.28/ranges_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/lists_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/hashes_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/keys_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/hidden_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/generated_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/autoinc_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/invisible_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/instant_compact_add
+=== RUN   TestPartitionPatchFixtures/8.0.28/instant_compact_partial_rebuild
+=== RUN   TestPartitionPatchFixtures/8.0.28/tree_current
+=== RUN   TestPartitionPatchFixtures/8.0.28/ranges_dynamic_rebuild_first
+=== RUN   TestPartitionPatchFixtures/8.0.28/ranges_dynamic_exchange
+=== RUN   TestPartitionPatchFixtures/8.0.28/sub_rows_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/ranges_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/lists_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/hashes_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/keys_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/hidden_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/generated_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/autoinc_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/invisible_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/instant_dynamic_add
+=== RUN   TestPartitionPatchFixtures/8.0.30/instant_dynamic_partial_rebuild
+=== RUN   TestPartitionPatchFixtures/8.0.30/instant_dynamic_drop
+=== RUN   TestPartitionPatchFixtures/8.0.30/ranges_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/lists_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/hashes_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/keys_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/hidden_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/generated_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/autoinc_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/invisible_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/instant_compact_add
+=== RUN   TestPartitionPatchFixtures/8.0.30/instant_compact_partial_rebuild
+=== RUN   TestPartitionPatchFixtures/8.0.30/instant_compact_drop
+=== RUN   TestPartitionPatchFixtures/8.0.30/tree_current
+=== RUN   TestPartitionPatchFixtures/8.0.30/ranges_dynamic_rebuild_first
+=== RUN   TestPartitionPatchFixtures/8.0.30/ranges_dynamic_exchange
+=== RUN   TestPartitionPatchFixtures/8.0.30/sub_rows_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/ranges_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/lists_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/hashes_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/keys_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/hidden_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/generated_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/autoinc_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/invisible_dynamic_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/instant_dynamic_add
+=== RUN   TestPartitionPatchFixtures/8.0.45/instant_dynamic_partial_rebuild
+=== RUN   TestPartitionPatchFixtures/8.0.45/instant_dynamic_drop
+=== RUN   TestPartitionPatchFixtures/8.0.45/ranges_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/lists_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/hashes_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/keys_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/hidden_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/generated_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/autoinc_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/invisible_compact_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/instant_compact_add
+=== RUN   TestPartitionPatchFixtures/8.0.45/instant_compact_partial_rebuild
+=== RUN   TestPartitionPatchFixtures/8.0.45/instant_compact_drop
+=== RUN   TestPartitionPatchFixtures/8.0.45/tree_current
+=== RUN   TestPartitionPatchFixtures/8.0.45/ranges_dynamic_rebuild_first
+=== RUN   TestPartitionPatchFixtures/8.0.45/ranges_dynamic_exchange
+=== RUN   TestPartitionPatchFixtures/8.0.45/sub_rows_current
+=== NAME  TestPartitionPatchFixtures
+    partition_patch_test.go:169: partition patch SQL coverage: 289 collections, 867 files, 12604 rows
+--- PASS: TestPartitionPatchFixtures (5.56s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/ranges_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/lists_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/hashes_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/keys_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/hidden_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/generated_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/autoinc_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/ranges_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/lists_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/hashes_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/keys_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/hidden_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/generated_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/autoinc_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/tree_current (0.08s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/ranges_dynamic_rebuild_first (0.03s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/ranges_dynamic_exchange (0.01s)
+    --- PASS: TestPartitionPatchFixtures/5.7.10/sub_rows_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/ranges_dynamic_current (0.04s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/lists_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/hashes_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/keys_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/hidden_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/generated_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/autoinc_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/ranges_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/lists_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/hashes_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/keys_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/hidden_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/generated_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/autoinc_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/tree_current (0.07s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/ranges_dynamic_rebuild_first (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/ranges_dynamic_exchange (0.01s)
+    --- PASS: TestPartitionPatchFixtures/5.7.11/sub_rows_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/ranges_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/lists_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/hashes_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/keys_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/hidden_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/generated_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/autoinc_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/ranges_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/lists_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/hashes_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/keys_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/hidden_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/generated_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/autoinc_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/tree_current (0.07s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/ranges_dynamic_rebuild_first (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/ranges_dynamic_exchange (0.01s)
+    --- PASS: TestPartitionPatchFixtures/5.7.12/sub_rows_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/ranges_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/lists_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/hashes_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/keys_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/hidden_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/generated_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/autoinc_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/ranges_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/lists_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/hashes_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/keys_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/hidden_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/generated_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/autoinc_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/tree_current (0.08s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/ranges_dynamic_rebuild_first (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/ranges_dynamic_exchange (0.01s)
+    --- PASS: TestPartitionPatchFixtures/5.7.28/sub_rows_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/ranges_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/lists_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/hashes_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/keys_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/hidden_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/generated_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/autoinc_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/ranges_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/lists_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/hashes_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/keys_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/hidden_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/generated_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/autoinc_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/tree_current (0.07s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/ranges_dynamic_rebuild_first (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/ranges_dynamic_exchange (0.01s)
+    --- PASS: TestPartitionPatchFixtures/5.7.43/sub_rows_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/ranges_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/lists_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/hashes_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/keys_dynamic_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/hidden_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/generated_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/autoinc_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/ranges_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/lists_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/hashes_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/keys_compact_current (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/hidden_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/generated_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/autoinc_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/tree_current (0.09s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/ranges_dynamic_rebuild_first (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/ranges_dynamic_exchange (0.01s)
+    --- PASS: TestPartitionPatchFixtures/5.7.44/sub_rows_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/ranges_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/lists_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/hashes_dynamic_current (0.04s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/keys_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/hidden_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/generated_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/autoinc_dynamic_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/ranges_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/lists_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/hashes_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/keys_compact_current (0.04s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/hidden_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/generated_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/autoinc_compact_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/tree_current (0.08s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/ranges_dynamic_rebuild_first (0.02s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/ranges_dynamic_exchange (0.01s)
+    --- PASS: TestPartitionPatchFixtures/5.7.9/sub_rows_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/ranges_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/lists_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/hashes_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/keys_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/hidden_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/generated_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/autoinc_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/ranges_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/lists_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/hashes_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/keys_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/hidden_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/generated_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/autoinc_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/tree_current (0.08s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/ranges_dynamic_rebuild_first (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/ranges_dynamic_exchange (0.00s)
+    --- PASS: TestPartitionPatchFixtures/8.0.11/sub_rows_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/ranges_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/lists_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/hashes_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/keys_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/hidden_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/generated_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/autoinc_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/instant_dynamic_add (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/instant_dynamic_partial_rebuild (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/ranges_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/lists_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/hashes_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/keys_compact_current (0.04s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/hidden_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/generated_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/autoinc_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/instant_compact_add (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/instant_compact_partial_rebuild (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/tree_current (0.08s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/ranges_dynamic_rebuild_first (0.00s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/ranges_dynamic_exchange (0.00s)
+    --- PASS: TestPartitionPatchFixtures/8.0.12/sub_rows_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/ranges_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/lists_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/hashes_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/keys_dynamic_current (0.04s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/hidden_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/generated_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/autoinc_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/instant_dynamic_add (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/instant_dynamic_partial_rebuild (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/ranges_compact_current (0.04s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/lists_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/hashes_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/keys_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/hidden_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/generated_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/autoinc_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/instant_compact_add (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/instant_compact_partial_rebuild (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/tree_current (0.08s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/ranges_dynamic_rebuild_first (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/ranges_dynamic_exchange (0.00s)
+    --- PASS: TestPartitionPatchFixtures/8.0.16/sub_rows_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/ranges_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/lists_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/hashes_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/keys_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/hidden_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/generated_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/autoinc_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/instant_dynamic_add (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/instant_dynamic_partial_rebuild (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/ranges_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/lists_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/hashes_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/keys_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/hidden_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/generated_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/autoinc_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/instant_compact_add (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/instant_compact_partial_rebuild (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/tree_current (0.11s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/ranges_dynamic_rebuild_first (0.04s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/ranges_dynamic_exchange (0.00s)
+    --- PASS: TestPartitionPatchFixtures/8.0.19/sub_rows_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/ranges_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/lists_dynamic_current (0.04s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/hashes_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/keys_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/hidden_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/generated_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/autoinc_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/invisible_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/instant_dynamic_add (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/instant_dynamic_partial_rebuild (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/ranges_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/lists_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/hashes_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/keys_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/hidden_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/generated_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/autoinc_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/invisible_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/instant_compact_add (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/instant_compact_partial_rebuild (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/tree_current (0.08s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/ranges_dynamic_rebuild_first (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/ranges_dynamic_exchange (0.00s)
+    --- PASS: TestPartitionPatchFixtures/8.0.23/sub_rows_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/ranges_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/lists_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/hashes_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/keys_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/hidden_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/generated_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/autoinc_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/invisible_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/instant_dynamic_add (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/instant_dynamic_partial_rebuild (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/ranges_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/lists_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/hashes_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/keys_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/hidden_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/generated_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/autoinc_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/invisible_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/instant_compact_add (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/instant_compact_partial_rebuild (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/tree_current (0.08s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/ranges_dynamic_rebuild_first (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/ranges_dynamic_exchange (0.02s)
+    --- PASS: TestPartitionPatchFixtures/8.0.28/sub_rows_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/ranges_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/lists_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/hashes_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/keys_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/hidden_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/generated_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/autoinc_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/invisible_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/instant_dynamic_add (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/instant_dynamic_partial_rebuild (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/instant_dynamic_drop (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/ranges_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/lists_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/hashes_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/keys_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/hidden_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/generated_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/autoinc_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/invisible_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/instant_compact_add (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/instant_compact_partial_rebuild (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/instant_compact_drop (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/tree_current (0.08s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/ranges_dynamic_rebuild_first (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/ranges_dynamic_exchange (0.02s)
+    --- PASS: TestPartitionPatchFixtures/8.0.30/sub_rows_current (0.00s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/ranges_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/lists_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/hashes_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/keys_dynamic_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/hidden_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/generated_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/autoinc_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/invisible_dynamic_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/instant_dynamic_add (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/instant_dynamic_partial_rebuild (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/instant_dynamic_drop (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/ranges_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/lists_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/hashes_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/keys_compact_current (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/hidden_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/generated_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/autoinc_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/invisible_compact_current (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/instant_compact_add (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/instant_compact_partial_rebuild (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/instant_compact_drop (0.01s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/tree_current (0.08s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/ranges_dynamic_rebuild_first (0.03s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/ranges_dynamic_exchange (0.02s)
+    --- PASS: TestPartitionPatchFixtures/8.0.45/sub_rows_current (0.00s)
+=== RUN   TestTrustedPartitionDefinitionFailures
+=== RUN   TestTrustedPartitionDefinitionFailures/version
+=== RUN   TestTrustedPartitionDefinitionFailures/database
+=== RUN   TestTrustedPartitionDefinitionFailures/index-id
+=== RUN   TestTrustedPartitionDefinitionFailures/columns
+=== RUN   TestTrustedPartitionDefinitionFailures/descending
+=== RUN   TestTrustedPartitionDefinitionFailures/missing
+=== RUN   TestTrustedPartitionDefinitionFailures/mysql-version
+=== RUN   TestTrustedPartitionDefinitionFailures/method
+=== RUN   TestTrustedPartitionDefinitionFailures/order
+=== RUN   TestTrustedPartitionDefinitionFailures/name
+=== RUN   TestTrustedPartitionDefinitionFailures/table-id
+=== RUN   TestTrustedPartitionDefinitionFailures/space-id
+=== RUN   TestTrustedPartitionDefinitionFailures/indexes
+=== RUN   TestTrustedPartitionDefinitionFailures/instant
+--- PASS: TestTrustedPartitionDefinitionFailures (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/version (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/database (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/index-id (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/columns (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/descending (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/missing (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/mysql-version (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/method (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/order (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/name (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/table-id (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/space-id (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/indexes (0.00s)
+    --- PASS: TestTrustedPartitionDefinitionFailures/instant (0.00s)
+=== RUN   TestTrustedPartitionPhysicalFailures
+=== RUN   TestTrustedPartitionPhysicalFailures/missing
+=== RUN   TestTrustedPartitionPhysicalFailures/extra
+=== RUN   TestTrustedPartitionPhysicalFailures/duplicate
+=== RUN   TestTrustedPartitionPhysicalFailures/wrong-name
+=== RUN   TestTrustedPartitionPhysicalFailures/swapped-file
+=== RUN   TestTrustedPartitionPhysicalFailures/checksum
+=== RUN   TestTrustedPartitionPhysicalFailures/wrong-root
+=== RUN   TestTrustedPartitionPhysicalFailures/wrong-secondary-root
+--- PASS: TestTrustedPartitionPhysicalFailures (0.00s)
+    --- PASS: TestTrustedPartitionPhysicalFailures/missing (0.00s)
+    --- PASS: TestTrustedPartitionPhysicalFailures/extra (0.00s)
+    --- PASS: TestTrustedPartitionPhysicalFailures/duplicate (0.00s)
+    --- PASS: TestTrustedPartitionPhysicalFailures/wrong-name (0.00s)
+    --- PASS: TestTrustedPartitionPhysicalFailures/swapped-file (0.00s)
+    --- PASS: TestTrustedPartitionPhysicalFailures/checksum (0.00s)
+    --- PASS: TestTrustedPartitionPhysicalFailures/wrong-root (0.00s)
+    --- PASS: TestTrustedPartitionPhysicalFailures/wrong-secondary-root (0.00s)
+=== RUN   TestTrustedPartitionControlAndOwnership
+--- PASS: TestTrustedPartitionControlAndOwnership (0.00s)
+PASS
+ok  	innodb-go-reader	6.757s

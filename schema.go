@@ -91,16 +91,17 @@ type VirtualColumn struct {
 }
 
 type Schema struct {
-	RowFormat      string          `json:"row_format,omitempty"` // Empty means DYNAMIC; COMPACT uses local LOB prefixes.
-	VirtualColumns []VirtualColumn `json:"virtual_columns,omitempty"`
-	Instant        *InstantLayout  `json:"instant,omitempty"`
-	ClusteredKey   *ClusteredKey   `json:"clustered_key,omitempty"`
-	Columns        []Column        `json:"columns"`
-	PrimaryKey     string          `json:"primary_key,omitempty"`
-	PrimaryKeys    []string        `json:"primary_keys,omitempty"`
-	RootPage       uint32          `json:"root_page"`
-	SpaceID        uint32          `json:"space_id"`
-	IndexID        uint64          `json:"index_id"`
+	RowFormat      string               `json:"row_format,omitempty"` // Empty means DYNAMIC; COMPACT uses local LOB prefixes.
+	VirtualColumns []VirtualColumn      `json:"virtual_columns,omitempty"`
+	Instant        *InstantLayout       `json:"instant,omitempty"`
+	LegacyInstant  *LegacyInstantLayout `json:"legacy_instant,omitempty"`
+	ClusteredKey   *ClusteredKey        `json:"clustered_key,omitempty"`
+	Columns        []Column             `json:"columns"`
+	PrimaryKey     string               `json:"primary_key,omitempty"`
+	PrimaryKeys    []string             `json:"primary_keys,omitempty"`
+	RootPage       uint32               `json:"root_page"`
+	SpaceID        uint32               `json:"space_id"`
+	IndexID        uint64               `json:"index_id"`
 }
 
 func (s Schema) validate() ([]int, error) {

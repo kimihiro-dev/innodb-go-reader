@@ -1,0 +1,50 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.16",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "columns": [
+    {
+      "name": "id",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "v",
+      "type": "varchar",
+      "extra": ""
+    },
+    {
+      "name": "a",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "b",
+      "type": "varchar",
+      "extra": ""
+    },
+    {
+      "name": "c",
+      "type": "varchar",
+      "extra": ""
+    },
+    {
+      "name": "d",
+      "type": "int",
+      "extra": ""
+    }
+  ],
+  "indexes": [
+    {
+      "name": "PRIMARY",
+      "index_id": 215,
+      "space_id": 58,
+      "root_page": 4
+    }
+  ],
+  "table": "instant_compact",
+  "database": "innodb_reader_80_aaf17e924b8b"
+}

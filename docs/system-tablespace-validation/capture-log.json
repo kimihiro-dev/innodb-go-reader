@@ -1,0 +1,2360 @@
+[
+  {
+    "command": [
+      "docker",
+      "run",
+      "--detach",
+      "--name",
+      "innodb-systemspace-57-doc-20261013-b",
+      "--platform",
+      "linux/amd64",
+      "--network",
+      "none",
+      "--mount",
+      "type=volume,source=innodb-systemspace-57-doc-20261013-b,target=/var/lib/mysql",
+      "--env",
+      "MYSQL_ALLOW_EMPTY_PASSWORD=yes",
+      "mysql@sha256:dab0a802b44617303694fb17d166501de279c3031ddeb28c56ecf7fcab5ef0da",
+      "--innodb-page-size=16384",
+      "--innodb-checksum-algorithm=strict_crc32",
+      "--skip-log-bin"
+    ],
+    "exit": 0,
+    "stdout": "1b31933a3f05728113461535cb646189f6b9204286d9f494a9359ae17a5a07b2\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT 1"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)\n"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT 1"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)\n"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT 1"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)\n"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT 1"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)\n"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT 1"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)\n"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT 1"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)\n"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT 1"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)\n"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT 1"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)\n"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT 1"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)\n"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT 1"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)\n"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT 1"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)\n"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT 1"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)\n"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT 1"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)\n"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT 1"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)\n"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT 1"
+    ],
+    "exit": 0,
+    "stdout": "1\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "CREATE DATABASE lesson CHARACTER SET utf8mb4 COLLATE utf8mb4_bin"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SET GLOBAL innodb_file_per_table=OFF"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "CREATE TABLE lesson.shared_rows(id INT PRIMARY KEY,n INT NULL,KEY n_idx(n)) ENGINE=InnoDB ROW_FORMAT=COMPACT"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "INSERT INTO lesson.shared_rows VALUES(1,10),(2,NULL)"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SET GLOBAL innodb_file_per_table=ON"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "CREATE TABLE lesson.private_rows(id INT PRIMARY KEY,n INT NULL,marker VARCHAR(20) COLLATE utf8mb4_bin,KEY n_idx(n)) ENGINE=InnoDB ROW_FORMAT=DYNAMIC"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "INSERT INTO lesson.private_rows VALUES(1,10,'one'),(2,NULL,'two')"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT HEX(CAST(JSON_OBJECT('version',VERSION(),'page_size',@@innodb_page_size,'checksum',@@innodb_checksum_algorithm,'file_per_table',@@innodb_file_per_table,'undo_tablespaces',@@innodb_undo_tablespaces,'doublewrite',@@innodb_doublewrite,'data_file_path',@@innodb_data_file_path,'datadir',@@datadir,'change_buffering',@@innodb_change_buffering) AS CHAR CHARACTER SET utf8mb4)) "
+    ],
+    "exit": 0,
+    "stdout": "7B2264617461646972223A20222F7661722F6C69622F6D7973716C2F222C202276657273696F6E223A2022352E372E3434222C2022636865636B73756D223A20227374726963745F6372633332222C2022706167655F73697A65223A2031363338342C2022646F75626C657772697465223A20312C2022646174615F66696C655F70617468223A2022696264617461313A31324D3A6175746F657874656E64222C202266696C655F7065725F7461626C65223A20312C20226368616E67655F627566666572696E67223A2022616C6C222C2022756E646F5F7461626C65737061636573223A20307D\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT HEX(CAST(JSON_OBJECT('name',NAME,'table_id',TABLE_ID,'space',SPACE,'flags',FLAG,'row_format',ROW_FORMAT,'columns',N_COLS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_TABLES WHERE NAME LIKE 'lesson/%' ORDER BY NAME"
+    ],
+    "exit": 0,
+    "stdout": "7B226E616D65223A20226C6573736F6E2F707269766174655F726F7773222C2022666C616773223A2033332C20227370616365223A2032332C2022636F6C756D6E73223A20362C20227461626C655F6964223A2034352C2022726F775F666F726D6174223A202244796E616D6963227D\n7B226E616D65223A20226C6573736F6E2F7368617265645F726F7773222C2022666C616773223A20312C20227370616365223A20302C2022636F6C756D6E73223A20352C20227461626C655F6964223A2034342C2022726F775F666F726D6174223A2022436F6D70616374227D\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT HEX(CAST(JSON_OBJECT('table',t.NAME,'name',i.NAME,'id',i.INDEX_ID,'root',i.PAGE_NO,'space',i.SPACE,'type',i.TYPE,'fields',i.N_FIELDS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_INDEXES i JOIN INFORMATION_SCHEMA.INNODB_SYS_TABLES t ON i.TABLE_ID=t.TABLE_ID WHERE t.NAME LIKE 'lesson/%' ORDER BY t.NAME,i.INDEX_ID"
+    ],
+    "exit": 0,
+    "stdout": "7B226964223A2034332C20226E616D65223A20225052494D415259222C2022726F6F74223A20332C202274797065223A20332C20227370616365223A2032332C20227461626C65223A20226C6573736F6E2F707269766174655F726F7773222C20226669656C6473223A20317D\n7B226964223A2034342C20226E616D65223A20226E5F696478222C2022726F6F74223A20342C202274797065223A20302C20227370616365223A2032332C20227461626C65223A20226C6573736F6E2F707269766174655F726F7773222C20226669656C6473223A20317D\n7B226964223A2034312C20226E616D65223A20225052494D415259222C2022726F6F74223A203334372C202274797065223A20332C20227370616365223A20302C20227461626C65223A20226C6573736F6E2F7368617265645F726F7773222C20226669656C6473223A20317D\n7B226964223A2034322C20226E616D65223A20226E5F696478222C2022726F6F74223A203334382C202274797065223A20302C20227370616365223A20302C20227461626C65223A20226C6573736F6E2F7368617265645F726F7773222C20226669656C6473223A20317D\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT HEX(CAST(JSON_ARRAY(id,n) AS CHAR CHARACTER SET utf8mb4)) FROM lesson.shared_rows ORDER BY id"
+    ],
+    "exit": 0,
+    "stdout": "5B312C2031305D\n5B322C206E756C6C5D\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT HEX(CAST(JSON_ARRAY(id,n,marker) AS CHAR CHARACTER SET utf8mb4)) FROM lesson.private_rows ORDER BY id"
+    ],
+    "exit": 0,
+    "stdout": "5B312C2031302C20226F6E65225D\n5B322C206E756C6C2C202274776F225D\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT HEX(CAST(JSON_OBJECT('name',NAME,'id',INDEX_ID,'root',PAGE_NO,'space',SPACE) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_SYS_INDEXES WHERE TABLE_ID IN (1,2,3,4) ORDER BY TABLE_ID,INDEX_ID"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysql",
+      "--no-defaults",
+      "-uroot",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SET GLOBAL innodb_fast_shutdown=0"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "innodb-systemspace-57-doc-20261013-b",
+      "mysqladmin",
+      "--no-defaults",
+      "-uroot",
+      "shutdown"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "\u0007mysqladmin: The query to get the server's pid file failed, error: 'Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)'. Continuing.\n\u0007mysqladmin: shutdown failed; error: 'Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)'\n"
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.Running}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "--format",
+      "{{.State.ExitCode}}",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "0\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "logs",
+      "innodb-systemspace-57-doc-20261013-b"
+    ],
+    "exit": 0,
+    "stdout": "2026-10-13 03:05:53+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.44-1.el7 started.\n2026-10-13 03:05:54+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'\n2026-10-13 03:05:54+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.44-1.el7 started.\n2026-10-13 03:05:54+00:00 [Note] [Entrypoint]: Initializing database files\n2026-10-13 03:05:56+00:00 [Note] [Entrypoint]: Database files initialized\n2026-10-13 03:05:56+00:00 [Note] [Entrypoint]: Starting temporary server\n2026-10-13 03:05:56+00:00 [Note] [Entrypoint]: Waiting for server startup\n2026-10-13 03:05:58+00:00 [Note] [Entrypoint]: Temporary server started.\n'/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'\n\n2026-10-13 03:05:59+00:00 [Note] [Entrypoint]: Stopping temporary server\n2026-10-13 03:06:03+00:00 [Note] [Entrypoint]: Temporary server stopped\n\n2026-10-13 03:06:03+00:00 [Note] [Entrypoint]: MySQL init process done. Ready for start up.\n\n",
+    "stderr": "2026-10-13T03:05:54.780835Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).\n2026-10-13T03:05:54.992084Z 0 [Warning] InnoDB: New log files created, LSN=45790\n2026-10-13T03:05:55.010889Z 0 [Warning] InnoDB: Creating foreign key constraint system tables.\n2026-10-13T03:05:55.082385Z 0 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: 0170f956-c6b3-11f1-8537-0cad42448df6.\n2026-10-13T03:05:55.086422Z 0 [Warning] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.\n2026-10-13T03:05:55.196278Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.\n2026-10-13T03:05:55.196288Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.\n2026-10-13T03:05:55.198655Z 0 [Warning] CA certificate ca.pem is self signed.\n2026-10-13T03:05:55.229224Z 1 [Warning] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.\n2026-10-13T03:05:57.124591Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).\n2026-10-13T03:05:57.127721Z 0 [Note] mysqld (mysqld 5.7.44) starting as process 184 ...\n2026-10-13T03:05:57.141512Z 0 [Note] InnoDB: PUNCH HOLE support available\n2026-10-13T03:05:57.141943Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins\n2026-10-13T03:05:57.141949Z 0 [Note] InnoDB: Uses event mutexes\n2026-10-13T03:05:57.141959Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier\n2026-10-13T03:05:57.141969Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.13\n2026-10-13T03:05:57.141974Z 0 [Note] InnoDB: Using Linux native AIO\n2026-10-13T03:05:57.145226Z 0 [Note] InnoDB: Number of pools: 1\n2026-10-13T03:05:57.146306Z 0 [Note] InnoDB: Using CPU crc32 instructions\n2026-10-13T03:05:57.150247Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M\n2026-10-13T03:05:57.247021Z 0 [Note] InnoDB: Completed initialization of buffer pool\n2026-10-13T03:05:57.252837Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().\n2026-10-13T03:05:57.275058Z 0 [Note] InnoDB: Highest supported file format is Barracuda.\n2026-10-13T03:05:57.300960Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables\n2026-10-13T03:05:57.301492Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...\n2026-10-13T03:05:57.309615Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.\n2026-10-13T03:05:57.312438Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.\n2026-10-13T03:05:57.312450Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.\n2026-10-13T03:05:57.314130Z 0 [Note] InnoDB: Waiting for purge to start\n2026-10-13T03:05:57.364848Z 0 [Note] InnoDB: 5.7.44 started; log sequence number 2768291\n2026-10-13T03:05:57.366624Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool\n2026-10-13T03:05:57.368099Z 0 [Note] Plugin 'FEDERATED' is disabled.\n2026-10-13T03:05:57.368940Z 0 [Note] InnoDB: Buffer pool(s) load completed at 261013  3:05:57\n2026-10-13T03:05:57.387411Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.\n2026-10-13T03:05:57.387559Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.\n2026-10-13T03:05:57.387604Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.\n2026-10-13T03:05:57.387612Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.\n2026-10-13T03:05:57.393401Z 0 [Warning] CA certificate ca.pem is self signed.\n2026-10-13T03:05:57.393831Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.\n2026-10-13T03:05:57.396578Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.\n2026-10-13T03:05:57.410646Z 0 [Note] Event Scheduler: Loaded 0 events\n2026-10-13T03:05:57.411216Z 0 [Note] mysqld: ready for connections.\nVersion: '5.7.44'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server (GPL)\n2026-10-13T03:05:58.175354Z 3 [Note] InnoDB: Stopping purge\n2026-10-13T03:05:58.188791Z 3 [Note] InnoDB: Resuming purge\n2026-10-13T03:05:58.194274Z 3 [Note] InnoDB: Stopping purge\n2026-10-13T03:05:58.209990Z 3 [Note] InnoDB: Resuming purge\n2026-10-13T03:05:58.210724Z 3 [Note] InnoDB: Stopping purge\n2026-10-13T03:05:58.212019Z 3 [Note] InnoDB: Resuming purge\n2026-10-13T03:05:58.212844Z 3 [Note] InnoDB: Stopping purge\n2026-10-13T03:05:58.213956Z 3 [Note] InnoDB: Resuming purge\nWarning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.\nWarning: Unable to load '/usr/share/zoneinfo/leapseconds' as time zone. Skipping it.\nWarning: Unable to load '/usr/share/zoneinfo/tzdata.zi' as time zone. Skipping it.\nWarning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.\nWarning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.\n2026-10-13T03:05:59.520647Z 0 [Note] Giving 1 client threads a chance to die gracefully\n2026-10-13T03:05:59.520736Z 0 [Note] Shutting down slave threads\n2026-10-13T03:06:01.525029Z 0 [Note] Forcefully disconnecting 0 remaining clients\n2026-10-13T03:06:01.525692Z 0 [Note] Event Scheduler: Purging the queue. 0 events\n2026-10-13T03:06:01.527597Z 0 [Note] Binlog end\n2026-10-13T03:06:01.532491Z 0 [Note] Shutting down plugin 'ngram'\n2026-10-13T03:06:01.532652Z 0 [Note] Shutting down plugin 'partition'\n2026-10-13T03:06:01.532717Z 0 [Note] Shutting down plugin 'BLACKHOLE'\n2026-10-13T03:06:01.532762Z 0 [Note] Shutting down plugin 'ARCHIVE'\n2026-10-13T03:06:01.532779Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'\n2026-10-13T03:06:01.533123Z 0 [Note] Shutting down plugin 'MRG_MYISAM'\n2026-10-13T03:06:01.533181Z 0 [Note] Shutting down plugin 'MyISAM'\n2026-10-13T03:06:01.533650Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'\n2026-10-13T03:06:01.533692Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'\n2026-10-13T03:06:01.533700Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'\n2026-10-13T03:06:01.533713Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'\n2026-10-13T03:06:01.533726Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'\n2026-10-13T03:06:01.533734Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'\n2026-10-13T03:06:01.533747Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'\n2026-10-13T03:06:01.533753Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'\n2026-10-13T03:06:01.533759Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'\n2026-10-13T03:06:01.533766Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'\n2026-10-13T03:06:01.533773Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'\n2026-10-13T03:06:01.533780Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'\n2026-10-13T03:06:01.533792Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'\n2026-10-13T03:06:01.533798Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'\n2026-10-13T03:06:01.533804Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'\n2026-10-13T03:06:01.533826Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'\n2026-10-13T03:06:01.533840Z 0 [Note] Shutting down plugin 'INNODB_METRICS'\n2026-10-13T03:06:01.533847Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'\n2026-10-13T03:06:01.533859Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'\n2026-10-13T03:06:01.533874Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'\n2026-10-13T03:06:01.533881Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'\n2026-10-13T03:06:01.533888Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'\n2026-10-13T03:06:01.533894Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'\n2026-10-13T03:06:01.533906Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'\n2026-10-13T03:06:01.533912Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'\n2026-10-13T03:06:01.533926Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'\n2026-10-13T03:06:01.533933Z 0 [Note] Shutting down plugin 'INNODB_CMP'\n2026-10-13T03:06:01.533939Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'\n2026-10-13T03:06:01.533945Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'\n2026-10-13T03:06:01.533951Z 0 [Note] Shutting down plugin 'INNODB_TRX'\n2026-10-13T03:06:01.533957Z 0 [Note] Shutting down plugin 'InnoDB'\n2026-10-13T03:06:01.535146Z 0 [Note] InnoDB: FTS optimize thread exiting.\n2026-10-13T03:06:01.536301Z 0 [Note] InnoDB: Starting shutdown...\n2026-10-13T03:06:01.639157Z 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool\n2026-10-13T03:06:01.640453Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 261013  3:06:01\n2026-10-13T03:06:03.198608Z 0 [Note] InnoDB: Shutdown completed; log sequence number 12240705\n2026-10-13T03:06:03.199380Z 0 [Note] InnoDB: Removed temporary tablespace data file: \"ibtmp1\"\n2026-10-13T03:06:03.199499Z 0 [Note] Shutting down plugin 'MEMORY'\n2026-10-13T03:06:03.199679Z 0 [Note] Shutting down plugin 'CSV'\n2026-10-13T03:06:03.199732Z 0 [Note] Shutting down plugin 'sha256_password'\n2026-10-13T03:06:03.199749Z 0 [Note] Shutting down plugin 'mysql_native_password'\n2026-10-13T03:06:03.200373Z 0 [Note] Shutting down plugin 'binlog'\n2026-10-13T03:06:03.203758Z 0 [Note] mysqld: Shutdown complete\n\n2026-10-13T03:06:03.729871Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).\n2026-10-13T03:06:03.732816Z 0 [Note] mysqld (mysqld 5.7.44) starting as process 1 ...\n2026-10-13T03:06:03.755026Z 0 [Note] InnoDB: PUNCH HOLE support available\n2026-10-13T03:06:03.755443Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins\n2026-10-13T03:06:03.755447Z 0 [Note] InnoDB: Uses event mutexes\n2026-10-13T03:06:03.755458Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier\n2026-10-13T03:06:03.755465Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.13\n2026-10-13T03:06:03.755475Z 0 [Note] InnoDB: Using Linux native AIO\n2026-10-13T03:06:03.758740Z 0 [Note] InnoDB: Number of pools: 1\n2026-10-13T03:06:03.759779Z 0 [Note] InnoDB: Using CPU crc32 instructions\n2026-10-13T03:06:03.763892Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M\n2026-10-13T03:06:03.858795Z 0 [Note] InnoDB: Completed initialization of buffer pool\n2026-10-13T03:06:03.864297Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().\n2026-10-13T03:06:03.886130Z 0 [Note] InnoDB: Highest supported file format is Barracuda.\n2026-10-13T03:06:03.911903Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables\n2026-10-13T03:06:03.912415Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...\n2026-10-13T03:06:03.919494Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.\n2026-10-13T03:06:03.922270Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.\n2026-10-13T03:06:03.922281Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.\n2026-10-13T03:06:03.923941Z 0 [Note] InnoDB: Waiting for purge to start\n2026-10-13T03:06:03.979615Z 0 [Note] InnoDB: 5.7.44 started; log sequence number 12240705\n2026-10-13T03:06:03.981578Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool\n2026-10-13T03:06:03.983398Z 0 [Note] Plugin 'FEDERATED' is disabled.\n2026-10-13T03:06:03.984893Z 0 [Note] InnoDB: Buffer pool(s) load completed at 261013  3:06:03\n2026-10-13T03:06:04.005165Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.\n2026-10-13T03:06:04.005319Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.\n2026-10-13T03:06:04.005366Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.\n2026-10-13T03:06:04.005374Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.\n2026-10-13T03:06:04.011377Z 0 [Warning] CA certificate ca.pem is self signed.\n2026-10-13T03:06:04.011855Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.\n2026-10-13T03:06:04.012846Z 0 [Note] Server hostname (bind-address): '*'; port: 3306\n2026-10-13T03:06:04.013397Z 0 [Note] IPv6 is available.\n2026-10-13T03:06:04.013691Z 0 [Note]   - '::' resolves to '::';\n2026-10-13T03:06:04.013833Z 0 [Note] Server socket created on IP: '::'.\n2026-10-13T03:06:04.015547Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.\n2026-10-13T03:06:04.030129Z 0 [Note] Event Scheduler: Loaded 0 events\n2026-10-13T03:06:04.030693Z 0 [Note] mysqld: ready for connections.\nVersion: '5.7.44'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)\n"
+  },
+  {
+    "command": [
+      "docker",
+      "cp",
+      "innodb-systemspace-57-doc-20261013-b:/var/lib/mysql/ibdata1",
+      "/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/5.7.44/ibdata1"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "docker",
+      "cp",
+      "innodb-systemspace-57-doc-20261013-b:/var/lib/mysql/lesson/private_rows.ibd",
+      "/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/5.7.44/lesson/private_rows.ibd"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysqld",
+      "--no-defaults",
+      "--initialize-insecure",
+      "--basedir=/Users/kimihiro/workspace/software/mysql-8.0.45",
+      "--datadir=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/data",
+      "--log-error=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/error.log"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysqld",
+      "--no-defaults",
+      "--daemonize",
+      "--basedir=/Users/kimihiro/workspace/software/mysql-8.0.45",
+      "--datadir=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/data",
+      "--socket=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock",
+      "--pid-file=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.pid",
+      "--log-error=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/error.log",
+      "--skip-networking",
+      "--mysqlx=OFF",
+      "--skip-log-bin",
+      "--innodb-page-size=16384",
+      "--innodb-checksum-algorithm=strict_crc32",
+      "--innodb-buffer-pool-size=64M",
+      "--innodb-buffer-pool-instances=1"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysql",
+      "--no-defaults",
+      "-uroot",
+      "--socket=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT 1"
+    ],
+    "exit": 0,
+    "stdout": "1\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysql",
+      "--no-defaults",
+      "-uroot",
+      "--socket=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "CREATE DATABASE lesson CHARACTER SET utf8mb4 COLLATE utf8mb4_bin"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysql",
+      "--no-defaults",
+      "-uroot",
+      "--socket=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SET GLOBAL innodb_file_per_table=OFF"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysql",
+      "--no-defaults",
+      "-uroot",
+      "--socket=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "CREATE TABLE lesson.shared_rows(id INT PRIMARY KEY,n INT NULL,KEY n_idx(n)) ENGINE=InnoDB ROW_FORMAT=COMPACT"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysql",
+      "--no-defaults",
+      "-uroot",
+      "--socket=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "INSERT INTO lesson.shared_rows VALUES(1,10),(2,NULL)"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysql",
+      "--no-defaults",
+      "-uroot",
+      "--socket=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SET GLOBAL innodb_file_per_table=ON"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysql",
+      "--no-defaults",
+      "-uroot",
+      "--socket=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "CREATE TABLE lesson.private_rows(id INT PRIMARY KEY,n INT NULL,marker VARCHAR(20) COLLATE utf8mb4_bin,KEY n_idx(n)) ENGINE=InnoDB ROW_FORMAT=DYNAMIC"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysql",
+      "--no-defaults",
+      "-uroot",
+      "--socket=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "INSERT INTO lesson.private_rows VALUES(1,10,'one'),(2,NULL,'two')"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysql",
+      "--no-defaults",
+      "-uroot",
+      "--socket=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT HEX(CAST(JSON_OBJECT('version',VERSION(),'page_size',@@innodb_page_size,'checksum',@@innodb_checksum_algorithm,'file_per_table',@@innodb_file_per_table,'undo_tablespaces',@@innodb_undo_tablespaces,'doublewrite',@@innodb_doublewrite,'data_file_path',@@innodb_data_file_path,'datadir',@@datadir,'change_buffering',@@innodb_change_buffering) AS CHAR CHARACTER SET utf8mb4)) "
+    ],
+    "exit": 0,
+    "stdout": "7B2264617461646972223A20222F7661722F666F6C646572732F78382F7A376B726C6377733373736376773462633138686238763030303030676E2F542F696E6E6F64622D73797374656D73706163652D646F63732D686D6A72767173342F6D7973716C38302F646174612F222C202276657273696F6E223A2022382E302E3435222C2022636865636B73756D223A20227374726963745F6372633332222C2022706167655F73697A65223A2031363338342C2022646F75626C657772697465223A20224F4E222C2022646174615F66696C655F70617468223A2022696264617461313A31324D3A6175746F657874656E64222C202266696C655F7065725F7461626C65223A20312C20226368616E67655F627566666572696E67223A2022616C6C222C2022756E646F5F7461626C65737061636573223A20327D\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysql",
+      "--no-defaults",
+      "-uroot",
+      "--socket=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT HEX(CAST(JSON_OBJECT('name',NAME,'table_id',TABLE_ID,'space',SPACE,'flags',FLAG,'row_format',ROW_FORMAT,'columns',N_COLS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_TABLES WHERE NAME LIKE 'lesson/%' ORDER BY NAME"
+    ],
+    "exit": 0,
+    "stdout": "7B226E616D65223A20226C6573736F6E2F707269766174655F726F7773222C2022666C616773223A2033332C20227370616365223A20322C2022636F6C756D6E73223A20362C20227461626C655F6964223A20313036352C2022726F775F666F726D6174223A202244796E616D6963227D\n7B226E616D65223A20226C6573736F6E2F7368617265645F726F7773222C2022666C616773223A20312C20227370616365223A20302C2022636F6C756D6E73223A20352C20227461626C655F6964223A20313036342C2022726F775F666F726D6174223A2022436F6D70616374227D\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysql",
+      "--no-defaults",
+      "-uroot",
+      "--socket=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT HEX(CAST(JSON_OBJECT('table',t.NAME,'name',i.NAME,'id',i.INDEX_ID,'root',i.PAGE_NO,'space',i.SPACE,'type',i.TYPE,'fields',i.N_FIELDS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_INDEXES i JOIN INFORMATION_SCHEMA.INNODB_TABLES t ON i.TABLE_ID=t.TABLE_ID WHERE t.NAME LIKE 'lesson/%' ORDER BY t.NAME,i.INDEX_ID"
+    ],
+    "exit": 0,
+    "stdout": "7B226964223A203135362C20226E616D65223A20225052494D415259222C2022726F6F74223A20342C202274797065223A20332C20227370616365223A20322C20227461626C65223A20226C6573736F6E2F707269766174655F726F7773222C20226669656C6473223A20357D\n7B226964223A203135372C20226E616D65223A20226E5F696478222C2022726F6F74223A20352C202274797065223A20302C20227370616365223A20322C20227461626C65223A20226C6573736F6E2F707269766174655F726F7773222C20226669656C6473223A20327D\n7B226964223A203135342C20226E616D65223A20225052494D415259222C2022726F6F74223A2034312C202274797065223A20332C20227370616365223A20302C20227461626C65223A20226C6573736F6E2F7368617265645F726F7773222C20226669656C6473223A20347D\n7B226964223A203135352C20226E616D65223A20226E5F696478222C2022726F6F74223A2034322C202274797065223A20302C20227370616365223A20302C20227461626C65223A20226C6573736F6E2F7368617265645F726F7773222C20226669656C6473223A20327D\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysql",
+      "--no-defaults",
+      "-uroot",
+      "--socket=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT HEX(CAST(JSON_ARRAY(id,n) AS CHAR CHARACTER SET utf8mb4)) FROM lesson.shared_rows ORDER BY id"
+    ],
+    "exit": 0,
+    "stdout": "5B312C2031305D\n5B322C206E756C6C5D\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysql",
+      "--no-defaults",
+      "-uroot",
+      "--socket=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SELECT HEX(CAST(JSON_ARRAY(id,n,marker) AS CHAR CHARACTER SET utf8mb4)) FROM lesson.private_rows ORDER BY id"
+    ],
+    "exit": 0,
+    "stdout": "5B312C2031302C20226F6E65225D\n5B322C206E756C6C2C202274776F225D\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysql",
+      "--no-defaults",
+      "-uroot",
+      "--socket=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock",
+      "--batch",
+      "--raw",
+      "--skip-column-names",
+      "--default-character-set=utf8mb4",
+      "-e",
+      "SET GLOBAL innodb_fast_shutdown=0"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysqladmin",
+      "--no-defaults",
+      "-uroot",
+      "--socket=/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock",
+      "shutdown"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

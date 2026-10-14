@@ -1,0 +1,30 @@
+{
+  "row_format": "DYNAMIC",
+  "columns": [
+    {
+      "name": "seq",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "name",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "utf8mb4",
+      "max_chars": 30
+    },
+    {
+      "name": "payload",
+      "type": "LONGTEXT",
+      "nullable": true,
+      "charset": "utf8mb4"
+    }
+  ],
+  "root_page": 3,
+  "index_id": 75,
+  "space_id": 39,
+  "clustered_key": {
+    "name": "GEN_CLUST_INDEX",
+    "hidden_row_id": true
+  }
+}

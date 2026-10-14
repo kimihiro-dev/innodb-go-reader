@@ -1,0 +1,60 @@
+{
+  "row_format": "COMPACT",
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false
+    },
+    {
+      "name": "tt",
+      "type": "TINYTEXT",
+      "nullable": true,
+      "charset": "utf8mb4"
+    },
+    {
+      "name": "t",
+      "type": "TEXT",
+      "nullable": true,
+      "charset": "utf8mb4"
+    },
+    {
+      "name": "mt",
+      "type": "MEDIUMTEXT",
+      "nullable": true,
+      "charset": "utf8mb4"
+    },
+    {
+      "name": "lt",
+      "type": "LONGTEXT",
+      "nullable": true,
+      "charset": "utf8mb4"
+    },
+    {
+      "name": "tb",
+      "type": "TINYBLOB",
+      "nullable": true
+    },
+    {
+      "name": "b",
+      "type": "BLOB",
+      "nullable": true
+    },
+    {
+      "name": "mb",
+      "type": "MEDIUMBLOB",
+      "nullable": true
+    },
+    {
+      "name": "lb",
+      "type": "LONGBLOB",
+      "nullable": true
+    }
+  ],
+  "root_page": 3,
+  "index_id": 71,
+  "space_id": 54,
+  "primary_keys": [
+    "id"
+  ]
+}

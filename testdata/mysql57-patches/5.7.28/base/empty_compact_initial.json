@@ -1,0 +1,23 @@
+{
+  "row_format": "COMPACT",
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false
+    },
+    {
+      "name": "payload",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "utf8mb4",
+      "max_chars": 40
+    }
+  ],
+  "root_page": 3,
+  "index_id": 108,
+  "space_id": 58,
+  "primary_keys": [
+    "id"
+  ]
+}

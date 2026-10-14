@@ -1,0 +1,37 @@
+{
+  "row_format": "DYNAMIC",
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false
+    },
+    {
+      "name": "a",
+      "type": "CHAR",
+      "nullable": true,
+      "charset": "ascii",
+      "max_chars": 5
+    },
+    {
+      "name": "l",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 20
+    },
+    {
+      "name": "u",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "utf8",
+      "max_chars": 20
+    }
+  ],
+  "root_page": 3,
+  "index_id": 48,
+  "space_id": 31,
+  "primary_keys": [
+    "id"
+  ]
+}

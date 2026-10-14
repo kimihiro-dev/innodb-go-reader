@@ -1,0 +1,2223 @@
+{
+  "8.0.11": {
+    "VERSION": {
+      "sha256": "6581a854a0e44438ac746b7dedb60f109d3f265fce2398da0540e074af0e327e",
+      "lines": [
+        {
+          "line": 1,
+          "text": "MYSQL_VERSION_MAJOR=8"
+        },
+        {
+          "line": 2,
+          "text": "MYSQL_VERSION_MINOR=0"
+        },
+        {
+          "line": 3,
+          "text": "MYSQL_VERSION_PATCH=11"
+        },
+        {
+          "line": 4,
+          "text": "MYSQL_VERSION_EXTRA="
+        }
+      ]
+    },
+    "sql/dd/dd_version.h": {
+      "sha256": "6b7b56bfcaf02500530754d71c5ea8ab20ac21596589014e67e9ed1a19e5ce84",
+      "lines": [
+        {
+          "line": 133,
+          "text": "static const uint DD_VERSION = 80011;"
+        }
+      ]
+    },
+    "sql/dd/impl/sdi.h": {
+      "sha256": "90cbfbd453cdd0b60783726429d65c489e5956d7600df9a4d155465818b1d349",
+      "lines": [
+        {
+          "line": 48,
+          "text": "static constexpr std::uint64_t sdi_version = 1;"
+        }
+      ]
+    },
+    "storage/innobase/include/rem0rec.h": {
+      "sha256": "d9f26d260c000f9c1aa2b3d3f74eb433e8aef2ffc930959b4e6f65fcd118fdcc",
+      "lines": []
+    },
+    "storage/innobase/include/rem0rec.ic": {
+      "sha256": "96d4ce1b8aeeda25931d6c05db34a9e66973e67c1a537348042346de5de7283d",
+      "lines": []
+    },
+    "storage/innobase/include/dict0dd.h": {
+      "sha256": "98acec051de42784358b4ac53944547858c3264fcd59f75c3586a1759cf3d222",
+      "lines": [
+        {
+          "line": 105,
+          "text": "const uint32 DD_SPACE_CURRENT_SRV_VERSION = MYSQL_VERSION_ID;"
+        }
+      ]
+    },
+    "sql/dd/impl/types/index_element_impl.cc": {
+      "sha256": "9731357d5a659ce0f0d562766f89db5f836a0231a8dc73259b1a009f139d0707",
+      "lines": [
+        {
+          "line": 120,
+          "text": "void Index_element_impl::serialize(Sdi_wcontext *, Sdi_writer *w) const {"
+        },
+        {
+          "line": 149,
+          "text": "     << \"m_hidden: \" << m_hidden;"
+        },
+        {
+          "line": 207,
+          "text": "      m_hidden(src.m_hidden),"
+        }
+      ]
+    },
+    "sql/dd/dd_table.cc": {
+      "sha256": "6a64cac1e728db034b640814bc4419503ca3284ca376ceefb8bfe6226958f6fc",
+      "lines": [
+        {
+          "line": 538,
+          "text": "    col_obj->set_char_length(field->length);"
+        }
+      ]
+    },
+    "storage/innobase/include/fil0types.h": {
+      "sha256": "ed6c7b1d07d1b4dfc151d9a45b91706b89469b8e733b1183a54dc9fc629c9734",
+      "lines": [
+        {
+          "line": 53,
+          "text": "#define FIL_PAGE_SRV_VERSION 8"
+        },
+        {
+          "line": 63,
+          "text": "#define FIL_PAGE_SPACE_VERSION 12"
+        }
+      ]
+    },
+    "storage/innobase/dict/dict0dd.cc": {
+      "sha256": "2ee4c4a4934b74d40f6038a04f3dd236506206e5bc857dedb9da758aadd97a37",
+      "lines": []
+    },
+    "storage/innobase/lob/lob0impl.cc": {
+      "sha256": "0676bca9aec3066b874adb9df27af553f394bf09c30270cc9d4e2995cf51cc95",
+      "lines": [
+        {
+          "line": 423,
+          "text": "    entry.set_lob_version(1);"
+        },
+        {
+          "line": 860,
+          "text": "    entry.set_versions_null();"
+        },
+        {
+          "line": 888,
+          "text": "    entry.set_versions_null();"
+        }
+      ]
+    },
+    "storage/innobase/rem/rec.h": {
+      "sha256": "2b3dafa62716f21b19f0b713f16edc66270a666d89279fce674683d91817bbd8",
+      "lines": []
+    }
+  },
+  "8.0.12": {
+    "VERSION": {
+      "sha256": "2307e3433548de65adaa760f79d989bbc3858c76ac1da9b9a676012e59ac02ea",
+      "lines": [
+        {
+          "line": 1,
+          "text": "MYSQL_VERSION_MAJOR=8"
+        },
+        {
+          "line": 2,
+          "text": "MYSQL_VERSION_MINOR=0"
+        },
+        {
+          "line": 3,
+          "text": "MYSQL_VERSION_PATCH=12"
+        },
+        {
+          "line": 4,
+          "text": "MYSQL_VERSION_EXTRA="
+        }
+      ]
+    },
+    "sql/dd/dd_version.h": {
+      "sha256": "ee1556cf75db986a596a981fc214c5cc81ef352d074945113ea68bb73472f691",
+      "lines": [
+        {
+          "line": 149,
+          "text": "static const uint DD_VERSION = 80012;"
+        }
+      ]
+    },
+    "sql/dd/impl/sdi.h": {
+      "sha256": "90cbfbd453cdd0b60783726429d65c489e5956d7600df9a4d155465818b1d349",
+      "lines": [
+        {
+          "line": 48,
+          "text": "static constexpr std::uint64_t sdi_version = 1;"
+        }
+      ]
+    },
+    "storage/innobase/include/rem0rec.h": {
+      "sha256": "1705267ed4f412e52355fd5130a31ee0d6d34225b407491f2202e29dc6224fa6",
+      "lines": []
+    },
+    "storage/innobase/include/rem0rec.ic": {
+      "sha256": "9e3303ec765de6faf52c3d1e8abd59da1684870f5da15199e07278d8a834c256",
+      "lines": [
+        {
+          "line": 1180,
+          "text": "uint8_t rec_set_n_fields(rec_t *rec, ulint n_fields) {"
+        },
+        {
+          "line": 1194,
+          "text": "  *ptr |= REC_N_FIELDS_TWO_BYTES_FLAG;"
+        }
+      ]
+    },
+    "storage/innobase/include/dict0dd.h": {
+      "sha256": "44b2b4f8b601af68c18c2d5d2b181b0e99cdb0333447bf52f55b806e247923ad",
+      "lines": [
+        {
+          "line": 100,
+          "text": "  DD_TABLE_INSTANT_COLS,"
+        },
+        {
+          "line": 126,
+          "text": "const uint32 DD_SPACE_CURRENT_SRV_VERSION = MYSQL_VERSION_ID;"
+        },
+        {
+          "line": 173,
+          "text": "    \"autoinc\", \"data_directory\", \"version\", \"discard\", \"instant_col\"};"
+        },
+        {
+          "line": 181,
+          "text": "    \"format\", \"instant_col\"};"
+        },
+        {
+          "line": 286,
+          "text": "class DD_instant_col_val_coder {"
+        },
+        {
+          "line": 289,
+          "text": "  DD_instant_col_val_coder() : m_result(nullptr) {}"
+        },
+        {
+          "line": 292,
+          "text": "  ~DD_instant_col_val_coder() { cleanup(); }"
+        },
+        {
+          "line": 341,
+          "text": "bool dd_instant_columns_exist(const dd::Table &dd_table);"
+        },
+        {
+          "line": 348,
+          "text": "inline bool dd_table_has_instant_cols(const dd::Table &table) {"
+        },
+        {
+          "line": 350,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]);"
+        },
+        {
+          "line": 352,
+          "text": "  ut_ad(!instant || dd_instant_columns_exist(table));"
+        },
+        {
+          "line": 361,
+          "text": "inline bool dd_part_has_instant_cols(const dd::Partition &part) {"
+        },
+        {
+          "line": 364,
+          "text": "  ut_ad(!instant || dd_table_has_instant_cols(part.table()));"
+        },
+        {
+          "line": 373,
+          "text": "inline bool dd_table_part_has_instant_cols(const dd::Table &table) {"
+        },
+        {
+          "line": 376,
+          "text": "  if (!dd_table_has_instant_cols(table)) {"
+        },
+        {
+          "line": 381,
+          "text": "    if (dd_part_has_instant_cols(*part)) {"
+        },
+        {
+          "line": 486,
+          "text": "  if (dd_table_has_instant_cols(old_table)) {"
+        },
+        {
+          "line": 496,
+          "text": "void dd_add_instant_columns(const TABLE *old_table, const TABLE *altered_table,"
+        }
+      ]
+    },
+    "sql/dd/impl/types/index_element_impl.cc": {
+      "sha256": "9731357d5a659ce0f0d562766f89db5f836a0231a8dc73259b1a009f139d0707",
+      "lines": [
+        {
+          "line": 120,
+          "text": "void Index_element_impl::serialize(Sdi_wcontext *, Sdi_writer *w) const {"
+        },
+        {
+          "line": 149,
+          "text": "     << \"m_hidden: \" << m_hidden;"
+        },
+        {
+          "line": 207,
+          "text": "      m_hidden(src.m_hidden),"
+        }
+      ]
+    },
+    "sql/dd/dd_table.cc": {
+      "sha256": "6a64cac1e728db034b640814bc4419503ca3284ca376ceefb8bfe6226958f6fc",
+      "lines": [
+        {
+          "line": 538,
+          "text": "    col_obj->set_char_length(field->length);"
+        }
+      ]
+    },
+    "storage/innobase/include/fil0types.h": {
+      "sha256": "ed6c7b1d07d1b4dfc151d9a45b91706b89469b8e733b1183a54dc9fc629c9734",
+      "lines": [
+        {
+          "line": 53,
+          "text": "#define FIL_PAGE_SRV_VERSION 8"
+        },
+        {
+          "line": 63,
+          "text": "#define FIL_PAGE_SPACE_VERSION 12"
+        }
+      ]
+    },
+    "storage/innobase/dict/dict0dd.cc": {
+      "sha256": "a3dd24e02c04b1e6735ed862428ab55764bd858ff626229bc7f0dd6845dfd2dd",
+      "lines": [
+        {
+          "line": 1412,
+          "text": "        dd_table_key_strings[DD_TABLE_INSTANT_COLS], &cols);"
+        },
+        {
+          "line": 1414,
+          "text": "        dd_table_key_strings[DD_TABLE_INSTANT_COLS], cols);"
+        },
+        {
+          "line": 1420,
+          "text": "        dd_table_key_strings[DD_TABLE_INSTANT_COLS], &old_cols);"
+        },
+        {
+          "line": 1422,
+          "text": "        dd_table_key_strings[DD_TABLE_INSTANT_COLS], &new_cols);"
+        },
+        {
+          "line": 1523,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]);"
+        },
+        {
+          "line": 1559,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]));"
+        },
+        {
+          "line": 1562,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS], &n_cols);"
+        },
+        {
+          "line": 1583,
+          "text": "  ut_ad(non_instant_cols == n_cols);"
+        },
+        {
+          "line": 1584,
+          "text": "  return (found && non_instant_cols == n_cols);"
+        },
+        {
+          "line": 1789,
+          "text": "        dd_table_key_strings[DD_TABLE_INSTANT_COLS], table->get_instant_cols());"
+        },
+        {
+          "line": 1794,
+          "text": "            dd_table_key_strings[DD_TABLE_INSTANT_COLS])) {"
+        },
+        {
+          "line": 1796,
+          "text": "          dd_table_key_strings[DD_TABLE_INSTANT_COLS], &instant_cols);"
+        },
+        {
+          "line": 1801,
+          "text": "          dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 2544,
+          "text": "        dd_table_key_strings[DD_TABLE_INSTANT_COLS], &cols);"
+        },
+        {
+          "line": 2760,
+          "text": "      table_private.get_uint32(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        }
+      ]
+    },
+    "storage/innobase/lob/lob0impl.cc": {
+      "sha256": "7d5688375cb7e054db45cc68da56d181657691bcf25fa2fb1ca0449f8e775d83",
+      "lines": [
+        {
+          "line": 476,
+          "text": "    entry.set_lob_version(1);"
+        },
+        {
+          "line": 938,
+          "text": "    entry.set_versions_null();"
+        },
+        {
+          "line": 945,
+          "text": "    entry.set_lob_version(1);"
+        },
+        {
+          "line": 977,
+          "text": "    entry.set_versions_null();"
+        },
+        {
+          "line": 984,
+          "text": "    entry.set_lob_version(1);"
+        }
+      ]
+    },
+    "storage/innobase/rem/rec.h": {
+      "sha256": "08fe1dc48d4e2ffa06514df35b6bbaa02c1a6f1e7b532caa3d74c8dcc6e2ab26",
+      "lines": [
+        {
+          "line": 126,
+          "text": "#define REC_INFO_INSTANT_FLAG 0x80UL"
+        },
+        {
+          "line": 269,
+          "text": "                         REC_INFO_INSTANT_FLAG)));"
+        },
+        {
+          "line": 578,
+          "text": "  return ((info & REC_INFO_INSTANT_FLAG) != 0);"
+        },
+        {
+          "line": 588,
+          "text": "  return ((info & REC_INFO_INSTANT_FLAG) != 0);"
+        }
+      ]
+    }
+  },
+  "8.0.16": {
+    "VERSION": {
+      "sha256": "9cbe456a798ffe185d207ead95669d27ac82db702fa5de341e69d2e81586861c",
+      "lines": [
+        {
+          "line": 1,
+          "text": "MYSQL_VERSION_MAJOR=8"
+        },
+        {
+          "line": 2,
+          "text": "MYSQL_VERSION_MINOR=0"
+        },
+        {
+          "line": 3,
+          "text": "MYSQL_VERSION_PATCH=16"
+        },
+        {
+          "line": 4,
+          "text": "MYSQL_VERSION_EXTRA="
+        }
+      ]
+    },
+    "sql/dd/dd_version.h": {
+      "sha256": "b6eaa143441f67b6dc925c1755ba13163e2185dd055e8177cf82eb6d3e783cd7",
+      "lines": [
+        {
+          "line": 179,
+          "text": "static const uint DD_VERSION = 80016;"
+        }
+      ]
+    },
+    "sql/dd/impl/sdi.h": {
+      "sha256": "cd02c804a7d9c78b9281c9a5c92cfb76c28886539c3595204cf6873617577cc6",
+      "lines": [
+        {
+          "line": 92,
+          "text": "constexpr const std::uint64_t SDI_VERSION = 80016;"
+        }
+      ]
+    },
+    "storage/innobase/include/rem0rec.h": {
+      "sha256": "d9b05eb6693865447e78e87ac26337e4a896b069cc85e3b6cf7e55bbcb7c83b2",
+      "lines": []
+    },
+    "storage/innobase/include/rem0rec.ic": {
+      "sha256": "ad80f126c9e2f96bba7055ab4fc19c1ec671ec6a33ba578cff3fc504f23ac500",
+      "lines": [
+        {
+          "line": 1180,
+          "text": "uint8_t rec_set_n_fields(rec_t *rec, ulint n_fields) {"
+        },
+        {
+          "line": 1194,
+          "text": "  *ptr |= REC_N_FIELDS_TWO_BYTES_FLAG;"
+        }
+      ]
+    },
+    "storage/innobase/include/dict0dd.h": {
+      "sha256": "eb3ff7beeee592162467855de5b406d7b7e6499e90dcac15811f7a2b83790047",
+      "lines": [
+        {
+          "line": 104,
+          "text": "  DD_TABLE_INSTANT_COLS,"
+        },
+        {
+          "line": 130,
+          "text": "const uint32 DD_SPACE_CURRENT_SRV_VERSION = MYSQL_VERSION_ID;"
+        },
+        {
+          "line": 213,
+          "text": "    \"autoinc\", \"data_directory\", \"version\", \"discard\", \"instant_col\"};"
+        },
+        {
+          "line": 221,
+          "text": "    \"format\", \"instant_col\"};"
+        },
+        {
+          "line": 327,
+          "text": "class DD_instant_col_val_coder {"
+        },
+        {
+          "line": 330,
+          "text": "  DD_instant_col_val_coder() : m_result(nullptr) {}"
+        },
+        {
+          "line": 333,
+          "text": "  ~DD_instant_col_val_coder() { cleanup(); }"
+        },
+        {
+          "line": 382,
+          "text": "bool dd_instant_columns_exist(const dd::Table &dd_table);"
+        },
+        {
+          "line": 389,
+          "text": "inline bool dd_table_has_instant_cols(const dd::Table &table) {"
+        },
+        {
+          "line": 391,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]);"
+        },
+        {
+          "line": 393,
+          "text": "  ut_ad(!instant || dd_instant_columns_exist(table));"
+        },
+        {
+          "line": 402,
+          "text": "inline bool dd_part_has_instant_cols(const dd::Partition &part) {"
+        },
+        {
+          "line": 405,
+          "text": "  ut_ad(!instant || dd_table_has_instant_cols(part.table()));"
+        },
+        {
+          "line": 414,
+          "text": "inline bool dd_table_part_has_instant_cols(const dd::Table &table) {"
+        },
+        {
+          "line": 417,
+          "text": "  if (!dd_table_has_instant_cols(table)) {"
+        },
+        {
+          "line": 422,
+          "text": "    if (dd_part_has_instant_cols(*part)) {"
+        },
+        {
+          "line": 527,
+          "text": "  if (dd_table_has_instant_cols(old_table)) {"
+        },
+        {
+          "line": 543,
+          "text": "void dd_add_instant_columns(const TABLE *old_table, const TABLE *altered_table,"
+        }
+      ]
+    },
+    "sql/dd/impl/types/index_element_impl.cc": {
+      "sha256": "5343b421e6385207f72335f7e922e39f007364781d1c25b38b2340c0aac27971",
+      "lines": [
+        {
+          "line": 120,
+          "text": "void Index_element_impl::serialize(Sdi_wcontext *, Sdi_writer *w) const {"
+        },
+        {
+          "line": 125,
+          "text": "  write(w, m_hidden, STRING_WITH_LEN(\"hidden\"));"
+        },
+        {
+          "line": 136,
+          "text": "  read(&m_hidden, val, \"hidden\");"
+        },
+        {
+          "line": 151,
+          "text": "     << \"m_hidden: \" << m_hidden;"
+        },
+        {
+          "line": 209,
+          "text": "      m_hidden(src.m_hidden),"
+        }
+      ]
+    },
+    "sql/dd/dd_table.cc": {
+      "sha256": "a72e5daf186a26fc2eaf6e1cac9099760c691603ab358c29e816d3a385eea3d4",
+      "lines": [
+        {
+          "line": 552,
+          "text": "    col_obj->set_char_length(field->max_display_width_in_bytes());"
+        }
+      ]
+    },
+    "storage/innobase/include/fil0types.h": {
+      "sha256": "ed6c7b1d07d1b4dfc151d9a45b91706b89469b8e733b1183a54dc9fc629c9734",
+      "lines": [
+        {
+          "line": 53,
+          "text": "#define FIL_PAGE_SRV_VERSION 8"
+        },
+        {
+          "line": 63,
+          "text": "#define FIL_PAGE_SPACE_VERSION 12"
+        }
+      ]
+    },
+    "storage/innobase/dict/dict0dd.cc": {
+      "sha256": "70213ea9c5be2ff91d58c2af337568ce77889ae26c7db658bc94e8f17b6c210f",
+      "lines": [
+        {
+          "line": 1415,
+          "text": "    old_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1417,
+          "text": "    new_table.se_private_data().set(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1423,
+          "text": "    old_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1425,
+          "text": "    new_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1535,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]);"
+        },
+        {
+          "line": 1571,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]));"
+        },
+        {
+          "line": 1573,
+          "text": "  dd_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1595,
+          "text": "  ut_ad(non_instant_cols == n_cols);"
+        },
+        {
+          "line": 1596,
+          "text": "  return (found && non_instant_cols == n_cols);"
+        },
+        {
+          "line": 1800,
+          "text": "    dd_table->se_private_data().set(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1806,
+          "text": "            dd_table_key_strings[DD_TABLE_INSTANT_COLS])) {"
+        },
+        {
+          "line": 1808,
+          "text": "          dd_table_key_strings[DD_TABLE_INSTANT_COLS], &instant_cols);"
+        },
+        {
+          "line": 1813,
+          "text": "          dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 2566,
+          "text": "    dd_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 2783,
+          "text": "      table_private.get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        }
+      ]
+    },
+    "storage/innobase/lob/lob0impl.cc": {
+      "sha256": "ab72dce6ae8af630afe7566297f0629fbd40ea995a8380fa812891925b14dd71",
+      "lines": [
+        {
+          "line": 473,
+          "text": "    entry.set_lob_version(1);"
+        },
+        {
+          "line": 935,
+          "text": "    entry.set_versions_null();"
+        },
+        {
+          "line": 942,
+          "text": "    entry.set_lob_version(1);"
+        },
+        {
+          "line": 974,
+          "text": "    entry.set_versions_null();"
+        },
+        {
+          "line": 981,
+          "text": "    entry.set_lob_version(1);"
+        }
+      ]
+    },
+    "storage/innobase/rem/rec.h": {
+      "sha256": "cf92d9d4b608ab193571e596e48fdd7c3caeb3497dd81a5a5daee85aeb302665",
+      "lines": [
+        {
+          "line": 123,
+          "text": "#define REC_INFO_INSTANT_FLAG 0x80UL"
+        },
+        {
+          "line": 266,
+          "text": "                         REC_INFO_INSTANT_FLAG)));"
+        },
+        {
+          "line": 588,
+          "text": "  return ((info & REC_INFO_INSTANT_FLAG) != 0);"
+        },
+        {
+          "line": 598,
+          "text": "  return ((info & REC_INFO_INSTANT_FLAG) != 0);"
+        }
+      ]
+    }
+  },
+  "8.0.19": {
+    "VERSION": {
+      "sha256": "988b9400af165834f6427a6177ae2ec1194f48783fac0c8322c6d73432e578d3",
+      "lines": [
+        {
+          "line": 1,
+          "text": "MYSQL_VERSION_MAJOR=8"
+        },
+        {
+          "line": 2,
+          "text": "MYSQL_VERSION_MINOR=0"
+        },
+        {
+          "line": 3,
+          "text": "MYSQL_VERSION_PATCH=19"
+        },
+        {
+          "line": 4,
+          "text": "MYSQL_VERSION_EXTRA="
+        }
+      ]
+    },
+    "sql/dd/dd_version.h": {
+      "sha256": "882ef3b78e658eac113373b3be93b07a106f5166c93741fc1dc44e3c7f876a72",
+      "lines": [
+        {
+          "line": 187,
+          "text": "static const uint DD_VERSION = 80017;"
+        }
+      ]
+    },
+    "sql/dd/impl/sdi.h": {
+      "sha256": "28e3a8984331062e1fe19f78aa4b81a377d1f850adcbb398c3a83cbe66a0bfef",
+      "lines": [
+        {
+          "line": 100,
+          "text": "constexpr const std::uint64_t SDI_VERSION = 80019;"
+        }
+      ]
+    },
+    "storage/innobase/include/rem0rec.h": {
+      "sha256": "7f8b963d5735c17e02974a410c2444ad30c2b86e744e6902f36f5a972d4703b4",
+      "lines": []
+    },
+    "storage/innobase/include/rem0rec.ic": {
+      "sha256": "91b14617c49a3311969c3605a99e47e21673817f95897a95d7168838589408f3",
+      "lines": [
+        {
+          "line": 1181,
+          "text": "uint8_t rec_set_n_fields(rec_t *rec, ulint n_fields) {"
+        },
+        {
+          "line": 1195,
+          "text": "  *ptr |= REC_N_FIELDS_TWO_BYTES_FLAG;"
+        }
+      ]
+    },
+    "storage/innobase/include/dict0dd.h": {
+      "sha256": "ca56aa0b1a8edbd93b6209f946fdd72de3c605785090a32a40c0bbcc79d9a0e8",
+      "lines": [
+        {
+          "line": 90,
+          "text": "  DD_TABLE_INSTANT_COLS,"
+        },
+        {
+          "line": 116,
+          "text": "const uint32 DD_SPACE_CURRENT_SRV_VERSION = MYSQL_VERSION_ID;"
+        },
+        {
+          "line": 199,
+          "text": "    \"autoinc\", \"data_directory\", \"version\", \"discard\", \"instant_col\"};"
+        },
+        {
+          "line": 207,
+          "text": "    \"format\", \"instant_col\"};"
+        },
+        {
+          "line": 313,
+          "text": "class DD_instant_col_val_coder {"
+        },
+        {
+          "line": 316,
+          "text": "  DD_instant_col_val_coder() : m_result(nullptr) {}"
+        },
+        {
+          "line": 319,
+          "text": "  ~DD_instant_col_val_coder() { cleanup(); }"
+        },
+        {
+          "line": 368,
+          "text": "bool dd_instant_columns_exist(const dd::Table &dd_table);"
+        },
+        {
+          "line": 375,
+          "text": "inline bool dd_table_has_instant_cols(const dd::Table &table) {"
+        },
+        {
+          "line": 377,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]);"
+        },
+        {
+          "line": 379,
+          "text": "  ut_ad(!instant || dd_instant_columns_exist(table));"
+        },
+        {
+          "line": 388,
+          "text": "inline bool dd_part_has_instant_cols(const dd::Partition &part) {"
+        },
+        {
+          "line": 391,
+          "text": "  ut_ad(!instant || dd_table_has_instant_cols(part.table()));"
+        },
+        {
+          "line": 400,
+          "text": "inline bool dd_table_part_has_instant_cols(const dd::Table &table) {"
+        },
+        {
+          "line": 403,
+          "text": "  if (!dd_table_has_instant_cols(table)) {"
+        },
+        {
+          "line": 408,
+          "text": "    if (dd_part_has_instant_cols(*part)) {"
+        },
+        {
+          "line": 513,
+          "text": "  if (dd_table_has_instant_cols(old_table)) {"
+        },
+        {
+          "line": 529,
+          "text": "void dd_add_instant_columns(const TABLE *old_table, const TABLE *altered_table,"
+        }
+      ]
+    },
+    "sql/dd/impl/types/index_element_impl.cc": {
+      "sha256": "5343b421e6385207f72335f7e922e39f007364781d1c25b38b2340c0aac27971",
+      "lines": [
+        {
+          "line": 120,
+          "text": "void Index_element_impl::serialize(Sdi_wcontext *, Sdi_writer *w) const {"
+        },
+        {
+          "line": 125,
+          "text": "  write(w, m_hidden, STRING_WITH_LEN(\"hidden\"));"
+        },
+        {
+          "line": 136,
+          "text": "  read(&m_hidden, val, \"hidden\");"
+        },
+        {
+          "line": 151,
+          "text": "     << \"m_hidden: \" << m_hidden;"
+        },
+        {
+          "line": 209,
+          "text": "      m_hidden(src.m_hidden),"
+        }
+      ]
+    },
+    "sql/dd/dd_table.cc": {
+      "sha256": "6dd123e991a6db5c80ad255a921ee6543c2ce61fa8dcd2939d77ce0d9a020e79",
+      "lines": [
+        {
+          "line": 554,
+          "text": "    col_obj->set_char_length(field.max_display_width_in_bytes());"
+        }
+      ]
+    },
+    "storage/innobase/include/fil0types.h": {
+      "sha256": "ed6c7b1d07d1b4dfc151d9a45b91706b89469b8e733b1183a54dc9fc629c9734",
+      "lines": [
+        {
+          "line": 53,
+          "text": "#define FIL_PAGE_SRV_VERSION 8"
+        },
+        {
+          "line": 63,
+          "text": "#define FIL_PAGE_SPACE_VERSION 12"
+        }
+      ]
+    },
+    "storage/innobase/dict/dict0dd.cc": {
+      "sha256": "a9e556c35420480f6f2fdd51b137a2c809c5d7b15fcbe4df322f6083a84053d2",
+      "lines": [
+        {
+          "line": 1463,
+          "text": "    old_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1465,
+          "text": "    new_table.se_private_data().set(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1471,
+          "text": "    old_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1473,
+          "text": "    new_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1583,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]);"
+        },
+        {
+          "line": 1619,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]));"
+        },
+        {
+          "line": 1621,
+          "text": "  dd_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1643,
+          "text": "  ut_ad(non_instant_cols == n_cols);"
+        },
+        {
+          "line": 1644,
+          "text": "  return (found && non_instant_cols == n_cols);"
+        },
+        {
+          "line": 1885,
+          "text": "    dd_table->se_private_data().set(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1891,
+          "text": "            dd_table_key_strings[DD_TABLE_INSTANT_COLS])) {"
+        },
+        {
+          "line": 1893,
+          "text": "          dd_table_key_strings[DD_TABLE_INSTANT_COLS], &instant_cols);"
+        },
+        {
+          "line": 1898,
+          "text": "          dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 2653,
+          "text": "    dd_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 2877,
+          "text": "      table_private.get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        }
+      ]
+    },
+    "storage/innobase/lob/lob0impl.cc": {
+      "sha256": "f3f2643265c2fa8f9d3ff969907de9da92059c7176ea7a3d01cf19eed667d230",
+      "lines": [
+        {
+          "line": 488,
+          "text": "    entry.set_lob_version(1);"
+        },
+        {
+          "line": 1000,
+          "text": "    entry.set_versions_null();"
+        },
+        {
+          "line": 1007,
+          "text": "    entry.set_lob_version(1);"
+        },
+        {
+          "line": 1039,
+          "text": "    entry.set_versions_null();"
+        },
+        {
+          "line": 1046,
+          "text": "    entry.set_lob_version(1);"
+        }
+      ]
+    },
+    "storage/innobase/rem/rec.h": {
+      "sha256": "cf92d9d4b608ab193571e596e48fdd7c3caeb3497dd81a5a5daee85aeb302665",
+      "lines": [
+        {
+          "line": 123,
+          "text": "#define REC_INFO_INSTANT_FLAG 0x80UL"
+        },
+        {
+          "line": 266,
+          "text": "                         REC_INFO_INSTANT_FLAG)));"
+        },
+        {
+          "line": 588,
+          "text": "  return ((info & REC_INFO_INSTANT_FLAG) != 0);"
+        },
+        {
+          "line": 598,
+          "text": "  return ((info & REC_INFO_INSTANT_FLAG) != 0);"
+        }
+      ]
+    }
+  },
+  "8.0.23": {
+    "MYSQL_VERSION": {
+      "sha256": "cf3e64111c7f35671661d993ae0d516fb4275d5a1a6292f3702b31ba566e02dc",
+      "lines": [
+        {
+          "line": 1,
+          "text": "MYSQL_VERSION_MAJOR=8"
+        },
+        {
+          "line": 2,
+          "text": "MYSQL_VERSION_MINOR=0"
+        },
+        {
+          "line": 3,
+          "text": "MYSQL_VERSION_PATCH=23"
+        },
+        {
+          "line": 4,
+          "text": "MYSQL_VERSION_EXTRA="
+        }
+      ]
+    },
+    "sql/dd/dd_version.h": {
+      "sha256": "97b76e0352b4184f3fd2a846c75714bf7e65cc6b05fb6c0fa25b5936df6aeafc",
+      "lines": [
+        {
+          "line": 26,
+          "text": "#include \"mysql_version.h\"  // MYSQL_VERSION_ID"
+        },
+        {
+          "line": 209,
+          "text": "static const uint DD_VERSION = 80023;"
+        },
+        {
+          "line": 210,
+          "text": "static_assert(DD_VERSION <= MYSQL_VERSION_ID,"
+        },
+        {
+          "line": 248,
+          "text": "static_assert(DD_VERSION_MINOR_DOWNGRADE_THRESHOLD <= MYSQL_VERSION_ID,"
+        }
+      ]
+    },
+    "sql/dd/impl/sdi.h": {
+      "sha256": "8356dd9b56aaed9282bad914738276e099ccffe5697add81e8cd97f088e309ef",
+      "lines": [
+        {
+          "line": 102,
+          "text": "constexpr const std::uint64_t SDI_VERSION = 80019;"
+        }
+      ]
+    },
+    "storage/innobase/include/rem0rec.h": {
+      "sha256": "ab6c7df151498f1208c6a9cbe88e0364067f7691625fb14498ecdfe6624fef57",
+      "lines": []
+    },
+    "storage/innobase/include/rem0rec.ic": {
+      "sha256": "da98e2616b072c01180d07564498838fc7b74365a2657809068f741b26328514",
+      "lines": [
+        {
+          "line": 1175,
+          "text": "uint8_t rec_set_n_fields(rec_t *rec, ulint n_fields) {"
+        },
+        {
+          "line": 1189,
+          "text": "  *ptr |= REC_N_FIELDS_TWO_BYTES_FLAG;"
+        }
+      ]
+    },
+    "storage/innobase/include/dict0dd.h": {
+      "sha256": "fc93104af64dad00683444d681cbfc45c4dc071569755f645e5a6790e73af6c6",
+      "lines": [
+        {
+          "line": 98,
+          "text": "  DD_TABLE_INSTANT_COLS,"
+        },
+        {
+          "line": 124,
+          "text": "const uint32 DD_SPACE_CURRENT_SRV_VERSION = MYSQL_VERSION_ID;"
+        },
+        {
+          "line": 213,
+          "text": "    \"autoinc\", \"data_directory\", \"version\", \"discard\", \"instant_col\"};"
+        },
+        {
+          "line": 221,
+          "text": "    \"format\", \"instant_col\", \"discard\"};"
+        },
+        {
+          "line": 327,
+          "text": "class DD_instant_col_val_coder {"
+        },
+        {
+          "line": 330,
+          "text": "  DD_instant_col_val_coder() : m_result(nullptr) {}"
+        },
+        {
+          "line": 333,
+          "text": "  ~DD_instant_col_val_coder() { cleanup(); }"
+        },
+        {
+          "line": 382,
+          "text": "bool dd_instant_columns_exist(const dd::Table &dd_table);"
+        },
+        {
+          "line": 389,
+          "text": "inline bool dd_table_has_instant_cols(const dd::Table &table) {"
+        },
+        {
+          "line": 391,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]);"
+        },
+        {
+          "line": 393,
+          "text": "  ut_ad(!instant || dd_instant_columns_exist(table));"
+        },
+        {
+          "line": 402,
+          "text": "inline bool dd_part_has_instant_cols(const dd::Partition &part) {"
+        },
+        {
+          "line": 405,
+          "text": "  ut_ad(!instant || dd_table_has_instant_cols(part.table()));"
+        },
+        {
+          "line": 414,
+          "text": "inline bool dd_table_part_has_instant_cols(const dd::Table &table) {"
+        },
+        {
+          "line": 417,
+          "text": "  if (!dd_table_has_instant_cols(table)) {"
+        },
+        {
+          "line": 422,
+          "text": "    if (dd_part_has_instant_cols(*part)) {"
+        },
+        {
+          "line": 605,
+          "text": "  if (dd_table_has_instant_cols(old_table)) {"
+        },
+        {
+          "line": 621,
+          "text": "void dd_add_instant_columns(const TABLE *old_table, const TABLE *altered_table,"
+        }
+      ]
+    },
+    "sql/dd/impl/types/index_element_impl.cc": {
+      "sha256": "5db8288d424fb15f7a2909cff7d7da5623d1a4b9f7fc757d5a40013125a71740",
+      "lines": [
+        {
+          "line": 120,
+          "text": "void Index_element_impl::serialize(Sdi_wcontext *, Sdi_writer *w) const {"
+        },
+        {
+          "line": 125,
+          "text": "  write(w, m_hidden, STRING_WITH_LEN(\"hidden\"));"
+        },
+        {
+          "line": 136,
+          "text": "  read(&m_hidden, val, \"hidden\");"
+        },
+        {
+          "line": 151,
+          "text": "     << \"m_hidden: \" << m_hidden;"
+        },
+        {
+          "line": 209,
+          "text": "      m_hidden(src.m_hidden),"
+        }
+      ]
+    },
+    "sql/dd/dd_table.cc": {
+      "sha256": "973623f0008b44a3e789eed4e5f9ce2f148a01f7a4d9e5e06bf08789f591857d",
+      "lines": [
+        {
+          "line": 558,
+          "text": "    col_obj->set_char_length(field.max_display_width_in_bytes());"
+        }
+      ]
+    },
+    "storage/innobase/include/fil0types.h": {
+      "sha256": "888e3a2560142ff6110a7cf77cda775ea9d296c3218be024bbbf1a16e42fdc39",
+      "lines": [
+        {
+          "line": 53,
+          "text": "#define FIL_PAGE_SRV_VERSION 8"
+        },
+        {
+          "line": 63,
+          "text": "#define FIL_PAGE_SPACE_VERSION 12"
+        }
+      ]
+    },
+    "storage/innobase/dict/dict0dd.cc": {
+      "sha256": "e7a90d645f6c40c1ee6c1a6fb952e8028454465cc31e06c5ff13313e9962e871",
+      "lines": [
+        {
+          "line": 1514,
+          "text": "    old_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1516,
+          "text": "    new_table.se_private_data().set(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1522,
+          "text": "    old_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1524,
+          "text": "    new_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1628,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]);"
+        },
+        {
+          "line": 1664,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]));"
+        },
+        {
+          "line": 1666,
+          "text": "  dd_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1688,
+          "text": "  ut_ad(non_instant_cols == n_cols);"
+        },
+        {
+          "line": 1689,
+          "text": "  return (found && non_instant_cols == n_cols);"
+        },
+        {
+          "line": 1930,
+          "text": "    dd_table->se_private_data().set(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1936,
+          "text": "            dd_table_key_strings[DD_TABLE_INSTANT_COLS])) {"
+        },
+        {
+          "line": 1938,
+          "text": "          dd_table_key_strings[DD_TABLE_INSTANT_COLS], &instant_cols);"
+        },
+        {
+          "line": 1943,
+          "text": "          dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 2690,
+          "text": "    dd_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 2912,
+          "text": "      table_private.get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        }
+      ]
+    },
+    "storage/innobase/lob/lob0impl.cc": {
+      "sha256": "0dfa13790648234a60c920ea5e283aae4a64d3955e44bace3f079d885b881631",
+      "lines": [
+        {
+          "line": 489,
+          "text": "    entry.set_lob_version(1);"
+        },
+        {
+          "line": 1002,
+          "text": "    entry.set_versions_null();"
+        },
+        {
+          "line": 1009,
+          "text": "    entry.set_lob_version(1);"
+        },
+        {
+          "line": 1041,
+          "text": "    entry.set_versions_null();"
+        },
+        {
+          "line": 1048,
+          "text": "    entry.set_lob_version(1);"
+        }
+      ]
+    },
+    "storage/innobase/rem/rec.h": {
+      "sha256": "cf92d9d4b608ab193571e596e48fdd7c3caeb3497dd81a5a5daee85aeb302665",
+      "lines": [
+        {
+          "line": 123,
+          "text": "#define REC_INFO_INSTANT_FLAG 0x80UL"
+        },
+        {
+          "line": 266,
+          "text": "                         REC_INFO_INSTANT_FLAG)));"
+        },
+        {
+          "line": 588,
+          "text": "  return ((info & REC_INFO_INSTANT_FLAG) != 0);"
+        },
+        {
+          "line": 598,
+          "text": "  return ((info & REC_INFO_INSTANT_FLAG) != 0);"
+        }
+      ]
+    }
+  },
+  "8.0.28": {
+    "MYSQL_VERSION": {
+      "sha256": "fe56b1060d676ed2fd8db4d2f6742c9fc48b22d546a426e16633c46985d65ad4",
+      "lines": [
+        {
+          "line": 1,
+          "text": "MYSQL_VERSION_MAJOR=8"
+        },
+        {
+          "line": 2,
+          "text": "MYSQL_VERSION_MINOR=0"
+        },
+        {
+          "line": 3,
+          "text": "MYSQL_VERSION_PATCH=28"
+        },
+        {
+          "line": 4,
+          "text": "MYSQL_VERSION_EXTRA="
+        }
+      ]
+    },
+    "sql/dd/dd_version.h": {
+      "sha256": "25128979b7e7afecebaeda6bbab0c2c1d3eb775f1f05f9e5302ba405bec19ed3",
+      "lines": [
+        {
+          "line": 26,
+          "text": "#include \"mysql_version.h\"  // MYSQL_VERSION_ID"
+        },
+        {
+          "line": 209,
+          "text": "static const uint DD_VERSION = 80023;"
+        },
+        {
+          "line": 210,
+          "text": "static_assert(DD_VERSION <= MYSQL_VERSION_ID,"
+        },
+        {
+          "line": 248,
+          "text": "static_assert(DD_VERSION_MINOR_DOWNGRADE_THRESHOLD <= MYSQL_VERSION_ID,"
+        }
+      ]
+    },
+    "sql/dd/impl/sdi.h": {
+      "sha256": "509dc4ccb26b184b48f5090182e8c2a019e8e54250c9d4519314c860be0dd5b2",
+      "lines": [
+        {
+          "line": 102,
+          "text": "constexpr const std::uint64_t SDI_VERSION = 80019;"
+        }
+      ]
+    },
+    "storage/innobase/include/rem0rec.h": {
+      "sha256": "4c9d60fbf5db7906256dd193ef8f61a83f438a194a1ea2679b902932576bad44",
+      "lines": []
+    },
+    "storage/innobase/include/rem0rec.ic": {
+      "sha256": "e56c65cf2f7dc6f9ee5ba353568168ccf562f50a146b3860124670b4ea5dc3c3",
+      "lines": [
+        {
+          "line": 1142,
+          "text": "static inline uint8_t rec_set_n_fields(rec_t *rec, ulint n_fields) {"
+        },
+        {
+          "line": 1156,
+          "text": "  *ptr |= REC_N_FIELDS_TWO_BYTES_FLAG;"
+        }
+      ]
+    },
+    "storage/innobase/include/dict0dd.h": {
+      "sha256": "93918e81605b73cfc6f778ee9ab97ce99855c0f4f6c1d0046ae8daa570d74475",
+      "lines": [
+        {
+          "line": 98,
+          "text": "  DD_TABLE_INSTANT_COLS,"
+        },
+        {
+          "line": 124,
+          "text": "const uint32 DD_SPACE_CURRENT_SRV_VERSION = MYSQL_VERSION_ID;"
+        },
+        {
+          "line": 213,
+          "text": "    \"autoinc\", \"data_directory\", \"version\", \"discard\", \"instant_col\"};"
+        },
+        {
+          "line": 221,
+          "text": "    \"format\", \"instant_col\", \"discard\"};"
+        },
+        {
+          "line": 327,
+          "text": "class DD_instant_col_val_coder {"
+        },
+        {
+          "line": 330,
+          "text": "  DD_instant_col_val_coder() : m_result(nullptr) {}"
+        },
+        {
+          "line": 333,
+          "text": "  ~DD_instant_col_val_coder() { cleanup(); }"
+        },
+        {
+          "line": 382,
+          "text": "bool dd_instant_columns_exist(const dd::Table &dd_table);"
+        },
+        {
+          "line": 389,
+          "text": "inline bool dd_table_has_instant_cols(const dd::Table &table) {"
+        },
+        {
+          "line": 391,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]);"
+        },
+        {
+          "line": 393,
+          "text": "  ut_ad(!instant || dd_instant_columns_exist(table));"
+        },
+        {
+          "line": 402,
+          "text": "inline bool dd_part_has_instant_cols(const dd::Partition &part) {"
+        },
+        {
+          "line": 405,
+          "text": "  ut_ad(!instant || dd_table_has_instant_cols(part.table()));"
+        },
+        {
+          "line": 414,
+          "text": "inline bool dd_table_part_has_instant_cols(const dd::Table &table) {"
+        },
+        {
+          "line": 417,
+          "text": "  if (!dd_table_has_instant_cols(table)) {"
+        },
+        {
+          "line": 422,
+          "text": "    if (dd_part_has_instant_cols(*part)) {"
+        },
+        {
+          "line": 586,
+          "text": "  if (dd_table_has_instant_cols(old_table)) {"
+        },
+        {
+          "line": 602,
+          "text": "void dd_add_instant_columns(IF_DEBUG(const Alter_inplace_info *ha_alter_info, )"
+        }
+      ]
+    },
+    "sql/dd/impl/types/index_element_impl.cc": {
+      "sha256": "51f095fa1e9731f645b7fab53a57ac2dc610daff4bc4b6f248e61b675a55118a",
+      "lines": [
+        {
+          "line": 120,
+          "text": "void Index_element_impl::serialize(Sdi_wcontext *, Sdi_writer *w) const {"
+        },
+        {
+          "line": 125,
+          "text": "  write(w, m_hidden, STRING_WITH_LEN(\"hidden\"));"
+        },
+        {
+          "line": 136,
+          "text": "  read(&m_hidden, val, \"hidden\");"
+        },
+        {
+          "line": 151,
+          "text": "     << \"m_hidden: \" << m_hidden;"
+        },
+        {
+          "line": 209,
+          "text": "      m_hidden(src.m_hidden),"
+        }
+      ]
+    },
+    "sql/dd/dd_table.cc": {
+      "sha256": "1a72976b8c0573ba979e6c892e861ca05ce9537fc53771b4fbba0090fdfaa7ec",
+      "lines": [
+        {
+          "line": 559,
+          "text": "    col_obj->set_char_length(field.max_display_width_in_bytes());"
+        }
+      ]
+    },
+    "storage/innobase/include/fil0types.h": {
+      "sha256": "78fc2d168ecedd368297f40f8e2cd84491070114c0768c843c358f56caaf92d5",
+      "lines": [
+        {
+          "line": 53,
+          "text": "#define FIL_PAGE_SRV_VERSION 8"
+        },
+        {
+          "line": 63,
+          "text": "#define FIL_PAGE_SPACE_VERSION 12"
+        }
+      ]
+    },
+    "storage/innobase/dict/dict0dd.cc": {
+      "sha256": "c2c1c5af33ef70766352de37545299aefc829cef824f0d2f97b11b99bc049578",
+      "lines": [
+        {
+          "line": 1497,
+          "text": "    old_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1499,
+          "text": "    new_table.se_private_data().set(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1505,
+          "text": "    old_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1507,
+          "text": "    new_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1663,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]);"
+        },
+        {
+          "line": 1699,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]));"
+        },
+        {
+          "line": 1701,
+          "text": "  dd_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1723,
+          "text": "  ut_ad(non_instant_cols == n_cols);"
+        },
+        {
+          "line": 1724,
+          "text": "  return (found && non_instant_cols == n_cols);"
+        },
+        {
+          "line": 1978,
+          "text": "    dd_table->se_private_data().set(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1984,
+          "text": "            dd_table_key_strings[DD_TABLE_INSTANT_COLS])) {"
+        },
+        {
+          "line": 1986,
+          "text": "          dd_table_key_strings[DD_TABLE_INSTANT_COLS], &instant_cols);"
+        },
+        {
+          "line": 1991,
+          "text": "          dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 2740,
+          "text": "    dd_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 2962,
+          "text": "      table_private.get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        }
+      ]
+    },
+    "storage/innobase/lob/lob0impl.cc": {
+      "sha256": "182a4674651f84e1799bab6571b9e4dfd6b6802e849587d1e0d3bf5e8fae1451",
+      "lines": [
+        {
+          "line": 489,
+          "text": "    entry.set_lob_version(1);"
+        },
+        {
+          "line": 1002,
+          "text": "    entry.set_versions_null();"
+        },
+        {
+          "line": 1009,
+          "text": "    entry.set_lob_version(1);"
+        },
+        {
+          "line": 1041,
+          "text": "    entry.set_versions_null();"
+        },
+        {
+          "line": 1048,
+          "text": "    entry.set_lob_version(1);"
+        }
+      ]
+    },
+    "storage/innobase/rem/rec.h": {
+      "sha256": "779346e7308bc57c8764b2d2f91df838719f5ca2c4ee996e130f9b3c0e7ec454",
+      "lines": [
+        {
+          "line": 123,
+          "text": "#define REC_INFO_INSTANT_FLAG 0x80UL"
+        },
+        {
+          "line": 263,
+          "text": "                         REC_INFO_INSTANT_FLAG)));"
+        },
+        {
+          "line": 610,
+          "text": "  return ((info & REC_INFO_INSTANT_FLAG) != 0);"
+        },
+        {
+          "line": 619,
+          "text": "  return ((info & REC_INFO_INSTANT_FLAG) != 0);"
+        }
+      ]
+    }
+  },
+  "8.0.30": {
+    "MYSQL_VERSION": {
+      "sha256": "3a0f3fc9943c916cfdf5e6bdb6f555fb54a90920afd21278bc47e90504756579",
+      "lines": [
+        {
+          "line": 1,
+          "text": "MYSQL_VERSION_MAJOR=8"
+        },
+        {
+          "line": 2,
+          "text": "MYSQL_VERSION_MINOR=0"
+        },
+        {
+          "line": 3,
+          "text": "MYSQL_VERSION_PATCH=30"
+        },
+        {
+          "line": 4,
+          "text": "MYSQL_VERSION_EXTRA="
+        }
+      ]
+    },
+    "sql/dd/dd_version.h": {
+      "sha256": "90de02e00056845c70a6eb12d2483562f944933efef55fefb3e9322ec334db3b",
+      "lines": [
+        {
+          "line": 26,
+          "text": "#include \"mysql_version.h\"  // MYSQL_VERSION_ID"
+        },
+        {
+          "line": 209,
+          "text": "static const uint DD_VERSION = 80023;"
+        },
+        {
+          "line": 210,
+          "text": "static_assert(DD_VERSION <= MYSQL_VERSION_ID,"
+        },
+        {
+          "line": 248,
+          "text": "static_assert(DD_VERSION_MINOR_DOWNGRADE_THRESHOLD <= MYSQL_VERSION_ID,"
+        }
+      ]
+    },
+    "sql/dd/impl/sdi.h": {
+      "sha256": "ce6d93e717787ce6944f6b0c01f9f697d5400ff0ca0d46703359831faebbfa68",
+      "lines": [
+        {
+          "line": 102,
+          "text": "constexpr const std::uint64_t SDI_VERSION = 80019;"
+        }
+      ]
+    },
+    "storage/innobase/include/rem0rec.h": {
+      "sha256": "6c99fd9a16e42e5e40d52360b9e11561acad0ac8b94ef7f7c38abed8305d73c1",
+      "lines": []
+    },
+    "storage/innobase/include/rem0rec.ic": {
+      "sha256": "6cff6ca64cea263376986242d620e3b4cee61a1930c277b01a74643449a9ad56",
+      "lines": [
+        {
+          "line": 880,
+          "text": "static inline uint8_t rec_set_n_fields(rec_t *rec, ulint n_fields) {"
+        },
+        {
+          "line": 894,
+          "text": "  *ptr |= REC_N_FIELDS_TWO_BYTES_FLAG;"
+        }
+      ]
+    },
+    "storage/innobase/include/dict0dd.h": {
+      "sha256": "2511c697d01a1f78234b880b0f78bc48b8596b1926a371709ea8acc239399861",
+      "lines": [
+        {
+          "line": 113,
+          "text": "  DD_TABLE_INSTANT_COLS,"
+        },
+        {
+          "line": 145,
+          "text": "const uint32_t DD_SPACE_CURRENT_SRV_VERSION = MYSQL_VERSION_ID;"
+        },
+        {
+          "line": 234,
+          "text": "    \"autoinc\", \"data_directory\", \"version\", \"discard\", \"instant_col\"};"
+        },
+        {
+          "line": 243,
+          "text": "    \"format\", \"instant_col\", \"discard\"};"
+        },
+        {
+          "line": 349,
+          "text": "class DD_instant_col_val_coder {"
+        },
+        {
+          "line": 352,
+          "text": "  DD_instant_col_val_coder() : m_result(nullptr) {}"
+        },
+        {
+          "line": 355,
+          "text": "  ~DD_instant_col_val_coder() { cleanup(); }"
+        },
+        {
+          "line": 404,
+          "text": "bool dd_instant_columns_consistent(const dd::Table &dd_table);"
+        },
+        {
+          "line": 416,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]));"
+        },
+        {
+          "line": 554,
+          "text": "inline bool dd_table_has_instant_cols(const dd::Table &table) {"
+        },
+        {
+          "line": 565,
+          "text": "  ut_ad(!instant || dd_instant_columns_consistent(table));"
+        },
+        {
+          "line": 574,
+          "text": "inline bool dd_part_has_instant_cols(const dd::Partition &part) {"
+        },
+        {
+          "line": 577,
+          "text": "  ut_ad(!instant || dd_table_has_instant_cols(part.table()));"
+        },
+        {
+          "line": 586,
+          "text": "inline bool dd_table_part_has_instant_cols(const dd::Table &table) {"
+        },
+        {
+          "line": 593,
+          "text": "      if (dd_part_has_instant_cols(*part)) {"
+        },
+        {
+          "line": 783,
+          "text": "void dd_drop_instant_columns(const dd::Table *old_dd_table,"
+        },
+        {
+          "line": 794,
+          "text": "void dd_add_instant_columns(const dd::Table *old_dd_table,"
+        }
+      ]
+    },
+    "sql/dd/impl/types/index_element_impl.cc": {
+      "sha256": "0d4a7d4b11cb288eaa026ad7da9bb0ccf9a4909969de1c4996e3400cf6698821",
+      "lines": [
+        {
+          "line": 120,
+          "text": "void Index_element_impl::serialize(Sdi_wcontext *, Sdi_writer *w) const {"
+        },
+        {
+          "line": 125,
+          "text": "  write(w, m_hidden, STRING_WITH_LEN(\"hidden\"));"
+        },
+        {
+          "line": 136,
+          "text": "  read(&m_hidden, val, \"hidden\");"
+        },
+        {
+          "line": 151,
+          "text": "     << \"m_hidden: \" << m_hidden;"
+        },
+        {
+          "line": 209,
+          "text": "      m_hidden(src.m_hidden),"
+        }
+      ]
+    },
+    "sql/dd/dd_table.cc": {
+      "sha256": "56815419ca2b70f78b309aa360bd6d95e6fdcfb1303f1aabfa4d804c85c668b8",
+      "lines": [
+        {
+          "line": 560,
+          "text": "    col_obj->set_char_length(field.max_display_width_in_bytes());"
+        }
+      ]
+    },
+    "storage/innobase/include/fil0types.h": {
+      "sha256": "0d3e2dd74ae66da28800673970d22eb40d8cf2399cad21e78f8e224f33dd3b2b",
+      "lines": [
+        {
+          "line": 53,
+          "text": "constexpr uint32_t FIL_PAGE_SRV_VERSION = 8;"
+        },
+        {
+          "line": 63,
+          "text": "constexpr uint32_t FIL_PAGE_SPACE_VERSION = 12;"
+        }
+      ]
+    },
+    "storage/innobase/dict/dict0dd.cc": {
+      "sha256": "ea2f44fb66fb32e222ac95eda8db832236d516b24ab8e024038e7d15213acc9c",
+      "lines": [
+        {
+          "line": 1558,
+          "text": "    old_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1560,
+          "text": "    new_table.se_private_data().set(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1566,
+          "text": "    old_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1568,
+          "text": "    new_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1743,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]);"
+        },
+        {
+          "line": 1849,
+          "text": "  const char *s = dd_table_key_strings[DD_TABLE_INSTANT_COLS];"
+        },
+        {
+          "line": 2348,
+          "text": "          dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 2354,
+          "text": "              dd_table_key_strings[DD_TABLE_INSTANT_COLS])) {"
+        },
+        {
+          "line": 2356,
+          "text": "            dd_table_key_strings[DD_TABLE_INSTANT_COLS], &n_inst_cols);"
+        },
+        {
+          "line": 2361,
+          "text": "            dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 3217,
+          "text": "      const char *s = dd_table_key_strings[DD_TABLE_INSTANT_COLS];"
+        },
+        {
+          "line": 3769,
+          "text": "      fn(table_se_private, dd_table_key_strings[DD_TABLE_INSTANT_COLS]);"
+        }
+      ]
+    },
+    "storage/innobase/lob/lob0impl.cc": {
+      "sha256": "6b2db8e72c46796666c4ff44379ad8b38e9cb132e4f87734ad9699e48c53a342",
+      "lines": [
+        {
+          "line": 479,
+          "text": "    entry.set_lob_version(1);"
+        },
+        {
+          "line": 992,
+          "text": "    entry.set_versions_null();"
+        },
+        {
+          "line": 999,
+          "text": "    entry.set_lob_version(1);"
+        },
+        {
+          "line": 1031,
+          "text": "    entry.set_versions_null();"
+        },
+        {
+          "line": 1038,
+          "text": "    entry.set_lob_version(1);"
+        }
+      ]
+    },
+    "storage/innobase/rem/rec.h": {
+      "sha256": "5d9eac7cef3b1b62576cf009afb33b34f8b20b393a2c08f35e8564d498483081",
+      "lines": [
+        {
+          "line": 122,
+          "text": "constexpr uint32_t REC_INFO_VERSION_FLAG = 0x40UL;"
+        },
+        {
+          "line": 125,
+          "text": "constexpr uint32_t REC_INFO_INSTANT_FLAG = 0x80UL;"
+        },
+        {
+          "line": 269,
+          "text": "                         REC_INFO_INSTANT_FLAG | REC_INFO_VERSION_FLAG)));"
+        },
+        {
+          "line": 611,
+          "text": "  return ((info & REC_INFO_INSTANT_FLAG) != 0);"
+        },
+        {
+          "line": 619,
+          "text": "  return ((info & REC_INFO_INSTANT_FLAG) != 0);"
+        },
+        {
+          "line": 651,
+          "text": "  return ((info & REC_INFO_VERSION_FLAG) != 0);"
+        },
+        {
+          "line": 659,
+          "text": "  return ((info & REC_INFO_VERSION_FLAG) != 0);"
+        },
+        {
+          "line": 667,
+          "text": "  return ((info & REC_INFO_VERSION_FLAG) != 0);"
+        }
+      ]
+    }
+  },
+  "8.0.45": {
+    "MYSQL_VERSION": {
+      "sha256": "b41cdd446f72cfb0bd1ca673acfee0b834d70e474403fad81f920d536e678644",
+      "lines": [
+        {
+          "line": 1,
+          "text": "MYSQL_VERSION_MAJOR=8"
+        },
+        {
+          "line": 2,
+          "text": "MYSQL_VERSION_MINOR=0"
+        },
+        {
+          "line": 3,
+          "text": "MYSQL_VERSION_PATCH=45"
+        },
+        {
+          "line": 4,
+          "text": "MYSQL_VERSION_EXTRA="
+        },
+        {
+          "line": 5,
+          "text": "MYSQL_VERSION_STABILITY=\"LTS\""
+        }
+      ]
+    },
+    "sql/dd/dd_version.h": {
+      "sha256": "f103b8430a36b52ccb22ea742342e35d7b8571a800f7bfddef48692ddb6bf284",
+      "lines": [
+        {
+          "line": 27,
+          "text": "#include \"mysql_version.h\"  // MYSQL_VERSION_ID"
+        },
+        {
+          "line": 210,
+          "text": "static const uint DD_VERSION = 80023;"
+        },
+        {
+          "line": 211,
+          "text": "static_assert(DD_VERSION <= MYSQL_VERSION_ID,"
+        },
+        {
+          "line": 249,
+          "text": "static_assert(DD_VERSION_MINOR_DOWNGRADE_THRESHOLD <= MYSQL_VERSION_ID,"
+        },
+        {
+          "line": 293,
+          "text": "static_assert(SERVER_DOWNGRADE_THRESHOLD <= MYSQL_VERSION_ID,"
+        }
+      ]
+    },
+    "sql/dd/impl/sdi.h": {
+      "sha256": "f5993c8816919e3b584b1f7268158caa039d8d963e338fd4207ac66352bfa6e2",
+      "lines": [
+        {
+          "line": 104,
+          "text": "constexpr const std::uint64_t SDI_VERSION = 80019;"
+        }
+      ]
+    },
+    "storage/innobase/include/rem0rec.h": {
+      "sha256": "dfb6060751226063ef47367153d60bea860b1b3216b9e1088c5d9f6fa65a589b",
+      "lines": []
+    },
+    "storage/innobase/include/rem0rec.ic": {
+      "sha256": "99dcc66ee9cecab7635888e7dbe16cea313e88317be8818f13ba6a901ff64677",
+      "lines": [
+        {
+          "line": 896,
+          "text": "static inline uint8_t rec_set_n_fields(rec_t *rec, ulint n_fields) {"
+        },
+        {
+          "line": 910,
+          "text": "  *ptr |= REC_N_FIELDS_TWO_BYTES_FLAG;"
+        }
+      ]
+    },
+    "storage/innobase/include/dict0dd.h": {
+      "sha256": "034f6bf027c96d1f50a1929ff5dd4633b14d20dbf938931dc8c0c6cb46db70d9",
+      "lines": [
+        {
+          "line": 114,
+          "text": "  DD_TABLE_INSTANT_COLS,"
+        },
+        {
+          "line": 146,
+          "text": "const uint32_t DD_SPACE_CURRENT_SRV_VERSION = MYSQL_VERSION_ID;"
+        },
+        {
+          "line": 235,
+          "text": "    \"autoinc\", \"data_directory\", \"version\", \"discard\", \"instant_col\"};"
+        },
+        {
+          "line": 244,
+          "text": "    \"format\", \"instant_col\", \"discard\"};"
+        },
+        {
+          "line": 350,
+          "text": "class DD_instant_col_val_coder {"
+        },
+        {
+          "line": 353,
+          "text": "  DD_instant_col_val_coder() : m_result(nullptr) {}"
+        },
+        {
+          "line": 356,
+          "text": "  ~DD_instant_col_val_coder() { cleanup(); }"
+        },
+        {
+          "line": 405,
+          "text": "bool dd_instant_columns_consistent(const dd::Table &dd_table);"
+        },
+        {
+          "line": 427,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]));"
+        },
+        {
+          "line": 565,
+          "text": "inline bool dd_table_has_instant_cols(const dd::Table &table) {"
+        },
+        {
+          "line": 576,
+          "text": "  ut_ad(!instant || dd_instant_columns_consistent(table));"
+        },
+        {
+          "line": 585,
+          "text": "inline bool dd_part_has_instant_cols(const dd::Partition &part) {"
+        },
+        {
+          "line": 588,
+          "text": "  ut_ad(!instant || dd_table_has_instant_cols(part.table()));"
+        },
+        {
+          "line": 597,
+          "text": "inline bool dd_table_part_has_instant_cols(const dd::Table &table) {"
+        },
+        {
+          "line": 604,
+          "text": "      if (dd_part_has_instant_cols(*part)) {"
+        },
+        {
+          "line": 796,
+          "text": "bool dd_drop_instant_columns(const dd::Table *old_dd_table,"
+        },
+        {
+          "line": 809,
+          "text": "bool dd_add_instant_columns(const dd::Table *old_dd_table,"
+        }
+      ]
+    },
+    "sql/dd/impl/types/index_element_impl.cc": {
+      "sha256": "e15d4fcce769107312f3b9e7af38618b6b53e62adc268dafd0dbd44a2fb8a5cd",
+      "lines": [
+        {
+          "line": 121,
+          "text": "void Index_element_impl::serialize(Sdi_wcontext *, Sdi_writer *w) const {"
+        },
+        {
+          "line": 126,
+          "text": "  write(w, m_hidden, STRING_WITH_LEN(\"hidden\"));"
+        },
+        {
+          "line": 137,
+          "text": "  read(&m_hidden, val, \"hidden\");"
+        },
+        {
+          "line": 152,
+          "text": "     << \"m_hidden: \" << m_hidden;"
+        },
+        {
+          "line": 210,
+          "text": "      m_hidden(src.m_hidden),"
+        }
+      ]
+    },
+    "sql/dd/dd_table.cc": {
+      "sha256": "01f847a437dc72a43b470578529fe48b826f7ca4b3a648c9320e2cc152d5950b",
+      "lines": [
+        {
+          "line": 561,
+          "text": "    col_obj->set_char_length(field.max_display_width_in_bytes());"
+        }
+      ]
+    },
+    "storage/innobase/include/fil0types.h": {
+      "sha256": "e5df91972cdd09ec0aa1c473af974ebb0f2840effccb7eb20ce89ee367df4717",
+      "lines": [
+        {
+          "line": 54,
+          "text": "constexpr uint32_t FIL_PAGE_SRV_VERSION = 8;"
+        },
+        {
+          "line": 64,
+          "text": "constexpr uint32_t FIL_PAGE_SPACE_VERSION = 12;"
+        }
+      ]
+    },
+    "storage/innobase/dict/dict0dd.cc": {
+      "sha256": "d61d5784aeef5235c8f9f7c77b1db49b00f24b621749e2edc25797ed9a9f09ac",
+      "lines": [
+        {
+          "line": 1661,
+          "text": "    old_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1663,
+          "text": "    new_table.se_private_data().set(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1669,
+          "text": "    old_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1671,
+          "text": "    new_table.se_private_data().get(dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 1841,
+          "text": "      dd_table_key_strings[DD_TABLE_INSTANT_COLS]);"
+        },
+        {
+          "line": 1947,
+          "text": "  const char *s = dd_table_key_strings[DD_TABLE_INSTANT_COLS];"
+        },
+        {
+          "line": 2495,
+          "text": "          dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 2501,
+          "text": "              dd_table_key_strings[DD_TABLE_INSTANT_COLS])) {"
+        },
+        {
+          "line": 2503,
+          "text": "            dd_table_key_strings[DD_TABLE_INSTANT_COLS], &n_inst_cols);"
+        },
+        {
+          "line": 2508,
+          "text": "            dd_table_key_strings[DD_TABLE_INSTANT_COLS],"
+        },
+        {
+          "line": 3365,
+          "text": "      const char *s = dd_table_key_strings[DD_TABLE_INSTANT_COLS];"
+        },
+        {
+          "line": 3937,
+          "text": "      fn(table_se_private, dd_table_key_strings[DD_TABLE_INSTANT_COLS]);"
+        }
+      ]
+    },
+    "storage/innobase/lob/lob0impl.cc": {
+      "sha256": "1510287f316dbaf1101ee0cadc38c2e55ac84ba6a1ffb7a660a7fd36482bf93f",
+      "lines": [
+        {
+          "line": 480,
+          "text": "    entry.set_lob_version(1);"
+        },
+        {
+          "line": 993,
+          "text": "    entry.set_versions_null();"
+        },
+        {
+          "line": 1000,
+          "text": "    entry.set_lob_version(1);"
+        },
+        {
+          "line": 1032,
+          "text": "    entry.set_versions_null();"
+        },
+        {
+          "line": 1039,
+          "text": "    entry.set_lob_version(1);"
+        }
+      ]
+    },
+    "storage/innobase/rem/rec.h": {
+      "sha256": "53fddbf3ce3b415fa3760e50dc7bcdd237503becd252bc180fdc8c001b2aed58",
+      "lines": [
+        {
+          "line": 123,
+          "text": "constexpr uint32_t REC_INFO_VERSION_FLAG = 0x40UL;"
+        },
+        {
+          "line": 126,
+          "text": "constexpr uint32_t REC_INFO_INSTANT_FLAG = 0x80UL;"
+        },
+        {
+          "line": 294,
+          "text": "                         REC_INFO_INSTANT_FLAG | REC_INFO_VERSION_FLAG)));"
+        },
+        {
+          "line": 636,
+          "text": "  return ((info & REC_INFO_INSTANT_FLAG) != 0);"
+        },
+        {
+          "line": 644,
+          "text": "  return ((info & REC_INFO_INSTANT_FLAG) != 0);"
+        },
+        {
+          "line": 677,
+          "text": "  return ((info & REC_INFO_VERSION_FLAG) != 0);"
+        },
+        {
+          "line": 685,
+          "text": "  return ((info & REC_INFO_VERSION_FLAG) != 0);"
+        },
+        {
+          "line": 693,
+          "text": "  return ((info & REC_INFO_VERSION_FLAG) != 0);"
+        }
+      ]
+    }
+  }
+}

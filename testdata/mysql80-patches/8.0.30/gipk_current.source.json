@@ -1,0 +1,41 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.30",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "columns": [
+    {
+      "name": "my_row_id",
+      "type": "bigint",
+      "extra": "auto_increment INVISIBLE"
+    },
+    {
+      "name": "n",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "v",
+      "type": "varchar",
+      "extra": ""
+    }
+  ],
+  "indexes": [
+    {
+      "name": "PRIMARY",
+      "index_id": 248,
+      "space_id": 79,
+      "root_page": 4
+    },
+    {
+      "name": "s",
+      "index_id": 249,
+      "space_id": 79,
+      "root_page": 5
+    }
+  ],
+  "table": "gipk",
+  "database": "innodb_reader_80_139517e0e61b"
+}

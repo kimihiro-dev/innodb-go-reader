@@ -1,0 +1,1002 @@
+=== RUN   TestMySQL57PatchFixtures
+=== RUN   TestMySQL57PatchFixtures/5.7.9
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/scalar_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/lob_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/lob_dynamic_grown
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/lob_dynamic_shrunk_deleted
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/families_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/tree_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/hidden_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/unique_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/generated_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/charset_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/empty_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/scalar_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/lob_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/lob_compact_grown
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/lob_compact_shrunk_deleted
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/families_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/tree_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/hidden_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/unique_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/generated_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/charset_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/base/empty_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_dynamic/u
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_dynamic/bp
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_dynamic/cover
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/composite_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/composite_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/composite_dynamic/dedup
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/composite_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/hidden_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/hidden_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/hidden_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/unique_cluster_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/unique_cluster_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/unique_cluster_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/generated_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/generated_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/tree_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/tree_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/empty_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/empty_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/charset_ascii_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/charset_ascii_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/charset_latin1_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/charset_latin1_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/charset_utf8_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/charset_utf8_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/charset_utf8mb4_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/charset_utf8mb4_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_compact/u
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_compact/bp
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_compact/cover
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/composite_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/composite_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/composite_compact/dedup
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/composite_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/hidden_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/hidden_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/hidden_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/unique_cluster_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/unique_cluster_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/unique_cluster_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/generated_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/generated_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/tree_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/tree_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/empty_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/empty_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/charset_ascii_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/charset_ascii_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/charset_latin1_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/charset_latin1_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/charset_utf8_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/charset_utf8_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/charset_utf8mb4_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.9/secondary/charset_utf8mb4_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.10
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/scalar_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/lob_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/lob_dynamic_grown
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/lob_dynamic_shrunk_deleted
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/families_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/tree_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/hidden_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/unique_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/generated_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/charset_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/empty_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/scalar_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/lob_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/lob_compact_grown
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/lob_compact_shrunk_deleted
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/families_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/tree_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/hidden_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/unique_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/generated_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/charset_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/base/empty_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_dynamic/u
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_dynamic/bp
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_dynamic/cover
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/composite_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/composite_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/composite_dynamic/dedup
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/composite_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/hidden_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/hidden_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/hidden_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/unique_cluster_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/unique_cluster_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/unique_cluster_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/generated_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/generated_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/tree_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/tree_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/empty_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/empty_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/charset_ascii_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/charset_ascii_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/charset_latin1_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/charset_latin1_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/charset_utf8_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/charset_utf8_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/charset_utf8mb4_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/charset_utf8mb4_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_compact/u
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_compact/bp
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_compact/cover
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/composite_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/composite_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/composite_compact/dedup
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/composite_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/hidden_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/hidden_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/hidden_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/unique_cluster_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/unique_cluster_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/unique_cluster_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/generated_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/generated_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/tree_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/tree_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/empty_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/empty_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/charset_ascii_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/charset_ascii_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/charset_latin1_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/charset_latin1_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/charset_utf8_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/charset_utf8_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/charset_utf8mb4_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.10/secondary/charset_utf8mb4_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.11
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/scalar_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/lob_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/lob_dynamic_grown
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/lob_dynamic_shrunk_deleted
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/families_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/tree_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/hidden_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/unique_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/generated_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/charset_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/empty_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/scalar_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/lob_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/lob_compact_grown
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/lob_compact_shrunk_deleted
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/families_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/tree_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/hidden_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/unique_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/generated_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/charset_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/base/empty_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_dynamic/u
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_dynamic/bp
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_dynamic/cover
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/composite_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/composite_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/composite_dynamic/dedup
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/composite_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/hidden_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/hidden_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/hidden_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/unique_cluster_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/unique_cluster_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/unique_cluster_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/generated_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/generated_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/tree_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/tree_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/empty_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/empty_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/charset_ascii_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/charset_ascii_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/charset_latin1_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/charset_latin1_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/charset_utf8_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/charset_utf8_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/charset_utf8mb4_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/charset_utf8mb4_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_compact/u
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_compact/bp
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_compact/cover
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/composite_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/composite_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/composite_compact/dedup
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/composite_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/hidden_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/hidden_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/hidden_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/unique_cluster_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/unique_cluster_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/unique_cluster_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/generated_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/generated_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/tree_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/tree_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/empty_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/empty_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/charset_ascii_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/charset_ascii_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/charset_latin1_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/charset_latin1_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/charset_utf8_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/charset_utf8_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/charset_utf8mb4_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.11/secondary/charset_utf8mb4_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.12
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/scalar_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/lob_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/lob_dynamic_grown
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/lob_dynamic_shrunk_deleted
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/families_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/tree_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/hidden_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/unique_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/generated_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/charset_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/empty_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/scalar_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/lob_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/lob_compact_grown
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/lob_compact_shrunk_deleted
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/families_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/tree_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/hidden_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/unique_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/generated_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/charset_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/base/empty_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_dynamic/u
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_dynamic/bp
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_dynamic/cover
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/composite_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/composite_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/composite_dynamic/dedup
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/composite_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/hidden_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/hidden_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/hidden_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/unique_cluster_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/unique_cluster_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/unique_cluster_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/generated_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/generated_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/tree_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/tree_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/empty_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/empty_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/charset_ascii_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/charset_ascii_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/charset_latin1_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/charset_latin1_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/charset_utf8_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/charset_utf8_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/charset_utf8mb4_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/charset_utf8mb4_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_compact/u
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_compact/bp
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_compact/cover
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/composite_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/composite_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/composite_compact/dedup
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/composite_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/hidden_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/hidden_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/hidden_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/unique_cluster_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/unique_cluster_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/unique_cluster_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/generated_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/generated_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/tree_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/tree_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/empty_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/empty_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/charset_ascii_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/charset_ascii_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/charset_latin1_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/charset_latin1_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/charset_utf8_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/charset_utf8_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/charset_utf8mb4_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.12/secondary/charset_utf8mb4_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.28
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/scalar_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/lob_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/lob_dynamic_grown
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/lob_dynamic_shrunk_deleted
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/families_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/tree_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/hidden_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/unique_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/generated_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/charset_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/empty_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/scalar_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/lob_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/lob_compact_grown
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/lob_compact_shrunk_deleted
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/families_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/tree_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/hidden_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/unique_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/generated_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/charset_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/base/empty_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_dynamic/u
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_dynamic/bp
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_dynamic/cover
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/composite_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/composite_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/composite_dynamic/dedup
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/composite_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/hidden_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/hidden_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/hidden_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/unique_cluster_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/unique_cluster_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/unique_cluster_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/generated_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/generated_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/tree_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/tree_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/empty_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/empty_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/charset_ascii_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/charset_ascii_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/charset_latin1_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/charset_latin1_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/charset_utf8_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/charset_utf8_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/charset_utf8mb4_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/charset_utf8mb4_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_compact/u
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_compact/bp
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_compact/cover
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/composite_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/composite_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/composite_compact/dedup
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/composite_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/hidden_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/hidden_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/hidden_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/unique_cluster_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/unique_cluster_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/unique_cluster_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/generated_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/generated_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/tree_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/tree_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/empty_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/empty_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/charset_ascii_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/charset_ascii_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/charset_latin1_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/charset_latin1_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/charset_utf8_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/charset_utf8_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/charset_utf8mb4_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.28/secondary/charset_utf8mb4_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.43
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/scalar_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/lob_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/lob_dynamic_grown
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/lob_dynamic_shrunk_deleted
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/families_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/tree_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/hidden_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/unique_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/generated_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/charset_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/empty_dynamic_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/scalar_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/lob_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/lob_compact_grown
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/lob_compact_shrunk_deleted
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/families_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/tree_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/hidden_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/unique_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/generated_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/charset_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/base/empty_compact_initial
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_dynamic/u
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_dynamic/bp
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_dynamic/cover
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/composite_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/composite_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/composite_dynamic/dedup
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/composite_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/hidden_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/hidden_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/hidden_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/unique_cluster_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/unique_cluster_dynamic/s
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/unique_cluster_dynamic/px
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/generated_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/generated_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/tree_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/tree_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/empty_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/empty_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/charset_ascii_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/charset_ascii_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/charset_latin1_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/charset_latin1_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/charset_utf8_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/charset_utf8_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/charset_utf8mb4_dynamic
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/charset_utf8mb4_dynamic/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_compact/u
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_compact/bp
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_compact/cover
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/composite_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/composite_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/composite_compact/dedup
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/composite_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/hidden_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/hidden_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/hidden_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/unique_cluster_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/unique_cluster_compact/s
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/unique_cluster_compact/px
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/generated_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/generated_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/tree_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/tree_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/empty_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/empty_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/charset_ascii_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/charset_ascii_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/charset_latin1_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/charset_latin1_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/charset_utf8_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/charset_utf8_compact/secondary
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/charset_utf8mb4_compact
+=== RUN   TestMySQL57PatchFixtures/5.7.43/secondary/charset_utf8mb4_compact/secondary
+=== NAME  TestMySQL57PatchFixtures
+    mysql57_patch_test.go:161: patch SQL coverage: 13248 rows, 228 indexes, 1392 queries
+--- PASS: TestMySQL57PatchFixtures (5.07s)
+    --- PASS: TestMySQL57PatchFixtures/5.7.9 (0.88s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/scalar_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/lob_dynamic_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/lob_dynamic_grown (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/lob_dynamic_shrunk_deleted (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/families_dynamic_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/tree_dynamic_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/hidden_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/unique_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/generated_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/charset_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/empty_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/scalar_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/lob_compact_initial (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/lob_compact_grown (0.02s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/lob_compact_shrunk_deleted (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/families_compact_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/tree_compact_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/hidden_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/unique_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/generated_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/charset_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/base/empty_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_dynamic (0.02s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_dynamic/u (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_dynamic/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_dynamic/bp (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_dynamic/cover (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/composite_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/composite_dynamic/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/composite_dynamic/dedup (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/composite_dynamic/s (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/hidden_dynamic (0.01s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/hidden_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/hidden_dynamic/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/unique_cluster_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/unique_cluster_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/unique_cluster_dynamic/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/generated_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/generated_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/tree_dynamic (0.28s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/tree_dynamic/secondary (0.16s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/empty_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/empty_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/charset_ascii_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/charset_ascii_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/charset_latin1_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/charset_latin1_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/charset_utf8_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/charset_utf8_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/charset_utf8mb4_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/charset_utf8mb4_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_compact (0.02s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_compact/u (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_compact/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_compact/bp (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/ordinary_compact/cover (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/composite_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/composite_compact/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/composite_compact/dedup (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/composite_compact/s (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/hidden_compact (0.01s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/hidden_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/hidden_compact/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/unique_cluster_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/unique_cluster_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/unique_cluster_compact/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/generated_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/generated_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/tree_compact (0.28s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/tree_compact/secondary (0.16s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/empty_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/empty_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/charset_ascii_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/charset_ascii_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/charset_latin1_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/charset_latin1_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/charset_utf8_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/charset_utf8_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/charset_utf8mb4_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.9/secondary/charset_utf8mb4_compact/secondary (0.00s)
+    --- PASS: TestMySQL57PatchFixtures/5.7.10 (0.82s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/scalar_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/lob_dynamic_initial (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/lob_dynamic_grown (0.02s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/lob_dynamic_shrunk_deleted (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/families_dynamic_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/tree_dynamic_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/hidden_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/unique_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/generated_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/charset_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/empty_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/scalar_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/lob_compact_initial (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/lob_compact_grown (0.02s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/lob_compact_shrunk_deleted (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/families_compact_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/tree_compact_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/hidden_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/unique_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/generated_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/charset_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/base/empty_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_dynamic (0.01s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_dynamic/u (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_dynamic/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_dynamic/bp (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_dynamic/cover (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/composite_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/composite_dynamic/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/composite_dynamic/dedup (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/composite_dynamic/s (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/hidden_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/hidden_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/hidden_dynamic/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/unique_cluster_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/unique_cluster_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/unique_cluster_dynamic/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/generated_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/generated_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/tree_dynamic (0.28s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/tree_dynamic/secondary (0.17s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/empty_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/empty_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/charset_ascii_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/charset_ascii_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/charset_latin1_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/charset_latin1_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/charset_utf8_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/charset_utf8_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/charset_utf8mb4_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/charset_utf8mb4_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_compact (0.01s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_compact/u (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_compact/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_compact/bp (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/ordinary_compact/cover (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/composite_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/composite_compact/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/composite_compact/dedup (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/composite_compact/s (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/hidden_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/hidden_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/hidden_compact/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/unique_cluster_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/unique_cluster_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/unique_cluster_compact/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/generated_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/generated_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/tree_compact (0.28s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/tree_compact/secondary (0.17s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/empty_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/empty_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/charset_ascii_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/charset_ascii_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/charset_latin1_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/charset_latin1_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/charset_utf8_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/charset_utf8_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/charset_utf8mb4_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.10/secondary/charset_utf8mb4_compact/secondary (0.00s)
+    --- PASS: TestMySQL57PatchFixtures/5.7.11 (0.83s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/scalar_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/lob_dynamic_initial (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/lob_dynamic_grown (0.02s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/lob_dynamic_shrunk_deleted (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/families_dynamic_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/tree_dynamic_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/hidden_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/unique_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/generated_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/charset_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/empty_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/scalar_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/lob_compact_initial (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/lob_compact_grown (0.02s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/lob_compact_shrunk_deleted (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/families_compact_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/tree_compact_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/hidden_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/unique_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/generated_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/charset_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/base/empty_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_dynamic (0.02s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_dynamic/u (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_dynamic/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_dynamic/bp (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_dynamic/cover (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/composite_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/composite_dynamic/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/composite_dynamic/dedup (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/composite_dynamic/s (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/hidden_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/hidden_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/hidden_dynamic/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/unique_cluster_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/unique_cluster_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/unique_cluster_dynamic/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/generated_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/generated_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/tree_dynamic (0.28s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/tree_dynamic/secondary (0.17s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/empty_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/empty_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/charset_ascii_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/charset_ascii_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/charset_latin1_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/charset_latin1_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/charset_utf8_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/charset_utf8_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/charset_utf8mb4_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/charset_utf8mb4_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_compact (0.02s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_compact/u (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_compact/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_compact/bp (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/ordinary_compact/cover (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/composite_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/composite_compact/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/composite_compact/dedup (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/composite_compact/s (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/hidden_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/hidden_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/hidden_compact/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/unique_cluster_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/unique_cluster_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/unique_cluster_compact/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/generated_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/generated_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/tree_compact (0.28s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/tree_compact/secondary (0.17s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/empty_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/empty_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/charset_ascii_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/charset_ascii_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/charset_latin1_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/charset_latin1_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/charset_utf8_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/charset_utf8_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/charset_utf8mb4_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.11/secondary/charset_utf8mb4_compact/secondary (0.00s)
+    --- PASS: TestMySQL57PatchFixtures/5.7.12 (0.86s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/scalar_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/lob_dynamic_initial (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/lob_dynamic_grown (0.02s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/lob_dynamic_shrunk_deleted (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/families_dynamic_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/tree_dynamic_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/hidden_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/unique_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/generated_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/charset_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/empty_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/scalar_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/lob_compact_initial (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/lob_compact_grown (0.02s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/lob_compact_shrunk_deleted (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/families_compact_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/tree_compact_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/hidden_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/unique_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/generated_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/charset_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/base/empty_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_dynamic (0.02s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_dynamic/u (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_dynamic/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_dynamic/bp (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_dynamic/cover (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/composite_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/composite_dynamic/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/composite_dynamic/dedup (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/composite_dynamic/s (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/hidden_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/hidden_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/hidden_dynamic/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/unique_cluster_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/unique_cluster_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/unique_cluster_dynamic/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/generated_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/generated_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/tree_dynamic (0.29s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/tree_dynamic/secondary (0.17s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/empty_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/empty_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/charset_ascii_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/charset_ascii_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/charset_latin1_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/charset_latin1_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/charset_utf8_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/charset_utf8_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/charset_utf8mb4_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/charset_utf8mb4_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_compact (0.02s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_compact/u (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_compact/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_compact/bp (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/ordinary_compact/cover (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/composite_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/composite_compact/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/composite_compact/dedup (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/composite_compact/s (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/hidden_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/hidden_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/hidden_compact/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/unique_cluster_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/unique_cluster_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/unique_cluster_compact/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/generated_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/generated_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/tree_compact (0.29s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/tree_compact/secondary (0.17s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/empty_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/empty_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/charset_ascii_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/charset_ascii_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/charset_latin1_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/charset_latin1_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/charset_utf8_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/charset_utf8_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/charset_utf8mb4_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.12/secondary/charset_utf8mb4_compact/secondary (0.00s)
+    --- PASS: TestMySQL57PatchFixtures/5.7.28 (0.84s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/scalar_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/lob_dynamic_initial (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/lob_dynamic_grown (0.02s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/lob_dynamic_shrunk_deleted (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/families_dynamic_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/tree_dynamic_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/hidden_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/unique_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/generated_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/charset_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/empty_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/scalar_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/lob_compact_initial (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/lob_compact_grown (0.02s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/lob_compact_shrunk_deleted (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/families_compact_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/tree_compact_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/hidden_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/unique_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/generated_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/charset_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/base/empty_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_dynamic (0.02s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_dynamic/u (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_dynamic/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_dynamic/bp (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_dynamic/cover (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/composite_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/composite_dynamic/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/composite_dynamic/dedup (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/composite_dynamic/s (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/hidden_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/hidden_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/hidden_dynamic/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/unique_cluster_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/unique_cluster_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/unique_cluster_dynamic/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/generated_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/generated_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/tree_dynamic (0.29s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/tree_dynamic/secondary (0.17s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/empty_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/empty_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/charset_ascii_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/charset_ascii_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/charset_latin1_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/charset_latin1_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/charset_utf8_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/charset_utf8_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/charset_utf8mb4_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/charset_utf8mb4_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_compact (0.02s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_compact/u (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_compact/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_compact/bp (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/ordinary_compact/cover (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/composite_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/composite_compact/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/composite_compact/dedup (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/composite_compact/s (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/hidden_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/hidden_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/hidden_compact/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/unique_cluster_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/unique_cluster_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/unique_cluster_compact/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/generated_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/generated_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/tree_compact (0.29s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/tree_compact/secondary (0.17s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/empty_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/empty_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/charset_ascii_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/charset_ascii_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/charset_latin1_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/charset_latin1_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/charset_utf8_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/charset_utf8_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/charset_utf8mb4_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.28/secondary/charset_utf8mb4_compact/secondary (0.00s)
+    --- PASS: TestMySQL57PatchFixtures/5.7.43 (0.84s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/scalar_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/lob_dynamic_initial (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/lob_dynamic_grown (0.02s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/lob_dynamic_shrunk_deleted (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/families_dynamic_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/tree_dynamic_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/hidden_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/unique_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/generated_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/charset_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/empty_dynamic_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/scalar_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/lob_compact_initial (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/lob_compact_grown (0.02s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/lob_compact_shrunk_deleted (0.01s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/families_compact_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/tree_compact_initial (0.03s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/hidden_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/unique_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/generated_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/charset_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/base/empty_compact_initial (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_dynamic (0.02s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_dynamic/u (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_dynamic/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_dynamic/bp (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_dynamic/cover (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/composite_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/composite_dynamic/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/composite_dynamic/dedup (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/composite_dynamic/s (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/hidden_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/hidden_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/hidden_dynamic/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/unique_cluster_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/unique_cluster_dynamic/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/unique_cluster_dynamic/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/generated_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/generated_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/tree_dynamic (0.29s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/tree_dynamic/secondary (0.17s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/empty_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/empty_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/charset_ascii_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/charset_ascii_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/charset_latin1_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/charset_latin1_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/charset_utf8_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/charset_utf8_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/charset_utf8mb4_dynamic (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/charset_utf8mb4_dynamic/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_compact (0.02s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_compact/u (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_compact/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_compact/bp (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/ordinary_compact/cover (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/composite_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/composite_compact/px (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/composite_compact/dedup (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/composite_compact/s (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/hidden_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/hidden_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/hidden_compact/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/unique_cluster_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/unique_cluster_compact/s (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/unique_cluster_compact/px (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/generated_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/generated_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/tree_compact (0.29s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/tree_compact/secondary (0.17s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/empty_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/empty_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/charset_ascii_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/charset_ascii_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/charset_latin1_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/charset_latin1_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/charset_utf8_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/charset_utf8_compact/secondary (0.00s)
+        --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/charset_utf8mb4_compact (0.00s)
+            --- PASS: TestMySQL57PatchFixtures/5.7.43/secondary/charset_utf8mb4_compact/secondary (0.00s)
+PASS
+ok  	innodb-go-reader	5.801s

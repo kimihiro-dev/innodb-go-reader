@@ -1,0 +1,108 @@
+{
+  "status": "complete",
+  "date": "2026-10-13",
+  "source": "current dirty workspace; no commit, push or release",
+  "toolchain": "go version go1.25.7 darwin/arm64",
+  "dependencies": {
+    "github.com/go-sql-driver/mysql": "v1.10.1",
+    "filippo.io/edwards25519": "v1.2.0 (transitive)"
+  },
+  "cache": {
+    "GOMODCACHE": "/tmp/innodb-driver-module-cache",
+    "GOCACHE": "/tmp/innodb-version-go-cache",
+    "GOTOOLCHAIN": "local",
+    "GOPROXY": "off for regression/build"
+  },
+  "live": {
+    "version": "5.7.44",
+    "image": "mysql@sha256:dab0a802b44617303694fb17d166501de279c3031ddeb28c56ecf7fcab5ef0da",
+    "platform": "linux/amd64 under ARM64 Docker host",
+    "tables": 3,
+    "transports": [
+      "TCP",
+      "Unix socket byte proxy to real MySQL",
+      "TLS 1.2 with custom CA and hostname verification"
+    ],
+    "successful_collections": 9,
+    "independent_rows_per_collection": 2,
+    "exported_rows": 18,
+    "secondary_checks": 12,
+    "account": "schema_reader: SELECT lesson.*, PROCESS *.*",
+    "runtime_PATH": "empty for all CLI calls",
+    "snapshots": "external test helper FOR EXPORT copies; not produced by schema command",
+    "negative_checks": [
+      "wrong-password",
+      "no-process",
+      "untrusted-tls",
+      "missing-table",
+      "timeout",
+      "cancel"
+    ],
+    "timeout_and_cancel_exit_code": 130,
+    "credentials_absent": true
+  },
+  "checks": [
+    {
+      "command": "go test ./... -count=1",
+      "status": "passed",
+      "log": "full-tests.log"
+    },
+    {
+      "command": "go test -race ./internal/mysql57 ./internal/cli -count=1",
+      "status": "passed",
+      "log": "race.log"
+    },
+    {
+      "command": "go vet ./...",
+      "status": "passed",
+      "log": "vet.log"
+    },
+    {
+      "command": "go build ./cmd/innodb-reader (native CGO_ENABLED=0)",
+      "status": "passed",
+      "log": "build-native.log"
+    },
+    {
+      "command": "GOOS=linux GOARCH=amd64 go build ./cmd/innodb-reader",
+      "status": "passed",
+      "log": "build-linux.log"
+    },
+    {
+      "command": "GOOS=windows GOARCH=amd64 go build ./cmd/innodb-reader",
+      "status": "passed",
+      "log": "build-windows.log"
+    },
+    {
+      "command": "python3 scripts/check_docs.py",
+      "status": "passed",
+      "log": "docs.log"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed",
+      "log": "diff-check.log"
+    }
+  ],
+  "fixed_sql_metadata_cases": 44,
+  "original_assets": {
+    "files": 3247,
+    "changed": []
+  },
+  "limitations": [
+    "Unix socket uses a local byte proxy, not a native server installation on macOS",
+    "Cross compilation does not prove target-platform execution",
+    "Schema remains MySQL 5.7.44 /16 KiB/nonpartitioned trusted metadata; no FRM/system dictionary parser",
+    "Metadata-only collector does not lock DDL or create physical snapshots",
+    "TLS 1.2 RSA/AES-GCM compatibility does not provide forward secrecy"
+  ],
+  "binaries": {
+    "darwin-arm64": "386cf12c1ad34293535714266ad2dfefcb752df60086cc99e66e369f3614f2b4",
+    "linux-amd64": "9170f9e289e5be86ab194ec4576090ffeb43e430f8511df3d411c9a3fa2f6528",
+    "windows-amd64": "accfe4fa8c86ea95b708a276a0cb82f2bc63a1a9e15a7b9d8c6b60852c191f3d"
+  },
+  "test_environment_cleanup": {
+    "container": "innodb-driver-57-44b1f65b",
+    "state": "stopped",
+    "other_containers": "not modified"
+  }
+}

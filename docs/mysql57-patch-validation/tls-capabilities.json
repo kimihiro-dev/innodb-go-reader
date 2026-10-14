@@ -1,0 +1,32 @@
+{
+  "5.7.9": {
+    "exit_code": 0,
+    "stdout": "have_openssl\tYES\nSsl_version\tTLSv1\nSsl_cipher\tDHE-RSA-AES256-SHA\n",
+    "stderr": ""
+  },
+  "5.7.10": {
+    "exit_code": 0,
+    "stdout": "have_openssl\tYES\ntls_version\tTLSv1,TLSv1.1\nSsl_version\tTLSv1.1\nSsl_cipher\tDHE-RSA-AES256-SHA\n",
+    "stderr": ""
+  },
+  "5.7.11": {
+    "exit_code": 0,
+    "stdout": "WARNING: --ssl is deprecated and will be removed in a future version. Use --ssl-mode instead.\nhave_openssl\tYES\ntls_version\tTLSv1,TLSv1.1\nSsl_version\tTLSv1.1\nSsl_cipher\tDHE-RSA-AES256-SHA\n",
+    "stderr": ""
+  },
+  "5.7.12": {
+    "exit_code": 0,
+    "stdout": "WARNING: --ssl is deprecated and will be removed in a future version. Use --ssl-mode instead.\nhave_openssl\tYES\ntls_version\tTLSv1,TLSv1.1\nSsl_version\tTLSv1.1\nSsl_cipher\tDHE-RSA-AES256-SHA\n",
+    "stderr": ""
+  },
+  "5.7.28": {
+    "exit_code": 0,
+    "stdout": "have_openssl\tYES\ntls_version\tTLSv1,TLSv1.1,TLSv1.2\nSsl_version\tTLSv1.2\nSsl_cipher\tECDHE-RSA-AES128-GCM-SHA256\n",
+    "stderr": "WARNING: --ssl is deprecated and will be removed in a future version. Use --ssl-mode instead.\n"
+  },
+  "5.7.43": {
+    "exit_code": 0,
+    "stdout": "have_openssl\tYES\ntls_version\tTLSv1,TLSv1.1,TLSv1.2\nSsl_version\tTLSv1.2\nSsl_cipher\tDHE-RSA-AES128-GCM-SHA256\n",
+    "stderr": "WARNING: --ssl is deprecated and will be removed in a future version. Use --ssl-mode instead.\n"
+  }
+}

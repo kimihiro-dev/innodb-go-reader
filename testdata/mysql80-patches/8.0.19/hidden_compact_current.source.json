@@ -1,0 +1,35 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.19",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "columns": [
+    {
+      "name": "seq",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "v",
+      "type": "varchar",
+      "extra": ""
+    },
+    {
+      "name": "payload",
+      "type": "longtext",
+      "extra": ""
+    }
+  ],
+  "indexes": [
+    {
+      "name": "GEN_CLUST_INDEX",
+      "index_id": 211,
+      "space_id": 54,
+      "root_page": 4
+    }
+  ],
+  "table": "hidden_compact",
+  "database": "innodb_reader_80_08123feb413d"
+}

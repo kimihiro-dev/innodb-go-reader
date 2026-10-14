@@ -1,0 +1,36 @@
+[
+  {
+    "Name": "secondary",
+    "Unique": false,
+    "RowFormat": "DYNAMIC",
+    "SpaceID": 46,
+    "IndexID": 78,
+    "RootPage": 4,
+    "Fields": [
+      {
+        "Column": 1,
+        "Definition": {
+          "name": "n",
+          "type": "INT",
+          "nullable": true
+        },
+        "PrefixBytes": 0,
+        "RowID": false
+      },
+      {
+        "Column": 0,
+        "Definition": {
+          "name": "id",
+          "type": "INT",
+          "nullable": false
+        },
+        "PrefixBytes": 0,
+        "RowID": false
+      }
+    ],
+    "UserFields": 1,
+    "ClusteredFields": [
+      1
+    ]
+  }
+]

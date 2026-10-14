@@ -1,0 +1,17 @@
+{
+  "darwin/arm64": {
+    "bytes": 11344850,
+    "sha256": "921f15187796859599ddf5c9e31ee7f5cde8fbfd1804f6af079ae94ae0f03e59",
+    "CGO_ENABLED": 0
+  },
+  "linux/amd64": {
+    "bytes": 11728671,
+    "sha256": "0a8f0f5987b12f0d121a0b4d4a61d9a3cf581b2b95495dcbb53fa28be90a249d",
+    "CGO_ENABLED": 0
+  },
+  "windows/amd64": {
+    "bytes": 11980288,
+    "sha256": "075410aaf3cace855faac80bece68cba947c03356499f21499784592ddf84e22",
+    "CGO_ENABLED": 0
+  }
+}

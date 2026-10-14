@@ -37,7 +37,7 @@ func TestSpaceAssets(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if count != 487 {
+	if count != 1957 {
 		t.Fatal("assets", count)
 	}
 	t.Log("assets", count)

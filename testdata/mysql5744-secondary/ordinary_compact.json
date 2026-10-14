@@ -1,0 +1,40 @@
+{
+  "row_format": "COMPACT",
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false
+    },
+    {
+      "name": "n",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "name",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "utf8mb4",
+      "max_chars": 40
+    },
+    {
+      "name": "vb",
+      "type": "VARBINARY",
+      "nullable": true,
+      "max_bytes": 40
+    },
+    {
+      "name": "payload",
+      "type": "LONGTEXT",
+      "nullable": true,
+      "charset": "utf8mb4"
+    }
+  ],
+  "root_page": 3,
+  "index_id": 263,
+  "space_id": 144,
+  "primary_keys": [
+    "id"
+  ]
+}

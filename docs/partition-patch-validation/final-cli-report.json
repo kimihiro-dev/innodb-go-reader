@@ -1,0 +1,205 @@
+{
+  "status": "passed",
+  "after": "original-column INSTANT default rejection fix",
+  "collections": [
+    {
+      "version": "5.7.44",
+      "case": "ranges_dynamic_current",
+      "SQL_rows": 23,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.12",
+      "case": "instant_dynamic_add",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.12",
+      "case": "instant_dynamic_partial_rebuild",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.12",
+      "case": "instant_compact_add",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.12",
+      "case": "instant_compact_partial_rebuild",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.16",
+      "case": "instant_dynamic_add",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.16",
+      "case": "instant_dynamic_partial_rebuild",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.16",
+      "case": "instant_compact_add",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.16",
+      "case": "instant_compact_partial_rebuild",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.19",
+      "case": "instant_dynamic_add",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.19",
+      "case": "instant_dynamic_partial_rebuild",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.19",
+      "case": "instant_compact_add",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.19",
+      "case": "instant_compact_partial_rebuild",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.23",
+      "case": "instant_dynamic_add",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.23",
+      "case": "instant_dynamic_partial_rebuild",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.23",
+      "case": "instant_compact_add",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.23",
+      "case": "instant_compact_partial_rebuild",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.28",
+      "case": "instant_dynamic_add",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.28",
+      "case": "instant_dynamic_partial_rebuild",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.28",
+      "case": "instant_compact_add",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.28",
+      "case": "instant_compact_partial_rebuild",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.30",
+      "case": "instant_dynamic_add",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.30",
+      "case": "instant_dynamic_partial_rebuild",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.30",
+      "case": "instant_dynamic_drop",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.30",
+      "case": "instant_compact_add",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.30",
+      "case": "instant_compact_partial_rebuild",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.30",
+      "case": "instant_compact_drop",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.45",
+      "case": "instant_dynamic_add",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.45",
+      "case": "instant_dynamic_partial_rebuild",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.45",
+      "case": "instant_dynamic_drop",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.45",
+      "case": "instant_compact_add",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.45",
+      "case": "instant_compact_partial_rebuild",
+      "SQL_rows": 3,
+      "result": "passed"
+    },
+    {
+      "version": "8.0.45",
+      "case": "instant_compact_drop",
+      "SQL_rows": 3,
+      "result": "passed"
+    }
+  ],
+  "Linux_native_driver": "5.7.44 Unix socket with PATH empty; independent SQL definition identical"
+}

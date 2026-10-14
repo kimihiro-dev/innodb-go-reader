@@ -1,0 +1,30 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.16",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "columns": [
+    {
+      "name": "id",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "v",
+      "type": "varchar",
+      "extra": ""
+    }
+  ],
+  "indexes": [
+    {
+      "name": "PRIMARY",
+      "index_id": 198,
+      "space_id": 43,
+      "root_page": 4
+    }
+  ],
+  "table": "tree_dynamic",
+  "database": "innodb_reader_80_aaf17e924b8b"
+}

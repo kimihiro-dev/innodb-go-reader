@@ -1,0 +1,37 @@
+[
+  {
+    "Name": "secondary",
+    "Unique": false,
+    "RowFormat": "DYNAMIC",
+    "SpaceID": 30,
+    "IndexID": 60,
+    "RootPage": 4,
+    "Fields": [
+      {
+        "Column": 2,
+        "Definition": {
+          "name": "s",
+          "type": "INT",
+          "nullable": true,
+          "generation_expression": "(`base` + 1)"
+        },
+        "PrefixBytes": 0,
+        "RowID": false
+      },
+      {
+        "Column": 0,
+        "Definition": {
+          "name": "id",
+          "type": "INT",
+          "nullable": false
+        },
+        "PrefixBytes": 0,
+        "RowID": false
+      }
+    ],
+    "UserFields": 1,
+    "ClusteredFields": [
+      1
+    ]
+  }
+]

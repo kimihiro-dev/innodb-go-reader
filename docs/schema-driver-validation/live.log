@@ -1,0 +1,10 @@
+t tcp verified
+t unix verified
+t tls verified
+hidden tcp verified
+hidden unix verified
+hidden tls verified
+generated tcp verified
+generated unix verified
+generated tls verified
+report: /var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-driver-live-6udfeltj/run-l8ul_gml/report.json

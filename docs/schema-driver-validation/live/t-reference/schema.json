@@ -1,0 +1,55 @@
+{
+  "row_format": "DYNAMIC",
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false
+    },
+    {
+      "name": "n",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "name",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "utf8mb4",
+      "max_chars": 40
+    },
+    {
+      "name": "e",
+      "type": "ENUM",
+      "nullable": true,
+      "charset": "utf8mb4",
+      "enum_values": [
+        "",
+        "界",
+        "O'Brien"
+      ]
+    },
+    {
+      "name": "s",
+      "type": "SET",
+      "nullable": true,
+      "charset": "utf8mb4",
+      "set_values": [
+        "界",
+        "a"
+      ]
+    },
+    {
+      "name": "vb",
+      "type": "VARBINARY",
+      "nullable": true,
+      "max_bytes": 40
+    }
+  ],
+  "root_page": 3,
+  "index_id": 48,
+  "space_id": 27,
+  "primary_keys": [
+    "id"
+  ]
+}

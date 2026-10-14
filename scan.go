@@ -250,6 +250,11 @@ func scanRow(r io.ReaderAt, e Record, schema Schema) error {
 			}
 		}
 	}
+	if schema.LegacyInstant != nil {
+		for _, c := range e.DefaultColumns {
+			n += uint64(len(schema.LegacyInstant.Defaults[c-schema.LegacyInstant.Columns].Data))
+		}
+	}
 	if n > s.options.MaxRowBytes {
 		return fmt.Errorf("%w: encoded row bytes", ErrLimit)
 	}

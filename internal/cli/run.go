@@ -8,16 +8,19 @@ import (
 	"flag"
 	"fmt"
 	innodb "innodb-go-reader"
+	"innodb-go-reader/internal/mysql57"
 	"innodb-go-reader/rowio"
+	"innodb-go-reader/stats"
 	"innodb-go-reader/visual"
 	"io"
 	"os"
 	"path/filepath"
 	"strconv"
 	"strings"
+	"time"
 )
 
-const usage = "usage: innodb-reader <metadata|page|export|query|check|space|visualize> [flags] file.ibd\nPartition metadata/export/check: --manifest files.json instead of file.ibd.\nUse <command> --help for flags. Flags must precede file.ibd.\n"
+const usage = "usage: innodb-reader <metadata|page|export|query|check|space|stats|visualize> [flags] file.ibd\nInput preparation: schema [--host HOST --port PORT | --socket PATH] --user USER --database DB --table TABLE --output DIR [--indexes] [--partitions]\n                   manifest [--partition-schema partitions.json] [--output files.json] partition.ibd ...\nPartition metadata/export/check: --manifest files.json instead of file.ibd.\nUse <command> --help for flags. Flags must precede input files.\n"
 
 type summary struct {
 	Command        string `json:"command"`
@@ -28,13 +31,18 @@ type summary struct {
 	Error          string `json:"error,omitempty"`
 }
 type config struct {
-	visual                                                       visual.Options
-	rawPages                                                     string
-	command, path, output, format, index, query, scope, manifest string
-	overwrite, physical, materialized                            bool
-	number                                                       uint64
-	scan                                                         innodb.ScanOptions
-	space                                                        innodb.SpaceOptions
+	collect                                                                       mysql57.Options
+	paths                                                                         []string
+	stats                                                                         stats.Options
+	rawIndexID, rawLevel                                                          string
+	visual                                                                        visual.Options
+	rawPages                                                                      string
+	command, path, output, format, index, query, scope, manifest, schema, indexes string
+	partitionSchema                                                               string
+	overwrite, physical, materialized                                             bool
+	number                                                                        uint64
+	scan                                                                          innodb.ScanOptions
+	space                                                                         innodb.SpaceOptions
 }
 
 func parse(args []string, stderr io.Writer) (config, bool, error) {
@@ -51,8 +59,18 @@ func parse(args []string, stderr io.Writer) (config, bool, error) {
 	diagnostics := &diagnosticWriter{w: stderr}
 	f.SetOutput(diagnostics)
 	f.Usage = func() { fmt.Fprint(diagnostics, usage); f.PrintDefaults() }
-	f.StringVar(&c.output, "output", "", "atomically publish to file (default stdout)")
+	outputHelp := "atomically publish to file (default stdout)"
+	if c.command == "schema" {
+		outputHelp = "required new directory for schema/source and optional indexes"
+	}
+	f.StringVar(&c.output, "output", "", outputHelp)
 	f.BoolVar(&c.overwrite, "overwrite", false, "replace an existing output file")
+	if c.command == "metadata" || c.command == "export" || c.command == "check" || c.command == "query" || c.command == "visualize" {
+		f.StringVar(&c.schema, "schema", "", "trusted Schema JSON (1 MiB); replaces SDI discovery")
+	}
+	if c.command == "metadata" || c.command == "check" || c.command == "query" || c.command == "visualize" {
+		f.StringVar(&c.indexes, "indexes", "", "trusted SecondarySchema JSON array (1 MiB); requires --schema")
+	}
 	if c.command == "metadata" || c.command == "export" || c.command == "check" {
 		f.StringVar(&c.manifest, "manifest", "", "complete partition file manifest; replaces file.ibd")
 	}
@@ -73,6 +91,22 @@ func parse(args []string, stderr io.Writer) (config, bool, error) {
 		f.Uint64Var(&c.space.MaxEntries, "space-max-entries", 10000000, "space structure traversal budget")
 	}
 	switch c.command {
+	case "schema":
+		f.StringVar(&c.collect.Host, "host", "", "TCP host (default 127.0.0.1); mutually exclusive with --socket")
+		f.IntVar(&c.collect.Port, "port", 0, "TCP port (0 selects 3306); mutually exclusive with --socket")
+		f.StringVar(&c.collect.Socket, "socket", "", "Unix socket path; replaces TCP")
+		f.StringVar(&c.collect.User, "user", "root", "MySQL user with table visibility and PROCESS privilege")
+		f.StringVar(&c.collect.PasswordEnv, "password-env", "MYSQL_PWD", "environment variable containing password; unset means empty")
+		f.DurationVar(&c.collect.Timeout, "timeout", 30*time.Second, "total connection and SQL query timeout")
+		f.BoolVar(&c.collect.TLS, "tls", false, "TCP TLS with certificate/hostname verification; no fallback")
+		f.StringVar(&c.collect.TLSCA, "tls-ca", "", "additional trusted CA PEM file; requires --tls")
+		f.StringVar(&c.collect.Database, "database", "", "exact database name")
+		f.StringVar(&c.collect.Table, "table", "", "exact table name")
+		f.BoolVar(&c.collect.Indexes, "indexes", false, "also collect ordinary secondary definitions (indexes.json, or embedded in partitions.json)")
+		f.BoolVar(&c.collect.Partitions, "partitions", false, "collect a complete ordinary partition schema in partitions.json")
+	case "manifest":
+		f.Uint64Var(&c.scan.MaxPageReads, "max-page-reads", 1000000, "cumulative source page reads for discovery and preflight")
+		f.StringVar(&c.partitionSchema, "partition-schema", "", "trusted MySQL 5.7 partitions.json; otherwise discover from SDI")
 	case "export", "query":
 		scanFlags()
 		f.StringVar(&c.format, "format", "jsonl", "jsonl or csv (typed lossless cells)")
@@ -92,6 +126,12 @@ func parse(args []string, stderr io.Writer) (config, bool, error) {
 		f.Uint64Var(&c.visual.MaxReadCalls, "max-read-calls", 1000000, "cumulative underlying source reads")
 		f.Uint64Var(&c.visual.MaxDetails, "max-details", 10000, "selected record detail budget")
 		f.Uint64Var(&c.visual.MaxReportBytes, "max-report-bytes", 64<<20, "embedded JSON byte budget")
+	case "stats":
+		spaceFlags()
+		f.StringVar(&c.stats.View, "view", "summary", "summary, page-types, indexes, levels, segments or regions")
+		f.StringVar(&c.format, "format", "table", "table or json (exact decimal string integers)")
+		f.StringVar(&c.rawIndexID, "index-id", "", "nonzero decimal uint64; indexes, levels or segments only")
+		f.StringVar(&c.rawLevel, "level", "", "decimal uint16; levels with --index-id only")
 	case "space":
 		spaceFlags()
 	case "page":
@@ -110,6 +150,47 @@ func parse(args []string, stderr io.Writer) (config, bool, error) {
 			return c, true, diagnostics.err
 		}
 		return c, false, err
+	}
+	if c.command == "schema" {
+		if err := mysql57.ValidateOptions(c.collect); err != nil {
+			return c, false, err
+		}
+		if c.output == "" || c.overwrite || f.NArg() != 0 {
+			return c, false, fmt.Errorf("schema requires --output new-directory, no input file or --overwrite")
+		}
+		return c, false, nil
+	}
+	if c.command == "manifest" {
+		var explicitSchema bool
+		f.Visit(func(v *flag.Flag) { explicitSchema = explicitSchema || v.Name == "partition-schema" })
+		if explicitSchema && c.partitionSchema == "" {
+			return c, false, fmt.Errorf("--partition-schema requires a nonempty path")
+		}
+		if f.NArg() < 1 || f.NArg() > innodb.MaxPartitionFiles {
+			return c, false, fmt.Errorf("manifest requires 1..%d partition files", innodb.MaxPartitionFiles)
+		}
+		if c.overwrite && c.output == "" {
+			return c, false, fmt.Errorf("--overwrite requires --output")
+		}
+		c.paths = f.Args()
+		return c, false, nil
+	}
+	var schemaSet, indexesSet bool
+	f.Visit(func(v *flag.Flag) {
+		schemaSet = schemaSet || v.Name == "schema"
+		indexesSet = indexesSet || v.Name == "indexes"
+	})
+	if schemaSet && (c.schema == "" || c.manifest != "" || c.command == "check" && c.scope == "space" || c.command == "visualize" && c.visual.Index == "") {
+		return c, false, fmt.Errorf("--schema requires a nonempty path and single-table row/index operation")
+	}
+	if indexesSet && (c.indexes == "" || c.schema == "") {
+		return c, false, fmt.Errorf("--indexes requires a nonempty path and --schema")
+	}
+	if c.schema != "" && c.index != "" && c.indexes == "" {
+		return c, false, fmt.Errorf("explicit secondary operations require --indexes")
+	}
+	if c.indexes != "" && (c.command == "query" && c.index == "" || c.command == "check" && c.scope != "secondary") {
+		return c, false, fmt.Errorf("--indexes requires a selected secondary index")
 	}
 	if c.manifest != "" {
 		if f.NArg() != 0 {
@@ -161,6 +242,41 @@ func parse(args []string, stderr io.Writer) (config, bool, error) {
 			if err != nil {
 				return c, false, err
 			}
+		}
+	}
+	if c.command == "stats" {
+		if c.format != "table" && c.format != "json" {
+			return c, false, fmt.Errorf("stats format must be table or json")
+		}
+		if c.stats.View == "" {
+			return c, false, fmt.Errorf("stats view is required")
+		}
+		var indexSet, levelSet bool
+		f.Visit(func(v *flag.Flag) {
+			if v.Name == "index-id" {
+				indexSet = true
+			}
+			if v.Name == "level" {
+				levelSet = true
+			}
+		})
+		if indexSet {
+			n, err := decimalFlag(c.rawIndexID, "index-id", 64)
+			if err != nil {
+				return c, false, err
+			}
+			c.stats.IndexID = &n
+		}
+		if levelSet {
+			n, err := decimalFlag(c.rawLevel, "level", 16)
+			if err != nil {
+				return c, false, err
+			}
+			level := uint16(n)
+			c.stats.Level = &level
+		}
+		if err := stats.Validate(c.stats); err != nil {
+			return c, false, err
 		}
 	}
 	if c.overwrite && c.output == "" {
@@ -225,12 +341,24 @@ func Run(ctx context.Context, args []string, stdout, stderr io.Writer) int {
 	} else {
 		if c.scope == "" {
 			switch c.command {
+			case "schema":
+				s.Scope = "MySQL 5.7 trusted definitions; metadata only"
+			case "manifest":
+				s.Scope = "complete partition collection preflight; no row scan"
 			case "export":
 				s.Scope = "current stored rows"
 			case "query":
 				s.Scope = "requested range/limit, visited paths"
 			case "metadata":
 				s.Scope = "metadata discovery"
+				if c.schema != "" {
+					s.Scope = "explicit schema and clustered root identity"
+					if c.indexes != "" {
+						s.Scope = "explicit schema and supplied index root identities"
+					}
+				}
+			case "stats":
+				s.Scope = "whole space allocation and local index layout; filtered groups"
 			case "visualize":
 				s.Scope = "space; explicitly selected index and page details"
 			default:
@@ -249,7 +377,11 @@ func Run(ctx context.Context, args []string, stdout, stderr io.Writer) int {
 			}
 		}
 		if err == nil {
-			if c.manifest != "" {
+			if c.command == "schema" {
+				err = executeSchema(ctx, c, stdout, &s)
+			} else if c.command == "manifest" {
+				err = executeManifest(ctx, c, stdout, &s)
+			} else if c.manifest != "" {
 				s.Scope = "complete partition collection, definition order"
 				err = executePartitions(ctx, c, stdout, &s)
 				var formatErr *manifestError
@@ -314,15 +446,30 @@ func execute(ctx context.Context, c config, q innodb.SecondaryQuery, stdout io.W
 		max = 1000000
 	}
 	r := &budgetReader{ctx: ctx, r: f, max: max}
-	return output(ctx, c.output, c.overwrite, []string{c.path, c.query}, stdout, func(w io.Writer) error {
+	return output(ctx, c.output, c.overwrite, []string{c.path, c.query, c.schema, c.indexes}, stdout, func(w io.Writer) error {
 		enc := json.NewEncoder(w)
 		switch c.command {
+		case "stats":
+			return executeStats(ctx, c, f, st.Size(), w, s)
 		case "visualize":
 			o := c.visual
 			o.Title = filepath.Base(c.path)
 			o.Space = c.space
 			o.Scan = c.scan
 			o.Materialized = c.materialized
+			if c.schema != "" {
+				schema, err := readSchema(c.schema)
+				if err != nil {
+					return err
+				}
+				o.Schema = &schema
+				if c.indexes != "" {
+					o.Indexes, err = readIndexes(c.indexes)
+					if err != nil {
+						return err
+					}
+				}
+			}
 			report, err := visual.Build(ctx, f, st.Size(), o)
 			if err != nil {
 				return err
@@ -334,6 +481,27 @@ func execute(ctx context.Context, c config, q innodb.SecondaryQuery, stdout io.W
 			}{report.Space.FilePages, report.ReadCalls, report.Index, len(report.RawPages), len(report.Details)}
 			return visual.WriteHTML(ctx, w, report)
 		case "metadata":
+			if c.schema != "" {
+				schema, err := tableSchema(r, st.Size(), c)
+				s.PreflightReads = r.reads
+				if err != nil {
+					return err
+				}
+				var indexes *[]innodb.SecondarySchema
+				if c.indexes != "" {
+					list, err := secondarySchemas(r, st.Size(), *schema, c.indexes)
+					s.PreflightReads = r.reads
+					if err != nil {
+						return err
+					}
+					indexes = &list
+				}
+				return enc.Encode(struct {
+					Source  string                    `json:"source"`
+					Schema  *innodb.Schema            `json:"schema"`
+					Indexes *[]innodb.SecondarySchema `json:"indexes,omitempty"`
+				}{"explicit_schema", schema, indexes})
+			}
 			m, err := innodb.InspectTable(r, st.Size())
 			s.PreflightReads = r.reads
 			if err != nil {
@@ -361,6 +529,33 @@ func execute(ctx context.Context, c config, q innodb.SecondaryQuery, stdout io.W
 				}
 				return enc.Encode(report)
 			case "secondary":
+				if c.schema != "" {
+					table, err := tableSchema(r, st.Size(), c)
+					s.PreflightReads = r.reads
+					if err != nil {
+						return err
+					}
+					indexes, err := secondarySchemas(r, st.Size(), *table, c.indexes)
+					s.PreflightReads = r.reads
+					if err != nil {
+						return err
+					}
+					index, err := selectSecondary(indexes, c.index)
+					if err != nil {
+						return err
+					}
+					if r.reads >= max {
+						return fmt.Errorf("%w: preflight exhausted page budget", innodb.ErrLimit)
+					}
+					options := c.scan
+					options.MaxPageReads = max - r.reads
+					report, err := innodb.ScanSecondary(ctx, r, st.Size(), index, options, func(innodb.SecondaryEvent) error { return nil })
+					s.Report = report
+					if err != nil {
+						return err
+					}
+					return enc.Encode(report)
+				}
 				report, err := innodb.ScanSecondaryAuto(ctx, r, st.Size(), c.index, c.scan, func(innodb.SecondaryEvent) error { return nil })
 				s.Report = report
 				if err != nil {
@@ -368,6 +563,28 @@ func execute(ctx context.Context, c config, q innodb.SecondaryQuery, stdout io.W
 				}
 				return enc.Encode(report)
 			default:
+				if c.schema != "" {
+					schema, err := tableSchema(r, st.Size(), c)
+					s.PreflightReads = r.reads
+					if err != nil {
+						return err
+					}
+					if r.reads >= max {
+						return fmt.Errorf("%w: preflight exhausted page budget", innodb.ErrLimit)
+					}
+					options := c.scan
+					options.MaxPageReads = max - r.reads
+					scan := innodb.Scan
+					if c.materialized {
+						scan = innodb.ScanMaterialized
+					}
+					report, err := scan(ctx, r, st.Size(), *schema, options, func(innodb.ScanEvent) error { return nil })
+					s.Report = report
+					if err != nil {
+						return err
+					}
+					return enc.Encode(report)
+				}
 				scan := innodb.ScanAuto
 				if c.materialized {
 					scan = innodb.ScanMaterializedAuto
@@ -382,17 +599,22 @@ func execute(ctx context.Context, c config, q innodb.SecondaryQuery, stdout io.W
 		}
 		// Schema precedes rows. Charge its uncached reads before starting the API's
 		// shared cache/request budget; SDI retains its independent capacity limits.
-		meta, err := innodb.InspectTable(r, st.Size())
+		schema, err := tableSchema(r, st.Size(), c)
 		s.PreflightReads = r.reads
 		if err != nil {
 			return err
 		}
-		schema := meta.Schema
-		if c.materialized {
-			schema = meta.MaterializedSchema
-		}
-		if schema == nil {
-			return fmt.Errorf("%w: %v", innodb.ErrUnsupported, meta.Issues)
+		var selected innodb.SecondarySchema
+		if c.indexes != "" {
+			indexes, err := secondarySchemas(r, st.Size(), *schema, c.indexes)
+			s.PreflightReads = r.reads
+			if err != nil {
+				return err
+			}
+			selected, err = selectSecondary(indexes, c.index)
+			if err != nil {
+				return err
+			}
 		}
 		columns := schema.Columns
 		if c.index != "" && q.Columns != nil {
@@ -459,11 +681,22 @@ func execute(ctx context.Context, c config, q innodb.SecondaryQuery, stdout io.W
 			s.Report = report
 			err = e
 		} else {
-			query := innodb.QuerySecondaryAuto
-			if c.materialized {
-				query = innodb.QuerySecondaryMaterializedAuto
+			yield := func(p innodb.ProjectedRow) error { copy := p; copy.Values = nil; return emit(p.Values, copy) }
+			var report innodb.SecondaryQueryReport
+			var e error
+			if c.schema != "" {
+				query := innodb.QuerySecondary
+				if c.materialized {
+					query = innodb.QuerySecondaryMaterialized
+				}
+				report, e = query(ctx, r, st.Size(), *schema, selected, q, c.scan, yield)
+			} else {
+				query := innodb.QuerySecondaryAuto
+				if c.materialized {
+					query = innodb.QuerySecondaryMaterializedAuto
+				}
+				report, e = query(ctx, r, st.Size(), c.index, q, c.scan, yield)
 			}
-			report, e := query(ctx, r, st.Size(), c.index, q, c.scan, func(p innodb.ProjectedRow) error { copy := p; copy.Values = nil; return emit(p.Values, copy) })
 			s.Report = report
 			err = e
 		}

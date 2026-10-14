@@ -1,0 +1,68 @@
+--- 5.7.12/storage/innobase/include/fsp0fsp.h
++++ 5.7.44/storage/innobase/include/fsp0fsp.h
+@@ -1,13 +1,21 @@
+ /*****************************************************************************
+ 
+-Copyright (c) 1995, 2016, Oracle and/or its affiliates. All Rights Reserved.
+-
+-This program is free software; you can redistribute it and/or modify it under
+-the terms of the GNU General Public License as published by the Free Software
+-Foundation; version 2 of the License.
+-
+-This program is distributed in the hope that it will be useful, but WITHOUT
+-ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+-FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
++Copyright (c) 1995, 2023, Oracle and/or its affiliates.
++
++This program is free software; you can redistribute it and/or modify
++it under the terms of the GNU General Public License, version 2.0,
++as published by the Free Software Foundation.
++
++This program is also distributed with certain software (including
++but not limited to OpenSSL) that is licensed under separate terms,
++as designated in a particular file or component or in included license
++documentation.  The authors of MySQL hereby grant you an additional
++permission to link the program and your derivative works with the
++separately licensed software that they have included with MySQL.
++
++This program is distributed in the hope that it will be useful,
++but WITHOUT ANY WARRANTY; without even the implied warranty of
++MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++GNU General Public License, version 2.0, for more details.
+ 
+ You should have received a copy of the GNU General Public License along with
+@@ -490,5 +498,5 @@
+ 				If init_mtr!=mtr, but the page is already
+ 				latched in mtr, do not initialize the page. */
+-	__attribute__((warn_unused_result, nonnull));
++	MY_ATTRIBUTE((warn_unused_result));
+ 
+ /** Reserves free pages from a tablespace. All mini-transactions which may
+@@ -577,5 +585,5 @@
+ 	ulint		space_id,	/*!< in: space id */
+ 	ulint		page)		/*!< in: page offset */
+-	__attribute__((nonnull, warn_unused_result));
++	MY_ATTRIBUTE((warn_unused_result));
+ /**********************************************************************//**
+ Frees part of a segment. This function can be used to free a segment
+@@ -594,5 +602,5 @@
+ 				the adaptive hash index */
+ 	mtr_t*		mtr)	/*!< in/out: mini-transaction */
+-	__attribute__((warn_unused_result));
++	MY_ATTRIBUTE((warn_unused_result));
+ /**********************************************************************//**
+ Frees part of a segment. Differs from fseg_free_step because this function
+@@ -607,5 +615,5 @@
+ 				the adaptive hash index */
+ 	mtr_t*		mtr)	/*!< in/out: mini-transaction */
+-	__attribute__((warn_unused_result));
++	MY_ATTRIBUTE((warn_unused_result));
+ 
+ /** Checks if a page address is an extent descriptor page address.
+@@ -729,5 +737,5 @@
+ 	const page_size_t&	page_size,
+ 	mtr_t*			mtr)
+-__attribute__((warn_unused_result));
++MY_ATTRIBUTE((warn_unused_result));
+ 
+ /**********************************************************************//**

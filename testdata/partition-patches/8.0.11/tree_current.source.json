@@ -1,0 +1,71 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.11",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "database": "innodb_partition_3a833fbede59",
+  "table": "tree",
+  "directory": [
+    {
+      "sub": null,
+      "name": "P0",
+      "method": "RANGE",
+      "ordinal": 1,
+      "expression": "`n`"
+    },
+    {
+      "sub": null,
+      "name": "p1",
+      "method": "RANGE",
+      "ordinal": 2,
+      "expression": "`n`"
+    },
+    {
+      "sub": null,
+      "name": "empty_p",
+      "method": "RANGE",
+      "ordinal": 3,
+      "expression": "`n`"
+    }
+  ],
+  "physical": [
+    {
+      "name": "innodb_partition_3a833fbede59/tree#P#P0",
+      "path": "./innodb_partition_3a833fbede59/tree#P#P0.ibd",
+      "space": 116,
+      "table_id": 1177
+    },
+    {
+      "name": "innodb_partition_3a833fbede59/tree#P#p1",
+      "path": "./innodb_partition_3a833fbede59/tree#P#p1.ibd",
+      "space": 117,
+      "table_id": 1178
+    },
+    {
+      "name": "innodb_partition_3a833fbede59/tree#P#empty_p",
+      "path": "./innodb_partition_3a833fbede59/tree#P#empty_p.ibd",
+      "space": 118,
+      "table_id": 1179
+    }
+  ],
+  "columns": [
+    {
+      "name": "id",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "v",
+      "type": "varchar",
+      "extra": ""
+    }
+  ],
+  "partitions": {}
+}

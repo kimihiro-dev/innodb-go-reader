@@ -1,0 +1,7 @@
+{
+  "version": "5.7.44",
+  "actual_version": "5.7.44",
+  "container": "innodb-partition-5-7-44-46f890",
+  "image": "dab0a802b446",
+  "image_id": "sha256:dab0a802b44617303694fb17d166501de279c3031ddeb28c56ecf7fcab5ef0da"
+}

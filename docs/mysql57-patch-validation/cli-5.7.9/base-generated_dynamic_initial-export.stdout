@@ -1,0 +1,4 @@
+{"kind":"schema","schema":{"version":1,"columns":[{"name":"id","type":"INT","nullable":false,"max_chars":0},{"name":"base","type":"INT","nullable":true,"max_chars":0},{"generation_expression":"base+1","name":"s","type":"INT","nullable":true,"max_chars":0}],"virtual_columns":[{"name":"v","ordinal":3,"expression":"base+100"}],"physical":false}}
+{"kind":"row","values":[{"type":"int32","value":"1"},{"type":"int32","value":"7"},{"type":"int32","value":"8"}]}
+{"kind":"row","values":[{"type":"int32","value":"2"},{"type":"null"},{"type":"null"}]}
+{"kind":"end","rows":"2"}

@@ -1,0 +1,85 @@
+--- FAIL: TestMySQL80PatchFixtures (0.11s)
+    --- FAIL: TestMySQL80PatchFixtures/8.0.11/scalar_dynamic_current (0.01s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.11/lob_dynamic_insert (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.11/lob_dynamic_small_update (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.11/lob_dynamic_replace_delete (0.01s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.11/secondary_dynamic_current (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.11/hidden_dynamic_current (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.11/generated_dynamic_current (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.11/tree_dynamic_current (0.01s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.11/scalar_compact_current (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.11/lob_compact_insert (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.11/lob_compact_small_update (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.11/lob_compact_replace_delete (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.11/secondary_compact_current (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.11/hidden_compact_current (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.11/generated_compact_current (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.11/tree_compact_current (0.01s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/scalar_dynamic_current (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/lob_dynamic_insert (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/lob_dynamic_small_update (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/lob_dynamic_replace_delete (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/secondary_dynamic_current (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/hidden_dynamic_current (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/generated_dynamic_current (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/tree_dynamic_current (0.01s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/instant_dynamic_add (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/instant_dynamic_mixed (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/instant_dynamic_rebuilt (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/wide_dynamic_current (0.01s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/scalar_compact_current (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/lob_compact_insert (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/lob_compact_small_update (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/lob_compact_replace_delete (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/secondary_compact_current (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/hidden_compact_current (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/generated_compact_current (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/tree_compact_current (0.01s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/instant_compact_add (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/instant_compact_mixed (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/instant_compact_rebuilt (0.00s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    --- FAIL: TestMySQL80PatchFixtures/8.0.12/wide_compact_current (0.01s)
+        mysql80_patch_test.go:50: invalid InnoDB data: missing metadata field "hidden"
+    mysql80_patch_test.go:155: SQL patch coverage: 0 fixtures, 0 rows, 0 secondary indexes
+FAIL
+FAIL	innodb-go-reader	1.241s
+FAIL

@@ -1,0 +1,127 @@
+{
+  "environment": {
+    "datadir": "/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/data/",
+    "version": "8.0.45",
+    "checksum": "strict_crc32",
+    "page_size": 16384,
+    "doublewrite": "ON",
+    "data_file_path": "ibdata1:12M:autoextend",
+    "file_per_table": 1,
+    "change_buffering": "all",
+    "undo_tablespaces": 2
+  },
+  "tables": [
+    {
+      "name": "lesson/private_rows",
+      "flags": 33,
+      "space": 2,
+      "columns": 6,
+      "table_id": 1065,
+      "row_format": "Dynamic"
+    },
+    {
+      "name": "lesson/shared_rows",
+      "flags": 1,
+      "space": 0,
+      "columns": 5,
+      "table_id": 1064,
+      "row_format": "Compact"
+    }
+  ],
+  "indexes": [
+    {
+      "id": 156,
+      "name": "PRIMARY",
+      "root": 4,
+      "type": 3,
+      "space": 2,
+      "table": "lesson/private_rows",
+      "fields": 5
+    },
+    {
+      "id": 157,
+      "name": "n_idx",
+      "root": 5,
+      "type": 0,
+      "space": 2,
+      "table": "lesson/private_rows",
+      "fields": 2
+    },
+    {
+      "id": 154,
+      "name": "PRIMARY",
+      "root": 41,
+      "type": 3,
+      "space": 0,
+      "table": "lesson/shared_rows",
+      "fields": 4
+    },
+    {
+      "id": 155,
+      "name": "n_idx",
+      "root": 42,
+      "type": 0,
+      "space": 0,
+      "table": "lesson/shared_rows",
+      "fields": 2
+    }
+  ],
+  "dictionary_roots_sql": [],
+  "rows": {
+    "shared_rows": [
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        null
+      ]
+    ],
+    "private_rows": [
+      [
+        1,
+        10,
+        "one"
+      ],
+      [
+        2,
+        null,
+        "two"
+      ]
+    ]
+  },
+  "capture": "dedicated instance; innodb_fast_shutdown=0; clean shutdown before copying",
+  "files": [
+    {
+      "source": "ibdata1",
+      "artifact": "ibdata1.gz",
+      "bytes": 12582912,
+      "sha256": "35ec51fee148b391a08f149a92f8068843a5e7e86b4ec1a1903da6104ce125bd"
+    },
+    {
+      "source": "lesson/private_rows.ibd",
+      "artifact": "lesson_private_rows.ibd.gz",
+      "bytes": 131072,
+      "sha256": "6ad8543a57f7b62834407401492ad991c10e3ac708b3aee5c174b4af3000fe4f"
+    },
+    {
+      "source": "mysql.ibd",
+      "artifact": "mysql.ibd.gz",
+      "bytes": 29360128,
+      "sha256": "690db01029ed27a7e8c6c9c171aa1e88ac57b770d7f3d57a8a485162ae6ec8e0"
+    },
+    {
+      "source": "undo_001",
+      "artifact": "undo_001.gz",
+      "bytes": 16777216,
+      "sha256": "b1d893608b55e07b29b29645b0ab0e12e4e2fdb54fbbd62e30157e6939c91f8e"
+    },
+    {
+      "source": "undo_002",
+      "artifact": "undo_002.gz",
+      "bytes": 16777216,
+      "sha256": "b5df92951793a15c4eeab0e39c533859e4e31cb749802b82cd794407b4f45d94"
+    }
+  ]
+}

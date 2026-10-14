@@ -2,6 +2,7 @@ package innodb
 
 import (
 	"bytes"
+	"context"
 	"crypto/sha256"
 	"encoding/json"
 	"errors"
@@ -86,6 +87,96 @@ func metadataLesson(t testing.TB) ([]byte, *SDIResult, map[string]any) {
 	}
 	return b, sdi, envelope
 }
+
+func TestMetadataDynamicVersion(t *testing.T) {
+	b, sdi, _ := metadataLesson(t)
+	want, err := inspectSDITable(bytes.NewReader(b), int64(len(b)), sdi)
+	if err != nil {
+		t.Fatal(err)
+	}
+	cases := []struct {
+		name, private string
+		wantErr       error
+		wantIssue     string
+	}{
+		{"absent", "", nil, ""},
+		{"autoinc-only", "autoinc=4;", nil, ""},
+		{"zero", "autoinc=4;version=0;", nil, ""},
+		{"nonzero", "version=7;autoinc=4;", nil, ""},
+		{"above-row-version-limit", "version=65;", nil, ""},
+		{"uint64-max", "version=18446744073709551615;", nil, ""},
+		{"empty", "version=;", ErrCorrupt, ""},
+		{"negative", "version=-1;", ErrCorrupt, ""},
+		{"signed", "version=+1;", ErrCorrupt, ""},
+		{"fraction", "version=1.5;", ErrCorrupt, ""},
+		{"nondecimal", "version=x;", ErrCorrupt, ""},
+		{"overflow", "version=18446744073709551616;", ErrCorrupt, ""},
+		{"duplicate", "version=0;version=1;", ErrCorrupt, ""},
+		{"unknown", "autoinc=4;version=0;future_layout=1;", nil, "table private attribute requires unsupported layout: future_layout"},
+		{"old-instant", "version=0;instant_col=3;", nil, "unsupported InnoDB layout: legacy INSTANT layout"},
+	}
+	for _, c := range cases {
+		t.Run(c.name, func(t *testing.T) {
+			b, sdi, e := metadataLesson(t)
+			e["dd_object"].(map[string]any)["se_private_data"] = c.private
+			raw, err := json.Marshal(e)
+			if err != nil {
+				t.Fatal(err)
+			}
+			sdi.Records[0].JSON = raw
+			got, err := inspectSDITable(bytes.NewReader(b), int64(len(b)), sdi)
+			if c.wantErr != nil {
+				if got != nil || !errors.Is(err, c.wantErr) {
+					t.Fatalf("metadata=%+v error=%v, want %v", got, err, c.wantErr)
+				}
+				return
+			}
+			if err != nil {
+				t.Fatal(err)
+			}
+			if c.wantIssue != "" {
+				if got.Schema != nil || got.MaterializedSchema != nil || len(got.Issues) != 1 || got.Issues[0] != c.wantIssue {
+					t.Fatalf("unsupported metadata=%+v", got)
+				}
+				return
+			}
+			if !reflect.DeepEqual(got, want) {
+				t.Fatalf("dynamic version changed discovered metadata: %+v", got)
+			}
+		})
+	}
+}
+
+func TestReadAutoDynamicVersion(t *testing.T) {
+	b, _ := fixture(t, "lesson_rows")
+	want, err := ReadAuto(bytes.NewReader(b), int64(len(b)))
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, version := range []string{"0", "7", "65", "18446744073709551615"} {
+		t.Run(version, func(t *testing.T) {
+			// Synthetic SDI only; captured user records retain their original bytes.
+			changed := partitionSDIMutation(t, b, func(e map[string]any) {
+				e["dd_object"].(map[string]any)["se_private_data"] = "autoinc=4;version=" + version + ";"
+			})
+			got, err := ReadAuto(bytes.NewReader(changed), int64(len(changed)))
+			if err != nil || !reflect.DeepEqual(got, want) {
+				t.Fatal("automatic read changed rows or rejected dynamic version", err)
+			}
+			var rows []Record
+			report, err := ScanAuto(context.Background(), bytes.NewReader(changed), int64(len(changed)), ScanOptions{}, func(e ScanEvent) error {
+				if e.Record != nil {
+					rows = append(rows, *e.Record)
+				}
+				return nil
+			})
+			if err != nil || !report.Complete || report.Records != uint64(len(want.Records)) || !reflect.DeepEqual(rows, want.Records) {
+				t.Fatal("automatic scan changed rows or rejected dynamic version", report, err)
+			}
+		})
+	}
+}
+
 func TestMetadataRejections(t *testing.T) {
 	cases := []struct {
 		name    string

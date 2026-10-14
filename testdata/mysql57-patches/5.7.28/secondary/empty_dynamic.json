@@ -1,0 +1,21 @@
+{
+  "row_format": "DYNAMIC",
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false
+    },
+    {
+      "name": "n",
+      "type": "INT",
+      "nullable": true
+    }
+  ],
+  "root_page": 3,
+  "index_id": 72,
+  "space_id": 41,
+  "primary_keys": [
+    "id"
+  ]
+}

@@ -1,0 +1,7 @@
+{"kind":"schema","schema":{"version":1,"columns":[{"collation":"ascii_bin","charset":"ascii","name":"k","type":"CHAR","nullable":false,"max_chars":8},{"name":"id","type":"INT","nullable":false,"max_chars":0},{"charset":"ascii","name":"v","type":"VARCHAR","nullable":true,"max_chars":30}],"physical":false}}
+{"kind":"row","values":[{"type":"string","value":""},{"type":"int32","value":"4"},{"type":"string","value":""}]}
+{"kind":"row","values":[{"type":"string","value":"a"},{"type":"int32","value":"3"},{"type":"string","value":"a"}]}
+{"kind":"row","values":[{"type":"string","value":"abc"},{"type":"int32","value":"1"},{"type":"string","value":"abc"}]}
+{"kind":"row","values":[{"type":"string","value":"abd"},{"type":"int32","value":"2"},{"type":"string","value":"abd"}]}
+{"kind":"row","values":[{"type":"string","value":"z"},{"type":"int32","value":"5"},{"type":"null"}]}
+{"kind":"end","rows":"5"}

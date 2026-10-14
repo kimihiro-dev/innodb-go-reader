@@ -1,0 +1,6 @@
+5.7.9 have_openssl	YES; Ssl_version	TLSv1; Ssl_cipher	DHE-RSA-AES256-SHA
+5.7.10 have_openssl	YES; tls_version	TLSv1,TLSv1.1; Ssl_version	TLSv1.1; Ssl_cipher	DHE-RSA-AES256-SHA
+5.7.11 WARNING: --ssl is deprecated and will be removed in a future version. Use --ssl-mode instead.; have_openssl	YES; tls_version	TLSv1,TLSv1.1; Ssl_version	TLSv1.1; Ssl_cipher	DHE-RSA-AES256-SHA
+5.7.12 WARNING: --ssl is deprecated and will be removed in a future version. Use --ssl-mode instead.; have_openssl	YES; tls_version	TLSv1,TLSv1.1; Ssl_version	TLSv1.1; Ssl_cipher	DHE-RSA-AES256-SHA
+5.7.28 have_openssl	YES; tls_version	TLSv1,TLSv1.1,TLSv1.2; Ssl_version	TLSv1.2; Ssl_cipher	ECDHE-RSA-AES128-GCM-SHA256
+5.7.43 have_openssl	YES; tls_version	TLSv1,TLSv1.1,TLSv1.2; Ssl_version	TLSv1.2; Ssl_cipher	DHE-RSA-AES128-GCM-SHA256

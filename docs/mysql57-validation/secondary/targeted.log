@@ -1,0 +1,618 @@
+=== RUN   TestMySQL57SecondaryFixtures
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/u
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/u/all
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/u/covered
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/u/range
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/u/prefix
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/u/point
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/u/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/s
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/s/all
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/s/covered
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/s/range
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/s/prefix
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/s/point
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/s/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/px
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/px/all
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/px/covered
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/px/range
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/px/prefix
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/px/point
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/px/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/px/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/bp
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/bp/all
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/bp/covered
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/bp/range
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/bp/prefix
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/bp/point
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/bp/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/bp/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/cover
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/cover/all
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/cover/covered
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/cover/range
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/cover/prefix
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/cover/point
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_dynamic/cover/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/px
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/px/all
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/px/covered
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/px/range
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/px/prefix
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/px/point
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/px/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/px/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/dedup
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/dedup/all
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/dedup/covered
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/dedup/range
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/dedup/prefix
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/dedup/point
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/dedup/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/s
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/s/all
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/s/covered
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/s/range
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/s/prefix
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/s/point
+=== RUN   TestMySQL57SecondaryFixtures/composite_dynamic/s/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/hidden_dynamic
+=== RUN   TestMySQL57SecondaryFixtures/hidden_dynamic/s
+=== RUN   TestMySQL57SecondaryFixtures/hidden_dynamic/s/all
+=== RUN   TestMySQL57SecondaryFixtures/hidden_dynamic/s/covered
+=== RUN   TestMySQL57SecondaryFixtures/hidden_dynamic/s/range
+=== RUN   TestMySQL57SecondaryFixtures/hidden_dynamic/s/prefix
+=== RUN   TestMySQL57SecondaryFixtures/hidden_dynamic/s/point
+=== RUN   TestMySQL57SecondaryFixtures/hidden_dynamic/px
+=== RUN   TestMySQL57SecondaryFixtures/hidden_dynamic/px/all
+=== RUN   TestMySQL57SecondaryFixtures/hidden_dynamic/px/range
+=== RUN   TestMySQL57SecondaryFixtures/hidden_dynamic/px/prefix
+=== RUN   TestMySQL57SecondaryFixtures/hidden_dynamic/px/point
+=== RUN   TestMySQL57SecondaryFixtures/hidden_dynamic/px/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_dynamic
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_dynamic/s
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_dynamic/s/all
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_dynamic/s/covered
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_dynamic/s/range
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_dynamic/s/prefix
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_dynamic/s/point
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_dynamic/s/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_dynamic/px
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_dynamic/px/all
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_dynamic/px/covered
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_dynamic/px/range
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_dynamic/px/prefix
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_dynamic/px/point
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_dynamic/px/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_dynamic/px/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/generated_dynamic
+=== RUN   TestMySQL57SecondaryFixtures/generated_dynamic/secondary
+=== RUN   TestMySQL57SecondaryFixtures/generated_dynamic/secondary/all
+=== RUN   TestMySQL57SecondaryFixtures/generated_dynamic/secondary/covered
+=== RUN   TestMySQL57SecondaryFixtures/generated_dynamic/secondary/range
+=== RUN   TestMySQL57SecondaryFixtures/generated_dynamic/secondary/prefix
+=== RUN   TestMySQL57SecondaryFixtures/generated_dynamic/secondary/point
+=== RUN   TestMySQL57SecondaryFixtures/generated_dynamic/secondary/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/tree_dynamic
+=== RUN   TestMySQL57SecondaryFixtures/tree_dynamic/secondary
+=== RUN   TestMySQL57SecondaryFixtures/tree_dynamic/secondary/all
+=== RUN   TestMySQL57SecondaryFixtures/tree_dynamic/secondary/covered
+=== RUN   TestMySQL57SecondaryFixtures/tree_dynamic/secondary/range
+=== RUN   TestMySQL57SecondaryFixtures/tree_dynamic/secondary/prefix
+=== RUN   TestMySQL57SecondaryFixtures/tree_dynamic/secondary/point
+=== RUN   TestMySQL57SecondaryFixtures/tree_dynamic/secondary/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/empty_dynamic
+=== RUN   TestMySQL57SecondaryFixtures/empty_dynamic/secondary
+=== RUN   TestMySQL57SecondaryFixtures/empty_dynamic/secondary/all
+=== RUN   TestMySQL57SecondaryFixtures/empty_dynamic/secondary/covered
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_dynamic
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_dynamic/secondary
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_dynamic/secondary/all
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_dynamic/secondary/covered
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_dynamic/secondary/range
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_dynamic/secondary/prefix
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_dynamic/secondary/point
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_dynamic/secondary/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_dynamic/secondary/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_dynamic
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_dynamic/secondary
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_dynamic/secondary/all
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_dynamic/secondary/covered
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_dynamic/secondary/range
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_dynamic/secondary/prefix
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_dynamic/secondary/point
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_dynamic/secondary/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_dynamic/secondary/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_dynamic
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_dynamic/secondary
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_dynamic/secondary/all
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_dynamic/secondary/covered
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_dynamic/secondary/range
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_dynamic/secondary/prefix
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_dynamic/secondary/point
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_dynamic/secondary/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_dynamic/secondary/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic/secondary
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic/secondary/all
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic/secondary/covered
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic/secondary/range
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic/secondary/prefix
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic/secondary/point
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic/secondary/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic/secondary/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/u
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/u/all
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/u/covered
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/u/range
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/u/prefix
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/u/point
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/u/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/s
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/s/all
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/s/covered
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/s/range
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/s/prefix
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/s/point
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/s/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/px
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/px/all
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/px/covered
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/px/range
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/px/prefix
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/px/point
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/px/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/px/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/bp
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/bp/all
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/bp/covered
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/bp/range
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/bp/prefix
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/bp/point
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/bp/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/bp/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/cover
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/cover/all
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/cover/covered
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/cover/range
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/cover/prefix
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/cover/point
+=== RUN   TestMySQL57SecondaryFixtures/ordinary_compact/cover/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/px
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/px/all
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/px/covered
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/px/range
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/px/prefix
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/px/point
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/px/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/px/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/dedup
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/dedup/all
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/dedup/covered
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/dedup/range
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/dedup/prefix
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/dedup/point
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/dedup/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/s
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/s/all
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/s/covered
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/s/range
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/s/prefix
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/s/point
+=== RUN   TestMySQL57SecondaryFixtures/composite_compact/s/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/hidden_compact
+=== RUN   TestMySQL57SecondaryFixtures/hidden_compact/s
+=== RUN   TestMySQL57SecondaryFixtures/hidden_compact/s/all
+=== RUN   TestMySQL57SecondaryFixtures/hidden_compact/s/covered
+=== RUN   TestMySQL57SecondaryFixtures/hidden_compact/s/range
+=== RUN   TestMySQL57SecondaryFixtures/hidden_compact/s/prefix
+=== RUN   TestMySQL57SecondaryFixtures/hidden_compact/s/point
+=== RUN   TestMySQL57SecondaryFixtures/hidden_compact/px
+=== RUN   TestMySQL57SecondaryFixtures/hidden_compact/px/all
+=== RUN   TestMySQL57SecondaryFixtures/hidden_compact/px/range
+=== RUN   TestMySQL57SecondaryFixtures/hidden_compact/px/prefix
+=== RUN   TestMySQL57SecondaryFixtures/hidden_compact/px/point
+=== RUN   TestMySQL57SecondaryFixtures/hidden_compact/px/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_compact
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_compact/s
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_compact/s/all
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_compact/s/covered
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_compact/s/range
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_compact/s/prefix
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_compact/s/point
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_compact/s/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_compact/px
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_compact/px/all
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_compact/px/covered
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_compact/px/range
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_compact/px/prefix
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_compact/px/point
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_compact/px/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/unique_cluster_compact/px/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/generated_compact
+=== RUN   TestMySQL57SecondaryFixtures/generated_compact/secondary
+=== RUN   TestMySQL57SecondaryFixtures/generated_compact/secondary/all
+=== RUN   TestMySQL57SecondaryFixtures/generated_compact/secondary/covered
+=== RUN   TestMySQL57SecondaryFixtures/generated_compact/secondary/range
+=== RUN   TestMySQL57SecondaryFixtures/generated_compact/secondary/prefix
+=== RUN   TestMySQL57SecondaryFixtures/generated_compact/secondary/point
+=== RUN   TestMySQL57SecondaryFixtures/generated_compact/secondary/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/tree_compact
+=== RUN   TestMySQL57SecondaryFixtures/tree_compact/secondary
+=== RUN   TestMySQL57SecondaryFixtures/tree_compact/secondary/all
+=== RUN   TestMySQL57SecondaryFixtures/tree_compact/secondary/covered
+=== RUN   TestMySQL57SecondaryFixtures/tree_compact/secondary/range
+=== RUN   TestMySQL57SecondaryFixtures/tree_compact/secondary/prefix
+=== RUN   TestMySQL57SecondaryFixtures/tree_compact/secondary/point
+=== RUN   TestMySQL57SecondaryFixtures/tree_compact/secondary/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/empty_compact
+=== RUN   TestMySQL57SecondaryFixtures/empty_compact/secondary
+=== RUN   TestMySQL57SecondaryFixtures/empty_compact/secondary/all
+=== RUN   TestMySQL57SecondaryFixtures/empty_compact/secondary/covered
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_compact
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_compact/secondary
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_compact/secondary/all
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_compact/secondary/covered
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_compact/secondary/range
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_compact/secondary/prefix
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_compact/secondary/point
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_compact/secondary/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/charset_ascii_compact/secondary/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_compact
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_compact/secondary
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_compact/secondary/all
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_compact/secondary/covered
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_compact/secondary/range
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_compact/secondary/prefix
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_compact/secondary/point
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_compact/secondary/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/charset_latin1_compact/secondary/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_compact
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_compact/secondary
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_compact/secondary/all
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_compact/secondary/covered
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_compact/secondary/range
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_compact/secondary/prefix
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_compact/secondary/point
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_compact/secondary/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8_compact/secondary/reverse_limit
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_compact
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_compact/secondary
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_compact/secondary/all
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_compact/secondary/covered
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_compact/secondary/range
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_compact/secondary/prefix
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_compact/secondary/point
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_compact/secondary/prefix_next
+=== RUN   TestMySQL57SecondaryFixtures/charset_utf8mb4_compact/secondary/reverse_limit
+=== NAME  TestMySQL57SecondaryFixtures
+    mysql57_secondary_test.go:207: SQL: 1682 rows, 38 indexes, 232 queries; covered=1764 lookups=3948 filtered=26
+--- PASS: TestMySQL57SecondaryFixtures (0.58s)
+    --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic (0.03s)
+        --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/u (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/u/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/u/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/u/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/u/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/u/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/u/reverse_limit (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/s (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/s/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/s/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/s/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/s/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/s/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/s/reverse_limit (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/px (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/px/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/px/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/px/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/px/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/px/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/px/prefix_next (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/px/reverse_limit (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/bp (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/bp/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/bp/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/bp/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/bp/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/bp/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/bp/prefix_next (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/bp/reverse_limit (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/cover (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/cover/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/cover/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/cover/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/cover/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/cover/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_dynamic/cover/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/px (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/px/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/px/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/px/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/px/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/px/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/px/prefix_next (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/px/reverse_limit (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/dedup (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/dedup/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/dedup/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/dedup/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/dedup/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/dedup/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/dedup/reverse_limit (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/s (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/s/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/s/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/s/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/s/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/s/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_dynamic/s/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/hidden_dynamic (0.01s)
+        --- PASS: TestMySQL57SecondaryFixtures/hidden_dynamic/s (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_dynamic/s/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_dynamic/s/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_dynamic/s/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_dynamic/s/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_dynamic/s/point (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/hidden_dynamic/px (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_dynamic/px/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_dynamic/px/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_dynamic/px/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_dynamic/px/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_dynamic/px/prefix_next (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_dynamic (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_dynamic/s (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_dynamic/s/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_dynamic/s/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_dynamic/s/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_dynamic/s/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_dynamic/s/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_dynamic/s/reverse_limit (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_dynamic/px (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_dynamic/px/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_dynamic/px/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_dynamic/px/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_dynamic/px/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_dynamic/px/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_dynamic/px/prefix_next (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_dynamic/px/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/generated_dynamic (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/generated_dynamic/secondary (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/generated_dynamic/secondary/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/generated_dynamic/secondary/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/generated_dynamic/secondary/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/generated_dynamic/secondary/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/generated_dynamic/secondary/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/generated_dynamic/secondary/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/tree_dynamic (0.26s)
+        --- PASS: TestMySQL57SecondaryFixtures/tree_dynamic/secondary (0.19s)
+            --- PASS: TestMySQL57SecondaryFixtures/tree_dynamic/secondary/all (0.06s)
+            --- PASS: TestMySQL57SecondaryFixtures/tree_dynamic/secondary/covered (0.02s)
+            --- PASS: TestMySQL57SecondaryFixtures/tree_dynamic/secondary/range (0.05s)
+            --- PASS: TestMySQL57SecondaryFixtures/tree_dynamic/secondary/prefix (0.01s)
+            --- PASS: TestMySQL57SecondaryFixtures/tree_dynamic/secondary/point (0.01s)
+            --- PASS: TestMySQL57SecondaryFixtures/tree_dynamic/secondary/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/empty_dynamic (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/empty_dynamic/secondary (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/empty_dynamic/secondary/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/empty_dynamic/secondary/covered (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_dynamic (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_dynamic/secondary (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_dynamic/secondary/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_dynamic/secondary/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_dynamic/secondary/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_dynamic/secondary/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_dynamic/secondary/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_dynamic/secondary/prefix_next (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_dynamic/secondary/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_dynamic (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_dynamic/secondary (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_dynamic/secondary/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_dynamic/secondary/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_dynamic/secondary/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_dynamic/secondary/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_dynamic/secondary/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_dynamic/secondary/prefix_next (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_dynamic/secondary/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_dynamic (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_dynamic/secondary (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_dynamic/secondary/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_dynamic/secondary/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_dynamic/secondary/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_dynamic/secondary/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_dynamic/secondary/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_dynamic/secondary/prefix_next (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_dynamic/secondary/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic/secondary (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic/secondary/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic/secondary/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic/secondary/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic/secondary/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic/secondary/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic/secondary/prefix_next (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_dynamic/secondary/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact (0.01s)
+        --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/u (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/u/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/u/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/u/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/u/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/u/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/u/reverse_limit (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/s (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/s/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/s/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/s/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/s/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/s/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/s/reverse_limit (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/px (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/px/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/px/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/px/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/px/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/px/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/px/prefix_next (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/px/reverse_limit (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/bp (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/bp/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/bp/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/bp/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/bp/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/bp/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/bp/prefix_next (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/bp/reverse_limit (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/cover (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/cover/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/cover/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/cover/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/cover/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/cover/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/ordinary_compact/cover/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/composite_compact (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/composite_compact/px (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/px/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/px/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/px/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/px/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/px/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/px/prefix_next (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/px/reverse_limit (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/composite_compact/dedup (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/dedup/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/dedup/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/dedup/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/dedup/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/dedup/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/dedup/reverse_limit (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/composite_compact/s (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/s/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/s/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/s/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/s/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/s/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/composite_compact/s/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/hidden_compact (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/hidden_compact/s (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_compact/s/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_compact/s/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_compact/s/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_compact/s/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_compact/s/point (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/hidden_compact/px (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_compact/px/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_compact/px/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_compact/px/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_compact/px/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/hidden_compact/px/prefix_next (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_compact (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_compact/s (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_compact/s/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_compact/s/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_compact/s/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_compact/s/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_compact/s/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_compact/s/reverse_limit (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_compact/px (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_compact/px/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_compact/px/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_compact/px/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_compact/px/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_compact/px/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_compact/px/prefix_next (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/unique_cluster_compact/px/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/generated_compact (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/generated_compact/secondary (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/generated_compact/secondary/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/generated_compact/secondary/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/generated_compact/secondary/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/generated_compact/secondary/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/generated_compact/secondary/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/generated_compact/secondary/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/tree_compact (0.25s)
+        --- PASS: TestMySQL57SecondaryFixtures/tree_compact/secondary (0.19s)
+            --- PASS: TestMySQL57SecondaryFixtures/tree_compact/secondary/all (0.06s)
+            --- PASS: TestMySQL57SecondaryFixtures/tree_compact/secondary/covered (0.02s)
+            --- PASS: TestMySQL57SecondaryFixtures/tree_compact/secondary/range (0.05s)
+            --- PASS: TestMySQL57SecondaryFixtures/tree_compact/secondary/prefix (0.01s)
+            --- PASS: TestMySQL57SecondaryFixtures/tree_compact/secondary/point (0.01s)
+            --- PASS: TestMySQL57SecondaryFixtures/tree_compact/secondary/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/empty_compact (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/empty_compact/secondary (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/empty_compact/secondary/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/empty_compact/secondary/covered (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_compact (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_compact/secondary (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_compact/secondary/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_compact/secondary/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_compact/secondary/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_compact/secondary/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_compact/secondary/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_compact/secondary/prefix_next (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_ascii_compact/secondary/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_compact (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_compact/secondary (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_compact/secondary/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_compact/secondary/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_compact/secondary/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_compact/secondary/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_compact/secondary/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_compact/secondary/prefix_next (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_latin1_compact/secondary/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_compact (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_compact/secondary (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_compact/secondary/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_compact/secondary/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_compact/secondary/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_compact/secondary/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_compact/secondary/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_compact/secondary/prefix_next (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8_compact/secondary/reverse_limit (0.00s)
+    --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_compact (0.00s)
+        --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_compact/secondary (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_compact/secondary/all (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_compact/secondary/covered (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_compact/secondary/range (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_compact/secondary/prefix (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_compact/secondary/point (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_compact/secondary/prefix_next (0.00s)
+            --- PASS: TestMySQL57SecondaryFixtures/charset_utf8mb4_compact/secondary/reverse_limit (0.00s)
+=== RUN   TestMySQL57SecondarySchemaFailures
+=== RUN   TestMySQL57SecondarySchemaFailures/source
+=== RUN   TestMySQL57SecondarySchemaFailures/definition
+=== RUN   TestMySQL57SecondarySchemaFailures/prefix
+=== RUN   TestMySQL57SecondarySchemaFailures/space
+=== RUN   TestMySQL57SecondarySchemaFailures/name
+=== RUN   TestMySQL57SecondarySchemaFailures/id
+=== RUN   TestMySQL57SecondarySchemaFailures/root
+=== RUN   TestMySQL57SecondarySchemaFailures/cluster_name
+=== RUN   TestMySQL57SecondarySchemaFailures/locator
+=== RUN   TestMySQL57SecondarySchemaFailures/format
+=== RUN   TestMySQL57SecondarySchemaFailures/wrong_root
+=== RUN   TestMySQL57SecondarySchemaFailures/wrong_id
+--- PASS: TestMySQL57SecondarySchemaFailures (0.00s)
+    --- PASS: TestMySQL57SecondarySchemaFailures/source (0.00s)
+    --- PASS: TestMySQL57SecondarySchemaFailures/definition (0.00s)
+    --- PASS: TestMySQL57SecondarySchemaFailures/prefix (0.00s)
+    --- PASS: TestMySQL57SecondarySchemaFailures/space (0.00s)
+    --- PASS: TestMySQL57SecondarySchemaFailures/name (0.00s)
+    --- PASS: TestMySQL57SecondarySchemaFailures/id (0.00s)
+    --- PASS: TestMySQL57SecondarySchemaFailures/root (0.00s)
+    --- PASS: TestMySQL57SecondarySchemaFailures/cluster_name (0.00s)
+    --- PASS: TestMySQL57SecondarySchemaFailures/locator (0.00s)
+    --- PASS: TestMySQL57SecondarySchemaFailures/format (0.00s)
+    --- PASS: TestMySQL57SecondarySchemaFailures/wrong_root (0.00s)
+    --- PASS: TestMySQL57SecondarySchemaFailures/wrong_id (0.00s)
+=== RUN   TestMySQL57SecondaryResourcesAndDamage
+--- PASS: TestMySQL57SecondaryResourcesAndDamage (0.02s)
+PASS
+ok  	innodb-go-reader	1.632s

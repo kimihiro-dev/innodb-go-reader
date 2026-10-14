@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-14",
+  "status": "all dedicated servers stopped; data retained",
+  "containers": [
+    {
+      "name": "innodb-patch-5-7-10-09720d",
+      "running": false,
+      "finished_at": "2026-10-14T05:47:27.153790174Z"
+    },
+    {
+      "name": "innodb-patch-5-7-11-f69965",
+      "running": false,
+      "finished_at": "2026-10-14T05:47:27.105999924Z"
+    },
+    {
+      "name": "innodb-patch-5-7-12-6c91ea",
+      "running": false,
+      "finished_at": "2026-10-14T05:47:27.110926799Z"
+    },
+    {
+      "name": "innodb-patch-5-7-28-b92c26",
+      "running": false,
+      "finished_at": "2026-10-14T05:47:26.930044382Z"
+    },
+    {
+      "name": "innodb-patch-5-7-43-f12c9e",
+      "running": false,
+      "finished_at": "2026-10-14T05:47:27.208046424Z"
+    },
+    {
+      "name": "innodb-partition-5-7-44-46f890",
+      "running": false,
+      "finished_at": "2026-10-14T05:47:27.189685257Z"
+    },
+    {
+      "name": "innodb-patch-5-7-9-3fe44c",
+      "running": false,
+      "finished_at": "2026-10-14T05:47:27.201448841Z"
+    },
+    {
+      "name": "innodb-80-8-0-11-e211c4",
+      "running": false,
+      "finished_at": "2026-10-14T05:47:27.162186424Z"
+    },
+    {
+      "name": "innodb-80-8-0-12-00de18",
+      "running": false,
+      "finished_at": "2026-10-14T05:47:27.190131216Z"
+    },
+    {
+      "name": "innodb-80-8-0-16-8e84ac",
+      "running": false,
+      "finished_at": "2026-10-14T05:47:27.164573216Z"
+    },
+    {
+      "name": "innodb-80-8-0-19-c7bf1c",
+      "running": false,
+      "finished_at": "2026-10-14T05:47:26.825400424Z"
+    },
+    {
+      "name": "innodb-80-8-0-23-aa20a6",
+      "running": false,
+      "finished_at": "2026-10-14T05:47:26.830458632Z"
+    },
+    {
+      "name": "innodb-80-8-0-28-6dd9bf",
+      "running": false,
+      "finished_at": "2026-10-14T05:47:26.832888215Z"
+    },
+    {
+      "name": "innodb-80-8-0-30-693e52",
+      "running": false,
+      "finished_at": "2026-10-14T05:47:26.53249884Z"
+    },
+    {
+      "name": "innodb-partition-8-0-45-74b7fd",
+      "running": false,
+      "finished_at": "2026-10-14T05:47:26.814836632Z"
+    }
+  ]
+}

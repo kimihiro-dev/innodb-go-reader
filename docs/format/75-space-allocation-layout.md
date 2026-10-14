@@ -2,6 +2,8 @@
 
 本章接续[二级查询](73-secondary-query-navigation.md)，解释稳定 `.ibd` 中“哪些页仍在使用”。解析入口是[AnalyzeSpace](../../space.go)，它独立于表列类型，不把空闲页中的旧索引内容当成当前索引。
 
+系统空间的固定入口、共享文件与版本迁移另见[5.7第89章](89-mysql57-system-tablespace.md)和[8.0第90章](90-mysql80-system-tablespace.md)；本章独立文件的解析能力不能直接套用于space0。
+
 ## 四种页状态与三个大小
 
 文件大小除以16384是 `FilePages`；页0的FSP_SIZE是 `SizePages`；FSP_FREE_LIMIT是 `FreeLimit`。三者含义不同。小表可能仅8页，却已初始化第一个64页区的描述信息，所以FREE_LIMIT=64合法。

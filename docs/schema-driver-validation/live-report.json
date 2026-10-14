@@ -1,0 +1,80 @@
+{
+  "status": "complete",
+  "container": "innodb-driver-57-44b1f65b",
+  "host": "127.0.0.1",
+  "port": 53850,
+  "cases": [
+    {
+      "table": "t",
+      "transport": "tcp",
+      "models_and_source_match": true,
+      "export_rows": 2,
+      "secondary_indexes": 2
+    },
+    {
+      "table": "t",
+      "transport": "unix",
+      "models_and_source_match": true,
+      "export_rows": 2,
+      "secondary_indexes": 2
+    },
+    {
+      "table": "t",
+      "transport": "tls",
+      "models_and_source_match": true,
+      "export_rows": 2,
+      "secondary_indexes": 2
+    },
+    {
+      "table": "hidden",
+      "transport": "tcp",
+      "models_and_source_match": true,
+      "export_rows": 2,
+      "secondary_indexes": 1
+    },
+    {
+      "table": "hidden",
+      "transport": "unix",
+      "models_and_source_match": true,
+      "export_rows": 2,
+      "secondary_indexes": 1
+    },
+    {
+      "table": "hidden",
+      "transport": "tls",
+      "models_and_source_match": true,
+      "export_rows": 2,
+      "secondary_indexes": 1
+    },
+    {
+      "table": "generated",
+      "transport": "tcp",
+      "models_and_source_match": true,
+      "export_rows": 2,
+      "secondary_indexes": 1
+    },
+    {
+      "table": "generated",
+      "transport": "unix",
+      "models_and_source_match": true,
+      "export_rows": 2,
+      "secondary_indexes": 1
+    },
+    {
+      "table": "generated",
+      "transport": "tls",
+      "models_and_source_match": true,
+      "export_rows": 2,
+      "secondary_indexes": 1
+    }
+  ],
+  "negative_checks": [
+    "wrong-password",
+    "no-process",
+    "untrusted-tls",
+    "missing-table",
+    "timeout",
+    "cancel"
+  ],
+  "credentials_absent_from_outputs": true
+}

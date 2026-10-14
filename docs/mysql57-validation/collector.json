@@ -1,0 +1,156 @@
+[
+  {
+    "case": "scalar_dynamic_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 37
+    }
+  },
+  {
+    "case": "lob_dynamic_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 9
+    }
+  },
+  {
+    "case": "lob_dynamic_grown",
+    "matched": true,
+    "dictionary": {
+      "columns": 9
+    }
+  },
+  {
+    "case": "lob_dynamic_shrunk_deleted",
+    "matched": true,
+    "dictionary": {
+      "columns": 9
+    }
+  },
+  {
+    "case": "families_dynamic_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 12
+    }
+  },
+  {
+    "case": "tree_dynamic_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 6
+    }
+  },
+  {
+    "case": "hidden_dynamic_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 5
+    }
+  },
+  {
+    "case": "unique_dynamic_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 6
+    }
+  },
+  {
+    "case": "generated_dynamic_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 6
+    }
+  },
+  {
+    "case": "charset_dynamic_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 7
+    }
+  },
+  {
+    "case": "empty_dynamic_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 5
+    }
+  },
+  {
+    "case": "scalar_compact_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 37
+    }
+  },
+  {
+    "case": "lob_compact_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 9
+    }
+  },
+  {
+    "case": "lob_compact_grown",
+    "matched": true,
+    "dictionary": {
+      "columns": 9
+    }
+  },
+  {
+    "case": "lob_compact_shrunk_deleted",
+    "matched": true,
+    "dictionary": {
+      "columns": 9
+    }
+  },
+  {
+    "case": "families_compact_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 12
+    }
+  },
+  {
+    "case": "tree_compact_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 6
+    }
+  },
+  {
+    "case": "hidden_compact_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 5
+    }
+  },
+  {
+    "case": "unique_compact_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 6
+    }
+  },
+  {
+    "case": "generated_compact_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 6
+    }
+  },
+  {
+    "case": "charset_compact_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 7
+    }
+  },
+  {
+    "case": "empty_compact_initial",
+    "matched": true,
+    "dictionary": {
+      "columns": 5
+    }
+  }
+]

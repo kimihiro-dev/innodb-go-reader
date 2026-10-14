@@ -130,6 +130,13 @@ func walkExternal(r io.ReaderAt, size int64, f *ExternalField, emit func([]byte,
 		return err
 	}
 	version := be.Uint32(first[40:])
+	// 8.0.11 insertion leaves active index entries at version zero. The
+	// file's page-zero server marker limits this exception to that writer.
+	fsp, err := readPage(r, size, 0)
+	if err != nil {
+		return err
+	}
+	allowZeroEntry := be.Uint32(fsp[8:]) == 80011
 	if first[39]&^byte(1) != 0 {
 		return fmt.Errorf("%w: unknown LOB flags", ErrUnsupported)
 	}
@@ -207,7 +214,7 @@ func walkExternal(r io.ReaderAt, size int64, f *ExternalField, emit func([]byte,
 			return fmt.Errorf("%w: LOB index previous link", ErrCorrupt)
 		}
 		v := be.Uint32(e[56:])
-		if v == 0 || v > version {
+		if (v == 0 && !allowZeroEntry) || v > version {
 			return fmt.Errorf("%w: LOB active block version", ErrCorrupt)
 		}
 		historyCount := be.Uint32(e[12:])
@@ -221,7 +228,7 @@ func walkExternal(r io.ReaderAt, size int64, f *ExternalField, emit func([]byte,
 				return err
 			}
 			oldVersion := be.Uint32(old[56:])
-			if lobAddr(old) != historyPrev || oldVersion == 0 || oldVersion > v ||
+			if lobAddr(old) != historyPrev || (oldVersion == 0 && !allowZeroEntry) || oldVersion > v ||
 				be.Uint32(old[12:]) != 0 || lobAddr(old[16:]) != lobNull || lobAddr(old[22:]) != lobNull {
 				return fmt.Errorf("%w: LOB historical entry", ErrCorrupt)
 			}

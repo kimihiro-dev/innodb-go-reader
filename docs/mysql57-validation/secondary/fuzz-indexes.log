@@ -1,0 +1,8 @@
+fuzz: elapsed: 0s, gathering baseline coverage: 0/5 completed
+fuzz: elapsed: 0s, gathering baseline coverage: 5/5 completed, now fuzzing with 2 workers
+fuzz: elapsed: 3s, execs: 11880 (3959/sec), new interesting: 42 (total: 47)
+fuzz: elapsed: 6s, execs: 11880 (0/sec), new interesting: 42 (total: 47)
+fuzz: elapsed: 9s, execs: 11880 (0/sec), new interesting: 42 (total: 47)
+fuzz: elapsed: 11s, execs: 11880 (0/sec), new interesting: 42 (total: 47)
+PASS
+ok  	innodb-go-reader/internal/cli	12.528s

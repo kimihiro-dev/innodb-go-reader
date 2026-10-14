@@ -1,0 +1,19 @@
+ok  	innodb-go-reader	392.159s
+?   	innodb-go-reader/cmd/innodb-reader	[no test files]
+?   	innodb-go-reader/examples/auto	[no test files]
+?   	innodb-go-reader/examples/changes	[no test files]
+?   	innodb-go-reader/examples/json	[no test files]
+?   	innodb-go-reader/examples/materialized	[no test files]
+?   	innodb-go-reader/examples/query	[no test files]
+?   	innodb-go-reader/examples/read	[no test files]
+?   	innodb-go-reader/examples/scan	[no test files]
+?   	innodb-go-reader/examples/sdi	[no test files]
+?   	innodb-go-reader/examples/secondary	[no test files]
+?   	innodb-go-reader/examples/secondaryquery	[no test files]
+?   	innodb-go-reader/examples/space	[no test files]
+?   	innodb-go-reader/examples/streamlob	[no test files]
+ok  	innodb-go-reader/internal/cli	13.306s
+ok  	innodb-go-reader/internal/mysql57	2.659s
+ok  	innodb-go-reader/rowio	172.475s
+ok  	innodb-go-reader/stats	8.105s
+ok  	innodb-go-reader/visual	13.128s

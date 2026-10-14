@@ -1,0 +1,1 @@
+{"source":"explicit_schema","schema":{"row_format":"DYNAMIC","clustered_key":{"name":"actual_unique","columns":["k"]},"columns":[{"name":"seq","type":"INT","nullable":true,"max_chars":0},{"name":"k","type":"INT","nullable":false,"max_chars":0},{"charset":"utf8mb4","name":"payload","type":"VARCHAR","nullable":true,"max_chars":20}],"root_page":3,"space_id":30,"index_id":52}}

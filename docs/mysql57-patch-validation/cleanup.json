@@ -1,0 +1,26 @@
+{
+  "5.7.9": {
+    "container": "innodb-patch-5-7-9-3fe44c",
+    "state": "stopped; data retained for independent verification"
+  },
+  "5.7.10": {
+    "container": "innodb-patch-5-7-10-09720d",
+    "state": "stopped; data retained for independent verification"
+  },
+  "5.7.11": {
+    "container": "innodb-patch-5-7-11-f69965",
+    "state": "stopped; data retained for independent verification"
+  },
+  "5.7.12": {
+    "container": "innodb-patch-5-7-12-6c91ea",
+    "state": "stopped; data retained for independent verification"
+  },
+  "5.7.28": {
+    "container": "innodb-patch-5-7-28-b92c26",
+    "state": "stopped; data retained for independent verification"
+  },
+  "5.7.43": {
+    "container": "innodb-patch-5-7-43-f12c9e",
+    "state": "stopped; data retained for independent verification"
+  }
+}

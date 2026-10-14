@@ -1,0 +1,27 @@
+{
+  "checked": 3215,
+  "unchanged_assets": 2953,
+  "changed_existing_files": [
+    "README.md",
+    "docs/CLI.md",
+    "docs/DECISIONS.md",
+    "docs/HISTORY.md",
+    "docs/README.md",
+    "docs/REQUIREMENTS.md",
+    "docs/STAGE_PLANS.md",
+    "docs/TODO.md",
+    "docs/format/83-release-support-matrix.md",
+    "docs/format/87-mysql57-explicit-schema.md",
+    "docs/format/README.md",
+    "internal/cli/run.go",
+    "internal/cli/schema.go",
+    "mysql57_test.go",
+    "query_test.go",
+    "rowio/rowio_test.go",
+    "scan_test.go",
+    "schema_check.go",
+    "scripts/mysql57_schema.py",
+    "space_test.go",
+    "visual/report.go"
+  ]
+}

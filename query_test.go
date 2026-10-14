@@ -48,15 +48,26 @@ func TestQueryFixtureMatrix(t *testing.T) {
 			b := scanFixture(t, path)
 			r := bytes.NewReader(b)
 			size := int64(len(b))
-			want, err := ReadMaterializedAuto(r, size)
-			if err != nil {
-				return
+			var want *MaterializedResult
+			var s Schema
+			var err error
+			if schema := mysql57Schema(t, path); schema != nil {
+				s = *schema
+				want, err = ReadMaterialized(r, size, s)
+				if err != nil {
+					t.Fatal(err)
+				}
+			} else {
+				want, err = ReadMaterializedAuto(r, size)
+				if err != nil {
+					return
+				}
+				metadata, err := InspectTable(r, size)
+				if err != nil {
+					t.Fatal(err)
+				}
+				s = *metadata.MaterializedSchema
 			}
-			metadata, err := InspectTable(r, size)
-			if err != nil {
-				t.Fatal(err)
-			}
-			s := *metadata.MaterializedSchema
 			pk, _ := s.validate()
 			// Full local traversal and row/metadata reconstruction remains compatible.
 			got := &Result{Records: make([]Record, 0)}
@@ -118,7 +129,7 @@ func TestQueryFixtureMatrix(t *testing.T) {
 			rows += n
 		})
 	}
-	if assets != 484 || rows != 98811 {
+	if assets != 528 || rows != 101019 {
 		t.Fatal("asset counts", assets, rows)
 	}
 	t.Logf("%d assets, %d rows, %d point lookups, %d bounded/limited queries", assets, rows, points, ranges)

@@ -1,0 +1,10 @@
+{
+  "version": "5.7.43",
+  "actual_version": "5.7.43",
+  "container": "innodb-patch-5-7-43-f12c9e",
+  "image": "mysql:5.7.43",
+  "image_id": "sha256:4f9bfb0f7dd97739ceedb546b381534bb11e9b4abf013d6ad9ae6473fed66099",
+  "host": "127.0.0.1",
+  "port": 59422,
+  "ca": "/tmp/innodb-57-patch-run/certs/ca.pem"
+}

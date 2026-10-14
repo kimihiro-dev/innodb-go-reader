@@ -1,0 +1,1963 @@
+{
+  "status": "complete",
+  "versions": {
+    "5.7.9": {
+      "cases": [
+        {
+          "kind": "base",
+          "name": "scalar_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_grown",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_shrunk_deleted",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "families_dynamic_initial",
+          "rows": 1,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "tree_dynamic_initial",
+          "rows": 240,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "hidden_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "unique_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "generated_dynamic_initial",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "charset_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "empty_dynamic_initial",
+          "rows": 0,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "scalar_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_grown",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_shrunk_deleted",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "families_compact_initial",
+          "rows": 1,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "tree_compact_initial",
+          "rows": 240,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "hidden_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "unique_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "generated_compact_initial",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "charset_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "empty_compact_initial",
+          "rows": 0,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "ordinary_dynamic",
+          "rows": 7,
+          "indexes": 5,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "composite_dynamic",
+          "rows": 4,
+          "indexes": 3,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "hidden_dynamic",
+          "rows": 4,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "unique_cluster_dynamic",
+          "rows": 3,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "generated_dynamic",
+          "rows": 3,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "tree_dynamic",
+          "rows": 800,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "empty_dynamic",
+          "rows": 0,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_ascii_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_latin1_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8mb4_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "ordinary_compact",
+          "rows": 7,
+          "indexes": 5,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "composite_compact",
+          "rows": 4,
+          "indexes": 3,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "hidden_compact",
+          "rows": 4,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "unique_cluster_compact",
+          "rows": 3,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "generated_compact",
+          "rows": 3,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "tree_compact",
+          "rows": 800,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "empty_compact",
+          "rows": 0,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_ascii_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_latin1_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8mb4_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        }
+      ],
+      "tls": {
+        "expected_success": false,
+        "exit_code": 1,
+        "diagnostic": {
+          "command": "schema",
+          "scope": "MySQL 5.7 trusted definitions; metadata only",
+          "complete": false,
+          "error": "tls: server selected unsupported protocol version 301"
+        }
+      },
+      "native_unix_socket": "passed",
+      "runtime_PATH": "empty",
+      "status": "complete"
+    },
+    "5.7.10": {
+      "cases": [
+        {
+          "kind": "base",
+          "name": "scalar_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_grown",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_shrunk_deleted",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "families_dynamic_initial",
+          "rows": 1,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "tree_dynamic_initial",
+          "rows": 240,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "hidden_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "unique_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "generated_dynamic_initial",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "charset_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "empty_dynamic_initial",
+          "rows": 0,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "scalar_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_grown",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_shrunk_deleted",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "families_compact_initial",
+          "rows": 1,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "tree_compact_initial",
+          "rows": 240,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "hidden_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "unique_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "generated_compact_initial",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "charset_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "empty_compact_initial",
+          "rows": 0,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "ordinary_dynamic",
+          "rows": 7,
+          "indexes": 5,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "composite_dynamic",
+          "rows": 4,
+          "indexes": 3,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "hidden_dynamic",
+          "rows": 4,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "unique_cluster_dynamic",
+          "rows": 3,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "generated_dynamic",
+          "rows": 3,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "tree_dynamic",
+          "rows": 800,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "empty_dynamic",
+          "rows": 0,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_ascii_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_latin1_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8mb4_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "ordinary_compact",
+          "rows": 7,
+          "indexes": 5,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "composite_compact",
+          "rows": 4,
+          "indexes": 3,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "hidden_compact",
+          "rows": 4,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "unique_cluster_compact",
+          "rows": 3,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "generated_compact",
+          "rows": 3,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "tree_compact",
+          "rows": 800,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "empty_compact",
+          "rows": 0,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_ascii_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_latin1_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8mb4_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        }
+      ],
+      "tls": {
+        "expected_success": false,
+        "exit_code": 1,
+        "diagnostic": {
+          "command": "schema",
+          "scope": "MySQL 5.7 trusted definitions; metadata only",
+          "complete": false,
+          "error": "tls: server selected unsupported protocol version 302"
+        }
+      },
+      "native_unix_socket": "passed",
+      "runtime_PATH": "empty",
+      "status": "complete"
+    },
+    "5.7.11": {
+      "cases": [
+        {
+          "kind": "base",
+          "name": "scalar_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_grown",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_shrunk_deleted",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "families_dynamic_initial",
+          "rows": 1,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "tree_dynamic_initial",
+          "rows": 240,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "hidden_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "unique_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "generated_dynamic_initial",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "charset_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "empty_dynamic_initial",
+          "rows": 0,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "scalar_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_grown",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_shrunk_deleted",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "families_compact_initial",
+          "rows": 1,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "tree_compact_initial",
+          "rows": 240,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "hidden_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "unique_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "generated_compact_initial",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "charset_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "empty_compact_initial",
+          "rows": 0,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "ordinary_dynamic",
+          "rows": 7,
+          "indexes": 5,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "composite_dynamic",
+          "rows": 4,
+          "indexes": 3,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "hidden_dynamic",
+          "rows": 4,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "unique_cluster_dynamic",
+          "rows": 3,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "generated_dynamic",
+          "rows": 3,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "tree_dynamic",
+          "rows": 800,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "empty_dynamic",
+          "rows": 0,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_ascii_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_latin1_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8mb4_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "ordinary_compact",
+          "rows": 7,
+          "indexes": 5,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "composite_compact",
+          "rows": 4,
+          "indexes": 3,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "hidden_compact",
+          "rows": 4,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "unique_cluster_compact",
+          "rows": 3,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "generated_compact",
+          "rows": 3,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "tree_compact",
+          "rows": 800,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "empty_compact",
+          "rows": 0,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_ascii_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_latin1_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8mb4_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        }
+      ],
+      "tls": {
+        "expected_success": false,
+        "exit_code": 1,
+        "diagnostic": {
+          "command": "schema",
+          "scope": "MySQL 5.7 trusted definitions; metadata only",
+          "complete": false,
+          "error": "tls: server selected unsupported protocol version 302"
+        }
+      },
+      "native_unix_socket": "passed",
+      "runtime_PATH": "empty",
+      "status": "complete"
+    },
+    "5.7.12": {
+      "cases": [
+        {
+          "kind": "base",
+          "name": "scalar_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_grown",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_shrunk_deleted",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "families_dynamic_initial",
+          "rows": 1,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "tree_dynamic_initial",
+          "rows": 240,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "hidden_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "unique_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "generated_dynamic_initial",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "charset_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "empty_dynamic_initial",
+          "rows": 0,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "scalar_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_grown",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_shrunk_deleted",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "families_compact_initial",
+          "rows": 1,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "tree_compact_initial",
+          "rows": 240,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "hidden_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "unique_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "generated_compact_initial",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "charset_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "empty_compact_initial",
+          "rows": 0,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "ordinary_dynamic",
+          "rows": 7,
+          "indexes": 5,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "composite_dynamic",
+          "rows": 4,
+          "indexes": 3,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "hidden_dynamic",
+          "rows": 4,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "unique_cluster_dynamic",
+          "rows": 3,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "generated_dynamic",
+          "rows": 3,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "tree_dynamic",
+          "rows": 800,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "empty_dynamic",
+          "rows": 0,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_ascii_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_latin1_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8mb4_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "ordinary_compact",
+          "rows": 7,
+          "indexes": 5,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "composite_compact",
+          "rows": 4,
+          "indexes": 3,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "hidden_compact",
+          "rows": 4,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "unique_cluster_compact",
+          "rows": 3,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "generated_compact",
+          "rows": 3,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "tree_compact",
+          "rows": 800,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "empty_compact",
+          "rows": 0,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_ascii_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_latin1_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8mb4_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        }
+      ],
+      "tls": {
+        "expected_success": false,
+        "exit_code": 1,
+        "diagnostic": {
+          "command": "schema",
+          "scope": "MySQL 5.7 trusted definitions; metadata only",
+          "complete": false,
+          "error": "tls: server selected unsupported protocol version 302"
+        }
+      },
+      "native_unix_socket": "passed",
+      "runtime_PATH": "empty",
+      "status": "complete"
+    },
+    "5.7.28": {
+      "cases": [
+        {
+          "kind": "base",
+          "name": "scalar_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_grown",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_shrunk_deleted",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "families_dynamic_initial",
+          "rows": 1,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "tree_dynamic_initial",
+          "rows": 240,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "hidden_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "unique_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "generated_dynamic_initial",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "charset_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "empty_dynamic_initial",
+          "rows": 0,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "scalar_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_grown",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_shrunk_deleted",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "families_compact_initial",
+          "rows": 1,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "tree_compact_initial",
+          "rows": 240,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "hidden_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "unique_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "generated_compact_initial",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "charset_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "empty_compact_initial",
+          "rows": 0,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "ordinary_dynamic",
+          "rows": 7,
+          "indexes": 5,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "composite_dynamic",
+          "rows": 4,
+          "indexes": 3,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "hidden_dynamic",
+          "rows": 4,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "unique_cluster_dynamic",
+          "rows": 3,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "generated_dynamic",
+          "rows": 3,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "tree_dynamic",
+          "rows": 800,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "empty_dynamic",
+          "rows": 0,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_ascii_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_latin1_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8mb4_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "ordinary_compact",
+          "rows": 7,
+          "indexes": 5,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "composite_compact",
+          "rows": 4,
+          "indexes": 3,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "hidden_compact",
+          "rows": 4,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "unique_cluster_compact",
+          "rows": 3,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "generated_compact",
+          "rows": 3,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "tree_compact",
+          "rows": 800,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "empty_compact",
+          "rows": 0,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_ascii_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_latin1_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8mb4_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        }
+      ],
+      "tls": {
+        "expected_success": true,
+        "exit_code": 0,
+        "diagnostic": {
+          "command": "schema",
+          "scope": "MySQL 5.7 trusted definitions; metadata only",
+          "complete": true,
+          "report": {
+            "directory": "/tmp/innodb-57-patch-run/cli-5.7.28/tls",
+            "schema.json": "/tmp/innodb-57-patch-run/cli-5.7.28/tls/schema.json",
+            "source.json": "/tmp/innodb-57-patch-run/cli-5.7.28/tls/source.json"
+          }
+        }
+      },
+      "native_unix_socket": "passed",
+      "runtime_PATH": "empty",
+      "status": "complete"
+    },
+    "5.7.43": {
+      "cases": [
+        {
+          "kind": "base",
+          "name": "scalar_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_grown",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_dynamic_shrunk_deleted",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "families_dynamic_initial",
+          "rows": 1,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "tree_dynamic_initial",
+          "rows": 240,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "hidden_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "unique_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "generated_dynamic_initial",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "charset_dynamic_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "empty_dynamic_initial",
+          "rows": 0,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "scalar_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_grown",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "lob_compact_shrunk_deleted",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "families_compact_initial",
+          "rows": 1,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "tree_compact_initial",
+          "rows": 240,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "hidden_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "unique_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "generated_compact_initial",
+          "rows": 2,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "charset_compact_initial",
+          "rows": 3,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "base",
+          "name": "empty_compact_initial",
+          "rows": 0,
+          "indexes": 0,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "ordinary_dynamic",
+          "rows": 7,
+          "indexes": 5,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "composite_dynamic",
+          "rows": 4,
+          "indexes": 3,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "hidden_dynamic",
+          "rows": 4,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "unique_cluster_dynamic",
+          "rows": 3,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "generated_dynamic",
+          "rows": 3,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "tree_dynamic",
+          "rows": 800,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "empty_dynamic",
+          "rows": 0,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_ascii_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_latin1_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8mb4_dynamic",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "ordinary_compact",
+          "rows": 7,
+          "indexes": 5,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "composite_compact",
+          "rows": 4,
+          "indexes": 3,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "hidden_compact",
+          "rows": 4,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "unique_cluster_compact",
+          "rows": 3,
+          "indexes": 2,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "generated_compact",
+          "rows": 3,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "tree_compact",
+          "rows": 800,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "empty_compact",
+          "rows": 0,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_ascii_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_latin1_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        },
+        {
+          "kind": "secondary",
+          "name": "charset_utf8mb4_compact",
+          "rows": 5,
+          "indexes": 1,
+          "models_and_raw_source_match": true
+        }
+      ],
+      "tls": {
+        "expected_success": true,
+        "exit_code": 0,
+        "diagnostic": {
+          "command": "schema",
+          "scope": "MySQL 5.7 trusted definitions; metadata only",
+          "complete": true,
+          "report": {
+            "directory": "/tmp/innodb-57-patch-run/cli-5.7.43/tls",
+            "schema.json": "/tmp/innodb-57-patch-run/cli-5.7.43/tls/schema.json",
+            "source.json": "/tmp/innodb-57-patch-run/cli-5.7.43/tls/source.json"
+          }
+        }
+      },
+      "native_unix_socket": "passed",
+      "runtime_PATH": "empty",
+      "status": "complete"
+    }
+  }
+}

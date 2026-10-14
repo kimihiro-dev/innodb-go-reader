@@ -1,0 +1,194 @@
+[
+  {
+    "version": "5.7.44",
+    "path": "VERSION",
+    "bytes": 88,
+    "lines": 4,
+    "sha256": "cdc589e4b91a68c7f89ebfe24fc698209eed07733e1ca09a887a80350af7af7c",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-5.7.44/VERSION"
+  },
+  {
+    "version": "5.7.44",
+    "path": "storage/innobase/include/fsp0types.h",
+    "bytes": 14098,
+    "lines": 375,
+    "sha256": "2e1d4a2142d04587b90c79776edf425ec3d6008962048f2f95df8c6eadf52872",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-5.7.44/storage/innobase/include/fsp0types.h"
+  },
+  {
+    "version": "5.7.44",
+    "path": "storage/innobase/include/dict0boot.h",
+    "bytes": 12987,
+    "lines": 368,
+    "sha256": "0d4312110e95f1c2eee941cc6227ccd6457d1eb91dc885358d4aa782538515e1",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-5.7.44/storage/innobase/include/dict0boot.h"
+  },
+  {
+    "version": "5.7.44",
+    "path": "storage/innobase/dict/dict0boot.cc",
+    "bytes": 16840,
+    "lines": 559,
+    "sha256": "8a490b938fb2c08012b13225a182524765de71743bc32f4e9498bb46cd1e6f97",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-5.7.44/storage/innobase/dict/dict0boot.cc"
+  },
+  {
+    "version": "5.7.44",
+    "path": "storage/innobase/include/trx0sys.h",
+    "bytes": 24972,
+    "lines": 677,
+    "sha256": "d7535a61b8b8d1040c7f9f8f5f29fd0514f78f2a28e7e2f80c00a4c72ff52774",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-5.7.44/storage/innobase/include/trx0sys.h"
+  },
+  {
+    "version": "5.7.44",
+    "path": "storage/innobase/include/trx0rseg.h",
+    "bytes": 9207,
+    "lines": 270,
+    "sha256": "a216335f67488138d4dc9f1856ee424064483543774b3271655c1871c7bfe2ce",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-5.7.44/storage/innobase/include/trx0rseg.h"
+  },
+  {
+    "version": "5.7.44",
+    "path": "storage/innobase/ibuf/ibuf0ibuf.cc",
+    "bytes": 144608,
+    "lines": 5105,
+    "sha256": "bb60c4df6494501d27434b2a8a2c13da10db86bab4da223ae059d0f12e158cf9",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-5.7.44/storage/innobase/ibuf/ibuf0ibuf.cc"
+  },
+  {
+    "version": "5.7.44",
+    "path": "storage/innobase/row/row0quiesce.cc",
+    "bytes": 24513,
+    "lines": 955,
+    "sha256": "282a7804f71561864d5da6b9fdbe1fd7592082b661087e11d59009921662aa6a",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-5.7.44/storage/innobase/row/row0quiesce.cc"
+  },
+  {
+    "version": "5.7.44",
+    "path": "sql/table.cc",
+    "bytes": 254690,
+    "lines": 7988,
+    "sha256": "99a0bf4db57505657a4e146e2f9b5f6dddb73af121980e8176e4e8bd03ec690b",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-5.7.44/sql/table.cc"
+  },
+  {
+    "version": "5.7.44",
+    "path": "sql/unireg.cc",
+    "bytes": 44897,
+    "lines": 1368,
+    "sha256": "4882ffa579efb8239a9cb27c00be00ff8174970b3b4055c081367424b4921563",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-5.7.44/sql/unireg.cc"
+  },
+  {
+    "version": "8.0.45",
+    "path": "MYSQL_VERSION",
+    "bytes": 118,
+    "lines": 5,
+    "sha256": "b41cdd446f72cfb0bd1ca673acfee0b834d70e474403fad81f920d536e678644",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-8.0.45/MYSQL_VERSION"
+  },
+  {
+    "version": "8.0.45",
+    "path": "storage/innobase/include/fsp0types.h",
+    "bytes": 17402,
+    "lines": 407,
+    "sha256": "829c5340d27ad4d37f47f9716e81b2d4504705dc7c36ab3c8ac7ad3d885bb645",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/include/fsp0types.h"
+  },
+  {
+    "version": "8.0.45",
+    "path": "storage/innobase/include/fil0fil.h",
+    "bytes": 93038,
+    "lines": 2261,
+    "sha256": "c21768b8e563fd6c42fc7178d158ed4ac3810eeecc0690d6aed085cbef802d51",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/include/fil0fil.h"
+  },
+  {
+    "version": "8.0.45",
+    "path": "storage/innobase/include/dict0dict.h",
+    "bytes": 74193,
+    "lines": 1720,
+    "sha256": "603aa47bf1b2e63d3725b4caca3b709ad0b9ff52adf39732390f1383d6d3d220",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/include/dict0dict.h"
+  },
+  {
+    "version": "8.0.45",
+    "path": "storage/innobase/dict/dict0dict.cc",
+    "bytes": 199320,
+    "lines": 6124,
+    "sha256": "f20764710efbbd0a1e02743ee0dbfae3c44ce42e983482684b88d0045326f517",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/dict/dict0dict.cc"
+  },
+  {
+    "version": "8.0.45",
+    "path": "storage/innobase/dict/dict0boot.cc",
+    "bytes": 15881,
+    "lines": 457,
+    "sha256": "a3077556c0ecaecded2e6b003725df5ca5a2147c36a4bccad534f2bee0020bdb",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/dict/dict0boot.cc"
+  },
+  {
+    "version": "8.0.45",
+    "path": "storage/innobase/dict/dict0sdi.cc",
+    "bytes": 18206,
+    "lines": 505,
+    "sha256": "f3ceae240e6a5ec754ff38a2b0c10e0c6fb790d82049c9d4255217ea2344ed03",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/dict/dict0sdi.cc"
+  },
+  {
+    "version": "8.0.45",
+    "path": "storage/innobase/include/trx0sys.h",
+    "bytes": 24747,
+    "lines": 629,
+    "sha256": "79c66846ef1c6de09cecf780eb09b796b9058504dcabddfa159fde33584bbdf9",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/include/trx0sys.h"
+  },
+  {
+    "version": "8.0.45",
+    "path": "storage/innobase/include/trx0rseg.h",
+    "bytes": 12420,
+    "lines": 267,
+    "sha256": "7629af9116e7734afa75f0bd0c002336549197bedea53fcc4a66849a8e42a152",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/include/trx0rseg.h"
+  },
+  {
+    "version": "8.0.45",
+    "path": "storage/innobase/trx/trx0rseg.cc",
+    "bytes": 39503,
+    "lines": 1223,
+    "sha256": "a38a10258066550212fa1b55287dc6e268cae341af20a320956905c6ce3cde59",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/trx/trx0rseg.cc"
+  },
+  {
+    "version": "8.0.45",
+    "path": "storage/innobase/srv/srv0start.cc",
+    "bytes": 100163,
+    "lines": 3136,
+    "sha256": "b6f2ac8ff95d907a1c5d13d31e98b26db6995457d458e46d955cc6edc61fc545",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/srv/srv0start.cc"
+  },
+  {
+    "version": "8.0.45",
+    "path": "storage/innobase/buf/buf0dblwr.cc",
+    "bytes": 112415,
+    "lines": 3638,
+    "sha256": "d78c8c08c53f393aaac75cd039f59d3132de94c39bf7a69ac654fc6201d3d3e6",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/buf/buf0dblwr.cc"
+  },
+  {
+    "version": "8.0.45",
+    "path": "storage/innobase/buf/buf0flu.cc",
+    "bytes": 128584,
+    "lines": 3877,
+    "sha256": "0f5170afadb81a6d43393e014730dfcccc1a81566f8fdfd76f625a373d587e7c",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-8.0.45/storage/innobase/buf/buf0flu.cc"
+  },
+  {
+    "version": "8.0.45",
+    "path": "utilities/innochecksum.cc",
+    "bytes": 56199,
+    "lines": 1806,
+    "sha256": "6a479ef06d2f47847dd3d4253b9d300351895a207442fd28e99307920fdd91d5",
+    "url": "https://github.com/mysql/mysql-server/blob/mysql-8.0.45/utilities/innochecksum.cc"
+  }
+]

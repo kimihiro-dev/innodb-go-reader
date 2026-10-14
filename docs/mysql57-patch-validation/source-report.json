@@ -1,0 +1,1962 @@
+{
+  "5.7.9": {
+    "storage/innobase/include/fil0fil.h": {
+      "sha256": "6af8c373508d193e74a4f56d5146be94c5bf12624d959075a35d009cc974fa5f",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 375,
+          "text": "#define FIL_PAGE_OFFSET\t\t4\t/*!< page offset inside space */"
+        },
+        {
+          "line": 376,
+          "text": "#define FIL_PAGE_PREV\t\t8\t/*!< if there is a 'natural'"
+        },
+        {
+          "line": 383,
+          "text": "#define FIL_PAGE_NEXT\t\t12\t/*!< if there is a 'natural' successor"
+        },
+        {
+          "line": 393,
+          "text": "#define FIL_PAGE_LSN\t\t16\t/*!< lsn of the end of the newest"
+        },
+        {
+          "line": 395,
+          "text": "#define\tFIL_PAGE_TYPE\t\t24\t/*!< file page type: FIL_PAGE_INDEX,...,"
+        },
+        {
+          "line": 440,
+          "text": "#define FIL_PAGE_ARCH_LOG_NO_OR_SPACE_ID  34"
+        },
+        {
+          "line": 444,
+          "text": "#define FIL_PAGE_DATA\t\t38U\t/*!< start of the data on the page */"
+        },
+        {
+          "line": 452,
+          "text": "#define FIL_PAGE_DATA_END\t8\t/*!< size of the page trailer */"
+        },
+        {
+          "line": 456,
+          "text": "#define FIL_PAGE_INDEX\t\t17855\t/*!< B-tree node */"
+        },
+        {
+          "line": 462,
+          "text": "#define FIL_PAGE_TYPE_ALLOCATED\t0\t/*!< Freshly allocated page */"
+        },
+        {
+          "line": 464,
+          "text": "#define FIL_PAGE_TYPE_SYS\t6\t/*!< System page */"
+        },
+        {
+          "line": 465,
+          "text": "#define FIL_PAGE_TYPE_TRX_SYS\t7\t/*!< Transaction system data */"
+        },
+        {
+          "line": 466,
+          "text": "#define FIL_PAGE_TYPE_FSP_HDR\t8\t/*!< File space header */"
+        },
+        {
+          "line": 467,
+          "text": "#define FIL_PAGE_TYPE_XDES\t9\t/*!< Extent descriptor page */"
+        },
+        {
+          "line": 468,
+          "text": "#define FIL_PAGE_TYPE_BLOB\t10\t/*!< Uncompressed BLOB page */"
+        },
+        {
+          "line": 469,
+          "text": "#define FIL_PAGE_TYPE_ZBLOB\t11\t/*!< First compressed BLOB page */"
+        },
+        {
+          "line": 470,
+          "text": "#define FIL_PAGE_TYPE_ZBLOB2\t12\t/*!< Subsequent compressed BLOB page */"
+        },
+        {
+          "line": 471,
+          "text": "#define FIL_PAGE_TYPE_UNKNOWN\t13\t/*!< In old tablespaces, garbage"
+        },
+        {
+          "line": 477,
+          "text": "#define FIL_PAGE_TYPE_LAST\tFIL_PAGE_TYPE_UNKNOWN"
+        }
+      ]
+    },
+    "storage/innobase/include/fsp0fsp.h": {
+      "sha256": "9360acc790654f7a3cd8beb6817506c34c66aa7ffee4dc1382802b11e5adb817",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 46,
+          "text": "#define FSP_HEADER_OFFSET\tFIL_PAGE_DATA"
+        },
+        {
+          "line": 60,
+          "text": "#define FSP_SPACE_ID\t\t0\t/* space id */"
+        },
+        {
+          "line": 65,
+          "text": "#define\tFSP_SIZE\t\t8\t/* Current size of the space in"
+        },
+        {
+          "line": 67,
+          "text": "#define\tFSP_FREE_LIMIT\t\t12\t/* Minimum page number for which the"
+        },
+        {
+          "line": 77,
+          "text": "#define\tFSP_SPACE_FLAGS\t\t16\t/* fsp_space_t.flags, similar to"
+        }
+      ]
+    },
+    "storage/innobase/include/fsp0types.h": {
+      "sha256": "8444ee40ef971ddc22ccc5781209771a88a5fc09c3a14a178c396b56603a9c2e",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 264,
+          "text": "#define FSP_FLAGS_POS_POST_ANTELOPE\t0"
+        },
+        {
+          "line": 266,
+          "text": "#define FSP_FLAGS_POS_ZIP_SSIZE\t\t(FSP_FLAGS_POS_POST_ANTELOPE\t\\"
+        },
+        {
+          "line": 269,
+          "text": "#define FSP_FLAGS_POS_ATOMIC_BLOBS\t(FSP_FLAGS_POS_ZIP_SSIZE\t\\"
+        },
+        {
+          "line": 272,
+          "text": "#define FSP_FLAGS_POS_PAGE_SSIZE\t(FSP_FLAGS_POS_ATOMIC_BLOBS\t\\"
+        },
+        {
+          "line": 275,
+          "text": "#define FSP_FLAGS_POS_DATA_DIR\t\t(FSP_FLAGS_POS_PAGE_SSIZE\t\\"
+        },
+        {
+          "line": 278,
+          "text": "#define FSP_FLAGS_POS_SHARED\t\t(FSP_FLAGS_POS_DATA_DIR\t\t\\"
+        },
+        {
+          "line": 281,
+          "text": "#define FSP_FLAGS_POS_TEMPORARY\t\t(FSP_FLAGS_POS_SHARED\t\t\\"
+        },
+        {
+          "line": 284,
+          "text": "#define FSP_FLAGS_POS_UNUSED\t\t(FSP_FLAGS_POS_TEMPORARY\t\\"
+        }
+      ]
+    },
+    "storage/innobase/include/rem0rec.h": {
+      "sha256": "209f8907aceb6de129e1923446b061c5f2dafae8d0061b70d66a8e855ac40527",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 64,
+          "text": "#define REC_NEW_HEAP_NO\t\t4"
+        }
+      ]
+    },
+    "storage/innobase/include/btr0types.h": {
+      "sha256": "63cd64516508687f7339d49e0099600fa6c193c5e9ceb4716dbec893e69bb022",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 53,
+          "text": "#define BTR_EXTERN_FIELD_REF_SIZE\tFIELD_REF_SIZE"
+        }
+      ]
+    },
+    "storage/innobase/btr/btr0cur.cc": {
+      "sha256": "08106c12158827749c9d68963812ce88c2a989920fbbc1b758d7448fffcd171d",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 133,
+          "text": "#define BTR_BLOB_HDR_PART_LEN\t\t0\t/*!< BLOB part len on this"
+        },
+        {
+          "line": 135,
+          "text": "#define BTR_BLOB_HDR_NEXT_PAGE_NO\t4\t/*!< next BLOB part page no,"
+        },
+        {
+          "line": 138,
+          "text": "#define BTR_BLOB_HDR_SIZE\t\t8\t/*!< Size of a BLOB"
+        }
+      ]
+    },
+    "storage/innobase/handler/i_s.cc": {
+      "sha256": "33423526563271372af80f52d577bbc4e1db3f406df293cc198f0e9d96148627",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 4167,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 6299,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 6335,
+          "text": "{STRUCT_FLD(field_name,\t\t\"ZIP_PAGE_SIZE\"),"
+        },
+        {
+          "line": 6344,
+          "text": "{STRUCT_FLD(field_name,\t\t\"SPACE_TYPE\"),"
+        },
+        {
+          "line": 6877,
+          "text": "{STRUCT_FLD(field_name,\t\t\"INDEX_ID\"),"
+        },
+        {
+          "line": 6913,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_FIELDS\"),"
+        },
+        {
+          "line": 6922,
+          "text": "{STRUCT_FLD(field_name,\t\t\"PAGE_NO\"),"
+        },
+        {
+          "line": 7162,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7403,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7605,
+          "text": "{STRUCT_FLD(field_name,\t\t\"INDEX_ID\"),"
+        },
+        {
+          "line": 7623,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7846,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 8075,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 8314,
+          "text": "{STRUCT_FLD(field_name,\t\t\"PAGE_SIZE\"),"
+        },
+        {
+          "line": 8323,
+          "text": "{STRUCT_FLD(field_name,\t\t\"ZIP_PAGE_SIZE\"),"
+        },
+        {
+          "line": 8332,
+          "text": "{STRUCT_FLD(field_name,\t\t\"SPACE_TYPE\"),"
+        }
+      ]
+    },
+    "sql/json_binary.h": {
+      "sha256": "3f7a091a098c2e167f773ffa806b1f474f795299a780844cf74ae2ad9a759881",
+      "matches_5.7.44": false,
+      "definitions": []
+    },
+    "vio/viosslfactories.c": {
+      "sha256": "cd34478cccd417aaa2abc95f2d353f9ef7c1d180fc4012c3d9a396c48bf21f4f",
+      "matches_5.7.44": false,
+      "definitions": []
+    }
+  },
+  "5.7.10": {
+    "storage/innobase/include/fil0fil.h": {
+      "sha256": "9b42f0905fe1ae8383ad9d6577bc2ee39631d44492165267d7b46ae46fbedf3d",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 430,
+          "text": "#define FIL_PAGE_OFFSET\t\t4\t/*!< page offset inside space */"
+        },
+        {
+          "line": 431,
+          "text": "#define FIL_PAGE_PREV\t\t8\t/*!< if there is a 'natural'"
+        },
+        {
+          "line": 438,
+          "text": "#define FIL_PAGE_NEXT\t\t12\t/*!< if there is a 'natural' successor"
+        },
+        {
+          "line": 448,
+          "text": "#define FIL_PAGE_LSN\t\t16\t/*!< lsn of the end of the newest"
+        },
+        {
+          "line": 450,
+          "text": "#define\tFIL_PAGE_TYPE\t\t24\t/*!< file page type: FIL_PAGE_INDEX,...,"
+        },
+        {
+          "line": 495,
+          "text": "#define FIL_PAGE_ARCH_LOG_NO_OR_SPACE_ID  34"
+        },
+        {
+          "line": 499,
+          "text": "#define FIL_PAGE_DATA\t\t38U\t/*!< start of the data on the page */"
+        },
+        {
+          "line": 507,
+          "text": "#define FIL_PAGE_DATA_END\t8\t/*!< size of the page trailer */"
+        },
+        {
+          "line": 511,
+          "text": "#define FIL_PAGE_INDEX\t\t17855\t/*!< B-tree node */"
+        },
+        {
+          "line": 517,
+          "text": "#define FIL_PAGE_TYPE_ALLOCATED\t0\t/*!< Freshly allocated page */"
+        },
+        {
+          "line": 519,
+          "text": "#define FIL_PAGE_TYPE_SYS\t6\t/*!< System page */"
+        },
+        {
+          "line": 520,
+          "text": "#define FIL_PAGE_TYPE_TRX_SYS\t7\t/*!< Transaction system data */"
+        },
+        {
+          "line": 521,
+          "text": "#define FIL_PAGE_TYPE_FSP_HDR\t8\t/*!< File space header */"
+        },
+        {
+          "line": 522,
+          "text": "#define FIL_PAGE_TYPE_XDES\t9\t/*!< Extent descriptor page */"
+        },
+        {
+          "line": 523,
+          "text": "#define FIL_PAGE_TYPE_BLOB\t10\t/*!< Uncompressed BLOB page */"
+        },
+        {
+          "line": 524,
+          "text": "#define FIL_PAGE_TYPE_ZBLOB\t11\t/*!< First compressed BLOB page */"
+        },
+        {
+          "line": 525,
+          "text": "#define FIL_PAGE_TYPE_ZBLOB2\t12\t/*!< Subsequent compressed BLOB page */"
+        },
+        {
+          "line": 526,
+          "text": "#define FIL_PAGE_TYPE_UNKNOWN\t13\t/*!< In old tablespaces, garbage"
+        },
+        {
+          "line": 532,
+          "text": "#define FIL_PAGE_TYPE_LAST\tFIL_PAGE_TYPE_UNKNOWN"
+        }
+      ]
+    },
+    "storage/innobase/include/fsp0fsp.h": {
+      "sha256": "a6221ec6397b3eb7aacfcb74d1f27159a0d32837c7171f383f06d063d7bb10d1",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 46,
+          "text": "#define FSP_HEADER_OFFSET\tFIL_PAGE_DATA"
+        },
+        {
+          "line": 60,
+          "text": "#define FSP_SPACE_ID\t\t0\t/* space id */"
+        },
+        {
+          "line": 65,
+          "text": "#define\tFSP_SIZE\t\t8\t/* Current size of the space in"
+        },
+        {
+          "line": 67,
+          "text": "#define\tFSP_FREE_LIMIT\t\t12\t/* Minimum page number for which the"
+        },
+        {
+          "line": 77,
+          "text": "#define\tFSP_SPACE_FLAGS\t\t16\t/* fsp_space_t.flags, similar to"
+        }
+      ]
+    },
+    "storage/innobase/include/fsp0types.h": {
+      "sha256": "8444ee40ef971ddc22ccc5781209771a88a5fc09c3a14a178c396b56603a9c2e",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 264,
+          "text": "#define FSP_FLAGS_POS_POST_ANTELOPE\t0"
+        },
+        {
+          "line": 266,
+          "text": "#define FSP_FLAGS_POS_ZIP_SSIZE\t\t(FSP_FLAGS_POS_POST_ANTELOPE\t\\"
+        },
+        {
+          "line": 269,
+          "text": "#define FSP_FLAGS_POS_ATOMIC_BLOBS\t(FSP_FLAGS_POS_ZIP_SSIZE\t\\"
+        },
+        {
+          "line": 272,
+          "text": "#define FSP_FLAGS_POS_PAGE_SSIZE\t(FSP_FLAGS_POS_ATOMIC_BLOBS\t\\"
+        },
+        {
+          "line": 275,
+          "text": "#define FSP_FLAGS_POS_DATA_DIR\t\t(FSP_FLAGS_POS_PAGE_SSIZE\t\\"
+        },
+        {
+          "line": 278,
+          "text": "#define FSP_FLAGS_POS_SHARED\t\t(FSP_FLAGS_POS_DATA_DIR\t\t\\"
+        },
+        {
+          "line": 281,
+          "text": "#define FSP_FLAGS_POS_TEMPORARY\t\t(FSP_FLAGS_POS_SHARED\t\t\\"
+        },
+        {
+          "line": 284,
+          "text": "#define FSP_FLAGS_POS_UNUSED\t\t(FSP_FLAGS_POS_TEMPORARY\t\\"
+        }
+      ]
+    },
+    "storage/innobase/include/rem0rec.h": {
+      "sha256": "209f8907aceb6de129e1923446b061c5f2dafae8d0061b70d66a8e855ac40527",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 64,
+          "text": "#define REC_NEW_HEAP_NO\t\t4"
+        }
+      ]
+    },
+    "storage/innobase/include/btr0types.h": {
+      "sha256": "63cd64516508687f7339d49e0099600fa6c193c5e9ceb4716dbec893e69bb022",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 53,
+          "text": "#define BTR_EXTERN_FIELD_REF_SIZE\tFIELD_REF_SIZE"
+        }
+      ]
+    },
+    "storage/innobase/btr/btr0cur.cc": {
+      "sha256": "3f7695b5fd50a135fbe476aa9b2068779b4758f240296e4444ec26391caa8e78",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 133,
+          "text": "#define BTR_BLOB_HDR_PART_LEN\t\t0\t/*!< BLOB part len on this"
+        },
+        {
+          "line": 135,
+          "text": "#define BTR_BLOB_HDR_NEXT_PAGE_NO\t4\t/*!< next BLOB part page no,"
+        },
+        {
+          "line": 138,
+          "text": "#define BTR_BLOB_HDR_SIZE\t\t8\t/*!< Size of a BLOB"
+        }
+      ]
+    },
+    "storage/innobase/handler/i_s.cc": {
+      "sha256": "64a5ad21730bddcc2a8500f874b033fb33930093d6d872bdfca939a12286b303",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 4174,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 6306,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 6342,
+          "text": "{STRUCT_FLD(field_name,\t\t\"ZIP_PAGE_SIZE\"),"
+        },
+        {
+          "line": 6351,
+          "text": "{STRUCT_FLD(field_name,\t\t\"SPACE_TYPE\"),"
+        },
+        {
+          "line": 6903,
+          "text": "{STRUCT_FLD(field_name,\t\t\"INDEX_ID\"),"
+        },
+        {
+          "line": 6939,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_FIELDS\"),"
+        },
+        {
+          "line": 6948,
+          "text": "{STRUCT_FLD(field_name,\t\t\"PAGE_NO\"),"
+        },
+        {
+          "line": 7188,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7429,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7631,
+          "text": "{STRUCT_FLD(field_name,\t\t\"INDEX_ID\"),"
+        },
+        {
+          "line": 7649,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7872,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 8101,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 8340,
+          "text": "{STRUCT_FLD(field_name,\t\t\"PAGE_SIZE\"),"
+        },
+        {
+          "line": 8349,
+          "text": "{STRUCT_FLD(field_name,\t\t\"ZIP_PAGE_SIZE\"),"
+        },
+        {
+          "line": 8358,
+          "text": "{STRUCT_FLD(field_name,\t\t\"SPACE_TYPE\"),"
+        }
+      ]
+    },
+    "sql/json_binary.h": {
+      "sha256": "3f7a091a098c2e167f773ffa806b1f474f795299a780844cf74ae2ad9a759881",
+      "matches_5.7.44": false,
+      "definitions": []
+    },
+    "vio/viosslfactories.c": {
+      "sha256": "0e3147f9090f9b51f775af1472c5ccc7a9efbcd253e7bdc00dae6346a839c1ff",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 441,
+          "text": "const long tls_ctx_list[3]= {SSL_OP_NO_TLSv1, SSL_OP_NO_TLSv1_1, SSL_OP_NO_TLSv1_2};"
+        },
+        {
+          "line": 442,
+          "text": "long tls_ctx_flag= SSL_OP_NO_TLSv1|SSL_OP_NO_TLSv1_1|SSL_OP_NO_TLSv1_2;"
+        },
+        {
+          "line": 522,
+          "text": "| SSL_OP_NO_TLSv1_2"
+        }
+      ]
+    }
+  },
+  "5.7.11": {
+    "storage/innobase/include/fil0fil.h": {
+      "sha256": "09581d0debf9ef3af2403ffb0e969fa1cf5fe9c62205b4868d9bebd7b7ca677d",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 443,
+          "text": "#define FIL_PAGE_OFFSET\t\t4\t/*!< page offset inside space */"
+        },
+        {
+          "line": 444,
+          "text": "#define FIL_PAGE_PREV\t\t8\t/*!< if there is a 'natural'"
+        },
+        {
+          "line": 451,
+          "text": "#define FIL_PAGE_NEXT\t\t12\t/*!< if there is a 'natural' successor"
+        },
+        {
+          "line": 461,
+          "text": "#define FIL_PAGE_LSN\t\t16\t/*!< lsn of the end of the newest"
+        },
+        {
+          "line": 463,
+          "text": "#define\tFIL_PAGE_TYPE\t\t24\t/*!< file page type: FIL_PAGE_INDEX,...,"
+        },
+        {
+          "line": 508,
+          "text": "#define FIL_PAGE_ARCH_LOG_NO_OR_SPACE_ID  34"
+        },
+        {
+          "line": 512,
+          "text": "#define FIL_PAGE_DATA\t\t38U\t/*!< start of the data on the page */"
+        },
+        {
+          "line": 520,
+          "text": "#define FIL_PAGE_DATA_END\t8\t/*!< size of the page trailer */"
+        },
+        {
+          "line": 524,
+          "text": "#define FIL_PAGE_INDEX\t\t17855\t/*!< B-tree node */"
+        },
+        {
+          "line": 530,
+          "text": "#define FIL_PAGE_TYPE_ALLOCATED\t0\t/*!< Freshly allocated page */"
+        },
+        {
+          "line": 532,
+          "text": "#define FIL_PAGE_TYPE_SYS\t6\t/*!< System page */"
+        },
+        {
+          "line": 533,
+          "text": "#define FIL_PAGE_TYPE_TRX_SYS\t7\t/*!< Transaction system data */"
+        },
+        {
+          "line": 534,
+          "text": "#define FIL_PAGE_TYPE_FSP_HDR\t8\t/*!< File space header */"
+        },
+        {
+          "line": 535,
+          "text": "#define FIL_PAGE_TYPE_XDES\t9\t/*!< Extent descriptor page */"
+        },
+        {
+          "line": 536,
+          "text": "#define FIL_PAGE_TYPE_BLOB\t10\t/*!< Uncompressed BLOB page */"
+        },
+        {
+          "line": 537,
+          "text": "#define FIL_PAGE_TYPE_ZBLOB\t11\t/*!< First compressed BLOB page */"
+        },
+        {
+          "line": 538,
+          "text": "#define FIL_PAGE_TYPE_ZBLOB2\t12\t/*!< Subsequent compressed BLOB page */"
+        },
+        {
+          "line": 539,
+          "text": "#define FIL_PAGE_TYPE_UNKNOWN\t13\t/*!< In old tablespaces, garbage"
+        },
+        {
+          "line": 549,
+          "text": "#define FIL_PAGE_TYPE_LAST\tFIL_PAGE_TYPE_UNKNOWN"
+        }
+      ]
+    },
+    "storage/innobase/include/fsp0fsp.h": {
+      "sha256": "781cb02c6ee71f1e7e6a5966bf7a241a27be45c1a3a0d9efbd5e8925b76da84d",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 46,
+          "text": "#define FSP_HEADER_OFFSET\tFIL_PAGE_DATA"
+        },
+        {
+          "line": 60,
+          "text": "#define FSP_SPACE_ID\t\t0\t/* space id */"
+        },
+        {
+          "line": 65,
+          "text": "#define\tFSP_SIZE\t\t8\t/* Current size of the space in"
+        },
+        {
+          "line": 67,
+          "text": "#define\tFSP_FREE_LIMIT\t\t12\t/* Minimum page number for which the"
+        },
+        {
+          "line": 77,
+          "text": "#define\tFSP_SPACE_FLAGS\t\t16\t/* fsp_space_t.flags, similar to"
+        }
+      ]
+    },
+    "storage/innobase/include/fsp0types.h": {
+      "sha256": "27033b43429a3863ffc0098c9f03af238de8bfe51eb7404a14b32d0bbfb68a56",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 268,
+          "text": "#define FSP_FLAGS_POS_POST_ANTELOPE\t0"
+        },
+        {
+          "line": 270,
+          "text": "#define FSP_FLAGS_POS_ZIP_SSIZE\t\t(FSP_FLAGS_POS_POST_ANTELOPE\t\\"
+        },
+        {
+          "line": 273,
+          "text": "#define FSP_FLAGS_POS_ATOMIC_BLOBS\t(FSP_FLAGS_POS_ZIP_SSIZE\t\\"
+        },
+        {
+          "line": 276,
+          "text": "#define FSP_FLAGS_POS_PAGE_SSIZE\t(FSP_FLAGS_POS_ATOMIC_BLOBS\t\\"
+        },
+        {
+          "line": 279,
+          "text": "#define FSP_FLAGS_POS_DATA_DIR\t\t(FSP_FLAGS_POS_PAGE_SSIZE\t\\"
+        },
+        {
+          "line": 282,
+          "text": "#define FSP_FLAGS_POS_SHARED\t\t(FSP_FLAGS_POS_DATA_DIR\t\t\\"
+        },
+        {
+          "line": 285,
+          "text": "#define FSP_FLAGS_POS_TEMPORARY\t\t(FSP_FLAGS_POS_SHARED\t\t\\"
+        },
+        {
+          "line": 288,
+          "text": "#define FSP_FLAGS_POS_ENCRYPTION\t(FSP_FLAGS_POS_TEMPORARY\t\\"
+        },
+        {
+          "line": 291,
+          "text": "#define FSP_FLAGS_POS_UNUSED\t\t(FSP_FLAGS_POS_ENCRYPTION\t\\"
+        }
+      ]
+    },
+    "storage/innobase/include/rem0rec.h": {
+      "sha256": "209f8907aceb6de129e1923446b061c5f2dafae8d0061b70d66a8e855ac40527",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 64,
+          "text": "#define REC_NEW_HEAP_NO\t\t4"
+        }
+      ]
+    },
+    "storage/innobase/include/btr0types.h": {
+      "sha256": "63cd64516508687f7339d49e0099600fa6c193c5e9ceb4716dbec893e69bb022",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 53,
+          "text": "#define BTR_EXTERN_FIELD_REF_SIZE\tFIELD_REF_SIZE"
+        }
+      ]
+    },
+    "storage/innobase/btr/btr0cur.cc": {
+      "sha256": "808f288af4362ab07e316d4fbf0bae5651d5eceeb6c9315a82c0ab8f06cff348",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 133,
+          "text": "#define BTR_BLOB_HDR_PART_LEN\t\t0\t/*!< BLOB part len on this"
+        },
+        {
+          "line": 135,
+          "text": "#define BTR_BLOB_HDR_NEXT_PAGE_NO\t4\t/*!< next BLOB part page no,"
+        },
+        {
+          "line": 138,
+          "text": "#define BTR_BLOB_HDR_SIZE\t\t8\t/*!< Size of a BLOB"
+        }
+      ]
+    },
+    "storage/innobase/handler/i_s.cc": {
+      "sha256": "1f47e6608e0b7404f681ce32fb638f1b56318af0e0d24896f90be47446e45f29",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 4171,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 6301,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 6337,
+          "text": "{STRUCT_FLD(field_name,\t\t\"ZIP_PAGE_SIZE\"),"
+        },
+        {
+          "line": 6346,
+          "text": "{STRUCT_FLD(field_name,\t\t\"SPACE_TYPE\"),"
+        },
+        {
+          "line": 6896,
+          "text": "{STRUCT_FLD(field_name,\t\t\"INDEX_ID\"),"
+        },
+        {
+          "line": 6932,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_FIELDS\"),"
+        },
+        {
+          "line": 6941,
+          "text": "{STRUCT_FLD(field_name,\t\t\"PAGE_NO\"),"
+        },
+        {
+          "line": 7181,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7422,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7624,
+          "text": "{STRUCT_FLD(field_name,\t\t\"INDEX_ID\"),"
+        },
+        {
+          "line": 7642,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7865,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 8094,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 8333,
+          "text": "{STRUCT_FLD(field_name,\t\t\"PAGE_SIZE\"),"
+        },
+        {
+          "line": 8342,
+          "text": "{STRUCT_FLD(field_name,\t\t\"ZIP_PAGE_SIZE\"),"
+        },
+        {
+          "line": 8351,
+          "text": "{STRUCT_FLD(field_name,\t\t\"SPACE_TYPE\"),"
+        }
+      ]
+    },
+    "sql/json_binary.h": {
+      "sha256": "3f7a091a098c2e167f773ffa806b1f474f795299a780844cf74ae2ad9a759881",
+      "matches_5.7.44": false,
+      "definitions": []
+    },
+    "vio/viosslfactories.c": {
+      "sha256": "0e3147f9090f9b51f775af1472c5ccc7a9efbcd253e7bdc00dae6346a839c1ff",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 441,
+          "text": "const long tls_ctx_list[3]= {SSL_OP_NO_TLSv1, SSL_OP_NO_TLSv1_1, SSL_OP_NO_TLSv1_2};"
+        },
+        {
+          "line": 442,
+          "text": "long tls_ctx_flag= SSL_OP_NO_TLSv1|SSL_OP_NO_TLSv1_1|SSL_OP_NO_TLSv1_2;"
+        },
+        {
+          "line": 522,
+          "text": "| SSL_OP_NO_TLSv1_2"
+        }
+      ]
+    }
+  },
+  "5.7.12": {
+    "storage/innobase/include/fil0fil.h": {
+      "sha256": "09581d0debf9ef3af2403ffb0e969fa1cf5fe9c62205b4868d9bebd7b7ca677d",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 443,
+          "text": "#define FIL_PAGE_OFFSET\t\t4\t/*!< page offset inside space */"
+        },
+        {
+          "line": 444,
+          "text": "#define FIL_PAGE_PREV\t\t8\t/*!< if there is a 'natural'"
+        },
+        {
+          "line": 451,
+          "text": "#define FIL_PAGE_NEXT\t\t12\t/*!< if there is a 'natural' successor"
+        },
+        {
+          "line": 461,
+          "text": "#define FIL_PAGE_LSN\t\t16\t/*!< lsn of the end of the newest"
+        },
+        {
+          "line": 463,
+          "text": "#define\tFIL_PAGE_TYPE\t\t24\t/*!< file page type: FIL_PAGE_INDEX,...,"
+        },
+        {
+          "line": 508,
+          "text": "#define FIL_PAGE_ARCH_LOG_NO_OR_SPACE_ID  34"
+        },
+        {
+          "line": 512,
+          "text": "#define FIL_PAGE_DATA\t\t38U\t/*!< start of the data on the page */"
+        },
+        {
+          "line": 520,
+          "text": "#define FIL_PAGE_DATA_END\t8\t/*!< size of the page trailer */"
+        },
+        {
+          "line": 524,
+          "text": "#define FIL_PAGE_INDEX\t\t17855\t/*!< B-tree node */"
+        },
+        {
+          "line": 530,
+          "text": "#define FIL_PAGE_TYPE_ALLOCATED\t0\t/*!< Freshly allocated page */"
+        },
+        {
+          "line": 532,
+          "text": "#define FIL_PAGE_TYPE_SYS\t6\t/*!< System page */"
+        },
+        {
+          "line": 533,
+          "text": "#define FIL_PAGE_TYPE_TRX_SYS\t7\t/*!< Transaction system data */"
+        },
+        {
+          "line": 534,
+          "text": "#define FIL_PAGE_TYPE_FSP_HDR\t8\t/*!< File space header */"
+        },
+        {
+          "line": 535,
+          "text": "#define FIL_PAGE_TYPE_XDES\t9\t/*!< Extent descriptor page */"
+        },
+        {
+          "line": 536,
+          "text": "#define FIL_PAGE_TYPE_BLOB\t10\t/*!< Uncompressed BLOB page */"
+        },
+        {
+          "line": 537,
+          "text": "#define FIL_PAGE_TYPE_ZBLOB\t11\t/*!< First compressed BLOB page */"
+        },
+        {
+          "line": 538,
+          "text": "#define FIL_PAGE_TYPE_ZBLOB2\t12\t/*!< Subsequent compressed BLOB page */"
+        },
+        {
+          "line": 539,
+          "text": "#define FIL_PAGE_TYPE_UNKNOWN\t13\t/*!< In old tablespaces, garbage"
+        },
+        {
+          "line": 549,
+          "text": "#define FIL_PAGE_TYPE_LAST\tFIL_PAGE_TYPE_UNKNOWN"
+        }
+      ]
+    },
+    "storage/innobase/include/fsp0fsp.h": {
+      "sha256": "781cb02c6ee71f1e7e6a5966bf7a241a27be45c1a3a0d9efbd5e8925b76da84d",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 46,
+          "text": "#define FSP_HEADER_OFFSET\tFIL_PAGE_DATA"
+        },
+        {
+          "line": 60,
+          "text": "#define FSP_SPACE_ID\t\t0\t/* space id */"
+        },
+        {
+          "line": 65,
+          "text": "#define\tFSP_SIZE\t\t8\t/* Current size of the space in"
+        },
+        {
+          "line": 67,
+          "text": "#define\tFSP_FREE_LIMIT\t\t12\t/* Minimum page number for which the"
+        },
+        {
+          "line": 77,
+          "text": "#define\tFSP_SPACE_FLAGS\t\t16\t/* fsp_space_t.flags, similar to"
+        }
+      ]
+    },
+    "storage/innobase/include/fsp0types.h": {
+      "sha256": "27033b43429a3863ffc0098c9f03af238de8bfe51eb7404a14b32d0bbfb68a56",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 268,
+          "text": "#define FSP_FLAGS_POS_POST_ANTELOPE\t0"
+        },
+        {
+          "line": 270,
+          "text": "#define FSP_FLAGS_POS_ZIP_SSIZE\t\t(FSP_FLAGS_POS_POST_ANTELOPE\t\\"
+        },
+        {
+          "line": 273,
+          "text": "#define FSP_FLAGS_POS_ATOMIC_BLOBS\t(FSP_FLAGS_POS_ZIP_SSIZE\t\\"
+        },
+        {
+          "line": 276,
+          "text": "#define FSP_FLAGS_POS_PAGE_SSIZE\t(FSP_FLAGS_POS_ATOMIC_BLOBS\t\\"
+        },
+        {
+          "line": 279,
+          "text": "#define FSP_FLAGS_POS_DATA_DIR\t\t(FSP_FLAGS_POS_PAGE_SSIZE\t\\"
+        },
+        {
+          "line": 282,
+          "text": "#define FSP_FLAGS_POS_SHARED\t\t(FSP_FLAGS_POS_DATA_DIR\t\t\\"
+        },
+        {
+          "line": 285,
+          "text": "#define FSP_FLAGS_POS_TEMPORARY\t\t(FSP_FLAGS_POS_SHARED\t\t\\"
+        },
+        {
+          "line": 288,
+          "text": "#define FSP_FLAGS_POS_ENCRYPTION\t(FSP_FLAGS_POS_TEMPORARY\t\\"
+        },
+        {
+          "line": 291,
+          "text": "#define FSP_FLAGS_POS_UNUSED\t\t(FSP_FLAGS_POS_ENCRYPTION\t\\"
+        }
+      ]
+    },
+    "storage/innobase/include/rem0rec.h": {
+      "sha256": "209f8907aceb6de129e1923446b061c5f2dafae8d0061b70d66a8e855ac40527",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 64,
+          "text": "#define REC_NEW_HEAP_NO\t\t4"
+        }
+      ]
+    },
+    "storage/innobase/include/btr0types.h": {
+      "sha256": "63cd64516508687f7339d49e0099600fa6c193c5e9ceb4716dbec893e69bb022",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 53,
+          "text": "#define BTR_EXTERN_FIELD_REF_SIZE\tFIELD_REF_SIZE"
+        }
+      ]
+    },
+    "storage/innobase/btr/btr0cur.cc": {
+      "sha256": "808f288af4362ab07e316d4fbf0bae5651d5eceeb6c9315a82c0ab8f06cff348",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 133,
+          "text": "#define BTR_BLOB_HDR_PART_LEN\t\t0\t/*!< BLOB part len on this"
+        },
+        {
+          "line": 135,
+          "text": "#define BTR_BLOB_HDR_NEXT_PAGE_NO\t4\t/*!< next BLOB part page no,"
+        },
+        {
+          "line": 138,
+          "text": "#define BTR_BLOB_HDR_SIZE\t\t8\t/*!< Size of a BLOB"
+        }
+      ]
+    },
+    "storage/innobase/handler/i_s.cc": {
+      "sha256": "97b5fd02f061f6706aa405645ecaa245c0411a4faf865a382c0cfaed2ff28057",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 4171,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 6301,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 6337,
+          "text": "{STRUCT_FLD(field_name,\t\t\"ZIP_PAGE_SIZE\"),"
+        },
+        {
+          "line": 6346,
+          "text": "{STRUCT_FLD(field_name,\t\t\"SPACE_TYPE\"),"
+        },
+        {
+          "line": 6896,
+          "text": "{STRUCT_FLD(field_name,\t\t\"INDEX_ID\"),"
+        },
+        {
+          "line": 6932,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_FIELDS\"),"
+        },
+        {
+          "line": 6941,
+          "text": "{STRUCT_FLD(field_name,\t\t\"PAGE_NO\"),"
+        },
+        {
+          "line": 7181,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7422,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7624,
+          "text": "{STRUCT_FLD(field_name,\t\t\"INDEX_ID\"),"
+        },
+        {
+          "line": 7642,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7865,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 8094,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 8333,
+          "text": "{STRUCT_FLD(field_name,\t\t\"PAGE_SIZE\"),"
+        },
+        {
+          "line": 8342,
+          "text": "{STRUCT_FLD(field_name,\t\t\"ZIP_PAGE_SIZE\"),"
+        },
+        {
+          "line": 8351,
+          "text": "{STRUCT_FLD(field_name,\t\t\"SPACE_TYPE\"),"
+        }
+      ]
+    },
+    "sql/json_binary.h": {
+      "sha256": "3f7a091a098c2e167f773ffa806b1f474f795299a780844cf74ae2ad9a759881",
+      "matches_5.7.44": false,
+      "definitions": []
+    },
+    "vio/viosslfactories.c": {
+      "sha256": "0e3147f9090f9b51f775af1472c5ccc7a9efbcd253e7bdc00dae6346a839c1ff",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 441,
+          "text": "const long tls_ctx_list[3]= {SSL_OP_NO_TLSv1, SSL_OP_NO_TLSv1_1, SSL_OP_NO_TLSv1_2};"
+        },
+        {
+          "line": 442,
+          "text": "long tls_ctx_flag= SSL_OP_NO_TLSv1|SSL_OP_NO_TLSv1_1|SSL_OP_NO_TLSv1_2;"
+        },
+        {
+          "line": 522,
+          "text": "| SSL_OP_NO_TLSv1_2"
+        }
+      ]
+    }
+  },
+  "5.7.28": {
+    "storage/innobase/include/fil0fil.h": {
+      "sha256": "44e4dc370e8cd75640605dd06c7cdcd3d994fb40bd6856fbe17612ae441497f4",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 456,
+          "text": "#define FIL_PAGE_OFFSET\t\t4\t/*!< page offset inside space */"
+        },
+        {
+          "line": 457,
+          "text": "#define FIL_PAGE_PREV\t\t8\t/*!< if there is a 'natural'"
+        },
+        {
+          "line": 464,
+          "text": "#define FIL_PAGE_NEXT\t\t12\t/*!< if there is a 'natural' successor"
+        },
+        {
+          "line": 474,
+          "text": "#define FIL_PAGE_LSN\t\t16\t/*!< lsn of the end of the newest"
+        },
+        {
+          "line": 476,
+          "text": "#define\tFIL_PAGE_TYPE\t\t24\t/*!< file page type: FIL_PAGE_INDEX,...,"
+        },
+        {
+          "line": 521,
+          "text": "#define FIL_PAGE_ARCH_LOG_NO_OR_SPACE_ID  34"
+        },
+        {
+          "line": 525,
+          "text": "#define FIL_PAGE_DATA\t\t38U\t/*!< start of the data on the page */"
+        },
+        {
+          "line": 533,
+          "text": "#define FIL_PAGE_DATA_END\t8\t/*!< size of the page trailer */"
+        },
+        {
+          "line": 537,
+          "text": "#define FIL_PAGE_INDEX\t\t17855\t/*!< B-tree node */"
+        },
+        {
+          "line": 543,
+          "text": "#define FIL_PAGE_TYPE_ALLOCATED\t0\t/*!< Freshly allocated page */"
+        },
+        {
+          "line": 545,
+          "text": "#define FIL_PAGE_TYPE_SYS\t6\t/*!< System page */"
+        },
+        {
+          "line": 546,
+          "text": "#define FIL_PAGE_TYPE_TRX_SYS\t7\t/*!< Transaction system data */"
+        },
+        {
+          "line": 547,
+          "text": "#define FIL_PAGE_TYPE_FSP_HDR\t8\t/*!< File space header */"
+        },
+        {
+          "line": 548,
+          "text": "#define FIL_PAGE_TYPE_XDES\t9\t/*!< Extent descriptor page */"
+        },
+        {
+          "line": 549,
+          "text": "#define FIL_PAGE_TYPE_BLOB\t10\t/*!< Uncompressed BLOB page */"
+        },
+        {
+          "line": 550,
+          "text": "#define FIL_PAGE_TYPE_ZBLOB\t11\t/*!< First compressed BLOB page */"
+        },
+        {
+          "line": 551,
+          "text": "#define FIL_PAGE_TYPE_ZBLOB2\t12\t/*!< Subsequent compressed BLOB page */"
+        },
+        {
+          "line": 552,
+          "text": "#define FIL_PAGE_TYPE_UNKNOWN\t13\t/*!< In old tablespaces, garbage"
+        },
+        {
+          "line": 562,
+          "text": "#define FIL_PAGE_TYPE_LAST\tFIL_PAGE_TYPE_UNKNOWN"
+        }
+      ]
+    },
+    "storage/innobase/include/fsp0fsp.h": {
+      "sha256": "0c7bca6feced963c3fdf3c35a595c472fade83516db41b3bc265f8205ac160ba",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 54,
+          "text": "#define FSP_HEADER_OFFSET\tFIL_PAGE_DATA"
+        },
+        {
+          "line": 68,
+          "text": "#define FSP_SPACE_ID\t\t0\t/* space id */"
+        },
+        {
+          "line": 73,
+          "text": "#define\tFSP_SIZE\t\t8\t/* Current size of the space in"
+        },
+        {
+          "line": 75,
+          "text": "#define\tFSP_FREE_LIMIT\t\t12\t/* Minimum page number for which the"
+        },
+        {
+          "line": 85,
+          "text": "#define\tFSP_SPACE_FLAGS\t\t16\t/* fsp_space_t.flags, similar to"
+        }
+      ]
+    },
+    "storage/innobase/include/fsp0types.h": {
+      "sha256": "0eb7b9a9cb5753bed6f092ad9a9e17683ad00f102bd8861361b0a79a87cf1f34",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 276,
+          "text": "#define FSP_FLAGS_POS_POST_ANTELOPE\t0"
+        },
+        {
+          "line": 278,
+          "text": "#define FSP_FLAGS_POS_ZIP_SSIZE\t\t(FSP_FLAGS_POS_POST_ANTELOPE\t\\"
+        },
+        {
+          "line": 281,
+          "text": "#define FSP_FLAGS_POS_ATOMIC_BLOBS\t(FSP_FLAGS_POS_ZIP_SSIZE\t\\"
+        },
+        {
+          "line": 284,
+          "text": "#define FSP_FLAGS_POS_PAGE_SSIZE\t(FSP_FLAGS_POS_ATOMIC_BLOBS\t\\"
+        },
+        {
+          "line": 287,
+          "text": "#define FSP_FLAGS_POS_DATA_DIR\t\t(FSP_FLAGS_POS_PAGE_SSIZE\t\\"
+        },
+        {
+          "line": 290,
+          "text": "#define FSP_FLAGS_POS_SHARED\t\t(FSP_FLAGS_POS_DATA_DIR\t\t\\"
+        },
+        {
+          "line": 293,
+          "text": "#define FSP_FLAGS_POS_TEMPORARY\t\t(FSP_FLAGS_POS_SHARED\t\t\\"
+        },
+        {
+          "line": 296,
+          "text": "#define FSP_FLAGS_POS_ENCRYPTION\t(FSP_FLAGS_POS_TEMPORARY\t\\"
+        },
+        {
+          "line": 299,
+          "text": "#define FSP_FLAGS_POS_UNUSED\t\t(FSP_FLAGS_POS_ENCRYPTION\t\\"
+        }
+      ]
+    },
+    "storage/innobase/include/rem0rec.h": {
+      "sha256": "78087499be45931b03dd1668cdf6097a7d90f23312c369659698e6b562c7ca15",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 72,
+          "text": "#define REC_NEW_HEAP_NO\t\t4"
+        }
+      ]
+    },
+    "storage/innobase/include/btr0types.h": {
+      "sha256": "edc7d6ed3a4e8b1cec3ee787d27fb437a81ca4c01932e0c4aa9292ff2d916393",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 61,
+          "text": "#define BTR_EXTERN_FIELD_REF_SIZE\tFIELD_REF_SIZE"
+        }
+      ]
+    },
+    "storage/innobase/btr/btr0cur.cc": {
+      "sha256": "82b7b3086295b7f0c40c0080aca8bd2df6221ba2d1a9c16567974909f46cd984",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 141,
+          "text": "#define BTR_BLOB_HDR_PART_LEN\t\t0\t/*!< BLOB part len on this"
+        },
+        {
+          "line": 143,
+          "text": "#define BTR_BLOB_HDR_NEXT_PAGE_NO\t4\t/*!< next BLOB part page no,"
+        },
+        {
+          "line": 146,
+          "text": "#define BTR_BLOB_HDR_SIZE\t\t8\t/*!< Size of a BLOB"
+        }
+      ]
+    },
+    "storage/innobase/handler/i_s.cc": {
+      "sha256": "7006cc12bb0694e5dfdb9d6baf560f81adb984844134236217b1c6826d409340",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 4216,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 6350,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 6386,
+          "text": "{STRUCT_FLD(field_name,\t\t\"ZIP_PAGE_SIZE\"),"
+        },
+        {
+          "line": 6395,
+          "text": "{STRUCT_FLD(field_name,\t\t\"SPACE_TYPE\"),"
+        },
+        {
+          "line": 6945,
+          "text": "{STRUCT_FLD(field_name,\t\t\"INDEX_ID\"),"
+        },
+        {
+          "line": 6981,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_FIELDS\"),"
+        },
+        {
+          "line": 6990,
+          "text": "{STRUCT_FLD(field_name,\t\t\"PAGE_NO\"),"
+        },
+        {
+          "line": 7230,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7471,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7673,
+          "text": "{STRUCT_FLD(field_name,\t\t\"INDEX_ID\"),"
+        },
+        {
+          "line": 7691,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7914,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 8143,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 8382,
+          "text": "{STRUCT_FLD(field_name,\t\t\"PAGE_SIZE\"),"
+        },
+        {
+          "line": 8391,
+          "text": "{STRUCT_FLD(field_name,\t\t\"ZIP_PAGE_SIZE\"),"
+        },
+        {
+          "line": 8400,
+          "text": "{STRUCT_FLD(field_name,\t\t\"SPACE_TYPE\"),"
+        }
+      ]
+    },
+    "sql/json_binary.h": {
+      "sha256": "916f3e17b836dcbc9b71613012b83d961adc61781d975b3108d161e4088849c0",
+      "matches_5.7.44": false,
+      "definitions": []
+    },
+    "vio/viosslfactories.c": {
+      "sha256": "43b802c4520137098586309bf9cd6314eae45be3ec9d39d27414ecf4d6d988e8",
+      "matches_5.7.44": false,
+      "definitions": [
+        {
+          "line": 458,
+          "text": "const long tls_ctx_list[3]= {SSL_OP_NO_TLSv1, SSL_OP_NO_TLSv1_1, SSL_OP_NO_TLSv1_2};"
+        },
+        {
+          "line": 459,
+          "text": "long tls_ctx_flag= SSL_OP_NO_TLSv1|SSL_OP_NO_TLSv1_1|SSL_OP_NO_TLSv1_2;"
+        },
+        {
+          "line": 536,
+          "text": "| SSL_OP_NO_TLSv1_2"
+        }
+      ]
+    }
+  },
+  "5.7.43": {
+    "storage/innobase/include/fil0fil.h": {
+      "sha256": "5330d86f8b0284b2e6e01069ffcb8e84e5f71d47fd1d8e09420274912d702465",
+      "matches_5.7.44": true,
+      "definitions": [
+        {
+          "line": 456,
+          "text": "#define FIL_PAGE_OFFSET\t\t4\t/*!< page offset inside space */"
+        },
+        {
+          "line": 457,
+          "text": "#define FIL_PAGE_PREV\t\t8\t/*!< if there is a 'natural'"
+        },
+        {
+          "line": 464,
+          "text": "#define FIL_PAGE_NEXT\t\t12\t/*!< if there is a 'natural' successor"
+        },
+        {
+          "line": 474,
+          "text": "#define FIL_PAGE_LSN\t\t16\t/*!< lsn of the end of the newest"
+        },
+        {
+          "line": 476,
+          "text": "#define\tFIL_PAGE_TYPE\t\t24\t/*!< file page type: FIL_PAGE_INDEX,...,"
+        },
+        {
+          "line": 521,
+          "text": "#define FIL_PAGE_ARCH_LOG_NO_OR_SPACE_ID  34"
+        },
+        {
+          "line": 525,
+          "text": "#define FIL_PAGE_DATA\t\t38U\t/*!< start of the data on the page */"
+        },
+        {
+          "line": 533,
+          "text": "#define FIL_PAGE_DATA_END\t8\t/*!< size of the page trailer */"
+        },
+        {
+          "line": 537,
+          "text": "#define FIL_PAGE_INDEX\t\t17855\t/*!< B-tree node */"
+        },
+        {
+          "line": 543,
+          "text": "#define FIL_PAGE_TYPE_ALLOCATED\t0\t/*!< Freshly allocated page */"
+        },
+        {
+          "line": 545,
+          "text": "#define FIL_PAGE_TYPE_SYS\t6\t/*!< System page */"
+        },
+        {
+          "line": 546,
+          "text": "#define FIL_PAGE_TYPE_TRX_SYS\t7\t/*!< Transaction system data */"
+        },
+        {
+          "line": 547,
+          "text": "#define FIL_PAGE_TYPE_FSP_HDR\t8\t/*!< File space header */"
+        },
+        {
+          "line": 548,
+          "text": "#define FIL_PAGE_TYPE_XDES\t9\t/*!< Extent descriptor page */"
+        },
+        {
+          "line": 549,
+          "text": "#define FIL_PAGE_TYPE_BLOB\t10\t/*!< Uncompressed BLOB page */"
+        },
+        {
+          "line": 550,
+          "text": "#define FIL_PAGE_TYPE_ZBLOB\t11\t/*!< First compressed BLOB page */"
+        },
+        {
+          "line": 551,
+          "text": "#define FIL_PAGE_TYPE_ZBLOB2\t12\t/*!< Subsequent compressed BLOB page */"
+        },
+        {
+          "line": 552,
+          "text": "#define FIL_PAGE_TYPE_UNKNOWN\t13\t/*!< In old tablespaces, garbage"
+        },
+        {
+          "line": 562,
+          "text": "#define FIL_PAGE_TYPE_LAST\tFIL_PAGE_TYPE_UNKNOWN"
+        }
+      ]
+    },
+    "storage/innobase/include/fsp0fsp.h": {
+      "sha256": "a6e6e1e45a9318d5d1abce2612e5b08cde965ca3ee3fbf875364fcffa9c35ce3",
+      "matches_5.7.44": true,
+      "definitions": [
+        {
+          "line": 54,
+          "text": "#define FSP_HEADER_OFFSET\tFIL_PAGE_DATA"
+        },
+        {
+          "line": 68,
+          "text": "#define FSP_SPACE_ID\t\t0\t/* space id */"
+        },
+        {
+          "line": 73,
+          "text": "#define\tFSP_SIZE\t\t8\t/* Current size of the space in"
+        },
+        {
+          "line": 75,
+          "text": "#define\tFSP_FREE_LIMIT\t\t12\t/* Minimum page number for which the"
+        },
+        {
+          "line": 85,
+          "text": "#define\tFSP_SPACE_FLAGS\t\t16\t/* fsp_space_t.flags, similar to"
+        }
+      ]
+    },
+    "storage/innobase/include/fsp0types.h": {
+      "sha256": "2e1d4a2142d04587b90c79776edf425ec3d6008962048f2f95df8c6eadf52872",
+      "matches_5.7.44": true,
+      "definitions": [
+        {
+          "line": 276,
+          "text": "#define FSP_FLAGS_POS_POST_ANTELOPE\t0"
+        },
+        {
+          "line": 278,
+          "text": "#define FSP_FLAGS_POS_ZIP_SSIZE\t\t(FSP_FLAGS_POS_POST_ANTELOPE\t\\"
+        },
+        {
+          "line": 281,
+          "text": "#define FSP_FLAGS_POS_ATOMIC_BLOBS\t(FSP_FLAGS_POS_ZIP_SSIZE\t\\"
+        },
+        {
+          "line": 284,
+          "text": "#define FSP_FLAGS_POS_PAGE_SSIZE\t(FSP_FLAGS_POS_ATOMIC_BLOBS\t\\"
+        },
+        {
+          "line": 287,
+          "text": "#define FSP_FLAGS_POS_DATA_DIR\t\t(FSP_FLAGS_POS_PAGE_SSIZE\t\\"
+        },
+        {
+          "line": 290,
+          "text": "#define FSP_FLAGS_POS_SHARED\t\t(FSP_FLAGS_POS_DATA_DIR\t\t\\"
+        },
+        {
+          "line": 293,
+          "text": "#define FSP_FLAGS_POS_TEMPORARY\t\t(FSP_FLAGS_POS_SHARED\t\t\\"
+        },
+        {
+          "line": 296,
+          "text": "#define FSP_FLAGS_POS_ENCRYPTION\t(FSP_FLAGS_POS_TEMPORARY\t\\"
+        },
+        {
+          "line": 299,
+          "text": "#define FSP_FLAGS_POS_UNUSED\t\t(FSP_FLAGS_POS_ENCRYPTION\t\\"
+        }
+      ]
+    },
+    "storage/innobase/include/rem0rec.h": {
+      "sha256": "c97dd84af5cb9b2239f6fae06a6e095a72145a8ecf030b2fcb4e814453d51529",
+      "matches_5.7.44": true,
+      "definitions": [
+        {
+          "line": 72,
+          "text": "#define REC_NEW_HEAP_NO\t\t4"
+        }
+      ]
+    },
+    "storage/innobase/include/btr0types.h": {
+      "sha256": "45f6d2cf27694d52ddadff5eed7a3f96b85d6e3de78cd41a9922b6435bd072c6",
+      "matches_5.7.44": true,
+      "definitions": [
+        {
+          "line": 61,
+          "text": "#define BTR_EXTERN_FIELD_REF_SIZE\tFIELD_REF_SIZE"
+        }
+      ]
+    },
+    "storage/innobase/btr/btr0cur.cc": {
+      "sha256": "a5067f0ade5ec11c1af08921c34459169507930620b8a4fb883240c5b2d7627f",
+      "matches_5.7.44": true,
+      "definitions": [
+        {
+          "line": 141,
+          "text": "#define BTR_BLOB_HDR_PART_LEN\t\t0\t/*!< BLOB part len on this"
+        },
+        {
+          "line": 143,
+          "text": "#define BTR_BLOB_HDR_NEXT_PAGE_NO\t4\t/*!< next BLOB part page no,"
+        },
+        {
+          "line": 146,
+          "text": "#define BTR_BLOB_HDR_SIZE\t\t8\t/*!< Size of a BLOB"
+        }
+      ]
+    },
+    "storage/innobase/handler/i_s.cc": {
+      "sha256": "016d28b54098b38df3b0b5075e8ee7ea11a89f4277d23f4d5ca4673d70b88fd5",
+      "matches_5.7.44": true,
+      "definitions": [
+        {
+          "line": 4264,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 6398,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 6434,
+          "text": "{STRUCT_FLD(field_name,\t\t\"ZIP_PAGE_SIZE\"),"
+        },
+        {
+          "line": 6443,
+          "text": "{STRUCT_FLD(field_name,\t\t\"SPACE_TYPE\"),"
+        },
+        {
+          "line": 6993,
+          "text": "{STRUCT_FLD(field_name,\t\t\"INDEX_ID\"),"
+        },
+        {
+          "line": 7029,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_FIELDS\"),"
+        },
+        {
+          "line": 7038,
+          "text": "{STRUCT_FLD(field_name,\t\t\"PAGE_NO\"),"
+        },
+        {
+          "line": 7278,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7519,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7721,
+          "text": "{STRUCT_FLD(field_name,\t\t\"INDEX_ID\"),"
+        },
+        {
+          "line": 7739,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7962,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 8191,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 8430,
+          "text": "{STRUCT_FLD(field_name,\t\t\"PAGE_SIZE\"),"
+        },
+        {
+          "line": 8439,
+          "text": "{STRUCT_FLD(field_name,\t\t\"ZIP_PAGE_SIZE\"),"
+        },
+        {
+          "line": 8448,
+          "text": "{STRUCT_FLD(field_name,\t\t\"SPACE_TYPE\"),"
+        }
+      ]
+    },
+    "sql/json_binary.h": {
+      "sha256": "dc87a4d6192da652078e7b03a1c8513f80b31830f04151a4cda1acd7206e265b",
+      "matches_5.7.44": true,
+      "definitions": []
+    },
+    "vio/viosslfactories.c": {
+      "sha256": "862880e814ca9994989a9a022213446d23609e9761f4281a3e1d122ba1ddbe75",
+      "matches_5.7.44": true,
+      "definitions": [
+        {
+          "line": 460,
+          "text": "const long tls_ctx_list[3]= {SSL_OP_NO_TLSv1, SSL_OP_NO_TLSv1_1, SSL_OP_NO_TLSv1_2};"
+        },
+        {
+          "line": 461,
+          "text": "long tls_ctx_flag= SSL_OP_NO_TLSv1|SSL_OP_NO_TLSv1_1|SSL_OP_NO_TLSv1_2;"
+        },
+        {
+          "line": 538,
+          "text": "| SSL_OP_NO_TLSv1_2"
+        }
+      ]
+    }
+  },
+  "5.7.44": {
+    "storage/innobase/include/fil0fil.h": {
+      "sha256": "5330d86f8b0284b2e6e01069ffcb8e84e5f71d47fd1d8e09420274912d702465",
+      "matches_5.7.44": true,
+      "definitions": [
+        {
+          "line": 456,
+          "text": "#define FIL_PAGE_OFFSET\t\t4\t/*!< page offset inside space */"
+        },
+        {
+          "line": 457,
+          "text": "#define FIL_PAGE_PREV\t\t8\t/*!< if there is a 'natural'"
+        },
+        {
+          "line": 464,
+          "text": "#define FIL_PAGE_NEXT\t\t12\t/*!< if there is a 'natural' successor"
+        },
+        {
+          "line": 474,
+          "text": "#define FIL_PAGE_LSN\t\t16\t/*!< lsn of the end of the newest"
+        },
+        {
+          "line": 476,
+          "text": "#define\tFIL_PAGE_TYPE\t\t24\t/*!< file page type: FIL_PAGE_INDEX,...,"
+        },
+        {
+          "line": 521,
+          "text": "#define FIL_PAGE_ARCH_LOG_NO_OR_SPACE_ID  34"
+        },
+        {
+          "line": 525,
+          "text": "#define FIL_PAGE_DATA\t\t38U\t/*!< start of the data on the page */"
+        },
+        {
+          "line": 533,
+          "text": "#define FIL_PAGE_DATA_END\t8\t/*!< size of the page trailer */"
+        },
+        {
+          "line": 537,
+          "text": "#define FIL_PAGE_INDEX\t\t17855\t/*!< B-tree node */"
+        },
+        {
+          "line": 543,
+          "text": "#define FIL_PAGE_TYPE_ALLOCATED\t0\t/*!< Freshly allocated page */"
+        },
+        {
+          "line": 545,
+          "text": "#define FIL_PAGE_TYPE_SYS\t6\t/*!< System page */"
+        },
+        {
+          "line": 546,
+          "text": "#define FIL_PAGE_TYPE_TRX_SYS\t7\t/*!< Transaction system data */"
+        },
+        {
+          "line": 547,
+          "text": "#define FIL_PAGE_TYPE_FSP_HDR\t8\t/*!< File space header */"
+        },
+        {
+          "line": 548,
+          "text": "#define FIL_PAGE_TYPE_XDES\t9\t/*!< Extent descriptor page */"
+        },
+        {
+          "line": 549,
+          "text": "#define FIL_PAGE_TYPE_BLOB\t10\t/*!< Uncompressed BLOB page */"
+        },
+        {
+          "line": 550,
+          "text": "#define FIL_PAGE_TYPE_ZBLOB\t11\t/*!< First compressed BLOB page */"
+        },
+        {
+          "line": 551,
+          "text": "#define FIL_PAGE_TYPE_ZBLOB2\t12\t/*!< Subsequent compressed BLOB page */"
+        },
+        {
+          "line": 552,
+          "text": "#define FIL_PAGE_TYPE_UNKNOWN\t13\t/*!< In old tablespaces, garbage"
+        },
+        {
+          "line": 562,
+          "text": "#define FIL_PAGE_TYPE_LAST\tFIL_PAGE_TYPE_UNKNOWN"
+        }
+      ]
+    },
+    "storage/innobase/include/fsp0fsp.h": {
+      "sha256": "a6e6e1e45a9318d5d1abce2612e5b08cde965ca3ee3fbf875364fcffa9c35ce3",
+      "matches_5.7.44": true,
+      "definitions": [
+        {
+          "line": 54,
+          "text": "#define FSP_HEADER_OFFSET\tFIL_PAGE_DATA"
+        },
+        {
+          "line": 68,
+          "text": "#define FSP_SPACE_ID\t\t0\t/* space id */"
+        },
+        {
+          "line": 73,
+          "text": "#define\tFSP_SIZE\t\t8\t/* Current size of the space in"
+        },
+        {
+          "line": 75,
+          "text": "#define\tFSP_FREE_LIMIT\t\t12\t/* Minimum page number for which the"
+        },
+        {
+          "line": 85,
+          "text": "#define\tFSP_SPACE_FLAGS\t\t16\t/* fsp_space_t.flags, similar to"
+        }
+      ]
+    },
+    "storage/innobase/include/fsp0types.h": {
+      "sha256": "2e1d4a2142d04587b90c79776edf425ec3d6008962048f2f95df8c6eadf52872",
+      "matches_5.7.44": true,
+      "definitions": [
+        {
+          "line": 276,
+          "text": "#define FSP_FLAGS_POS_POST_ANTELOPE\t0"
+        },
+        {
+          "line": 278,
+          "text": "#define FSP_FLAGS_POS_ZIP_SSIZE\t\t(FSP_FLAGS_POS_POST_ANTELOPE\t\\"
+        },
+        {
+          "line": 281,
+          "text": "#define FSP_FLAGS_POS_ATOMIC_BLOBS\t(FSP_FLAGS_POS_ZIP_SSIZE\t\\"
+        },
+        {
+          "line": 284,
+          "text": "#define FSP_FLAGS_POS_PAGE_SSIZE\t(FSP_FLAGS_POS_ATOMIC_BLOBS\t\\"
+        },
+        {
+          "line": 287,
+          "text": "#define FSP_FLAGS_POS_DATA_DIR\t\t(FSP_FLAGS_POS_PAGE_SSIZE\t\\"
+        },
+        {
+          "line": 290,
+          "text": "#define FSP_FLAGS_POS_SHARED\t\t(FSP_FLAGS_POS_DATA_DIR\t\t\\"
+        },
+        {
+          "line": 293,
+          "text": "#define FSP_FLAGS_POS_TEMPORARY\t\t(FSP_FLAGS_POS_SHARED\t\t\\"
+        },
+        {
+          "line": 296,
+          "text": "#define FSP_FLAGS_POS_ENCRYPTION\t(FSP_FLAGS_POS_TEMPORARY\t\\"
+        },
+        {
+          "line": 299,
+          "text": "#define FSP_FLAGS_POS_UNUSED\t\t(FSP_FLAGS_POS_ENCRYPTION\t\\"
+        }
+      ]
+    },
+    "storage/innobase/include/rem0rec.h": {
+      "sha256": "c97dd84af5cb9b2239f6fae06a6e095a72145a8ecf030b2fcb4e814453d51529",
+      "matches_5.7.44": true,
+      "definitions": [
+        {
+          "line": 72,
+          "text": "#define REC_NEW_HEAP_NO\t\t4"
+        }
+      ]
+    },
+    "storage/innobase/include/btr0types.h": {
+      "sha256": "45f6d2cf27694d52ddadff5eed7a3f96b85d6e3de78cd41a9922b6435bd072c6",
+      "matches_5.7.44": true,
+      "definitions": [
+        {
+          "line": 61,
+          "text": "#define BTR_EXTERN_FIELD_REF_SIZE\tFIELD_REF_SIZE"
+        }
+      ]
+    },
+    "storage/innobase/btr/btr0cur.cc": {
+      "sha256": "a5067f0ade5ec11c1af08921c34459169507930620b8a4fb883240c5b2d7627f",
+      "matches_5.7.44": true,
+      "definitions": [
+        {
+          "line": 141,
+          "text": "#define BTR_BLOB_HDR_PART_LEN\t\t0\t/*!< BLOB part len on this"
+        },
+        {
+          "line": 143,
+          "text": "#define BTR_BLOB_HDR_NEXT_PAGE_NO\t4\t/*!< next BLOB part page no,"
+        },
+        {
+          "line": 146,
+          "text": "#define BTR_BLOB_HDR_SIZE\t\t8\t/*!< Size of a BLOB"
+        }
+      ]
+    },
+    "storage/innobase/handler/i_s.cc": {
+      "sha256": "016d28b54098b38df3b0b5075e8ee7ea11a89f4277d23f4d5ca4673d70b88fd5",
+      "matches_5.7.44": true,
+      "definitions": [
+        {
+          "line": 4264,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 6398,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 6434,
+          "text": "{STRUCT_FLD(field_name,\t\t\"ZIP_PAGE_SIZE\"),"
+        },
+        {
+          "line": 6443,
+          "text": "{STRUCT_FLD(field_name,\t\t\"SPACE_TYPE\"),"
+        },
+        {
+          "line": 6993,
+          "text": "{STRUCT_FLD(field_name,\t\t\"INDEX_ID\"),"
+        },
+        {
+          "line": 7029,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_FIELDS\"),"
+        },
+        {
+          "line": 7038,
+          "text": "{STRUCT_FLD(field_name,\t\t\"PAGE_NO\"),"
+        },
+        {
+          "line": 7278,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7519,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7721,
+          "text": "{STRUCT_FLD(field_name,\t\t\"INDEX_ID\"),"
+        },
+        {
+          "line": 7739,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 7962,
+          "text": "{STRUCT_FLD(field_name,\t\t\"N_COLS\"),"
+        },
+        {
+          "line": 8191,
+          "text": "{STRUCT_FLD(field_name,\t\t\"POS\"),"
+        },
+        {
+          "line": 8430,
+          "text": "{STRUCT_FLD(field_name,\t\t\"PAGE_SIZE\"),"
+        },
+        {
+          "line": 8439,
+          "text": "{STRUCT_FLD(field_name,\t\t\"ZIP_PAGE_SIZE\"),"
+        },
+        {
+          "line": 8448,
+          "text": "{STRUCT_FLD(field_name,\t\t\"SPACE_TYPE\"),"
+        }
+      ]
+    },
+    "sql/json_binary.h": {
+      "sha256": "dc87a4d6192da652078e7b03a1c8513f80b31830f04151a4cda1acd7206e265b",
+      "matches_5.7.44": true,
+      "definitions": []
+    },
+    "vio/viosslfactories.c": {
+      "sha256": "862880e814ca9994989a9a022213446d23609e9761f4281a3e1d122ba1ddbe75",
+      "matches_5.7.44": true,
+      "definitions": [
+        {
+          "line": 460,
+          "text": "const long tls_ctx_list[3]= {SSL_OP_NO_TLSv1, SSL_OP_NO_TLSv1_1, SSL_OP_NO_TLSv1_2};"
+        },
+        {
+          "line": 461,
+          "text": "long tls_ctx_flag= SSL_OP_NO_TLSv1|SSL_OP_NO_TLSv1_1|SSL_OP_NO_TLSv1_2;"
+        },
+        {
+          "line": 538,
+          "text": "| SSL_OP_NO_TLSv1_2"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.11",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "columns": [
+    {
+      "name": "id",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "ti",
+      "type": "tinyint",
+      "extra": ""
+    },
+    {
+      "name": "sm",
+      "type": "smallint",
+      "extra": ""
+    },
+    {
+      "name": "med",
+      "type": "mediumint",
+      "extra": ""
+    },
+    {
+      "name": "si",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "bi",
+      "type": "bigint",
+      "extra": ""
+    },
+    {
+      "name": "bu",
+      "type": "bigint",
+      "extra": ""
+    },
+    {
+      "name": "d",
+      "type": "decimal",
+      "extra": ""
+    },
+    {
+      "name": "f",
+      "type": "float",
+      "extra": ""
+    },
+    {
+      "name": "x",
+      "type": "double",
+      "extra": ""
+    },
+    {
+      "name": "bits",
+      "type": "bit",
+      "extra": ""
+    },
+    {
+      "name": "y",
+      "type": "year",
+      "extra": ""
+    },
+    {
+      "name": "dt",
+      "type": "date",
+      "extra": ""
+    },
+    {
+      "name": "tm",
+      "type": "time",
+      "extra": ""
+    },
+    {
+      "name": "ts",
+      "type": "timestamp",
+      "extra": ""
+    },
+    {
+      "name": "dd",
+      "type": "datetime",
+      "extra": ""
+    },
+    {
+      "name": "ch",
+      "type": "char",
+      "extra": ""
+    },
+    {
+      "name": "v",
+      "type": "varchar",
+      "extra": ""
+    },
+    {
+      "name": "b",
+      "type": "binary",
+      "extra": ""
+    },
+    {
+      "name": "vb",
+      "type": "varbinary",
+      "extra": ""
+    },
+    {
+      "name": "e",
+      "type": "enum",
+      "extra": ""
+    },
+    {
+      "name": "s",
+      "type": "set",
+      "extra": ""
+    },
+    {
+      "name": "j",
+      "type": "json",
+      "extra": ""
+    },
+    {
+      "name": "g",
+      "type": "point",
+      "extra": ""
+    }
+  ],
+  "indexes": [
+    {
+      "name": "PRIMARY",
+      "index_id": 156,
+      "space_id": 14,
+      "root_page": 4
+    }
+  ],
+  "table": "scalar_dynamic",
+  "database": "innodb_reader_80_badc3f8b27d8"
+}

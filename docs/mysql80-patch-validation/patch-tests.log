@@ -1,0 +1,860 @@
+=== RUN   TestMetadataFixtures
+=== RUN   TestMetadataFixtures/testdata/mysql8045/boundary_rows.ibd
+=== RUN   TestMetadataFixtures/testdata/mysql8045/directory_rows.ibd
+=== RUN   TestMetadataFixtures/testdata/mysql8045/empty_rows.ibd
+=== RUN   TestMetadataFixtures/testdata/mysql8045/lesson_rows.ibd
+=== RUN   TestMetadataFixtures/testdata/mysql8045/null_bitmap_rows.ibd
+=== RUN   TestMetadataFixtures/testdata/mysql8045/single_row.ibd
+=== RUN   TestMetadataFixtures/testdata/mysql8045/variable_rows.ibd
+=== RUN   TestMetadataFixtures/testdata/bits/bit_mixed.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/bits/bit_tree.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/bits/bit_widths.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_external.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_mixed.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_tree.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_1.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_105.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_113.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_121.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_129.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_137.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_145.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_153.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_161.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_169.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_17.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_177.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_185.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_193.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_201.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_209.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_217.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_225.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_233.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_241.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_249.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_25.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_33.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_41.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_49.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_57.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_65.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_73.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_81.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_89.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_9.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/chars/char_widths_97.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/dates/date_components.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/dates/date_mixed.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/dates/date_values.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/dates/year_values.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/datetimes/datetime_fsp_0.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/datetimes/datetime_fsp_1.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/datetimes/datetime_fsp_2.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/datetimes/datetime_fsp_3.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/datetimes/datetime_fsp_4.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/datetimes/datetime_fsp_5.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/datetimes/datetime_fsp_6.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/datetimes/datetime_mixed.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/datetimes/datetime_tree.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_lesson.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_matrix_0.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_matrix_1.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_matrix_10.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_matrix_11.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_matrix_12.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_matrix_13.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_matrix_14.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_matrix_15.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_matrix_2.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_matrix_3.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_matrix_4.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_matrix_5.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_matrix_6.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_matrix_7.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_matrix_8.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_matrix_9.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_tree.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/decimal/decimal_unsigned.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/enums/enum_1.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/enums/enum_255.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/enums/enum_256.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/enums/enum_65535.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/enums/enum_labels.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/enums/enum_mixed.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/enums/enum_tree.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_mixed.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_tree.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_widths_1.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_widths_113.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_widths_129.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_widths_145.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_widths_161.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_widths_17.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_widths_177.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_widths_193.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_widths_209.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_widths_225.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_widths_241.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_widths_33.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_widths_49.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_widths_65.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_widths_81.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/fixed_binary/binary_widths_97.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/floating/double_values.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/floating/float_mixed.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/floating/float_tree.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/floating/float_values.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/integers/bigint_signed.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/integers/bigint_unsigned.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/integers/int_signed.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/integers/int_unsigned.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/integers/mediumint_signed.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/integers/mediumint_unsigned.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/integers/smallint_signed.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/integers/smallint_unsigned.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/integers/tinyint_signed.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/integers/tinyint_unsigned.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/large_lob/all_lob_types.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/large_lob/large_text.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/large_lob/long_limit.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/large_lob/long_over_limit.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/large_lob/medium_index.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/large_lob/text_blob.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/lob/lob_mixed_tree.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/lob/lob_sizes.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/lob/lob_text.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/sets/set_labels.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/sets/set_mixed.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/sets/set_tree.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/sets/set_widths.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/times/time_fsp_0.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/times/time_fsp_1.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/times/time_fsp_2.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/times/time_fsp_3.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/times/time_fsp_4.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/times/time_fsp_5.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/times/time_fsp_6.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/times/time_mixed.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/times/time_tree.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/timestamps/timestamp_fsp_0.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/timestamps/timestamp_fsp_1.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/timestamps/timestamp_fsp_2.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/timestamps/timestamp_fsp_3.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/timestamps/timestamp_fsp_4.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/timestamps/timestamp_fsp_5.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/timestamps/timestamp_fsp_6.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/timestamps/timestamp_mixed.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/timestamps/timestamp_tree.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/timestamps/timestamp_zones.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/trees/deep_rows.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/trees/ordered_rows.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/trees/shuffled_rows.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/variable/bitmap_rows.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/variable/empty_variable.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/variable/external_binary.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/variable/external_text.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/variable/large_declared.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/variable/length_rows.ibd.gz
+=== RUN   TestMetadataFixtures/testdata/variable/variable_tree.ibd.gz
+--- PASS: TestMetadataFixtures (1.34s)
+    --- PASS: TestMetadataFixtures/testdata/mysql8045/boundary_rows.ibd (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/mysql8045/directory_rows.ibd (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/mysql8045/empty_rows.ibd (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/mysql8045/lesson_rows.ibd (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/mysql8045/null_bitmap_rows.ibd (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/mysql8045/single_row.ibd (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/mysql8045/variable_rows.ibd (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/bits/bit_mixed.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/bits/bit_tree.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/bits/bit_widths.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_external.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_mixed.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_tree.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_1.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_105.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_113.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_121.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_129.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_137.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_145.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_153.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_161.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_169.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_17.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_177.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_185.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_193.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_201.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_209.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_217.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_225.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_233.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_241.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_249.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_25.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_33.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_41.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_49.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_57.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_65.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_73.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_81.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_89.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_9.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/chars/char_widths_97.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/dates/date_components.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/dates/date_mixed.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/dates/date_values.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/dates/year_values.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/datetimes/datetime_fsp_0.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/datetimes/datetime_fsp_1.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/datetimes/datetime_fsp_2.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/datetimes/datetime_fsp_3.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/datetimes/datetime_fsp_4.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/datetimes/datetime_fsp_5.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/datetimes/datetime_fsp_6.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/datetimes/datetime_mixed.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/datetimes/datetime_tree.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_lesson.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_matrix_0.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_matrix_1.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_matrix_10.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_matrix_11.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_matrix_12.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_matrix_13.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_matrix_14.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_matrix_15.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_matrix_2.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_matrix_3.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_matrix_4.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_matrix_5.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_matrix_6.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_matrix_7.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_matrix_8.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_matrix_9.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_tree.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/decimal/decimal_unsigned.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/enums/enum_1.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/enums/enum_255.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/enums/enum_256.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/enums/enum_65535.ibd.gz (0.51s)
+    --- PASS: TestMetadataFixtures/testdata/enums/enum_labels.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/enums/enum_mixed.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/enums/enum_tree.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_mixed.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_tree.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_widths_1.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_widths_113.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_widths_129.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_widths_145.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_widths_161.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_widths_17.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_widths_177.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_widths_193.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_widths_209.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_widths_225.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_widths_241.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_widths_33.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_widths_49.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_widths_65.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_widths_81.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/fixed_binary/binary_widths_97.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/floating/double_values.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/floating/float_mixed.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/floating/float_tree.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/floating/float_values.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/integers/bigint_signed.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/integers/bigint_unsigned.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/integers/int_signed.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/integers/int_unsigned.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/integers/mediumint_signed.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/integers/mediumint_unsigned.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/integers/smallint_signed.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/integers/smallint_unsigned.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/integers/tinyint_signed.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/integers/tinyint_unsigned.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/large_lob/all_lob_types.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/large_lob/large_text.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/large_lob/long_limit.ibd.gz (0.03s)
+    --- PASS: TestMetadataFixtures/testdata/large_lob/long_over_limit.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/large_lob/medium_index.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/large_lob/text_blob.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/lob/lob_mixed_tree.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/lob/lob_sizes.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/lob/lob_text.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/sets/set_labels.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/sets/set_mixed.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/sets/set_tree.ibd.gz (0.01s)
+    --- PASS: TestMetadataFixtures/testdata/sets/set_widths.ibd.gz (0.03s)
+    --- PASS: TestMetadataFixtures/testdata/times/time_fsp_0.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/times/time_fsp_1.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/times/time_fsp_2.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/times/time_fsp_3.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/times/time_fsp_4.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/times/time_fsp_5.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/times/time_fsp_6.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/times/time_mixed.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/times/time_tree.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/timestamps/timestamp_fsp_0.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/timestamps/timestamp_fsp_1.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/timestamps/timestamp_fsp_2.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/timestamps/timestamp_fsp_3.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/timestamps/timestamp_fsp_4.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/timestamps/timestamp_fsp_5.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/timestamps/timestamp_fsp_6.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/timestamps/timestamp_mixed.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/timestamps/timestamp_tree.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/timestamps/timestamp_zones.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/trees/deep_rows.ibd.gz (0.19s)
+    --- PASS: TestMetadataFixtures/testdata/trees/ordered_rows.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/trees/shuffled_rows.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/variable/bitmap_rows.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/variable/empty_variable.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/variable/external_binary.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/variable/external_text.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/variable/large_declared.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/variable/length_rows.ibd.gz (0.00s)
+    --- PASS: TestMetadataFixtures/testdata/variable/variable_tree.ibd.gz (0.01s)
+=== RUN   TestMetadataDynamicVersion
+=== RUN   TestMetadataDynamicVersion/absent
+=== RUN   TestMetadataDynamicVersion/autoinc-only
+=== RUN   TestMetadataDynamicVersion/zero
+=== RUN   TestMetadataDynamicVersion/nonzero
+=== RUN   TestMetadataDynamicVersion/above-row-version-limit
+=== RUN   TestMetadataDynamicVersion/uint64-max
+=== RUN   TestMetadataDynamicVersion/empty
+=== RUN   TestMetadataDynamicVersion/negative
+=== RUN   TestMetadataDynamicVersion/signed
+=== RUN   TestMetadataDynamicVersion/fraction
+=== RUN   TestMetadataDynamicVersion/nondecimal
+=== RUN   TestMetadataDynamicVersion/overflow
+=== RUN   TestMetadataDynamicVersion/duplicate
+=== RUN   TestMetadataDynamicVersion/unknown
+=== RUN   TestMetadataDynamicVersion/old-instant
+--- PASS: TestMetadataDynamicVersion (0.01s)
+    --- PASS: TestMetadataDynamicVersion/absent (0.00s)
+    --- PASS: TestMetadataDynamicVersion/autoinc-only (0.00s)
+    --- PASS: TestMetadataDynamicVersion/zero (0.00s)
+    --- PASS: TestMetadataDynamicVersion/nonzero (0.00s)
+    --- PASS: TestMetadataDynamicVersion/above-row-version-limit (0.00s)
+    --- PASS: TestMetadataDynamicVersion/uint64-max (0.00s)
+    --- PASS: TestMetadataDynamicVersion/empty (0.00s)
+    --- PASS: TestMetadataDynamicVersion/negative (0.00s)
+    --- PASS: TestMetadataDynamicVersion/signed (0.00s)
+    --- PASS: TestMetadataDynamicVersion/fraction (0.00s)
+    --- PASS: TestMetadataDynamicVersion/nondecimal (0.00s)
+    --- PASS: TestMetadataDynamicVersion/overflow (0.00s)
+    --- PASS: TestMetadataDynamicVersion/duplicate (0.00s)
+    --- PASS: TestMetadataDynamicVersion/unknown (0.00s)
+    --- PASS: TestMetadataDynamicVersion/old-instant (0.00s)
+=== RUN   TestMetadataRejections
+=== RUN   TestMetadataRejections/version
+=== RUN   TestMetadataRejections/engine
+=== RUN   TestMetadataRejections/instant
+=== RUN   TestMetadataRejections/internal-hidden-generated
+=== RUN   TestMetadataRejections/json-invalid-collation-capacity
+=== RUN   TestMetadataRejections/charset
+=== RUN   TestMetadataRejections/missing-nullable
+=== RUN   TestMetadataRejections/root
+=== RUN   TestMetadataRejections/index-id
+=== RUN   TestMetadataRejections/column-opx
+=== RUN   TestMetadataRejections/invalid-order
+=== RUN   TestMetadataRejections/physical-order
+--- PASS: TestMetadataRejections (0.01s)
+    --- PASS: TestMetadataRejections/version (0.00s)
+    --- PASS: TestMetadataRejections/engine (0.00s)
+    --- PASS: TestMetadataRejections/instant (0.00s)
+    --- PASS: TestMetadataRejections/internal-hidden-generated (0.00s)
+    --- PASS: TestMetadataRejections/json-invalid-collation-capacity (0.00s)
+    --- PASS: TestMetadataRejections/charset (0.00s)
+    --- PASS: TestMetadataRejections/missing-nullable (0.00s)
+    --- PASS: TestMetadataRejections/root (0.00s)
+    --- PASS: TestMetadataRejections/index-id (0.00s)
+    --- PASS: TestMetadataRejections/column-opx (0.00s)
+    --- PASS: TestMetadataRejections/invalid-order (0.00s)
+    --- PASS: TestMetadataRejections/physical-order (0.00s)
+=== RUN   TestMetadataProperties
+--- PASS: TestMetadataProperties (0.00s)
+=== RUN   TestMetadataDictionary
+--- PASS: TestMetadataDictionary (0.00s)
+=== RUN   TestMetadataSecondaryReport
+--- PASS: TestMetadataSecondaryReport (0.00s)
+=== RUN   TestMetadataLifecycle
+=== RUN   TestMetadataLifecycle/baseline
+=== RUN   TestMetadataLifecycle/added
+=== RUN   TestMetadataLifecycle/dropped
+=== RUN   TestMetadataLifecycle/recreated
+=== RUN   TestMetadataLifecycle/final
+--- PASS: TestMetadataLifecycle (0.01s)
+    --- PASS: TestMetadataLifecycle/baseline (0.00s)
+    --- PASS: TestMetadataLifecycle/added (0.00s)
+    --- PASS: TestMetadataLifecycle/dropped (0.00s)
+    --- PASS: TestMetadataLifecycle/recreated (0.00s)
+    --- PASS: TestMetadataLifecycle/final (0.00s)
+=== RUN   TestMetadataMovedRoot
+--- PASS: TestMetadataMovedRoot (0.00s)
+=== RUN   TestMySQL80PatchFixtures
+=== RUN   TestMySQL80PatchFixtures/8.0.11/scalar_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.11/lob_dynamic_insert
+=== RUN   TestMySQL80PatchFixtures/8.0.11/lob_dynamic_small_update
+=== RUN   TestMySQL80PatchFixtures/8.0.11/lob_dynamic_replace_delete
+=== RUN   TestMySQL80PatchFixtures/8.0.11/secondary_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.11/hidden_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.11/generated_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.11/tree_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.11/scalar_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.11/lob_compact_insert
+=== RUN   TestMySQL80PatchFixtures/8.0.11/lob_compact_small_update
+=== RUN   TestMySQL80PatchFixtures/8.0.11/lob_compact_replace_delete
+=== RUN   TestMySQL80PatchFixtures/8.0.11/secondary_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.11/hidden_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.11/generated_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.11/tree_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/scalar_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/lob_dynamic_insert
+=== RUN   TestMySQL80PatchFixtures/8.0.12/lob_dynamic_small_update
+=== RUN   TestMySQL80PatchFixtures/8.0.12/lob_dynamic_replace_delete
+=== RUN   TestMySQL80PatchFixtures/8.0.12/secondary_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/hidden_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/generated_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/tree_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/instant_dynamic_add
+=== RUN   TestMySQL80PatchFixtures/8.0.12/instant_dynamic_mixed
+=== RUN   TestMySQL80PatchFixtures/8.0.12/instant_dynamic_rebuilt
+=== RUN   TestMySQL80PatchFixtures/8.0.12/wide_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/instant_hidden_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/instant_virtual_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/instant_defaults_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/instant_tree_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/scalar_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/lob_compact_insert
+=== RUN   TestMySQL80PatchFixtures/8.0.12/lob_compact_small_update
+=== RUN   TestMySQL80PatchFixtures/8.0.12/lob_compact_replace_delete
+=== RUN   TestMySQL80PatchFixtures/8.0.12/secondary_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/hidden_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/generated_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/tree_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/instant_compact_add
+=== RUN   TestMySQL80PatchFixtures/8.0.12/instant_compact_mixed
+=== RUN   TestMySQL80PatchFixtures/8.0.12/instant_compact_rebuilt
+=== RUN   TestMySQL80PatchFixtures/8.0.12/wide_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/instant_hidden_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/instant_virtual_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/instant_defaults_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.12/instant_tree_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/scalar_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/lob_dynamic_insert
+=== RUN   TestMySQL80PatchFixtures/8.0.16/lob_dynamic_small_update
+=== RUN   TestMySQL80PatchFixtures/8.0.16/lob_dynamic_replace_delete
+=== RUN   TestMySQL80PatchFixtures/8.0.16/secondary_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/hidden_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/generated_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/tree_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/instant_dynamic_add
+=== RUN   TestMySQL80PatchFixtures/8.0.16/instant_dynamic_mixed
+=== RUN   TestMySQL80PatchFixtures/8.0.16/instant_dynamic_rebuilt
+=== RUN   TestMySQL80PatchFixtures/8.0.16/wide_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/instant_hidden_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/instant_virtual_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/instant_defaults_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/instant_tree_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/scalar_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/lob_compact_insert
+=== RUN   TestMySQL80PatchFixtures/8.0.16/lob_compact_small_update
+=== RUN   TestMySQL80PatchFixtures/8.0.16/lob_compact_replace_delete
+=== RUN   TestMySQL80PatchFixtures/8.0.16/secondary_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/hidden_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/generated_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/tree_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/instant_compact_add
+=== RUN   TestMySQL80PatchFixtures/8.0.16/instant_compact_mixed
+=== RUN   TestMySQL80PatchFixtures/8.0.16/instant_compact_rebuilt
+=== RUN   TestMySQL80PatchFixtures/8.0.16/wide_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/instant_hidden_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/instant_virtual_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/instant_defaults_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.16/instant_tree_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/scalar_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/lob_dynamic_insert
+=== RUN   TestMySQL80PatchFixtures/8.0.19/lob_dynamic_small_update
+=== RUN   TestMySQL80PatchFixtures/8.0.19/lob_dynamic_replace_delete
+=== RUN   TestMySQL80PatchFixtures/8.0.19/secondary_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/hidden_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/generated_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/tree_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/instant_dynamic_add
+=== RUN   TestMySQL80PatchFixtures/8.0.19/instant_dynamic_mixed
+=== RUN   TestMySQL80PatchFixtures/8.0.19/instant_dynamic_rebuilt
+=== RUN   TestMySQL80PatchFixtures/8.0.19/wide_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/instant_hidden_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/instant_virtual_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/instant_defaults_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/instant_tree_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/scalar_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/lob_compact_insert
+=== RUN   TestMySQL80PatchFixtures/8.0.19/lob_compact_small_update
+=== RUN   TestMySQL80PatchFixtures/8.0.19/lob_compact_replace_delete
+=== RUN   TestMySQL80PatchFixtures/8.0.19/secondary_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/hidden_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/generated_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/tree_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/instant_compact_add
+=== RUN   TestMySQL80PatchFixtures/8.0.19/instant_compact_mixed
+=== RUN   TestMySQL80PatchFixtures/8.0.19/instant_compact_rebuilt
+=== RUN   TestMySQL80PatchFixtures/8.0.19/wide_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/instant_hidden_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/instant_virtual_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/instant_defaults_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.19/instant_tree_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/scalar_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/lob_dynamic_insert
+=== RUN   TestMySQL80PatchFixtures/8.0.23/lob_dynamic_small_update
+=== RUN   TestMySQL80PatchFixtures/8.0.23/lob_dynamic_replace_delete
+=== RUN   TestMySQL80PatchFixtures/8.0.23/secondary_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/hidden_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/generated_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/tree_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/instant_dynamic_add
+=== RUN   TestMySQL80PatchFixtures/8.0.23/instant_dynamic_mixed
+=== RUN   TestMySQL80PatchFixtures/8.0.23/instant_dynamic_rebuilt
+=== RUN   TestMySQL80PatchFixtures/8.0.23/wide_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/instant_hidden_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/instant_virtual_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/instant_defaults_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/instant_tree_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/invisible_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/scalar_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/lob_compact_insert
+=== RUN   TestMySQL80PatchFixtures/8.0.23/lob_compact_small_update
+=== RUN   TestMySQL80PatchFixtures/8.0.23/lob_compact_replace_delete
+=== RUN   TestMySQL80PatchFixtures/8.0.23/secondary_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/hidden_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/generated_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/tree_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/instant_compact_add
+=== RUN   TestMySQL80PatchFixtures/8.0.23/instant_compact_mixed
+=== RUN   TestMySQL80PatchFixtures/8.0.23/instant_compact_rebuilt
+=== RUN   TestMySQL80PatchFixtures/8.0.23/wide_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/instant_hidden_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/instant_virtual_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/instant_defaults_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/instant_tree_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.23/invisible_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/scalar_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/lob_dynamic_insert
+=== RUN   TestMySQL80PatchFixtures/8.0.28/lob_dynamic_small_update
+=== RUN   TestMySQL80PatchFixtures/8.0.28/lob_dynamic_replace_delete
+=== RUN   TestMySQL80PatchFixtures/8.0.28/secondary_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/hidden_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/generated_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/tree_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/instant_dynamic_add
+=== RUN   TestMySQL80PatchFixtures/8.0.28/instant_dynamic_mixed
+=== RUN   TestMySQL80PatchFixtures/8.0.28/instant_dynamic_rebuilt
+=== RUN   TestMySQL80PatchFixtures/8.0.28/wide_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/instant_hidden_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/instant_virtual_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/instant_defaults_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/instant_tree_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/invisible_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/scalar_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/lob_compact_insert
+=== RUN   TestMySQL80PatchFixtures/8.0.28/lob_compact_small_update
+=== RUN   TestMySQL80PatchFixtures/8.0.28/lob_compact_replace_delete
+=== RUN   TestMySQL80PatchFixtures/8.0.28/secondary_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/hidden_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/generated_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/tree_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/instant_compact_add
+=== RUN   TestMySQL80PatchFixtures/8.0.28/instant_compact_mixed
+=== RUN   TestMySQL80PatchFixtures/8.0.28/instant_compact_rebuilt
+=== RUN   TestMySQL80PatchFixtures/8.0.28/wide_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/instant_hidden_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/instant_virtual_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/instant_defaults_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/instant_tree_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.28/invisible_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/scalar_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/lob_dynamic_insert
+=== RUN   TestMySQL80PatchFixtures/8.0.30/lob_dynamic_small_update
+=== RUN   TestMySQL80PatchFixtures/8.0.30/lob_dynamic_replace_delete
+=== RUN   TestMySQL80PatchFixtures/8.0.30/secondary_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/hidden_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/generated_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/tree_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/instant_dynamic_add
+=== RUN   TestMySQL80PatchFixtures/8.0.30/instant_dynamic_mixed
+=== RUN   TestMySQL80PatchFixtures/8.0.30/instant_dynamic_rebuilt
+=== RUN   TestMySQL80PatchFixtures/8.0.30/wide_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/instant_hidden_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/instant_virtual_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/instant_defaults_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/instant_tree_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/invisible_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/drop_dynamic_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/scalar_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/lob_compact_insert
+=== RUN   TestMySQL80PatchFixtures/8.0.30/lob_compact_small_update
+=== RUN   TestMySQL80PatchFixtures/8.0.30/lob_compact_replace_delete
+=== RUN   TestMySQL80PatchFixtures/8.0.30/secondary_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/hidden_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/generated_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/tree_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/instant_compact_add
+=== RUN   TestMySQL80PatchFixtures/8.0.30/instant_compact_mixed
+=== RUN   TestMySQL80PatchFixtures/8.0.30/instant_compact_rebuilt
+=== RUN   TestMySQL80PatchFixtures/8.0.30/wide_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/instant_hidden_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/instant_virtual_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/instant_defaults_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/instant_tree_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/invisible_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/drop_compact_current
+=== RUN   TestMySQL80PatchFixtures/8.0.30/gipk_current
+=== NAME  TestMySQL80PatchFixtures
+    mysql80_patch_test.go:198: SQL patch coverage: 217 fixtures, 13581 rows, 28 secondary indexes
+--- PASS: TestMySQL80PatchFixtures (2.99s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.11/scalar_dynamic_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.11/lob_dynamic_insert (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.11/lob_dynamic_small_update (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.11/lob_dynamic_replace_delete (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.11/secondary_dynamic_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.11/hidden_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.11/generated_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.11/tree_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.11/scalar_compact_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.11/lob_compact_insert (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.11/lob_compact_small_update (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.11/lob_compact_replace_delete (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.11/secondary_compact_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.11/hidden_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.11/generated_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.11/tree_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/scalar_dynamic_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/lob_dynamic_insert (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/lob_dynamic_small_update (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/lob_dynamic_replace_delete (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/secondary_dynamic_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/hidden_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/generated_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/tree_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/instant_dynamic_add (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/instant_dynamic_mixed (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/instant_dynamic_rebuilt (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/wide_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/instant_hidden_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/instant_virtual_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/instant_defaults_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/instant_tree_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/scalar_compact_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/lob_compact_insert (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/lob_compact_small_update (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/lob_compact_replace_delete (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/secondary_compact_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/hidden_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/generated_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/tree_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/instant_compact_add (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/instant_compact_mixed (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/instant_compact_rebuilt (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/wide_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/instant_hidden_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/instant_virtual_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/instant_defaults_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.12/instant_tree_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/scalar_dynamic_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/lob_dynamic_insert (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/lob_dynamic_small_update (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/lob_dynamic_replace_delete (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/secondary_dynamic_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/hidden_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/generated_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/tree_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/instant_dynamic_add (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/instant_dynamic_mixed (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/instant_dynamic_rebuilt (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/wide_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/instant_hidden_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/instant_virtual_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/instant_defaults_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/instant_tree_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/scalar_compact_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/lob_compact_insert (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/lob_compact_small_update (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/lob_compact_replace_delete (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/secondary_compact_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/hidden_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/generated_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/tree_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/instant_compact_add (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/instant_compact_mixed (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/instant_compact_rebuilt (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/wide_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/instant_hidden_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/instant_virtual_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/instant_defaults_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.16/instant_tree_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/scalar_dynamic_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/lob_dynamic_insert (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/lob_dynamic_small_update (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/lob_dynamic_replace_delete (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/secondary_dynamic_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/hidden_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/generated_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/tree_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/instant_dynamic_add (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/instant_dynamic_mixed (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/instant_dynamic_rebuilt (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/wide_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/instant_hidden_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/instant_virtual_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/instant_defaults_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/instant_tree_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/scalar_compact_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/lob_compact_insert (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/lob_compact_small_update (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/lob_compact_replace_delete (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/secondary_compact_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/hidden_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/generated_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/tree_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/instant_compact_add (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/instant_compact_mixed (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/instant_compact_rebuilt (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/wide_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/instant_hidden_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/instant_virtual_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/instant_defaults_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.19/instant_tree_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/scalar_dynamic_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/lob_dynamic_insert (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/lob_dynamic_small_update (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/lob_dynamic_replace_delete (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/secondary_dynamic_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/hidden_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/generated_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/tree_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/instant_dynamic_add (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/instant_dynamic_mixed (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/instant_dynamic_rebuilt (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/wide_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/instant_hidden_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/instant_virtual_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/instant_defaults_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/instant_tree_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/invisible_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/scalar_compact_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/lob_compact_insert (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/lob_compact_small_update (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/lob_compact_replace_delete (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/secondary_compact_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/hidden_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/generated_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/tree_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/instant_compact_add (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/instant_compact_mixed (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/instant_compact_rebuilt (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/wide_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/instant_hidden_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/instant_virtual_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/instant_defaults_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/instant_tree_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.23/invisible_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/scalar_dynamic_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/lob_dynamic_insert (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/lob_dynamic_small_update (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/lob_dynamic_replace_delete (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/secondary_dynamic_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/hidden_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/generated_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/tree_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/instant_dynamic_add (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/instant_dynamic_mixed (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/instant_dynamic_rebuilt (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/wide_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/instant_hidden_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/instant_virtual_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/instant_defaults_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/instant_tree_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/invisible_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/scalar_compact_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/lob_compact_insert (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/lob_compact_small_update (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/lob_compact_replace_delete (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/secondary_compact_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/hidden_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/generated_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/tree_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/instant_compact_add (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/instant_compact_mixed (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/instant_compact_rebuilt (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/wide_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/instant_hidden_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/instant_virtual_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/instant_defaults_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/instant_tree_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.28/invisible_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/scalar_dynamic_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/lob_dynamic_insert (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/lob_dynamic_small_update (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/lob_dynamic_replace_delete (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/secondary_dynamic_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/hidden_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/generated_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/tree_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/instant_dynamic_add (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/instant_dynamic_mixed (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/instant_dynamic_rebuilt (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/wide_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/instant_hidden_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/instant_virtual_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/instant_defaults_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/instant_tree_dynamic_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/invisible_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/drop_dynamic_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/scalar_compact_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/lob_compact_insert (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/lob_compact_small_update (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/lob_compact_replace_delete (0.02s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/secondary_compact_current (0.01s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/hidden_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/generated_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/tree_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/instant_compact_add (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/instant_compact_mixed (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/instant_compact_rebuilt (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/wide_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/instant_hidden_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/instant_virtual_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/instant_defaults_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/instant_tree_compact_current (0.04s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/invisible_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/drop_compact_current (0.00s)
+    --- PASS: TestMySQL80PatchFixtures/8.0.30/gipk_current (0.00s)
+=== RUN   TestLegacyInstantDamage
+=== RUN   TestLegacyInstantDamage/count-small
+=== RUN   TestLegacyInstantDamage/count-large
+=== RUN   TestLegacyInstantDamage/two-byte-noncanonical
+=== RUN   TestLegacyInstantDamage/mixed-flags
+=== RUN   TestLegacyInstantDamage/min-flag
+=== RUN   TestLegacyInstantDamage/original-count
+=== RUN   TestLegacyInstantDamage/default-count
+=== RUN   TestLegacyInstantDamage/null-not-null
+=== RUN   TestLegacyInstantDamage/default-width
+--- PASS: TestLegacyInstantDamage (0.00s)
+    --- PASS: TestLegacyInstantDamage/count-small (0.00s)
+    --- PASS: TestLegacyInstantDamage/count-large (0.00s)
+    --- PASS: TestLegacyInstantDamage/two-byte-noncanonical (0.00s)
+    --- PASS: TestLegacyInstantDamage/mixed-flags (0.00s)
+    --- PASS: TestLegacyInstantDamage/min-flag (0.00s)
+    --- PASS: TestLegacyInstantDamage/original-count (0.00s)
+    --- PASS: TestLegacyInstantDamage/default-count (0.00s)
+    --- PASS: TestLegacyInstantDamage/null-not-null (0.00s)
+    --- PASS: TestLegacyInstantDamage/default-width (0.00s)
+=== RUN   TestPatchSDIVersions
+--- PASS: TestPatchSDIVersions (0.00s)
+=== RUN   TestSDIDeletedObject
+--- PASS: TestSDIDeletedObject (0.00s)
+PASS
+ok  	innodb-go-reader	5.311s

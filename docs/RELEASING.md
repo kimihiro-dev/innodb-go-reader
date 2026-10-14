@@ -7,7 +7,7 @@
 - Go 1.25或更高版本、Git；打包还需要tar、zip和shasum。
 - 在本项目Git仓库根目录运行。以下命令面向macOS/Linux的Bash，产物写入新临时目录，不修改当前分支或工作区，不需要Windows交叉编译器。
 - 使用 `git archive v0.1.0` 解出固定源码后再构建。即使main后来更新，也不会把新代码误打包为v0.1.0。
-- 当前产品只使用Go标准库，统一 `CGO_ENABLED=0`，每个目标通过GOOS/GOARCH选择；不需要Python、Node、MySQL服务或第三方Go依赖来编译CLI。
+- 固定v0.1.0源码只使用Go标准库，统一 `CGO_ENABLED=0`，每个目标通过GOOS/GOARCH选择；不需要Python、Node、MySQL服务或第三方Go依赖来编译CLI。
 
 ## 六个平台的编译命令
 

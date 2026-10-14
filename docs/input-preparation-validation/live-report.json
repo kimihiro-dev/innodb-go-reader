@@ -1,0 +1,63 @@
+{
+  "work": "/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-prepare-live-final-kh_jlkxj",
+  "container": "innodb-reader-mysql5744-20261013",
+  "cases": [
+    {
+      "name": "ordinary_dynamic",
+      "definitions_equal_to_python": true,
+      "source_equal_to_python": true,
+      "snapshot_hash_verified": true,
+      "rows": 7,
+      "indexes": 5
+    },
+    {
+      "name": "composite_compact",
+      "definitions_equal_to_python": true,
+      "source_equal_to_python": true,
+      "snapshot_hash_verified": true,
+      "rows": 4,
+      "indexes": 3
+    },
+    {
+      "name": "hidden_compact",
+      "definitions_equal_to_python": true,
+      "source_equal_to_python": true,
+      "snapshot_hash_verified": true,
+      "rows": 4,
+      "indexes": 2
+    },
+    {
+      "name": "scalar_dynamic_initial",
+      "definitions_equal_to_python": true,
+      "source_equal_to_python": true,
+      "snapshot_hash_verified": true,
+      "rows": 3,
+      "indexes": 0
+    },
+    {
+      "name": "scalar_compact_initial",
+      "definitions_equal_to_python": true,
+      "source_equal_to_python": true,
+      "snapshot_hash_verified": true,
+      "rows": 3,
+      "indexes": 0
+    },
+    {
+      "name": "generated_dynamic_initial",
+      "definitions_equal_to_python": true,
+      "source_equal_to_python": true,
+      "snapshot_hash_verified": true,
+      "rows": 2,
+      "indexes": 0
+    }
+  ],
+  "manifest": {
+    "names_from_sdi": true,
+    "definition_order": true,
+    "metadata_check_export": true,
+    "rows": 1000
+  },
+  "missing_table_cleanup": true,
+  "broken_stdout_cleanup": true,
+  "status": "complete"
+}

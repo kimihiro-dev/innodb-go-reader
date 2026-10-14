@@ -1,0 +1,212 @@
+{
+  "row_format": "COMPACT",
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false
+    },
+    {
+      "name": "ti",
+      "type": "TINYINT",
+      "nullable": true
+    },
+    {
+      "name": "tu",
+      "type": "TINYINT",
+      "nullable": true,
+      "unsigned": true
+    },
+    {
+      "name": "sm",
+      "type": "SMALLINT",
+      "nullable": true
+    },
+    {
+      "name": "su",
+      "type": "SMALLINT",
+      "nullable": true,
+      "unsigned": true
+    },
+    {
+      "name": "med",
+      "type": "MEDIUMINT",
+      "nullable": true
+    },
+    {
+      "name": "mu",
+      "type": "MEDIUMINT",
+      "nullable": true,
+      "unsigned": true
+    },
+    {
+      "name": "si",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "iu",
+      "type": "INT",
+      "nullable": true,
+      "unsigned": true
+    },
+    {
+      "name": "bi",
+      "type": "BIGINT",
+      "nullable": true
+    },
+    {
+      "name": "bu",
+      "type": "BIGINT",
+      "nullable": true,
+      "unsigned": true
+    },
+    {
+      "name": "decv",
+      "type": "DECIMAL",
+      "nullable": true,
+      "precision": 65,
+      "scale": 30
+    },
+    {
+      "name": "fv",
+      "type": "FLOAT",
+      "nullable": true
+    },
+    {
+      "name": "dv",
+      "type": "DOUBLE",
+      "nullable": true
+    },
+    {
+      "name": "bv",
+      "type": "BIT",
+      "nullable": true,
+      "bit_length": 64
+    },
+    {
+      "name": "y",
+      "type": "YEAR",
+      "nullable": true
+    },
+    {
+      "name": "d",
+      "type": "DATE",
+      "nullable": true
+    },
+    {
+      "name": "dt",
+      "type": "DATETIME",
+      "nullable": true,
+      "fsp": 6
+    },
+    {
+      "name": "tm",
+      "type": "TIME",
+      "nullable": true,
+      "fsp": 6
+    },
+    {
+      "name": "ts",
+      "type": "TIMESTAMP",
+      "nullable": true,
+      "fsp": 6
+    },
+    {
+      "name": "ch",
+      "type": "CHAR",
+      "nullable": true,
+      "charset": "utf8mb4",
+      "max_chars": 8
+    },
+    {
+      "name": "v",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "utf8mb4",
+      "max_chars": 300
+    },
+    {
+      "name": "b",
+      "type": "BINARY",
+      "nullable": true,
+      "max_bytes": 5
+    },
+    {
+      "name": "vb",
+      "type": "VARBINARY",
+      "nullable": true,
+      "max_bytes": 300
+    },
+    {
+      "name": "e",
+      "type": "ENUM",
+      "nullable": true,
+      "charset": "utf8mb4",
+      "enum_values": [
+        "",
+        "界",
+        "O'Brien",
+        "a,b",
+        "back\\slash"
+      ]
+    },
+    {
+      "name": "s",
+      "type": "SET",
+      "nullable": true,
+      "charset": "utf8mb4",
+      "set_values": [
+        "界",
+        "O'Brien",
+        "back\\slash"
+      ]
+    },
+    {
+      "name": "j",
+      "type": "JSON",
+      "nullable": true
+    },
+    {
+      "name": "g",
+      "type": "GEOMETRY",
+      "nullable": true
+    },
+    {
+      "name": "p",
+      "type": "POINT",
+      "nullable": true
+    },
+    {
+      "name": "line",
+      "type": "LINESTRING",
+      "nullable": true
+    },
+    {
+      "name": "poly",
+      "type": "POLYGON",
+      "nullable": true
+    },
+    {
+      "name": "mp",
+      "type": "MULTIPOINT",
+      "nullable": true
+    },
+    {
+      "name": "ml",
+      "type": "MULTILINESTRING",
+      "nullable": true
+    },
+    {
+      "name": "mpoly",
+      "type": "MULTIPOLYGON",
+      "nullable": true
+    }
+  ],
+  "root_page": 3,
+  "index_id": 50,
+  "space_id": 33,
+  "primary_keys": [
+    "id"
+  ]
+}

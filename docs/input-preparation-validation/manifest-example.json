@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "partition": "p0",
+      "path": "first.ibd"
+    },
+    {
+      "partition": "p1",
+      "path": "second.ibd"
+    },
+    {
+      "partition": "p2",
+      "path": "third.ibd"
+    }
+  ]
+}

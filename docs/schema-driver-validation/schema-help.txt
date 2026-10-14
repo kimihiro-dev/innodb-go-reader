@@ -1,0 +1,31 @@
+usage: innodb-reader <metadata|page|export|query|check|space|stats|visualize> [flags] file.ibd
+Input preparation: schema [--host HOST --port PORT | --socket PATH] --user USER --database DB --table TABLE --output DIR [--indexes]
+                   manifest [--output files.json] partition.ibd ...
+Partition metadata/export/check: --manifest files.json instead of file.ibd.
+Use <command> --help for flags. Flags must precede input files.
+  -database string
+    	exact database name
+  -host string
+    	TCP host (default 127.0.0.1); mutually exclusive with --socket
+  -indexes
+    	also collect ordinary secondary indexes.json
+  -output string
+    	required new directory for schema/source and optional indexes
+  -overwrite
+    	replace an existing output file
+  -password-env string
+    	environment variable containing password; unset means empty (default "MYSQL_PWD")
+  -port int
+    	TCP port (0 selects 3306); mutually exclusive with --socket
+  -socket string
+    	Unix socket path; replaces TCP
+  -table string
+    	exact nonpartitioned table name
+  -timeout duration
+    	total connection and SQL query timeout (default 30s)
+  -tls
+    	TCP TLS with certificate/hostname verification; no fallback
+  -tls-ca string
+    	additional trusted CA PEM file; requires --tls
+  -user string
+    	MySQL user with table visibility and PROCESS privilege (default "root")

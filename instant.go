@@ -25,6 +25,13 @@ type InstantDefault struct {
 	Data []byte `json:"data,omitempty"` // InnoDB encoded value, not SQL display text
 }
 
+// LegacyInstantLayout describes append-only INSTANT ADD in MySQL 8.0.12–28.
+// Columns counts original stored user columns, excluding all system fields.
+type LegacyInstantLayout struct {
+	Columns  int              `json:"columns"`
+	Defaults []InstantDefault `json:"defaults"`
+}
+
 func (s Schema) fieldColumn(f InstantField) Column {
 	if f.DroppedColumn != nil {
 		return *f.DroppedColumn
@@ -33,6 +40,9 @@ func (s Schema) fieldColumn(f InstantField) Column {
 }
 func (f InstantField) present(v uint8) bool { return f.Added <= v && (f.Dropped == 0 || v < f.Dropped) }
 func (s Schema) initialColumns() []Column {
+	if s.LegacyInstant != nil {
+		return s.Columns[:s.LegacyInstant.Columns]
+	}
 	if s.Instant == nil {
 		return s.Columns
 	}
@@ -45,6 +55,39 @@ func (s Schema) initialColumns() []Column {
 	return columns
 }
 func (s Schema) validateInstant(pk []int) error {
+	if s.LegacyInstant != nil {
+		x := s.LegacyInstant
+		bad := func() error { return fmt.Errorf("%w: legacy INSTANT layout", ErrUnsupported) }
+		if s.Instant != nil || x.Columns < 0 || x.Columns >= len(s.Columns) || len(x.Defaults) != len(s.Columns)-x.Columns {
+			return bad()
+		}
+		for _, i := range pk {
+			if i >= x.Columns {
+				return bad()
+			}
+		}
+		for i, d := range x.Defaults {
+			c := s.Columns[x.Columns+i]
+			if d.Null {
+				if !c.Nullable || len(d.Data) != 0 {
+					return bad()
+				}
+			} else {
+				if c.isVariable() {
+					if uint64(len(d.Data)) > c.variableMaxBytes() {
+						return bad()
+					}
+				} else if len(d.Data) != c.fixedWidth() {
+					return bad()
+				}
+				r := Record{Values: make([]any, 1)}
+				if err := r.decodeStoredValue(0, c, d.Data); err != nil {
+					return err
+				}
+			}
+		}
+		return nil
+	}
 	if s.Instant == nil {
 		return nil
 	}
@@ -142,6 +185,58 @@ func (s Schema) validateInstant(pk []int) error {
 	return nil
 }
 
+func decodeLegacyInstantRecord(b []byte, origin, limit int, s Schema, pk []int) (Record, error) {
+	flags := b[origin-5] & 0xf0
+	if flags&0x50 != 0 {
+		return Record{}, fmt.Errorf("%w: legacy INSTANT flags", ErrUnsupported)
+	}
+	n, extra := s.LegacyInstant.Columns, 0
+	if flags&0x80 != 0 {
+		if origin-6 < dataStart {
+			return Record{}, fmt.Errorf("%w: legacy field count outside heap", ErrCorrupt)
+		}
+		count := int(b[origin-6])
+		extra = 1
+		if count&0x80 != 0 {
+			if origin-7 < dataStart {
+				return Record{}, fmt.Errorf("%w: truncated legacy field count", ErrCorrupt)
+			}
+			count = (count&0x7f)<<8 | int(b[origin-7])
+			extra = 2
+			if count <= 127 {
+				return Record{}, fmt.Errorf("%w: noncanonical legacy field count", ErrCorrupt)
+			}
+		}
+		n = count - 2
+		if s.hiddenRowID() {
+			n--
+		}
+		if n < s.LegacyInstant.Columns || n > len(s.Columns) {
+			return Record{}, fmt.Errorf("%w: legacy field count", ErrCorrupt)
+		}
+	}
+	physical := s
+	physical.LegacyInstant = nil
+	physical.Columns = s.Columns[:n]
+	r, err := decodeStoredRecord(b, origin, limit, physical, pk, extra, nil)
+	if err != nil {
+		return Record{}, err
+	}
+	r.Values = append(r.Values, make([]any, len(s.Columns)-n)...)
+	if !r.deleteMarked {
+		for i := n; i < len(s.Columns); i++ {
+			d := s.LegacyInstant.Defaults[i-s.LegacyInstant.Columns]
+			r.DefaultColumns = append(r.DefaultColumns, i)
+			if !d.Null {
+				if err := r.decodeStoredValue(i, s.Columns[i], d.Data); err != nil {
+					return Record{}, err
+				}
+			}
+		}
+	}
+	return r, nil
+}
+
 func decodeInstantRecord(b []byte, origin, limit int, s Schema, pk []int) (Record, error) {
 	var empty Record
 	flags := b[origin-5] & 0xf0
@@ -236,7 +331,7 @@ func decodeInstantRecord(b []byte, origin, limit int, s Schema, pk []int) (Recor
 	return result, nil
 }
 
-func metadataInstant(s *Schema, columns []ddColumn) (string, error) {
+func metadataInstant(s *Schema, columns []ddColumn, tableProperties map[string]string) (string, error) {
 	props := make([]map[string]string, len(columns))
 	native := false
 	for i, c := range columns {
@@ -250,6 +345,48 @@ func metadataInstant(s *Schema, columns []ddColumn) (string, error) {
 				native = true
 			}
 		}
+	}
+	if _, legacy := tableProperties["instant_col"]; legacy {
+		n, err := propertyUint(tableProperties, "instant_col", 16)
+		if err != nil {
+			return "", err
+		}
+		x := &LegacyInstantLayout{Columns: int(n)}
+		for _, p := range props {
+			for _, key := range []string{"physical_pos", "version_added", "version_dropped"} {
+				if _, ok := p[key]; ok {
+					return "mixed legacy/row-version metadata", nil
+				}
+			}
+		}
+		for _, c := range s.Columns {
+			var p map[string]string
+			for i, dd := range columns {
+				if dd.Name == c.Name {
+					p = props[i]
+					break
+				}
+			}
+			raw, hasDefault := p["default"]
+			null, hasNull := p["default_null"]
+			if hasDefault && hasNull || hasNull && null != "1" {
+				return "invalid legacy default", nil
+			}
+			if hasDefault || hasNull {
+				data, err := hex.DecodeString(raw)
+				if err != nil {
+					return "", fmt.Errorf("%w: legacy default hex", ErrCorrupt)
+				}
+				x.Defaults = append(x.Defaults, InstantDefault{Null: hasNull, Data: data})
+			} else if len(x.Defaults) != 0 {
+				return "legacy defaults are not a suffix", nil
+			}
+		}
+		if int(n)+len(x.Defaults) != len(s.Columns) {
+			return "legacy original column count/defaults mismatch", nil
+		}
+		s.LegacyInstant = x
+		return "", nil
 	}
 	if !native {
 		return "", nil

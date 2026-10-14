@@ -1,0 +1,56 @@
+{
+  "5.7.9": {
+    "fixture": "testdata/mysql57-patches/5.7.9/base/scalar_dynamic_initial.ibd.gz",
+    "space_id_page0_offset34": "00 00 00 18",
+    "fsp_flags_page0_offset54": "00 00 00 21",
+    "root_page": 3,
+    "root_absolute_offset": 49152,
+    "root_index_id_offset66": "00 00 00 00 00 00 00 29",
+    "sha256": "498c07f2ce713b2dce5515b871a52758021d68b435f3c3058bac18fa784d02c6"
+  },
+  "5.7.10": {
+    "fixture": "testdata/mysql57-patches/5.7.10/base/scalar_dynamic_initial.ibd.gz",
+    "space_id_page0_offset34": "00 00 00 18",
+    "fsp_flags_page0_offset54": "00 00 00 21",
+    "root_page": 3,
+    "root_absolute_offset": 49152,
+    "root_index_id_offset66": "00 00 00 00 00 00 00 29",
+    "sha256": "79b56ea5450ce5050c2bbdd20fdf12fdbdc56561e05e0d7c521285f32d851ee2"
+  },
+  "5.7.11": {
+    "fixture": "testdata/mysql57-patches/5.7.11/base/scalar_dynamic_initial.ibd.gz",
+    "space_id_page0_offset34": "00 00 00 18",
+    "fsp_flags_page0_offset54": "00 00 00 21",
+    "root_page": 3,
+    "root_absolute_offset": 49152,
+    "root_index_id_offset66": "00 00 00 00 00 00 00 29",
+    "sha256": "43c814621bdfdbd508983206e5376e3c8f99812eda96c7da278acbdb5c8ab612"
+  },
+  "5.7.12": {
+    "fixture": "testdata/mysql57-patches/5.7.12/base/scalar_dynamic_initial.ibd.gz",
+    "space_id_page0_offset34": "00 00 00 23",
+    "fsp_flags_page0_offset54": "00 00 00 21",
+    "root_page": 3,
+    "root_absolute_offset": 49152,
+    "root_index_id_offset66": "00 00 00 00 00 00 00 3f",
+    "sha256": "fc1b61b6426f6f13315efee743f5575a0483ba9839e7646db90aaa8ef6ca815a"
+  },
+  "5.7.28": {
+    "fixture": "testdata/mysql57-patches/5.7.28/base/scalar_dynamic_initial.ibd.gz",
+    "space_id_page0_offset34": "00 00 00 19",
+    "fsp_flags_page0_offset54": "00 00 00 21",
+    "root_page": 3,
+    "root_absolute_offset": 49152,
+    "root_index_id_offset66": "00 00 00 00 00 00 00 2f",
+    "sha256": "cc0d980e4bed53ba3183e6e46a107967b6d9c13d1888337db07808642afaa046"
+  },
+  "5.7.43": {
+    "fixture": "testdata/mysql57-patches/5.7.43/base/scalar_dynamic_initial.ibd.gz",
+    "space_id_page0_offset34": "00 00 00 18",
+    "fsp_flags_page0_offset54": "00 00 00 21",
+    "root_page": 3,
+    "root_absolute_offset": 49152,
+    "root_index_id_offset66": "00 00 00 00 00 00 00 29",
+    "sha256": "72920929228af29c495f978a4960fd98aef4fab59d302653dcba15a4b0e33790"
+  }
+}

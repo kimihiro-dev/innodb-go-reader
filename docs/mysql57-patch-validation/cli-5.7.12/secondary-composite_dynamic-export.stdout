@@ -1,0 +1,6 @@
+{"kind":"schema","schema":{"version":1,"columns":[{"name":"k","type":"VARBINARY","nullable":false,"max_chars":0,"max_bytes":24},{"name":"id","type":"INT","nullable":false,"max_chars":0},{"name":"n","type":"INT","nullable":true,"max_chars":0},{"charset":"utf8mb4","name":"name","type":"VARCHAR","nullable":true,"max_chars":40}],"physical":false}}
+{"kind":"row","values":[{"type":"binary","value":"AA=="},{"type":"int32","value":"3"},{"type":"int32","value":"-1"},{"type":"null"}]}
+{"kind":"row","values":[{"type":"binary","value":"YWJjAQ=="},{"type":"int32","value":"1"},{"type":"int32","value":"2"},{"type":"string","value":"界😀one"}]}
+{"kind":"row","values":[{"type":"binary","value":"YWJjAQ=="},{"type":"int32","value":"4"},{"type":"int32","value":"2"},{"type":"string","value":"abc"}]}
+{"kind":"row","values":[{"type":"binary","value":"YWJjAg=="},{"type":"int32","value":"2"},{"type":"null"},{"type":"string","value":"界😀two"}]}
+{"kind":"end","rows":"4"}

@@ -1,0 +1,434 @@
+{
+  "5.7.9": [
+    {
+      "case": "redundant",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "only DYNAMIC/COMPACT supported"
+      }
+    },
+    {
+      "case": "compressed",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "only DYNAMIC/COMPACT supported"
+      }
+    },
+    {
+      "case": "fts",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "json: cannot unmarshal number -1 into Go struct field index.root_page of type uint32"
+      }
+    },
+    {
+      "case": "hidden_doc",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "internal stored columns are absent from SQL metadata"
+      }
+    },
+    {
+      "case": "indexed_virtual",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "FULLTEXT/SPATIAL/indexed VIRTUAL layouts unsupported"
+      }
+    },
+    {
+      "case": "charset",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "unsupported charset: ucs2"
+      }
+    },
+    {
+      "case": "collation",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "unsupported key collation: utf8mb4_general_ci"
+      }
+    }
+  ],
+  "5.7.10": [
+    {
+      "case": "redundant",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "only DYNAMIC/COMPACT supported"
+      }
+    },
+    {
+      "case": "compressed",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "only DYNAMIC/COMPACT supported"
+      }
+    },
+    {
+      "case": "fts",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "json: cannot unmarshal number -1 into Go struct field index.root_page of type uint32"
+      }
+    },
+    {
+      "case": "hidden_doc",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "internal stored columns are absent from SQL metadata"
+      }
+    },
+    {
+      "case": "indexed_virtual",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "FULLTEXT/SPATIAL/indexed VIRTUAL layouts unsupported"
+      }
+    },
+    {
+      "case": "charset",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "unsupported charset: ucs2"
+      }
+    },
+    {
+      "case": "collation",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "unsupported key collation: utf8mb4_general_ci"
+      }
+    }
+  ],
+  "5.7.11": [
+    {
+      "case": "redundant",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "only DYNAMIC/COMPACT supported"
+      }
+    },
+    {
+      "case": "compressed",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "only DYNAMIC/COMPACT supported"
+      }
+    },
+    {
+      "case": "fts",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "json: cannot unmarshal number -1 into Go struct field index.root_page of type uint32"
+      }
+    },
+    {
+      "case": "hidden_doc",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "internal stored columns are absent from SQL metadata"
+      }
+    },
+    {
+      "case": "indexed_virtual",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "FULLTEXT/SPATIAL/indexed VIRTUAL layouts unsupported"
+      }
+    },
+    {
+      "case": "charset",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "unsupported charset: ucs2"
+      }
+    },
+    {
+      "case": "collation",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "unsupported key collation: utf8mb4_general_ci"
+      }
+    }
+  ],
+  "5.7.12": [
+    {
+      "case": "redundant",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "only DYNAMIC/COMPACT supported"
+      }
+    },
+    {
+      "case": "compressed",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "only DYNAMIC/COMPACT supported"
+      }
+    },
+    {
+      "case": "fts",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "json: cannot unmarshal number -1 into Go struct field index.root_page of type uint32"
+      }
+    },
+    {
+      "case": "hidden_doc",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "internal stored columns are absent from SQL metadata"
+      }
+    },
+    {
+      "case": "indexed_virtual",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "FULLTEXT/SPATIAL/indexed VIRTUAL layouts unsupported"
+      }
+    },
+    {
+      "case": "charset",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "unsupported charset: ucs2"
+      }
+    },
+    {
+      "case": "collation",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "unsupported key collation: utf8mb4_general_ci"
+      }
+    }
+  ],
+  "5.7.28": [
+    {
+      "case": "redundant",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "only DYNAMIC/COMPACT supported"
+      }
+    },
+    {
+      "case": "compressed",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "only DYNAMIC/COMPACT supported"
+      }
+    },
+    {
+      "case": "fts",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "json: cannot unmarshal number -1 into Go struct field index.root_page of type uint32"
+      }
+    },
+    {
+      "case": "hidden_doc",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "internal stored columns are absent from SQL metadata"
+      }
+    },
+    {
+      "case": "indexed_virtual",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "FULLTEXT/SPATIAL/indexed VIRTUAL layouts unsupported"
+      }
+    },
+    {
+      "case": "charset",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "unsupported charset: ucs2"
+      }
+    },
+    {
+      "case": "collation",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "unsupported key collation: utf8mb4_general_ci"
+      }
+    }
+  ],
+  "5.7.43": [
+    {
+      "case": "redundant",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "only DYNAMIC/COMPACT supported"
+      }
+    },
+    {
+      "case": "compressed",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "only DYNAMIC/COMPACT supported"
+      }
+    },
+    {
+      "case": "fts",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "json: cannot unmarshal number -1 into Go struct field index.root_page of type uint32"
+      }
+    },
+    {
+      "case": "hidden_doc",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "internal stored columns are absent from SQL metadata"
+      }
+    },
+    {
+      "case": "indexed_virtual",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "FULLTEXT/SPATIAL/indexed VIRTUAL layouts unsupported"
+      }
+    },
+    {
+      "case": "charset",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "unsupported charset: ucs2"
+      }
+    },
+    {
+      "case": "collation",
+      "exit_code": 1,
+      "diagnostic": {
+        "command": "schema",
+        "scope": "MySQL 5.7 trusted definitions; metadata only",
+        "complete": false,
+        "error": "unsupported key collation: utf8mb4_general_ci"
+      }
+    }
+  ]
+}

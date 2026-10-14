@@ -1,0 +1,16 @@
+2026-10-13T03:06:36.743669Z 0 [System] [MY-013169] [Server] /Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysqld (mysqld 8.0.45) initializing of server in progress as process 42756
+2026-10-13T03:06:36.746408Z 0 [Warning] [MY-010159] [Server] Setting lower_case_table_names=2 because file system for /var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/data/ is case insensitive
+2026-10-13T03:06:36.748552Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-10-13T03:06:36.788211Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-10-13T03:06:37.346550Z 5 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+2026-10-13T03:06:37.551060Z 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.45).
+2026-10-13T03:06:38.095614Z 0 [System] [MY-010116] [Server] /Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysqld (mysqld 8.0.45) starting as process 42763
+2026-10-13T03:06:38.096476Z 0 [Warning] [MY-010159] [Server] Setting lower_case_table_names=2 because file system for /var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/data/ is case insensitive
+2026-10-13T03:06:38.100769Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-10-13T03:06:38.118940Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-10-13T03:06:38.176658Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2026-10-13T03:06:38.176678Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2026-10-13T03:06:38.184388Z 0 [System] [MY-010931] [Server] /Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysqld: ready for connections. Version: '8.0.45'  socket: '/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4/mysql80/mysql.sock'  port: 0  MySQL Community Server - GPL.
+2026-10-13T03:06:38.396713Z 21 [System] [MY-013172] [Server] Received SHUTDOWN from user root. Shutting down mysqld (Version: 8.0.45).
+2026-10-13T03:06:38.396750Z 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.45).
+2026-10-13T03:06:39.195225Z 0 [System] [MY-010910] [Server] /Users/kimihiro/workspace/software/mysql-8.0.45/bin/mysqld: Shutdown complete (mysqld 8.0.45)  MySQL Community Server - GPL.

@@ -1,0 +1,701 @@
+{
+  "database": "innodb_partition_33480f082bb2",
+  "status": "captured",
+  "cases": [
+    {
+      "name": "ranges_dynamic_current",
+      "table": "ranges_dynamic",
+      "supported": true,
+      "files": [
+        {
+          "partition": "P0",
+          "file": "ranges_dynamic_current-0.ibd.gz",
+          "rows": 13,
+          "bytes": 360448,
+          "sha256": "ac941e7360d46bb5bd06dd7f3a43c55a71e5b45250e1aa6829a513573bcafa2c"
+        },
+        {
+          "partition": "p1",
+          "file": "ranges_dynamic_current-1.ibd.gz",
+          "rows": 10,
+          "bytes": 212992,
+          "sha256": "9d2fce84a9457f5f26c1211cdb63c77f97e90fb08ce9c67e322e6d367db8e774"
+        },
+        {
+          "partition": "empty_p",
+          "file": "ranges_dynamic_current-2.ibd.gz",
+          "rows": 0,
+          "bytes": 147456,
+          "sha256": "a72e0f7b4ffc0998e96503d4f2e5ffdffb6ca1c9b827190886a4b22db144d01e"
+        }
+      ],
+      "rows": 23,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "lists_dynamic_current",
+      "table": "lists_dynamic",
+      "supported": true,
+      "files": [
+        {
+          "partition": "P0",
+          "file": "lists_dynamic_current-0.ibd.gz",
+          "rows": 12,
+          "bytes": 262144,
+          "sha256": "16140358d42a57f275b120cf0480ba0f73692d379634158d7286eae0cf32a34c"
+        },
+        {
+          "partition": "p1",
+          "file": "lists_dynamic_current-1.ibd.gz",
+          "rows": 11,
+          "bytes": 311296,
+          "sha256": "4721a00850f7d2578e9d74523928184c53cf090d6df6c8d5fe2844da0daa9077"
+        },
+        {
+          "partition": "empty_p",
+          "file": "lists_dynamic_current-2.ibd.gz",
+          "rows": 0,
+          "bytes": 147456,
+          "sha256": "23984df2411e6e5eff69a08130c3de08c0c6fb022a12538f782fd5f4998de2bc"
+        }
+      ],
+      "rows": 23,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "hashes_dynamic_current",
+      "table": "hashes_dynamic",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "hashes_dynamic_current-0.ibd.gz",
+          "rows": 8,
+          "bytes": 262144,
+          "sha256": "20cf5528a984d7806b539209058e634083cd8315b8e9485d93b3b67160ed61a5"
+        },
+        {
+          "partition": "p1",
+          "file": "hashes_dynamic_current-1.ibd.gz",
+          "rows": 8,
+          "bytes": 147456,
+          "sha256": "ae57cdcd34b48d07e0c578da0a5cba99646c308883c37c9e5ea4804e1dbead11"
+        },
+        {
+          "partition": "p2",
+          "file": "hashes_dynamic_current-2.ibd.gz",
+          "rows": 7,
+          "bytes": 311296,
+          "sha256": "ad5bac9ea537bc84eeb96bb9d0b182c7cdb06e07224e57c48bb523860f033c8b"
+        }
+      ],
+      "rows": 23,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "keys_dynamic_current",
+      "table": "keys_dynamic",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "keys_dynamic_current-0.ibd.gz",
+          "rows": 6,
+          "bytes": 212992,
+          "sha256": "53c37c738ef80823a41ee913167a98bca072d05d13fa304abd729fe497543966"
+        },
+        {
+          "partition": "p1",
+          "file": "keys_dynamic_current-1.ibd.gz",
+          "rows": 10,
+          "bytes": 262144,
+          "sha256": "c7c2b91499341154523df56671b978bb138c26f683637e8621bb34398dbc5142"
+        },
+        {
+          "partition": "p2",
+          "file": "keys_dynamic_current-2.ibd.gz",
+          "rows": 7,
+          "bytes": 212992,
+          "sha256": "30ed1df937bf880f84262b3030156b9d0bda634600eef0a39c500514be760d44"
+        }
+      ],
+      "rows": 23,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "hidden_dynamic_current",
+      "table": "hidden_dynamic",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "hidden_dynamic_current-0.ibd.gz",
+          "rows": 0,
+          "bytes": 131072,
+          "sha256": "f6c1ff5eec567a914772c96b16b9dcaa3884748cfc56dce68419609954c1d335"
+        },
+        {
+          "partition": "p1",
+          "file": "hidden_dynamic_current-1.ibd.gz",
+          "rows": 1,
+          "bytes": 147456,
+          "sha256": "315d5490cf62bff6fa86d1e70f2b735962f975d24a4ee9667d56f4d75a2a1660"
+        },
+        {
+          "partition": "p2",
+          "file": "hidden_dynamic_current-2.ibd.gz",
+          "rows": 3,
+          "bytes": 131072,
+          "sha256": "25dc0e946c508ac8b03565f3156aad1dd3fc0d53ec5e73c484e83bf0c3424e31"
+        }
+      ],
+      "rows": 4,
+      "unordered": true,
+      "virtual": false
+    },
+    {
+      "name": "generated_dynamic_current",
+      "table": "generated_dynamic",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "generated_dynamic_current-0.ibd.gz",
+          "rows": 1,
+          "bytes": 114688,
+          "sha256": "51969296dea13901cd4dfb05d9fc415df8a08d6f84fb5479a496dfb7c374b9d5"
+        },
+        {
+          "partition": "p1",
+          "file": "generated_dynamic_current-1.ibd.gz",
+          "rows": 0,
+          "bytes": 114688,
+          "sha256": "52726cbf68ab9e269988f0be47ce05a9fd71802a2a9bc64da90cca3d90fa4234"
+        },
+        {
+          "partition": "p2",
+          "file": "generated_dynamic_current-2.ibd.gz",
+          "rows": 2,
+          "bytes": 114688,
+          "sha256": "b8b58b84564ab4ae9fd61fe803515a464f851170dd08dbe16b87bdf090f49912"
+        }
+      ],
+      "rows": 3,
+      "unordered": false,
+      "virtual": true
+    },
+    {
+      "name": "autoinc_dynamic_current",
+      "table": "autoinc_dynamic",
+      "supported": true,
+      "files": [
+        {
+          "partition": "P0",
+          "file": "autoinc_dynamic_current-0.ibd.gz",
+          "rows": 2,
+          "bytes": 131072,
+          "sha256": "fcbf79216f962fe8b80df35de6de9b09369530d8c1e856f4a033508b4fdd63fd"
+        },
+        {
+          "partition": "p1",
+          "file": "autoinc_dynamic_current-1.ibd.gz",
+          "rows": 1,
+          "bytes": 131072,
+          "sha256": "1104a2af242b31029b3f4e5f22dd567cbd35a4b3e3612e664b4121e56513c66d"
+        },
+        {
+          "partition": "empty_p",
+          "file": "autoinc_dynamic_current-2.ibd.gz",
+          "rows": 0,
+          "bytes": 131072,
+          "sha256": "e0a3ab30758f252219d0b6f54a040cf0b11392250e6de9fcae3da9d96690c3b6"
+        }
+      ],
+      "rows": 3,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "instant_dynamic_add",
+      "table": "instant_dynamic",
+      "supported": true,
+      "files": [
+        {
+          "partition": "P0",
+          "file": "instant_dynamic_add-0.ibd.gz",
+          "rows": 2,
+          "bytes": 114688,
+          "sha256": "46d4ce3d76ba7f16cb9e0df8f2fdaaffce66bbbfb07c0300b80d5319ca515861"
+        },
+        {
+          "partition": "p1",
+          "file": "instant_dynamic_add-1.ibd.gz",
+          "rows": 1,
+          "bytes": 114688,
+          "sha256": "27b2b8b50ce98368b374831fb1d9d1ee6c46f3e47d7699131a2ad893b791892f"
+        },
+        {
+          "partition": "empty_p",
+          "file": "instant_dynamic_add-2.ibd.gz",
+          "rows": 0,
+          "bytes": 114688,
+          "sha256": "e529cd3c32b5db410cc9b7e3db62eba7d6fecb9c48d83a8985705685afb98760"
+        }
+      ],
+      "rows": 3,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "instant_dynamic_partial_rebuild",
+      "table": "instant_dynamic",
+      "supported": true,
+      "files": [
+        {
+          "partition": "P0",
+          "file": "instant_dynamic_partial_rebuild-0.ibd.gz",
+          "rows": 2,
+          "bytes": 114688,
+          "sha256": "61329b275d822256d2d1744db60e5b5f55018ebaf42c60f40dfe821561333d6b"
+        },
+        {
+          "partition": "p1",
+          "file": "instant_dynamic_partial_rebuild-1.ibd.gz",
+          "rows": 1,
+          "bytes": 114688,
+          "sha256": "0a36582e26845f4edf979f7aa7617e4c6ab5b41f8d96c299da02355226b8dcba"
+        },
+        {
+          "partition": "empty_p",
+          "file": "instant_dynamic_partial_rebuild-2.ibd.gz",
+          "rows": 0,
+          "bytes": 114688,
+          "sha256": "e529cd3c32b5db410cc9b7e3db62eba7d6fecb9c48d83a8985705685afb98760"
+        }
+      ],
+      "rows": 3,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "ranges_compact_current",
+      "table": "ranges_compact",
+      "supported": true,
+      "files": [
+        {
+          "partition": "P0",
+          "file": "ranges_compact_current-0.ibd.gz",
+          "rows": 13,
+          "bytes": 360448,
+          "sha256": "50316ad4ae752fff1a055abc6511fd2b1d08013f151df32919505884c03db6f4"
+        },
+        {
+          "partition": "p1",
+          "file": "ranges_compact_current-1.ibd.gz",
+          "rows": 10,
+          "bytes": 212992,
+          "sha256": "d1935ca02704733dc25e205feb22ef837def7b445578f5e8e5cd8411e830104b"
+        },
+        {
+          "partition": "empty_p",
+          "file": "ranges_compact_current-2.ibd.gz",
+          "rows": 0,
+          "bytes": 147456,
+          "sha256": "f3fb2aa5cdbc3d676044bd00b018fdd45ccf223a71f4ee206b878e97b651939d"
+        }
+      ],
+      "rows": 23,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "lists_compact_current",
+      "table": "lists_compact",
+      "supported": true,
+      "files": [
+        {
+          "partition": "P0",
+          "file": "lists_compact_current-0.ibd.gz",
+          "rows": 12,
+          "bytes": 262144,
+          "sha256": "89588dc730a1007856e3d4d3ff544b56599bef2d77529b5bf2d7180e023c4a5b"
+        },
+        {
+          "partition": "p1",
+          "file": "lists_compact_current-1.ibd.gz",
+          "rows": 11,
+          "bytes": 311296,
+          "sha256": "570d6bebf675417a6c95a52464d08393420f44c291627e06642d14fe42f10e5d"
+        },
+        {
+          "partition": "empty_p",
+          "file": "lists_compact_current-2.ibd.gz",
+          "rows": 0,
+          "bytes": 147456,
+          "sha256": "c0628e7ee28381fcba059876edfb544c68479ae0c539429222710c42425d75b3"
+        }
+      ],
+      "rows": 23,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "hashes_compact_current",
+      "table": "hashes_compact",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "hashes_compact_current-0.ibd.gz",
+          "rows": 8,
+          "bytes": 262144,
+          "sha256": "12705417ea5dca5b588f79cae9edc0538abd167071d7f4d89c12cd53581ea63c"
+        },
+        {
+          "partition": "p1",
+          "file": "hashes_compact_current-1.ibd.gz",
+          "rows": 8,
+          "bytes": 147456,
+          "sha256": "aa2e7a9ae9656e7d81e1b6b97d5a2decb8a9b5d2a233b26c4fe85fa8054a0da1"
+        },
+        {
+          "partition": "p2",
+          "file": "hashes_compact_current-2.ibd.gz",
+          "rows": 7,
+          "bytes": 311296,
+          "sha256": "0daf6578a6dab71da9a5b831c8211f54f433b47e9390a33ab4639676dd370b33"
+        }
+      ],
+      "rows": 23,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "keys_compact_current",
+      "table": "keys_compact",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "keys_compact_current-0.ibd.gz",
+          "rows": 6,
+          "bytes": 212992,
+          "sha256": "0a950c21ec48101691d29ab31ca8019187a45778ee7f48e9278720a27fb8e724"
+        },
+        {
+          "partition": "p1",
+          "file": "keys_compact_current-1.ibd.gz",
+          "rows": 10,
+          "bytes": 262144,
+          "sha256": "5feee3e3b63f3950f848986b64a9135fd16acbeee0cac2c078a611ce61a75169"
+        },
+        {
+          "partition": "p2",
+          "file": "keys_compact_current-2.ibd.gz",
+          "rows": 7,
+          "bytes": 212992,
+          "sha256": "cfb697932d8799bda9ad04e2a7ed3e8e740b00c216140f33a252c46c942a8e19"
+        }
+      ],
+      "rows": 23,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "hidden_compact_current",
+      "table": "hidden_compact",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "hidden_compact_current-0.ibd.gz",
+          "rows": 0,
+          "bytes": 131072,
+          "sha256": "b5bb9d49ba4dc02c4fe2553f483e7ca9ca62880bbba68dfcf47d8b95e93c546f"
+        },
+        {
+          "partition": "p1",
+          "file": "hidden_compact_current-1.ibd.gz",
+          "rows": 1,
+          "bytes": 147456,
+          "sha256": "fe175d8bc496b3fc0666a82d511c885c82bedc95b746f78776dac3125e3e00d1"
+        },
+        {
+          "partition": "p2",
+          "file": "hidden_compact_current-2.ibd.gz",
+          "rows": 3,
+          "bytes": 131072,
+          "sha256": "fce12085225ca6c908c02b83c74eb7ec9729717bae14da2a338c6d305444c79a"
+        }
+      ],
+      "rows": 4,
+      "unordered": true,
+      "virtual": false
+    },
+    {
+      "name": "generated_compact_current",
+      "table": "generated_compact",
+      "supported": true,
+      "files": [
+        {
+          "partition": "p0",
+          "file": "generated_compact_current-0.ibd.gz",
+          "rows": 1,
+          "bytes": 114688,
+          "sha256": "eaeedd90e824b9a3f9b867e856beddb2f1578422f155a91f6db873441eb7e51b"
+        },
+        {
+          "partition": "p1",
+          "file": "generated_compact_current-1.ibd.gz",
+          "rows": 0,
+          "bytes": 114688,
+          "sha256": "462c4e4919231becafec22ebfb5fd95f1dcc8c1cb45e85e441694fff588439ce"
+        },
+        {
+          "partition": "p2",
+          "file": "generated_compact_current-2.ibd.gz",
+          "rows": 2,
+          "bytes": 114688,
+          "sha256": "b87c9332e1e3d423831696d10be31d32cec5393303219f17d0c08512f5bfb07d"
+        }
+      ],
+      "rows": 3,
+      "unordered": false,
+      "virtual": true
+    },
+    {
+      "name": "autoinc_compact_current",
+      "table": "autoinc_compact",
+      "supported": true,
+      "files": [
+        {
+          "partition": "P0",
+          "file": "autoinc_compact_current-0.ibd.gz",
+          "rows": 2,
+          "bytes": 131072,
+          "sha256": "3192d78719a8c67cbbaa743062c301bb3cfa5f400c665fc486b0a4154cb4c042"
+        },
+        {
+          "partition": "p1",
+          "file": "autoinc_compact_current-1.ibd.gz",
+          "rows": 1,
+          "bytes": 131072,
+          "sha256": "2893a98f81c8d3b4cf3d7d76876106a4911f20de362b309c71b8171bfa443ebb"
+        },
+        {
+          "partition": "empty_p",
+          "file": "autoinc_compact_current-2.ibd.gz",
+          "rows": 0,
+          "bytes": 131072,
+          "sha256": "05412ed665722c60bb11091d3d5e1f679866ec736033498d1e3c785f4be22c19"
+        }
+      ],
+      "rows": 3,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "instant_compact_add",
+      "table": "instant_compact",
+      "supported": true,
+      "files": [
+        {
+          "partition": "P0",
+          "file": "instant_compact_add-0.ibd.gz",
+          "rows": 2,
+          "bytes": 114688,
+          "sha256": "79d45875ff5fa21fb3670c7db39b43262f2038be10b3e5b888966801a68bdd6d"
+        },
+        {
+          "partition": "p1",
+          "file": "instant_compact_add-1.ibd.gz",
+          "rows": 1,
+          "bytes": 114688,
+          "sha256": "2aa9b372f7b9ff37275c1483db0c185782ff9609de8ff6f65f7bb9740a79c075"
+        },
+        {
+          "partition": "empty_p",
+          "file": "instant_compact_add-2.ibd.gz",
+          "rows": 0,
+          "bytes": 114688,
+          "sha256": "6c9ca92038c61cba896cc530253b272fb6977c841ca760ea61ab4ef153d1955c"
+        }
+      ],
+      "rows": 3,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "instant_compact_partial_rebuild",
+      "table": "instant_compact",
+      "supported": true,
+      "files": [
+        {
+          "partition": "P0",
+          "file": "instant_compact_partial_rebuild-0.ibd.gz",
+          "rows": 2,
+          "bytes": 114688,
+          "sha256": "cfdf1e52a5543a22221b5f676381c15bdda23be97016bdc0d165672fb99f39e6"
+        },
+        {
+          "partition": "p1",
+          "file": "instant_compact_partial_rebuild-1.ibd.gz",
+          "rows": 1,
+          "bytes": 114688,
+          "sha256": "2a66c483f1686641c5d48880ae3f77ce1f9a430260ed5b4053e2ed40860eaf4a"
+        },
+        {
+          "partition": "empty_p",
+          "file": "instant_compact_partial_rebuild-2.ibd.gz",
+          "rows": 0,
+          "bytes": 114688,
+          "sha256": "6c9ca92038c61cba896cc530253b272fb6977c841ca760ea61ab4ef153d1955c"
+        }
+      ],
+      "rows": 3,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "tree_current",
+      "table": "tree",
+      "supported": true,
+      "files": [
+        {
+          "partition": "P0",
+          "file": "tree_current-0.ibd.gz",
+          "rows": 300,
+          "bytes": 9437184,
+          "sha256": "e469797101fcafcdf96e730c929f8eaf0a721ad1aa42906e79927a95ff27e72b"
+        },
+        {
+          "partition": "p1",
+          "file": "tree_current-1.ibd.gz",
+          "rows": 300,
+          "bytes": 9437184,
+          "sha256": "eec5d20217650f5305017bb28526a8239b4c28bd8f3d7fc9221a27e4ba5cf093"
+        },
+        {
+          "partition": "empty_p",
+          "file": "tree_current-2.ibd.gz",
+          "rows": 0,
+          "bytes": 131072,
+          "sha256": "4eaf39830b4e3f2e6daa90200ebef4b0e868dbcd470d542746e41dd0c2b5dc96"
+        }
+      ],
+      "rows": 600,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "ranges_dynamic_rebuild_first",
+      "table": "ranges_dynamic",
+      "supported": false,
+      "files": [
+        {
+          "partition": "P0",
+          "file": "ranges_dynamic_rebuild_first-0.ibd.gz",
+          "rows": 13,
+          "bytes": 311296,
+          "sha256": "0c92960befa83b483ab24f56c8f03c4f5396ea62d9115cbbb187aaa77660e8f8"
+        },
+        {
+          "partition": "p1",
+          "file": "ranges_dynamic_rebuild_first-1.ibd.gz",
+          "rows": 10,
+          "bytes": 212992,
+          "sha256": "9d2fce84a9457f5f26c1211cdb63c77f97e90fb08ce9c67e322e6d367db8e774"
+        },
+        {
+          "partition": "empty_p",
+          "file": "ranges_dynamic_rebuild_first-2.ibd.gz",
+          "rows": 0,
+          "bytes": 147456,
+          "sha256": "a72e0f7b4ffc0998e96503d4f2e5ffdffb6ca1c9b827190886a4b22db144d01e"
+        }
+      ],
+      "rows": 23,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "ranges_dynamic_exchange",
+      "table": "ranges_dynamic",
+      "supported": false,
+      "files": [
+        {
+          "partition": "P0",
+          "file": "ranges_dynamic_exchange-0.ibd.gz",
+          "rows": 1,
+          "bytes": 147456,
+          "sha256": "91172d19bc32409adc180d5fd4f81640bacdbc4af2d2f88b8dcb60a45be59de9"
+        },
+        {
+          "partition": "p1",
+          "file": "ranges_dynamic_exchange-1.ibd.gz",
+          "rows": 10,
+          "bytes": 212992,
+          "sha256": "9d2fce84a9457f5f26c1211cdb63c77f97e90fb08ce9c67e322e6d367db8e774"
+        },
+        {
+          "partition": "empty_p",
+          "file": "ranges_dynamic_exchange-2.ibd.gz",
+          "rows": 0,
+          "bytes": 147456,
+          "sha256": "a72e0f7b4ffc0998e96503d4f2e5ffdffb6ca1c9b827190886a4b22db144d01e"
+        }
+      ],
+      "rows": 11,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "sub_rows_current",
+      "table": "sub_rows",
+      "supported": false,
+      "files": [
+        {
+          "partition": "s0",
+          "file": "sub_rows_current-0.ibd.gz",
+          "rows": 0,
+          "bytes": 114688,
+          "sha256": "f3b25cfa731f43bed26a013770c372675b62cce493deb1bd93d87a0da56c856f"
+        },
+        {
+          "partition": "s1",
+          "file": "sub_rows_current-1.ibd.gz",
+          "rows": 1,
+          "bytes": 114688,
+          "sha256": "090623a1abdf917990f3bad02d762f77a390e781bf26b0696eaa0eb7574ae2ed"
+        },
+        {
+          "partition": "s2",
+          "file": "sub_rows_current-2.ibd.gz",
+          "rows": 0,
+          "bytes": 114688,
+          "sha256": "adf2d0de62e7dd8220d5001d6256207766a6ae83b28651fb18335e983145e244"
+        },
+        {
+          "partition": "s3",
+          "file": "sub_rows_current-3.ibd.gz",
+          "rows": 0,
+          "bytes": 114688,
+          "sha256": "5d71756fe5f6101d94157637ab48fb0830676d9ab4d963714753ff1963d62192"
+        }
+      ],
+      "rows": 1,
+      "unordered": false,
+      "virtual": false
+    }
+  ],
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.12",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  }
+}

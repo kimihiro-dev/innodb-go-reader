@@ -1,0 +1,10 @@
+{
+  "version": "8.0.19",
+  "actual_version": "8.0.19",
+  "container": "innodb-80-8-0-19-c7bf1c",
+  "image": "mysql:8.0.19",
+  "image_id": "sha256:9643e9fbd6330d10686f8922292dcb20995e7b792c17d4e94ddf95255f1d5449",
+  "repo_digests": [
+    "mysql@sha256:9643e9fbd6330d10686f8922292dcb20995e7b792c17d4e94ddf95255f1d5449"
+  ]
+}

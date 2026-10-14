@@ -1,0 +1,25 @@
+{
+  "source": "docker.io/library/mysql:5.7.10",
+  "source_manifest_digest": "sha256:fa0a2a24837ce31cb719d4381849471d0fb0f4fd0f2209db403cc29c61dc9cba",
+  "conversion": "schema1 to local Docker archive; layer bytes verified against source digests; no server binaries changed",
+  "tag": "innodb-reader/mysql-patch:5.7.10",
+  "layer_diff_ids": [
+    "sha256:78dbfa5b7cbc2bd94ccbdba52e71be39b359ed7eac43972891b136334f5ce181",
+    "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+    "sha256:8deec01122be6fd7740ea41b7602612180513591a742fa386b121931ecfb8a7a",
+    "sha256:574ab36807f21fe7d834e55a34c34f414f937c47a1f76c8dc90aefeb0b4de25d",
+    "sha256:3a9a02c0d05df0c41673b6111dfee3293b41f74015cbf96c386d1caf66db4089",
+    "sha256:1dfca600c304df15860a87346403c3ba5a71340ca7d9726d9c478f91f81ebc8b",
+    "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+    "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+    "sha256:730420104eca04fbf07a23cd036ac634f066a7504624a9ed9d462b0661c2fb27",
+    "sha256:f5e0246d4f383c152a73e5c0626b53293372f7c91620e6d3f0935fa8e63877b1",
+    "sha256:ba3759a555b03c9190ed460c9f02cf9e509baa5bef65832989f340153c46ce87",
+    "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+    "sha256:e56675241d97b519b8d1add3b83a7e359e2dea50cfe445525a93b21c1957c119",
+    "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+    "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+    "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+  ],
+  "image": "sha256:062c34f95d20b268fc120c2d83fb572038f7489cce4328620730fa74bcae879a"
+}

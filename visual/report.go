@@ -14,9 +14,12 @@ import (
 
 // Options selects explicit layers. Index scans one complete index; Pages selects
 // raw bytes and record provenance to retain, never a partial validation shortcut.
+// Schema/Indexes supply trusted metadata in place of SDI for a selected index.
 type Options struct {
 	Title, Index, ManualDir string
 	Pages                   []uint32
+	Schema                  *innodb.Schema
+	Indexes                 []innodb.SecondarySchema
 	Materialized            bool
 	Space                   innodb.SpaceOptions
 	Scan                    innodb.ScanOptions
@@ -48,6 +51,7 @@ type RawPage struct {
 type Report struct {
 	Version                 int
 	Title, Index, ManualDir string
+	MetadataSource          string `json:",omitempty"`
 	Space                   *innodb.SpaceReport
 	IndexRoot               *uint32 `json:",omitempty"`
 	TreePages               []innodb.Page
@@ -110,6 +114,9 @@ func Build(ctx context.Context, r io.ReaderAt, size int64, o Options) (*Report, 
 	if o.Materialized && o.Index == "" {
 		return nil, fmt.Errorf("%w: materialized requires an index", innodb.ErrUnsupported)
 	}
+	if o.Schema != nil && o.Index == "" || o.Schema == nil && o.Indexes != nil {
+		return nil, fmt.Errorf("%w: explicit schema requires an index; indexes require schema", innodb.ErrUnsupported)
+	}
 	if len(o.Pages) > 256 {
 		return nil, fmt.Errorf("%w: at most 256 raw pages", innodb.ErrLimit)
 	}
@@ -154,29 +161,72 @@ func Build(ctx context.Context, r io.ReaderAt, size int64, o Options) (*Report, 
 		return nil
 	}
 	if o.Index != "" {
-		meta, err := innodb.InspectTable(source, size)
-		if err != nil {
-			return nil, err
-		}
-		var index *innodb.IndexMetadata
-		for i := range meta.Indexes {
-			if meta.Indexes[i].Name == o.Index {
-				index = &meta.Indexes[i]
-				break
+		var schema *innodb.Schema
+		var secondary *innodb.SecondarySchema
+		if o.Schema != nil {
+			max := o.Scan.MaxPageReads
+			if max == 0 {
+				max = 1000000
+			}
+			preflight := &sourceReader{ctx: ctx, source: source, limit: max}
+			if err := innodb.ValidateSchema(preflight, size, *o.Schema); err != nil {
+				return nil, err
+			}
+			if err := innodb.ValidateSecondarySchemas(preflight, size, *o.Schema, o.Indexes); err != nil {
+				return nil, err
+			}
+			if preflight.calls >= max {
+				return nil, fmt.Errorf("%w: explicit index preflight exhausted page budget", innodb.ErrLimit)
+			}
+			o.Scan.MaxPageReads = max - preflight.calls
+			out.MetadataSource = "explicit_schema"
+			clusterName := "PRIMARY"
+			if o.Schema.ClusteredKey != nil {
+				clusterName = o.Schema.ClusteredKey.Name
+			}
+			if o.Index == clusterName {
+				schema = o.Schema
+				out.IndexRoot = &schema.RootPage
+			} else {
+				for i := range o.Indexes {
+					if o.Indexes[i].Name == o.Index {
+						secondary = &o.Indexes[i]
+						break
+					}
+				}
+				if secondary == nil {
+					return nil, fmt.Errorf("%w: unknown index %q", innodb.ErrUnsupported, o.Index)
+				}
+				out.IndexRoot = &secondary.RootPage
+			}
+		} else {
+			out.MetadataSource = "sdi"
+			meta, err := innodb.InspectTable(source, size)
+			if err != nil {
+				return nil, err
+			}
+			var index *innodb.IndexMetadata
+			for i := range meta.Indexes {
+				if meta.Indexes[i].Name == o.Index {
+					index = &meta.Indexes[i]
+					break
+				}
+			}
+			if index == nil {
+				return nil, fmt.Errorf("%w: unknown index %q", innodb.ErrUnsupported, o.Index)
+			}
+			out.IndexRoot = &index.RootPage
+			if index.Clustered {
+				schema = meta.Schema
+				if o.Materialized {
+					schema = meta.MaterializedSchema
+				}
+				if schema == nil {
+					return nil, fmt.Errorf("%w: %s", innodb.ErrUnsupported, strings.Join(meta.Issues, "; "))
+				}
 			}
 		}
-		if index == nil {
-			return nil, fmt.Errorf("%w: unknown index %q", innodb.ErrUnsupported, o.Index)
-		}
-		out.IndexRoot = &index.RootPage
-		if index.Clustered {
-			schema := meta.Schema
-			if o.Materialized {
-				schema = meta.MaterializedSchema
-			}
-			if schema == nil {
-				return nil, fmt.Errorf("%w: %s", innodb.ErrUnsupported, strings.Join(meta.Issues, "; "))
-			}
+		if schema != nil {
 			scan := innodb.Scan
 			if o.Materialized {
 				scan = innodb.ScanMaterialized
@@ -207,7 +257,13 @@ func Build(ctx context.Context, r io.ReaderAt, size int64, o Options) (*Report, 
 			if o.Materialized {
 				return nil, fmt.Errorf("%w: materialized applies only to clustered index", innodb.ErrUnsupported)
 			}
-			report, err := innodb.ScanSecondaryAuto(ctx, source, size, o.Index, o.Scan, func(e innodb.SecondaryEvent) error {
+			scan := func(yield func(innodb.SecondaryEvent) error) (innodb.SecondaryScanReport, error) {
+				if secondary != nil {
+					return innodb.ScanSecondary(ctx, source, size, *secondary, o.Scan, yield)
+				}
+				return innodb.ScanSecondaryAuto(ctx, source, size, o.Index, o.Scan, yield)
+			}
+			report, err := scan(func(e innodb.SecondaryEvent) error {
 				switch {
 				case e.Page != nil:
 					out.TreePages = append(out.TreePages, *e.Page)

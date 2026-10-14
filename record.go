@@ -6,7 +6,7 @@ import (
 	"unicode/utf8"
 )
 
-// Record exposes values in Schema.Columns order. Values are typed integers, float32/float64, string, []byte, JSONValue, GeometryValue, or nil; DECIMAL uses an exact fixed-scale string; see docs/STAGE_PLANS.md#stage-7.
+// Record exposes values in Schema.Columns order. Values are typed integers, float32/float64, string, []byte, JSONValue, GeometryValue, or nil; DECIMAL uses an exact fixed-scale string; see docs/format/17-decimal-encoding.md.
 // Offsets are page-relative. Start includes variable metadata; Offset is the origin
 // (first clustered key byte, including hidden ROW_ID); End is exclusive. The transaction fields are not a ReadView.
 type Record struct {
@@ -165,6 +165,9 @@ func nextRecord(b []byte, origin int) int {
 }
 
 func decodeRecord(b []byte, origin, limit int, s Schema, pk []int) (Record, error) {
+	if s.LegacyInstant != nil {
+		return decodeLegacyInstantRecord(b, origin, limit, s, pk)
+	}
 	if s.Instant != nil {
 		return decodeInstantRecord(b, origin, limit, s, pk)
 	}
@@ -176,8 +179,10 @@ func decodeStoredRecord(b []byte, origin, limit int, s Schema, pk []int, version
 	copy(r.Header[:], b[origin-5:origin])
 	r.deleteMarked = r.Header[0]&0x20 != 0
 	mask := byte(0xd0)
-	if versionBytes == 1 {
-		mask = 0x90
+	if versionBytes > 0 {
+		// The INSTANT decoder validates the mutually exclusive row-version
+		// and legacy count flags before passing the extra-header length.
+		mask = 0x10
 	}
 	if r.Header[0]&mask != 0 {
 		return r, fmt.Errorf("%w: record info flags %#x (instant/version/min)", ErrUnsupported, r.Header[0]&0xf0)

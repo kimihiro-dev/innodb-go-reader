@@ -1,0 +1,4 @@
+{"kind":"schema","schema":{"version":1,"columns":[{"name":"n","type":"INT","nullable":true,"max_chars":0},{"charset":"utf8mb4","name":"name","type":"VARCHAR","nullable":true,"max_chars":20}],"physical":false}}
+{"kind":"row","values":[{"type":"int32","value":"1"},{"type":"string","value":"界"}]}
+{"kind":"row","values":[{"type":"int32","value":"2"},{"type":"null"}]}
+{"kind":"end","rows":"2"}

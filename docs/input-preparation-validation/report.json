@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-13",
+  "task": 66,
+  "status": "complete",
+  "checks": {
+    "full_go_test_count_1": 0,
+    "affected_race_count_1": 0,
+    "full_vet": 0,
+    "native_build": 0,
+    "fixed_sql_metadata_cases": 44,
+    "partition_cli_cases": 7,
+    "real_mysql_tables": 6,
+    "real_export_rows": 23,
+    "real_secondary_checks": 10,
+    "manifest_readback_rows": 1000,
+    "unchanged_prior_assets": 3157,
+    "linux_amd64_build": 0,
+    "windows_amd64_build": 0,
+    "documentation_files": 106,
+    "documentation_links": 1132,
+    "documentation_check": 0,
+    "git_diff_check": 0
+  },
+  "scope": "Go 5.7.44 Docker collector and existing 8.0.45 partition manifest preparation; no new physical parser or 5.7 partition support",
+  "limitations": [
+    "Early A captures use a synthetic internal-column count in unit tests; B counts are independent SQL.",
+    "Go definitions may explicitly encode zero max_chars and false nullable; model semantics match the Python definitions.",
+    "Live exports checked complete protocol and independent expected row counts, not a new SQL comparison of every individual value; fixed Go regression still covers full typed values.",
+    "Schema multi-file directory publication is not atomic; consumers must check final success.",
+    "Cross-platform builds do not certify target platform runtime."
+  ],
+  "builds": {
+    "darwin_arm64": {
+      "path": "/tmp/innodb-input-preparation-reader",
+      "sha256": "0ae39a732332de90aaec1c37eedebbb7fb6645c8305c45d38c3c4741a1d18b1b",
+      "bytes": 7099906
+    },
+    "linux_amd64": {
+      "path": "/tmp/innodb-input-preparation-linux",
+      "sha256": "24a4119d50b2f087c6557ce64bf78ad3637ec4bf21826685d3f7dd469dd214af",
+      "bytes": 7358000
+    },
+    "windows_amd64": {
+      "path": "/tmp/innodb-input-preparation-windows.exe",
+      "sha256": "9659bb05f5e8dd11762967b19dbc4a2a15086860d84c726fd886b2e330f2f476",
+      "bytes": 7533568
+    }
+  }
+}

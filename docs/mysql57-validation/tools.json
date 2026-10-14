@@ -1,0 +1,1498 @@
+[
+  {
+    "case": "scalar_dynamic_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "scalar_dynamic_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "scalar_dynamic_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 6,
+        "traversal_entries": 98
+      }
+    }
+  },
+  {
+    "case": "scalar_dynamic_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 6,
+        "ReadCalls": 6,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "lob_dynamic_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "lob_dynamic_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "lob_dynamic_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 23,
+        "traversal_entries": 134
+      }
+    }
+  },
+  {
+    "case": "lob_dynamic_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 23,
+        "ReadCalls": 23,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "lob_dynamic_grown",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "lob_dynamic_grown",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "lob_dynamic_grown",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 256,
+        "traversal_entries": 430
+      }
+    }
+  },
+  {
+    "case": "lob_dynamic_grown",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 256,
+        "ReadCalls": 256,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "lob_dynamic_shrunk_deleted",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "lob_dynamic_shrunk_deleted",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "lob_dynamic_shrunk_deleted",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 576,
+        "traversal_entries": 669
+      }
+    }
+  },
+  {
+    "case": "lob_dynamic_shrunk_deleted",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 576,
+        "ReadCalls": 576,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "families_dynamic_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "families_dynamic_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "families_dynamic_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 256,
+        "traversal_entries": 443
+      }
+    }
+  },
+  {
+    "case": "families_dynamic_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 256,
+        "ReadCalls": 256,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "tree_dynamic_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "tree_dynamic_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "tree_dynamic_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 576,
+        "traversal_entries": 1137
+      }
+    }
+  },
+  {
+    "case": "tree_dynamic_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 576,
+        "ReadCalls": 576,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "hidden_dynamic_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "hidden_dynamic_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "hidden_dynamic_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 8,
+        "traversal_entries": 104
+      }
+    }
+  },
+  {
+    "case": "hidden_dynamic_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 8,
+        "ReadCalls": 8,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "unique_dynamic_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "unique_dynamic_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "unique_dynamic_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 6,
+        "traversal_entries": 98
+      }
+    }
+  },
+  {
+    "case": "unique_dynamic_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 6,
+        "ReadCalls": 6,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "generated_dynamic_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "generated_dynamic_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "generated_dynamic_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 6,
+        "traversal_entries": 97
+      }
+    }
+  },
+  {
+    "case": "generated_dynamic_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 6,
+        "ReadCalls": 6,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "charset_dynamic_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "charset_dynamic_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "charset_dynamic_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 6,
+        "traversal_entries": 98
+      }
+    }
+  },
+  {
+    "case": "charset_dynamic_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 6,
+        "ReadCalls": 6,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "empty_dynamic_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "empty_dynamic_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "empty_dynamic_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 6,
+        "traversal_entries": 95
+      }
+    }
+  },
+  {
+    "case": "empty_dynamic_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 6,
+        "ReadCalls": 6,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "scalar_compact_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "scalar_compact_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "scalar_compact_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 6,
+        "traversal_entries": 98
+      }
+    }
+  },
+  {
+    "case": "scalar_compact_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 6,
+        "ReadCalls": 6,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "lob_compact_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "lob_compact_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "lob_compact_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 23,
+        "traversal_entries": 134
+      }
+    }
+  },
+  {
+    "case": "lob_compact_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 23,
+        "ReadCalls": 23,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "lob_compact_grown",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "lob_compact_grown",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "lob_compact_grown",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 256,
+        "traversal_entries": 445
+      }
+    }
+  },
+  {
+    "case": "lob_compact_grown",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 256,
+        "ReadCalls": 256,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "lob_compact_shrunk_deleted",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "lob_compact_shrunk_deleted",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "lob_compact_shrunk_deleted",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 576,
+        "traversal_entries": 669
+      }
+    }
+  },
+  {
+    "case": "lob_compact_shrunk_deleted",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 576,
+        "ReadCalls": 576,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "families_compact_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "families_compact_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "families_compact_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 256,
+        "traversal_entries": 443
+      }
+    }
+  },
+  {
+    "case": "families_compact_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 256,
+        "ReadCalls": 256,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "tree_compact_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "tree_compact_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "tree_compact_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 576,
+        "traversal_entries": 1137
+      }
+    }
+  },
+  {
+    "case": "tree_compact_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 576,
+        "ReadCalls": 576,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "hidden_compact_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "hidden_compact_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "hidden_compact_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 8,
+        "traversal_entries": 104
+      }
+    }
+  },
+  {
+    "case": "hidden_compact_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 8,
+        "ReadCalls": 8,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "unique_compact_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "unique_compact_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "unique_compact_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 6,
+        "traversal_entries": 98
+      }
+    }
+  },
+  {
+    "case": "unique_compact_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 6,
+        "ReadCalls": 6,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "generated_compact_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "generated_compact_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "generated_compact_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 6,
+        "traversal_entries": 97
+      }
+    }
+  },
+  {
+    "case": "generated_compact_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 6,
+        "ReadCalls": 6,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "charset_compact_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "charset_compact_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "charset_compact_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 6,
+        "traversal_entries": 98
+      }
+    }
+  },
+  {
+    "case": "charset_compact_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 6,
+        "ReadCalls": 6,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  },
+  {
+    "case": "empty_compact_initial",
+    "command": [
+      "space"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "space",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "empty_compact_initial",
+    "command": [
+      "page",
+      "--number",
+      "0"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "page",
+      "scope": "whole space allocation and supported page structures",
+      "complete": true
+    }
+  },
+  {
+    "case": "empty_compact_initial",
+    "command": [
+      "stats",
+      "--format",
+      "json"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "stats",
+      "scope": "whole space allocation and local index layout; filtered groups",
+      "complete": true,
+      "report": {
+        "view": "summary",
+        "filter": {
+          "index_id": null,
+          "level": null
+        },
+        "physical_reads": 6,
+        "traversal_entries": 95
+      }
+    }
+  },
+  {
+    "case": "empty_compact_initial",
+    "command": [
+      "visualize"
+    ],
+    "exit": 0,
+    "report": {
+      "command": "visualize",
+      "scope": "space; explicitly selected index and page details",
+      "complete": true,
+      "report": {
+        "Pages": 6,
+        "ReadCalls": 6,
+        "Index": "",
+        "RawPages": 0,
+        "Details": 0
+      }
+    }
+  }
+]

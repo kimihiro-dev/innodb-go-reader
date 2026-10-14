@@ -1,0 +1,31 @@
+{
+  "row_format": "COMPACT",
+  "columns": [
+    {
+      "name": "seq",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "k",
+      "type": "INT",
+      "nullable": false
+    },
+    {
+      "name": "name",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "utf8mb4",
+      "max_chars": 30
+    }
+  ],
+  "root_page": 3,
+  "index_id": 276,
+  "space_id": 147,
+  "clustered_key": {
+    "name": "actual",
+    "columns": [
+      "k"
+    ]
+  }
+}

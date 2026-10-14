@@ -1,0 +1,154 @@
+[
+  {
+    "path": "#ib_16384_0.dblwr",
+    "bytes": 196608
+  },
+  {
+    "path": "#ib_16384_1.dblwr",
+    "bytes": 8585216
+  },
+  {
+    "path": "#innodb_redo/#ib_redo10_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo11_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo12_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo13_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo14_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo15_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo16_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo17_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo18_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo19_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo20_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo21_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo22_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo23_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo24_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo25_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo26_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo27_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo28_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo29_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo30_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo31_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo32_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo33_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo34_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo35_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo36_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo5",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo6_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo7_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo8_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "#innodb_redo/#ib_redo9_tmp",
+    "bytes": 3276800
+  },
+  {
+    "path": "ibdata1",
+    "bytes": 12582912
+  },
+  {
+    "path": "mysql.ibd",
+    "bytes": 29360128
+  },
+  {
+    "path": "undo_001",
+    "bytes": 16777216
+  },
+  {
+    "path": "undo_002",
+    "bytes": 16777216
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-13",
+  "task": 65,
+  "status": "complete",
+  "documents": [
+    "89-mysql57-system-tablespace.md",
+    "90-mysql80-system-tablespace.md"
+  ],
+  "scope": "Knowledge documents; source and fixed-offset observations only. No Go parsing capability, dictionary record traversal, MVCC or recovery added.",
+  "checks": {
+    "versioned_sources": 24,
+    "physical_files": 7,
+    "official_mysql8045_crc_files": 7,
+    "official_mysql8045_sdi_extractions": 3,
+    "documentation_check": 0,
+    "git_diff_check": 0,
+    "original_files_fingerprinted": 3397,
+    "unchanged_prior_assets": 3129,
+    "go_tests_rerun": false,
+    "fixed_field_and_sql_root_checks_exit": 0,
+    "documentation_markdown_files": 104,
+    "documentation_local_references": 1086
+  },
+  "observations": {
+    "mysql57_dictionary_roots": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "mysql57_dictionary_record_format": "REDUNDANT",
+    "mysql80_legacy_dictionary_roots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "mysql80_system_and_mysql_space_flags": "0x4800 = SHARED + SDI, PAGE_SSIZE=0",
+    "mysql80_legacy_doublewrite_header_present": true,
+    "mysql80_undo_directory_size_field": 0,
+    "mysql80_undo_nonempty_slots_each": 128
+  },
+  "evidence_boundaries": [
+    "Official innochecksum skips legacy doublewrite region according to its own implementation; success does not certify every copy.",
+    "SQL identities are independent comparisons; observations.json is derived from supplied bytes.",
+    "Page type 13 observed in 8.0 legacy area; creation/flush explanation is source inference, not an enabled per-page trace.",
+    "Snapshot file subset is not a complete restartable instance backup."
+  ],
+  "environment": {
+    "mysql57": "fresh isolated Docker linux/amd64",
+    "mysql80": "fresh local official 8.0.45 instance, Unix socket only",
+    "shutdown": "innodb_fast_shutdown=0 and Shutdown complete",
+    "doc_instances_stopped": true,
+    "prior_project_instance_unchanged": true
+  },
+  "artifacts": [
+    "README.md",
+    "source-map.json",
+    "observations.json",
+    "tools.json",
+    "preservation.json",
+    "capture.py",
+    "inspect.py",
+    "capture-log.json",
+    "host.json",
+    "mysql80-files.json",
+    "mysql57-shutdown.log",
+    "mysql80-shutdown.log",
+    "docs-check.log"
+  ]
+}

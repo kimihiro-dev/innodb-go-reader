@@ -1,0 +1,202 @@
+[
+  {
+    "version": "5.7.28",
+    "case": "ranges_dynamic_current",
+    "partition": "P0",
+    "bytes": 344064,
+    "page_zero_space_offset": 34,
+    "page_zero_space_hex": "00000092",
+    "space": 146,
+    "table_id": 165,
+    "root": 3,
+    "root_index_offset": 49218,
+    "root_index_hex": "0000000000000111",
+    "index_id": 273
+  },
+  {
+    "version": "5.7.28",
+    "case": "ranges_dynamic_current",
+    "partition": "p1",
+    "bytes": 196608,
+    "page_zero_space_offset": 34,
+    "page_zero_space_hex": "00000093",
+    "space": 147,
+    "table_id": 166,
+    "root": 3,
+    "root_index_offset": 49218,
+    "root_index_hex": "0000000000000114",
+    "index_id": 276
+  },
+  {
+    "version": "5.7.28",
+    "case": "ranges_dynamic_current",
+    "partition": "empty_p",
+    "bytes": 131072,
+    "page_zero_space_offset": 34,
+    "page_zero_space_hex": "00000094",
+    "space": 148,
+    "table_id": 167,
+    "root": 3,
+    "root_index_offset": 49218,
+    "root_index_hex": "0000000000000117",
+    "index_id": 279
+  },
+  {
+    "version": "8.0.28",
+    "case": "instant_dynamic_partial_rebuild",
+    "partition": "P0",
+    "bytes": 114688,
+    "page_zero_space_offset": 34,
+    "page_zero_space_hex": "00000099",
+    "space": 153,
+    "table_private": "instant_col=3;",
+    "partition_directory": [
+      {
+        "name": "P0",
+        "private": "instant_col=3;",
+        "table_id": 1218
+      },
+      {
+        "name": "p1",
+        "private": "",
+        "table_id": 1221
+      },
+      {
+        "name": "empty_p",
+        "private": "instant_col=3;",
+        "table_id": 1220
+      }
+    ],
+    "columns": [
+      {
+        "name": "id",
+        "private": "table_id=1218;"
+      },
+      {
+        "name": "n",
+        "private": "table_id=1218;"
+      },
+      {
+        "name": "v",
+        "private": "table_id=1218;"
+      },
+      {
+        "name": "a",
+        "private": "default=80000007;table_id=1218;"
+      },
+      {
+        "name": "txt",
+        "private": "default=e7958cf09f9880;table_id=1218;"
+      },
+      {
+        "name": "DB_TRX_ID",
+        "private": "table_id=1218;"
+      },
+      {
+        "name": "DB_ROLL_PTR",
+        "private": "table_id=1218;"
+      }
+    ]
+  },
+  {
+    "version": "8.0.28",
+    "case": "instant_dynamic_partial_rebuild",
+    "partition": "p1",
+    "bytes": 114688,
+    "page_zero_space_offset": 34,
+    "page_zero_space_hex": "0000009c",
+    "space": 156
+  },
+  {
+    "version": "8.0.28",
+    "case": "instant_dynamic_partial_rebuild",
+    "partition": "empty_p",
+    "bytes": 114688,
+    "page_zero_space_offset": 34,
+    "page_zero_space_hex": "0000009b",
+    "space": 155
+  },
+  {
+    "version": "8.0.12",
+    "case": "ranges_dynamic_rebuild_first",
+    "partition": "P0",
+    "bytes": 311296,
+    "page_zero_space_offset": 34,
+    "page_zero_space_hex": "000000ad",
+    "space": 173,
+    "table_private": "",
+    "partition_directory": [
+      {
+        "name": "P0",
+        "private": "",
+        "table_id": 1234
+      },
+      {
+        "name": "p1",
+        "private": "",
+        "table_id": 1182
+      },
+      {
+        "name": "empty_p",
+        "private": "",
+        "table_id": 1183
+      }
+    ],
+    "columns": [
+      {
+        "name": "id",
+        "private": "table_id=1181;"
+      },
+      {
+        "name": "n",
+        "private": "table_id=1181;"
+      },
+      {
+        "name": "v",
+        "private": "table_id=1181;"
+      },
+      {
+        "name": "payload",
+        "private": "table_id=1181;"
+      },
+      {
+        "name": "b",
+        "private": "table_id=1181;"
+      },
+      {
+        "name": "d",
+        "private": "table_id=1181;"
+      },
+      {
+        "name": "j",
+        "private": "table_id=1181;"
+      },
+      {
+        "name": "DB_TRX_ID",
+        "private": "table_id=1181;"
+      },
+      {
+        "name": "DB_ROLL_PTR",
+        "private": "table_id=1181;"
+      }
+    ]
+  },
+  {
+    "version": "8.0.12",
+    "case": "ranges_dynamic_rebuild_first",
+    "partition": "p1",
+    "bytes": 212992,
+    "page_zero_space_offset": 34,
+    "page_zero_space_hex": "00000079",
+    "space": 121
+  },
+  {
+    "version": "8.0.12",
+    "case": "ranges_dynamic_rebuild_first",
+    "partition": "empty_p",
+    "bytes": 147456,
+    "page_zero_space_offset": 34,
+    "page_zero_space_hex": "0000007a",
+    "space": 122
+  }
+]

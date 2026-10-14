@@ -1,0 +1,5683 @@
+{
+  "5.7.10": {
+    "VERSION": {
+      "sha256": "241a548b6df1ac8c98668aff1d149c60353a6ec8e2a3bcedde810791602f5007",
+      "lines": []
+    },
+    "storage/innobase/handler/ha_innopart.cc": {
+      "sha256": "5222552f4ac16f20adcda8c81d7a6d0281d55a2c00131f7fa46b497dac98217c",
+      "lines": [
+        {
+          "line": 60,
+          "text": "const char* part_sep = \"#p#\";"
+        },
+        {
+          "line": 63,
+          "text": "const char* part_sep = \"#P#\";"
+        },
+        {
+          "line": 68,
+          "text": "const char* part_sep_nix = \"#P#\";"
+        },
+        {
+          "line": 135,
+          "text": "\tif (strcmp(sep, part_sep_nix) != 0"
+        },
+        {
+          "line": 209,
+          "text": "\t/* TODO: To save memory, compare with first partition and reuse"
+        },
+        {
+          "line": 311,
+          "text": "\t\t\t\tpart_sep_nix,"
+        },
+        {
+          "line": 315,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 1017,
+          "text": "\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1024,
+          "text": "\t\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1039,
+          "text": "\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1110,
+          "text": "\t\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1112,
+          "text": "\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1444,
+          "text": "\t\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1446,
+          "text": "\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1587,
+          "text": "\t/* Store it in the shared dictionary of the partition."
+        },
+        {
+          "line": 1628,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1731,
+          "text": "\tuint\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1780,
+          "text": "\tuint\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1853,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 2080,
+          "text": "/** Return first record in index from a partition."
+        },
+        {
+          "line": 2082,
+          "text": "@param[out]\trecord\tFirst record in index in the partition."
+        },
+        {
+          "line": 2187,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2191,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 2216,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2220,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 2268,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2271,
+          "text": "@param[in,out]\trecord\t\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2325,
+          "text": "@param[in,out]\trecord\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2600,
+          "text": "\t\t\t\tsubpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2627,
+          "text": "\t\t\t\tsubpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2791,
+          "text": "\t\t\t\tpart_sep,"
+        },
+        {
+          "line": 2816,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2887,
+          "text": "\t\t\tpart_sep,"
+        },
+        {
+          "line": 2899,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2948,
+          "text": "\tfor (i= m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3078,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3133,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3186,
+          "text": "\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3194,
+          "text": "\t/* Only validate the first partition, to avoid too much overhead. */"
+        },
+        {
+          "line": 3321,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3361,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3459,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3497,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3596,
+          "text": "\t\t/* Take page_size from first partition. */"
+        },
+        {
+          "line": 3798,
+          "text": "\t\t/* Use the first partition for create time until new DD. */"
+        },
+        {
+          "line": 3909,
+          "text": "\tfor (i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3975,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 4057,
+          "text": "\tif (m_part_info->get_first_used_partition() == MY_BIT_NONE) {"
+        },
+        {
+          "line": 4124,
+          "text": "\tif (m_part_info->get_first_used_partition() == MY_BIT_NONE"
+        },
+        {
+          "line": 4307,
+          "text": "\tif (tablespace_is_shared_space(create_info)"
+        }
+      ]
+    },
+    "strings/ctype-utf8.c": {
+      "sha256": "1aa717b4f04be5b9a8b3daccb3c01266101d55177e828585aa30c94ba2df17c9",
+      "lines": [
+        {
+          "line": 5109,
+          "text": "  This function is shared between"
+        },
+        {
+          "line": 5156,
+          "text": "  This function is shared between utf8mb4_bin, utf16_bin, utf32_bin."
+        },
+        {
+          "line": 7544,
+          "text": "my_wc_mb_filename(const CHARSET_INFO *cs __attribute__((unused)),"
+        },
+        {
+          "line": 7612,
+          "text": "    my_wc_mb_filename,"
+        }
+      ]
+    }
+  },
+  "5.7.11": {
+    "VERSION": {
+      "sha256": "1e10ab04c8e83bdaaa8701c7f38f70f987182a52d76ce8f6bba9aeb2ef6ea535",
+      "lines": []
+    },
+    "storage/innobase/handler/ha_innopart.cc": {
+      "sha256": "7361c87e5e5336a3f095813efdcbf317adbf5bbb58f9c4ab37702958de68a4c6",
+      "lines": [
+        {
+          "line": 60,
+          "text": "const char* part_sep = \"#p#\";"
+        },
+        {
+          "line": 63,
+          "text": "const char* part_sep = \"#P#\";"
+        },
+        {
+          "line": 68,
+          "text": "const char* part_sep_nix = \"#P#\";"
+        },
+        {
+          "line": 135,
+          "text": "\tif (strcmp(sep, part_sep_nix) != 0"
+        },
+        {
+          "line": 209,
+          "text": "\t/* TODO: To save memory, compare with first partition and reuse"
+        },
+        {
+          "line": 311,
+          "text": "\t\t\t\tpart_sep_nix,"
+        },
+        {
+          "line": 315,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 1017,
+          "text": "\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1024,
+          "text": "\t\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1039,
+          "text": "\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1110,
+          "text": "\t\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1112,
+          "text": "\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1447,
+          "text": "\t\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1449,
+          "text": "\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1590,
+          "text": "\t/* Store it in the shared dictionary of the partition."
+        },
+        {
+          "line": 1631,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1734,
+          "text": "\tuint\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1783,
+          "text": "\tuint\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1856,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 2083,
+          "text": "/** Return first record in index from a partition."
+        },
+        {
+          "line": 2085,
+          "text": "@param[out]\trecord\tFirst record in index in the partition."
+        },
+        {
+          "line": 2190,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2194,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 2219,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2223,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 2271,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2274,
+          "text": "@param[in,out]\trecord\t\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2328,
+          "text": "@param[in,out]\trecord\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2616,
+          "text": "\t\t\t\tsubpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2643,
+          "text": "\t\t\t\tsubpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2807,
+          "text": "\t\t\t\tpart_sep,"
+        },
+        {
+          "line": 2832,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2903,
+          "text": "\t\t\tpart_sep,"
+        },
+        {
+          "line": 2915,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2964,
+          "text": "\tfor (i= m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3094,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3149,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3202,
+          "text": "\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3210,
+          "text": "\t/* Only validate the first partition, to avoid too much overhead. */"
+        },
+        {
+          "line": 3337,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3377,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3475,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3513,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3613,
+          "text": "\t\t/* Take page_size from first partition. */"
+        },
+        {
+          "line": 3815,
+          "text": "\t\t/* Use the first partition for create time until new DD. */"
+        },
+        {
+          "line": 3926,
+          "text": "\tfor (i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3992,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 4074,
+          "text": "\tif (m_part_info->get_first_used_partition() == MY_BIT_NONE) {"
+        },
+        {
+          "line": 4141,
+          "text": "\tif (m_part_info->get_first_used_partition() == MY_BIT_NONE"
+        },
+        {
+          "line": 4324,
+          "text": "\tif (tablespace_is_shared_space(create_info)"
+        }
+      ]
+    },
+    "strings/ctype-utf8.c": {
+      "sha256": "1aa717b4f04be5b9a8b3daccb3c01266101d55177e828585aa30c94ba2df17c9",
+      "lines": [
+        {
+          "line": 5109,
+          "text": "  This function is shared between"
+        },
+        {
+          "line": 5156,
+          "text": "  This function is shared between utf8mb4_bin, utf16_bin, utf32_bin."
+        },
+        {
+          "line": 7544,
+          "text": "my_wc_mb_filename(const CHARSET_INFO *cs __attribute__((unused)),"
+        },
+        {
+          "line": 7612,
+          "text": "    my_wc_mb_filename,"
+        }
+      ]
+    }
+  },
+  "5.7.12": {
+    "VERSION": {
+      "sha256": "31de52aa0e7e8a7c63c1449a89c3b4b62eecac2b7f6efddab0b83291dcced055",
+      "lines": []
+    },
+    "storage/innobase/handler/ha_innopart.cc": {
+      "sha256": "aa05f751a3cf537a1f10b66c6d9a503553eb9996bf790204b179565a0c519c5c",
+      "lines": [
+        {
+          "line": 60,
+          "text": "const char* part_sep = \"#p#\";"
+        },
+        {
+          "line": 63,
+          "text": "const char* part_sep = \"#P#\";"
+        },
+        {
+          "line": 68,
+          "text": "const char* part_sep_nix = \"#P#\";"
+        },
+        {
+          "line": 135,
+          "text": "\tif (strcmp(sep, part_sep_nix) != 0"
+        },
+        {
+          "line": 209,
+          "text": "\t/* TODO: To save memory, compare with first partition and reuse"
+        },
+        {
+          "line": 309,
+          "text": "\t\t\t\tpart_sep_nix,"
+        },
+        {
+          "line": 313,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 1015,
+          "text": "\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1022,
+          "text": "\t\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1037,
+          "text": "\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1108,
+          "text": "\t\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1110,
+          "text": "\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1445,
+          "text": "\t\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1447,
+          "text": "\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1588,
+          "text": "\t/* Store it in the shared dictionary of the partition."
+        },
+        {
+          "line": 1629,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1732,
+          "text": "\tuint\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1781,
+          "text": "\tuint\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1854,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 2081,
+          "text": "/** Return first record in index from a partition."
+        },
+        {
+          "line": 2083,
+          "text": "@param[out]\trecord\tFirst record in index in the partition."
+        },
+        {
+          "line": 2188,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2192,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 2217,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2221,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 2269,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2272,
+          "text": "@param[in,out]\trecord\t\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2326,
+          "text": "@param[in,out]\trecord\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2614,
+          "text": "\t\t\t\tsubpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2641,
+          "text": "\t\t\t\tsubpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2805,
+          "text": "\t\t\t\tpart_sep,"
+        },
+        {
+          "line": 2830,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2901,
+          "text": "\t\t\tpart_sep,"
+        },
+        {
+          "line": 2913,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2962,
+          "text": "\tfor (i= m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3092,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3147,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3200,
+          "text": "\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3208,
+          "text": "\t/* Only validate the first partition, to avoid too much overhead. */"
+        },
+        {
+          "line": 3335,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3375,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3473,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3511,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3611,
+          "text": "\t\t/* Take page_size from first partition. */"
+        },
+        {
+          "line": 3813,
+          "text": "\t\t/* Use the first partition for create time until new DD. */"
+        },
+        {
+          "line": 3924,
+          "text": "\tfor (i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3990,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 4072,
+          "text": "\tif (m_part_info->get_first_used_partition() == MY_BIT_NONE) {"
+        },
+        {
+          "line": 4139,
+          "text": "\tif (m_part_info->get_first_used_partition() == MY_BIT_NONE"
+        },
+        {
+          "line": 4322,
+          "text": "\tif (tablespace_is_shared_space(create_info)"
+        }
+      ]
+    },
+    "strings/ctype-utf8.c": {
+      "sha256": "1aa717b4f04be5b9a8b3daccb3c01266101d55177e828585aa30c94ba2df17c9",
+      "lines": [
+        {
+          "line": 5109,
+          "text": "  This function is shared between"
+        },
+        {
+          "line": 5156,
+          "text": "  This function is shared between utf8mb4_bin, utf16_bin, utf32_bin."
+        },
+        {
+          "line": 7544,
+          "text": "my_wc_mb_filename(const CHARSET_INFO *cs __attribute__((unused)),"
+        },
+        {
+          "line": 7612,
+          "text": "    my_wc_mb_filename,"
+        }
+      ]
+    }
+  },
+  "5.7.28": {
+    "VERSION": {
+      "sha256": "3537da5e60bfbd8c4c954ca8e639b828b5fc5a3c37ad7be2a8f7612d856ab417",
+      "lines": []
+    },
+    "storage/innobase/handler/ha_innopart.cc": {
+      "sha256": "6dd0cf471519b3cbcea2d07dadc6cf43abd4f14e9819fa6d83a93678e6db6257",
+      "lines": [
+        {
+          "line": 69,
+          "text": "const char* part_sep = \"#p#\";"
+        },
+        {
+          "line": 72,
+          "text": "const char* part_sep = \"#P#\";"
+        },
+        {
+          "line": 77,
+          "text": "const char* part_sep_nix = \"#P#\";"
+        },
+        {
+          "line": 144,
+          "text": "\tif (strcmp(sep, part_sep_nix) != 0"
+        },
+        {
+          "line": 218,
+          "text": "\t/* TODO: To save memory, compare with first partition and reuse"
+        },
+        {
+          "line": 318,
+          "text": "\t\t\t\tpart_sep_nix,"
+        },
+        {
+          "line": 322,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 1024,
+          "text": "\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1031,
+          "text": "\t\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1046,
+          "text": "\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1117,
+          "text": "\t\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1119,
+          "text": "\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1454,
+          "text": "\t\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1456,
+          "text": "\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1597,
+          "text": "\t/* Store it in the shared dictionary of the partition."
+        },
+        {
+          "line": 1638,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1741,
+          "text": "\tuint\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1790,
+          "text": "\tuint\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1863,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 2090,
+          "text": "/** Return first record in index from a partition."
+        },
+        {
+          "line": 2092,
+          "text": "@param[out]\trecord\tFirst record in index in the partition."
+        },
+        {
+          "line": 2197,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2201,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 2226,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2230,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 2278,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2281,
+          "text": "@param[in,out]\trecord\t\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2335,
+          "text": "@param[in,out]\trecord\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2623,
+          "text": "\t\t\t\tsubpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2650,
+          "text": "\t\t\t\tsubpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2751,
+          "text": "        if (is_shared_tablespace(create_info->tablespace)) {"
+        },
+        {
+          "line": 2753,
+          "text": "\t\t\tha_thd(), PARTITION_IN_SHARED_TABLESPACE_WARNING);"
+        },
+        {
+          "line": 2850,
+          "text": "\t\t\t\tpart_sep,"
+        },
+        {
+          "line": 2875,
+          "text": "\t\t\tif (is_shared_tablespace(part_elem->tablespace_name)) {"
+        },
+        {
+          "line": 2877,
+          "text": "\t\t\t\t\tha_thd(), PARTITION_IN_SHARED_TABLESPACE_WARNING);"
+        },
+        {
+          "line": 2894,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2900,
+          "text": "\t\t\t\tif (is_shared_tablespace(sub_elem->tablespace_name)) {"
+        },
+        {
+          "line": 2902,
+          "text": "\t\t\t\t\t\tha_thd(), PARTITION_IN_SHARED_TABLESPACE_WARNING);"
+        },
+        {
+          "line": 2986,
+          "text": "\t\t\t\tpart_sep,"
+        },
+        {
+          "line": 2999,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 3060,
+          "text": "\tfor (i= m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3190,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3249,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3303,
+          "text": "\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3446,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3486,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3584,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3622,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3722,
+          "text": "\t\t/* Take page_size from first partition. */"
+        },
+        {
+          "line": 3924,
+          "text": "\t\t/* Use the first partition for create time until new DD. */"
+        },
+        {
+          "line": 4035,
+          "text": "\tfor (i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 4101,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 4183,
+          "text": "\tif (m_part_info->get_first_used_partition() == MY_BIT_NONE) {"
+        },
+        {
+          "line": 4250,
+          "text": "\tif (m_part_info->get_first_used_partition() == MY_BIT_NONE"
+        },
+        {
+          "line": 4452,
+          "text": "\tif (tablespace_is_shared_space(create_info)"
+        },
+        {
+          "line": 4461,
+          "text": "\tif (tablespace_is_shared_space(create_info)) {"
+        },
+        {
+          "line": 4463,
+          "text": "\t\t\tha_thd(), PARTITION_IN_SHARED_TABLESPACE_WARNING);"
+        }
+      ]
+    },
+    "strings/ctype-utf8.c": {
+      "sha256": "5dea1ef2e8bceba33f4f71d19515c1d5428c52d068b428dd4d157fd80432a953",
+      "lines": [
+        {
+          "line": 5135,
+          "text": "  This function is shared between"
+        },
+        {
+          "line": 5182,
+          "text": "  This function is shared between utf8mb4_bin, utf16_bin, utf32_bin."
+        },
+        {
+          "line": 7584,
+          "text": "my_wc_mb_filename(const CHARSET_INFO *cs MY_ATTRIBUTE((unused)),"
+        },
+        {
+          "line": 7652,
+          "text": "    my_wc_mb_filename,"
+        }
+      ]
+    }
+  },
+  "5.7.43": {
+    "VERSION": {
+      "sha256": "8dc1542af4a66125a23f7690167126990e42f46b7809c3e757fbf272899d9f1e",
+      "lines": []
+    },
+    "storage/innobase/handler/ha_innopart.cc": {
+      "sha256": "bf0892187fe1a03c974a9a20f8c962af41a1b3ebf294ad91e15bbaee31849a35",
+      "lines": [
+        {
+          "line": 69,
+          "text": "const char* part_sep = \"#p#\";"
+        },
+        {
+          "line": 72,
+          "text": "const char* part_sep = \"#P#\";"
+        },
+        {
+          "line": 77,
+          "text": "const char* part_sep_nix = \"#P#\";"
+        },
+        {
+          "line": 144,
+          "text": "\tif (strcmp(sep, part_sep_nix) != 0"
+        },
+        {
+          "line": 218,
+          "text": "\t/* TODO: To save memory, compare with first partition and reuse"
+        },
+        {
+          "line": 318,
+          "text": "\t\t\t\tpart_sep_nix,"
+        },
+        {
+          "line": 322,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 1024,
+          "text": "\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1031,
+          "text": "\t\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1046,
+          "text": "\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1453,
+          "text": "\t\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1455,
+          "text": "\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1599,
+          "text": "\t/* Store it in the shared dictionary of the partition."
+        },
+        {
+          "line": 1640,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1743,
+          "text": "\tuint\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1792,
+          "text": "\tuint\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1865,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 2092,
+          "text": "/** Return first record in index from a partition."
+        },
+        {
+          "line": 2094,
+          "text": "@param[out]\trecord\tFirst record in index in the partition."
+        },
+        {
+          "line": 2199,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2203,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 2228,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2232,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 2280,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2283,
+          "text": "@param[in,out]\trecord\t\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2337,
+          "text": "@param[in,out]\trecord\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2625,
+          "text": "\t\t\t\tsubpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2652,
+          "text": "\t\t\t\tsubpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2753,
+          "text": "        if (is_shared_tablespace(create_info->tablespace)) {"
+        },
+        {
+          "line": 2755,
+          "text": "\t\t\tha_thd(), PARTITION_IN_SHARED_TABLESPACE_WARNING);"
+        },
+        {
+          "line": 2852,
+          "text": "\t\t\t\tpart_sep,"
+        },
+        {
+          "line": 2877,
+          "text": "\t\t\tif (is_shared_tablespace(part_elem->tablespace_name)) {"
+        },
+        {
+          "line": 2879,
+          "text": "\t\t\t\t\tha_thd(), PARTITION_IN_SHARED_TABLESPACE_WARNING);"
+        },
+        {
+          "line": 2896,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2902,
+          "text": "\t\t\t\tif (is_shared_tablespace(sub_elem->tablespace_name)) {"
+        },
+        {
+          "line": 2904,
+          "text": "\t\t\t\t\t\tha_thd(), PARTITION_IN_SHARED_TABLESPACE_WARNING);"
+        },
+        {
+          "line": 2988,
+          "text": "\t\t\t\tpart_sep,"
+        },
+        {
+          "line": 3001,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 3062,
+          "text": "\tfor (i= m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3192,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3251,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3305,
+          "text": "\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3448,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3488,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3586,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3624,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3724,
+          "text": "\t\t/* Take page_size from first partition. */"
+        },
+        {
+          "line": 3926,
+          "text": "\t\t/* Use the first partition for create time until new DD. */"
+        },
+        {
+          "line": 4037,
+          "text": "\tfor (i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 4103,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 4185,
+          "text": "\tif (m_part_info->get_first_used_partition() == MY_BIT_NONE) {"
+        },
+        {
+          "line": 4253,
+          "text": "\tif (m_part_info->get_first_used_partition() == MY_BIT_NONE"
+        },
+        {
+          "line": 4456,
+          "text": "\tif (tablespace_is_shared_space(create_info)"
+        },
+        {
+          "line": 4465,
+          "text": "\tif (tablespace_is_shared_space(create_info)) {"
+        },
+        {
+          "line": 4467,
+          "text": "\t\t\tha_thd(), PARTITION_IN_SHARED_TABLESPACE_WARNING);"
+        }
+      ]
+    },
+    "strings/ctype-utf8.c": {
+      "sha256": "732f122b2d01483b414651433631de60511fd0cc2d504916892e9ac88075d799",
+      "lines": [
+        {
+          "line": 5135,
+          "text": "  This function is shared between"
+        },
+        {
+          "line": 5182,
+          "text": "  This function is shared between utf8mb4_bin, utf16_bin, utf32_bin."
+        },
+        {
+          "line": 7584,
+          "text": "my_wc_mb_filename(const CHARSET_INFO *cs MY_ATTRIBUTE((unused)),"
+        },
+        {
+          "line": 7652,
+          "text": "    my_wc_mb_filename,"
+        }
+      ]
+    }
+  },
+  "5.7.44": {
+    "VERSION": {
+      "sha256": "cdc589e4b91a68c7f89ebfe24fc698209eed07733e1ca09a887a80350af7af7c",
+      "lines": []
+    },
+    "storage/innobase/handler/ha_innopart.cc": {
+      "sha256": "bf0892187fe1a03c974a9a20f8c962af41a1b3ebf294ad91e15bbaee31849a35",
+      "lines": [
+        {
+          "line": 69,
+          "text": "const char* part_sep = \"#p#\";"
+        },
+        {
+          "line": 72,
+          "text": "const char* part_sep = \"#P#\";"
+        },
+        {
+          "line": 77,
+          "text": "const char* part_sep_nix = \"#P#\";"
+        },
+        {
+          "line": 144,
+          "text": "\tif (strcmp(sep, part_sep_nix) != 0"
+        },
+        {
+          "line": 218,
+          "text": "\t/* TODO: To save memory, compare with first partition and reuse"
+        },
+        {
+          "line": 318,
+          "text": "\t\t\t\tpart_sep_nix,"
+        },
+        {
+          "line": 322,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 1024,
+          "text": "\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1031,
+          "text": "\t\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1046,
+          "text": "\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1453,
+          "text": "\t\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1455,
+          "text": "\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1599,
+          "text": "\t/* Store it in the shared dictionary of the partition."
+        },
+        {
+          "line": 1640,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1743,
+          "text": "\tuint\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1792,
+          "text": "\tuint\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1865,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 2092,
+          "text": "/** Return first record in index from a partition."
+        },
+        {
+          "line": 2094,
+          "text": "@param[out]\trecord\tFirst record in index in the partition."
+        },
+        {
+          "line": 2199,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2203,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 2228,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2232,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 2280,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2283,
+          "text": "@param[in,out]\trecord\t\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2337,
+          "text": "@param[in,out]\trecord\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2625,
+          "text": "\t\t\t\tsubpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2652,
+          "text": "\t\t\t\tsubpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2753,
+          "text": "        if (is_shared_tablespace(create_info->tablespace)) {"
+        },
+        {
+          "line": 2755,
+          "text": "\t\t\tha_thd(), PARTITION_IN_SHARED_TABLESPACE_WARNING);"
+        },
+        {
+          "line": 2852,
+          "text": "\t\t\t\tpart_sep,"
+        },
+        {
+          "line": 2877,
+          "text": "\t\t\tif (is_shared_tablespace(part_elem->tablespace_name)) {"
+        },
+        {
+          "line": 2879,
+          "text": "\t\t\t\t\tha_thd(), PARTITION_IN_SHARED_TABLESPACE_WARNING);"
+        },
+        {
+          "line": 2896,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2902,
+          "text": "\t\t\t\tif (is_shared_tablespace(sub_elem->tablespace_name)) {"
+        },
+        {
+          "line": 2904,
+          "text": "\t\t\t\t\t\tha_thd(), PARTITION_IN_SHARED_TABLESPACE_WARNING);"
+        },
+        {
+          "line": 2988,
+          "text": "\t\t\t\tpart_sep,"
+        },
+        {
+          "line": 3001,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 3062,
+          "text": "\tfor (i= m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3192,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3251,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3305,
+          "text": "\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3448,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3488,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3586,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3624,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3724,
+          "text": "\t\t/* Take page_size from first partition. */"
+        },
+        {
+          "line": 3926,
+          "text": "\t\t/* Use the first partition for create time until new DD. */"
+        },
+        {
+          "line": 4037,
+          "text": "\tfor (i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 4103,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 4185,
+          "text": "\tif (m_part_info->get_first_used_partition() == MY_BIT_NONE) {"
+        },
+        {
+          "line": 4253,
+          "text": "\tif (m_part_info->get_first_used_partition() == MY_BIT_NONE"
+        },
+        {
+          "line": 4456,
+          "text": "\tif (tablespace_is_shared_space(create_info)"
+        },
+        {
+          "line": 4465,
+          "text": "\tif (tablespace_is_shared_space(create_info)) {"
+        },
+        {
+          "line": 4467,
+          "text": "\t\t\tha_thd(), PARTITION_IN_SHARED_TABLESPACE_WARNING);"
+        }
+      ]
+    },
+    "strings/ctype-utf8.c": {
+      "sha256": "732f122b2d01483b414651433631de60511fd0cc2d504916892e9ac88075d799",
+      "lines": [
+        {
+          "line": 5135,
+          "text": "  This function is shared between"
+        },
+        {
+          "line": 5182,
+          "text": "  This function is shared between utf8mb4_bin, utf16_bin, utf32_bin."
+        },
+        {
+          "line": 7584,
+          "text": "my_wc_mb_filename(const CHARSET_INFO *cs MY_ATTRIBUTE((unused)),"
+        },
+        {
+          "line": 7652,
+          "text": "    my_wc_mb_filename,"
+        }
+      ]
+    }
+  },
+  "5.7.9": {
+    "VERSION": {
+      "sha256": "0424defc71143cdc4fde8f0f9511158156da8d1d0051e749acead849f7085a6f",
+      "lines": []
+    },
+    "storage/innobase/handler/ha_innopart.cc": {
+      "sha256": "61ab61028786adf89282e9bec187e7ae3e218a6afa6c4b24fe6e4398062a8aa9",
+      "lines": [
+        {
+          "line": 60,
+          "text": "const char* part_sep = \"#p#\";"
+        },
+        {
+          "line": 63,
+          "text": "const char* part_sep = \"#P#\";"
+        },
+        {
+          "line": 68,
+          "text": "const char* part_sep_nix = \"#P#\";"
+        },
+        {
+          "line": 141,
+          "text": "\tif (strcmp(sep, part_sep_nix) != 0"
+        },
+        {
+          "line": 215,
+          "text": "\t/* TODO: To save memory, compare with first partition and reuse"
+        },
+        {
+          "line": 313,
+          "text": "\t\t\t\tpart_sep_nix,"
+        },
+        {
+          "line": 317,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 1025,
+          "text": "\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1032,
+          "text": "\t\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1047,
+          "text": "\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1118,
+          "text": "\t\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1120,
+          "text": "\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1132,
+          "text": "\t\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1134,
+          "text": "\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1452,
+          "text": "\t\tlock_shared_ha_data();"
+        },
+        {
+          "line": 1454,
+          "text": "\t\tunlock_shared_ha_data();"
+        },
+        {
+          "line": 1595,
+          "text": "\t/* Store it in the shared dictionary of the partition."
+        },
+        {
+          "line": 1636,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1739,
+          "text": "\tuint\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1785,
+          "text": "\tuint\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1856,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 2083,
+          "text": "/** Return first record in index from a partition."
+        },
+        {
+          "line": 2085,
+          "text": "@param[out]\trecord\tFirst record in index in the partition."
+        },
+        {
+          "line": 2190,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2194,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 2219,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2223,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 2271,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2274,
+          "text": "@param[in,out]\trecord\t\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2328,
+          "text": "@param[in,out]\trecord\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2603,
+          "text": "\t\t\t\tsubpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2630,
+          "text": "\t\t\t\tsubpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2794,
+          "text": "\t\t\t\tpart_sep,"
+        },
+        {
+          "line": 2819,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2890,
+          "text": "\t\t\tpart_sep,"
+        },
+        {
+          "line": 2902,
+          "text": "\t\t\t\tsub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2951,
+          "text": "\tfor (i= m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3081,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3136,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3189,
+          "text": "\tpart_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3197,
+          "text": "\t/* Only validate the first partition, to avoid too much overhead. */"
+        },
+        {
+          "line": 3324,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3364,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3462,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3500,
+          "text": "\t\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3583,
+          "text": "\t\t/* Take page_size from first partition. */"
+        },
+        {
+          "line": 3813,
+          "text": "\t\t/* Use the first partition for create time until new DD. */"
+        },
+        {
+          "line": 3924,
+          "text": "\tfor (i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3990,
+          "text": "\tfor (uint i = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 4072,
+          "text": "\tif (m_part_info->get_first_used_partition() == MY_BIT_NONE) {"
+        },
+        {
+          "line": 4108,
+          "text": "\tif (m_part_info->get_first_used_partition() == MY_BIT_NONE"
+        },
+        {
+          "line": 4151,
+          "text": "\t/* FLUSH FOR EXPORT is done above only for the first partition,"
+        },
+        {
+          "line": 4299,
+          "text": "\tif (tablespace_is_shared_space(create_info)"
+        }
+      ]
+    },
+    "strings/ctype-utf8.c": {
+      "sha256": "1aa717b4f04be5b9a8b3daccb3c01266101d55177e828585aa30c94ba2df17c9",
+      "lines": [
+        {
+          "line": 5109,
+          "text": "  This function is shared between"
+        },
+        {
+          "line": 5156,
+          "text": "  This function is shared between utf8mb4_bin, utf16_bin, utf32_bin."
+        },
+        {
+          "line": 7544,
+          "text": "my_wc_mb_filename(const CHARSET_INFO *cs __attribute__((unused)),"
+        },
+        {
+          "line": 7612,
+          "text": "    my_wc_mb_filename,"
+        }
+      ]
+    }
+  },
+  "8.0.11": {
+    "VERSION": {
+      "sha256": "6581a854a0e44438ac746b7dedb60f109d3f265fce2398da0540e074af0e327e",
+      "lines": []
+    },
+    "storage/innobase/handler/ha_innopart.cc": {
+      "sha256": "a24aeed4936fb0c420ed4ceb051418e4155afe8804644d3e488a74f65e3024a1",
+      "lines": [
+        {
+          "line": 145,
+          "text": "                                      PART_SEPARATOR, size);"
+        },
+        {
+          "line": 152,
+          "text": "                            SUB_PART_SEPARATOR, size - part_name_len);"
+        },
+        {
+          "line": 154,
+          "text": "    if (subpart_name_len >= SUB_PART_SEPARATOR_LEN) {"
+        },
+        {
+          "line": 155,
+          "text": "      partition_name_casedn_str(part_name_end + SUB_PART_SEPARATOR_LEN);"
+        },
+        {
+          "line": 810,
+          "text": "  lock_shared_ha_data();"
+        },
+        {
+          "line": 817,
+          "text": "      unlock_shared_ha_data();"
+        },
+        {
+          "line": 836,
+          "text": "  unlock_shared_ha_data();"
+        },
+        {
+          "line": 1204,
+          "text": "    lock_shared_ha_data();"
+        },
+        {
+          "line": 1207,
+          "text": "    unlock_shared_ha_data();"
+        },
+        {
+          "line": 1338,
+          "text": "  /* Store it in the shared dictionary of the partition."
+        },
+        {
+          "line": 1373,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 1456,
+          "text": "  uint part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1503,
+          "text": "  uint part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1572,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 1764,
+          "text": "/** Return first record in index from a partition."
+        },
+        {
+          "line": 1766,
+          "text": "@param[out]\trecord\tFirst record in index in the partition."
+        },
+        {
+          "line": 1848,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1852,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 1869,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1873,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 1908,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1911,
+          "text": "@param[in,out]\trecord\t\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 1957,
+          "text": "@param[in,out]\trecord\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2215,
+          "text": "      List_iterator<partition_element> subpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2254,
+          "text": "      List_iterator<partition_element> subpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2393,
+          "text": "      List_iterator_fast<partition_element> sub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2677,
+          "text": "      dd_column->se_private_data().set_uint64(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2699,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 2782,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 2882,
+          "text": "  /* First we copy the info for the partitions that will be truncated,"
+        },
+        {
+          "line": 2915,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3060,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3102,
+          "text": "  part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3212,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3246,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3329,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3362,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3448,
+          "text": "    /* Take page_size from first partition. */"
+        },
+        {
+          "line": 3611,
+          "text": "    /* Use the first partition for create time until new DD. */"
+        },
+        {
+          "line": 3706,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3759,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3824,
+          "text": "  if (m_part_info->get_first_used_partition() == MY_BIT_NONE) {"
+        },
+        {
+          "line": 3879,
+          "text": "  if (m_part_info->get_first_used_partition() == MY_BIT_NONE &&"
+        }
+      ]
+    },
+    "storage/innobase/dict/dict0dd.cc": {
+      "sha256": "2ee4c4a4934b74d40f6038a04f3dd236506206e5bc857dedb9da758aadd97a37",
+      "lines": [
+        {
+          "line": 535,
+          "text": "hold Shared MDL lock on it."
+        },
+        {
+          "line": 1484,
+          "text": "    dd_column->se_private_data().set_uint64(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2253,
+          "text": "    m_table->flags |= (1 << DICT_TF_POS_SHARED_SPACE);"
+        },
+        {
+          "line": 2444,
+          "text": "    tablespace_name->append(PART_SEPARATOR);"
+        },
+        {
+          "line": 2449,
+          "text": "    tablespace_name->append(SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 3122,
+          "text": "  char *shared_space_name = nullptr;"
+        },
+        {
+          "line": 3127,
+          "text": "  if (DICT_TF_HAS_SHARED_SPACE(table->flags)) {"
+        },
+        {
+          "line": 3129,
+          "text": "      shared_space_name = mem_strdup(dict_sys_t::s_dd_space_name);"
+        },
+        {
+          "line": 3134,
+          "text": "      shared_space_name = mem_strdup(dd_table_get_space_name(dd_table));"
+        },
+        {
+          "line": 3138,
+          "text": "      shared_space_name ="
+        },
+        {
+          "line": 3141,
+          "text": "      sprintf(shared_space_name, \"%s_\" ULINTPF, general_space_name,"
+        },
+        {
+          "line": 3145,
+          "text": "    space_name = shared_space_name;"
+        },
+        {
+          "line": 3157,
+          "text": "    ut_free(shared_space_name);"
+        },
+        {
+          "line": 3208,
+          "text": "  ut_free(shared_space_name);"
+        },
+        {
+          "line": 3279,
+          "text": "  if (!DICT_TF_HAS_SHARED_SPACE(table->flags)) {"
+        },
+        {
+          "line": 3355,
+          "text": "    /* DD tables are in shared DD tablespace */"
+        },
+        {
+          "line": 4540,
+          "text": "    /* This is a user table that resides in shared tablespace */"
+        },
+        {
+          "line": 4542,
+          "text": "    ut_ad(DICT_TF_HAS_SHARED_SPACE(table->flags));"
+        },
+        {
+          "line": 4680,
+          "text": "  col->set_char_length(FTS_INDEX_WORD_LEN);"
+        },
+        {
+          "line": 4692,
+          "text": "  col->set_char_length(20);"
+        },
+        {
+          "line": 4704,
+          "text": "  col->set_char_length(20);"
+        },
+        {
+          "line": 4714,
+          "text": "  col->set_char_length(4);"
+        },
+        {
+          "line": 4724,
+          "text": "  col->set_char_length(8);"
+        },
+        {
+          "line": 4822,
+          "text": "    col->set_char_length(20);"
+        },
+        {
+          "line": 4855,
+          "text": "    col->set_char_length(FTS_CONFIG_TABLE_KEY_COL_LEN);"
+        },
+        {
+          "line": 4867,
+          "text": "    col->set_char_length(FTS_CONFIG_TABLE_VALUE_COL_LEN);"
+        },
+        {
+          "line": 5086,
+          "text": "  is_part = (strstr(name, PART_SEPARATOR) != nullptr);"
+        }
+      ]
+    },
+    "storage/innobase/include/dict0dd.h": {
+      "sha256": "98acec051de42784358b4ac53944547858c3264fcd59f75c3586a1759cf3d222",
+      "lines": [
+        {
+          "line": 82,
+          "text": "    (4 * NAME_LEN) + PART_SEPARATOR_LEN + SUB_PART_SEPARATOR_LEN +"
+        },
+        {
+          "line": 252,
+          "text": "/** Get the first index of a table or partition."
+        },
+        {
+          "line": 271,
+          "text": "/** Get the first index of a partition."
+        },
+        {
+          "line": 277,
+          "text": "  return (dd_first<dd::Partition, dd::Partition_index>(partition));"
+        },
+        {
+          "line": 365,
+          "text": "/** Acquire a shared metadata lock."
+        }
+      ]
+    },
+    "sql/dd/impl/types/partition_impl.cc": {
+      "sha256": "6daf4b4ce86ffd278bfdfcd10796fd8f8c8f69a64599e29e370f306bb06a38b3",
+      "lines": []
+    },
+    "sql/dd/impl/types/partition_index_impl.cc": {
+      "sha256": "0a47a308a3f8ba59c1a25588d8e4153c001ca2553d472b3b9b53cdcc3b61c62e",
+      "lines": []
+    }
+  },
+  "8.0.12": {
+    "VERSION": {
+      "sha256": "2307e3433548de65adaa760f79d989bbc3858c76ac1da9b9a676012e59ac02ea",
+      "lines": []
+    },
+    "storage/innobase/handler/ha_innopart.cc": {
+      "sha256": "696488062d70b47d3e2a0f467cd23102ff2b10cdbcae123ff4c736c496c54fae",
+      "lines": [
+        {
+          "line": 145,
+          "text": "                                      PART_SEPARATOR, size);"
+        },
+        {
+          "line": 152,
+          "text": "                            SUB_PART_SEPARATOR, size - part_name_len);"
+        },
+        {
+          "line": 154,
+          "text": "    if (subpart_name_len >= SUB_PART_SEPARATOR_LEN) {"
+        },
+        {
+          "line": 155,
+          "text": "      partition_name_casedn_str(part_name_end + SUB_PART_SEPARATOR_LEN);"
+        },
+        {
+          "line": 810,
+          "text": "  lock_shared_ha_data();"
+        },
+        {
+          "line": 817,
+          "text": "      unlock_shared_ha_data();"
+        },
+        {
+          "line": 836,
+          "text": "  unlock_shared_ha_data();"
+        },
+        {
+          "line": 1204,
+          "text": "    lock_shared_ha_data();"
+        },
+        {
+          "line": 1207,
+          "text": "    unlock_shared_ha_data();"
+        },
+        {
+          "line": 1338,
+          "text": "  /* Store it in the shared dictionary of the partition."
+        },
+        {
+          "line": 1373,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 1456,
+          "text": "  uint part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1503,
+          "text": "  uint part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1572,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 1764,
+          "text": "/** Return first record in index from a partition."
+        },
+        {
+          "line": 1766,
+          "text": "@param[out]\trecord\tFirst record in index in the partition."
+        },
+        {
+          "line": 1848,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1852,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 1869,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1873,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 1908,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1911,
+          "text": "@param[in,out]\trecord\t\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 1957,
+          "text": "@param[in,out]\trecord\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2215,
+          "text": "      List_iterator<partition_element> subpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2254,
+          "text": "      List_iterator<partition_element> subpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2393,
+          "text": "      List_iterator_fast<partition_element> sub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2676,
+          "text": "      dd_column->se_private_data().set_uint64(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2698,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 2789,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 2989,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3031,
+          "text": "  part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3141,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3175,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3258,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3291,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3377,
+          "text": "    /* Take page_size from first partition. */"
+        },
+        {
+          "line": 3540,
+          "text": "    /* Use the first partition for create time until new DD. */"
+        },
+        {
+          "line": 3635,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3688,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3753,
+          "text": "  if (m_part_info->get_first_used_partition() == MY_BIT_NONE) {"
+        },
+        {
+          "line": 3808,
+          "text": "  if (m_part_info->get_first_used_partition() == MY_BIT_NONE &&"
+        }
+      ]
+    },
+    "storage/innobase/dict/dict0dd.cc": {
+      "sha256": "a3dd24e02c04b1e6735ed862428ab55764bd858ff626229bc7f0dd6845dfd2dd",
+      "lines": [
+        {
+          "line": 578,
+          "text": "hold Shared MDL lock on it."
+        },
+        {
+          "line": 1549,
+          "text": "      dd_partition_key_strings[DD_PARTITION_INSTANT_COLS]);"
+        },
+        {
+          "line": 1821,
+          "text": "        dd_partition_key_strings[DD_PARTITION_INSTANT_COLS],"
+        },
+        {
+          "line": 1909,
+          "text": "      dd_part_is_first(reinterpret_cast<dd::Partition *>(dd_table))) {"
+        },
+        {
+          "line": 1911,
+          "text": "      dd_column->se_private_data().set_uint64(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2762,
+          "text": "      m_table->set_instant_cols(instant_cols);"
+        },
+        {
+          "line": 2767,
+          "text": "          dd_partition_key_strings[DD_PARTITION_INSTANT_COLS], &instant_cols);"
+        },
+        {
+          "line": 2769,
+          "text": "      m_table->set_instant_cols(instant_cols);"
+        },
+        {
+          "line": 2793,
+          "text": "    m_table->flags |= (1 << DICT_TF_POS_SHARED_SPACE);"
+        },
+        {
+          "line": 2987,
+          "text": "    tablespace_name->append(PART_SEPARATOR);"
+        },
+        {
+          "line": 2992,
+          "text": "    tablespace_name->append(SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 3669,
+          "text": "  char *shared_space_name = nullptr;"
+        },
+        {
+          "line": 3674,
+          "text": "  if (DICT_TF_HAS_SHARED_SPACE(table->flags)) {"
+        },
+        {
+          "line": 3676,
+          "text": "      shared_space_name = mem_strdup(dict_sys_t::s_dd_space_name);"
+        },
+        {
+          "line": 3681,
+          "text": "      shared_space_name = mem_strdup(dd_table_get_space_name(dd_table));"
+        },
+        {
+          "line": 3685,
+          "text": "      shared_space_name ="
+        },
+        {
+          "line": 3688,
+          "text": "      sprintf(shared_space_name, \"%s_\" ULINTPF, general_space_name,"
+        },
+        {
+          "line": 3692,
+          "text": "    space_name = shared_space_name;"
+        },
+        {
+          "line": 3704,
+          "text": "    ut_free(shared_space_name);"
+        },
+        {
+          "line": 3755,
+          "text": "  ut_free(shared_space_name);"
+        },
+        {
+          "line": 3826,
+          "text": "  if (!DICT_TF_HAS_SHARED_SPACE(table->flags)) {"
+        },
+        {
+          "line": 3902,
+          "text": "    /* DD tables are in shared DD tablespace */"
+        },
+        {
+          "line": 5097,
+          "text": "    /* This is a user table that resides in shared tablespace */"
+        },
+        {
+          "line": 5099,
+          "text": "    ut_ad(DICT_TF_HAS_SHARED_SPACE(table->flags));"
+        },
+        {
+          "line": 5237,
+          "text": "  col->set_char_length(FTS_INDEX_WORD_LEN);"
+        },
+        {
+          "line": 5249,
+          "text": "  col->set_char_length(20);"
+        },
+        {
+          "line": 5261,
+          "text": "  col->set_char_length(20);"
+        },
+        {
+          "line": 5271,
+          "text": "  col->set_char_length(4);"
+        },
+        {
+          "line": 5281,
+          "text": "  col->set_char_length(8);"
+        },
+        {
+          "line": 5379,
+          "text": "    col->set_char_length(20);"
+        },
+        {
+          "line": 5412,
+          "text": "    col->set_char_length(FTS_CONFIG_TABLE_KEY_COL_LEN);"
+        },
+        {
+          "line": 5424,
+          "text": "    col->set_char_length(FTS_CONFIG_TABLE_VALUE_COL_LEN);"
+        },
+        {
+          "line": 5643,
+          "text": "  is_part = (strstr(name, PART_SEPARATOR) != nullptr);"
+        }
+      ]
+    },
+    "storage/innobase/include/dict0dd.h": {
+      "sha256": "44b2b4f8b601af68c18c2d5d2b181b0e99cdb0333447bf52f55b806e247923ad",
+      "lines": [
+        {
+          "line": 82,
+          "text": "    (4 * NAME_LEN) + PART_SEPARATOR_LEN + SUB_PART_SEPARATOR_LEN +"
+        },
+        {
+          "line": 141,
+          "text": "  DD_PARTITION_INSTANT_COLS,"
+        },
+        {
+          "line": 320,
+          "text": "/** Determine if a dd::Partition is the first leaf partition in the table"
+        },
+        {
+          "line": 322,
+          "text": "@return\tTrue\tIf it's the first partition"
+        },
+        {
+          "line": 324,
+          "text": "inline bool dd_part_is_first(const dd::Partition *dd_part) {"
+        },
+        {
+          "line": 363,
+          "text": "      dd_partition_key_strings[DD_PARTITION_INSTANT_COLS]);"
+        },
+        {
+          "line": 388,
+          "text": "/** Get the first index of a table or partition."
+        },
+        {
+          "line": 407,
+          "text": "/** Get the first index of a partition."
+        },
+        {
+          "line": 413,
+          "text": "  return (dd_first<dd::Partition, dd::Partition_index>(partition));"
+        },
+        {
+          "line": 572,
+          "text": "/** Acquire a shared metadata lock."
+        }
+      ]
+    },
+    "sql/dd/impl/types/partition_impl.cc": {
+      "sha256": "6daf4b4ce86ffd278bfdfcd10796fd8f8c8f69a64599e29e370f306bb06a38b3",
+      "lines": []
+    },
+    "sql/dd/impl/types/partition_index_impl.cc": {
+      "sha256": "0a47a308a3f8ba59c1a25588d8e4153c001ca2553d472b3b9b53cdcc3b61c62e",
+      "lines": []
+    }
+  },
+  "8.0.16": {
+    "VERSION": {
+      "sha256": "9cbe456a798ffe185d207ead95669d27ac82db702fa5de341e69d2e81586861c",
+      "lines": []
+    },
+    "storage/innobase/handler/ha_innopart.cc": {
+      "sha256": "96e88ca2c0492b2081ab80f835b6d74c2be98c28f0d478c1ea73b3125bf1fb14",
+      "lines": [
+        {
+          "line": 152,
+          "text": "                                      PART_SEPARATOR, size);"
+        },
+        {
+          "line": 159,
+          "text": "                            SUB_PART_SEPARATOR, size - part_name_len);"
+        },
+        {
+          "line": 161,
+          "text": "    if (subpart_name_len >= SUB_PART_SEPARATOR_LEN) {"
+        },
+        {
+          "line": 162,
+          "text": "      partition_name_casedn_str(part_name_end + SUB_PART_SEPARATOR_LEN);"
+        },
+        {
+          "line": 877,
+          "text": "  lock_shared_ha_data();"
+        },
+        {
+          "line": 884,
+          "text": "      unlock_shared_ha_data();"
+        },
+        {
+          "line": 898,
+          "text": "    unlock_shared_ha_data();"
+        },
+        {
+          "line": 909,
+          "text": "    lock_shared_ha_data();"
+        },
+        {
+          "line": 928,
+          "text": "  unlock_shared_ha_data();"
+        },
+        {
+          "line": 1296,
+          "text": "    lock_shared_ha_data();"
+        },
+        {
+          "line": 1298,
+          "text": "    unlock_shared_ha_data();"
+        },
+        {
+          "line": 1429,
+          "text": "  /* Store it in the shared dictionary of the partition."
+        },
+        {
+          "line": 1464,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 1547,
+          "text": "  uint part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1594,
+          "text": "  uint part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1663,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 1855,
+          "text": "/** Return first record in index from a partition."
+        },
+        {
+          "line": 1857,
+          "text": "@param[out]\trecord\tFirst record in index in the partition."
+        },
+        {
+          "line": 1939,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1943,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 1960,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1964,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 1999,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 2002,
+          "text": "@param[in,out]\trecord\t\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2047,
+          "text": "@param[in,out]\trecord\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2305,
+          "text": "      List_iterator<partition_element> subpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2344,
+          "text": "      List_iterator<partition_element> subpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2416,
+          "text": "  if (is_shared_tablespace(create_info->tablespace)) {"
+        },
+        {
+          "line": 2417,
+          "text": "    my_printf_error(ER_ILLEGAL_HA_CREATE_OPTION, PARTITION_IN_SHARED_TABLESPACE,"
+        },
+        {
+          "line": 2490,
+          "text": "      List_iterator_fast<partition_element> sub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2495,
+          "text": "        if (is_shared_tablespace(tablespace)) {"
+        },
+        {
+          "line": 2505,
+          "text": "      if (is_shared_tablespace(tablespace)) {"
+        },
+        {
+          "line": 2515,
+          "text": "    my_printf_error(ER_ILLEGAL_HA_CREATE_OPTION, PARTITION_IN_SHARED_TABLESPACE,"
+        },
+        {
+          "line": 2785,
+          "text": "  /* Set new table id of the first partition to dd::Column::se_private_data */"
+        },
+        {
+          "line": 2790,
+          "text": "      dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2812,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 2903,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3103,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3145,
+          "text": "  part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3255,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3289,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3372,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3405,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3491,
+          "text": "    /* Take page_size from first partition. */"
+        },
+        {
+          "line": 3736,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3789,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3839,
+          "text": "  if (m_part_info->get_first_used_partition() == MY_BIT_NONE) {"
+        },
+        {
+          "line": 3894,
+          "text": "  if (m_part_info->get_first_used_partition() == MY_BIT_NONE &&"
+        }
+      ]
+    },
+    "storage/innobase/dict/dict0dd.cc": {
+      "sha256": "70213ea9c5be2ff91d58c2af337568ce77889ae26c7db658bc94e8f17b6c210f",
+      "lines": [
+        {
+          "line": 587,
+          "text": "hold Shared MDL lock on it."
+        },
+        {
+          "line": 812,
+          "text": "        dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 1525,
+          "text": "    dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 1561,
+          "text": "      dd_partition_key_strings[DD_PARTITION_INSTANT_COLS]);"
+        },
+        {
+          "line": 1833,
+          "text": "        dd_partition_key_strings[DD_PARTITION_INSTANT_COLS],"
+        },
+        {
+          "line": 1921,
+          "text": "      dd_part_is_first(reinterpret_cast<dd::Partition *>(dd_table))) {"
+        },
+        {
+          "line": 1923,
+          "text": "      dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2006,
+          "text": "      dd_column->se_private_data().get(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2785,
+          "text": "      m_table->set_instant_cols(instant_cols);"
+        },
+        {
+          "line": 2790,
+          "text": "          dd_partition_key_strings[DD_PARTITION_INSTANT_COLS], &instant_cols);"
+        },
+        {
+          "line": 2792,
+          "text": "      m_table->set_instant_cols(instant_cols);"
+        },
+        {
+          "line": 2816,
+          "text": "    m_table->flags |= (1 << DICT_TF_POS_SHARED_SPACE);"
+        },
+        {
+          "line": 3012,
+          "text": "    tablespace_name->append(PART_SEPARATOR);"
+        },
+        {
+          "line": 3017,
+          "text": "    tablespace_name->append(SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 3714,
+          "text": "  char *shared_space_name = nullptr;"
+        },
+        {
+          "line": 3719,
+          "text": "  if (DICT_TF_HAS_SHARED_SPACE(table->flags)) {"
+        },
+        {
+          "line": 3721,
+          "text": "      shared_space_name = mem_strdup(dict_sys_t::s_dd_space_name);"
+        },
+        {
+          "line": 3726,
+          "text": "      shared_space_name = mem_strdup(dd_table_get_space_name(dd_table));"
+        },
+        {
+          "line": 3730,
+          "text": "      shared_space_name ="
+        },
+        {
+          "line": 3733,
+          "text": "      sprintf(shared_space_name, \"%s_\" ULINTPF, general_space_name,"
+        },
+        {
+          "line": 3737,
+          "text": "    space_name = shared_space_name;"
+        },
+        {
+          "line": 3749,
+          "text": "    ut_free(shared_space_name);"
+        },
+        {
+          "line": 3798,
+          "text": "  ut_free(shared_space_name);"
+        },
+        {
+          "line": 3869,
+          "text": "  if (!DICT_TF_HAS_SHARED_SPACE(table->flags)) {"
+        },
+        {
+          "line": 3945,
+          "text": "    /* DD tables are in shared DD tablespace */"
+        },
+        {
+          "line": 5164,
+          "text": "    /* This is a user table that resides in shared tablespace */"
+        },
+        {
+          "line": 5166,
+          "text": "    ut_ad(DICT_TF_HAS_SHARED_SPACE(table->flags));"
+        },
+        {
+          "line": 5304,
+          "text": "  col->set_char_length(FTS_INDEX_WORD_LEN);"
+        },
+        {
+          "line": 5316,
+          "text": "  col->set_char_length(20);"
+        },
+        {
+          "line": 5328,
+          "text": "  col->set_char_length(20);"
+        },
+        {
+          "line": 5338,
+          "text": "  col->set_char_length(4);"
+        },
+        {
+          "line": 5348,
+          "text": "  col->set_char_length(8);"
+        },
+        {
+          "line": 5446,
+          "text": "    col->set_char_length(20);"
+        },
+        {
+          "line": 5479,
+          "text": "    col->set_char_length(FTS_CONFIG_TABLE_KEY_COL_LEN);"
+        },
+        {
+          "line": 5491,
+          "text": "    col->set_char_length(FTS_CONFIG_TABLE_VALUE_COL_LEN);"
+        },
+        {
+          "line": 5833,
+          "text": "      acquire_shared_backup_lock(thd, thd->variables.lock_wait_timeout) ||"
+        },
+        {
+          "line": 5878,
+          "text": "  is_part = (strstr(name, PART_SEPARATOR) != nullptr);"
+        }
+      ]
+    },
+    "storage/innobase/include/dict0dd.h": {
+      "sha256": "eb3ff7beeee592162467855de5b406d7b7e6499e90dcac15811f7a2b83790047",
+      "lines": [
+        {
+          "line": 86,
+          "text": "    (4 * NAME_LEN) + PART_SEPARATOR_LEN + SUB_PART_SEPARATOR_LEN +"
+        },
+        {
+          "line": 145,
+          "text": "  DD_PARTITION_INSTANT_COLS,"
+        },
+        {
+          "line": 361,
+          "text": "/** Determine if a dd::Partition is the first leaf partition in the table"
+        },
+        {
+          "line": 363,
+          "text": "@return\tTrue\tIf it's the first partition"
+        },
+        {
+          "line": 365,
+          "text": "inline bool dd_part_is_first(const dd::Partition *dd_part) {"
+        },
+        {
+          "line": 404,
+          "text": "      dd_partition_key_strings[DD_PARTITION_INSTANT_COLS]);"
+        },
+        {
+          "line": 429,
+          "text": "/** Get the first index of a table or partition."
+        },
+        {
+          "line": 448,
+          "text": "/** Get the first index of a partition."
+        },
+        {
+          "line": 454,
+          "text": "  return (dd_first<dd::Partition, dd::Partition_index>(partition));"
+        },
+        {
+          "line": 534,
+          "text": "is correct if the first partition got changed"
+        },
+        {
+          "line": 621,
+          "text": "/** Acquire a shared metadata lock."
+        }
+      ]
+    },
+    "sql/dd/impl/types/partition_impl.cc": {
+      "sha256": "ba981e9054364689d099ad705a71a09e9ef403cb770277f850ab3c11a661d62f",
+      "lines": []
+    },
+    "sql/dd/impl/types/partition_index_impl.cc": {
+      "sha256": "957cf57626b7054e3d2017526b059ec83c88dacac7bda73dcbc50fb7ac05050a",
+      "lines": []
+    }
+  },
+  "8.0.19": {
+    "VERSION": {
+      "sha256": "988b9400af165834f6427a6177ae2ec1194f48783fac0c8322c6d73432e578d3",
+      "lines": []
+    },
+    "storage/innobase/handler/ha_innopart.cc": {
+      "sha256": "396480e7b1d1989447bbed705369fbe8f70ecb85a1d9ffc26be7b9a4c2dd8427",
+      "lines": [
+        {
+          "line": 823,
+          "text": "  lock_shared_ha_data();"
+        },
+        {
+          "line": 830,
+          "text": "      unlock_shared_ha_data();"
+        },
+        {
+          "line": 844,
+          "text": "    unlock_shared_ha_data();"
+        },
+        {
+          "line": 855,
+          "text": "    lock_shared_ha_data();"
+        },
+        {
+          "line": 874,
+          "text": "  unlock_shared_ha_data();"
+        },
+        {
+          "line": 1236,
+          "text": "    lock_shared_ha_data();"
+        },
+        {
+          "line": 1238,
+          "text": "    unlock_shared_ha_data();"
+        },
+        {
+          "line": 1366,
+          "text": "  /* Store it in the shared dictionary of the partition."
+        },
+        {
+          "line": 1401,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 1484,
+          "text": "  uint part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1531,
+          "text": "  uint part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1600,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 1787,
+          "text": "/** Return first record in index from a partition."
+        },
+        {
+          "line": 1789,
+          "text": "@param[out]\trecord\tFirst record in index in the partition."
+        },
+        {
+          "line": 1871,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1875,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 1892,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1896,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 1931,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1934,
+          "text": "@param[in,out]\trecord\t\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 1979,
+          "text": "@param[in,out]\trecord\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2048,
+          "text": "  const auto first_used_partition = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 2050,
+          "text": "  for (auto i = first_used_partition; i < m_tot_parts;"
+        },
+        {
+          "line": 2324,
+          "text": "      List_iterator<partition_element> subpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2363,
+          "text": "      List_iterator<partition_element> subpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2431,
+          "text": "  if (is_shared_tablespace(create_info->tablespace)) {"
+        },
+        {
+          "line": 2432,
+          "text": "    my_printf_error(ER_ILLEGAL_HA_CREATE_OPTION, PARTITION_IN_SHARED_TABLESPACE,"
+        },
+        {
+          "line": 2504,
+          "text": "      List_iterator_fast<partition_element> sub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2509,
+          "text": "        if (is_shared_tablespace(tablespace)) {"
+        },
+        {
+          "line": 2519,
+          "text": "      if (is_shared_tablespace(tablespace)) {"
+        },
+        {
+          "line": 2529,
+          "text": "    my_printf_error(ER_ILLEGAL_HA_CREATE_OPTION, PARTITION_IN_SHARED_TABLESPACE,"
+        },
+        {
+          "line": 2811,
+          "text": "  /* Set new table id of the first partition to dd::Column::se_private_data */"
+        },
+        {
+          "line": 2816,
+          "text": "      dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2838,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 2929,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3183,
+          "text": "    const auto first_used_partition = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3187,
+          "text": "    for (auto i = first_used_partition; i < m_tot_parts;"
+        },
+        {
+          "line": 3223,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3271,
+          "text": "  part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3381,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3415,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3498,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3532,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3618,
+          "text": "    /* Take page_size from first partition. */"
+        },
+        {
+          "line": 3854,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3907,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3941,
+          "text": "  if (m_part_info->get_first_used_partition() == MY_BIT_NONE) {"
+        },
+        {
+          "line": 3996,
+          "text": "  if (m_part_info->get_first_used_partition() == MY_BIT_NONE &&"
+        }
+      ]
+    },
+    "storage/innobase/dict/dict0dd.cc": {
+      "sha256": "a9e556c35420480f6f2fdd51b137a2c809c5d7b15fcbe4df322f6083a84053d2",
+      "lines": [
+        {
+          "line": 588,
+          "text": "hold Shared MDL lock on it."
+        },
+        {
+          "line": 812,
+          "text": "        dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 1573,
+          "text": "    dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 1609,
+          "text": "      dd_partition_key_strings[DD_PARTITION_INSTANT_COLS]);"
+        },
+        {
+          "line": 1913,
+          "text": "        dd_partition_key_strings[DD_PARTITION_INSTANT_COLS],"
+        },
+        {
+          "line": 2001,
+          "text": "      dd_part_is_first(reinterpret_cast<dd::Partition *>(dd_table))) {"
+        },
+        {
+          "line": 2003,
+          "text": "      dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2086,
+          "text": "      dd_column->se_private_data().get(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2879,
+          "text": "      m_table->set_instant_cols(instant_cols);"
+        },
+        {
+          "line": 2884,
+          "text": "          dd_partition_key_strings[DD_PARTITION_INSTANT_COLS], &instant_cols);"
+        },
+        {
+          "line": 2886,
+          "text": "      m_table->set_instant_cols(instant_cols);"
+        },
+        {
+          "line": 2910,
+          "text": "    m_table->flags |= (1 << DICT_TF_POS_SHARED_SPACE);"
+        },
+        {
+          "line": 3780,
+          "text": "  char *shared_space_name = nullptr;"
+        },
+        {
+          "line": 3785,
+          "text": "  if (DICT_TF_HAS_SHARED_SPACE(table->flags)) {"
+        },
+        {
+          "line": 3787,
+          "text": "      shared_space_name = mem_strdup(dict_sys_t::s_dd_space_name);"
+        },
+        {
+          "line": 3792,
+          "text": "      shared_space_name = mem_strdup(dd_table_get_space_name(dd_table));"
+        },
+        {
+          "line": 3796,
+          "text": "      shared_space_name ="
+        },
+        {
+          "line": 3799,
+          "text": "      sprintf(shared_space_name, \"%s_\" ULINTPF, general_space_name,"
+        },
+        {
+          "line": 3803,
+          "text": "    space_name = shared_space_name;"
+        },
+        {
+          "line": 3817,
+          "text": "    ut_free(shared_space_name);"
+        },
+        {
+          "line": 3840,
+          "text": "    ut_free(shared_space_name);"
+        },
+        {
+          "line": 3874,
+          "text": "  ut_free(shared_space_name);"
+        },
+        {
+          "line": 3942,
+          "text": "  if (!DICT_TF_HAS_SHARED_SPACE(table->flags)) {"
+        },
+        {
+          "line": 4018,
+          "text": "    /* DD tables are in shared DD tablespace */"
+        },
+        {
+          "line": 5236,
+          "text": "    /* This is a user table that resides in shared tablespace */"
+        },
+        {
+          "line": 5238,
+          "text": "    ut_ad(DICT_TF_HAS_SHARED_SPACE(table->flags));"
+        },
+        {
+          "line": 5374,
+          "text": "  col->set_char_length(FTS_INDEX_WORD_LEN);"
+        },
+        {
+          "line": 5386,
+          "text": "  col->set_char_length(20);"
+        },
+        {
+          "line": 5398,
+          "text": "  col->set_char_length(20);"
+        },
+        {
+          "line": 5408,
+          "text": "  col->set_char_length(4);"
+        },
+        {
+          "line": 5418,
+          "text": "  col->set_char_length(8);"
+        },
+        {
+          "line": 5515,
+          "text": "    col->set_char_length(20);"
+        },
+        {
+          "line": 5548,
+          "text": "    col->set_char_length(FTS_CONFIG_TABLE_KEY_COL_LEN);"
+        },
+        {
+          "line": 5560,
+          "text": "    col->set_char_length(FTS_CONFIG_TABLE_VALUE_COL_LEN);"
+        },
+        {
+          "line": 5897,
+          "text": "  bool result = acquire_shared_backup_lock(thd, timeout, trx_duration);"
+        },
+        {
+          "line": 6173,
+          "text": "@param[out]\tpart_sep\tpartition separator"
+        },
+        {
+          "line": 6174,
+          "text": "@param[out]\tsub_part_sep\tsub-partition separator */"
+        },
+        {
+          "line": 6175,
+          "text": "static void get_partition_separators(bool is_57, std::string &part_sep,"
+        },
+        {
+          "line": 6176,
+          "text": "                                     std::string &sub_part_sep) {"
+        },
+        {
+          "line": 6178,
+          "text": "    part_sep.assign(PART_SEPARATOR);"
+        },
+        {
+          "line": 6179,
+          "text": "    sub_part_sep.assign(SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 6184,
+          "text": "  part_sep.assign(PART_SEPARATOR);"
+        },
+        {
+          "line": 6185,
+          "text": "  sub_part_sep.assign(SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 6187,
+          "text": "  part_sep.assign(ALT_PART_SEPARATOR);"
+        },
+        {
+          "line": 6188,
+          "text": "  sub_part_sep.assign(ALT_SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 6199,
+          "text": "  std::string part_sep = sub_part ? SUB_PART_SEPARATOR : PART_SEPARATOR;"
+        },
+        {
+          "line": 6202,
+          "text": "  position = dict_name.find(part_sep);"
+        },
+        {
+          "line": 6208,
+          "text": "  std::string alt_sep = sub_part ? ALT_SUB_PART_SEPARATOR : ALT_PART_SEPARATOR;"
+        },
+        {
+          "line": 6306,
+          "text": "  size_t part_begin = PART_SEPARATOR_LEN;"
+        },
+        {
+          "line": 6325,
+          "text": "  auto sub_begin = sub_pos + SUB_PART_SEPARATOR_LEN;"
+        },
+        {
+          "line": 6389,
+          "text": "  std::string part_sep;"
+        },
+        {
+          "line": 6390,
+          "text": "  std::string sub_part_sep;"
+        },
+        {
+          "line": 6392,
+          "text": "  get_partition_separators(is_57, part_sep, sub_part_sep);"
+        },
+        {
+          "line": 6395,
+          "text": "  partition.append(part_sep);"
+        },
+        {
+          "line": 6408,
+          "text": "  partition.append(sub_part_sep);"
+        }
+      ]
+    },
+    "storage/innobase/include/dict0dd.h": {
+      "sha256": "ca56aa0b1a8edbd93b6209f946fdd72de3c605785090a32a40c0bbcc79d9a0e8",
+      "lines": [
+        {
+          "line": 131,
+          "text": "  DD_PARTITION_INSTANT_COLS,"
+        },
+        {
+          "line": 347,
+          "text": "/** Determine if a dd::Partition is the first leaf partition in the table"
+        },
+        {
+          "line": 349,
+          "text": "@return\tTrue\tIf it's the first partition"
+        },
+        {
+          "line": 351,
+          "text": "inline bool dd_part_is_first(const dd::Partition *dd_part) {"
+        },
+        {
+          "line": 390,
+          "text": "      dd_partition_key_strings[DD_PARTITION_INSTANT_COLS]);"
+        },
+        {
+          "line": 415,
+          "text": "/** Get the first index of a table or partition."
+        },
+        {
+          "line": 434,
+          "text": "/** Get the first index of a partition."
+        },
+        {
+          "line": 440,
+          "text": "  return (dd_first<dd::Partition, dd::Partition_index>(partition));"
+        },
+        {
+          "line": 520,
+          "text": "is correct if the first partition got changed"
+        },
+        {
+          "line": 607,
+          "text": "/** Acquire a shared metadata lock."
+        }
+      ]
+    },
+    "sql/dd/impl/types/partition_impl.cc": {
+      "sha256": "3cc9d28b8e39175b5097e2aa45530916df761da8ed8390c8c6d5f9d35372d125",
+      "lines": [
+        {
+          "line": 83,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 96,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 112,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 172,
+          "text": "         m_subpartitions.restore_items("
+        },
+        {
+          "line": 182,
+          "text": "  for (Partition *part : m_subpartitions) part->set_parent_partition_id(id());"
+        },
+        {
+          "line": 185,
+          "text": "         m_subpartitions.store_items(otx);"
+        },
+        {
+          "line": 197,
+          "text": "         m_subpartitions.drop_items("
+        },
+        {
+          "line": 271,
+          "text": "  serialize_each(wctx, w, m_subpartitions, STRING_WITH_LEN(\"subpartitions\"));"
+        },
+        {
+          "line": 294,
+          "text": "      rctx, [this]() { return add_subpartition(); }, val, \"subpartitions\");"
+        },
+        {
+          "line": 339,
+          "text": "  ss << \"m_subpartitions: \" << m_subpartitions.size() << \" [ \";"
+        },
+        {
+          "line": 342,
+          "text": "    for (const Partition *i : subpartitions()) {"
+        },
+        {
+          "line": 380,
+          "text": "  m_subpartitions.push_back(p);"
+        },
+        {
+          "line": 402,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 406,
+          "text": "  m_subpartitions.deep_copy(src.m_subpartitions, this);"
+        },
+        {
+          "line": 429,
+          "text": "      m_subpartitions(),"
+        }
+      ]
+    },
+    "sql/dd/impl/types/partition_index_impl.cc": {
+      "sha256": "d3c719bcf40b3606054eb16e37304bd9a18e9ff42d9937b5994a452cc40d92a8",
+      "lines": []
+    }
+  },
+  "8.0.23": {
+    "MYSQL_VERSION": {
+      "sha256": "cf3e64111c7f35671661d993ae0d516fb4275d5a1a6292f3702b31ba566e02dc",
+      "lines": []
+    },
+    "storage/innobase/handler/ha_innopart.cc": {
+      "sha256": "af9951c406cc8f72609146c90ad70ee8782ceb57ee2031e47cef9a7a2f5e10e8",
+      "lines": [
+        {
+          "line": 826,
+          "text": "  lock_shared_ha_data();"
+        },
+        {
+          "line": 833,
+          "text": "      unlock_shared_ha_data();"
+        },
+        {
+          "line": 847,
+          "text": "    unlock_shared_ha_data();"
+        },
+        {
+          "line": 858,
+          "text": "    lock_shared_ha_data();"
+        },
+        {
+          "line": 877,
+          "text": "  unlock_shared_ha_data();"
+        },
+        {
+          "line": 1240,
+          "text": "    lock_shared_ha_data();"
+        },
+        {
+          "line": 1242,
+          "text": "    unlock_shared_ha_data();"
+        },
+        {
+          "line": 1370,
+          "text": "  /* Store it in the shared dictionary of the partition."
+        },
+        {
+          "line": 1405,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 1488,
+          "text": "  uint part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1535,
+          "text": "  uint part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1604,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 1791,
+          "text": "/** Return first record in index from a partition."
+        },
+        {
+          "line": 1793,
+          "text": "@param[out]\trecord\tFirst record in index in the partition."
+        },
+        {
+          "line": 1875,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1879,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 1896,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1900,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 1935,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1938,
+          "text": "@param[in,out]\trecord\t\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 1983,
+          "text": "@param[in,out]\trecord\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2052,
+          "text": "  const auto first_used_partition = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 2054,
+          "text": "  for (auto i = first_used_partition; i < m_tot_parts;"
+        },
+        {
+          "line": 2327,
+          "text": "      List_iterator<partition_element> subpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2366,
+          "text": "      List_iterator<partition_element> subpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2434,
+          "text": "  if (is_shared_tablespace(create_info->tablespace)) {"
+        },
+        {
+          "line": 2435,
+          "text": "    my_printf_error(ER_ILLEGAL_HA_CREATE_OPTION, PARTITION_IN_SHARED_TABLESPACE,"
+        },
+        {
+          "line": 2508,
+          "text": "      List_iterator_fast<partition_element> sub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2513,
+          "text": "        if (is_shared_tablespace(tablespace)) {"
+        },
+        {
+          "line": 2523,
+          "text": "      if (is_shared_tablespace(tablespace)) {"
+        },
+        {
+          "line": 2533,
+          "text": "    my_printf_error(ER_ILLEGAL_HA_CREATE_OPTION, PARTITION_IN_SHARED_TABLESPACE,"
+        },
+        {
+          "line": 2840,
+          "text": "  /* Set new table id of the first partition to dd::Column::se_private_data */"
+        },
+        {
+          "line": 2845,
+          "text": "      dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2867,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 2959,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3213,
+          "text": "    const auto first_used_partition = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3217,
+          "text": "    for (auto i = first_used_partition; i < m_tot_parts;"
+        },
+        {
+          "line": 3254,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3302,
+          "text": "  part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3413,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3447,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3530,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3564,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3650,
+          "text": "    /* Take page_size from first partition. */"
+        },
+        {
+          "line": 3886,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3939,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3973,
+          "text": "  if (m_part_info->get_first_used_partition() == MY_BIT_NONE) {"
+        },
+        {
+          "line": 4028,
+          "text": "  if (m_part_info->get_first_used_partition() == MY_BIT_NONE &&"
+        }
+      ]
+    },
+    "storage/innobase/dict/dict0dd.cc": {
+      "sha256": "e7a90d645f6c40c1ee6c1a6fb952e8028454465cc31e06c5ff13313e9962e871",
+      "lines": [
+        {
+          "line": 613,
+          "text": "hold Shared MDL lock on it."
+        },
+        {
+          "line": 836,
+          "text": "        dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 1618,
+          "text": "    dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 1654,
+          "text": "      dd_partition_key_strings[DD_PARTITION_INSTANT_COLS]);"
+        },
+        {
+          "line": 1958,
+          "text": "        dd_partition_key_strings[DD_PARTITION_INSTANT_COLS],"
+        },
+        {
+          "line": 2041,
+          "text": "      dd_part_is_first(reinterpret_cast<dd::Partition *>(dd_table))) {"
+        },
+        {
+          "line": 2043,
+          "text": "      dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2122,
+          "text": "      dd_column->se_private_data().get(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2914,
+          "text": "      m_table->set_instant_cols(instant_cols);"
+        },
+        {
+          "line": 2919,
+          "text": "          dd_partition_key_strings[DD_PARTITION_INSTANT_COLS], &instant_cols);"
+        },
+        {
+          "line": 2921,
+          "text": "      m_table->set_instant_cols(instant_cols);"
+        },
+        {
+          "line": 2945,
+          "text": "    m_table->flags |= (1 << DICT_TF_POS_SHARED_SPACE);"
+        },
+        {
+          "line": 3951,
+          "text": "  char *shared_space_name = nullptr;"
+        },
+        {
+          "line": 3956,
+          "text": "  if (DICT_TF_HAS_SHARED_SPACE(table->flags)) {"
+        },
+        {
+          "line": 3958,
+          "text": "      shared_space_name = mem_strdup(dict_sys_t::s_dd_space_name);"
+        },
+        {
+          "line": 3963,
+          "text": "      shared_space_name = mem_strdup(dd_table_get_space_name(dd_table));"
+        },
+        {
+          "line": 3967,
+          "text": "      shared_space_name ="
+        },
+        {
+          "line": 3970,
+          "text": "      sprintf(shared_space_name, \"%s_\" ULINTPF, general_space_name,"
+        },
+        {
+          "line": 3974,
+          "text": "    space_name = shared_space_name;"
+        },
+        {
+          "line": 3988,
+          "text": "      ut_free(shared_space_name);"
+        },
+        {
+          "line": 4016,
+          "text": "    ut_free(shared_space_name);"
+        },
+        {
+          "line": 4056,
+          "text": "  ut_free(shared_space_name);"
+        },
+        {
+          "line": 4124,
+          "text": "  if (!DICT_TF_HAS_SHARED_SPACE(table->flags)) {"
+        },
+        {
+          "line": 4200,
+          "text": "    /* DD tables are in shared DD tablespace */"
+        },
+        {
+          "line": 5488,
+          "text": "    /* This is a user table that resides in shared tablespace */"
+        },
+        {
+          "line": 5491,
+          "text": "    ut_ad(DICT_TF_HAS_SHARED_SPACE(table->flags));"
+        },
+        {
+          "line": 5627,
+          "text": "  col->set_char_length(FTS_INDEX_WORD_LEN);"
+        },
+        {
+          "line": 5639,
+          "text": "  col->set_char_length(20);"
+        },
+        {
+          "line": 5651,
+          "text": "  col->set_char_length(20);"
+        },
+        {
+          "line": 5661,
+          "text": "  col->set_char_length(4);"
+        },
+        {
+          "line": 5671,
+          "text": "  col->set_char_length(8);"
+        },
+        {
+          "line": 5768,
+          "text": "    col->set_char_length(20);"
+        },
+        {
+          "line": 5801,
+          "text": "    col->set_char_length(FTS_CONFIG_TABLE_KEY_COL_LEN);"
+        },
+        {
+          "line": 5813,
+          "text": "    col->set_char_length(FTS_CONFIG_TABLE_VALUE_COL_LEN);"
+        },
+        {
+          "line": 6150,
+          "text": "  bool result = acquire_shared_backup_lock(thd, timeout, trx_duration);"
+        },
+        {
+          "line": 6440,
+          "text": "@param[out]\tpart_sep\tpartition separator"
+        },
+        {
+          "line": 6441,
+          "text": "@param[out]\tsub_part_sep\tsub-partition separator */"
+        },
+        {
+          "line": 6442,
+          "text": "static void get_partition_separators(bool is_57, std::string &part_sep,"
+        },
+        {
+          "line": 6443,
+          "text": "                                     std::string &sub_part_sep) {"
+        },
+        {
+          "line": 6445,
+          "text": "    part_sep.assign(PART_SEPARATOR);"
+        },
+        {
+          "line": 6446,
+          "text": "    sub_part_sep.assign(SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 6451,
+          "text": "  part_sep.assign(PART_SEPARATOR);"
+        },
+        {
+          "line": 6452,
+          "text": "  sub_part_sep.assign(SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 6454,
+          "text": "  part_sep.assign(ALT_PART_SEPARATOR);"
+        },
+        {
+          "line": 6455,
+          "text": "  sub_part_sep.assign(ALT_SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 6466,
+          "text": "  std::string part_sep = sub_part ? SUB_PART_SEPARATOR : PART_SEPARATOR;"
+        },
+        {
+          "line": 6469,
+          "text": "  position = dict_name.find(part_sep);"
+        },
+        {
+          "line": 6475,
+          "text": "  std::string alt_sep = sub_part ? ALT_SUB_PART_SEPARATOR : ALT_PART_SEPARATOR;"
+        },
+        {
+          "line": 6573,
+          "text": "  size_t part_begin = PART_SEPARATOR_LEN;"
+        },
+        {
+          "line": 6592,
+          "text": "  auto sub_begin = sub_pos + SUB_PART_SEPARATOR_LEN;"
+        },
+        {
+          "line": 6656,
+          "text": "  std::string part_sep;"
+        },
+        {
+          "line": 6657,
+          "text": "  std::string sub_part_sep;"
+        },
+        {
+          "line": 6659,
+          "text": "  get_partition_separators(is_57, part_sep, sub_part_sep);"
+        },
+        {
+          "line": 6662,
+          "text": "  partition.append(part_sep);"
+        },
+        {
+          "line": 6675,
+          "text": "  partition.append(sub_part_sep);"
+        }
+      ]
+    },
+    "storage/innobase/include/dict0dd.h": {
+      "sha256": "fc93104af64dad00683444d681cbfc45c4dc071569755f645e5a6790e73af6c6",
+      "lines": [
+        {
+          "line": 139,
+          "text": "  DD_PARTITION_INSTANT_COLS,"
+        },
+        {
+          "line": 361,
+          "text": "/** Determine if a dd::Partition is the first leaf partition in the table"
+        },
+        {
+          "line": 363,
+          "text": "@return\tTrue\tIf it's the first partition"
+        },
+        {
+          "line": 365,
+          "text": "inline bool dd_part_is_first(const dd::Partition *dd_part) {"
+        },
+        {
+          "line": 404,
+          "text": "      dd_partition_key_strings[DD_PARTITION_INSTANT_COLS]);"
+        },
+        {
+          "line": 444,
+          "text": "  /* In case of partitioned tables, only partitions/subpartitions can ever"
+        },
+        {
+          "line": 453,
+          "text": "subpartitions, then only subpartitions can be marked as discarded)"
+        },
+        {
+          "line": 455,
+          "text": "Function can be safely called on a partition, even if it has subpartitions -"
+        },
+        {
+          "line": 507,
+          "text": "/** Get the first index of a table or partition."
+        },
+        {
+          "line": 526,
+          "text": "/** Get the first index of a partition."
+        },
+        {
+          "line": 532,
+          "text": "  return (dd_first<dd::Partition, dd::Partition_index>(partition));"
+        },
+        {
+          "line": 612,
+          "text": "is correct if the first partition got changed"
+        },
+        {
+          "line": 702,
+          "text": "/** Acquire a shared metadata lock."
+        },
+        {
+          "line": 972,
+          "text": "hold Shared MDL lock on it."
+        }
+      ]
+    },
+    "sql/dd/impl/types/partition_impl.cc": {
+      "sha256": "5c72ad1dff4222c338f0bf475182314186e78c568eecd4e92c16039976a44e20",
+      "lines": [
+        {
+          "line": 83,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 96,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 112,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 172,
+          "text": "         m_subpartitions.restore_items("
+        },
+        {
+          "line": 182,
+          "text": "  for (Partition *part : m_subpartitions) part->set_parent_partition_id(id());"
+        },
+        {
+          "line": 185,
+          "text": "         m_subpartitions.store_items(otx);"
+        },
+        {
+          "line": 197,
+          "text": "         m_subpartitions.drop_items("
+        },
+        {
+          "line": 271,
+          "text": "  serialize_each(wctx, w, m_subpartitions, STRING_WITH_LEN(\"subpartitions\"));"
+        },
+        {
+          "line": 294,
+          "text": "      rctx, [this]() { return add_subpartition(); }, val, \"subpartitions\");"
+        },
+        {
+          "line": 339,
+          "text": "  ss << \"m_subpartitions: \" << m_subpartitions.size() << \" [ \";"
+        },
+        {
+          "line": 342,
+          "text": "    for (const Partition *i : subpartitions()) {"
+        },
+        {
+          "line": 380,
+          "text": "  m_subpartitions.push_back(p);"
+        },
+        {
+          "line": 402,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 406,
+          "text": "  m_subpartitions.deep_copy(src.m_subpartitions, this);"
+        },
+        {
+          "line": 429,
+          "text": "      m_subpartitions(),"
+        }
+      ]
+    },
+    "sql/dd/impl/types/partition_index_impl.cc": {
+      "sha256": "fe570f677b9ba0e23cba5068cb1b07a8b97efbac2132436252925efa50eee7b1",
+      "lines": []
+    }
+  },
+  "8.0.28": {
+    "MYSQL_VERSION": {
+      "sha256": "fe56b1060d676ed2fd8db4d2f6742c9fc48b22d546a426e16633c46985d65ad4",
+      "lines": []
+    },
+    "storage/innobase/handler/ha_innopart.cc": {
+      "sha256": "741cefadf859ad0a04a689b2e6fff168badb1f273ba51a5eb26384670a53a353",
+      "lines": [
+        {
+          "line": 824,
+          "text": "  lock_shared_ha_data();"
+        },
+        {
+          "line": 831,
+          "text": "      unlock_shared_ha_data();"
+        },
+        {
+          "line": 845,
+          "text": "    unlock_shared_ha_data();"
+        },
+        {
+          "line": 856,
+          "text": "    lock_shared_ha_data();"
+        },
+        {
+          "line": 875,
+          "text": "  unlock_shared_ha_data();"
+        },
+        {
+          "line": 1242,
+          "text": "    lock_shared_ha_data();"
+        },
+        {
+          "line": 1244,
+          "text": "    unlock_shared_ha_data();"
+        },
+        {
+          "line": 1373,
+          "text": "  /* Store it in the shared dictionary of the partition."
+        },
+        {
+          "line": 1408,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 1491,
+          "text": "  uint part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1538,
+          "text": "  uint part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1609,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 1796,
+          "text": "/** Return first record in index from a partition."
+        },
+        {
+          "line": 1798,
+          "text": "@param[out]\trecord\tFirst record in index in the partition."
+        },
+        {
+          "line": 1880,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1884,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 1901,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1905,
+          "text": "@param[out]\trecord\t\tFirst matching record in index in the partition."
+        },
+        {
+          "line": 1940,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1943,
+          "text": "@param[in,out]\trecord\t\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 1988,
+          "text": "@param[in,out]\trecord\tFirst matching record in index in the partition,"
+        },
+        {
+          "line": 2072,
+          "text": "  const auto first_used_partition = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 2074,
+          "text": "  for (auto i = first_used_partition; i < m_tot_parts;"
+        },
+        {
+          "line": 2347,
+          "text": "      List_iterator<partition_element> subpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2387,
+          "text": "      List_iterator<partition_element> subpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2456,
+          "text": "  if (is_shared_tablespace(create_info->tablespace)) {"
+        },
+        {
+          "line": 2457,
+          "text": "    my_printf_error(ER_ILLEGAL_HA_CREATE_OPTION, PARTITION_IN_SHARED_TABLESPACE,"
+        },
+        {
+          "line": 2530,
+          "text": "      List_iterator_fast<partition_element> sub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2535,
+          "text": "        if (is_shared_tablespace(tablespace)) {"
+        },
+        {
+          "line": 2545,
+          "text": "      if (is_shared_tablespace(tablespace)) {"
+        },
+        {
+          "line": 2555,
+          "text": "    my_printf_error(ER_ILLEGAL_HA_CREATE_OPTION, PARTITION_IN_SHARED_TABLESPACE,"
+        },
+        {
+          "line": 2835,
+          "text": "  /* Set new table id of the first partition to dd::Column::se_private_data */"
+        },
+        {
+          "line": 2839,
+          "text": "    dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2860,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 2952,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3206,
+          "text": "    const auto first_used_partition = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3210,
+          "text": "    for (auto i = first_used_partition; i < m_tot_parts;"
+        },
+        {
+          "line": 3247,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3295,
+          "text": "  part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3406,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3440,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3523,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3558,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3644,
+          "text": "    /* Take page_size from first partition. */"
+        },
+        {
+          "line": 3879,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3932,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3966,
+          "text": "  if (m_part_info->get_first_used_partition() == MY_BIT_NONE) {"
+        },
+        {
+          "line": 4022,
+          "text": "  if (m_part_info->get_first_used_partition() == MY_BIT_NONE &&"
+        }
+      ]
+    },
+    "storage/innobase/dict/dict0dd.cc": {
+      "sha256": "c2c1c5af33ef70766352de37545299aefc829cef824f0d2f97b11b99bc049578",
+      "lines": [
+        {
+          "line": 621,
+          "text": "hold Shared MDL lock on it."
+        },
+        {
+          "line": 842,
+          "text": "      dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 1653,
+          "text": "    dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 1689,
+          "text": "      dd_partition_key_strings[DD_PARTITION_INSTANT_COLS]);"
+        },
+        {
+          "line": 2006,
+          "text": "        dd_partition_key_strings[DD_PARTITION_INSTANT_COLS],"
+        },
+        {
+          "line": 2089,
+          "text": "      dd_part_is_first(reinterpret_cast<dd::Partition *>(dd_table))) {"
+        },
+        {
+          "line": 2091,
+          "text": "      dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2170,
+          "text": "      dd_column->se_private_data().get(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2964,
+          "text": "      m_table->set_instant_cols(instant_cols);"
+        },
+        {
+          "line": 2969,
+          "text": "          dd_partition_key_strings[DD_PARTITION_INSTANT_COLS], &instant_cols);"
+        },
+        {
+          "line": 2971,
+          "text": "      m_table->set_instant_cols(instant_cols);"
+        },
+        {
+          "line": 2995,
+          "text": "    m_table->flags |= (1 << DICT_TF_POS_SHARED_SPACE);"
+        },
+        {
+          "line": 3982,
+          "text": "  char *shared_space_name = nullptr;"
+        },
+        {
+          "line": 3987,
+          "text": "  if (DICT_TF_HAS_SHARED_SPACE(table->flags)) {"
+        },
+        {
+          "line": 3989,
+          "text": "      shared_space_name = mem_strdup(dict_sys_t::s_dd_space_name);"
+        },
+        {
+          "line": 3994,
+          "text": "      shared_space_name = mem_strdup(dd_table_get_space_name(dd_table));"
+        },
+        {
+          "line": 3998,
+          "text": "      shared_space_name = static_cast<char *>(ut::malloc_withkey("
+        },
+        {
+          "line": 4001,
+          "text": "      sprintf(shared_space_name, \"%s_\" ULINTPF, general_space_name,"
+        },
+        {
+          "line": 4005,
+          "text": "    space_name = shared_space_name;"
+        },
+        {
+          "line": 4018,
+          "text": "      ut::free(shared_space_name);"
+        },
+        {
+          "line": 4046,
+          "text": "    ut::free(shared_space_name);"
+        },
+        {
+          "line": 4086,
+          "text": "  ut::free(shared_space_name);"
+        },
+        {
+          "line": 4154,
+          "text": "  if (!DICT_TF_HAS_SHARED_SPACE(table->flags)) {"
+        },
+        {
+          "line": 4230,
+          "text": "    /* DD tables are in shared DD tablespace */"
+        },
+        {
+          "line": 5515,
+          "text": "    /* This is a user table that resides in shared tablespace */"
+        },
+        {
+          "line": 5518,
+          "text": "    ut_ad(DICT_TF_HAS_SHARED_SPACE(table->flags));"
+        },
+        {
+          "line": 5654,
+          "text": "  col->set_char_length(FTS_INDEX_WORD_LEN);"
+        },
+        {
+          "line": 5666,
+          "text": "  col->set_char_length(20);"
+        },
+        {
+          "line": 5678,
+          "text": "  col->set_char_length(20);"
+        },
+        {
+          "line": 5688,
+          "text": "  col->set_char_length(4);"
+        },
+        {
+          "line": 5698,
+          "text": "  col->set_char_length(8);"
+        },
+        {
+          "line": 5795,
+          "text": "    col->set_char_length(20);"
+        },
+        {
+          "line": 5828,
+          "text": "    col->set_char_length(FTS_CONFIG_TABLE_KEY_COL_LEN);"
+        },
+        {
+          "line": 5840,
+          "text": "    col->set_char_length(FTS_CONFIG_TABLE_VALUE_COL_LEN);"
+        },
+        {
+          "line": 6212,
+          "text": "  bool result = acquire_shared_backup_lock(thd, timeout, trx_duration);"
+        },
+        {
+          "line": 6502,
+          "text": "@param[out]\tpart_sep\tpartition separator"
+        },
+        {
+          "line": 6503,
+          "text": "@param[out]\tsub_part_sep\tsub-partition separator */"
+        },
+        {
+          "line": 6504,
+          "text": "static void get_partition_separators(bool is_57, std::string &part_sep,"
+        },
+        {
+          "line": 6505,
+          "text": "                                     std::string &sub_part_sep) {"
+        },
+        {
+          "line": 6507,
+          "text": "    part_sep.assign(PART_SEPARATOR);"
+        },
+        {
+          "line": 6508,
+          "text": "    sub_part_sep.assign(SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 6513,
+          "text": "  part_sep.assign(PART_SEPARATOR);"
+        },
+        {
+          "line": 6514,
+          "text": "  sub_part_sep.assign(SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 6516,
+          "text": "  part_sep.assign(ALT_PART_SEPARATOR);"
+        },
+        {
+          "line": 6517,
+          "text": "  sub_part_sep.assign(ALT_SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 6528,
+          "text": "  std::string part_sep = sub_part ? SUB_PART_SEPARATOR : PART_SEPARATOR;"
+        },
+        {
+          "line": 6531,
+          "text": "  position = dict_name.find(part_sep);"
+        },
+        {
+          "line": 6537,
+          "text": "  std::string alt_sep = sub_part ? ALT_SUB_PART_SEPARATOR : ALT_PART_SEPARATOR;"
+        },
+        {
+          "line": 6576,
+          "text": "    part_begin += PART_SEPARATOR_LEN;"
+        },
+        {
+          "line": 6585,
+          "text": "      sub_part_begin += SUB_PART_SEPARATOR_LEN;"
+        },
+        {
+          "line": 6689,
+          "text": "  size_t part_begin = PART_SEPARATOR_LEN;"
+        },
+        {
+          "line": 6708,
+          "text": "  auto sub_begin = sub_pos + SUB_PART_SEPARATOR_LEN;"
+        },
+        {
+          "line": 6772,
+          "text": "  std::string part_sep;"
+        },
+        {
+          "line": 6773,
+          "text": "  std::string sub_part_sep;"
+        },
+        {
+          "line": 6775,
+          "text": "  get_partition_separators(is_57, part_sep, sub_part_sep);"
+        },
+        {
+          "line": 6778,
+          "text": "  partition.append(part_sep);"
+        },
+        {
+          "line": 6791,
+          "text": "  partition.append(sub_part_sep);"
+        }
+      ]
+    },
+    "storage/innobase/include/dict0dd.h": {
+      "sha256": "93918e81605b73cfc6f778ee9ab97ce99855c0f4f6c1d0046ae8daa570d74475",
+      "lines": [
+        {
+          "line": 139,
+          "text": "  DD_PARTITION_INSTANT_COLS,"
+        },
+        {
+          "line": 361,
+          "text": "/** Determine if a dd::Partition is the first leaf partition in the table"
+        },
+        {
+          "line": 363,
+          "text": "@return\tTrue\tIf it's the first partition"
+        },
+        {
+          "line": 365,
+          "text": "inline bool dd_part_is_first(const dd::Partition *dd_part) {"
+        },
+        {
+          "line": 404,
+          "text": "      dd_partition_key_strings[DD_PARTITION_INSTANT_COLS]);"
+        },
+        {
+          "line": 444,
+          "text": "  /* In case of partitioned tables, only partitions/subpartitions can ever"
+        },
+        {
+          "line": 453,
+          "text": "subpartitions, then only subpartitions can be marked as discarded)"
+        },
+        {
+          "line": 455,
+          "text": "Function can be safely called on a partition, even if it has subpartitions -"
+        },
+        {
+          "line": 485,
+          "text": "/** Get the first index of a table or partition."
+        },
+        {
+          "line": 504,
+          "text": "/** Get the first index of a partition."
+        },
+        {
+          "line": 510,
+          "text": "  return (dd_first<dd::Partition, dd::Partition_index>(partition));"
+        },
+        {
+          "line": 593,
+          "text": "is correct if the first partition got changed"
+        },
+        {
+          "line": 684,
+          "text": "/** Acquire a shared metadata lock."
+        },
+        {
+          "line": 955,
+          "text": "hold Shared MDL lock on it."
+        }
+      ]
+    },
+    "sql/dd/impl/types/partition_impl.cc": {
+      "sha256": "ab861f9bc31ffaaa4608a5aeef73da361b4c5c40883981da42af7ceaa373c3fc",
+      "lines": [
+        {
+          "line": 84,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 97,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 113,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 173,
+          "text": "         m_subpartitions.restore_items("
+        },
+        {
+          "line": 183,
+          "text": "  for (Partition *part : m_subpartitions) part->set_parent_partition_id(id());"
+        },
+        {
+          "line": 186,
+          "text": "         m_subpartitions.store_items(otx);"
+        },
+        {
+          "line": 198,
+          "text": "         m_subpartitions.drop_items("
+        },
+        {
+          "line": 272,
+          "text": "  serialize_each(wctx, w, m_subpartitions, STRING_WITH_LEN(\"subpartitions\"));"
+        },
+        {
+          "line": 295,
+          "text": "      rctx, [this]() { return add_subpartition(); }, val, \"subpartitions\");"
+        },
+        {
+          "line": 340,
+          "text": "  ss << \"m_subpartitions: \" << m_subpartitions.size() << \" [ \";"
+        },
+        {
+          "line": 343,
+          "text": "    for (const Partition *i : subpartitions()) {"
+        },
+        {
+          "line": 381,
+          "text": "  m_subpartitions.push_back(p);"
+        },
+        {
+          "line": 403,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 407,
+          "text": "  m_subpartitions.deep_copy(src.m_subpartitions, this);"
+        },
+        {
+          "line": 430,
+          "text": "      m_subpartitions(),"
+        }
+      ]
+    },
+    "sql/dd/impl/types/partition_index_impl.cc": {
+      "sha256": "6170f14aee6143c69e1dabeebf9f3594d14d9f89ee8db0ecb9de7a6ce4b575f0",
+      "lines": []
+    }
+  },
+  "8.0.30": {
+    "MYSQL_VERSION": {
+      "sha256": "3a0f3fc9943c916cfdf5e6bdb6f555fb54a90920afd21278bc47e90504756579",
+      "lines": []
+    },
+    "storage/innobase/handler/ha_innopart.cc": {
+      "sha256": "ed02e4643bb727ff4647c66d61a730962a7e2e326a01a7dda16987dff86b2e3f",
+      "lines": [
+        {
+          "line": 802,
+          "text": "  lock_shared_ha_data();"
+        },
+        {
+          "line": 809,
+          "text": "      unlock_shared_ha_data();"
+        },
+        {
+          "line": 823,
+          "text": "    unlock_shared_ha_data();"
+        },
+        {
+          "line": 834,
+          "text": "    lock_shared_ha_data();"
+        },
+        {
+          "line": 852,
+          "text": "  unlock_shared_ha_data();"
+        },
+        {
+          "line": 1216,
+          "text": "    lock_shared_ha_data();"
+        },
+        {
+          "line": 1218,
+          "text": "    unlock_shared_ha_data();"
+        },
+        {
+          "line": 1350,
+          "text": "  /* Store it in the shared dictionary of the partition."
+        },
+        {
+          "line": 1385,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 1468,
+          "text": "  uint part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1515,
+          "text": "  uint part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1586,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 1773,
+          "text": "/** Return first record in index from a partition."
+        },
+        {
+          "line": 1775,
+          "text": "@param[out]     record  First record in index in the partition."
+        },
+        {
+          "line": 1857,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1861,
+          "text": "@param[out]     record          First matching record in index in the partition."
+        },
+        {
+          "line": 1878,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1882,
+          "text": "@param[out]     record          First matching record in index in the partition."
+        },
+        {
+          "line": 1955,
+          "text": "@param[in,out]  record  First matching record in index in the partition,"
+        },
+        {
+          "line": 2039,
+          "text": "  const auto first_used_partition = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 2041,
+          "text": "  for (auto i = first_used_partition; i < m_tot_parts;"
+        },
+        {
+          "line": 2308,
+          "text": "      List_iterator<partition_element> subpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2348,
+          "text": "      List_iterator<partition_element> subpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2417,
+          "text": "  if (is_shared_tablespace(create_info->tablespace)) {"
+        },
+        {
+          "line": 2418,
+          "text": "    my_printf_error(ER_ILLEGAL_HA_CREATE_OPTION, PARTITION_IN_SHARED_TABLESPACE,"
+        },
+        {
+          "line": 2491,
+          "text": "      List_iterator_fast<partition_element> sub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2496,
+          "text": "        if (is_shared_tablespace(tablespace)) {"
+        },
+        {
+          "line": 2506,
+          "text": "      if (is_shared_tablespace(tablespace)) {"
+        },
+        {
+          "line": 2516,
+          "text": "    my_printf_error(ER_ILLEGAL_HA_CREATE_OPTION, PARTITION_IN_SHARED_TABLESPACE,"
+        },
+        {
+          "line": 2796,
+          "text": "  /* Set new table id of the first partition to dd::Column::se_private_data */"
+        },
+        {
+          "line": 2800,
+          "text": "    dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2821,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 2913,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3182,
+          "text": "    const auto first_used_partition = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3186,
+          "text": "    for (auto i = first_used_partition; i < m_tot_parts;"
+        },
+        {
+          "line": 3223,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3271,
+          "text": "  part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3383,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3417,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3500,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3535,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3621,
+          "text": "    /* Take page_size from first partition. */"
+        },
+        {
+          "line": 3850,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3903,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3937,
+          "text": "  if (m_part_info->get_first_used_partition() == MY_BIT_NONE) {"
+        },
+        {
+          "line": 3993,
+          "text": "  if (m_part_info->get_first_used_partition() == MY_BIT_NONE &&"
+        }
+      ]
+    },
+    "storage/innobase/dict/dict0dd.cc": {
+      "sha256": "ea2f44fb66fb32e222ac95eda8db832236d516b24ab8e024038e7d15213acc9c",
+      "lines": [
+        {
+          "line": 682,
+          "text": "hold Shared MDL lock on it."
+        },
+        {
+          "line": 903,
+          "text": "      dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 1596,
+          "text": "      dd_part_is_first(reinterpret_cast<dd::Partition *>(&new_table))) {"
+        },
+        {
+          "line": 1597,
+          "text": "    /* copy table se-private data for first partition */"
+        },
+        {
+          "line": 1731,
+          "text": "    dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 1802,
+          "text": "      dd_partition_key_strings[DD_PARTITION_INSTANT_COLS]);"
+        },
+        {
+          "line": 1945,
+          "text": "    new_column->set_char_length(column->char_length());"
+        },
+        {
+          "line": 2056,
+          "text": "      dropped_col->set_char_length(col_to_drop->char_length());"
+        },
+        {
+          "line": 2376,
+          "text": "          dd_partition_key_strings[DD_PARTITION_INSTANT_COLS],"
+        },
+        {
+          "line": 2505,
+          "text": "      dd_part_is_first(reinterpret_cast<dd::Partition *>(dd_table))) {"
+        },
+        {
+          "line": 2509,
+          "text": "      dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2643,
+          "text": "      dd_column->se_private_data().get(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 3763,
+          "text": "      m_table->set_instant_cols(n_inst_cols);"
+        },
+        {
+          "line": 3773,
+          "text": "         dd_partition_key_strings[DD_PARTITION_INSTANT_COLS]);"
+        },
+        {
+          "line": 3796,
+          "text": "    m_table->flags |= (1 << DICT_TF_POS_SHARED_SPACE);"
+        },
+        {
+          "line": 4626,
+          "text": "  char *shared_space_name = nullptr;"
+        },
+        {
+          "line": 4631,
+          "text": "  if (DICT_TF_HAS_SHARED_SPACE(table->flags)) {"
+        },
+        {
+          "line": 4633,
+          "text": "      shared_space_name = mem_strdup(dict_sys_t::s_dd_space_name);"
+        },
+        {
+          "line": 4638,
+          "text": "      shared_space_name = mem_strdup(dd_table_get_space_name(dd_table));"
+        },
+        {
+          "line": 4642,
+          "text": "      shared_space_name = static_cast<char *>(ut::malloc_withkey("
+        },
+        {
+          "line": 4645,
+          "text": "      sprintf(shared_space_name, \"%s_\" ULINTPF, general_space_name,"
+        },
+        {
+          "line": 4649,
+          "text": "    space_name = shared_space_name;"
+        },
+        {
+          "line": 4662,
+          "text": "      ut::free(shared_space_name);"
+        },
+        {
+          "line": 4690,
+          "text": "    ut::free(shared_space_name);"
+        },
+        {
+          "line": 4730,
+          "text": "  ut::free(shared_space_name);"
+        },
+        {
+          "line": 4798,
+          "text": "  if (!DICT_TF_HAS_SHARED_SPACE(table->flags)) {"
+        },
+        {
+          "line": 4874,
+          "text": "    /* DD tables are in shared DD tablespace */"
+        },
+        {
+          "line": 6156,
+          "text": "    /* This is a user table that resides in shared tablespace */"
+        },
+        {
+          "line": 6159,
+          "text": "    ut_ad(DICT_TF_HAS_SHARED_SPACE(table->flags));"
+        },
+        {
+          "line": 6295,
+          "text": "  col->set_char_length(FTS_INDEX_WORD_LEN);"
+        },
+        {
+          "line": 6307,
+          "text": "  col->set_char_length(20);"
+        },
+        {
+          "line": 6319,
+          "text": "  col->set_char_length(20);"
+        },
+        {
+          "line": 6329,
+          "text": "  col->set_char_length(4);"
+        },
+        {
+          "line": 6339,
+          "text": "  col->set_char_length(8);"
+        },
+        {
+          "line": 6436,
+          "text": "    col->set_char_length(20);"
+        },
+        {
+          "line": 6469,
+          "text": "    col->set_char_length(FTS_CONFIG_TABLE_KEY_COL_LEN);"
+        },
+        {
+          "line": 6481,
+          "text": "    col->set_char_length(FTS_CONFIG_TABLE_VALUE_COL_LEN);"
+        },
+        {
+          "line": 6853,
+          "text": "  bool result = acquire_shared_backup_lock(thd, timeout, trx_duration);"
+        },
+        {
+          "line": 7144,
+          "text": "@param[out]     part_sep        partition separator"
+        },
+        {
+          "line": 7145,
+          "text": "@param[out]     sub_part_sep    sub-partition separator */"
+        },
+        {
+          "line": 7146,
+          "text": "static void get_partition_separators(bool is_57, std::string &part_sep,"
+        },
+        {
+          "line": 7147,
+          "text": "                                     std::string &sub_part_sep) {"
+        },
+        {
+          "line": 7149,
+          "text": "    part_sep.assign(PART_SEPARATOR);"
+        },
+        {
+          "line": 7150,
+          "text": "    sub_part_sep.assign(SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 7155,
+          "text": "  part_sep.assign(PART_SEPARATOR);"
+        },
+        {
+          "line": 7156,
+          "text": "  sub_part_sep.assign(SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 7158,
+          "text": "  part_sep.assign(ALT_PART_SEPARATOR);"
+        },
+        {
+          "line": 7159,
+          "text": "  sub_part_sep.assign(ALT_SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 7170,
+          "text": "  std::string part_sep = sub_part ? SUB_PART_SEPARATOR : PART_SEPARATOR;"
+        },
+        {
+          "line": 7173,
+          "text": "  position = dict_name.find(part_sep);"
+        },
+        {
+          "line": 7179,
+          "text": "  std::string alt_sep = sub_part ? ALT_SUB_PART_SEPARATOR : ALT_PART_SEPARATOR;"
+        },
+        {
+          "line": 7218,
+          "text": "    part_begin += PART_SEPARATOR_LEN;"
+        },
+        {
+          "line": 7227,
+          "text": "      sub_part_begin += SUB_PART_SEPARATOR_LEN;"
+        },
+        {
+          "line": 7331,
+          "text": "  size_t part_begin = PART_SEPARATOR_LEN;"
+        },
+        {
+          "line": 7350,
+          "text": "  auto sub_begin = sub_pos + SUB_PART_SEPARATOR_LEN;"
+        },
+        {
+          "line": 7414,
+          "text": "  std::string part_sep;"
+        },
+        {
+          "line": 7415,
+          "text": "  std::string sub_part_sep;"
+        },
+        {
+          "line": 7417,
+          "text": "  get_partition_separators(is_57, part_sep, sub_part_sep);"
+        },
+        {
+          "line": 7420,
+          "text": "  partition.append(part_sep);"
+        },
+        {
+          "line": 7433,
+          "text": "  partition.append(sub_part_sep);"
+        }
+      ]
+    },
+    "storage/innobase/include/dict0dd.h": {
+      "sha256": "2511c697d01a1f78234b880b0f78bc48b8596b1926a371709ea8acc239399861",
+      "lines": [
+        {
+          "line": 160,
+          "text": "  DD_PARTITION_INSTANT_COLS,"
+        },
+        {
+          "line": 383,
+          "text": "/** Determine if a dd::Partition is the first leaf partition in the table"
+        },
+        {
+          "line": 385,
+          "text": "@return True    If it's the first partition"
+        },
+        {
+          "line": 387,
+          "text": "inline bool dd_part_is_first(const dd::Partition *dd_part) {"
+        },
+        {
+          "line": 576,
+          "text": "      dd_partition_key_strings[DD_PARTITION_INSTANT_COLS]);"
+        },
+        {
+          "line": 617,
+          "text": "  /* In case of partitioned tables, only partitions/subpartitions can ever"
+        },
+        {
+          "line": 626,
+          "text": "subpartitions, then only subpartitions can be marked as discarded)"
+        },
+        {
+          "line": 628,
+          "text": "Function can be safely called on a partition, even if it has subpartitions -"
+        },
+        {
+          "line": 658,
+          "text": "/** Get the first index of a table or partition."
+        },
+        {
+          "line": 677,
+          "text": "/** Get the first index of a partition."
+        },
+        {
+          "line": 683,
+          "text": "  return (dd_first<dd::Partition, dd::Partition_index>(partition));"
+        },
+        {
+          "line": 770,
+          "text": "is correct if the first partition got changed"
+        },
+        {
+          "line": 877,
+          "text": "/** Acquire a shared metadata lock."
+        },
+        {
+          "line": 1144,
+          "text": "hold Shared MDL lock on it."
+        }
+      ]
+    },
+    "sql/dd/impl/types/partition_impl.cc": {
+      "sha256": "b4125340ddff1bba9a3fbbf49e6072c665171e2f17668369fc1732cf395c35e9",
+      "lines": [
+        {
+          "line": 84,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 97,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 113,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 173,
+          "text": "         m_subpartitions.restore_items("
+        },
+        {
+          "line": 183,
+          "text": "  for (Partition *part : m_subpartitions) part->set_parent_partition_id(id());"
+        },
+        {
+          "line": 186,
+          "text": "         m_subpartitions.store_items(otx);"
+        },
+        {
+          "line": 198,
+          "text": "         m_subpartitions.drop_items("
+        },
+        {
+          "line": 272,
+          "text": "  serialize_each(wctx, w, m_subpartitions, STRING_WITH_LEN(\"subpartitions\"));"
+        },
+        {
+          "line": 295,
+          "text": "      rctx, [this]() { return add_subpartition(); }, val, \"subpartitions\");"
+        },
+        {
+          "line": 340,
+          "text": "  ss << \"m_subpartitions: \" << m_subpartitions.size() << \" [ \";"
+        },
+        {
+          "line": 343,
+          "text": "    for (const Partition *i : subpartitions()) {"
+        },
+        {
+          "line": 381,
+          "text": "  m_subpartitions.push_back(p);"
+        },
+        {
+          "line": 403,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 407,
+          "text": "  m_subpartitions.deep_copy(src.m_subpartitions, this);"
+        },
+        {
+          "line": 430,
+          "text": "      m_subpartitions(),"
+        }
+      ]
+    },
+    "sql/dd/impl/types/partition_index_impl.cc": {
+      "sha256": "7f207c27261c4fc4628aae69c3166c1de10e9a3144bbcea593ad5f196e62e15c",
+      "lines": []
+    }
+  },
+  "8.0.45": {
+    "MYSQL_VERSION": {
+      "sha256": "b41cdd446f72cfb0bd1ca673acfee0b834d70e474403fad81f920d536e678644",
+      "lines": []
+    },
+    "storage/innobase/handler/ha_innopart.cc": {
+      "sha256": "ac4f27c1192b31fed4f2280539a6857e32b9c09d616733d3d05a576fb1e2378a",
+      "lines": [
+        {
+          "line": 806,
+          "text": "  lock_shared_ha_data();"
+        },
+        {
+          "line": 813,
+          "text": "      unlock_shared_ha_data();"
+        },
+        {
+          "line": 827,
+          "text": "    unlock_shared_ha_data();"
+        },
+        {
+          "line": 844,
+          "text": "    lock_shared_ha_data();"
+        },
+        {
+          "line": 862,
+          "text": "  unlock_shared_ha_data();"
+        },
+        {
+          "line": 1226,
+          "text": "    lock_shared_ha_data();"
+        },
+        {
+          "line": 1228,
+          "text": "    unlock_shared_ha_data();"
+        },
+        {
+          "line": 1360,
+          "text": "  /* Store it in the shared dictionary of the partition."
+        },
+        {
+          "line": 1395,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 1478,
+          "text": "  uint part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1525,
+          "text": "  uint part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 1596,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 1783,
+          "text": "/** Return first record in index from a partition."
+        },
+        {
+          "line": 1785,
+          "text": "@param[out]     record  First record in index in the partition."
+        },
+        {
+          "line": 1867,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1871,
+          "text": "@param[out]     record          First matching record in index in the partition."
+        },
+        {
+          "line": 1888,
+          "text": "/** Start index scan and return first record from a partition."
+        },
+        {
+          "line": 1892,
+          "text": "@param[out]     record          First matching record in index in the partition."
+        },
+        {
+          "line": 1965,
+          "text": "@param[in,out]  record  First matching record in index in the partition,"
+        },
+        {
+          "line": 2049,
+          "text": "  const auto first_used_partition = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 2051,
+          "text": "  for (auto i = first_used_partition; i < m_tot_parts;"
+        },
+        {
+          "line": 2318,
+          "text": "      List_iterator<partition_element> subpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2358,
+          "text": "      List_iterator<partition_element> subpart_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2427,
+          "text": "  if (is_shared_tablespace(create_info->tablespace)) {"
+        },
+        {
+          "line": 2428,
+          "text": "    my_printf_error(ER_ILLEGAL_HA_CREATE_OPTION, PARTITION_IN_SHARED_TABLESPACE,"
+        },
+        {
+          "line": 2501,
+          "text": "      List_iterator_fast<partition_element> sub_it(part_elem->subpartitions);"
+        },
+        {
+          "line": 2506,
+          "text": "        if (is_shared_tablespace(tablespace)) {"
+        },
+        {
+          "line": 2516,
+          "text": "      if (is_shared_tablespace(tablespace)) {"
+        },
+        {
+          "line": 2526,
+          "text": "    my_printf_error(ER_ILLEGAL_HA_CREATE_OPTION, PARTITION_IN_SHARED_TABLESPACE,"
+        },
+        {
+          "line": 2806,
+          "text": "  /* Set new table id of the first partition to dd::Column::se_private_data */"
+        },
+        {
+          "line": 2810,
+          "text": "    dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2831,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 2925,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3195,
+          "text": "    const auto first_used_partition = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3199,
+          "text": "    for (auto i = first_used_partition; i < m_tot_parts;"
+        },
+        {
+          "line": 3253,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3301,
+          "text": "  part_id = m_part_info->get_first_used_partition();"
+        },
+        {
+          "line": 3413,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3447,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3530,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3565,
+          "text": "    for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3651,
+          "text": "    /* Take page_size from first partition. */"
+        },
+        {
+          "line": 3880,
+          "text": "  for (i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3933,
+          "text": "  for (uint i = m_part_info->get_first_used_partition(); i < m_tot_parts;"
+        },
+        {
+          "line": 3967,
+          "text": "  if (m_part_info->get_first_used_partition() == MY_BIT_NONE) {"
+        },
+        {
+          "line": 4023,
+          "text": "  if (m_part_info->get_first_used_partition() == MY_BIT_NONE &&"
+        }
+      ]
+    },
+    "storage/innobase/dict/dict0dd.cc": {
+      "sha256": "d61d5784aeef5235c8f9f7c77b1db49b00f24b621749e2edc25797ed9a9f09ac",
+      "lines": [
+        {
+          "line": 693,
+          "text": "hold Shared MDL lock on it."
+        },
+        {
+          "line": 914,
+          "text": "      dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 1178,
+          "text": "  if (fsp_is_shared_tablespace(flags)) {"
+        },
+        {
+          "line": 1179,
+          "text": "    /* This is a shared tablespace, dd_table is empty */"
+        },
+        {
+          "line": 1699,
+          "text": "      dd_part_is_first(reinterpret_cast<dd::Partition *>(&new_table))) {"
+        },
+        {
+          "line": 1700,
+          "text": "    /* copy table se-private data for first partition */"
+        },
+        {
+          "line": 1829,
+          "text": "    dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 1900,
+          "text": "      dd_partition_key_strings[DD_PARTITION_INSTANT_COLS]);"
+        },
+        {
+          "line": 2069,
+          "text": "    new_column->set_char_length(column->char_length());"
+        },
+        {
+          "line": 2201,
+          "text": "      dropped_col->set_char_length(col_to_drop->char_length());"
+        },
+        {
+          "line": 2523,
+          "text": "          dd_partition_key_strings[DD_PARTITION_INSTANT_COLS],"
+        },
+        {
+          "line": 2652,
+          "text": "      dd_part_is_first(reinterpret_cast<dd::Partition *>(dd_table))) {"
+        },
+        {
+          "line": 2656,
+          "text": "      dd_column->se_private_data().set(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 2790,
+          "text": "      dd_column->se_private_data().get(dd_index_key_strings[DD_TABLE_ID],"
+        },
+        {
+          "line": 3931,
+          "text": "      m_table->set_instant_cols(n_inst_cols);"
+        },
+        {
+          "line": 3941,
+          "text": "         dd_partition_key_strings[DD_PARTITION_INSTANT_COLS]);"
+        },
+        {
+          "line": 3964,
+          "text": "    m_table->flags |= (1 << DICT_TF_POS_SHARED_SPACE);"
+        },
+        {
+          "line": 4794,
+          "text": "  char *shared_space_name = nullptr;"
+        },
+        {
+          "line": 4799,
+          "text": "  if (DICT_TF_HAS_SHARED_SPACE(table->flags)) {"
+        },
+        {
+          "line": 4801,
+          "text": "      shared_space_name = mem_strdup(dict_sys_t::s_dd_space_name);"
+        },
+        {
+          "line": 4806,
+          "text": "      shared_space_name = mem_strdup(dd_table_get_space_name(dd_table));"
+        },
+        {
+          "line": 4810,
+          "text": "      shared_space_name = static_cast<char *>(ut::malloc_withkey("
+        },
+        {
+          "line": 4813,
+          "text": "      sprintf(shared_space_name, \"%s_\" ULINTPF, general_space_name,"
+        },
+        {
+          "line": 4817,
+          "text": "    space_name = shared_space_name;"
+        },
+        {
+          "line": 4830,
+          "text": "      ut::free(shared_space_name);"
+        },
+        {
+          "line": 4858,
+          "text": "    ut::free(shared_space_name);"
+        },
+        {
+          "line": 4898,
+          "text": "  ut::free(shared_space_name);"
+        },
+        {
+          "line": 4966,
+          "text": "  if (!DICT_TF_HAS_SHARED_SPACE(table->flags)) {"
+        },
+        {
+          "line": 5042,
+          "text": "    /* DD tables are in shared DD tablespace */"
+        },
+        {
+          "line": 6327,
+          "text": "    /* This is a user table that resides in shared tablespace */"
+        },
+        {
+          "line": 6330,
+          "text": "    ut_ad(DICT_TF_HAS_SHARED_SPACE(table->flags));"
+        },
+        {
+          "line": 6466,
+          "text": "  col->set_char_length(FTS_INDEX_WORD_LEN);"
+        },
+        {
+          "line": 6478,
+          "text": "  col->set_char_length(20);"
+        },
+        {
+          "line": 6490,
+          "text": "  col->set_char_length(20);"
+        },
+        {
+          "line": 6500,
+          "text": "  col->set_char_length(4);"
+        },
+        {
+          "line": 6510,
+          "text": "  col->set_char_length(8);"
+        },
+        {
+          "line": 6607,
+          "text": "    col->set_char_length(20);"
+        },
+        {
+          "line": 6640,
+          "text": "    col->set_char_length(FTS_CONFIG_TABLE_KEY_COL_LEN);"
+        },
+        {
+          "line": 6652,
+          "text": "    col->set_char_length(FTS_CONFIG_TABLE_VALUE_COL_LEN);"
+        },
+        {
+          "line": 7031,
+          "text": "  bool result = acquire_shared_backup_lock(thd, timeout, trx_duration);"
+        },
+        {
+          "line": 7322,
+          "text": "@param[out]     part_sep        partition separator"
+        },
+        {
+          "line": 7323,
+          "text": "@param[out]     sub_part_sep    sub-partition separator */"
+        },
+        {
+          "line": 7324,
+          "text": "static void get_partition_separators(bool is_57, std::string &part_sep,"
+        },
+        {
+          "line": 7325,
+          "text": "                                     std::string &sub_part_sep) {"
+        },
+        {
+          "line": 7327,
+          "text": "    part_sep.assign(PART_SEPARATOR);"
+        },
+        {
+          "line": 7328,
+          "text": "    sub_part_sep.assign(SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 7333,
+          "text": "  part_sep.assign(PART_SEPARATOR);"
+        },
+        {
+          "line": 7334,
+          "text": "  sub_part_sep.assign(SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 7336,
+          "text": "  part_sep.assign(ALT_PART_SEPARATOR);"
+        },
+        {
+          "line": 7337,
+          "text": "  sub_part_sep.assign(ALT_SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 7348,
+          "text": "  std::string part_sep = sub_part ? SUB_PART_SEPARATOR : PART_SEPARATOR;"
+        },
+        {
+          "line": 7351,
+          "text": "  position = dict_name.find(part_sep);"
+        },
+        {
+          "line": 7357,
+          "text": "  std::string alt_sep = sub_part ? ALT_SUB_PART_SEPARATOR : ALT_PART_SEPARATOR;"
+        },
+        {
+          "line": 7396,
+          "text": "    part_begin += PART_SEPARATOR_LEN;"
+        },
+        {
+          "line": 7405,
+          "text": "      sub_part_begin += SUB_PART_SEPARATOR_LEN;"
+        },
+        {
+          "line": 7528,
+          "text": "  std::string part_seperator(PART_SEPARATOR);"
+        },
+        {
+          "line": 7529,
+          "text": "  std::string sub_part_seperator(SUB_PART_SEPARATOR);"
+        },
+        {
+          "line": 7531,
+          "text": "  // Check for partitions and subpartitions"
+        },
+        {
+          "line": 7532,
+          "text": "  bool has_partitions = temp_table.find(PART_SEPARATOR) != std::string::npos;"
+        },
+        {
+          "line": 7534,
+          "text": "    has_partitions = temp_table.find(ALT_PART_SEPARATOR) != std::string::npos;"
+        },
+        {
+          "line": 7536,
+          "text": "      part_seperator = ALT_PART_SEPARATOR;"
+        },
+        {
+          "line": 7537,
+          "text": "      sub_part_seperator = ALT_SUB_PART_SEPARATOR;"
+        },
+        {
+          "line": 7541,
+          "text": "  bool has_subpartitions ="
+        },
+        {
+          "line": 7542,
+          "text": "      temp_table.find(sub_part_seperator) != std::string::npos;"
+        },
+        {
+          "line": 7547,
+          "text": "        temp_table.find(part_seperator) + std::string(part_seperator).length();"
+        },
+        {
+          "line": 7548,
+          "text": "    size_t part_end = has_subpartitions ? temp_table.find(sub_part_seperator)"
+        },
+        {
+          "line": 7558,
+          "text": "  if (has_subpartitions) {"
+        },
+        {
+          "line": 7560,
+          "text": "    size_t sub_part_start = temp_table.find(sub_part_seperator) +"
+        },
+        {
+          "line": 7561,
+          "text": "                            std::string(sub_part_seperator).length();"
+        },
+        {
+          "line": 7582,
+          "text": "  size_t part_begin = PART_SEPARATOR_LEN;"
+        },
+        {
+          "line": 7601,
+          "text": "  auto sub_begin = sub_pos + SUB_PART_SEPARATOR_LEN;"
+        },
+        {
+          "line": 7665,
+          "text": "  std::string part_sep;"
+        },
+        {
+          "line": 7666,
+          "text": "  std::string sub_part_sep;"
+        },
+        {
+          "line": 7668,
+          "text": "  get_partition_separators(is_57, part_sep, sub_part_sep);"
+        },
+        {
+          "line": 7671,
+          "text": "  partition.append(part_sep);"
+        },
+        {
+          "line": 7684,
+          "text": "  partition.append(sub_part_sep);"
+        }
+      ]
+    },
+    "storage/innobase/include/dict0dd.h": {
+      "sha256": "034f6bf027c96d1f50a1929ff5dd4633b14d20dbf938931dc8c0c6cb46db70d9",
+      "lines": [
+        {
+          "line": 161,
+          "text": "  DD_PARTITION_INSTANT_COLS,"
+        },
+        {
+          "line": 384,
+          "text": "/** Determine if a dd::Partition is the first leaf partition in the table"
+        },
+        {
+          "line": 386,
+          "text": "@return True    If it's the first partition"
+        },
+        {
+          "line": 388,
+          "text": "inline bool dd_part_is_first(const dd::Partition *dd_part) {"
+        },
+        {
+          "line": 587,
+          "text": "      dd_partition_key_strings[DD_PARTITION_INSTANT_COLS]);"
+        },
+        {
+          "line": 628,
+          "text": "  /* In case of partitioned tables, only partitions/subpartitions can ever"
+        },
+        {
+          "line": 637,
+          "text": "subpartitions, then only subpartitions can be marked as discarded)"
+        },
+        {
+          "line": 639,
+          "text": "Function can be safely called on a partition, even if it has subpartitions -"
+        },
+        {
+          "line": 669,
+          "text": "/** Get the first index of a table or partition."
+        },
+        {
+          "line": 688,
+          "text": "/** Get the first index of a partition."
+        },
+        {
+          "line": 694,
+          "text": "  return (dd_first<dd::Partition, dd::Partition_index>(partition));"
+        },
+        {
+          "line": 781,
+          "text": "is correct if the first partition got changed"
+        },
+        {
+          "line": 892,
+          "text": "/** Acquire a shared metadata lock."
+        },
+        {
+          "line": 1159,
+          "text": "hold Shared MDL lock on it."
+        }
+      ]
+    },
+    "sql/dd/impl/types/partition_impl.cc": {
+      "sha256": "4d5e484192f53c32c754befbeb1f6edfaa327dd362f4cb448b74b6241c8a6f07",
+      "lines": [
+        {
+          "line": 85,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 98,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 114,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 174,
+          "text": "         m_subpartitions.restore_items("
+        },
+        {
+          "line": 184,
+          "text": "  for (Partition *part : m_subpartitions) part->set_parent_partition_id(id());"
+        },
+        {
+          "line": 187,
+          "text": "         m_subpartitions.store_items(otx);"
+        },
+        {
+          "line": 199,
+          "text": "         m_subpartitions.drop_items("
+        },
+        {
+          "line": 273,
+          "text": "  serialize_each(wctx, w, m_subpartitions, STRING_WITH_LEN(\"subpartitions\"));"
+        },
+        {
+          "line": 296,
+          "text": "      rctx, [this]() { return add_subpartition(); }, val, \"subpartitions\");"
+        },
+        {
+          "line": 341,
+          "text": "  ss << \"m_subpartitions: \" << m_subpartitions.size() << \" [ \";"
+        },
+        {
+          "line": 344,
+          "text": "    for (const Partition *i : subpartitions()) {"
+        },
+        {
+          "line": 382,
+          "text": "  m_subpartitions.push_back(p);"
+        },
+        {
+          "line": 404,
+          "text": "      m_subpartitions(),"
+        },
+        {
+          "line": 408,
+          "text": "  m_subpartitions.deep_copy(src.m_subpartitions, this);"
+        },
+        {
+          "line": 431,
+          "text": "      m_subpartitions(),"
+        }
+      ]
+    },
+    "sql/dd/impl/types/partition_index_impl.cc": {
+      "sha256": "3903e5fc16f34a42f06081705802478c1b2e529693bbb496af71898daf95b779",
+      "lines": []
+    }
+  }
+}

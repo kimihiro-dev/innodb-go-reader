@@ -127,7 +127,7 @@ func TestSDIDamage(t *testing.T) {
 		{"far-root", func(b []byte) { be.PutUint32(b[sdiHeaderOffset+4:], 9999) }, ErrCorrupt},
 		{"type", func(b []byte) { be.PutUint16(b[base+24:], 17855) }, ErrUnsupported},
 		{"space", func(b []byte) { be.PutUint32(b[base+34:], 999) }, ErrCorrupt},
-		{"deleted", func(b []byte) { b[o-5] |= 0x20 }, ErrUnsupported},
+		{"instant", func(b []byte) { b[o-5] |= 0x80 }, ErrUnsupported},
 		{"length", func(b []byte) { be.PutUint32(b[o+29:], 1) }, ErrCorrupt},
 		{"zero-length", func(b []byte) { be.PutUint32(b[o+25:], 0) }, ErrCorrupt},
 		{"limit", func(b []byte) { be.PutUint32(b[o+25:], MaxSDIObjectBytes+1) }, ErrUnsupported},

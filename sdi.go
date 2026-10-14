@@ -53,6 +53,7 @@ type SDIResult struct {
 	IndexID                    uint64
 	Pages                      []Page      // SDI tree pages, not page 0 or SDI_BLOB pages
 	Records                    []SDIRecord // ordered by (type,id)
+	DeletedRecords             []SDIRecord // delete-marked SDI objects, excluded from discovery
 }
 
 // ReadSDI extracts raw SDI objects without a user schema. It requires a stable
@@ -138,7 +139,7 @@ func ReadSDI(r io.ReaderAt, size int64) (*SDIResult, error) {
 			if p.Level > 0 {
 				continue
 			}
-			if len(out.Records) >= MaxSDIRecords {
+			if len(out.Records)+len(out.DeletedRecords) >= MaxSDIRecords {
 				return nil, fmt.Errorf("%w: SDI record count limit", ErrUnsupported)
 			}
 			if n := len(out.Records); n > 0 && !out.Records[n-1].Key.less(e.sdiKey) {
@@ -161,7 +162,11 @@ func ReadSDI(r io.ReaderAt, size int64) (*SDIResult, error) {
 			if err != nil {
 				return nil, fmt.Errorf("SDI page %d record %d: %w", p.Number, e.Offset, err)
 			}
-			out.Records = append(out.Records, rec)
+			if e.deleteMarked {
+				out.DeletedRecords = append(out.DeletedRecords, rec)
+			} else {
+				out.Records = append(out.Records, rec)
+			}
 		}
 		if p.Level > 0 {
 			for i := len(entries) - 1; i >= 0; i-- {
@@ -195,8 +200,12 @@ func decodeSDIEntry(b []byte, o, limit int, level uint16) (pageEntry, error) {
 	e.HeapNumber = be.Uint16(e.Header[1:3]) >> 3
 	status := be.Uint16(e.Header[1:3]) & 7
 	flags := e.Header[0] & 0xf0
-	if flags&^byte(0x10) != 0 {
-		return e, fmt.Errorf("%w: SDI deleted/instant/version flags", ErrUnsupported)
+	allowed := byte(0x10)
+	if level == 0 {
+		allowed = 0x20
+	}
+	if flags&^allowed != 0 {
+		return e, fmt.Errorf("%w: SDI instant/version/min flags", ErrUnsupported)
 	}
 	if level > 0 {
 		if status != 1 || e.End > limit {
@@ -205,7 +214,8 @@ func decodeSDIEntry(b []byte, o, limit int, level uint16) (pageEntry, error) {
 		e.minimum = flags == 0x10
 		e.child = be.Uint32(b[o+12 : o+16])
 	} else {
-		if status != 0 || flags != 0 || o+33 > limit {
+		e.deleteMarked = flags&0x20 != 0
+		if status != 0 || o+33 > limit {
 			return e, fmt.Errorf("%w: SDI leaf layout", ErrCorrupt)
 		}
 		length, pos, external, err := readVariableLength(b, o-6, MaxSDIObjectBytes, true)

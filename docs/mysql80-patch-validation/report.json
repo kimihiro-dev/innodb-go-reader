@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-14",
+  "status": "complete",
+  "versions": {
+    "8.0.11": {
+      "fixtures": 16,
+      "rows": 1046
+    },
+    "8.0.12": {
+      "fixtures": 32,
+      "rows": 2086
+    },
+    "8.0.16": {
+      "fixtures": 32,
+      "rows": 2086
+    },
+    "8.0.19": {
+      "fixtures": 32,
+      "rows": 2086
+    },
+    "8.0.23": {
+      "fixtures": 34,
+      "rows": 2090
+    },
+    "8.0.28": {
+      "fixtures": 34,
+      "rows": 2090
+    },
+    "8.0.30": {
+      "fixtures": 37,
+      "rows": 2097
+    }
+  },
+  "fixtures": 217,
+  "SQL_rows": 13581,
+  "secondary_indexes": 28,
+  "SQL_compare": [
+    "ReadMaterializedAuto",
+    "ScanMaterializedAuto",
+    "clustered full and point",
+    "secondary physical entries",
+    "secondary covered and lookup",
+    "CLI typed JSONL"
+  ],
+  "official_ibd2sdi": "217 captures matched",
+  "official_innochecksum": "217 passed",
+  "go_test": "passed",
+  "race_all": "passed",
+  "vet": "passed",
+  "build": [
+    "darwin/arm64",
+    "linux/amd64",
+    "windows/amd64"
+  ],
+  "linux_runtime": "3 representative samples passed",
+  "asset_fingerprints": "7896 unchanged",
+  "limitations": [
+    "untested intermediate patches",
+    "upgraded mixed DD/SDI or INSTANT files",
+    "new patch partition sets",
+    "original compression/encryption/shared/recovery/function/multivalue non-goals"
+  ],
+  "containers": "seven dedicated servers stopped; ephemeral runtime containers removed",
+  "final_review": "affected SDI/metadata/patch/failure paths passed under race",
+  "final_cli_SQL": "217 passed",
+  "final_linux_runtime": "3 passed",
+  "documentation": "passed",
+  "diff_check": "passed",
+  "source_files": {
+    "metadata.go": "b813ed94b60a0432c382d2a71e24ef26b2a17091c951fa44e8c71255d1ddd5d4",
+    "instant.go": "98881f6ba906ecf4dc5709e0bc4f1526ea6382181082ec9a3aea46fd557403f9",
+    "record.go": "1fb2ed93aa82551ce4333a1351f60dc96a8c518cade6290d058b739229b65680",
+    "schema.go": "dead70d939f8e223793de42907ee768ca6f6606966516e1ea9d59e932a06c665",
+    "lob.go": "00e7576a6ae9b1e75a6f2608b8cce2e78a237b65623d56020b22bc4abc38ed90",
+    "sdi.go": "be27a19593f1b3d86b6ebce7073fdab629b004fd37f87f4fbbb44b45b16ea7d1",
+    "scan.go": "ab6e55e6d022408203772d5ec9efe16f7385b92543ae84a8762e2a265fea9e5c",
+    "secondary_query.go": "8bb267372489c2fd5b08642db9dabfac0745e6a54aa2479f783355f864aac10b",
+    "mysql80_patch_test.go": "20cdacc1b2f5bc36b3e1c2759452f3159c75d1a7bb5f437782ed0ea014c5d430"
+  },
+  "documentation_result": "Documentation OK: 111 Markdown files, 1271 local links/anchors"
+}

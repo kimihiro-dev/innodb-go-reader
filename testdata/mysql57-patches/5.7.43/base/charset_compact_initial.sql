@@ -1,0 +1,7 @@
+CREATE TABLE `charset_compact` (
+  `id` int(11) NOT NULL,
+  `a` char(5) CHARACTER SET ascii DEFAULT NULL,
+  `l` varchar(20) CHARACTER SET latin1 DEFAULT NULL,
+  `u` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=COMPACT;

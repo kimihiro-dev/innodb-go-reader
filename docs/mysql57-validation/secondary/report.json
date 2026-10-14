@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-13",
+  "stage": "42B",
+  "status": "complete",
+  "environment": {
+    "go": "go version go1.25.7 darwin/arm64",
+    "host": "darwin/arm64",
+    "docker_platform": "linux/amd64",
+    "image_manifest": "sha256:dab0a802b44617303694fb17d166501de279c3031ddeb28c56ecf7fcab5ef0da",
+    "GOCACHE": "/tmp/innodb-mysql57-go-cache",
+    "container": "innodb-reader-mysql5744-20261013",
+    "container_retained_running": true,
+    "database": "innodb_reader_57b_b5cb2673d6a9"
+  },
+  "checks": {
+    "baseline": 0,
+    "go_test_count_1": 0,
+    "race_count_1": 0,
+    "vet_final": 0,
+    "affected_packages_final_test": 0,
+    "affected_packages_final_race": 0,
+    "fixtures": 22,
+    "snapshot_rows": 1682,
+    "secondary_indexes": 38,
+    "sql_queries": 232,
+    "covered_deliveries": 1764,
+    "clustered_lookups": 3948,
+    "filtered_candidates": 26,
+    "tool_runs": 374,
+    "innochecksum_mysql8045_files": 22,
+    "collector_boundary_checks": 5,
+    "fuzz_indexes_10s_executions": 11880,
+    "fuzz_schema_10s_executions": 2485,
+    "unchanged_preexisting_assets_and_evidence": 2953,
+    "all_fixture_success": 528,
+    "all_fixture_rejected": 3,
+    "all_fixture_rows": 101019,
+    "space_assets": 531,
+    "documentation_markdown_files": 101,
+    "documentation_local_references": 1047,
+    "git_diff_check": 0,
+    "cli_documentation_examples": 4
+  },
+  "validation_sequence": "Full test/race passed; HTML preflight read-budget fix followed by complete normal/race reruns of visual and internal/cli and final full vet. Core/rowio implementation unchanged by final fix.",
+  "scope": "trusted Schema + supplied SecondarySchema array; root-local preflight; complete supported secondary scans, bounded projection queries, explicit clustered/secondary HTML; no inference of omitted indexes or all 5.7 variants",
+  "independent_evidence": "SQL visible-field values and projections + official 8.0.45 strict CRC; hidden ROW_ID is physical consistency, not independent SQL identity; CLI harness checks completion/counts, SQL values are checked in Go fixture tests",
+  "source_sha256": {
+    "schema_check.go": "354733e3fe8ae39d5a3cf755ce2ae3a86acc8e2ced091f6e1312453acc34e206",
+    "internal/cli/schema.go": "3839840ae5e1b471148e06c0e15fccab011e81a0d6174a17b3b7954822873c99",
+    "internal/cli/run.go": "f0e0e1ca800dde81e8f88ea6380588280be71e74dcea9dade62646dac92bc8fd",
+    "visual/report.go": "faa605202eba7e8774f2c2cddc48b6656ac688978ec9a3e90ae1db505a5a0556",
+    "scripts/mysql57_schema.py": "5b075c754d9ca3be920d172ec98c2dba562fec024e7ab073365570ef85707351"
+  },
+  "logs": [
+    "baseline.log",
+    "test.log",
+    "race.log",
+    "vet.log",
+    "targeted.log",
+    "budget-test.log",
+    "budget-race.log",
+    "fuzz-indexes.log",
+    "fuzz-schema.log",
+    "capture.log",
+    "tools.log",
+    "innochecksum.log"
+  ],
+  "artifacts": [
+    "collector.json",
+    "collector-checks.json",
+    "tools.json",
+    "bytes.json",
+    "preservation.json",
+    "docs.log"
+  ],
+  "git": {
+    "HEAD": "504e886c9154ae0c8cb13efcc6110b914ef482a9",
+    "v010": "116de5046aa94b379ce4d2e0711e34be9766c397",
+    "committed": false
+  }
+}

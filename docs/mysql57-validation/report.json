@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-13",
+  "stage": "42A",
+  "environment": {
+    "go": "go version go1.25.7 darwin/arm64",
+    "host": "darwin/arm64",
+    "docker_platform": "linux/amd64",
+    "image_manifest": "sha256:dab0a802b44617303694fb17d166501de279c3031ddeb28c56ecf7fcab5ef0da",
+    "GOCACHE": "/tmp/innodb-mysql57-go-cache"
+  },
+  "checks": {
+    "baseline": 0,
+    "go_test_count_1": 0,
+    "race_count_1": 0,
+    "vet": 0,
+    "fuzz_schema_10s": 0,
+    "fuzz_read_10s": 0,
+    "innochecksum_mysql8045_files": 22,
+    "tool_runs": 88,
+    "collector_cases": 22,
+    "schema_rejections": 5,
+    "logging_version": "5.7.44-log",
+    "original_assets_unchanged": 2828
+  },
+  "scope": "explicit schema clustered rows/LOB/query; space/page/stats/default HTML; secondary and index detail deferred to 42B",
+  "logs": [
+    "baseline.log",
+    "test.log",
+    "race.log",
+    "vet.log",
+    "fuzz-schema.log",
+    "fuzz-read.log",
+    "innochecksum.log",
+    "tools.json",
+    "collector.json",
+    "schema-rejections.json",
+    "log-version.json"
+  ]
+}

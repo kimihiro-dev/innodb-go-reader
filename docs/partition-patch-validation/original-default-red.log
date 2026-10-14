@@ -1,0 +1,6 @@
+--- FAIL: TestLegacyPartitionMetadataFailures (0.01s)
+    --- FAIL: TestLegacyPartitionMetadataFailures/default-on-original-column (0.01s)
+        partition_schema_test.go:218: invalid legacy partition emitted <nil> {true 3 3 3 0 3 0 18 0 18 15 [{false   false  <nil> id INT [] [] 0 0 0 0 false false 0 0} {false   false  <nil> n INT [] [] 0 0 0 0 false false 0 0} {false   false  <nil> v VARCHAR [] [] 0 0 0 0 false true 40 0} {false   false  <nil> a INT [] [] 0 0 0 0 false true 0 0} {false   false  <nil> txt VARCHAR [] [] 0 0 0 0 false true 30 0}] []}
+FAIL
+FAIL	innodb-go-reader	0.952s
+FAIL

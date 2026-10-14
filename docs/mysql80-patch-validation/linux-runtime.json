@@ -1,0 +1,127 @@
+[
+  {
+    "version": "8.0.11",
+    "fixture": "lob_dynamic_small_update",
+    "check": {
+      "Complete": true,
+      "Pages": 1,
+      "Nodes": 0,
+      "Records": 3,
+      "DeletedRecords": 0,
+      "PageReads": 25,
+      "CacheHits": 6,
+      "PhysicalReads": 19,
+      "TraversalEntries": 22,
+      "Columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "nullable": false,
+          "max_chars": 0
+        },
+        {
+          "name": "t",
+          "type": "LONGTEXT",
+          "nullable": true,
+          "max_chars": 0
+        },
+        {
+          "name": "b",
+          "type": "LONGBLOB",
+          "nullable": true,
+          "max_chars": 0
+        },
+        {
+          "name": "j",
+          "type": "JSON",
+          "nullable": true,
+          "max_chars": 0
+        }
+      ],
+      "VirtualColumns": null
+    },
+    "binary_sha256": "0a8f0f5987b12f0d121a0b4d4a61d9a3cf581b2b95495dcbb53fa28be90a249d"
+  },
+  {
+    "version": "8.0.28",
+    "fixture": "instant_tree_dynamic_current",
+    "check": {
+      "Complete": true,
+      "Pages": 64,
+      "Nodes": 63,
+      "Records": 501,
+      "DeletedRecords": 0,
+      "PageReads": 69,
+      "CacheHits": 3,
+      "PhysicalReads": 66,
+      "TraversalEntries": 628,
+      "Columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "nullable": false,
+          "max_chars": 0
+        },
+        {
+          "name": "v",
+          "type": "VARCHAR",
+          "nullable": true,
+          "max_chars": 2000
+        },
+        {
+          "name": "a",
+          "type": "INT",
+          "nullable": true,
+          "max_chars": 0
+        },
+        {
+          "name": "b",
+          "type": "INT",
+          "nullable": true,
+          "max_chars": 0
+        }
+      ],
+      "VirtualColumns": null
+    },
+    "binary_sha256": "0a8f0f5987b12f0d121a0b4d4a61d9a3cf581b2b95495dcbb53fa28be90a249d"
+  },
+  {
+    "version": "8.0.30",
+    "fixture": "gipk_current",
+    "check": {
+      "Complete": true,
+      "Pages": 1,
+      "Nodes": 0,
+      "Records": 3,
+      "DeletedRecords": 0,
+      "PageReads": 7,
+      "CacheHits": 3,
+      "PhysicalReads": 4,
+      "TraversalEntries": 4,
+      "Columns": [
+        {
+          "invisible": true,
+          "name": "my_row_id",
+          "type": "BIGINT",
+          "unsigned": true,
+          "nullable": false,
+          "max_chars": 0
+        },
+        {
+          "name": "n",
+          "type": "INT",
+          "nullable": true,
+          "max_chars": 0
+        },
+        {
+          "name": "v",
+          "type": "VARCHAR",
+          "nullable": true,
+          "max_chars": 30
+        }
+      ],
+      "VirtualColumns": null
+    },
+    "binary_sha256": "0a8f0f5987b12f0d121a0b4d4a61d9a3cf581b2b95495dcbb53fa28be90a249d"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "row_format": "DYNAMIC",
+  "columns": [
+    {
+      "name": "seq",
+      "type": "INT",
+      "nullable": true
+    },
+    {
+      "name": "k",
+      "type": "INT",
+      "nullable": false
+    },
+    {
+      "name": "payload",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "utf8mb4",
+      "max_chars": 20
+    }
+  ],
+  "root_page": 3,
+  "index_id": 65,
+  "space_id": 48,
+  "clustered_key": {
+    "name": "actual_unique",
+    "columns": [
+      "k"
+    ]
+  }
+}

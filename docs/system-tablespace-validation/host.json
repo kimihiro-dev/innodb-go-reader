@@ -1,0 +1,6 @@
+{
+  "temporary_root": "/var/folders/x8/z7krlcws3sscvw4bc18hb8v00000gn/T/innodb-systemspace-docs-hmjrvqs4",
+  "mysql80_basedir": "/Users/kimihiro/workspace/software/mysql-8.0.45",
+  "mysql57_container": "innodb-systemspace-57-doc-20261013-b",
+  "mysql57_image": "mysql@sha256:dab0a802b44617303694fb17d166501de279c3031ddeb28c56ecf7fcab5ef0da"
+}

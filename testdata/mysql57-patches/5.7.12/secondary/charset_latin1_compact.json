@@ -1,0 +1,32 @@
+{
+  "row_format": "COMPACT",
+  "columns": [
+    {
+      "name": "k",
+      "type": "CHAR",
+      "nullable": false,
+      "charset": "latin1",
+      "max_chars": 8,
+      "collation": "latin1_bin"
+    },
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false
+    },
+    {
+      "name": "v",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "latin1",
+      "max_chars": 30
+    }
+  ],
+  "root_page": 3,
+  "index_id": 135,
+  "space_id": 72,
+  "primary_keys": [
+    "k",
+    "id"
+  ]
+}

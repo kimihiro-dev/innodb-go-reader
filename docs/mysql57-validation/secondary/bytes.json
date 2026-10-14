@@ -1,0 +1,1388 @@
+[
+  {
+    "case": "composite_dynamic",
+    "field_hex": [
+      "00",
+      "",
+      "00",
+      "80000003"
+    ],
+    "first": {
+      "PageNumber": 4,
+      "Start": 174,
+      "Offset": 182,
+      "End": 188,
+      "NextOffset": 197,
+      "Header": [
+        0,
+        0,
+        32,
+        0,
+        15
+      ],
+      "HeapNumber": 4,
+      "DeleteMarked": false,
+      "Values": [
+        "AA==",
+        null,
+        "AA==",
+        3
+      ],
+      "FieldBytes": [
+        "AA==",
+        null,
+        "AA==",
+        "gAAAAw=="
+      ],
+      "ClusteredKey": [
+        "AA==",
+        3
+      ],
+      "RowID": null,
+      "Raw": "AQEBAAAgAA8AAIAAAAM="
+    },
+    "index": {
+      "Name": "px",
+      "Unique": false,
+      "RowFormat": "DYNAMIC",
+      "SpaceID": 134,
+      "IndexID": 240,
+      "RootPage": 4,
+      "Fields": [
+        {
+          "Column": 0,
+          "Definition": {
+            "name": "k",
+            "type": "VARBINARY",
+            "nullable": false,
+            "max_chars": 0,
+            "max_bytes": 24
+          },
+          "PrefixBytes": 3,
+          "RowID": false
+        },
+        {
+          "Column": 3,
+          "Definition": {
+            "collation": "utf8mb4_bin",
+            "charset": "utf8mb4",
+            "name": "name",
+            "type": "VARCHAR",
+            "nullable": true,
+            "max_chars": 40
+          },
+          "PrefixBytes": 8,
+          "RowID": false
+        },
+        {
+          "Column": 0,
+          "Definition": {
+            "name": "k",
+            "type": "VARBINARY",
+            "nullable": false,
+            "max_chars": 0,
+            "max_bytes": 24
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 1,
+          "Definition": {
+            "name": "id",
+            "type": "INT",
+            "nullable": false,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        }
+      ],
+      "UserFields": 2,
+      "ClusteredFields": [
+        2,
+        3
+      ]
+    },
+    "level": 0,
+    "nodes": 0,
+    "null_length_header_hex": "010101000020000f",
+    "pages": 1,
+    "prefix_example": {
+      "PageNumber": 4,
+      "Start": 120,
+      "Offset": 129,
+      "End": 147,
+      "NextOffset": 156,
+      "Header": [
+        0,
+        0,
+        16,
+        0,
+        27
+      ],
+      "HeapNumber": 2,
+      "DeleteMarked": false,
+      "Values": [
+        "YWJj",
+        "界😀",
+        "YWJjAQ==",
+        1
+      ],
+      "FieldBytes": [
+        "YWJj",
+        "55WM8J+YgA==",
+        "YWJjAQ==",
+        "gAAAAQ=="
+      ],
+      "ClusteredKey": [
+        "YWJjAQ==",
+        1
+      ],
+      "RowID": null,
+      "Raw": "BAcDAAAAEAAbYWJj55WM8J+YgGFiYwGAAAAB"
+    },
+    "prefix_field_hex": [
+      "616263",
+      "e7958cf09f9880",
+      "61626301",
+      "80000001"
+    ],
+    "prefix_raw_hex": "04070300000010001b616263e7958cf09f98806162630180000001",
+    "raw_hex": "010101000020000f000080000003",
+    "root_hex_64_74": "000000000000000000f0"
+  },
+  {
+    "case": "composite_dynamic",
+    "field_hex": [
+      "",
+      "61626302",
+      "80000002"
+    ],
+    "first": {
+      "PageNumber": 5,
+      "Start": 139,
+      "Offset": 146,
+      "End": 154,
+      "NextOffset": 161,
+      "Header": [
+        0,
+        0,
+        24,
+        0,
+        15
+      ],
+      "HeapNumber": 3,
+      "DeleteMarked": false,
+      "Values": [
+        null,
+        "YWJjAg==",
+        2
+      ],
+      "FieldBytes": [
+        null,
+        "YWJjAg==",
+        "gAAAAg=="
+      ],
+      "ClusteredKey": [
+        "YWJjAg==",
+        2
+      ],
+      "RowID": null,
+      "Raw": "BAEAABgAD2FiYwKAAAAC"
+    },
+    "index": {
+      "Name": "dedup",
+      "Unique": false,
+      "RowFormat": "DYNAMIC",
+      "SpaceID": 134,
+      "IndexID": 241,
+      "RootPage": 5,
+      "Fields": [
+        {
+          "Column": 2,
+          "Definition": {
+            "name": "n",
+            "type": "INT",
+            "nullable": true,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 0,
+          "Definition": {
+            "name": "k",
+            "type": "VARBINARY",
+            "nullable": false,
+            "max_chars": 0,
+            "max_bytes": 24
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 1,
+          "Definition": {
+            "name": "id",
+            "type": "INT",
+            "nullable": false,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        }
+      ],
+      "UserFields": 3,
+      "ClusteredFields": [
+        1,
+        2
+      ]
+    },
+    "level": 0,
+    "nodes": 0,
+    "null_length_header_hex": "0401000018000f",
+    "pages": 1,
+    "raw_hex": "0401000018000f6162630280000002",
+    "root_hex_64_74": "000000000000000000f1"
+  },
+  {
+    "case": "composite_dynamic",
+    "field_hex": [
+      "",
+      "61626302",
+      "80000002"
+    ],
+    "first": {
+      "PageNumber": 6,
+      "Start": 139,
+      "Offset": 146,
+      "End": 154,
+      "NextOffset": 161,
+      "Header": [
+        0,
+        0,
+        24,
+        0,
+        15
+      ],
+      "HeapNumber": 3,
+      "DeleteMarked": false,
+      "Values": [
+        null,
+        "YWJjAg==",
+        2
+      ],
+      "FieldBytes": [
+        null,
+        "YWJjAg==",
+        "gAAAAg=="
+      ],
+      "ClusteredKey": [
+        "YWJjAg==",
+        2
+      ],
+      "RowID": null,
+      "Raw": "BAEAABgAD2FiYwKAAAAC"
+    },
+    "index": {
+      "Name": "s",
+      "Unique": false,
+      "RowFormat": "DYNAMIC",
+      "SpaceID": 134,
+      "IndexID": 242,
+      "RootPage": 6,
+      "Fields": [
+        {
+          "Column": 2,
+          "Definition": {
+            "name": "n",
+            "type": "INT",
+            "nullable": true,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 0,
+          "Definition": {
+            "name": "k",
+            "type": "VARBINARY",
+            "nullable": false,
+            "max_chars": 0,
+            "max_bytes": 24
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 1,
+          "Definition": {
+            "name": "id",
+            "type": "INT",
+            "nullable": false,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        }
+      ],
+      "UserFields": 1,
+      "ClusteredFields": [
+        1,
+        2
+      ]
+    },
+    "level": 0,
+    "nodes": 0,
+    "null_length_header_hex": "0401000018000f",
+    "pages": 1,
+    "raw_hex": "0401000018000f6162630280000002",
+    "root_hex_64_74": "000000000000000000f2"
+  },
+  {
+    "case": "composite_compact",
+    "field_hex": [
+      "00",
+      "",
+      "00",
+      "80000003"
+    ],
+    "first": {
+      "PageNumber": 4,
+      "Start": 174,
+      "Offset": 182,
+      "End": 188,
+      "NextOffset": 197,
+      "Header": [
+        0,
+        0,
+        32,
+        0,
+        15
+      ],
+      "HeapNumber": 4,
+      "DeleteMarked": false,
+      "Values": [
+        "AA==",
+        null,
+        "AA==",
+        3
+      ],
+      "FieldBytes": [
+        "AA==",
+        null,
+        "AA==",
+        "gAAAAw=="
+      ],
+      "ClusteredKey": [
+        "AA==",
+        3
+      ],
+      "RowID": null,
+      "Raw": "AQEBAAAgAA8AAIAAAAM="
+    },
+    "index": {
+      "Name": "px",
+      "Unique": false,
+      "RowFormat": "COMPACT",
+      "SpaceID": 145,
+      "IndexID": 270,
+      "RootPage": 4,
+      "Fields": [
+        {
+          "Column": 0,
+          "Definition": {
+            "name": "k",
+            "type": "VARBINARY",
+            "nullable": false,
+            "max_chars": 0,
+            "max_bytes": 24
+          },
+          "PrefixBytes": 3,
+          "RowID": false
+        },
+        {
+          "Column": 3,
+          "Definition": {
+            "collation": "utf8mb4_bin",
+            "charset": "utf8mb4",
+            "name": "name",
+            "type": "VARCHAR",
+            "nullable": true,
+            "max_chars": 40
+          },
+          "PrefixBytes": 8,
+          "RowID": false
+        },
+        {
+          "Column": 0,
+          "Definition": {
+            "name": "k",
+            "type": "VARBINARY",
+            "nullable": false,
+            "max_chars": 0,
+            "max_bytes": 24
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 1,
+          "Definition": {
+            "name": "id",
+            "type": "INT",
+            "nullable": false,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        }
+      ],
+      "UserFields": 2,
+      "ClusteredFields": [
+        2,
+        3
+      ]
+    },
+    "level": 0,
+    "nodes": 0,
+    "null_length_header_hex": "010101000020000f",
+    "pages": 1,
+    "raw_hex": "010101000020000f000080000003",
+    "root_hex_64_74": "0000000000000000010e"
+  },
+  {
+    "case": "composite_compact",
+    "field_hex": [
+      "",
+      "61626302",
+      "80000002"
+    ],
+    "first": {
+      "PageNumber": 5,
+      "Start": 139,
+      "Offset": 146,
+      "End": 154,
+      "NextOffset": 161,
+      "Header": [
+        0,
+        0,
+        24,
+        0,
+        15
+      ],
+      "HeapNumber": 3,
+      "DeleteMarked": false,
+      "Values": [
+        null,
+        "YWJjAg==",
+        2
+      ],
+      "FieldBytes": [
+        null,
+        "YWJjAg==",
+        "gAAAAg=="
+      ],
+      "ClusteredKey": [
+        "YWJjAg==",
+        2
+      ],
+      "RowID": null,
+      "Raw": "BAEAABgAD2FiYwKAAAAC"
+    },
+    "index": {
+      "Name": "dedup",
+      "Unique": false,
+      "RowFormat": "COMPACT",
+      "SpaceID": 145,
+      "IndexID": 271,
+      "RootPage": 5,
+      "Fields": [
+        {
+          "Column": 2,
+          "Definition": {
+            "name": "n",
+            "type": "INT",
+            "nullable": true,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 0,
+          "Definition": {
+            "name": "k",
+            "type": "VARBINARY",
+            "nullable": false,
+            "max_chars": 0,
+            "max_bytes": 24
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 1,
+          "Definition": {
+            "name": "id",
+            "type": "INT",
+            "nullable": false,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        }
+      ],
+      "UserFields": 3,
+      "ClusteredFields": [
+        1,
+        2
+      ]
+    },
+    "level": 0,
+    "nodes": 0,
+    "null_length_header_hex": "0401000018000f",
+    "pages": 1,
+    "raw_hex": "0401000018000f6162630280000002",
+    "root_hex_64_74": "0000000000000000010f"
+  },
+  {
+    "case": "composite_compact",
+    "field_hex": [
+      "",
+      "61626302",
+      "80000002"
+    ],
+    "first": {
+      "PageNumber": 6,
+      "Start": 139,
+      "Offset": 146,
+      "End": 154,
+      "NextOffset": 161,
+      "Header": [
+        0,
+        0,
+        24,
+        0,
+        15
+      ],
+      "HeapNumber": 3,
+      "DeleteMarked": false,
+      "Values": [
+        null,
+        "YWJjAg==",
+        2
+      ],
+      "FieldBytes": [
+        null,
+        "YWJjAg==",
+        "gAAAAg=="
+      ],
+      "ClusteredKey": [
+        "YWJjAg==",
+        2
+      ],
+      "RowID": null,
+      "Raw": "BAEAABgAD2FiYwKAAAAC"
+    },
+    "index": {
+      "Name": "s",
+      "Unique": false,
+      "RowFormat": "COMPACT",
+      "SpaceID": 145,
+      "IndexID": 272,
+      "RootPage": 6,
+      "Fields": [
+        {
+          "Column": 2,
+          "Definition": {
+            "name": "n",
+            "type": "INT",
+            "nullable": true,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 0,
+          "Definition": {
+            "name": "k",
+            "type": "VARBINARY",
+            "nullable": false,
+            "max_chars": 0,
+            "max_bytes": 24
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 1,
+          "Definition": {
+            "name": "id",
+            "type": "INT",
+            "nullable": false,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        }
+      ],
+      "UserFields": 1,
+      "ClusteredFields": [
+        1,
+        2
+      ]
+    },
+    "level": 0,
+    "nodes": 0,
+    "null_length_header_hex": "0401000018000f",
+    "pages": 1,
+    "raw_hex": "0401000018000f6162630280000002",
+    "root_hex_64_74": "00000000000000000110"
+  },
+  {
+    "case": "tree_dynamic",
+    "field_hex": [
+      "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+      "80000000"
+    ],
+    "first": {
+      "PageNumber": 9,
+      "Start": 120,
+      "Offset": 127,
+      "End": 898,
+      "NextOffset": 905,
+      "Header": [
+        0,
+        0,
+        16,
+        3,
+        10
+      ],
+      "HeapNumber": 2,
+      "DeleteMarked": false,
+      "Values": [
+        "/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wA=",
+        0
+      ],
+      "FieldBytes": [
+        "/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wA=",
+        "gAAAAA=="
+      ],
+      "ClusteredKey": [
+        0
+      ],
+      "RowID": null,
+      "Raw": "/4IAABADCv////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AgAAAAA=="
+    },
+    "index": {
+      "Name": "secondary",
+      "Unique": false,
+      "RowFormat": "DYNAMIC",
+      "SpaceID": 138,
+      "IndexID": 252,
+      "RootPage": 4,
+      "Fields": [
+        {
+          "Column": 1,
+          "Definition": {
+            "name": "k",
+            "type": "VARBINARY",
+            "nullable": false,
+            "max_chars": 0,
+            "max_bytes": 767
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 0,
+          "Definition": {
+            "name": "id",
+            "type": "INT",
+            "nullable": false,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        }
+      ],
+      "UserFields": 1,
+      "ClusteredFields": [
+        1
+      ]
+    },
+    "level": 2,
+    "nodes": 49,
+    "null_length_header_hex": "ff82000010030a",
+    "pages": 50,
+    "raw_hex": "ff82000010030affffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0080000000",
+    "root_hex_64_74": "000200000000000000fc"
+  },
+  {
+    "case": "tree_compact",
+    "field_hex": [
+      "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00",
+      "80000000"
+    ],
+    "first": {
+      "PageNumber": 9,
+      "Start": 120,
+      "Offset": 127,
+      "End": 898,
+      "NextOffset": 905,
+      "Header": [
+        0,
+        0,
+        16,
+        3,
+        10
+      ],
+      "HeapNumber": 2,
+      "DeleteMarked": false,
+      "Values": [
+        "/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wA=",
+        0
+      ],
+      "FieldBytes": [
+        "/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wA=",
+        "gAAAAA=="
+      ],
+      "ClusteredKey": [
+        0
+      ],
+      "RowID": null,
+      "Raw": "/4IAABADCv////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AgAAAAA=="
+    },
+    "index": {
+      "Name": "secondary",
+      "Unique": false,
+      "RowFormat": "COMPACT",
+      "SpaceID": 149,
+      "IndexID": 282,
+      "RootPage": 4,
+      "Fields": [
+        {
+          "Column": 1,
+          "Definition": {
+            "name": "k",
+            "type": "VARBINARY",
+            "nullable": false,
+            "max_chars": 0,
+            "max_bytes": 767
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 0,
+          "Definition": {
+            "name": "id",
+            "type": "INT",
+            "nullable": false,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        }
+      ],
+      "UserFields": 1,
+      "ClusteredFields": [
+        1
+      ]
+    },
+    "level": 2,
+    "nodes": 49,
+    "null_length_header_hex": "ff82000010030a",
+    "pages": 50,
+    "raw_hex": "ff82000010030affffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0080000000",
+    "root_hex_64_74": "0002000000000000011a"
+  },
+  {
+    "case": "hidden_dynamic",
+    "field_hex": [
+      "",
+      "00000000021e"
+    ],
+    "first": {
+      "PageNumber": 4,
+      "Start": 152,
+      "Offset": 158,
+      "End": 164,
+      "NextOffset": 126,
+      "Header": [
+        0,
+        0,
+        32,
+        255,
+        224
+      ],
+      "HeapNumber": 4,
+      "DeleteMarked": false,
+      "Values": [
+        null,
+        542
+      ],
+      "FieldBytes": [
+        null,
+        "AAAAAAIe"
+      ],
+      "ClusteredKey": [
+        542
+      ],
+      "RowID": 542,
+      "Raw": "AQAAIP/gAAAAAAIe"
+    },
+    "index": {
+      "Name": "s",
+      "Unique": false,
+      "RowFormat": "DYNAMIC",
+      "SpaceID": 135,
+      "IndexID": 244,
+      "RootPage": 4,
+      "Fields": [
+        {
+          "Column": 0,
+          "Definition": {
+            "name": "seq",
+            "type": "INT",
+            "nullable": true,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": -1,
+          "Definition": {
+            "name": "DB_ROW_ID",
+            "type": "BINARY",
+            "nullable": false,
+            "max_chars": 0,
+            "max_bytes": 6
+          },
+          "PrefixBytes": 0,
+          "RowID": true
+        }
+      ],
+      "UserFields": 1,
+      "ClusteredFields": [
+        1
+      ]
+    },
+    "level": 0,
+    "nodes": 0,
+    "null_length_header_hex": "01000020ffe0",
+    "pages": 1,
+    "raw_hex": "01000020ffe000000000021e",
+    "root_hex_64_74": "000000000000000000f4"
+  },
+  {
+    "case": "hidden_dynamic",
+    "field_hex": [
+      "",
+      "00000000021e"
+    ],
+    "first": {
+      "PageNumber": 5,
+      "Start": 150,
+      "Offset": 156,
+      "End": 162,
+      "NextOffset": 127,
+      "Header": [
+        0,
+        0,
+        32,
+        255,
+        227
+      ],
+      "HeapNumber": 4,
+      "DeleteMarked": false,
+      "Values": [
+        null,
+        542
+      ],
+      "FieldBytes": [
+        null,
+        "AAAAAAIe"
+      ],
+      "ClusteredKey": [
+        542
+      ],
+      "RowID": 542,
+      "Raw": "AQAAIP/jAAAAAAIe"
+    },
+    "index": {
+      "Name": "px",
+      "Unique": false,
+      "RowFormat": "DYNAMIC",
+      "SpaceID": 135,
+      "IndexID": 245,
+      "RootPage": 5,
+      "Fields": [
+        {
+          "Column": 1,
+          "Definition": {
+            "collation": "utf8mb4_bin",
+            "charset": "utf8mb4",
+            "name": "name",
+            "type": "VARCHAR",
+            "nullable": true,
+            "max_chars": 30
+          },
+          "PrefixBytes": 8,
+          "RowID": false
+        },
+        {
+          "Column": -1,
+          "Definition": {
+            "name": "DB_ROW_ID",
+            "type": "BINARY",
+            "nullable": false,
+            "max_chars": 0,
+            "max_bytes": 6
+          },
+          "PrefixBytes": 0,
+          "RowID": true
+        }
+      ],
+      "UserFields": 1,
+      "ClusteredFields": [
+        1
+      ]
+    },
+    "level": 0,
+    "nodes": 0,
+    "null_length_header_hex": "01000020ffe3",
+    "pages": 1,
+    "raw_hex": "01000020ffe300000000021e",
+    "root_hex_64_74": "000000000000000000f5"
+  },
+  {
+    "case": "ordinary_dynamic",
+    "field_hex": [
+      "",
+      "80000001"
+    ],
+    "first": {
+      "PageNumber": 4,
+      "Start": 120,
+      "Offset": 126,
+      "End": 130,
+      "NextOffset": 136,
+      "Header": [
+        0,
+        0,
+        16,
+        0,
+        10
+      ],
+      "HeapNumber": 2,
+      "DeleteMarked": false,
+      "Values": [
+        null,
+        1
+      ],
+      "FieldBytes": [
+        null,
+        "gAAAAQ=="
+      ],
+      "ClusteredKey": [
+        1
+      ],
+      "RowID": null,
+      "Raw": "AQAAEAAKgAAAAQ=="
+    },
+    "index": {
+      "Name": "u",
+      "Unique": true,
+      "RowFormat": "DYNAMIC",
+      "SpaceID": 133,
+      "IndexID": 234,
+      "RootPage": 4,
+      "Fields": [
+        {
+          "Column": 2,
+          "Definition": {
+            "collation": "utf8mb4_bin",
+            "charset": "utf8mb4",
+            "name": "name",
+            "type": "VARCHAR",
+            "nullable": true,
+            "max_chars": 40
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 0,
+          "Definition": {
+            "name": "id",
+            "type": "INT",
+            "nullable": false,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        }
+      ],
+      "UserFields": 1,
+      "ClusteredFields": [
+        1
+      ]
+    },
+    "level": 0,
+    "nodes": 0,
+    "null_length_header_hex": "01000010000a",
+    "pages": 1,
+    "raw_hex": "01000010000a80000001",
+    "root_hex_64_74": "000000000000000000ea"
+  },
+  {
+    "case": "ordinary_dynamic",
+    "field_hex": [
+      "",
+      "80000001"
+    ],
+    "first": {
+      "PageNumber": 5,
+      "Start": 120,
+      "Offset": 126,
+      "End": 130,
+      "NextOffset": 136,
+      "Header": [
+        0,
+        0,
+        16,
+        0,
+        10
+      ],
+      "HeapNumber": 2,
+      "DeleteMarked": false,
+      "Values": [
+        null,
+        1
+      ],
+      "FieldBytes": [
+        null,
+        "gAAAAQ=="
+      ],
+      "ClusteredKey": [
+        1
+      ],
+      "RowID": null,
+      "Raw": "AQAAEAAKgAAAAQ=="
+    },
+    "index": {
+      "Name": "s",
+      "Unique": false,
+      "RowFormat": "DYNAMIC",
+      "SpaceID": 133,
+      "IndexID": 235,
+      "RootPage": 5,
+      "Fields": [
+        {
+          "Column": 1,
+          "Definition": {
+            "name": "n",
+            "type": "INT",
+            "nullable": true,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 0,
+          "Definition": {
+            "name": "id",
+            "type": "INT",
+            "nullable": false,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        }
+      ],
+      "UserFields": 1,
+      "ClusteredFields": [
+        1
+      ]
+    },
+    "level": 0,
+    "nodes": 0,
+    "null_length_header_hex": "01000010000a",
+    "pages": 1,
+    "raw_hex": "01000010000a80000001",
+    "root_hex_64_74": "000000000000000000eb"
+  },
+  {
+    "case": "ordinary_dynamic",
+    "field_hex": [
+      "",
+      "",
+      "80000001"
+    ],
+    "first": {
+      "PageNumber": 6,
+      "Start": 120,
+      "Offset": 126,
+      "End": 130,
+      "NextOffset": 136,
+      "Header": [
+        0,
+        0,
+        16,
+        0,
+        10
+      ],
+      "HeapNumber": 2,
+      "DeleteMarked": false,
+      "Values": [
+        null,
+        null,
+        1
+      ],
+      "FieldBytes": [
+        null,
+        null,
+        "gAAAAQ=="
+      ],
+      "ClusteredKey": [
+        1
+      ],
+      "RowID": null,
+      "Raw": "AwAAEAAKgAAAAQ=="
+    },
+    "index": {
+      "Name": "px",
+      "Unique": false,
+      "RowFormat": "DYNAMIC",
+      "SpaceID": 133,
+      "IndexID": 236,
+      "RootPage": 6,
+      "Fields": [
+        {
+          "Column": 2,
+          "Definition": {
+            "collation": "utf8mb4_bin",
+            "charset": "utf8mb4",
+            "name": "name",
+            "type": "VARCHAR",
+            "nullable": true,
+            "max_chars": 40
+          },
+          "PrefixBytes": 12,
+          "RowID": false
+        },
+        {
+          "Column": 1,
+          "Definition": {
+            "name": "n",
+            "type": "INT",
+            "nullable": true,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 0,
+          "Definition": {
+            "name": "id",
+            "type": "INT",
+            "nullable": false,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        }
+      ],
+      "UserFields": 2,
+      "ClusteredFields": [
+        2
+      ]
+    },
+    "level": 0,
+    "nodes": 0,
+    "null_length_header_hex": "03000010000a",
+    "pages": 1,
+    "raw_hex": "03000010000a80000001",
+    "root_hex_64_74": "000000000000000000ec"
+  },
+  {
+    "case": "ordinary_dynamic",
+    "field_hex": [
+      "",
+      "80000002",
+      "80000006"
+    ],
+    "first": {
+      "PageNumber": 7,
+      "Start": 198,
+      "Offset": 204,
+      "End": 212,
+      "NextOffset": 190,
+      "Header": [
+        0,
+        0,
+        56,
+        255,
+        242
+      ],
+      "HeapNumber": 7,
+      "DeleteMarked": false,
+      "Values": [
+        null,
+        2,
+        6
+      ],
+      "FieldBytes": [
+        null,
+        "gAAAAg==",
+        "gAAABg=="
+      ],
+      "ClusteredKey": [
+        6
+      ],
+      "RowID": null,
+      "Raw": "AQAAOP/ygAAAAoAAAAY="
+    },
+    "index": {
+      "Name": "bp",
+      "Unique": false,
+      "RowFormat": "DYNAMIC",
+      "SpaceID": 133,
+      "IndexID": 237,
+      "RootPage": 7,
+      "Fields": [
+        {
+          "Column": 3,
+          "Definition": {
+            "name": "vb",
+            "type": "VARBINARY",
+            "nullable": true,
+            "max_chars": 0,
+            "max_bytes": 40
+          },
+          "PrefixBytes": 3,
+          "RowID": false
+        },
+        {
+          "Column": 1,
+          "Definition": {
+            "name": "n",
+            "type": "INT",
+            "nullable": true,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 0,
+          "Definition": {
+            "name": "id",
+            "type": "INT",
+            "nullable": false,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        }
+      ],
+      "UserFields": 2,
+      "ClusteredFields": [
+        2
+      ]
+    },
+    "level": 0,
+    "nodes": 0,
+    "null_length_header_hex": "01000038fff2",
+    "pages": 1,
+    "raw_hex": "01000038fff28000000280000006",
+    "root_hex_64_74": "000000000000000000ed"
+  },
+  {
+    "case": "ordinary_dynamic",
+    "field_hex": [
+      "",
+      "80000001"
+    ],
+    "first": {
+      "PageNumber": 8,
+      "Start": 120,
+      "Offset": 126,
+      "End": 130,
+      "NextOffset": 136,
+      "Header": [
+        0,
+        0,
+        16,
+        0,
+        10
+      ],
+      "HeapNumber": 2,
+      "DeleteMarked": false,
+      "Values": [
+        null,
+        1
+      ],
+      "FieldBytes": [
+        null,
+        "gAAAAQ=="
+      ],
+      "ClusteredKey": [
+        1
+      ],
+      "RowID": null,
+      "Raw": "AQAAEAAKgAAAAQ=="
+    },
+    "index": {
+      "Name": "cover",
+      "Unique": false,
+      "RowFormat": "DYNAMIC",
+      "SpaceID": 133,
+      "IndexID": 238,
+      "RootPage": 8,
+      "Fields": [
+        {
+          "Column": 1,
+          "Definition": {
+            "name": "n",
+            "type": "INT",
+            "nullable": true,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        },
+        {
+          "Column": 0,
+          "Definition": {
+            "name": "id",
+            "type": "INT",
+            "nullable": false,
+            "max_chars": 0
+          },
+          "PrefixBytes": 0,
+          "RowID": false
+        }
+      ],
+      "UserFields": 2,
+      "ClusteredFields": [
+        1
+      ]
+    },
+    "level": 0,
+    "nodes": 0,
+    "null_length_header_hex": "01000010000a",
+    "pages": 1,
+    "raw_hex": "01000010000a80000001",
+    "root_hex_64_74": "000000000000000000ee"
+  }
+]

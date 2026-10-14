@@ -1,0 +1,2981 @@
+{
+  "status": "complete",
+  "versions": {
+    "5.7.10": {
+      "collections": [
+        {
+          "name": "ranges_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_dynamic_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_compact_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "tree_current",
+          "supported": true,
+          "rows": 600,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_rebuild_first",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_exchange",
+          "supported": true,
+          "rows": 11,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "sub_rows_current",
+          "supported": false,
+          "innochecksum": "passed"
+        }
+      ],
+      "driver": [
+        {
+          "table": "ranges_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "lists_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "hashes_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "keys_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "hidden_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "generated_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "autoinc_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "ranges_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "lists_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "hashes_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "keys_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "hidden_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "generated_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "autoinc_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "tree",
+          "expected": "passed"
+        },
+        {
+          "table": "sub_rows",
+          "expected": "rejected"
+        }
+      ],
+      "status": "complete"
+    },
+    "5.7.11": {
+      "collections": [
+        {
+          "name": "ranges_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_dynamic_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_compact_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "tree_current",
+          "supported": true,
+          "rows": 600,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_rebuild_first",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_exchange",
+          "supported": true,
+          "rows": 11,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "sub_rows_current",
+          "supported": false,
+          "innochecksum": "passed"
+        }
+      ],
+      "driver": [
+        {
+          "table": "ranges_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "lists_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "hashes_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "keys_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "hidden_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "generated_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "autoinc_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "ranges_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "lists_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "hashes_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "keys_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "hidden_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "generated_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "autoinc_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "tree",
+          "expected": "passed"
+        },
+        {
+          "table": "sub_rows",
+          "expected": "rejected"
+        }
+      ],
+      "status": "complete"
+    },
+    "5.7.12": {
+      "collections": [
+        {
+          "name": "ranges_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_dynamic_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_compact_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "tree_current",
+          "supported": true,
+          "rows": 600,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_rebuild_first",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_exchange",
+          "supported": true,
+          "rows": 11,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "sub_rows_current",
+          "supported": false,
+          "innochecksum": "passed"
+        }
+      ],
+      "driver": [
+        {
+          "table": "ranges_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "lists_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "hashes_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "keys_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "hidden_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "generated_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "autoinc_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "ranges_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "lists_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "hashes_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "keys_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "hidden_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "generated_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "autoinc_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "tree",
+          "expected": "passed"
+        },
+        {
+          "table": "sub_rows",
+          "expected": "rejected"
+        }
+      ],
+      "status": "complete"
+    },
+    "5.7.28": {
+      "collections": [
+        {
+          "name": "ranges_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_dynamic_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_compact_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "tree_current",
+          "supported": true,
+          "rows": 600,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_rebuild_first",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_exchange",
+          "supported": true,
+          "rows": 11,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "sub_rows_current",
+          "supported": false,
+          "innochecksum": "passed"
+        }
+      ],
+      "driver": [
+        {
+          "table": "ranges_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "lists_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "hashes_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "keys_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "hidden_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "generated_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "autoinc_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "ranges_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "lists_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "hashes_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "keys_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "hidden_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "generated_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "autoinc_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "tree",
+          "expected": "passed"
+        },
+        {
+          "table": "sub_rows",
+          "expected": "rejected"
+        }
+      ],
+      "status": "complete"
+    },
+    "5.7.43": {
+      "collections": [
+        {
+          "name": "ranges_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_dynamic_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_compact_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "tree_current",
+          "supported": true,
+          "rows": 600,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_rebuild_first",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_exchange",
+          "supported": true,
+          "rows": 11,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "sub_rows_current",
+          "supported": false,
+          "innochecksum": "passed"
+        }
+      ],
+      "driver": [
+        {
+          "table": "ranges_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "lists_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "hashes_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "keys_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "hidden_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "generated_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "autoinc_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "ranges_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "lists_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "hashes_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "keys_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "hidden_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "generated_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "autoinc_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "tree",
+          "expected": "passed"
+        },
+        {
+          "table": "sub_rows",
+          "expected": "rejected"
+        }
+      ],
+      "status": "complete"
+    },
+    "5.7.44": {
+      "collections": [
+        {
+          "name": "ranges_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_dynamic_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_compact_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "tree_current",
+          "supported": true,
+          "rows": 600,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_rebuild_first",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_exchange",
+          "supported": true,
+          "rows": 11,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "sub_rows_current",
+          "supported": false,
+          "innochecksum": "passed"
+        }
+      ],
+      "driver": [
+        {
+          "table": "ranges_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "lists_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "hashes_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "keys_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "hidden_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "generated_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "autoinc_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "ranges_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "lists_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "hashes_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "keys_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "hidden_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "generated_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "autoinc_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "tree",
+          "expected": "passed"
+        },
+        {
+          "table": "sub_rows",
+          "expected": "rejected"
+        }
+      ],
+      "status": "complete"
+    },
+    "5.7.9": {
+      "collections": [
+        {
+          "name": "ranges_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_dynamic_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_compact_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "tree_current",
+          "supported": true,
+          "rows": 600,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_rebuild_first",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_exchange",
+          "supported": true,
+          "rows": 11,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "sub_rows_current",
+          "supported": false,
+          "innochecksum": "passed"
+        }
+      ],
+      "driver": [
+        {
+          "table": "ranges_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "lists_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "hashes_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "keys_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "hidden_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "generated_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "autoinc_dynamic",
+          "expected": "passed"
+        },
+        {
+          "table": "ranges_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "lists_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "hashes_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "keys_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "hidden_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "generated_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "autoinc_compact",
+          "expected": "passed"
+        },
+        {
+          "table": "tree",
+          "expected": "passed"
+        },
+        {
+          "table": "sub_rows",
+          "expected": "rejected"
+        }
+      ],
+      "status": "complete"
+    },
+    "8.0.11": {
+      "collections": [
+        {
+          "name": "ranges_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_dynamic_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_compact_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "tree_current",
+          "supported": true,
+          "rows": 600,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_rebuild_first",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_exchange",
+          "supported": false,
+          "manifest": "rejected",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "sub_rows_current",
+          "supported": false,
+          "manifest": "rejected",
+          "innochecksum": "passed"
+        }
+      ],
+      "driver": [],
+      "status": "complete"
+    },
+    "8.0.12": {
+      "collections": [
+        {
+          "name": "ranges_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_dynamic_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_dynamic_add",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_dynamic_partial_rebuild",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_compact_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_compact_add",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_compact_partial_rebuild",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "tree_current",
+          "supported": true,
+          "rows": 600,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_rebuild_first",
+          "supported": false,
+          "manifest": "rejected",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_exchange",
+          "supported": false,
+          "manifest": "rejected",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "sub_rows_current",
+          "supported": false,
+          "manifest": "rejected",
+          "innochecksum": "passed"
+        }
+      ],
+      "driver": [],
+      "status": "complete"
+    },
+    "8.0.16": {
+      "collections": [
+        {
+          "name": "ranges_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_dynamic_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_dynamic_add",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_dynamic_partial_rebuild",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_compact_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_compact_add",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_compact_partial_rebuild",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "tree_current",
+          "supported": true,
+          "rows": 600,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_rebuild_first",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_exchange",
+          "supported": false,
+          "manifest": "rejected",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "sub_rows_current",
+          "supported": false,
+          "manifest": "rejected",
+          "innochecksum": "passed"
+        }
+      ],
+      "driver": [],
+      "status": "complete"
+    },
+    "8.0.19": {
+      "collections": [
+        {
+          "name": "ranges_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_dynamic_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_dynamic_add",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_dynamic_partial_rebuild",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_compact_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_compact_add",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_compact_partial_rebuild",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "tree_current",
+          "supported": true,
+          "rows": 600,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_rebuild_first",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_exchange",
+          "supported": false,
+          "manifest": "rejected",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "sub_rows_current",
+          "supported": false,
+          "manifest": "rejected",
+          "innochecksum": "passed"
+        }
+      ],
+      "driver": [],
+      "status": "complete"
+    },
+    "8.0.23": {
+      "collections": [
+        {
+          "name": "ranges_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_dynamic_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "invisible_dynamic_current",
+          "supported": true,
+          "rows": 2,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_dynamic_add",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_dynamic_partial_rebuild",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_compact_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "invisible_compact_current",
+          "supported": true,
+          "rows": 2,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_compact_add",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_compact_partial_rebuild",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "tree_current",
+          "supported": true,
+          "rows": 600,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_rebuild_first",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_exchange",
+          "supported": false,
+          "manifest": "rejected",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "sub_rows_current",
+          "supported": false,
+          "manifest": "rejected",
+          "innochecksum": "passed"
+        }
+      ],
+      "driver": [],
+      "status": "complete"
+    },
+    "8.0.28": {
+      "collections": [
+        {
+          "name": "ranges_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_dynamic_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "invisible_dynamic_current",
+          "supported": true,
+          "rows": 2,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_dynamic_add",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_dynamic_partial_rebuild",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_compact_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "invisible_compact_current",
+          "supported": true,
+          "rows": 2,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_compact_add",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_compact_partial_rebuild",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "tree_current",
+          "supported": true,
+          "rows": 600,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_rebuild_first",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_exchange",
+          "supported": true,
+          "rows": 11,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "sub_rows_current",
+          "supported": false,
+          "manifest": "rejected",
+          "innochecksum": "passed"
+        }
+      ],
+      "driver": [],
+      "status": "complete"
+    },
+    "8.0.30": {
+      "collections": [
+        {
+          "name": "ranges_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_dynamic_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "invisible_dynamic_current",
+          "supported": true,
+          "rows": 2,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_dynamic_add",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_dynamic_partial_rebuild",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_dynamic_drop",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_compact_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "invisible_compact_current",
+          "supported": true,
+          "rows": 2,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_compact_add",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_compact_partial_rebuild",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_compact_drop",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "tree_current",
+          "supported": true,
+          "rows": 600,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_rebuild_first",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_exchange",
+          "supported": true,
+          "rows": 11,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "sub_rows_current",
+          "supported": false,
+          "manifest": "rejected",
+          "innochecksum": "passed"
+        }
+      ],
+      "driver": [],
+      "status": "complete"
+    },
+    "8.0.45": {
+      "collections": [
+        {
+          "name": "ranges_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_dynamic_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_dynamic_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_dynamic_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "invisible_dynamic_current",
+          "supported": true,
+          "rows": 2,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_dynamic_add",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_dynamic_partial_rebuild",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_dynamic_drop",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "lists_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hashes_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "keys_compact_current",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "hidden_compact_current",
+          "supported": true,
+          "rows": 4,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "generated_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "autoinc_compact_current",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "invisible_compact_current",
+          "supported": true,
+          "rows": 2,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_compact_add",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_compact_partial_rebuild",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "instant_compact_drop",
+          "supported": true,
+          "rows": 3,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "tree_current",
+          "supported": true,
+          "rows": 600,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_rebuild_first",
+          "supported": true,
+          "rows": 23,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "ranges_dynamic_exchange",
+          "supported": true,
+          "rows": 11,
+          "manifest": "passed",
+          "CLI_SQL": "passed",
+          "innochecksum": "passed"
+        },
+        {
+          "name": "sub_rows_current",
+          "supported": false,
+          "manifest": "rejected",
+          "innochecksum": "passed"
+        }
+      ],
+      "driver": [],
+      "status": "complete"
+    }
+  }
+}

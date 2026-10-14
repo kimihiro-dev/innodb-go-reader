@@ -1,0 +1,1 @@
+{"command":"manifest","scope":"complete partition collection preflight; no row scan","complete":true,"preflight_reads":21,"report":{"partitions":3,"database":"innodb_reader_partition_9e39b58bcfab","table":"ranges"}}

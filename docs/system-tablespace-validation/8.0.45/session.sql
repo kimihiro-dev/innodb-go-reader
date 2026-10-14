@@ -1,0 +1,13 @@
+CREATE DATABASE lesson CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
+SET GLOBAL innodb_file_per_table=OFF;
+CREATE TABLE lesson.shared_rows(id INT PRIMARY KEY,n INT NULL,KEY n_idx(n)) ENGINE=InnoDB ROW_FORMAT=COMPACT;
+INSERT INTO lesson.shared_rows VALUES(1,10),(2,NULL);
+SET GLOBAL innodb_file_per_table=ON;
+CREATE TABLE lesson.private_rows(id INT PRIMARY KEY,n INT NULL,marker VARCHAR(20) COLLATE utf8mb4_bin,KEY n_idx(n)) ENGINE=InnoDB ROW_FORMAT=DYNAMIC;
+INSERT INTO lesson.private_rows VALUES(1,10,'one'),(2,NULL,'two');
+SELECT HEX(CAST(JSON_OBJECT('version',VERSION(),'page_size',@@innodb_page_size,'checksum',@@innodb_checksum_algorithm,'file_per_table',@@innodb_file_per_table,'undo_tablespaces',@@innodb_undo_tablespaces,'doublewrite',@@innodb_doublewrite,'data_file_path',@@innodb_data_file_path,'datadir',@@datadir,'change_buffering',@@innodb_change_buffering) AS CHAR CHARACTER SET utf8mb4)) ;
+SELECT HEX(CAST(JSON_OBJECT('name',NAME,'table_id',TABLE_ID,'space',SPACE,'flags',FLAG,'row_format',ROW_FORMAT,'columns',N_COLS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_TABLES WHERE NAME LIKE 'lesson/%' ORDER BY NAME;
+SELECT HEX(CAST(JSON_OBJECT('table',t.NAME,'name',i.NAME,'id',i.INDEX_ID,'root',i.PAGE_NO,'space',i.SPACE,'type',i.TYPE,'fields',i.N_FIELDS) AS CHAR CHARACTER SET utf8mb4)) FROM INFORMATION_SCHEMA.INNODB_INDEXES i JOIN INFORMATION_SCHEMA.INNODB_TABLES t ON i.TABLE_ID=t.TABLE_ID WHERE t.NAME LIKE 'lesson/%' ORDER BY t.NAME,i.INDEX_ID;
+SELECT HEX(CAST(JSON_ARRAY(id,n) AS CHAR CHARACTER SET utf8mb4)) FROM lesson.shared_rows ORDER BY id;
+SELECT HEX(CAST(JSON_ARRAY(id,n,marker) AS CHAR CHARACTER SET utf8mb4)) FROM lesson.private_rows ORDER BY id;
+SET GLOBAL innodb_fast_shutdown=0;

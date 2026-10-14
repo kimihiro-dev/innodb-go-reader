@@ -1,0 +1,87 @@
+--- 5.7.9/storage/innobase/include/fsp0types.h
++++ 5.7.44/storage/innobase/include/fsp0types.h
+@@ -1,13 +1,21 @@
+ /*****************************************************************************
+ 
+-Copyright (c) 1995, 2015, Oracle and/or its affiliates. All Rights Reserved.
+-
+-This program is free software; you can redistribute it and/or modify it under
+-the terms of the GNU General Public License as published by the Free Software
+-Foundation; version 2 of the License.
+-
+-This program is distributed in the hope that it will be useful, but WITHOUT
+-ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+-FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
++Copyright (c) 1995, 2023, Oracle and/or its affiliates.
++
++This program is free software; you can redistribute it and/or modify
++it under the terms of the GNU General Public License, version 2.0,
++as published by the Free Software Foundation.
++
++This program is also distributed with certain software (including
++but not limited to OpenSSL) that is licensed under separate terms,
++as designated in a particular file or component or in included license
++documentation.  The authors of MySQL hereby grant you an additional
++permission to link the program and your derivative works with the
++separately licensed software that they have included with MySQL.
++
++This program is distributed in the hope that it will be useful,
++but WITHOUT ANY WARRANTY; without even the implied warranty of
++MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++GNU General Public License, version 2.0, for more details.
+ 
+ You should have received a copy of the GNU General Public License along with
+@@ -190,5 +198,5 @@
+ fsp_flags_is_valid(
+ 	ulint	flags)
+-	__attribute__((warn_unused_result, const));
++	MY_ATTRIBUTE((warn_unused_result, const));
+ 
+ /** Check if tablespace is system temporary.
+@@ -249,4 +257,7 @@
+ it is for a single client and should be deleted upon startup if it exists. */
+ #define FSP_FLAGS_WIDTH_TEMPORARY	1
++/** Width of the encryption flag.  This flag indicates that the tablespace
++is a tablespace with encryption. */
++#define FSP_FLAGS_WIDTH_ENCRYPTION	1
+ /** Width of all the currently known tablespace flags */
+ #define FSP_FLAGS_WIDTH		(FSP_FLAGS_WIDTH_POST_ANTELOPE	\
+@@ -256,5 +267,6 @@
+ 				+ FSP_FLAGS_WIDTH_DATA_DIR	\
+ 				+ FSP_FLAGS_WIDTH_SHARED	\
+-				+ FSP_FLAGS_WIDTH_TEMPORARY)
++				+ FSP_FLAGS_WIDTH_TEMPORARY	\
++				+ FSP_FLAGS_WIDTH_ENCRYPTION)
+ 
+ /** A mask of all the known/used bits in tablespace flags */
+@@ -281,7 +293,10 @@
+ #define FSP_FLAGS_POS_TEMPORARY		(FSP_FLAGS_POS_SHARED		\
+ 					+ FSP_FLAGS_WIDTH_SHARED)
++/** Zero relative shift position of the start of the ENCRYPTION bit */
++#define FSP_FLAGS_POS_ENCRYPTION	(FSP_FLAGS_POS_TEMPORARY	\
++					+ FSP_FLAGS_WIDTH_TEMPORARY)
+ /** Zero relative shift position of the start of the UNUSED bits */
+-#define FSP_FLAGS_POS_UNUSED		(FSP_FLAGS_POS_TEMPORARY	\
+-					+ FSP_FLAGS_WIDTH_TEMPORARY)
++#define FSP_FLAGS_POS_UNUSED		(FSP_FLAGS_POS_ENCRYPTION	\
++					+ FSP_FLAGS_WIDTH_ENCRYPTION)
+ 
+ /** Bit mask of the POST_ANTELOPE field */
+@@ -313,4 +328,8 @@
+ 		((~(~0U << FSP_FLAGS_WIDTH_TEMPORARY))		\
+ 		<< FSP_FLAGS_POS_TEMPORARY)
++/** Bit mask of the ENCRYPTION field */
++#define FSP_FLAGS_MASK_ENCRYPTION				\
++		((~(~0U << FSP_FLAGS_WIDTH_ENCRYPTION))		\
++		<< FSP_FLAGS_POS_ENCRYPTION)
+ 
+ /** Return the value of the POST_ANTELOPE field */
+@@ -342,4 +361,8 @@
+ 		((flags & FSP_FLAGS_MASK_TEMPORARY)		\
+ 		>> FSP_FLAGS_POS_TEMPORARY)
++/** Return the contents of the ENCRYPTION field */
++#define FSP_FLAGS_GET_ENCRYPTION(flags)				\
++		((flags & FSP_FLAGS_MASK_ENCRYPTION)		\
++		>> FSP_FLAGS_POS_ENCRYPTION)
+ /** Return the contents of the UNUSED bits */
+ #define FSP_FLAGS_GET_UNUSED(flags)				\

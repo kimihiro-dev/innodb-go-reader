@@ -169,7 +169,23 @@ func TestAllFixtures(t *testing.T) {
 			if err != nil {
 				t.Fatal(err)
 			}
-			result, err := innodb.ReadMaterializedAuto(bytes.NewReader(b), int64(len(b)))
+			var result *innodb.MaterializedResult
+			if filepath.Base(filepath.Dir(path)) == "mysql5744" || filepath.Base(filepath.Dir(path)) == "mysql5744-secondary" {
+				raw, err := os.ReadFile(strings.TrimSuffix(strings.TrimSuffix(path, ".gz"), ".ibd") + ".json")
+				if err != nil {
+					t.Fatal(err)
+				}
+				var schema innodb.Schema
+				if err = json.Unmarshal(raw, &schema); err != nil {
+					t.Fatal(err)
+				}
+				result, err = innodb.ReadMaterialized(bytes.NewReader(b), int64(len(b)), schema)
+				if err != nil {
+					t.Fatal(err)
+				}
+			} else {
+				result, err = innodb.ReadMaterializedAuto(bytes.NewReader(b), int64(len(b)))
+			}
 			if err != nil {
 				rejected++
 				return
@@ -240,7 +256,7 @@ func TestAllFixtures(t *testing.T) {
 			total += len(result.Result.Records)
 		})
 	}
-	if success != 484 || rejected != 3 || total != 98811 {
+	if success != 528 || rejected != 3 || total != 101019 {
 		t.Fatalf("success=%d rejected=%d rows=%d", success, rejected, total)
 	}
 	t.Logf("%d fixtures, %d rows in each format, %d rejected", success, total, rejected)

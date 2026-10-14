@@ -1,0 +1,29 @@
+{
+  "row_format": "COMPACT",
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false
+    },
+    {
+      "name": "k",
+      "type": "VARBINARY",
+      "nullable": false,
+      "max_bytes": 767
+    },
+    {
+      "name": "payload",
+      "type": "VARCHAR",
+      "nullable": true,
+      "charset": "utf8mb4",
+      "max_chars": 1200
+    }
+  ],
+  "root_page": 3,
+  "index_id": 105,
+  "space_id": 56,
+  "primary_keys": [
+    "id"
+  ]
+}

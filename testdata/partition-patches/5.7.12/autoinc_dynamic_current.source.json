@@ -1,0 +1,510 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "5.7.12",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "database": "innodb_partition_05d0cb024e0c",
+  "table": "autoinc_dynamic",
+  "directory": [
+    {
+      "sub": null,
+      "name": "P0",
+      "method": "RANGE",
+      "ordinal": 1,
+      "expression": "n"
+    },
+    {
+      "sub": null,
+      "name": "p1",
+      "method": "RANGE",
+      "ordinal": 2,
+      "expression": "n"
+    },
+    {
+      "sub": null,
+      "name": "empty_p",
+      "method": "RANGE",
+      "ordinal": 3,
+      "expression": "n"
+    }
+  ],
+  "physical": [
+    {
+      "name": "innodb_partition_05d0cb024e0c/autoinc_dynamic#P#P0",
+      "path": "./innodb_partition_05d0cb024e0c/autoinc_dynamic#P#P0.ibd",
+      "space": 171,
+      "table_id": 189
+    },
+    {
+      "name": "innodb_partition_05d0cb024e0c/autoinc_dynamic#P#p1",
+      "path": "./innodb_partition_05d0cb024e0c/autoinc_dynamic#P#p1.ibd",
+      "space": 172,
+      "table_id": 190
+    },
+    {
+      "name": "innodb_partition_05d0cb024e0c/autoinc_dynamic#P#empty_p",
+      "path": "./innodb_partition_05d0cb024e0c/autoinc_dynamic#P#empty_p.ibd",
+      "space": 173,
+      "table_id": 191
+    }
+  ],
+  "columns": [
+    {
+      "name": "id",
+      "type": "int",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "n",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "v",
+      "type": "varchar",
+      "extra": ""
+    }
+  ],
+  "partitions": {
+    "P0": {
+      "environment": {
+        "charset": "utf8mb4",
+        "datadir": "/var/lib/mysql/",
+        "version": "5.7.12",
+        "checksum": "strict_crc32",
+        "sql_mode": "STRICT_ALL_TABLES,NO_ENGINE_SUBSTITUTION",
+        "collation": "utf8mb4_bin",
+        "page_size": 16384,
+        "time_zone": "+00:00",
+        "file_per_table": 1
+      },
+      "database": "innodb_partition_05d0cb024e0c",
+      "table": "autoinc_dynamic",
+      "columns": [
+        {
+          "fsp": null,
+          "name": "id",
+          "type": "int",
+          "bytes": null,
+          "chars": null,
+          "extra": "auto_increment",
+          "scale": 0,
+          "charset": null,
+          "ordinal": 1,
+          "nullable": "NO",
+          "collation": null,
+          "precision": 10,
+          "expression": "",
+          "column_type": "int(11)"
+        },
+        {
+          "fsp": null,
+          "name": "n",
+          "type": "int",
+          "bytes": null,
+          "chars": null,
+          "extra": "",
+          "scale": 0,
+          "charset": null,
+          "ordinal": 2,
+          "nullable": "NO",
+          "collation": null,
+          "precision": 10,
+          "expression": "",
+          "column_type": "int(11)"
+        },
+        {
+          "fsp": null,
+          "name": "v",
+          "type": "varchar",
+          "bytes": 160,
+          "chars": 40,
+          "extra": "",
+          "scale": null,
+          "charset": "utf8mb4",
+          "ordinal": 3,
+          "nullable": "YES",
+          "collation": "utf8mb4_bin",
+          "precision": null,
+          "expression": "",
+          "column_type": "varchar(40)"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "type": 3,
+          "fields": 2,
+          "index_id": 336,
+          "space_id": 171,
+          "table_id": 189,
+          "root_page": 3
+        },
+        {
+          "name": "s",
+          "type": 0,
+          "fields": 1,
+          "index_id": 337,
+          "space_id": 171,
+          "table_id": 189,
+          "root_page": 4
+        }
+      ],
+      "clustered_fields": [
+        {
+          "name": "id",
+          "position": 0
+        },
+        {
+          "name": "n",
+          "position": 1
+        }
+      ],
+      "statistics": [
+        {
+          "name": "PRIMARY",
+          "type": "BTREE",
+          "order": "A",
+          "column": "id",
+          "prefix": null,
+          "unique": true,
+          "position": 1
+        },
+        {
+          "name": "PRIMARY",
+          "type": "BTREE",
+          "order": "A",
+          "column": "n",
+          "prefix": null,
+          "unique": true,
+          "position": 2
+        },
+        {
+          "name": "s",
+          "type": "BTREE",
+          "order": "A",
+          "column": "n",
+          "prefix": null,
+          "unique": false,
+          "position": 1
+        }
+      ],
+      "tablespace": {
+        "flags": 33,
+        "page_size": 16384,
+        "space_type": "Single",
+        "zip_page_size": 0
+      },
+      "datafiles": [
+        {
+          "path": "./innodb_partition_05d0cb024e0c/autoinc_dynamic#P#P0.ibd"
+        }
+      ],
+      "dictionary": {
+        "columns": 6
+      },
+      "secondary_fields": {
+        "s": [
+          {
+            "name": "n",
+            "position": 0
+          }
+        ]
+      }
+    },
+    "p1": {
+      "environment": {
+        "charset": "utf8mb4",
+        "datadir": "/var/lib/mysql/",
+        "version": "5.7.12",
+        "checksum": "strict_crc32",
+        "sql_mode": "STRICT_ALL_TABLES,NO_ENGINE_SUBSTITUTION",
+        "collation": "utf8mb4_bin",
+        "page_size": 16384,
+        "time_zone": "+00:00",
+        "file_per_table": 1
+      },
+      "database": "innodb_partition_05d0cb024e0c",
+      "table": "autoinc_dynamic",
+      "columns": [
+        {
+          "fsp": null,
+          "name": "id",
+          "type": "int",
+          "bytes": null,
+          "chars": null,
+          "extra": "auto_increment",
+          "scale": 0,
+          "charset": null,
+          "ordinal": 1,
+          "nullable": "NO",
+          "collation": null,
+          "precision": 10,
+          "expression": "",
+          "column_type": "int(11)"
+        },
+        {
+          "fsp": null,
+          "name": "n",
+          "type": "int",
+          "bytes": null,
+          "chars": null,
+          "extra": "",
+          "scale": 0,
+          "charset": null,
+          "ordinal": 2,
+          "nullable": "NO",
+          "collation": null,
+          "precision": 10,
+          "expression": "",
+          "column_type": "int(11)"
+        },
+        {
+          "fsp": null,
+          "name": "v",
+          "type": "varchar",
+          "bytes": 160,
+          "chars": 40,
+          "extra": "",
+          "scale": null,
+          "charset": "utf8mb4",
+          "ordinal": 3,
+          "nullable": "YES",
+          "collation": "utf8mb4_bin",
+          "precision": null,
+          "expression": "",
+          "column_type": "varchar(40)"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "type": 3,
+          "fields": 2,
+          "index_id": 338,
+          "space_id": 172,
+          "table_id": 190,
+          "root_page": 3
+        },
+        {
+          "name": "s",
+          "type": 0,
+          "fields": 1,
+          "index_id": 339,
+          "space_id": 172,
+          "table_id": 190,
+          "root_page": 4
+        }
+      ],
+      "clustered_fields": [
+        {
+          "name": "id",
+          "position": 0
+        },
+        {
+          "name": "n",
+          "position": 1
+        }
+      ],
+      "statistics": [
+        {
+          "name": "PRIMARY",
+          "type": "BTREE",
+          "order": "A",
+          "column": "id",
+          "prefix": null,
+          "unique": true,
+          "position": 1
+        },
+        {
+          "name": "PRIMARY",
+          "type": "BTREE",
+          "order": "A",
+          "column": "n",
+          "prefix": null,
+          "unique": true,
+          "position": 2
+        },
+        {
+          "name": "s",
+          "type": "BTREE",
+          "order": "A",
+          "column": "n",
+          "prefix": null,
+          "unique": false,
+          "position": 1
+        }
+      ],
+      "tablespace": {
+        "flags": 33,
+        "page_size": 16384,
+        "space_type": "Single",
+        "zip_page_size": 0
+      },
+      "datafiles": [
+        {
+          "path": "./innodb_partition_05d0cb024e0c/autoinc_dynamic#P#p1.ibd"
+        }
+      ],
+      "dictionary": {
+        "columns": 6
+      },
+      "secondary_fields": {
+        "s": [
+          {
+            "name": "n",
+            "position": 0
+          }
+        ]
+      }
+    },
+    "empty_p": {
+      "environment": {
+        "charset": "utf8mb4",
+        "datadir": "/var/lib/mysql/",
+        "version": "5.7.12",
+        "checksum": "strict_crc32",
+        "sql_mode": "STRICT_ALL_TABLES,NO_ENGINE_SUBSTITUTION",
+        "collation": "utf8mb4_bin",
+        "page_size": 16384,
+        "time_zone": "+00:00",
+        "file_per_table": 1
+      },
+      "database": "innodb_partition_05d0cb024e0c",
+      "table": "autoinc_dynamic",
+      "columns": [
+        {
+          "fsp": null,
+          "name": "id",
+          "type": "int",
+          "bytes": null,
+          "chars": null,
+          "extra": "auto_increment",
+          "scale": 0,
+          "charset": null,
+          "ordinal": 1,
+          "nullable": "NO",
+          "collation": null,
+          "precision": 10,
+          "expression": "",
+          "column_type": "int(11)"
+        },
+        {
+          "fsp": null,
+          "name": "n",
+          "type": "int",
+          "bytes": null,
+          "chars": null,
+          "extra": "",
+          "scale": 0,
+          "charset": null,
+          "ordinal": 2,
+          "nullable": "NO",
+          "collation": null,
+          "precision": 10,
+          "expression": "",
+          "column_type": "int(11)"
+        },
+        {
+          "fsp": null,
+          "name": "v",
+          "type": "varchar",
+          "bytes": 160,
+          "chars": 40,
+          "extra": "",
+          "scale": null,
+          "charset": "utf8mb4",
+          "ordinal": 3,
+          "nullable": "YES",
+          "collation": "utf8mb4_bin",
+          "precision": null,
+          "expression": "",
+          "column_type": "varchar(40)"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "type": 3,
+          "fields": 2,
+          "index_id": 340,
+          "space_id": 173,
+          "table_id": 191,
+          "root_page": 3
+        },
+        {
+          "name": "s",
+          "type": 0,
+          "fields": 1,
+          "index_id": 341,
+          "space_id": 173,
+          "table_id": 191,
+          "root_page": 4
+        }
+      ],
+      "clustered_fields": [
+        {
+          "name": "id",
+          "position": 0
+        },
+        {
+          "name": "n",
+          "position": 1
+        }
+      ],
+      "statistics": [
+        {
+          "name": "PRIMARY",
+          "type": "BTREE",
+          "order": "A",
+          "column": "id",
+          "prefix": null,
+          "unique": true,
+          "position": 1
+        },
+        {
+          "name": "PRIMARY",
+          "type": "BTREE",
+          "order": "A",
+          "column": "n",
+          "prefix": null,
+          "unique": true,
+          "position": 2
+        },
+        {
+          "name": "s",
+          "type": "BTREE",
+          "order": "A",
+          "column": "n",
+          "prefix": null,
+          "unique": false,
+          "position": 1
+        }
+      ],
+      "tablespace": {
+        "flags": 33,
+        "page_size": 16384,
+        "space_type": "Single",
+        "zip_page_size": 0
+      },
+      "datafiles": [
+        {
+          "path": "./innodb_partition_05d0cb024e0c/autoinc_dynamic#P#empty_p.ibd"
+        }
+      ],
+      "dictionary": {
+        "columns": 6
+      },
+      "secondary_fields": {
+        "s": [
+          {
+            "name": "n",
+            "position": 0
+          }
+        ]
+      }
+    }
+  }
+}

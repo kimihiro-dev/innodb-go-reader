@@ -1,0 +1,71 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.23",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "database": "innodb_partition_2eef9c4b5e52",
+  "table": "autoinc_dynamic",
+  "directory": [
+    {
+      "sub": null,
+      "name": "P0",
+      "method": "RANGE",
+      "ordinal": 1,
+      "expression": "`n`"
+    },
+    {
+      "sub": null,
+      "name": "p1",
+      "method": "RANGE",
+      "ordinal": 2,
+      "expression": "`n`"
+    },
+    {
+      "sub": null,
+      "name": "empty_p",
+      "method": "RANGE",
+      "ordinal": 3,
+      "expression": "`n`"
+    }
+  ],
+  "physical": [
+    {
+      "name": "innodb_partition_2eef9c4b5e52/autoinc_dynamic#p#p0",
+      "path": "./innodb_partition_2eef9c4b5e52/autoinc_dynamic#p#p0.ibd",
+      "space": 144,
+      "table_id": 1207
+    },
+    {
+      "name": "innodb_partition_2eef9c4b5e52/autoinc_dynamic#p#p1",
+      "path": "./innodb_partition_2eef9c4b5e52/autoinc_dynamic#p#p1.ibd",
+      "space": 145,
+      "table_id": 1208
+    },
+    {
+      "name": "innodb_partition_2eef9c4b5e52/autoinc_dynamic#p#empty_p",
+      "path": "./innodb_partition_2eef9c4b5e52/autoinc_dynamic#p#empty_p.ibd",
+      "space": 146,
+      "table_id": 1209
+    }
+  ],
+  "columns": [
+    {
+      "name": "id",
+      "type": "int",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "n",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "v",
+      "type": "varchar",
+      "extra": ""
+    }
+  ],
+  "partitions": {}
+}

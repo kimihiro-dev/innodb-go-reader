@@ -1,0 +1,833 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "5.7.43",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "database": "innodb_partition_6dbe7b4fbdb4",
+  "table": "ranges_dynamic",
+  "directory": [
+    {
+      "sub": null,
+      "name": "P0",
+      "method": "RANGE",
+      "ordinal": 1,
+      "expression": "n"
+    },
+    {
+      "sub": null,
+      "name": "p1",
+      "method": "RANGE",
+      "ordinal": 2,
+      "expression": "n"
+    },
+    {
+      "sub": null,
+      "name": "empty_p",
+      "method": "RANGE",
+      "ordinal": 3,
+      "expression": "n"
+    }
+  ],
+  "physical": [
+    {
+      "name": "innodb_partition_6dbe7b4fbdb4/ranges_dynamic#P#p1",
+      "path": "./innodb_partition_6dbe7b4fbdb4/ranges_dynamic#P#p1.ibd",
+      "space": 143,
+      "table_id": 162
+    },
+    {
+      "name": "innodb_partition_6dbe7b4fbdb4/ranges_dynamic#P#empty_p",
+      "path": "./innodb_partition_6dbe7b4fbdb4/ranges_dynamic#P#empty_p.ibd",
+      "space": 144,
+      "table_id": 163
+    },
+    {
+      "name": "innodb_partition_6dbe7b4fbdb4/ranges_dynamic#P#P0",
+      "path": "./innodb_partition_6dbe7b4fbdb4/ranges_dynamic#P#P0.ibd",
+      "space": 191,
+      "table_id": 210
+    }
+  ],
+  "columns": [
+    {
+      "name": "id",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "v",
+      "type": "varchar",
+      "extra": ""
+    },
+    {
+      "name": "payload",
+      "type": "longtext",
+      "extra": ""
+    },
+    {
+      "name": "b",
+      "type": "longblob",
+      "extra": ""
+    },
+    {
+      "name": "d",
+      "type": "decimal",
+      "extra": ""
+    },
+    {
+      "name": "j",
+      "type": "json",
+      "extra": ""
+    }
+  ],
+  "partitions": {
+    "P0": {
+      "environment": {
+        "charset": "utf8mb4",
+        "datadir": "/var/lib/mysql/",
+        "version": "5.7.43",
+        "checksum": "strict_crc32",
+        "sql_mode": "STRICT_ALL_TABLES,NO_ENGINE_SUBSTITUTION",
+        "collation": "utf8mb4_bin",
+        "page_size": 16384,
+        "time_zone": "+00:00",
+        "file_per_table": 1
+      },
+      "database": "innodb_partition_6dbe7b4fbdb4",
+      "table": "ranges_dynamic",
+      "columns": [
+        {
+          "fsp": null,
+          "name": "id",
+          "type": "int",
+          "bytes": null,
+          "chars": null,
+          "extra": "",
+          "scale": 0,
+          "charset": null,
+          "ordinal": 1,
+          "nullable": "NO",
+          "collation": null,
+          "precision": 10,
+          "expression": "",
+          "column_type": "int(11)"
+        },
+        {
+          "fsp": null,
+          "name": "n",
+          "type": "int",
+          "bytes": null,
+          "chars": null,
+          "extra": "",
+          "scale": 0,
+          "charset": null,
+          "ordinal": 2,
+          "nullable": "NO",
+          "collation": null,
+          "precision": 10,
+          "expression": "",
+          "column_type": "int(11)"
+        },
+        {
+          "fsp": null,
+          "name": "v",
+          "type": "varchar",
+          "bytes": 160,
+          "chars": 40,
+          "extra": "",
+          "scale": null,
+          "charset": "utf8mb4",
+          "ordinal": 3,
+          "nullable": "YES",
+          "collation": "utf8mb4_bin",
+          "precision": null,
+          "expression": "",
+          "column_type": "varchar(40)"
+        },
+        {
+          "fsp": null,
+          "name": "payload",
+          "type": "longtext",
+          "bytes": 4294967295,
+          "chars": 4294967295,
+          "extra": "",
+          "scale": null,
+          "charset": "utf8mb4",
+          "ordinal": 4,
+          "nullable": "YES",
+          "collation": "utf8mb4_bin",
+          "precision": null,
+          "expression": "",
+          "column_type": "longtext"
+        },
+        {
+          "fsp": null,
+          "name": "b",
+          "type": "longblob",
+          "bytes": 4294967295,
+          "chars": 4294967295,
+          "extra": "",
+          "scale": null,
+          "charset": null,
+          "ordinal": 5,
+          "nullable": "YES",
+          "collation": null,
+          "precision": null,
+          "expression": "",
+          "column_type": "longblob"
+        },
+        {
+          "fsp": null,
+          "name": "d",
+          "type": "decimal",
+          "bytes": null,
+          "chars": null,
+          "extra": "",
+          "scale": 8,
+          "charset": null,
+          "ordinal": 6,
+          "nullable": "YES",
+          "collation": null,
+          "precision": 24,
+          "expression": "",
+          "column_type": "decimal(24,8)"
+        },
+        {
+          "fsp": null,
+          "name": "j",
+          "type": "json",
+          "bytes": null,
+          "chars": null,
+          "extra": "",
+          "scale": null,
+          "charset": null,
+          "ordinal": 7,
+          "nullable": "YES",
+          "collation": null,
+          "precision": null,
+          "expression": "",
+          "column_type": "json"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "type": 3,
+          "fields": 2,
+          "index_id": 389,
+          "space_id": 191,
+          "table_id": 210,
+          "root_page": 3
+        },
+        {
+          "name": "s",
+          "type": 0,
+          "fields": 1,
+          "index_id": 390,
+          "space_id": 191,
+          "table_id": 210,
+          "root_page": 4
+        },
+        {
+          "name": "px",
+          "type": 0,
+          "fields": 2,
+          "index_id": 391,
+          "space_id": 191,
+          "table_id": 210,
+          "root_page": 5
+        }
+      ],
+      "clustered_fields": [
+        {
+          "name": "id",
+          "position": 0
+        },
+        {
+          "name": "n",
+          "position": 1
+        }
+      ],
+      "statistics": [
+        {
+          "name": "PRIMARY",
+          "type": "BTREE",
+          "order": "A",
+          "column": "id",
+          "prefix": null,
+          "unique": true,
+          "position": 1
+        },
+        {
+          "name": "PRIMARY",
+          "type": "BTREE",
+          "order": "A",
+          "column": "n",
+          "prefix": null,
+          "unique": true,
+          "position": 2
+        },
+        {
+          "name": "px",
+          "type": "BTREE",
+          "order": "A",
+          "column": "v",
+          "prefix": 3,
+          "unique": false,
+          "position": 1
+        },
+        {
+          "name": "px",
+          "type": "BTREE",
+          "order": "A",
+          "column": "id",
+          "prefix": null,
+          "unique": false,
+          "position": 2
+        },
+        {
+          "name": "s",
+          "type": "BTREE",
+          "order": "A",
+          "column": "n",
+          "prefix": null,
+          "unique": false,
+          "position": 1
+        }
+      ],
+      "tablespace": {
+        "flags": 33,
+        "page_size": 16384,
+        "space_type": "Single",
+        "zip_page_size": 0
+      },
+      "datafiles": [
+        {
+          "path": "./innodb_partition_6dbe7b4fbdb4/ranges_dynamic#P#P0.ibd"
+        }
+      ],
+      "dictionary": {
+        "columns": 10
+      },
+      "secondary_fields": {
+        "s": [
+          {
+            "name": "n",
+            "position": 0
+          }
+        ],
+        "px": [
+          {
+            "name": "v",
+            "position": 0
+          },
+          {
+            "name": "id",
+            "position": 1
+          }
+        ]
+      }
+    },
+    "p1": {
+      "environment": {
+        "charset": "utf8mb4",
+        "datadir": "/var/lib/mysql/",
+        "version": "5.7.43",
+        "checksum": "strict_crc32",
+        "sql_mode": "STRICT_ALL_TABLES,NO_ENGINE_SUBSTITUTION",
+        "collation": "utf8mb4_bin",
+        "page_size": 16384,
+        "time_zone": "+00:00",
+        "file_per_table": 1
+      },
+      "database": "innodb_partition_6dbe7b4fbdb4",
+      "table": "ranges_dynamic",
+      "columns": [
+        {
+          "fsp": null,
+          "name": "id",
+          "type": "int",
+          "bytes": null,
+          "chars": null,
+          "extra": "",
+          "scale": 0,
+          "charset": null,
+          "ordinal": 1,
+          "nullable": "NO",
+          "collation": null,
+          "precision": 10,
+          "expression": "",
+          "column_type": "int(11)"
+        },
+        {
+          "fsp": null,
+          "name": "n",
+          "type": "int",
+          "bytes": null,
+          "chars": null,
+          "extra": "",
+          "scale": 0,
+          "charset": null,
+          "ordinal": 2,
+          "nullable": "NO",
+          "collation": null,
+          "precision": 10,
+          "expression": "",
+          "column_type": "int(11)"
+        },
+        {
+          "fsp": null,
+          "name": "v",
+          "type": "varchar",
+          "bytes": 160,
+          "chars": 40,
+          "extra": "",
+          "scale": null,
+          "charset": "utf8mb4",
+          "ordinal": 3,
+          "nullable": "YES",
+          "collation": "utf8mb4_bin",
+          "precision": null,
+          "expression": "",
+          "column_type": "varchar(40)"
+        },
+        {
+          "fsp": null,
+          "name": "payload",
+          "type": "longtext",
+          "bytes": 4294967295,
+          "chars": 4294967295,
+          "extra": "",
+          "scale": null,
+          "charset": "utf8mb4",
+          "ordinal": 4,
+          "nullable": "YES",
+          "collation": "utf8mb4_bin",
+          "precision": null,
+          "expression": "",
+          "column_type": "longtext"
+        },
+        {
+          "fsp": null,
+          "name": "b",
+          "type": "longblob",
+          "bytes": 4294967295,
+          "chars": 4294967295,
+          "extra": "",
+          "scale": null,
+          "charset": null,
+          "ordinal": 5,
+          "nullable": "YES",
+          "collation": null,
+          "precision": null,
+          "expression": "",
+          "column_type": "longblob"
+        },
+        {
+          "fsp": null,
+          "name": "d",
+          "type": "decimal",
+          "bytes": null,
+          "chars": null,
+          "extra": "",
+          "scale": 8,
+          "charset": null,
+          "ordinal": 6,
+          "nullable": "YES",
+          "collation": null,
+          "precision": 24,
+          "expression": "",
+          "column_type": "decimal(24,8)"
+        },
+        {
+          "fsp": null,
+          "name": "j",
+          "type": "json",
+          "bytes": null,
+          "chars": null,
+          "extra": "",
+          "scale": null,
+          "charset": null,
+          "ordinal": 7,
+          "nullable": "YES",
+          "collation": null,
+          "precision": null,
+          "expression": "",
+          "column_type": "json"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "type": 3,
+          "fields": 2,
+          "index_id": 272,
+          "space_id": 143,
+          "table_id": 162,
+          "root_page": 3
+        },
+        {
+          "name": "s",
+          "type": 0,
+          "fields": 1,
+          "index_id": 273,
+          "space_id": 143,
+          "table_id": 162,
+          "root_page": 4
+        },
+        {
+          "name": "px",
+          "type": 0,
+          "fields": 2,
+          "index_id": 274,
+          "space_id": 143,
+          "table_id": 162,
+          "root_page": 5
+        }
+      ],
+      "clustered_fields": [
+        {
+          "name": "id",
+          "position": 0
+        },
+        {
+          "name": "n",
+          "position": 1
+        }
+      ],
+      "statistics": [
+        {
+          "name": "PRIMARY",
+          "type": "BTREE",
+          "order": "A",
+          "column": "id",
+          "prefix": null,
+          "unique": true,
+          "position": 1
+        },
+        {
+          "name": "PRIMARY",
+          "type": "BTREE",
+          "order": "A",
+          "column": "n",
+          "prefix": null,
+          "unique": true,
+          "position": 2
+        },
+        {
+          "name": "px",
+          "type": "BTREE",
+          "order": "A",
+          "column": "v",
+          "prefix": 3,
+          "unique": false,
+          "position": 1
+        },
+        {
+          "name": "px",
+          "type": "BTREE",
+          "order": "A",
+          "column": "id",
+          "prefix": null,
+          "unique": false,
+          "position": 2
+        },
+        {
+          "name": "s",
+          "type": "BTREE",
+          "order": "A",
+          "column": "n",
+          "prefix": null,
+          "unique": false,
+          "position": 1
+        }
+      ],
+      "tablespace": {
+        "flags": 33,
+        "page_size": 16384,
+        "space_type": "Single",
+        "zip_page_size": 0
+      },
+      "datafiles": [
+        {
+          "path": "./innodb_partition_6dbe7b4fbdb4/ranges_dynamic#P#p1.ibd"
+        }
+      ],
+      "dictionary": {
+        "columns": 10
+      },
+      "secondary_fields": {
+        "s": [
+          {
+            "name": "n",
+            "position": 0
+          }
+        ],
+        "px": [
+          {
+            "name": "v",
+            "position": 0
+          },
+          {
+            "name": "id",
+            "position": 1
+          }
+        ]
+      }
+    },
+    "empty_p": {
+      "environment": {
+        "charset": "utf8mb4",
+        "datadir": "/var/lib/mysql/",
+        "version": "5.7.43",
+        "checksum": "strict_crc32",
+        "sql_mode": "STRICT_ALL_TABLES,NO_ENGINE_SUBSTITUTION",
+        "collation": "utf8mb4_bin",
+        "page_size": 16384,
+        "time_zone": "+00:00",
+        "file_per_table": 1
+      },
+      "database": "innodb_partition_6dbe7b4fbdb4",
+      "table": "ranges_dynamic",
+      "columns": [
+        {
+          "fsp": null,
+          "name": "id",
+          "type": "int",
+          "bytes": null,
+          "chars": null,
+          "extra": "",
+          "scale": 0,
+          "charset": null,
+          "ordinal": 1,
+          "nullable": "NO",
+          "collation": null,
+          "precision": 10,
+          "expression": "",
+          "column_type": "int(11)"
+        },
+        {
+          "fsp": null,
+          "name": "n",
+          "type": "int",
+          "bytes": null,
+          "chars": null,
+          "extra": "",
+          "scale": 0,
+          "charset": null,
+          "ordinal": 2,
+          "nullable": "NO",
+          "collation": null,
+          "precision": 10,
+          "expression": "",
+          "column_type": "int(11)"
+        },
+        {
+          "fsp": null,
+          "name": "v",
+          "type": "varchar",
+          "bytes": 160,
+          "chars": 40,
+          "extra": "",
+          "scale": null,
+          "charset": "utf8mb4",
+          "ordinal": 3,
+          "nullable": "YES",
+          "collation": "utf8mb4_bin",
+          "precision": null,
+          "expression": "",
+          "column_type": "varchar(40)"
+        },
+        {
+          "fsp": null,
+          "name": "payload",
+          "type": "longtext",
+          "bytes": 4294967295,
+          "chars": 4294967295,
+          "extra": "",
+          "scale": null,
+          "charset": "utf8mb4",
+          "ordinal": 4,
+          "nullable": "YES",
+          "collation": "utf8mb4_bin",
+          "precision": null,
+          "expression": "",
+          "column_type": "longtext"
+        },
+        {
+          "fsp": null,
+          "name": "b",
+          "type": "longblob",
+          "bytes": 4294967295,
+          "chars": 4294967295,
+          "extra": "",
+          "scale": null,
+          "charset": null,
+          "ordinal": 5,
+          "nullable": "YES",
+          "collation": null,
+          "precision": null,
+          "expression": "",
+          "column_type": "longblob"
+        },
+        {
+          "fsp": null,
+          "name": "d",
+          "type": "decimal",
+          "bytes": null,
+          "chars": null,
+          "extra": "",
+          "scale": 8,
+          "charset": null,
+          "ordinal": 6,
+          "nullable": "YES",
+          "collation": null,
+          "precision": 24,
+          "expression": "",
+          "column_type": "decimal(24,8)"
+        },
+        {
+          "fsp": null,
+          "name": "j",
+          "type": "json",
+          "bytes": null,
+          "chars": null,
+          "extra": "",
+          "scale": null,
+          "charset": null,
+          "ordinal": 7,
+          "nullable": "YES",
+          "collation": null,
+          "precision": null,
+          "expression": "",
+          "column_type": "json"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "type": 3,
+          "fields": 2,
+          "index_id": 275,
+          "space_id": 144,
+          "table_id": 163,
+          "root_page": 3
+        },
+        {
+          "name": "s",
+          "type": 0,
+          "fields": 1,
+          "index_id": 276,
+          "space_id": 144,
+          "table_id": 163,
+          "root_page": 4
+        },
+        {
+          "name": "px",
+          "type": 0,
+          "fields": 2,
+          "index_id": 277,
+          "space_id": 144,
+          "table_id": 163,
+          "root_page": 5
+        }
+      ],
+      "clustered_fields": [
+        {
+          "name": "id",
+          "position": 0
+        },
+        {
+          "name": "n",
+          "position": 1
+        }
+      ],
+      "statistics": [
+        {
+          "name": "PRIMARY",
+          "type": "BTREE",
+          "order": "A",
+          "column": "id",
+          "prefix": null,
+          "unique": true,
+          "position": 1
+        },
+        {
+          "name": "PRIMARY",
+          "type": "BTREE",
+          "order": "A",
+          "column": "n",
+          "prefix": null,
+          "unique": true,
+          "position": 2
+        },
+        {
+          "name": "px",
+          "type": "BTREE",
+          "order": "A",
+          "column": "v",
+          "prefix": 3,
+          "unique": false,
+          "position": 1
+        },
+        {
+          "name": "px",
+          "type": "BTREE",
+          "order": "A",
+          "column": "id",
+          "prefix": null,
+          "unique": false,
+          "position": 2
+        },
+        {
+          "name": "s",
+          "type": "BTREE",
+          "order": "A",
+          "column": "n",
+          "prefix": null,
+          "unique": false,
+          "position": 1
+        }
+      ],
+      "tablespace": {
+        "flags": 33,
+        "page_size": 16384,
+        "space_type": "Single",
+        "zip_page_size": 0
+      },
+      "datafiles": [
+        {
+          "path": "./innodb_partition_6dbe7b4fbdb4/ranges_dynamic#P#empty_p.ibd"
+        }
+      ],
+      "dictionary": {
+        "columns": 10
+      },
+      "secondary_fields": {
+        "s": [
+          {
+            "name": "n",
+            "position": 0
+          }
+        ],
+        "px": [
+          {
+            "name": "v",
+            "position": 0
+          },
+          {
+            "name": "id",
+            "position": 1
+          }
+        ]
+      }
+    }
+  }
+}

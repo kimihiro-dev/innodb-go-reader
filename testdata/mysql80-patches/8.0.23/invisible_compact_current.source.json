@@ -1,0 +1,35 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.23",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "columns": [
+    {
+      "name": "id",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n",
+      "type": "int",
+      "extra": "INVISIBLE"
+    },
+    {
+      "name": "s",
+      "type": "bigint",
+      "extra": "STORED GENERATED INVISIBLE"
+    }
+  ],
+  "indexes": [
+    {
+      "name": "PRIMARY",
+      "index_id": 233,
+      "space_id": 69,
+      "root_page": 4
+    }
+  ],
+  "table": "invisible_compact",
+  "database": "innodb_reader_80_cb137529bbc2"
+}

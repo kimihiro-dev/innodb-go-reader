@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "mysql_version": "5.7.44",
+  "database": "innodb_partition_9a051084f566",
+  "table": "generated_compact",
+  "partition_type": 1,
+  "expression": "n",
+  "partitions": [
+    {
+      "name": "p0",
+      "number": 0,
+      "table_id": 128,
+      "schema": {
+        "row_format": "COMPACT",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INT",
+            "nullable": false
+          },
+          {
+            "name": "n",
+            "type": "INT",
+            "nullable": false
+          },
+          {
+            "name": "s",
+            "type": "BIGINT",
+            "nullable": true,
+            "generation_expression": "(`n` * 3)"
+          }
+        ],
+        "root_page": 3,
+        "index_id": 249,
+        "space_id": 108,
+        "virtual_columns": [
+          {
+            "name": "v",
+            "ordinal": 4,
+            "expression": "(`n` + 1)"
+          }
+        ],
+        "primary_keys": [
+          "id",
+          "n"
+        ]
+      },
+      "indexes": []
+    },
+    {
+      "name": "p1",
+      "number": 1,
+      "table_id": 129,
+      "schema": {
+        "row_format": "COMPACT",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INT",
+            "nullable": false
+          },
+          {
+            "name": "n",
+            "type": "INT",
+            "nullable": false
+          },
+          {
+            "name": "s",
+            "type": "BIGINT",
+            "nullable": true,
+            "generation_expression": "(`n` * 3)"
+          }
+        ],
+        "root_page": 3,
+        "index_id": 250,
+        "space_id": 109,
+        "virtual_columns": [
+          {
+            "name": "v",
+            "ordinal": 4,
+            "expression": "(`n` + 1)"
+          }
+        ],
+        "primary_keys": [
+          "id",
+          "n"
+        ]
+      },
+      "indexes": []
+    },
+    {
+      "name": "p2",
+      "number": 2,
+      "table_id": 130,
+      "schema": {
+        "row_format": "COMPACT",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INT",
+            "nullable": false
+          },
+          {
+            "name": "n",
+            "type": "INT",
+            "nullable": false
+          },
+          {
+            "name": "s",
+            "type": "BIGINT",
+            "nullable": true,
+            "generation_expression": "(`n` * 3)"
+          }
+        ],
+        "root_page": 3,
+        "index_id": 251,
+        "space_id": 110,
+        "virtual_columns": [
+          {
+            "name": "v",
+            "ordinal": 4,
+            "expression": "(`n` + 1)"
+          }
+        ],
+        "primary_keys": [
+          "id",
+          "n"
+        ]
+      },
+      "indexes": []
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+--- 5.7.28/storage/innobase/include/fsp0types.h
++++ 5.7.44/storage/innobase/include/fsp0types.h
+@@ -1,5 +1,5 @@
+ /*****************************************************************************
+ 
+-Copyright (c) 1995, 2016, Oracle and/or its affiliates. All Rights Reserved.
++Copyright (c) 1995, 2023, Oracle and/or its affiliates.
+ 
+ This program is free software; you can redistribute it and/or modify

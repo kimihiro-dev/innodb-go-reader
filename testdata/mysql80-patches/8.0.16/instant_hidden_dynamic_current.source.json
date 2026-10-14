@@ -1,0 +1,30 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.16",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "columns": [
+    {
+      "name": "n",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "a",
+      "type": "int",
+      "extra": ""
+    }
+  ],
+  "indexes": [
+    {
+      "name": "GEN_CLUST_INDEX",
+      "index_id": 202,
+      "space_id": 47,
+      "root_page": 4
+    }
+  ],
+  "table": "instant_hidden_dynamic",
+  "database": "innodb_reader_80_aaf17e924b8b"
+}

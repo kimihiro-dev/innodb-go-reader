@@ -1,0 +1,40 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.28",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "columns": [
+    {
+      "name": "id",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "v",
+      "type": "int",
+      "extra": "VIRTUAL GENERATED"
+    },
+    {
+      "name": "n",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "a",
+      "type": "int",
+      "extra": ""
+    }
+  ],
+  "indexes": [
+    {
+      "name": "PRIMARY",
+      "index_id": 233,
+      "space_id": 66,
+      "root_page": 4
+    }
+  ],
+  "table": "instant_virtual_compact",
+  "database": "innodb_reader_80_fa1a7d5187b1"
+}

@@ -4,7 +4,7 @@
 
 2026-09-30本地首版基线包含Go源码、七命令CLI、rowio/visual包、固定夹具、验证脚本和01–84章手册。范围见[第83章](83-release-support-matrix.md)。这是仓库内的能力与证据冻结，没有自行创建远程Release、语义版本标签或跨平台安装包；Go API兼容性不因这次文档冻结被提升为永久保证。
 
-Go模块要求1.25.0或更高版本，无第三方Go依赖。复验脚本另需Python3；HTML专项脚本需要Node，产品自身不需要Python、Node或数据库服务。CLI接收解压后的稳定物理文件，不直接读取`.ibd.gz`。在仓库根目录：
+Go模块要求1.25.0或更高版本；首版冻结时无第三方Go依赖，当前Schema采集的驱动例外见[驱动连接说明](91-cli-input-preparation.md)。复验脚本另需Python3；HTML专项脚本需要Node，产品自身不需要Python、Node或数据库服务。CLI接收解压后的稳定物理文件，不直接读取`.ibd.gz`。在仓库根目录：
 
 ```sh
 go build -o /tmp/innodb-reader ./cmd/innodb-reader

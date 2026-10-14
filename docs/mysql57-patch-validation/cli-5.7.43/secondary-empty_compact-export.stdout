@@ -1,0 +1,2 @@
+{"kind":"schema","schema":{"version":1,"columns":[{"name":"id","type":"INT","nullable":false,"max_chars":0},{"name":"n","type":"INT","nullable":true,"max_chars":0}],"physical":false}}
+{"kind":"end","rows":"0"}

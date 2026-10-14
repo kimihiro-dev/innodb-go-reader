@@ -1,0 +1,14 @@
+=== RUN   TestLegacyPartitionMetadataFailures
+=== RUN   TestLegacyPartitionMetadataFailures/below-logical-minimum
+=== RUN   TestLegacyPartitionMetadataFailures/excessive-count
+=== RUN   TestLegacyPartitionMetadataFailures/nondecimal-count
+=== RUN   TestLegacyPartitionMetadataFailures/duplicate-property
+=== RUN   TestLegacyPartitionMetadataFailures/tuple-mismatch
+--- PASS: TestLegacyPartitionMetadataFailures (0.01s)
+    --- PASS: TestLegacyPartitionMetadataFailures/below-logical-minimum (0.00s)
+    --- PASS: TestLegacyPartitionMetadataFailures/excessive-count (0.00s)
+    --- PASS: TestLegacyPartitionMetadataFailures/nondecimal-count (0.00s)
+    --- PASS: TestLegacyPartitionMetadataFailures/duplicate-property (0.00s)
+    --- PASS: TestLegacyPartitionMetadataFailures/tuple-mismatch (0.00s)
+PASS
+ok  	innodb-go-reader	0.939s

@@ -1,0 +1,71 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.16",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  },
+  "database": "innodb_partition_d3e308dacc23",
+  "table": "hidden_compact",
+  "directory": [
+    {
+      "sub": null,
+      "name": "p0",
+      "method": "HASH",
+      "ordinal": 1,
+      "expression": "`n`"
+    },
+    {
+      "sub": null,
+      "name": "p1",
+      "method": "HASH",
+      "ordinal": 2,
+      "expression": "`n`"
+    },
+    {
+      "sub": null,
+      "name": "p2",
+      "method": "HASH",
+      "ordinal": 3,
+      "expression": "`n`"
+    }
+  ],
+  "physical": [
+    {
+      "name": "innodb_partition_d3e308dacc23/hidden_compact#P#p0",
+      "path": "./innodb_partition_d3e308dacc23/hidden_compact#P#p0.ibd",
+      "space": 157,
+      "table_id": 1218
+    },
+    {
+      "name": "innodb_partition_d3e308dacc23/hidden_compact#P#p1",
+      "path": "./innodb_partition_d3e308dacc23/hidden_compact#P#p1.ibd",
+      "space": 158,
+      "table_id": 1219
+    },
+    {
+      "name": "innodb_partition_d3e308dacc23/hidden_compact#P#p2",
+      "path": "./innodb_partition_d3e308dacc23/hidden_compact#P#p2.ibd",
+      "space": 159,
+      "table_id": 1220
+    }
+  ],
+  "columns": [
+    {
+      "name": "id",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "n",
+      "type": "int",
+      "extra": ""
+    },
+    {
+      "name": "payload",
+      "type": "longtext",
+      "extra": ""
+    }
+  ],
+  "partitions": {}
+}

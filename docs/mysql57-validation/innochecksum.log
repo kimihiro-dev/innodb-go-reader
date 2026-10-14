@@ -1,0 +1,44 @@
+Tool: MySQL 8.0.45 innochecksum; input: real MySQL 5.7.44
+scalar_dynamic_initial: 0
+
+lob_dynamic_initial: 0
+
+lob_dynamic_grown: 0
+
+lob_dynamic_shrunk_deleted: 0
+
+families_dynamic_initial: 0
+
+tree_dynamic_initial: 0
+
+hidden_dynamic_initial: 0
+
+unique_dynamic_initial: 0
+
+generated_dynamic_initial: 0
+
+charset_dynamic_initial: 0
+
+empty_dynamic_initial: 0
+
+scalar_compact_initial: 0
+
+lob_compact_initial: 0
+
+lob_compact_grown: 0
+
+lob_compact_shrunk_deleted: 0
+
+families_compact_initial: 0
+
+tree_compact_initial: 0
+
+hidden_compact_initial: 0
+
+unique_compact_initial: 0
+
+generated_compact_initial: 0
+
+charset_compact_initial: 0
+
+empty_compact_initial: 0

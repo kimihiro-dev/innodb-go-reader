@@ -1,0 +1,23 @@
+--- 5.7.28/storage/innobase/include/rem0rec.h
++++ 5.7.44/storage/innobase/include/rem0rec.h
+@@ -1,5 +1,5 @@
+ /*****************************************************************************
+ 
+-Copyright (c) 1994, 2017, Oracle and/or its affiliates. All Rights Reserved.
++Copyright (c) 1994, 2023, Oracle and/or its affiliates.
+ 
+ This program is free software; you can redistribute it and/or modify
+@@ -1021,5 +1021,5 @@
+ operator<<(std::ostream& o, const rec_offsets_print& r);
+ 
+-# ifndef DBUG_OFF
++# ifndef NDEBUG
+ /** Pretty-printer of records and tuples */
+ class rec_printer : public std::ostringstream {
+@@ -1076,5 +1076,5 @@
+ 	rec_printer& operator=(const rec_printer& other);
+ };
+-# endif /* !DBUG_OFF */
++# endif /* !NDEBUG */
+ 
+ # ifdef UNIV_DEBUG

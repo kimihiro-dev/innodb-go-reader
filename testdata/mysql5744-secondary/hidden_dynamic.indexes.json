@@ -1,0 +1,73 @@
+[
+  {
+    "Name": "s",
+    "Unique": false,
+    "RowFormat": "DYNAMIC",
+    "SpaceID": 135,
+    "IndexID": 244,
+    "RootPage": 4,
+    "Fields": [
+      {
+        "Column": 0,
+        "Definition": {
+          "name": "seq",
+          "type": "INT",
+          "nullable": true
+        },
+        "PrefixBytes": 0,
+        "RowID": false
+      },
+      {
+        "Column": -1,
+        "Definition": {
+          "name": "DB_ROW_ID",
+          "type": "BINARY",
+          "max_bytes": 6
+        },
+        "PrefixBytes": 0,
+        "RowID": true
+      }
+    ],
+    "UserFields": 1,
+    "ClusteredFields": [
+      1
+    ]
+  },
+  {
+    "Name": "px",
+    "Unique": false,
+    "RowFormat": "DYNAMIC",
+    "SpaceID": 135,
+    "IndexID": 245,
+    "RootPage": 5,
+    "Fields": [
+      {
+        "Column": 1,
+        "Definition": {
+          "name": "name",
+          "type": "VARCHAR",
+          "nullable": true,
+          "charset": "utf8mb4",
+          "max_chars": 30,
+          "collation": "utf8mb4_bin"
+        },
+        "PrefixBytes": 8,
+        "RowID": false
+      },
+      {
+        "Column": -1,
+        "Definition": {
+          "name": "DB_ROW_ID",
+          "type": "BINARY",
+          "max_bytes": 6
+        },
+        "PrefixBytes": 0,
+        "RowID": true
+      }
+    ],
+    "UserFields": 1,
+    "ClusteredFields": [
+      1
+    ]
+  }
+]

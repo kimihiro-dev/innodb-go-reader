@@ -25,14 +25,16 @@ type PartitionSource struct {
 	SpaceID uint32
 }
 type PartitionMetadata struct {
-	Source PartitionSource
-	Table  *TableMetadata
+	Source  PartitionSource
+	Table   *TableMetadata
+	Indexes []SecondarySchema `json:",omitempty"` // supplied trusted secondary definitions
 }
 
 // PartitionSet is a complete, preflight-validated collection, in definition order.
 // Source identifies the logical DD table, not an InnoDB partition table ID.
 type PartitionSet struct {
 	Database, Name string
+	MetadataSource string `json:",omitempty"`
 	Source         SDIKey
 	PartitionType  uint32
 	Expression     string // Raw SDI partition_expression; KEY stores a field list, not SQL text.
@@ -63,11 +65,21 @@ const MaxPartitionFiles = 1024
 // It does not scan user rows, evaluate partition expressions or prove MVCC consistency.
 // Errors return nil, including missing or mismatched partitions.
 func InspectPartitions(ctx context.Context, inputs []PartitionInput, options ScanOptions) (*PartitionSet, error) {
+	return inspectPartitions(ctx, inputs, nil, options)
+}
+
+// InspectPartitionsWithSchema validates files against a complete trusted 5.7
+// directory. Logical identity and completeness depend on the supplied source.
+func InspectPartitionsWithSchema(ctx context.Context, inputs []PartitionInput, schema PartitionSchema, options ScanOptions) (*PartitionSet, error) {
+	return inspectPartitions(ctx, inputs, &schema, options)
+}
+
+func inspectPartitions(ctx context.Context, inputs []PartitionInput, schema *PartitionSchema, options ScanOptions) (*PartitionSet, error) {
 	reader, err := partitionReader(ctx, inputs, options)
 	if err != nil {
 		return nil, err
 	}
-	set, _, err := inspectPartitionSet(reader, inputs)
+	set, _, err := inspectPartitionInputs(reader, inputs, schema)
 	if err == nil {
 		err = ctx.Err()
 	}
@@ -80,12 +92,30 @@ func InspectPartitions(ctx context.Context, inputs []PartitionInput, options Sca
 // ScanPartitions scans a complete collection in partition-definition order, then
 // clustered order within each partition. There is no global key ordering.
 func ScanPartitions(ctx context.Context, inputs []PartitionInput, options ScanOptions, yield func(PartitionEvent) error) (PartitionScanReport, error) {
-	return scanPartitions(ctx, inputs, options, yield, false)
+	return scanPartitions(ctx, inputs, nil, options, yield, false)
 }
 
 // ScanPartitionsMaterialized explicitly omits VIRTUAL values while reporting them.
 func ScanPartitionsMaterialized(ctx context.Context, inputs []PartitionInput, options ScanOptions, yield func(PartitionEvent) error) (PartitionScanReport, error) {
-	return scanPartitions(ctx, inputs, options, yield, true)
+	return scanPartitions(ctx, inputs, nil, options, yield, true)
+}
+
+// ScanPartitionsWithSchema preflights a trusted 5.7 directory and scans in its
+// definition order, sharing budgets across all files.
+func ScanPartitionsWithSchema(ctx context.Context, inputs []PartitionInput, schema PartitionSchema, options ScanOptions, yield func(PartitionEvent) error) (PartitionScanReport, error) {
+	return scanPartitions(ctx, inputs, &schema, options, yield, false)
+}
+
+// ScanPartitionsMaterializedWithSchema explicitly omits VIRTUAL values from a
+// trusted 5.7 collection while reporting their definitions.
+func ScanPartitionsMaterializedWithSchema(ctx context.Context, inputs []PartitionInput, schema PartitionSchema, options ScanOptions, yield func(PartitionEvent) error) (PartitionScanReport, error) {
+	return scanPartitions(ctx, inputs, &schema, options, yield, true)
+}
+func inspectPartitionInputs(reader *scanReader, inputs []PartitionInput, schema *PartitionSchema) (*PartitionSet, []orderedPartition, error) {
+	if schema != nil {
+		return inspectTrustedPartitionSet(reader, inputs, *schema)
+	}
+	return inspectPartitionSet(reader, inputs)
 }
 func partitionReader(ctx context.Context, inputs []PartitionInput, options ScanOptions) (*scanReader, error) {
 	if len(inputs) == 0 || len(inputs) > MaxPartitionFiles {
@@ -108,7 +138,7 @@ func selectPartition(reader *scanReader, input PartitionInput) {
 	reader.cache = make(map[int64]*list.Element)
 	reader.lru.Init()
 }
-func scanPartitions(ctx context.Context, inputs []PartitionInput, options ScanOptions, yield func(PartitionEvent) error, materialized bool) (report PartitionScanReport, err error) {
+func scanPartitions(ctx context.Context, inputs []PartitionInput, schema *PartitionSchema, options ScanOptions, yield func(PartitionEvent) error, materialized bool) (report PartitionScanReport, err error) {
 	if yield == nil {
 		return report, fmt.Errorf("%w: nil partition callback", ErrUnsupported)
 	}
@@ -122,7 +152,7 @@ func scanPartitions(ctx context.Context, inputs []PartitionInput, options ScanOp
 		report.PhysicalReads = reader.reads
 		report.TraversalEntries = reader.entries
 	}()
-	set, ordered, err := inspectPartitionSet(reader, inputs)
+	set, ordered, err := inspectPartitionInputs(reader, inputs, schema)
 	if err != nil {
 		return report, err
 	}

@@ -1,0 +1,26 @@
+[
+  {
+    "GOOS": "darwin",
+    "GOARCH": "arm64",
+    "CGO_ENABLED": 0,
+    "SHA256": "6cb21860a93c80ce91b42f5799b3fad32ce38f6ce26b79e7d82224cbfd2f25bc",
+    "result": "passed",
+    "verification": "compile; actual darwin/Linux CLI checks recorded separately"
+  },
+  {
+    "GOOS": "linux",
+    "GOARCH": "amd64",
+    "CGO_ENABLED": 0,
+    "SHA256": "690867492a41eab08fc26c7a071458797e19b30275e8092ee1a7e7be3a8db7fa",
+    "result": "passed",
+    "verification": "compile; actual darwin/Linux CLI checks recorded separately"
+  },
+  {
+    "GOOS": "windows",
+    "GOARCH": "amd64",
+    "CGO_ENABLED": 0,
+    "SHA256": "a615fed4b8933f77b416af2fa2d5661eb7ea00259038be9d0cc78ce19aed6b02",
+    "result": "passed",
+    "verification": "compile; actual darwin/Linux CLI checks recorded separately"
+  }
+]

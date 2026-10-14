@@ -1,0 +1,1 @@
+{"command":"schema","scope":"MySQL 5.7 trusted definitions; metadata only","complete":false,"error":"json: cannot unmarshal number -1 into Go struct field index.root_page of type uint32"}

@@ -1,0 +1,9 @@
+{
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "python": "3.13.13",
+  "go": "go version go1.25.7 darwin/arm64",
+  "GOMODCACHE": "/tmp/innodb-driver-module-cache",
+  "GOCACHE": "/tmp/innodb-version-go-cache",
+  "GOPROXY": "off",
+  "GOTOOLCHAIN": "local"
+}

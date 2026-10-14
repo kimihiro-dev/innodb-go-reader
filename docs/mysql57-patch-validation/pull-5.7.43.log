@@ -1,0 +1,39 @@
+5.7.43: Pulling from library/mysql
+71c43898e898: Pulling fs layer
+6c804e92b324: Pulling fs layer
+9ad776bc3934: Pulling fs layer
+9e4eda42c982: Pulling fs layer
+df6d882cf587: Pulling fs layer
+eec2b1bc5454: Pulling fs layer
+fd54ada0c48d: Pulling fs layer
+4ed8fb20ac8d: Pulling fs layer
+0d30e03d70e3: Pulling fs layer
+41c3423057b7: Pulling fs layer
+122b2c7b16c0: Pulling fs layer
+82e53b4ee501: Download complete
+71c43898e898: Download complete
+0f321d3ef985: Download complete
+9e4eda42c982: Download complete
+df6d882cf587: Download complete
+6c804e92b324: Download complete
+4ed8fb20ac8d: Download complete
+0d30e03d70e3: Download complete
+eec2b1bc5454: Download complete
+41c3423057b7: Download complete
+fd54ada0c48d: Download complete
+9ad776bc3934: Download complete
+9e4eda42c982: Pull complete
+df6d882cf587: Pull complete
+9ad776bc3934: Pull complete
+6c804e92b324: Pull complete
+4ed8fb20ac8d: Pull complete
+fd54ada0c48d: Pull complete
+eec2b1bc5454: Pull complete
+41c3423057b7: Pull complete
+122b2c7b16c0: Download complete
+71c43898e898: Pull complete
+0d30e03d70e3: Pull complete
+122b2c7b16c0: Pull complete
+Digest: sha256:4f9bfb0f7dd97739ceedb546b381534bb11e9b4abf013d6ad9ae6473fed66099
+Status: Downloaded newer image for mysql:5.7.43
+docker.io/library/mysql:5.7.43

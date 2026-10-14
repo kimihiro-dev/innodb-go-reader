@@ -1,0 +1,308 @@
+{
+  "database": "innodb_reader_80_139517e0e61b",
+  "cases": [
+    {
+      "name": "scalar_dynamic_current",
+      "rows": 2,
+      "sha256": "d4e45936f2a8aa7490c86fc403d3abadb046c473aa1ed8d86c47f9c70107ac9d",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "lob_dynamic_insert",
+      "rows": 3,
+      "sha256": "50f7721e6b3e0c38db22b7a3587e348a36237a036ddd074cf7b10bb81304c263",
+      "bytes": 344064,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "lob_dynamic_small_update",
+      "rows": 3,
+      "sha256": "080d7e128c2e1721c8578f609a0251da3eaffb33240b7051d50d2eedc8e2ad51",
+      "bytes": 589824,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "lob_dynamic_replace_delete",
+      "rows": 2,
+      "sha256": "4ea6e4f9da739ed43a3c44c7593577ae36d993e8f9d88e2ceae808fbb310f342",
+      "bytes": 606208,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "secondary_dynamic_current",
+      "rows": 6,
+      "sha256": "ebe3c77868b749491d727a9d5e7b8c818aacf88d0d06b7b1ede7e18caa079122",
+      "bytes": 180224,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "hidden_dynamic_current",
+      "rows": 4,
+      "sha256": "e0b9faf296d771b4918afa88fd5c6ad11756085686be1d71509d189334e76b37",
+      "bytes": 147456,
+      "unordered": true,
+      "virtual": false
+    },
+    {
+      "name": "generated_dynamic_current",
+      "rows": 3,
+      "sha256": "321db5519c815e482b186de1a337682acf7c1425651cabff567b1436fcf31ba0",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": true
+    },
+    {
+      "name": "tree_dynamic_current",
+      "rows": 500,
+      "sha256": "f946e5e2816b7e6009fbbffc605c34fab43376554cf3f9a7501c0437535ffa64",
+      "bytes": 9437184,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "instant_dynamic_add",
+      "rows": 3,
+      "sha256": "df9ab7bf2d813afa965323aef68e92c052faccc5d8c70731c183cabc454e63bc",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "instant_dynamic_mixed",
+      "rows": 4,
+      "sha256": "5b00cfcb15a596bf5f7d908f19d5ddadd55fe0117d4a413fe0ff8ec8a4370d68",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "instant_dynamic_rebuilt",
+      "rows": 4,
+      "sha256": "894db517c72204401b01a621a7c92914a583e8fec7625cf21cd4833c491fd444",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "wide_dynamic_current",
+      "rows": 2,
+      "sha256": "692bff4069bed1a533d4e88ad871fb760806889e025a7195e6efdefff2207add",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "instant_hidden_dynamic_current",
+      "rows": 2,
+      "sha256": "6e1921b425e4972a1fba56a79f786e87c27902dc73aecbcc3df66e3e9ff0efeb",
+      "bytes": 114688,
+      "unordered": true,
+      "virtual": false
+    },
+    {
+      "name": "instant_virtual_dynamic_current",
+      "rows": 2,
+      "sha256": "20d7b09758a13b8afdacc5499cd3b4262d99cf71127e969b2cef04943dfb7e97",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": true
+    },
+    {
+      "name": "instant_defaults_dynamic_current",
+      "rows": 2,
+      "sha256": "45489fc78eee83465cc3a0dca48777d5222a050e1bb057dea4d0c30119bb4f18",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "instant_tree_dynamic_current",
+      "rows": 501,
+      "sha256": "e9ddecfebcb3dda2b987dfd4ab3326e79cdce0abc76f1f68b89f8ea0bc72cebf",
+      "bytes": 9437184,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "invisible_dynamic_current",
+      "rows": 2,
+      "sha256": "3c8d9862cc79ab7b0d363691b591472a3d9714b29414e69a9e36c154beeb552b",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "drop_dynamic_current",
+      "rows": 2,
+      "sha256": "24edad7ea1f53c5c6bb399d236b7c558f70310a6b5f8a73d69522f10bf663b2f",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "scalar_compact_current",
+      "rows": 2,
+      "sha256": "baab510e566eb380f2386125e686f8975f7ecfd3dd94b2e0a7e89aa93098a950",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "lob_compact_insert",
+      "rows": 3,
+      "sha256": "ed37d6c2088551c36139d283c3c1f187a02ee84b74385baf33c32b19b29931dd",
+      "bytes": 344064,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "lob_compact_small_update",
+      "rows": 3,
+      "sha256": "ef149776e21eb49695abfeb12795412df54f081cad4819b11fbc9ee081225c5e",
+      "bytes": 589824,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "lob_compact_replace_delete",
+      "rows": 2,
+      "sha256": "7f6aae128b7c6c0325170abda1efb25646437f2397afccda5b5a4eaba3e51e12",
+      "bytes": 589824,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "secondary_compact_current",
+      "rows": 6,
+      "sha256": "ab0fd3a70decf4bad7a5db082a9080d6e2ba814c08b24b9e166280a6538a584f",
+      "bytes": 180224,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "hidden_compact_current",
+      "rows": 4,
+      "sha256": "94e5a8b9d6ad899f78c2c8953cfe35953aa405a7c2e0372f0e01e0f4d598e9c2",
+      "bytes": 147456,
+      "unordered": true,
+      "virtual": false
+    },
+    {
+      "name": "generated_compact_current",
+      "rows": 3,
+      "sha256": "ed080b406ab702ffd3ff612d3a7acc93fb1e80d642cb73b2936e588ccd2cf05f",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": true
+    },
+    {
+      "name": "tree_compact_current",
+      "rows": 500,
+      "sha256": "48f83f7dda1e44bfb6c7b81868bfa5fc6534601e3b6833ca7d97d96fd024b85d",
+      "bytes": 9437184,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "instant_compact_add",
+      "rows": 3,
+      "sha256": "c8e8593ebc1ded4da3e9987708d7d3cae2cccc7ec1f92a6774b81a8d70a948e9",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "instant_compact_mixed",
+      "rows": 4,
+      "sha256": "8be0d9b18282de0d324791bea39ea1f973fa27ffac94d242fbba5b7eeeb0dbc1",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "instant_compact_rebuilt",
+      "rows": 4,
+      "sha256": "62fe3fe29b56e8c0a4a1e7e72a677fc5b7e6df424ff4a4e5b54867c09a64049b",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "wide_compact_current",
+      "rows": 2,
+      "sha256": "8b36e585422693be1786d6e9f5a9945b5d3f4070d607520fd8b39cd8a952c6f4",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "instant_hidden_compact_current",
+      "rows": 2,
+      "sha256": "f12348a09aab4efb31df7e0f0cb40f1eb115c601f3d69fda5ca61ae2c81114cb",
+      "bytes": 114688,
+      "unordered": true,
+      "virtual": false
+    },
+    {
+      "name": "instant_virtual_compact_current",
+      "rows": 2,
+      "sha256": "a54f75b96ebe5c4516445db7f2620838424c1714f11fe5b73688a23807678dff",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": true
+    },
+    {
+      "name": "instant_defaults_compact_current",
+      "rows": 2,
+      "sha256": "64e39d5eefd39b19df1ef24c1b2ee1c5bd16903370efbee414132be9d8fe248d",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "instant_tree_compact_current",
+      "rows": 501,
+      "sha256": "0da2a2dfad6f3b4ce53540ac1ee013099f4e60606dac29a18e7fe0a3c517ae62",
+      "bytes": 9437184,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "invisible_compact_current",
+      "rows": 2,
+      "sha256": "0a14313ffd18c5f4cd1274c5f8eef810eafeeb0e3c1f1cf27b31a31d5a31ba67",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "drop_compact_current",
+      "rows": 2,
+      "sha256": "f326eb1f7648923ab789d97af3cdd1ede539c5a4e8c49a8cdce9e6ba2f85e96d",
+      "bytes": 114688,
+      "unordered": false,
+      "virtual": false
+    },
+    {
+      "name": "gipk_current",
+      "rows": 3,
+      "sha256": "42b647770062040743f9bb812abcd18009faf4aae50afea09c904a49a6b585fb",
+      "bytes": 131072,
+      "unordered": false,
+      "virtual": false
+    }
+  ],
+  "status": "captured",
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "8.0.30",
+    "checksum": "strict_crc32",
+    "page_size": 16384
+  }
+}

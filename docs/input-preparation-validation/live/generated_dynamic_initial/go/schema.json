@@ -1,0 +1,37 @@
+{
+  "row_format": "DYNAMIC",
+  "virtual_columns": [
+    {
+      "name": "v",
+      "ordinal": 3,
+      "expression": "(`base` + 100)"
+    }
+  ],
+  "columns": [
+    {
+      "name": "id",
+      "type": "INT",
+      "nullable": false,
+      "max_chars": 0
+    },
+    {
+      "name": "base",
+      "type": "INT",
+      "nullable": true,
+      "max_chars": 0
+    },
+    {
+      "generation_expression": "(`base` + 1)",
+      "name": "s",
+      "type": "INT",
+      "nullable": true,
+      "max_chars": 0
+    }
+  ],
+  "primary_keys": [
+    "id"
+  ],
+  "root_page": 3,
+  "space_id": 49,
+  "index_id": 66
+}

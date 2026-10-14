@@ -1,0 +1,109 @@
+{
+  "environment": {
+    "datadir": "/var/lib/mysql/",
+    "version": "5.7.44",
+    "checksum": "strict_crc32",
+    "page_size": 16384,
+    "doublewrite": 1,
+    "data_file_path": "ibdata1:12M:autoextend",
+    "file_per_table": 1,
+    "change_buffering": "all",
+    "undo_tablespaces": 0
+  },
+  "tables": [
+    {
+      "name": "lesson/private_rows",
+      "flags": 33,
+      "space": 23,
+      "columns": 6,
+      "table_id": 45,
+      "row_format": "Dynamic"
+    },
+    {
+      "name": "lesson/shared_rows",
+      "flags": 1,
+      "space": 0,
+      "columns": 5,
+      "table_id": 44,
+      "row_format": "Compact"
+    }
+  ],
+  "indexes": [
+    {
+      "id": 43,
+      "name": "PRIMARY",
+      "root": 3,
+      "type": 3,
+      "space": 23,
+      "table": "lesson/private_rows",
+      "fields": 1
+    },
+    {
+      "id": 44,
+      "name": "n_idx",
+      "root": 4,
+      "type": 0,
+      "space": 23,
+      "table": "lesson/private_rows",
+      "fields": 1
+    },
+    {
+      "id": 41,
+      "name": "PRIMARY",
+      "root": 347,
+      "type": 3,
+      "space": 0,
+      "table": "lesson/shared_rows",
+      "fields": 1
+    },
+    {
+      "id": 42,
+      "name": "n_idx",
+      "root": 348,
+      "type": 0,
+      "space": 0,
+      "table": "lesson/shared_rows",
+      "fields": 1
+    }
+  ],
+  "dictionary_roots_sql": [],
+  "rows": {
+    "shared_rows": [
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        null
+      ]
+    ],
+    "private_rows": [
+      [
+        1,
+        10,
+        "one"
+      ],
+      [
+        2,
+        null,
+        "two"
+      ]
+    ]
+  },
+  "capture": "dedicated instance; innodb_fast_shutdown=0; clean shutdown before copying",
+  "files": [
+    {
+      "source": "ibdata1",
+      "artifact": "ibdata1.gz",
+      "bytes": 79691776,
+      "sha256": "8ef86c0badde17aa6616a7af5a68f2d4e5d00a8e4e808d425b1a2adb19ba4a83"
+    },
+    {
+      "source": "lesson/private_rows.ibd",
+      "artifact": "lesson_private_rows.ibd.gz",
+      "bytes": 114688,
+      "sha256": "6b68589580ae1ce40caf96c1d3fa76e14b6e5a42088222fcbb39d5ad3e81a12f"
+    }
+  ]
+}

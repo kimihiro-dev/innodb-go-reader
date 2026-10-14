@@ -1,0 +1,43 @@
+ordinary_dynamic: exit=0
+
+composite_dynamic: exit=0
+
+hidden_dynamic: exit=0
+
+unique_cluster_dynamic: exit=0
+
+generated_dynamic: exit=0
+
+tree_dynamic: exit=0
+
+empty_dynamic: exit=0
+
+charset_ascii_dynamic: exit=0
+
+charset_latin1_dynamic: exit=0
+
+charset_utf8_dynamic: exit=0
+
+charset_utf8mb4_dynamic: exit=0
+
+ordinary_compact: exit=0
+
+composite_compact: exit=0
+
+hidden_compact: exit=0
+
+unique_cluster_compact: exit=0
+
+generated_compact: exit=0
+
+tree_compact: exit=0
+
+empty_compact: exit=0
+
+charset_ascii_compact: exit=0
+
+charset_latin1_compact: exit=0
+
+charset_utf8_compact: exit=0
+
+charset_utf8mb4_compact: exit=0

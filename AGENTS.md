@@ -12,6 +12,9 @@ Read these files at the start of each session:
 | `docs/format/83-release-support-matrix.md` | Detailed supported inputs and API contracts |
 
 Use the current implementation and these documents to understand the project.
+Follow the latest commit on the current branch (HEAD) for development and builds;
+do not pin the project to a tag or a designated commit. Existing tags identify
+historical releases only. Record the actual source commit for build artifacts.
 Do not recreate chronological decision logs, completed-task ledgers, historical
 stage plans or archives. The user has chosen to remove those records.
 Technical manuals, fixed fixtures and independent validation evidence remain.

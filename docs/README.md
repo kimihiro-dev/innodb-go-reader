@@ -1,6 +1,6 @@
 # 文档导航
 
-以当前源码、[需求](REQUIREMENTS.md)、[开发约定](CONVENTIONS.md)和[支持矩阵](format/83-release-support-matrix.md)理解项目。当前工作见[TODO](TODO.md)，固定v0.1.0与当前源码的能力分开阅读。
+以当前源码、[需求](REQUIREMENTS.md)、[开发约定](CONVENTIONS.md)和[支持矩阵](format/83-release-support-matrix.md)理解项目。当前工作见[TODO](TODO.md)，源码以最新提交为准，已有标签仅表示历史发布。
 
 ## 使用与支持范围
 
@@ -11,7 +11,7 @@
 | 详细版本/类型/布局、API与资源契约 | [支持矩阵](format/83-release-support-matrix.md) |
 | 物理字节与逐步解码 | [01–94章手册](format/README.md) |
 | 开发、测试及文档规则 | [CONVENTIONS](CONVENTIONS.md)、[当前任务](TODO.md) |
-| 固定版本编译与手动发布 | [构建指引](RELEASING.md)、[v0.1.0说明](releases/v0.1.0.md) |
+| 最新提交编译与手动发布 | [构建指引](RELEASING.md)、[v0.1.0说明](releases/v0.1.0.md) |
 
 ## 功能专题
 

@@ -2,7 +2,7 @@
 
 ## 学习目标与前置概念
 
-把详细空间报告整理成六类统计视图，并能解释每个比例的分子、分母和认证范围。前置为[分配布局](75-space-allocation-layout.md)、[空间指标](76-space-analysis-validation.md)及[页内布局案例](81-visual-report-model.md#页布局与真实字节)。本章对应2026-10-12当前源码；固定标签v0.1.0不包含stats。
+把详细空间报告整理成六类统计视图，并能解释每个比例的分子、分母和认证范围。前置为[分配布局](75-space-allocation-layout.md)、[空间指标](76-space-analysis-validation.md)及[页内布局案例](81-visual-report-model.md#页布局与真实字节)。本章对应2026-10-12当前源码；历史标签v0.1.0不包含stats。
 
 `stats.Build`每次调用一次`AnalyzeSpace`，随后只聚合已验证的内存字段。筛选影响输出组，仍检查整个文件；不额外解码列值、遍历schema相关父子键或跟随当前字段LOB引用。
 

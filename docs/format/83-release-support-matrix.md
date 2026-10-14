@@ -2,7 +2,7 @@
 
 ## 基线与判断方法
 
-本章保留2026-09-30首版基线，并集中记录后续源码已验收扩展；固定v0.1.0不包含后续能力。[第84章](84-release-validation.md)给出首版构建、验收与故障复现，后续证据见[验证资料](../README.md#验证资料)。旧章节保留各阶段的教学上下文，其中“当前不支持”可能已由后续阶段扩展，当前承诺以本章、实际API和最新需求为准。
+当前源码以当前分支最新提交（`HEAD`）为准。本章保留2026-09-30首版样本，并集中记录源码已验收扩展；历史v0.1.0不包含后续能力。[第84章](84-release-validation.md)给出首版构建、验收与故障复现，后续证据见[验证资料](../README.md#验证资料)。旧章节保留各阶段的教学上下文，其中“当前不支持”可能已由后续阶段扩展，当前承诺以本章、实际API和最新需求为准。
 
 先确定文件版本与快照来源，再检查格式、元数据和请求入口。`metadata`成功只表示元数据报告已生成；必须检查Issues及Schema/MaterializedSchema，不能据此认定完整行可读。`check --scope rows`、`space`、局部查询各自认证的范围不同。
 
@@ -24,7 +24,7 @@
 
 ## MySQL 8.0明确补丁扩展
 
-2026-10-14当前源码在既有8.0.45之外新增8.0.11、8.0.12、8.0.16、8.0.19、8.0.23、8.0.28、8.0.30的单表自动SDI读取。采用准确MySQL/DD/SDI组合，不放开未测试中间补丁。固定v0.1.0不含此扩展。
+2026-10-14当前源码在既有8.0.45之外新增8.0.11、8.0.12、8.0.16、8.0.19、8.0.23、8.0.28、8.0.30的单表自动SDI读取。采用准确MySQL/DD/SDI组合，不放开未测试中间补丁。历史v0.1.0不含此扩展。
 
 新增证据覆盖16 KiB非压缩非加密DYNAMIC/COMPACT、代表列类型、普通/隐藏聚簇及多层树、普通DESC二级/字符前缀和覆盖/回表、当前LOB与生成列；8.0.12/16/19/23/28旧式INSTANT追加、8.0.23/28/30不可见列、8.0.30现代ADD/DROP及DYNAMIC GIPK。原始SDI单独保留已删除对象，自动发现排除它们。详细版本组合、字节、适配与精度/组合边界见[第93章](93-mysql80-patch-compatibility.md)，验收见[8.0补丁报告](../mysql80-patch-validation/report.json)。
 
@@ -34,11 +34,11 @@
 
 ## 表级动态元数据版本修正
 
-2026-10-09 后续源码修正表级 `version` 的误拒绝，按可选 uint64 动态元数据处理；解释、输入边界与验证方式见[第 43 章](43-sdi-schema.md#表级动态元数据版本2026-10-09-修正)。MySQL、SDI、行格式及 INSTANT 支持范围沿用上表。固定标签 `v0.1.0` 不包含此修正，使用时需要重新编译当前源码。
+2026-10-09 后续源码修正表级 `version` 的误拒绝，按可选 uint64 动态元数据处理；解释、输入边界与验证方式见[第 43 章](43-sdi-schema.md#表级动态元数据版本2026-10-09-修正)。MySQL、SDI、行格式及 INSTANT 支持范围沿用上表。历史标签 `v0.1.0` 不包含此修正，使用时需要按最新提交重新编译。
 
 ## 统计汇总扩展
 
-2026-10-12当前源码新增`stats.Build/WriteJSON/WriteTable`及CLI `stats`，提供summary、page-types、indexes、levels、segments、regions六视图和显式ID/level筛选；指标/精确协议见[第85章](85-statistics-model-and-metrics.md)，验证见[第86章](86-statistics-validation.md)。复用一次全文件AnalyzeSpace，认证分配、使用中页完整性和支持的局部布局；不认证SQL行数、schema相关树导航、列值或当前LOB引用。固定v0.1.0不包含此命令，须重新编译当前源码。
+2026-10-12当前源码新增`stats.Build/WriteJSON/WriteTable`及CLI `stats`，提供summary、page-types、indexes、levels、segments、regions六视图和显式ID/level筛选；指标/精确协议见[第85章](85-statistics-model-and-metrics.md)，验证见[第86章](86-statistics-validation.md)。复用一次全文件AnalyzeSpace，认证分配、使用中页完整性和支持的局部布局；不认证SQL行数、schema相关树导航、列值或当前LOB引用。历史v0.1.0不包含此命令，须按最新提交重新编译。
 
 ## 列值、字符集与索引
 
@@ -46,7 +46,7 @@
 
 ### MySQL 5.7 显式元数据扩展
 
-当前5.7.44可信元数据入口提供可信Schema JSON的ValidateSchema/Read/Scan/StreamLOB/聚簇Query及CLI `--schema`。固定v0.1.0不包含此扩展；准确版本由采集source证据/调用方提供，不能从任意.ibd自动识别补丁版本。格式/证据范围见[第87章](87-mysql57-explicit-schema.md)、[第88章](88-mysql57-secondary-indexes.md)与[二级验证报告](../mysql57-validation/secondary/report.json)。
+当前5.7.44可信元数据入口提供可信Schema JSON的ValidateSchema/Read/Scan/StreamLOB/聚簇Query及CLI `--schema`。历史v0.1.0不包含此扩展；准确版本由采集source证据/调用方提供，不能从任意.ibd自动识别补丁版本。格式/证据范围见[第87章](87-mysql57-explicit-schema.md)、[第88章](88-mysql57-secondary-indexes.md)与[二级验证报告](../mysql57-validation/secondary/report.json)。
 
 2026-10-14新增明确补丁5.7.9、5.7.10、5.7.11、5.7.12、5.7.28、5.7.43，连同既有5.7.44形成采集白名单；没有放开中间未验收补丁。新增264份独立快照的组合与初版范围相同，源码差异、TLS构建限制和独立对照见[第92章](92-mysql57-patch-compatibility.md)。
 
@@ -66,7 +66,7 @@
 
 ### CLI输入准备扩展
 
-2026-10-13当前源码新增`schema`和`manifest`，固定v0.1.0不包含。schema通过Go MySQL驱动（TCP/Unix socket、可选证书验证TLS）采集上述5.7补丁的单表可信Schema/可选SecondarySchema及来源，仅采集元数据，物理快照由备份工具提供；无Docker/Python/mysql客户端运行依赖。manifest从明确8.0补丁的SDI生成版本1清单；5.7通过schema --partitions和--partition-schema生成引用可信目录的版本2清单，完整性/DDL限制见[第94章](94-partition-version-compatibility.md)。不增加离线.frm/.cfg/系统字典发现或恢复范围。用法见[CLI指南](../CLI.md#schema采集可信定义)，格式见[第91章](91-cli-input-preparation.md)，初版验收见[输入准备报告](../input-preparation-validation/report.json)，当前驱动连接验收见[驱动验证报告](../schema-driver-validation/report.json)。
+2026-10-13当前源码新增`schema`和`manifest`，历史v0.1.0不包含。schema通过Go MySQL驱动（TCP/Unix socket、可选证书验证TLS）采集上述5.7补丁的单表可信Schema/可选SecondarySchema及来源，仅采集元数据，物理快照由备份工具提供；无Docker/Python/mysql客户端运行依赖。manifest从明确8.0补丁的SDI生成版本1清单；5.7通过schema --partitions和--partition-schema生成引用可信目录的版本2清单，完整性/DDL限制见[第94章](94-partition-version-compatibility.md)。不增加离线.frm/.cfg/系统字典发现或恢复范围。用法见[CLI指南](../CLI.md#schema采集可信定义)，格式见[第91章](91-cli-input-preparation.md)，初版验收见[输入准备报告](../input-preparation-validation/report.json)，当前驱动连接验收见[驱动验证报告](../schema-driver-validation/report.json)。
 
 ### 既有 8.0.45 类型与键
 

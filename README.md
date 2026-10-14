@@ -9,7 +9,7 @@
 - [01–94章解析手册](docs/format/README.md)：真实字节、逐步解码及验证方法。
 - [文档导航与验证资料](docs/README.md)、[开发约定](docs/CONVENTIONS.md)、[当前任务](docs/TODO.md)。
 
-当前源码版本为[`v0.2.0`](https://github.com/kimihiro-dev/innodb-go-reader/tree/v0.2.0)，包含当前矩阵中的统计、输入准备和明确补丁/分区兼容。固定源码版本[`v0.1.0`](https://github.com/kimihiro-dev/innodb-go-reader/tree/v0.1.0)，发布说明与多平台命令见[发布指引](docs/RELEASING.md)。当前源码包含标签之后的能力，具体差异见支持矩阵。
+源码与功能以当前分支的最新提交（`HEAD`）为准，开发和构建不锁定指定标签或提交。已有版本标签仅标识历史发布；最新提交的多平台命令见[构建指引](docs/RELEASING.md)。
 
 ## 正式命令行与无损导出
 

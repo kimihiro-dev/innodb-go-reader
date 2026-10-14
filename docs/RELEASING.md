@@ -1,13 +1,14 @@
-# v0.1.0多平台构建与手动发布
+# 最新提交的多平台构建与手动发布
 
-源码标签：[`v0.1.0`](https://github.com/kimihiro-dev/innodb-go-reader/tree/v0.1.0)，固定提交 `116de5046aa94b379ce4d2e0711e34be9766c397`。发布说明见 [v0.1.0.md](releases/v0.1.0.md)，可直接复制到GitHub Release描述中。
+源码与构建以当前分支的最新提交（`HEAD`）为准，不预设版本标签或提交SHA。已有标签仅标识对应的历史发布；历史[v0.1.0说明](releases/v0.1.0.md)不作为当前开发基准。
 
 ## 构建前提
 
-- Go 1.25或更高版本、Git；打包还需要tar、zip和shasum。
-- 在本项目Git仓库根目录运行。以下命令面向macOS/Linux的Bash，产物写入新临时目录，不修改当前分支或工作区，不需要Windows交叉编译器。
-- 使用 `git archive v0.1.0` 解出固定源码后再构建。即使main后来更新，也不会把新代码误打包为v0.1.0。
-- 固定v0.1.0源码只使用Go标准库，统一 `CGO_ENABLED=0`，每个目标通过GOOS/GOARCH选择；不需要Python、Node、MySQL服务或第三方Go依赖来编译CLI。
+- Go 1.25或更高版本、Git及go.mod锁定的依赖；打包需要tar、zip和shasum。
+- 在仓库根目录运行，以下命令面向macOS/Linux的Bash，产物写入新临时目录；统一`CGO_ENABLED=0`，无需目标平台的C编译器。
+- 如需取得远端更新，在干净的main分支先运行`git pull --ff-only`；下方脚本使用执行时本地当前分支的最新提交。
+- 每次运行读取`HEAD`，导出该提交源码再编译，避免构建期间工作区变化影响产物；未提交修改不计入提交版本。打印完整SHA，文件名使用至少12位短SHA。
+- 当前Schema采集使用Go MySQL驱动，构建前须取得锁定模块（可预先缓存）；CLI运行无需Python、Node或mysql客户端。验证脚本所需工具另见对应章节。
 
 ## 六个平台的编译命令
 
@@ -15,11 +16,13 @@
 
 ```bash
 set -euo pipefail
-RELEASE_VERSION=v0.1.0
+BUILD_COMMIT=$(git rev-parse HEAD)
+BUILD_SHORT=$(git rev-parse --short=12 "$BUILD_COMMIT")
+RELEASE_VERSION="commit-${BUILD_SHORT}"
 RELEASE_DIR=$(mktemp -d "/tmp/innodb-reader-${RELEASE_VERSION}.XXXXXX")
 RELEASE_SOURCE="$RELEASE_DIR/source"
 mkdir "$RELEASE_SOURCE"
-git archive --format=tar "$RELEASE_VERSION" | tar -xf - -C "$RELEASE_SOURCE"
+git archive --format=tar "$BUILD_COMMIT" | tar -xf - -C "$RELEASE_SOURCE"
 
 (
   cd "$RELEASE_SOURCE"
@@ -65,7 +68,7 @@ done
   shasum -a 256 innodb-reader_${RELEASE_VERSION}_*.tar.gz \
     innodb-reader_${RELEASE_VERSION}_*.zip > SHA256SUMS
 )
-printf 'Release files: %s\n' "$RELEASE_DIR"
+printf 'Source commit: %s\nRelease files: %s\n' "$BUILD_COMMIT" "$RELEASE_DIR"
 ```
 
 | 文件名后缀 | 平台 | 包内程序 |
@@ -89,7 +92,7 @@ printf 'Release files: %s\n' "$RELEASE_DIR"
 ./innodb-reader check --scope rows /path/to/stable-table.ibd
 ```
 
-Windows使用 `.\innodb-reader.exe --help`。固定仓库样本的完整命令见[CLI指南](CLI.md)。当前没有 `--version` 参数，版本身份通过源码标签、归档文件名和SHA256SUMS确定。
+Windows使用 `.\innodb-reader.exe --help`。固定仓库样本的完整命令见[CLI指南](CLI.md)。当前没有`--version`参数；以构建时打印的完整源码SHA标识版本，归档文件名含短SHA，SHA256SUMS用于校验产物。
 
 在归档与SHA256SUMS所在目录验证下载完整性：
 
@@ -97,16 +100,18 @@ Windows使用 `.\innodb-reader.exe --help`。固定仓库样本的完整命令�
 shasum -a 256 -c SHA256SUMS
 ```
 
-Windows PowerShell可用 `Get-FileHash .\innodb-reader_v0.1.0_windows_amd64.zip -Algorithm SHA256`，将Hash与SHA256SUMS中对应文件的值比较；ARM64包替换文件名即可。
+Windows PowerShell使用`Get-FileHash -Algorithm SHA256`检查对应zip，将Hash与SHA256SUMS比较；文件名中的commit短SHA取本次构建结果。
 
-发布说明必须区分交叉编译与运行验证：macOS ARM64为当前本机运行环境；其他五个平台通过交叉编译，但本轮不声称已完成目标系统运行测试。既有完整回归证据见[第84章](format/84-release-validation.md)，它不等于本轮重新执行全部长回归。
+发布说明应分别记录本次编译与实际运行检查；交叉编译成功不等于目标系统运行认证。回归方法见[第84章](format/84-release-validation.md)，既有结果不能代替对新提交的实际验证。
 
 ## 手动创建GitHub Release
 
-1. 打开[新建Release页面](https://github.com/kimihiro-dev/innodb-go-reader/releases/new)。
-2. 选择已存在的标签 `v0.1.0`，标题填写 `InnoDB Go Reader v0.1.0`。不要另建一个指向最新main的同名标签。
-3. 将 [v0.1.0.md](releases/v0.1.0.md) 内容复制到描述框。
-4. 上传四个tar.gz、两个zip和SHA256SUMS，共七个文件。构建机器或工具链不同会得到不同校验值，上传与本次实际资产配套的校验文件。
-5. 检查说明与资产后，由用户选择保存草稿或发布Release。
+日常开发和构建以最新提交为准，不要求每次提交创建版本标签。若用户需要GitHub Release：
 
-本轮只创建源码标签和发布准备文档，不自动创建GitHub Release。v0.1.0标识这次固定源码，不额外承诺稳定Go API或扩大MySQL/格式支持矩阵。已发布标签保持不变，后续修订使用新版本号。
+1. 以本次实际构建的提交为发布对象，使用能标识该次发布的标签；该标签只记录发布，不作为后续开发基准。
+2. 打开[新建Release页面](https://github.com/kimihiro-dev/innodb-go-reader/releases/new)，选择对应提交的发布标签并填写标题。
+3. 根据本次提交的实际能力和验证填写说明，不直接套用旧版说明；可参考[当前支持矩阵](format/83-release-support-matrix.md)及[CLI指南](CLI.md)。
+4. 上传四个tar.gz、两个zip及配套SHA256SUMS。核对标签的提交SHA、构建打印的SHA和归档文件名，确保它们来自同一源码。
+5. 检查说明和资产后，由用户选择保存草稿或发布。
+
+GitHub Release由用户手动创建；当前源码不会因为已有历史标签而停止更新，也不额外承诺永久Go API兼容性或扩大支持矩阵。

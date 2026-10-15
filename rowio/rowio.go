@@ -9,7 +9,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	innodb "innodb-go-reader"
+	innodb "github.com/kimihiro-dev/innodb-go-reader"
 	"io"
 	"strconv"
 	"unicode/utf8"

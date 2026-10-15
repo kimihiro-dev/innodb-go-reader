@@ -1,5 +1,7 @@
 # 80. 分区集合的命令、验证与失败
 
+CLI与HTML实现由[独立应用项目](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/README.md)维护；本章应用命令在该仓库根目录执行，库API示例在基础库根目录执行。原始验证结果保留其采集时的范围。
+
 <a id="学习目标"></a>
 
 ## 学习目标与前置概念

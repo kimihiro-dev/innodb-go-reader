@@ -1,5 +1,7 @@
 # 85. 统计报告：分配、索引层级与精确指标
 
+CLI与HTML实现由[独立应用项目](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/README.md)维护；本章应用命令在该仓库根目录执行，库API示例在基础库根目录执行。原始验证结果保留其采集时的范围。
+
 ## 学习目标与前置概念
 
 把详细空间报告整理成六类统计视图，并能解释每个比例的分子、分母和认证范围。前置为[分配布局](75-space-allocation-layout.md)、[空间指标](76-space-analysis-validation.md)及[页内布局案例](81-visual-report-model.md#页布局与真实字节)。本章对应2026-10-12当前源码；历史标签v0.1.0不包含stats。
@@ -113,6 +115,6 @@ return stats.WriteJSON(ctx, writer, report) // 或 WriteTable
 
 数据complete表示空间分析和聚合完成；stderr执行摘要还要求格式化/发布成功。stderr记录view、filter和实际physical_reads；成功分析得到的traversal_entries为计数，Build失败无法获得完整空间报告时为null。读次数包括失败的底层ReadAt调用；输出保护在分析前失败时不会伪造计数。诊断计数沿用CLI普通数字，数据JSON中的整数字符串契约独立。
 
-聚合检查context并线性遍历，分组排序为O(G log G)。格式化也检查取消和短写；不能保证打断任意阻塞I/O。AnalyzeSpace保留全页元数据和未知页Raw，预算不是RSS硬上限。CLI的原子输出与输入别名保护沿用[第78章](78-cli-validation-and-failure.md)。更多命令示例见[CLI指南](../CLI.md#stats统计汇总与-json)。
+聚合检查context并线性遍历，分组排序为O(G log G)。格式化也检查取消和短写；不能保证打断任意阻塞I/O。AnalyzeSpace保留全页元数据和未知页Raw，预算不是RSS硬上限。CLI的原子输出与输入别名保护沿用[第78章](78-cli-validation-and-failure.md)。更多命令示例见[CLI指南](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/docs/CLI.md#stats统计汇总与-json)。
 
-代码入口：[聚合与类型](../../stats/report.go)、[表格与JSON](../../stats/write.go)、[CLI参数/诊断](../../internal/cli/stats.go)及[命令接入](../../internal/cli/run.go)。验证方法与边界见[第86章](86-statistics-validation.md)。
+代码入口：[聚合与类型](../../stats/report.go)、[表格与JSON](../../stats/write.go)、[CLI参数/诊断](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/cli/stats.go)及[命令接入](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/cli/run.go)。验证方法与边界见[第86章](86-statistics-validation.md)。

@@ -5,7 +5,7 @@ package stats
 import (
 	"context"
 	"fmt"
-	innodb "innodb-go-reader"
+	innodb "github.com/kimihiro-dev/innodb-go-reader"
 	"io"
 	"sort"
 )

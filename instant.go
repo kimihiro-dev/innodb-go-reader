@@ -185,7 +185,7 @@ func (s Schema) validateInstant(pk []int) error {
 	return nil
 }
 
-func decodeLegacyInstantRecord(b []byte, origin, limit int, s Schema, pk []int) (Record, error) {
+func decodeLegacyInstantRecord(b []byte, origin, limit int, s Schema, pk []int, capture bool) (Record, error) {
 	flags := b[origin-5] & 0xf0
 	if flags&0x50 != 0 {
 		return Record{}, fmt.Errorf("%w: legacy INSTANT flags", ErrUnsupported)
@@ -218,14 +218,20 @@ func decodeLegacyInstantRecord(b []byte, origin, limit int, s Schema, pk []int) 
 	physical := s
 	physical.LegacyInstant = nil
 	physical.Columns = s.Columns[:n]
-	r, err := decodeStoredRecord(b, origin, limit, physical, pk, extra, nil)
+	r, err := decodeStoredRecord(b, origin, limit, physical, pk, extra, nil, capture)
 	if err != nil {
 		return Record{}, err
+	}
+	if capture && extra != 0 {
+		r.source.FieldCount = &ByteSpan{origin - 5 - extra, origin - 5}
 	}
 	r.Values = append(r.Values, make([]any, len(s.Columns)-n)...)
 	if !r.deleteMarked {
 		for i := n; i < len(s.Columns); i++ {
 			d := s.LegacyInstant.Defaults[i-s.LegacyInstant.Columns]
+			if capture {
+				r.source.Fields = append(r.source.Fields, defaultSource(i, s.Columns[i].Name, d))
+			}
 			r.DefaultColumns = append(r.DefaultColumns, i)
 			if !d.Null {
 				if err := r.decodeStoredValue(i, s.Columns[i], d.Data); err != nil {
@@ -237,7 +243,7 @@ func decodeLegacyInstantRecord(b []byte, origin, limit int, s Schema, pk []int) 
 	return r, nil
 }
 
-func decodeInstantRecord(b []byte, origin, limit int, s Schema, pk []int) (Record, error) {
+func decodeInstantRecord(b []byte, origin, limit int, s Schema, pk []int, capture bool) (Record, error) {
 	var empty Record
 	flags := b[origin-5] & 0xf0
 	if flags&0x90 != 0 {
@@ -276,12 +282,23 @@ func decodeInstantRecord(b []byte, origin, limit int, s Schema, pk []int) (Recor
 			}
 		}
 	}
-	r, err := decodeStoredRecord(b, origin, limit, physical, physicalPK, extra, dropped)
+	r, err := decodeStoredRecord(b, origin, limit, physical, physicalPK, extra, dropped, capture)
 	if err != nil {
-		return empty, err
+		return empty, remapProblemColumn(err, mapping)
 	}
 	if extra == 1 {
 		r.RowVersion = &version
+		if capture {
+			r.source.RowVersion = &ByteSpan{origin - 6, origin - 5}
+		}
+	}
+	if capture {
+		for i := range r.source.Fields {
+			f := &r.source.Fields[i]
+			if f.Column >= 0 {
+				f.Column = mapping[f.Column]
+			}
+		}
 	}
 	// Decode in physical order, then expose current SQL declaration order.
 	result := r
@@ -318,6 +335,9 @@ func decodeInstantRecord(b []byte, origin, limit int, s Schema, pk []int) (Recor
 	if !r.deleteMarked {
 		for _, f := range s.Instant.Fields {
 			if f.Column >= 0 && f.Added > version {
+				if capture {
+					result.source.Fields = append(result.source.Fields, defaultSource(f.Column, s.Columns[f.Column].Name, *f.Default))
+				}
 				result.DefaultColumns = append(result.DefaultColumns, f.Column)
 				if !f.Default.Null {
 					if err := result.decodeStoredValue(f.Column, s.Columns[f.Column], f.Default.Data); err != nil {

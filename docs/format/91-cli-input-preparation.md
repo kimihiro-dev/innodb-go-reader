@@ -1,8 +1,10 @@
 # 91. CLI输入准备：可信Schema与完整分区清单
 
+CLI与HTML实现由[独立应用项目](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/README.md)维护；本章应用命令在该仓库根目录执行，库API示例在基础库根目录执行。原始验证结果保留其采集时的范围。
+
 ## 学习目标与前置概念
 
-理解元数据采集、物理预检和行认证的区别，以及分区清单为何必须来自SDI或完整可信目录而不能只按文件名拼接。前置知识见[5.7显式元数据](87-mysql57-explicit-schema.md)、[二级物理字段](88-mysql57-secondary-indexes.md)和[分区集合布局](79-partition-collection-layout.md)。本章描述现有格式的CLI入口，操作步骤集中在[CLI指南](../CLI.md#schema采集可信定义)。
+理解元数据采集、物理预检和行认证的区别，以及分区清单为何必须来自SDI或完整可信目录而不能只按文件名拼接。前置知识见[5.7显式元数据](87-mysql57-explicit-schema.md)、[二级物理字段](88-mysql57-secondary-indexes.md)和[分区集合布局](79-partition-collection-layout.md)。本章描述现有格式的CLI入口，操作步骤集中在[CLI指南](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/docs/CLI.md#schema采集可信定义)。
 
 ## Schema采集与物理读取分工
 
@@ -74,4 +76,4 @@ schema先在同一父目录的临时目录完成元数据采集和编码，成�
 
 manifest显式限制1..1024个输入、集合SDI 64 MiB，以及发现和预检累计源页读取预算。此初版流程现已扩展至明确8.0补丁；5.7可信目录与manifest v2另见[第94章](94-partition-version-compatibility.md)。不增加子分区、集合查询或跨分区全局顺序。schema元数据采集需调用者控制DDL并匹配备份工具提供的稳定文件；不提供锁表、快照复制或SQL下载.ibd能力，两者均不新增恢复/MVCC能力。
 
-代码见[Go采集](../../internal/mysql57/collect.go)、[客户端会话](../../internal/mysql57/client.go)、[CLI准备入口](../../internal/cli/prepare.go)、[固定SQL对照](../../internal/mysql57/collect_test.go)、[协议/取消测试](../../internal/mysql57/client_test.go)与[清单端到端测试](../../internal/cli/prepare_test.go)。既有格式的独立来源继续使用固定SQL、官方SDI和原始文件；早期A来源缺少内部列计数时，单元测试明确使用合成补充，不冒充独立SQL。初版Docker入口验收保留在[输入准备报告](../input-preparation-validation/report.json)，当前驱动验收见[驱动验证报告](../schema-driver-validation/report.json)。
+代码见[Go采集](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/mysql57/collect.go)、[客户端会话](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/mysql57/client.go)、[CLI准备入口](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/cli/prepare.go)、[固定SQL对照](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/mysql57/collect_test.go)、[协议/取消测试](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/mysql57/client_test.go)与[清单端到端测试](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/cli/prepare_test.go)。既有格式的独立来源继续使用固定SQL、官方SDI和原始文件；早期A来源缺少内部列计数时，单元测试明确使用合成补充，不冒充独立SQL。初版Docker入口验收保留在[输入准备报告](../input-preparation-validation/report.json)，当前驱动验收见[驱动验证报告](../schema-driver-validation/report.json)。

@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	innodb "innodb-go-reader"
+	innodb "github.com/kimihiro-dev/innodb-go-reader"
 	"io"
 	"os"
 	"os/signal"

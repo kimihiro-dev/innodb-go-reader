@@ -13,6 +13,7 @@ type Record struct {
 	RowVersion     *uint8 // Explicit row-version byte; nil means an unversioned record.
 	DefaultColumns []int  // Logical columns synthesized from instant ADD defaults.
 	deleteMarked   bool
+	source         *RecordSource
 	RowID          *uint64 // Hidden DB_ROW_ID only; nil for user-column clustered keys.
 	key            indexKey
 	PageNumber     uint32
@@ -42,13 +43,17 @@ type pageEntry struct {
 }
 
 func decodePage(b []byte, p Page, schema Schema, pk []int) ([]pageEntry, error) {
+	return decodePageSources(b, p, schema, pk, false)
+}
+
+func decodePageSources(b []byte, p Page, schema Schema, pk []int, capture bool) ([]pageEntry, error) {
 	return decodePageEntries(b, p, func(origin, limit int) (pageEntry, error) {
 		var e pageEntry
 		var err error
 		if p.Level == 0 {
-			e.Record, err = decodeRecord(b, origin, limit, schema, pk)
+			e.Record, err = decodeRecordSources(b, origin, limit, schema, pk, capture)
 		} else {
-			e, err = decodeNode(b, origin, limit, schema, pk)
+			e, err = decodeNodeSources(b, origin, limit, schema, pk, capture)
 		}
 		if err == nil {
 			e.order = e.key
@@ -57,7 +62,13 @@ func decodePage(b []byte, p Page, schema Schema, pk []int) ([]pageEntry, error) 
 	}, func(a, b pageEntry) bool { return compareIndexKey(a.order, b.order, schema, pk) < 0 })
 }
 
-func decodePageEntries(b []byte, p Page, decode func(int, int) (pageEntry, error), less func(pageEntry, pageEntry) bool) ([]pageEntry, error) {
+func decodePageEntries(b []byte, p Page, decode func(int, int) (pageEntry, error), less func(pageEntry, pageEntry) bool) (_ []pageEntry, err error) {
+	location := ProblemLocation{Page: &p.Number, IndexID: &p.IndexID}
+	defer func() {
+		if err != nil {
+			err = problemAt(err, ProblemRecordLayout, location, "consistent record layout and local key order", err.Error())
+		}
+	}()
 	if string(b[99:107]) != "infimum\x00" || string(b[112:120]) != "supremum" ||
 		be.Uint16(b[95:97]) != 2 || be.Uint16(b[108:110]) != 11 ||
 		b[94] != 1 || b[107]&0xf0 != 0 || nextRecord(b, supremum) != 0 {
@@ -71,6 +82,7 @@ func decodePageEntries(b []byte, p Page, decode func(int, int) (pageEntry, error
 	slot, owned := 1, 0
 	liveBytes := 0
 	for origin := nextRecord(b, infimum); ; {
+		location.RecordPage, location.RecordOffset = &p.Number, diagnosticPtr(origin)
 		owned++
 		if origin == supremum {
 			if slot != len(p.Slots)-1 || int(b[supremum-5]&15) != owned {
@@ -165,19 +177,26 @@ func nextRecord(b []byte, origin int) int {
 }
 
 func decodeRecord(b []byte, origin, limit int, s Schema, pk []int) (Record, error) {
-	if s.LegacyInstant != nil {
-		return decodeLegacyInstantRecord(b, origin, limit, s, pk)
-	}
-	if s.Instant != nil {
-		return decodeInstantRecord(b, origin, limit, s, pk)
-	}
-	return decodeStoredRecord(b, origin, limit, s, pk, 0, nil)
+	return decodeRecordSources(b, origin, limit, s, pk, false)
 }
 
-func decodeStoredRecord(b []byte, origin, limit int, s Schema, pk []int, versionBytes int, dropped []bool) (Record, error) {
+func decodeRecordSources(b []byte, origin, limit int, s Schema, pk []int, capture bool) (Record, error) {
+	if s.LegacyInstant != nil {
+		return decodeLegacyInstantRecord(b, origin, limit, s, pk, capture)
+	}
+	if s.Instant != nil {
+		return decodeInstantRecord(b, origin, limit, s, pk, capture)
+	}
+	return decodeStoredRecord(b, origin, limit, s, pk, 0, nil, capture)
+}
+
+func decodeStoredRecord(b []byte, origin, limit int, s Schema, pk []int, versionBytes int, dropped []bool, capture bool) (Record, error) {
 	r := Record{Offset: origin, NextOffset: nextRecord(b, origin), Values: make([]any, len(s.Columns))}
 	copy(r.Header[:], b[origin-5:origin])
 	r.deleteMarked = r.Header[0]&0x20 != 0
+	if capture {
+		r.source = &RecordSource{Offset: origin, DeleteMarked: r.deleteMarked, Fields: make([]FieldSource, len(s.Columns))}
+	}
 	mask := byte(0xd0)
 	if versionBytes > 0 {
 		// The INSTANT decoder validates the mutually exclusive row-version
@@ -214,16 +233,36 @@ func decodeStoredRecord(b []byte, origin, limit int, s Schema, pk []int, version
 			physical = append(physical, i)
 		}
 	}
-	for _, i := range physical {
+	for position, i := range physical {
 		c := s.Columns[i]
+		if capture {
+			if position >= len(pk) {
+				position += 2
+				if s.hiddenRowID() {
+					position++
+				}
+			}
+			f := FieldSource{Column: i, Position: position, Name: c.Name, Kind: "stored"}
+			if dropped != nil && dropped[i] {
+				f.Column, f.Kind = -1, "dropped"
+			}
+			r.source.Fields[i] = f
+		}
 		if c.Nullable {
 			nulls[i] = b[nullPos-bit/8]&(1<<uint(bit%8)) != 0
+			if capture {
+				r.source.Fields[i].NullBit = &NullBit{nullPos - bit/8, 1 << uint(bit%8)}
+				r.source.Fields[i].Null = nulls[i]
+			}
 			bit++
 		}
 		if maximum := c.variableMaxBytes(); c.isVariable() && !nulls[i] {
 			length, next, ext, err := readVariableLength(b, lengthPos, maximum, c.lobTypeMaxBytes() != 0)
 			if err != nil {
-				return r, fmt.Errorf("column %q: %w", c.Name, err)
+				return r, problemAt(fmt.Errorf("column %q: %w", c.Name, err), ProblemFieldLayout, ProblemLocation{Column: diagnosticPtr(i), ColumnName: c.Name}, "valid variable length metadata", fmt.Sprintf("cursor=%d", lengthPos))
+			}
+			if capture {
+				r.source.Fields[i].Length = &ByteSpan{next + 1, lengthPos + 1}
 			}
 			lengths[i], lengthPos, external[i] = length, next, ext
 		}
@@ -251,9 +290,12 @@ func decodeStoredRecord(b []byte, origin, limit int, s Schema, pk []int, version
 		if err != nil {
 			return r, err
 		}
+		if capture {
+			r.source.Fields[column].Data = &ByteSpan{pos - n, pos}
+		}
 		r.Values[column], err = decodeKeyValue(c, key)
 		if err != nil {
-			return r, fmt.Errorf("column %q: %w", c.Name, err)
+			return r, problemAt(fmt.Errorf("column %q: %w", c.Name, err), ProblemFieldValue, ProblemLocation{Column: diagnosticPtr(column), ColumnName: c.Name, Bytes: &ByteSpan{pos - n, pos}}, c.Type, byteObservation(key))
 		}
 		r.key = append(r.key, append([]byte{}, key...))
 		if c.isText() {
@@ -269,6 +311,9 @@ func decodeStoredRecord(b []byte, origin, limit int, s Schema, pk []int, version
 		value := rowIDValue(raw)
 		r.RowID = &value
 		r.key = indexKey{append([]byte{}, raw...)}
+		if capture {
+			r.source.Fields = append(r.source.Fields, systemSource("DB_ROW_ID", 0, pos-6, pos))
+		}
 	}
 
 	system, err := take(13)
@@ -277,6 +322,13 @@ func decodeStoredRecord(b []byte, origin, limit int, s Schema, pk []int, version
 	}
 	copy(r.Transaction[:], system[:6])
 	copy(r.RollPointer[:], system[6:])
+	if capture {
+		position := len(pk)
+		if s.hiddenRowID() {
+			position++
+		}
+		r.source.Fields = append(r.source.Fields, systemSource("DB_TRX_ID", position, pos-13, pos-7), systemSource("DB_ROLL_PTR", position+1, pos-7, pos))
+	}
 	for i, c := range s.Columns {
 		if slices.Contains(pk, i) || nulls[i] {
 			continue
@@ -288,6 +340,19 @@ func decodeStoredRecord(b []byte, origin, limit int, s Schema, pk []int, version
 		value, err := take(length)
 		if err != nil {
 			return r, err
+		}
+		if capture {
+			f := &r.source.Fields[i]
+			f.Data = &ByteSpan{pos - length, pos}
+			if external[i] {
+				if length < 20 {
+					return r, fmt.Errorf("%w: truncated external reference", ErrCorrupt)
+				}
+				f.Reference = &ByteSpan{pos - 20, pos}
+				if length > 20 {
+					f.Prefix = &ByteSpan{pos - length, pos - 20}
+				}
+			}
 		}
 		if r.deleteMarked || dropped != nil && dropped[i] {
 			continue
@@ -302,12 +367,12 @@ func decodeStoredRecord(b []byte, origin, limit int, s Schema, pk []int, version
 				field, err = parseExternal(value, c.variableMaxBytes(), s.SpaceID)
 			}
 			if err != nil {
-				return r, fmt.Errorf("column %q: %w", c.Name, err)
+				return r, problemAt(fmt.Errorf("column %q: %w", c.Name, err), ProblemLOBReference, ProblemLocation{Column: diagnosticPtr(i), ColumnName: c.Name, Bytes: &ByteSpan{pos - length, pos}}, "valid local external reference/prefix", byteObservation(value))
 			}
 			field.Column, field.Offset = i, pos-20
 			r.External = append(r.External, field)
 		} else if err := r.decodeStoredValue(i, c, value); err != nil {
-			return r, err
+			return r, problemAt(err, ProblemFieldValue, ProblemLocation{Bytes: &ByteSpan{pos - length, pos}}, c.Type, byteObservation(value))
 		}
 	}
 	r.End = pos
@@ -315,8 +380,12 @@ func decodeStoredRecord(b []byte, origin, limit int, s Schema, pk []int, version
 }
 
 // decodeStoredValue also decodes instant ADD defaults in InnoDB field encoding.
-func (r *Record) decodeStoredValue(i int, c Column, value []byte) error {
-	var err error
+func (r *Record) decodeStoredValue(i int, c Column, value []byte) (err error) {
+	defer func() {
+		if err != nil {
+			err = problemAt(err, ProblemFieldValue, ProblemLocation{Column: &i, ColumnName: c.Name}, c.Type, byteObservation(value))
+		}
+	}()
 	if integerWidth(c.Type) != 0 {
 		r.Values[i] = decodeInteger(value, c.Unsigned)
 	} else if floatWidth(c.Type) != 0 {

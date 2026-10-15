@@ -132,7 +132,9 @@ func queryRows(ctx context.Context, r io.ReaderAt, size int64, schema *Schema, q
 }
 
 type querySelection struct {
-	deferValues                    bool // Internal secondary lookup: retain references without following LOBs.
+	captureSources                 bool // Storage analysis captures local provenance in the same decode.
+	deferValues                    bool // Projection/secondary lookup: retain references without following LOBs.
+	fullScan                       bool // Projection scan also validates both ends of each sibling chain.
 	lower, upper, prefix           indexKey
 	lowerInclusive, upperInclusive bool
 	reverse, empty, limitReached   bool

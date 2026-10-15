@@ -1,5 +1,7 @@
 # 86. 统计验收：独立口径、精度与失败
 
+CLI与HTML实现由[独立应用项目](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/README.md)维护；本章应用命令在该仓库根目录执行，库API示例在基础库根目录执行。原始验证结果保留其采集时的范围。
+
 ## 学习目标与前置概念
 
 证明统计字段可追溯到固定物理字节，区分独立预期和派生报告，并检查输出失败时的行为。先读[第85章指标模型](85-statistics-model-and-metrics.md)及[空间验收](76-space-analysis-validation.md)。本章说明统计验证方法，测试入口见[统计测试](../../stats/report_test.go)。
@@ -53,7 +55,7 @@ XDES描述页位于当前16384页组起点；组内第k个区描述位于页内`
 
 ## CLI、取消与发布失败
 
-[internal/cli/stats_test.go](../../internal/cli/stats_test.go)逐个验证六视图的table/json、默认summary/table、SDI筛选和level0。stdout JSON恰好一个对象；stderr为独立执行摘要，小表实际读取7次、空间遍历104项，不将表格行数计作SQL行。
+[internal/cli/stats_test.go](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/cli/stats_test.go)逐个验证六视图的table/json、默认summary/table、SDI筛选和level0。stdout JSON恰好一个对象；stderr为独立执行摘要，小表实际读取7次、空间遍历104项，不将表格行数计作SQL行。
 
 | 情况 | 预期 |
 |---|---|
@@ -79,6 +81,6 @@ go vet ./...
 python3 scripts/check_docs.py
 ```
 
-手工JSON/管道例子见[CLI指南](../CLI.md#stats统计汇总与-json)。必要时将GOCACHE设为可写临时目录；这只改变编译缓存，不改变输入。
+手工JSON/管道例子见[CLI指南](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/docs/CLI.md#stats统计汇总与-json)。必要时将GOCACHE设为可写临时目录；这只改变编译缓存，不改变输入。
 
 当前stats提供六视图及精确输出。页布局/LSN分布、TopN、SDI名称映射、记录长度、目录owner、完整树扇出和当前LOB引用统计未在stats中实现，不能从其他入口的解析成功推定已提供这些统计。

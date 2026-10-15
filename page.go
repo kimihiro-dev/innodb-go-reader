@@ -37,30 +37,29 @@ type Page struct {
 }
 
 func readPage(r io.ReaderAt, size int64, number uint32) ([]byte, error) {
-	offset := int64(number) * PageSize
-	if size < PageSize || size%PageSize != 0 || offset > size-PageSize {
-		return nil, fmt.Errorf("%w: page %d outside aligned file of %d bytes", ErrCorrupt, number, size)
-	}
-	b := make([]byte, PageSize)
-	n, err := r.ReadAt(b, offset)
+	b, err := ReadRawPage(r, size, number)
 	if err != nil {
-		return nil, fmt.Errorf("read page %d at file offset %d: %w", number, offset, err)
-	}
-	if n != len(b) {
-		return nil, fmt.Errorf("read page %d: %w", number, io.ErrUnexpectedEOF)
+		return nil, problemAt(err, ProblemPageRead, ProblemLocation{Page: &number}, "complete readable page", "read failed")
 	}
 	if err := verifyPageChecksum(b); err != nil {
-		return nil, fmt.Errorf("page %d at file offset %d: %w", number, offset, err)
+		return nil, problemAt(fmt.Errorf("page %d at file offset %d: %w", number, int64(number)*PageSize, err), ProblemChecksum, ProblemLocation{Page: &number}, "valid page envelope", "invalid page envelope")
 	}
 	if be.Uint32(b[4:8]) != number {
-		return nil, fmt.Errorf("%w: FIL page number does not match %d", ErrCorrupt, number)
+		return nil, problemAt(fmt.Errorf("%w: FIL page number does not match %d", ErrCorrupt, number), ProblemPageNumber, ProblemLocation{Page: &number, Bytes: &ByteSpan{4, 8}}, fmt.Sprint(number), fmt.Sprint(be.Uint32(b[4:8])))
 	}
 	return b, nil
 }
 
 func checkTablespace(b []byte, s Schema) error {
 	if be.Uint16(b[24:26]) != 8 || be.Uint32(b[34:38]) != s.SpaceID || be.Uint32(b[38:42]) != s.SpaceID {
-		return fmt.Errorf("%w: page 0 type or space ID mismatch", ErrCorrupt)
+		span := &ByteSpan{24, 26}
+		if be.Uint16(b[24:26]) == 8 {
+			span = &ByteSpan{34, 38}
+			if be.Uint32(b[34:38]) == s.SpaceID {
+				span = &ByteSpan{38, 42}
+			}
+		}
+		return problemAt(fmt.Errorf("%w: page 0 type or space ID mismatch", ErrCorrupt), ProblemPageIdentity, ProblemLocation{Page: diagnosticPtr(uint32(0)), Bytes: span}, fmt.Sprintf("FSP_HDR space=%d", s.SpaceID), fmt.Sprintf("type=%d FIL=%d FSP=%d", be.Uint16(b[24:26]), be.Uint32(b[34:38]), be.Uint32(b[38:42])))
 	}
 	flags := be.Uint32(b[54:58])
 	// fsp0types.h: POST_ANTELOPE bit 0, ZIP_SSIZE bits 1..4,
@@ -72,7 +71,7 @@ func checkTablespace(b []byte, s Schema) error {
 	}
 	if flags&0x21 != required || flags&0x1e != 0 || (ssize != 0 && ssize != 5) ||
 		flags & ^uint32(0x21|0x3c0|0x400|0x4000) != 0 {
-		return fmt.Errorf("%w: tablespace flags %#x; need matching DYNAMIC/COMPACT, 16 KiB, private unencrypted tablespace", ErrUnsupported, flags)
+		return problemAt(fmt.Errorf("%w: tablespace flags %#x; need matching DYNAMIC/COMPACT, 16 KiB, private unencrypted tablespace", ErrUnsupported, flags), ProblemFormat, ProblemLocation{Page: diagnosticPtr(uint32(0)), Bytes: &ByteSpan{54, 58}}, "matching private unencrypted 16 KiB DYNAMIC/COMPACT", fmt.Sprintf("%#x", flags))
 	}
 	return nil
 }
@@ -89,8 +88,8 @@ func parseIndexType(b []byte, s Schema, pageType uint16) (Page, error) {
 	return parseIndexTypeMinimum(b, s, pageType, 10)
 }
 
-func parseIndexTypeMinimum(b []byte, s Schema, pageType uint16, minimum int) (Page, error) {
-	p := Page{
+func parseIndexTypeMinimum(b []byte, s Schema, pageType uint16, minimum int) (p Page, err error) {
+	p = Page{
 		Number: be.Uint32(b[4:8]), SpaceID: be.Uint32(b[34:38]), Type: be.Uint16(b[24:26]),
 		Previous: be.Uint32(b[8:12]), Next: be.Uint32(b[12:16]),
 		LSN: be.Uint64(b[16:24]), Checksum: be.Uint32(b[:4]),
@@ -98,12 +97,21 @@ func parseIndexTypeMinimum(b []byte, s Schema, pageType uint16, minimum int) (Pa
 		HeapTop: be.Uint16(b[40:42]), HeapCount: be.Uint16(b[42:44]) & 0x7fff,
 		Records: be.Uint16(b[54:56]), Free: be.Uint16(b[44:46]), Garbage: be.Uint16(b[46:48]),
 	}
+	defer func() {
+		if err != nil {
+			err = problemAt(err, ProblemIndexHeader, ProblemLocation{Page: &p.Number, IndexID: &s.IndexID}, "consistent supported INDEX header and directory", err.Error())
+		}
+	}()
 	copy(p.Trailer[:], b[PageSize-8:])
 	if p.Type != pageType {
 		return p, fmt.Errorf("%w: page %d has type %d, expected %d", ErrUnsupported, p.Number, p.Type, pageType)
 	}
 	if p.SpaceID != s.SpaceID || p.IndexID != s.IndexID {
-		return p, fmt.Errorf("%w: space/index ID mismatch on page %d", ErrCorrupt, p.Number)
+		span := &ByteSpan{66, 74}
+		if p.SpaceID != s.SpaceID {
+			span = &ByteSpan{34, 38}
+		}
+		return p, newProblem(fmt.Errorf("%w: space/index ID mismatch on page %d", ErrCorrupt, p.Number), ProblemIndexIdentity, ProblemLocation{Page: &p.Number, IndexID: &s.IndexID, Bytes: span}, fmt.Sprintf("space=%d index=%d", s.SpaceID, s.IndexID), fmt.Sprintf("space=%d index=%d", p.SpaceID, p.IndexID))
 	}
 	if be.Uint16(b[42:44])&0x8000 == 0 {
 		return p, fmt.Errorf("%w: REDUNDANT record format", ErrUnsupported)

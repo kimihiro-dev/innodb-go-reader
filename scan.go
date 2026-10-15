@@ -22,6 +22,7 @@ var (
 // MaxEntries counts queued tree tasks, decoded physical entries and LOB traversal
 // entries cumulatively. MaxRows counts live rows. MaxRowBytes counts local record
 // bytes plus external suffixes and synthesized default bytes, before LOB decoding.
+// Projected APIs count all local bytes but only selected suffixes/default bytes.
 // MaxLOBBytes applies only to StreamLOB; typed values retain the 16 MiB limit.
 type ScanOptions struct {
 	CachePages   int    // default 64

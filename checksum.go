@@ -16,15 +16,19 @@ func pageCRC(b []byte) uint32 {
 
 func verifyPageChecksum(b []byte) error {
 	if bytes.Count(b, []byte{0}) == PageSize {
-		return fmt.Errorf("%w: referenced page is all zero (uninitialized or damaged)", ErrCorrupt)
+		return problemAt(fmt.Errorf("%w: referenced page is all zero (uninitialized or damaged)", ErrCorrupt), ProblemZeroPage, ProblemLocation{Bytes: &ByteSpan{0, PageSize}}, "initialized referenced page", "all zero")
 	}
 	if be.Uint32(b[20:24]) != be.Uint32(b[PageSize-4:]) {
-		return fmt.Errorf("%w: header/trailer LSN low 32 bits differ", ErrCorrupt)
+		return problemAt(fmt.Errorf("%w: header/trailer LSN low 32 bits differ", ErrCorrupt), ProblemLSN, ProblemLocation{Bytes: &ByteSpan{PageSize - 4, PageSize}}, fmt.Sprintf("%08x", be.Uint32(b[20:24])), fmt.Sprintf("%08x", be.Uint32(b[PageSize-4:])))
 	}
 	want := pageCRC(b)
 	head, tail := be.Uint32(b[:4]), be.Uint32(b[PageSize-8:PageSize-4])
 	if head != want || tail != want {
-		return fmt.Errorf("%w: CRC32C mismatch: header=%08x trailer=%08x calculated=%08x; strict crc32 format required", ErrCorrupt, head, tail, want)
+		span := &ByteSpan{0, 4}
+		if head == want {
+			span = &ByteSpan{PageSize - 8, PageSize - 4}
+		}
+		return problemAt(fmt.Errorf("%w: CRC32C mismatch: header=%08x trailer=%08x calculated=%08x; strict crc32 format required", ErrCorrupt, head, tail, want), ProblemChecksum, ProblemLocation{Bytes: span}, fmt.Sprintf("%08x", want), fmt.Sprintf("header=%08x trailer=%08x", head, tail))
 	}
 	return nil
 }

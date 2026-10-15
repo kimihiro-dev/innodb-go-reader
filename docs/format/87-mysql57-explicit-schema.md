@@ -1,5 +1,7 @@
 # 87. MySQL 5.7：显式元数据与真实文件读取
 
+CLI与HTML实现由[独立应用项目](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/README.md)维护；本章应用命令在该仓库根目录执行，库API示例在基础库根目录执行。原始验证结果保留其采集时的范围。
+
 ## 学习目标与前置概念
 
 本章保留5.7.44首次验收的样本与说明；新增明确补丁范围及源码/实例对照见[第92章](92-mysql57-patch-compatibility.md)。
@@ -77,9 +79,9 @@ lob_compact_initial 的第一行 txt 引用位于聚簇页内921，前面是768�
 
 ## 代码入口、验证与边界
 
-- [ValidateSchema](../../schema_check.go)、[CLI schema输入](../../internal/cli/schema.go)与[CLI主入口](../../internal/cli/run.go)。
-- [Go采集子命令](../../internal/mysql57/collect.go)、[独立采集脚本](../../scripts/mysql57_schema.py)、[真实夹具生成](../../scripts/generate_mysql57_fixtures.py)和[不支持布局验证](../../scripts/verify_mysql57_schema.py)。
-- [5.7 SQL/字节/损坏测试](../../mysql57_test.go)、[CLI及输入fuzz](../../internal/cli/schema_test.go)。
+- [ValidateSchema](../../schema_check.go)、[CLI schema输入](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/cli/schema.go)与[CLI主入口](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/cli/run.go)。
+- [Go采集子命令](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/mysql57/collect.go)、[独立采集脚本](../../scripts/mysql57_schema.py)、[真实夹具生成](../../scripts/generate_mysql57_fixtures.py)和[不支持布局验证](../../scripts/verify_mysql57_schema.py)。
+- [5.7 SQL/字节/损坏测试](../../mysql57_test.go)、[CLI及输入fuzz](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/cli/schema_test.go)。
 
 损坏测试只修改副本：BLOB环、空块、错空间/类型和 schema身份矛盾；结构实验重新封装CRC，独立CRC损坏实验保持错误CRC。完整Read不返回部分结果，流式错误保持Complete=false。VIRTUAL默认拒绝，--materialized仅返回存储列和单独定义，不补伪NULL。
 

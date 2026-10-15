@@ -3,3 +3,5 @@ __pycache__/
 *.py[cod]
 /graphify-out/
 /innodb-reader
+/go.work
+/go.work.sum

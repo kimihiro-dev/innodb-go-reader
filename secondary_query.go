@@ -138,30 +138,9 @@ func querySecondary(ctx context.Context, r io.ReaderAt, size int64, table *Schem
 	s := *table
 	report.VirtualColumns = s.VirtualColumns
 	s.VirtualColumns = nil
-	projection := []int{}
-	if q.Columns == nil {
-		for i := range s.Columns {
-			projection = append(projection, i)
-		}
-	} else {
-		if len(q.Columns) == 0 {
-			return report, fmt.Errorf("%w: empty projection", ErrUnsupported)
-		}
-		used := map[int]bool{}
-		for _, name := range q.Columns {
-			found := -1
-			for i, c := range s.Columns {
-				if c.Name == name {
-					found = i
-					break
-				}
-			}
-			if found < 0 || used[found] {
-				return report, fmt.Errorf("%w: unknown/duplicate/unmaterialized projection %q", ErrUnsupported, name)
-			}
-			used[found] = true
-			projection = append(projection, found)
-		}
+	projection, err := prepareProjection(s, q.Columns)
+	if err != nil {
+		return report, err
 	}
 	for _, i := range projection {
 		report.Columns = append(report.Columns, s.Columns[i])

@@ -88,7 +88,8 @@ type spaceAnalysis struct {
 }
 
 func spaceError(format string, args ...any) error {
-	return fmt.Errorf("%w: space: %s", ErrCorrupt, fmt.Sprintf(format, args...))
+	actual := fmt.Sprintf(format, args...)
+	return newProblem(fmt.Errorf("%w: space: %s", ErrCorrupt, actual), ProblemAllocation, ProblemLocation{}, "consistent allocation metadata", actual)
 }
 func (a *spaceAnalysis) step(n uint64) error {
 	if err := a.ctx.Err(); err != nil {
@@ -96,6 +97,9 @@ func (a *spaceAnalysis) step(n uint64) error {
 	}
 	if n > a.options.MaxEntries-a.out.TraversalEntries {
 		return fmt.Errorf("%w: space traversal entries", ErrLimit)
+	}
+	if err := scanEntries(a.r, n); err != nil {
+		return err
 	}
 	a.out.TraversalEntries += n
 	return nil
@@ -107,20 +111,24 @@ func (a *spaceAnalysis) read(n uint32) ([]byte, error) {
 	b := make([]byte, PageSize)
 	got, err := a.r.ReadAt(b, int64(n)*PageSize)
 	a.out.PhysicalReads++
-	if err != nil {
-		return nil, fmt.Errorf("space page %d: %w", n, err)
+	if err != nil && !(got == PageSize && err == io.EOF) {
+		return nil, problemAt(fmt.Errorf("space page %d: %w", n, err), ProblemPageRead, ProblemLocation{Page: &n}, "complete readable page", "read failed")
 	}
 	if got != PageSize {
-		return nil, io.ErrUnexpectedEOF
+		return nil, problemAt(io.ErrUnexpectedEOF, ProblemPageRead, ProblemLocation{Page: &n}, fmt.Sprint(PageSize), fmt.Sprint(got))
 	}
 	return b, nil
 }
 func (a *spaceAnalysis) verified(b []byte, n uint32) error {
 	if err := verifyPageChecksum(b); err != nil {
-		return fmt.Errorf("space page %d: %w", n, err)
+		return problemAt(fmt.Errorf("space page %d: %w", n, err), ProblemChecksum, ProblemLocation{Page: &n}, "valid page envelope", "invalid page envelope")
 	}
 	if be.Uint32(b[4:]) != n || be.Uint32(b[34:]) != a.out.SpaceID {
-		return spaceError("page %d FIL identity", n)
+		span := &ByteSpan{4, 8}
+		if be.Uint32(b[4:]) == n {
+			span = &ByteSpan{34, 38}
+		}
+		return newProblem(spaceError("page %d FIL identity", n), ProblemPageIdentity, ProblemLocation{Page: &n, Bytes: span}, fmt.Sprintf("page=%d space=%d", n, a.out.SpaceID), fmt.Sprintf("page=%d space=%d", be.Uint32(b[4:]), be.Uint32(b[34:])))
 	}
 	return nil
 }
@@ -146,79 +154,8 @@ func AnalyzeSpace(ctx context.Context, r io.ReaderAt, size int64, options SpaceO
 	if err != nil {
 		return nil, err
 	}
-	out.SpaceID = be.Uint32(b[34:])
-	out.Flags = be.Uint32(b[54:])
-	if err = a.verified(b, 0); err != nil {
+	if err = a.descriptors(b); err != nil {
 		return nil, err
-	}
-	if out.SpaceID == 0 {
-		return nil, fmt.Errorf("%w: space analysis requires a private tablespace", ErrUnsupported)
-	}
-	s := Schema{SpaceID: out.SpaceID}
-	if out.Flags&0x21 == 0 {
-		s.RowFormat = "COMPACT"
-	}
-	if err = checkTablespace(b, s); err != nil {
-		return nil, err
-	}
-	out.SizePages = be.Uint32(b[46:])
-	out.FreeLimit = be.Uint32(b[50:])
-	out.FragmentUsed = be.Uint32(b[58:])
-	out.NextSegmentID = be.Uint64(b[110:])
-	if out.SizePages < 3 || uint64(out.SizePages) > out.FilePages || out.FreeLimit < 64 || out.FreeLimit%64 != 0 || uint64(out.FreeLimit) > ((uint64(out.SizePages)+63)/64)*64 || out.NextSegmentID == 0 {
-		return nil, spaceError("FSP size/free limit/segment ID")
-	}
-	a.metadata[0] = b
-	for n := uint32(0); n < out.FreeLimit; n += PageSize {
-		raw := b
-		if n != 0 {
-			raw, err = a.read(n)
-			if err != nil {
-				return nil, err
-			}
-			if err = a.verified(raw, n); err != nil {
-				return nil, err
-			}
-			if be.Uint16(raw[24:]) != 9 {
-				return nil, spaceError("descriptor page %d type", n)
-			}
-			a.metadata[n] = raw
-		}
-		for first := n; first < n+PageSize && first < out.FreeLimit; first += 64 {
-			off := 150 + int((first-n)/64)*40
-			e := SpaceExtent{FirstPage: first, DescriptorPage: n, Offset: uint16(off), SegmentID: be.Uint64(raw[off:]), State: be.Uint32(raw[off+20:])}
-			if e.State < 1 || e.State > 5 {
-				return nil, spaceError("extent %d state %d", first, e.State)
-			}
-			for j := uint32(0); j < 64; j++ {
-				bits := (raw[off+24+int(j/4)] >> ((j % 4) * 2)) & 3
-				if bits&1 != 0 {
-					e.FreeBits |= uint64(1) << j
-				} else {
-					e.Used++
-					if first+j >= out.SizePages {
-						return nil, spaceError("allocated page beyond FSP_SIZE")
-					}
-				}
-				if bits&2 != 0 {
-					e.CleanBits |= uint64(1) << j
-				}
-				if first+j < out.SizePages {
-					e.Present++
-				}
-			}
-			if (e.State == 1 && e.Used != 0) || (e.State == 2 && (e.Used == 0 || e.Used == 64)) || (e.State == 3 && e.Used != 64) {
-				return nil, spaceError("extent %d state/bitmap", first)
-			}
-			if first%PageSize == 0 && (e.FreeBits&3 != 0 || (e.State != 2 && e.State != 3 && e.State != 5)) {
-				return nil, spaceError("descriptor extent reserved pages")
-			}
-			if e.State == 5 && (first%PageSize != 0 || e.Used < 2) {
-				return nil, spaceError("leased fragment extent")
-			}
-			a.extent[lobAddress{n, uint16(off + 8)}] = len(out.Extents)
-			out.Extents = append(out.Extents, e)
-		}
 	}
 	out.Pages = make([]SpacePage, out.FilePages)
 	for n := uint32(0); uint64(n) < out.FilePages; n++ {
@@ -461,5 +398,86 @@ func (a *spaceAnalysis) indexes() error {
 	}
 
 	sort.Slice(a.out.Indexes, func(i, j int) bool { return a.out.Indexes[i].ID < a.out.Indexes[j].ID })
+	return nil
+}
+
+// descriptors validates allocation classification without trusting data-page payloads.
+func (a *spaceAnalysis) descriptors(b []byte) error {
+	out := a.out
+	var err error
+	out.SpaceID = be.Uint32(b[34:])
+	out.Flags = be.Uint32(b[54:])
+	if err = a.verified(b, 0); err != nil {
+		return err
+	}
+	if out.SpaceID == 0 {
+		return fmt.Errorf("%w: space analysis requires a private tablespace", ErrUnsupported)
+	}
+	s := Schema{SpaceID: out.SpaceID}
+	if out.Flags&0x21 == 0 {
+		s.RowFormat = "COMPACT"
+	}
+	if err = checkTablespace(b, s); err != nil {
+		return err
+	}
+	out.SizePages = be.Uint32(b[46:])
+	out.FreeLimit = be.Uint32(b[50:])
+	out.FragmentUsed = be.Uint32(b[58:])
+	out.NextSegmentID = be.Uint64(b[110:])
+	if out.SizePages < 3 || uint64(out.SizePages) > out.FilePages || out.FreeLimit < 64 || out.FreeLimit%64 != 0 || uint64(out.FreeLimit) > ((uint64(out.SizePages)+63)/64)*64 || out.NextSegmentID == 0 {
+		return newProblem(spaceError("FSP size/free limit/segment ID"), ProblemAllocation, ProblemLocation{Page: diagnosticPtr(uint32(0)), Bytes: &ByteSpan{46, 118}}, "valid FSP size/free limit/segment ID", fmt.Sprintf("size=%d free_limit=%d next_segment=%d", out.SizePages, out.FreeLimit, out.NextSegmentID))
+	}
+	a.metadata[0] = b
+	for n := uint32(0); n < out.FreeLimit; n += PageSize {
+		raw := b
+		if n != 0 {
+			raw, err = a.read(n)
+			if err != nil {
+				return err
+			}
+			if err = a.verified(raw, n); err != nil {
+				return err
+			}
+			if be.Uint16(raw[24:]) != 9 {
+				return spaceError("descriptor page %d type", n)
+			}
+			a.metadata[n] = raw
+		}
+		for first := n; first < n+PageSize && first < out.FreeLimit; first += 64 {
+			off := 150 + int((first-n)/64)*40
+			e := SpaceExtent{FirstPage: first, DescriptorPage: n, Offset: uint16(off), SegmentID: be.Uint64(raw[off:]), State: be.Uint32(raw[off+20:])}
+			if e.State < 1 || e.State > 5 {
+				return newProblem(spaceError("extent %d state %d", first, e.State), ProblemAllocation, ProblemLocation{Page: &n, Bytes: &ByteSpan{off + 20, off + 24}}, "extent state 1..5", fmt.Sprint(e.State))
+			}
+			for j := uint32(0); j < 64; j++ {
+				bits := (raw[off+24+int(j/4)] >> ((j % 4) * 2)) & 3
+				if bits&1 != 0 {
+					e.FreeBits |= uint64(1) << j
+				} else {
+					e.Used++
+					if first+j >= out.SizePages {
+						return spaceError("allocated page beyond FSP_SIZE")
+					}
+				}
+				if bits&2 != 0 {
+					e.CleanBits |= uint64(1) << j
+				}
+				if first+j < out.SizePages {
+					e.Present++
+				}
+			}
+			if (e.State == 1 && e.Used != 0) || (e.State == 2 && (e.Used == 0 || e.Used == 64)) || (e.State == 3 && e.Used != 64) {
+				return spaceError("extent %d state/bitmap", first)
+			}
+			if first%PageSize == 0 && (e.FreeBits&3 != 0 || (e.State != 2 && e.State != 3 && e.State != 5)) {
+				return spaceError("descriptor extent reserved pages")
+			}
+			if e.State == 5 && (first%PageSize != 0 || e.Used < 2) {
+				return spaceError("leased fragment extent")
+			}
+			a.extent[lobAddress{n, uint16(off + 8)}] = len(out.Extents)
+			out.Extents = append(out.Extents, e)
+		}
+	}
 	return nil
 }

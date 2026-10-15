@@ -1,6 +1,6 @@
 # CLI输入准备验收证据
 
-本目录保存输入准备的Go采集、完整分区清单生成与失败契约验证。功能入口与前提见[CLI指南](../CLI.md#schema采集可信定义)，格式与字节说明见[第91章](../format/91-cli-input-preparation.md)，验收摘要见[验证报告](report.json)。
+本目录保存输入准备的Go采集、完整分区清单生成与失败契约验证。功能入口与前提见[CLI指南](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/docs/CLI.md#schema采集可信定义)，格式与字节说明见[第91章](../format/91-cli-input-preparation.md)，验收摘要见[验证报告](report.json)。
 
 - [report.json](report.json)：最终检查、范围和限制。
 - [full-tests.log](full-tests.log)、[race.log](race.log)、[vet.log](vet.log)：本轮非缓存Go回归、受影响包race及全项目vet原始结果。

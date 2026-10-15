@@ -1,5 +1,7 @@
 # 84. 首版交付、复验与故障定位
 
+CLI与HTML实现由[独立应用项目](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/README.md)维护；本章应用命令在该仓库根目录执行，库API示例在基础库根目录执行。原始验证结果保留其采集时的范围。
+
 ## 交付物与构建
 
 2026-09-30本地首版基线包含Go源码、七命令CLI、rowio/visual包、固定夹具、验证脚本和01–84章手册。范围见[第83章](83-release-support-matrix.md)。本章保留当时的验证方法和技术证据；当前源码以最新提交为准。已有证据和历史标签不增加永久Go API兼容保证。
@@ -21,7 +23,7 @@ go build -o /tmp/innodb-reader ./cmd/innodb-reader
 python3 scripts/verify_release.py --out /tmp/innodb-release-verification
 ```
 
-[verify_release.py](../../scripts/verify_release.py)从脚本所在仓库运行，输出目录必须不存在。它依次执行：工具环境记录、完整race/coverage（25分钟超时）、vet、Read/分区/rowio/HTML四项各10秒主动fuzz、3次扫描基准、GC后存活堆实验、CLI构建与成功/拒绝烟测。普通完整Go测试也运行其余fuzz种子；本次主动fuzz不宣称覆盖每个fuzz目标的随机空间。
+[verify_release.py](../../scripts/verify_release.py)当前从基础库仓库运行，输出目录必须不存在。它执行环境记录、库及rowio/stats完整race/coverage（25分钟超时）、vet、Read/分区/rowio三项各10秒主动fuzz、3次扫描基准和GC后存活堆实验。CLI及HTML检查由独立应用项目维护；本章保存的首版报告仍描述拆分前的四项主动fuzz及CLI烟测，不当作当前脚本的新执行结果。
 
 `report.json`只在全部检查成功且源码/夹具指纹前后一致时标记`complete:true`，检查失败退出非零并保留日志；进程被强制终止时可能没有最终报告，不能认定成功。原始快照只读，损坏实验和CLI输出位于临时目录，无MySQL连接。允许Go测试缓存，日志中的`(cached)`必须照实解释；需要独立新执行时可按下面命令加`-count=1`，不要因首版文档修改无意义地重复长回归。
 
@@ -32,7 +34,7 @@ go test -run '^$' -bench '^BenchmarkTableScan$' -benchtime=3x -benchmem
 INNODB_SCAN_MEMORY=1 go test -run '^TestScanMemory$' -count=1 -v
 ```
 
-指纹算法：相对路径按字典序排列，每项写入UTF-8路径、NUL及该文件SHA256原始32字节，再计算总体SHA256。源码集合含Go源码/测试/示例、go.mod、嵌入HTML及复验脚本；testdata集合含所有固定文件和独立预期。它用于同一份输入复核，不是代码签名，也不证明SQL预期来源真实性。文档状态更新不改变解析器指纹。
+指纹算法：相对路径按字典序排列，每项写入UTF-8路径、NUL及该文件SHA256原始32字节，再计算总体SHA256。当前源码集合含根包、rowio/stats和示例的Go源码/测试、go.mod及复验脚本；testdata集合含所有固定文件和独立预期。首版报告中的源码集合还含当时的应用及HTML，不能与拆分后的集合直接比较。指纹用于同一份输入复核，不是代码签名，也不证明SQL预期来源真实性。
 
 ## 覆盖与独立证据
 
@@ -48,7 +50,7 @@ INNODB_SCAN_MEMORY=1 go test -run '^TestScanMemory$' -count=1 -v
 | 分区×空表/LOB/COMPACT/DDL | 34文件、12集合，TestPartitionFixtures/TestPartitionOfficialSDI | 11成功集合3184行，1子分区拒绝；[官方/SQL记录](../../testdata/partitions/verification.json) |
 | 空间×大文件×删除/重建 | 4空间专用快照，TestSpaceAssets/TestSpaceSnapshots | 另有487单表空间回归；跨XDES组、空闲残留，计数不混入读行基线；[证据](../../testdata/space/verification.json) |
 | CLI失败与输出 | internal/cli的原子发布、子进程、取消、分区、visual测试 | SIGINT、断管、后段损坏、输入保护和预算；平台保证限实际运行环境 |
-| 图与原始字节 | visual测试及[6类独立报告验证](../../scripts/verify_visual_reports.py) | 用户已确认关键浏览器交互；没有自动截图或跨浏览器验收 |
+| 图与原始字节 | visual测试及[6类独立报告验证](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/scripts/verify_visual_reports.py) | 用户已确认关键浏览器交互；没有自动截图或跨浏览器验收 |
 
 原始独立证据来自历阶段SQL采集、innochecksum和ibd2sdi记录，本次离线收尾复用这些固定预期，不声称重新执行官方工具或SQL服务。分区INNODB_INDEXES无本样本物理索引行，索引身份通过官方SDI验证，不称为SQL索引对照。
 

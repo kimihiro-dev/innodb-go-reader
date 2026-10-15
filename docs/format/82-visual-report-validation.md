@@ -1,5 +1,7 @@
 # 82. 报告命令、数据核对与交互验收
 
+CLI与HTML实现由[独立应用项目](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/README.md)维护；本章应用命令在该仓库根目录执行，库API示例在基础库根目录执行。原始验证结果保留其采集时的范围。
+
 <a id="学习目标"></a>
 
 ## 学习目标与前置概念
@@ -37,15 +39,15 @@ gzip -dc testdata/variable/external_text.ibd.gz > /tmp/visual-lob.ibd
 
 可在本地浏览器打开：
 
-- [lesson.html](../../examples/visual/lesson.html)：7页、4条记录，适合核对记录高亮和页布局。
-- [lob.html](../../examples/visual/lob.html)：9页、2条记录，嵌入0/4/5/6页，适合检查引用和数据块。
-- [secondary.html](../../examples/visual/secondary.html)：960页表空间、182页二级树、181条父子边，嵌入0/5/313页及10条选定记录详情。
+- [lesson.html](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/examples/visual/lesson.html)：7页、4条记录，适合核对记录高亮和页布局。
+- [lob.html](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/examples/visual/lob.html)：9页、2条记录，嵌入0/4/5/6页，适合检查引用和数据块。
+- [secondary.html](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/examples/visual/secondary.html)：960页表空间、182页二级树、181条父子边，嵌入0/5/313页及10条选定记录详情。
 
 这三份报告只含固定测试夹具；生成的报告会包含所选原始页字节，因此用户数据报告应按原始文件的数据敏感性保管。示例没有额外加载资源，脱离仓库也能查看；手册链接需指定本地目录或按章节路径查找。
 
 ## 独立数据验证
 
-[verify_visual_reports.py](../../scripts/verify_visual_reports.py)构建正式CLI，生成6类报告，对照独立space命令结构化输出、原文件字节、记录/LOB引用偏移，并用Node检查JavaScript语法。预期不从HTML图形反推，也不将JavaScript语法通过称为浏览器交互通过。
+[verify_visual_reports.py](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/scripts/verify_visual_reports.py)构建正式CLI，生成6类报告，对照独立space命令结构化输出、原文件字节、记录/LOB引用偏移，并用Node检查JavaScript语法。预期不从HTML图形反推，也不将JavaScript语法通过称为浏览器交互通过。
 
 ```sh
 python3 scripts/verify_visual_reports.py --out /tmp/new-visual-reports
@@ -62,7 +64,7 @@ python3 scripts/verify_visual_reports.py --out /tmp/new-visual-reports
 | grown空间 | 17408 | 未请求 | 0 | 0 |
 | ranges-p0空间 | 29 | 未请求 | 0 | 0 |
 
-6份报告的Space字段与空间API一致（未知页Raw按规则不自动嵌入）；原始页十六进制与源文件逐字节相等，LOB Reference与记录中20字节一致，嵌入JSON可独立解析，所有整数保持字符串。[验证记录](../../examples/visual/verification.json)注明自动验证范围；用户验收记录见本章末尾。
+6份报告的Space字段与空间API一致（未知页Raw按规则不自动嵌入）；原始页十六进制与源文件逐字节相等，LOB Reference与记录中20字节一致，嵌入JSON可独立解析，所有整数保持字符串。[验证记录](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/examples/visual/verification.json)注明自动验证范围；用户验收记录见本章末尾。
 
 Go单元测试还逐项对照公开Read/ReadMaterializedAuto/ReadSecondaryAuto的TreePages、Edges和所选记录/LOB来源。覆盖多层树、二级删除记录、VIRTUAL严格/物化选择、分区空间成功但单文件索引失败，以及17,408页空间样本。没有为可视化重新采集MySQL数据，也没有改旧夹具。
 

@@ -39,24 +39,8 @@ func ValidateSchema(r io.ReaderAt, size int64, schema Schema) error {
 // It does not prove that the list is exhaustive or validate descendant pages.
 // The clustered root is checked separately by ValidateSchema.
 func ValidateSecondarySchemas(r io.ReaderAt, size int64, table Schema, indexes []SecondarySchema) error {
-	if _, err := table.validate(); err != nil {
+	if err := validateSecondaryDefinitions(table, indexes); err != nil {
 		return err
-	}
-	clusterName := "PRIMARY"
-	if table.ClusteredKey != nil {
-		clusterName = table.ClusteredKey.Name
-	}
-	names := map[string]bool{clusterName: true}
-	ids := map[uint64]bool{table.IndexID: true}
-	roots := map[uint32]bool{table.RootPage: true}
-	for _, index := range indexes {
-		if err := validateSecondaryTable(table, index); err != nil {
-			return fmt.Errorf("index %q: %w", index.Name, err)
-		}
-		if names[index.Name] || ids[index.IndexID] || roots[index.RootPage] {
-			return fmt.Errorf("%w: duplicate index identity %q", ErrUnsupported, index.Name)
-		}
-		names[index.Name], ids[index.IndexID], roots[index.RootPage] = true, true, true
 	}
 	if len(indexes) == 0 {
 		return nil
@@ -80,6 +64,29 @@ func ValidateSecondarySchemas(r io.ReaderAt, size int64, table Schema, indexes [
 		if page.Previous != ^uint32(0) || page.Next != ^uint32(0) {
 			return fmt.Errorf("%w: supplied secondary root %q has siblings", ErrCorrupt, index.Name)
 		}
+	}
+	return nil
+}
+
+func validateSecondaryDefinitions(table Schema, indexes []SecondarySchema) error {
+	if _, err := table.validate(); err != nil {
+		return err
+	}
+	clusterName := "PRIMARY"
+	if table.ClusteredKey != nil {
+		clusterName = table.ClusteredKey.Name
+	}
+	names := map[string]bool{clusterName: true}
+	ids := map[uint64]bool{table.IndexID: true}
+	roots := map[uint32]bool{table.RootPage: true}
+	for _, index := range indexes {
+		if err := validateSecondaryTable(table, index); err != nil {
+			return fmt.Errorf("index %q: %w", index.Name, err)
+		}
+		if names[index.Name] || ids[index.IndexID] || roots[index.RootPage] {
+			return fmt.Errorf("%w: duplicate index identity %q", ErrUnsupported, index.Name)
+		}
+		names[index.Name], ids[index.IndexID], roots[index.RootPage] = true, true, true
 	}
 	return nil
 }

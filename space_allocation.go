@@ -81,7 +81,7 @@ func (a *spaceAnalysis) allocations() error {
 		}
 	}
 	if fragmentUsed != a.out.FragmentUsed {
-		return spaceError("FSP fragment used count")
+		return newProblem(spaceError("FSP fragment used count"), ProblemAllocation, ProblemLocation{Page: diagnosticPtr(uint32(0)), Bytes: &ByteSpan{58, 62}}, fmt.Sprint(fragmentUsed), fmt.Sprint(a.out.FragmentUsed))
 	}
 	for i, name := range []string{"inode-full", "inode-free"} {
 		err := a.list(fsp[118+i*16:], name, func(addr lobAddress) error {
@@ -100,7 +100,7 @@ func (a *spaceAnalysis) allocations() error {
 				}
 				used++
 				if id >= a.out.NextSegmentID || be.Uint32(raw[off+60:]) != 97937874 {
-					return spaceError("inode ID/magic")
+					return newProblem(spaceError("inode ID/magic"), ProblemAllocation, ProblemLocation{Page: &addr.page, Bytes: &ByteSpan{off, off + 64}}, "allocated segment ID and magic 97937874", fmt.Sprintf("id=%d magic=%d", id, be.Uint32(raw[off+60:])))
 				}
 				if _, ok := a.segments[id]; ok {
 					return spaceError("duplicate segment %d", id)

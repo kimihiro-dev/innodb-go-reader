@@ -159,6 +159,10 @@ func compareSecondary(a, b indexKey, columns []Column) int {
 	return 0
 }
 func decodeSecondary(b []byte, origin, limit int, columns []Column, fields []SecondaryField, node bool) (pageEntry, error) {
+	return decodeSecondarySources(b, origin, limit, columns, fields, node, false)
+}
+
+func decodeSecondarySources(b []byte, origin, limit int, columns []Column, fields []SecondaryField, node, capture bool) (pageEntry, error) {
 	e := pageEntry{Record: Record{Offset: origin, NextOffset: nextRecord(b, origin), Values: make([]any, len(columns))}}
 	copy(e.Header[:], b[origin-5:origin])
 	flags := e.Header[0] & 0xf0
@@ -178,6 +182,9 @@ func decodeSecondary(b []byte, origin, limit int, columns []Column, fields []Sec
 	e.HeapNumber = packed >> 3
 	e.minimum = flags&0x10 != 0
 	e.deleteMarked = flags&0x20 != 0
+	if capture {
+		e.source = &RecordSource{Offset: origin, Node: node, DeleteMarked: e.deleteMarked, Fields: make([]FieldSource, len(columns))}
+	}
 	nullable := 0
 	for _, c := range columns {
 		if c.Nullable {
@@ -193,8 +200,19 @@ func decodeSecondary(b []byte, origin, limit int, columns []Column, fields []Sec
 	lengths := make([]int, len(columns))
 	bit := 0
 	for i, c := range columns {
+		if capture {
+			f := FieldSource{Column: fields[i].Column, Position: i, Name: fields[i].Definition.Name, Kind: "stored"}
+			if fields[i].RowID {
+				f.Column, f.Name, f.Kind = -1, "DB_ROW_ID", "system"
+			}
+			e.source.Fields[i] = f
+		}
 		if c.Nullable {
 			nulls[i] = b[nullPos-bit/8]&(1<<uint(bit%8)) != 0
+			if capture {
+				e.source.Fields[i].NullBit = &NullBit{nullPos - bit/8, 1 << uint(bit%8)}
+				e.source.Fields[i].Null = nulls[i]
+			}
 			bit++
 		}
 		if nulls[i] {
@@ -213,6 +231,9 @@ func decodeSecondary(b []byte, origin, limit int, columns []Column, fields []Sec
 				return e, fmt.Errorf("%w: secondary prefix length", ErrCorrupt)
 			}
 			lengths[i] = n
+			if capture {
+				e.source.Fields[i].Length = &ByteSpan{next + 1, lengthPos + 1}
+			}
 			lengthPos = next
 		}
 	}
@@ -228,6 +249,9 @@ func decodeSecondary(b []byte, origin, limit int, columns []Column, fields []Sec
 			return e, fmt.Errorf("%w: secondary field outside heap", ErrCorrupt)
 		}
 		raw := b[pos : pos+n]
+		if capture {
+			e.source.Fields[i].Data = &ByteSpan{pos, pos + n}
+		}
 		e.order[i] = append([]byte{}, raw...)
 		var v any
 		var err error
@@ -237,7 +261,7 @@ func decodeSecondary(b []byte, origin, limit int, columns []Column, fields []Sec
 			v, err = decodeKeyValue(c, raw)
 		}
 		if err != nil {
-			return e, err
+			return e, problemAt(err, ProblemFieldValue, ProblemLocation{Column: diagnosticPtr(fields[i].Column), ColumnName: fields[i].Definition.Name, Bytes: &ByteSpan{pos, pos + n}}, c.Type, byteObservation(raw))
 		}
 		if c.Type == "CHAR" {
 			v = strings.TrimRight(v.(string), " ")
@@ -250,6 +274,9 @@ func decodeSecondary(b []byte, origin, limit int, columns []Column, fields []Sec
 			return e, fmt.Errorf("%w: secondary child truncated", ErrCorrupt)
 		}
 		e.child = be.Uint32(b[pos : pos+4])
+		if capture {
+			e.source.Fields = append(e.source.Fields, systemSource("child_page", len(columns), pos, pos+4))
+		}
 		pos += 4
 		if e.child == 0 {
 			return e, fmt.Errorf("%w: secondary zero child", ErrCorrupt)
@@ -284,6 +311,7 @@ func walkSecondary(r io.ReaderAt, size int64, s SecondarySchema, yield func(Seco
 
 func walkSelectedSecondary(r io.ReaderAt, size int64, s SecondarySchema, yield func(SecondaryEvent) error, selection *secondarySelection) error {
 	reverse := selection != nil && selection.reverse
+	fullScan := selection == nil || selection.fullScan
 	columns, err := s.validate()
 	if err != nil {
 		return err
@@ -317,7 +345,7 @@ func walkSelectedSecondary(r io.ReaderAt, size int64, s SecondarySchema, yield f
 		t := stack[len(stack)-1]
 		stack = stack[:len(stack)-1]
 		if seen[t.page] {
-			return fmt.Errorf("%w: repeated secondary page", ErrCorrupt)
+			return navigationProblem(fmt.Errorf("%w: repeated secondary page", ErrCorrupt), t.page, s.IndexID)
 		}
 		seen[t.page] = true
 		b, err := readPage(r, size, t.page)
@@ -329,15 +357,15 @@ func walkSelectedSecondary(r io.ReaderAt, size int64, s SecondarySchema, yield f
 			return err
 		}
 		if int64(p.Level) >= size/PageSize || t.level >= 0 && int(p.Level) != t.level {
-			return fmt.Errorf("%w: secondary page level", ErrCorrupt)
+			return navigationProblem(fmt.Errorf("%w: secondary page level", ErrCorrupt), p.Number, s.IndexID)
 		}
 		previous, ok := last[p.Level]
 		linked := previous.Next == p.Number && p.Previous == previous.Number
 		if reverse {
 			linked = previous.Previous == p.Number && p.Next == previous.Number
 		}
-		if !ok && selection == nil && p.Previous != ^uint32(0) || ok && !linked {
-			return fmt.Errorf("%w: secondary sibling chain", ErrCorrupt)
+		if !ok && fullScan && p.Previous != ^uint32(0) || ok && !linked {
+			return navigationProblem(fmt.Errorf("%w: secondary sibling chain", ErrCorrupt), p.Number, s.IndexID)
 		}
 		last[p.Level] = p
 		if err = scanEntries(r, uint64(p.Records)); err != nil {
@@ -350,11 +378,11 @@ func walkSelectedSecondary(r io.ReaderAt, size int64, s SecondarySchema, yield f
 			return err
 		}
 		if len(entries) == 0 && (t.level >= 0 || p.Level > 0) {
-			return fmt.Errorf("%w: empty secondary child/internal page", ErrCorrupt)
+			return navigationProblem(fmt.Errorf("%w: empty secondary child/internal page", ErrCorrupt), p.Number, s.IndexID)
 		}
 		for _, e := range entries {
 			if !e.minimum && (t.low != nil && compare(e.order, t.low) < 0 || t.high != nil && compare(e.order, t.high) >= 0) {
-				return fmt.Errorf("%w: secondary key outside parent range", ErrCorrupt)
+				return navigationProblem(fmt.Errorf("%w: secondary key outside parent range", ErrCorrupt), p.Number, s.IndexID)
 			}
 		}
 		if p.Level == 0 && len(entries) > 0 {
@@ -367,7 +395,7 @@ func walkSelectedSecondary(r io.ReaderAt, size int64, s SecondarySchema, yield f
 				cmp = compare(leaf, firstKey)
 			}
 			if leaf != nil && (!reverse && cmp >= 0 || reverse && cmp <= 0) {
-				return fmt.Errorf("%w: secondary cross-page order", ErrCorrupt)
+				return navigationProblem(fmt.Errorf("%w: secondary cross-page order", ErrCorrupt), p.Number, s.IndexID)
 			}
 			leaf = lastKey
 		}
@@ -396,7 +424,7 @@ func walkSelectedSecondary(r io.ReaderAt, size int64, s SecondarySchema, yield f
 				}
 				if !hasNull {
 					if unique != nil && compareSecondary(unique, e.order, columns[:s.UserFields]) == 0 {
-						return fmt.Errorf("%w: duplicate live unique secondary key", ErrCorrupt)
+						return problemAt(fmt.Errorf("%w: duplicate live unique secondary key", ErrCorrupt), ProblemIndexUnique, ProblemLocation{Page: &p.Number, IndexID: &s.IndexID, RecordPage: &p.Number, RecordOffset: &e.Offset}, "distinct live non-NULL unique keys", "duplicate")
 					}
 					unique = e.order
 				}
@@ -430,7 +458,7 @@ func walkSelectedSecondary(r io.ReaderAt, size int64, s SecondarySchema, yield f
 					hi = entries[i+1].order
 				}
 				if lo != nil && hi != nil && compare(lo, hi) >= 0 {
-					return fmt.Errorf("%w: secondary child bounds", ErrCorrupt)
+					return navigationProblem(fmt.Errorf("%w: secondary child bounds", ErrCorrupt), p.Number, s.IndexID)
 				}
 				if err = scanEntries(r, 1); err != nil {
 					return err
@@ -440,8 +468,8 @@ func walkSelectedSecondary(r io.ReaderAt, size int64, s SecondarySchema, yield f
 		}
 	}
 	for _, p := range last {
-		if selection == nil && p.Next != ^uint32(0) {
-			return fmt.Errorf("%w: secondary unvisited sibling", ErrCorrupt)
+		if fullScan && p.Next != ^uint32(0) {
+			return navigationProblem(fmt.Errorf("%w: secondary unvisited sibling", ErrCorrupt), p.Number, s.IndexID)
 		}
 	}
 	return scanCheck(r)

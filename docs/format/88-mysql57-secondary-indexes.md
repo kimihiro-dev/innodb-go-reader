@@ -1,5 +1,7 @@
 # 88. MySQL 5.7：二级元数据、查询与索引钻取
 
+CLI与HTML实现由[独立应用项目](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/README.md)维护；本章应用命令在该仓库根目录执行，库API示例在基础库根目录执行。原始验证结果保留其采集时的范围。
+
 ## 学习目标与前置概念
 
 本章保留5.7.44首次验收的样本与说明；新增明确补丁范围及源码/实例对照见[第92章](92-mysql57-patch-compatibility.md)。
@@ -111,8 +113,8 @@ visualize 对聚簇树使用实际聚簇名字，隐式身份分别为 actual / 
 ## 验证、入口与边界
 
 - [采集脚本](../../scripts/mysql57_schema.py)增加显式 `--indexes`，配套schema/indexes/source和可选FOR EXPORT快照；默认保持A批输出。
-- [索引预检](../../schema_check.go)、[CLI严格输入](../../internal/cli/schema.go)、[CLI执行](../../internal/cli/run.go)和[报告构建](../../visual/report.go)复用既有模型/解析器，无新依赖。
-- [真实生成SQL](../../scripts/generate_mysql57_secondary_fixtures.py)、[独立SQL及损坏/预算测试](../../mysql57_secondary_test.go)、[CLI测试](../../internal/cli/indexes_test.go)、[全部显式索引报告测试](../../visual/mysql57_test.go)。
+- [索引预检](../../schema_check.go)、[CLI严格输入](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/cli/schema.go)、[CLI执行](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/cli/run.go)和[报告构建](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/visual/report.go)复用既有模型/解析器，无新依赖。
+- [真实生成SQL](../../scripts/generate_mysql57_secondary_fixtures.py)、[独立SQL及损坏/预算测试](../../mysql57_secondary_test.go)、[CLI测试](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/cli/indexes_test.go)、[全部显式索引报告测试](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/visual/mysql57_test.go)。
 - [真实采集拒绝实验](../../scripts/verify_mysql57_secondary_schema.py)与[原始执行证据](../mysql57-validation/secondary/report.json)。
 
 真实SQL保存完整二级物理项的可见字段，以及覆盖/完整投影、NULL/重复键、完整范围、点查、前导等值、反序/Limit预期。隐藏身份相关SQL比较采用多重集合；来自同一物理输入的Read/Scan/HTML比较只作一致性证据。新夹具加入整表/聚簇查询/空间和JSONL/CSV原有矩阵；8.0仍使用SDI。

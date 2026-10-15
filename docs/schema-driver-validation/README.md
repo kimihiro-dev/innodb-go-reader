@@ -1,6 +1,6 @@
 # Schema驱动连接验收证据
 
-本目录保存驱动连接的驱动直连验收；用法见[CLI指南](../CLI.md#schema采集可信定义)，连接与物理读取分工见[第91章](../format/91-cli-input-preparation.md)，选择理由见[驱动连接说明](../format/91-cli-input-preparation.md)。Docker/快照输入准备测试资料保留在原目录，不代表当前命令参数。
+本目录保存驱动连接的驱动直连验收；用法见[CLI指南](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/docs/CLI.md#schema采集可信定义)，连接与物理读取分工见[第91章](../format/91-cli-input-preparation.md)，选择理由见[驱动连接说明](../format/91-cli-input-preparation.md)。Docker/快照输入准备测试资料保留在原目录，不代表当前命令参数。
 
 - [report.json](report.json)：实际环境、命令、结果、构建指纹及边界。
 - [live-report.json](live-report.json)、[live.log](live.log)：三张真实5.7.44表、三种连接方式、失败路径的验收。

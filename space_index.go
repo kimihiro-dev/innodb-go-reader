@@ -3,6 +3,12 @@ package innodb
 // indexLayout validates compact headers, physical chains and directory owners.
 // It deliberately does not decode keys, field lengths or parent child pointers.
 func (a *spaceAnalysis) indexLayout(b []byte, p Page) (deleted, free uint16, err error) {
+	location := ProblemLocation{Page: &p.Number, IndexID: &p.IndexID}
+	defer func() {
+		if err != nil && !diagnosticControl(err) {
+			err = newProblem(err, ProblemRecordLayout, location, "consistent compact headers, chains and owners", err.Error())
+		}
+	}()
 	if string(b[99:107]) != "infimum\x00" || string(b[112:120]) != "supremum" || be.Uint16(b[95:97]) != 2 || be.Uint16(b[108:110]) != 11 || b[94] != 1 || b[107]&0xf0 != 0 || nextRecord(b, supremum) != 0 {
 		return 0, 0, spaceError("index system records")
 	}
@@ -10,6 +16,7 @@ func (a *spaceAnalysis) indexLayout(b []byte, p Page) (deleted, free uint16, err
 	heaps := map[uint16]bool{}
 	headerBytes := map[int]bool{}
 	check := func(origin int) error {
+		location.RecordPage, location.RecordOffset = &p.Number, &origin
 		if err := a.step(1); err != nil {
 			return err
 		}

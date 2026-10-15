@@ -73,6 +73,7 @@ func walkTree(r io.ReaderAt, size int64, schema Schema, yield func(ScanEvent) er
 
 func walkSelectedTree(r io.ReaderAt, size int64, schema Schema, yield func(ScanEvent) error, query *querySelection) error {
 	reverse := query != nil && query.reverse
+	fullScan := query == nil || query.fullScan
 	if len(schema.VirtualColumns) != 0 {
 		return fmt.Errorf("%w: VIRTUAL columns are unmaterialized; use ReadMaterialized explicitly", ErrUnsupported)
 	}
@@ -107,7 +108,7 @@ func walkSelectedTree(r io.ReaderAt, size int64, schema Schema, yield func(ScanE
 		stack[len(stack)-1] = task{}
 		stack = stack[:len(stack)-1]
 		if seen[t.page] {
-			return fmt.Errorf("%w: repeated/cyclic child page %d", ErrCorrupt, t.page)
+			return navigationProblem(fmt.Errorf("%w: repeated/cyclic child page %d", ErrCorrupt, t.page), t.page, schema.IndexID)
 		}
 		seen[t.page] = true
 		b, err := readPage(r, size, t.page)
@@ -119,11 +120,11 @@ func walkSelectedTree(r io.ReaderAt, size int64, schema Schema, yield func(ScanE
 			return err
 		}
 		if t.level >= 0 && int(p.Level) != t.level {
-			return fmt.Errorf("%w: page %d level %d, expected %d", ErrCorrupt, p.Number, p.Level, t.level)
+			return navigationProblem(fmt.Errorf("%w: page %d level %d, expected %d", ErrCorrupt, p.Number, p.Level, t.level), p.Number, schema.IndexID)
 		}
 		if t.level < 0 {
 			if int64(p.Level) >= size/PageSize {
-				return fmt.Errorf("%w: impossible root level", ErrCorrupt)
+				return navigationProblem(fmt.Errorf("%w: impossible root level", ErrCorrupt), p.Number, schema.IndexID)
 			}
 		}
 		previous, exists := last[p.Level]
@@ -134,31 +135,31 @@ func walkSelectedTree(r io.ReaderAt, size int64, schema Schema, yield func(ScanE
 				linked = previous.Previous == p.Number && p.Next == previous.Number
 			}
 		}
-		if !linked || query == nil && !exists && p.Previous != ^uint32(0) {
-			return fmt.Errorf("%w: page %d sibling chain does not match tree order", ErrCorrupt, p.Number)
+		if !linked || fullScan && !exists && p.Previous != ^uint32(0) {
+			return navigationProblem(fmt.Errorf("%w: page %d sibling chain does not match tree order", ErrCorrupt, p.Number), p.Number, schema.IndexID)
 		}
 		last[p.Level] = p
 		if err := scanEntries(r, uint64(p.Records)); err != nil {
 			return err
 		}
-		entries, err := decodePage(b, p, schema, pk)
+		entries, err := decodePageSources(b, p, schema, pk, query != nil && query.captureSources)
 		if err != nil {
 			return fmt.Errorf("page %d: %w", p.Number, err)
 		}
 		if len(entries) == 0 && t.level >= 0 {
-			return fmt.Errorf("%w: empty child page", ErrCorrupt)
+			return navigationProblem(fmt.Errorf("%w: empty child page", ErrCorrupt), p.Number, schema.IndexID)
 		}
 		if p.Level > 0 && len(entries) == 0 {
-			return fmt.Errorf("%w: empty internal page", ErrCorrupt)
+			return navigationProblem(fmt.Errorf("%w: empty internal page", ErrCorrupt), p.Number, schema.IndexID)
 		}
 		// Validate every local entry against its parent before selecting output.
 		for _, e := range entries {
 			if p.Level > 0 && e.child == 0 {
-				return fmt.Errorf("%w: zero child pointer", ErrCorrupt)
+				return navigationProblem(fmt.Errorf("%w: zero child pointer", ErrCorrupt), p.Number, schema.IndexID)
 			}
 			key := e.order
 			if !e.minimum && (t.low != nil && compareIndexKey(key, t.low, schema, pk) < 0 || t.high != nil && compareIndexKey(key, t.high, schema, pk) >= 0) {
-				return fmt.Errorf("%w: page %d key outside parent range", ErrCorrupt, p.Number)
+				return navigationProblem(fmt.Errorf("%w: page %d key outside parent range", ErrCorrupt, p.Number), p.Number, schema.IndexID)
 			}
 		}
 		if p.Level == 0 && len(entries) > 0 {
@@ -169,7 +170,7 @@ func walkSelectedTree(r io.ReaderAt, size int64, schema Schema, yield func(ScanE
 			if lastLeafKey != nil {
 				cmp := compareIndexKey(lastLeafKey, firstKey, schema, pk)
 				if !reverse && cmp >= 0 || reverse && cmp <= 0 {
-					return fmt.Errorf("%w: cross-page key order", ErrCorrupt)
+					return navigationProblem(fmt.Errorf("%w: cross-page key order", ErrCorrupt), p.Number, schema.IndexID)
 				}
 			}
 			lastLeafKey = lastKey
@@ -216,7 +217,7 @@ func walkSelectedTree(r io.ReaderAt, size int64, schema Schema, yield func(ScanE
 						field := &e.External[i]
 						data, err := readExternal(r, size, field)
 						if err != nil {
-							return fmt.Errorf("page %d record %d column %q: %w", p.Number, e.Offset, schema.Columns[field.Column].Name, err)
+							return problemAt(fmt.Errorf("page %d record %d column %q: %w", p.Number, e.Offset, schema.Columns[field.Column].Name, err), ProblemLOBChain, externalProblemLocation(e.Record, schema, *field), "valid current LOB chain", err.Error())
 						}
 						e.Values[field.Column], err = variableValue(schema.Columns[field.Column], data)
 						if err == nil && schema.Columns[field.Column].isText() {
@@ -271,7 +272,7 @@ func walkSelectedTree(r io.ReaderAt, size int64, schema Schema, yield func(ScanE
 					hi = entries[i+1].order
 				}
 				if (lo != nil && hi != nil && compareIndexKey(lo, hi, schema, pk) >= 0) || entries[i].child == 0 {
-					return fmt.Errorf("%w: invalid child range/pointer", ErrCorrupt)
+					return navigationProblem(fmt.Errorf("%w: invalid child range/pointer", ErrCorrupt), p.Number, schema.IndexID)
 				}
 				if err := scanEntries(r, 1); err != nil {
 					return err
@@ -281,16 +282,23 @@ func walkSelectedTree(r io.ReaderAt, size int64, schema Schema, yield func(ScanE
 		}
 	}
 	for _, p := range last {
-		if query == nil && p.Next != ^uint32(0) {
-			return fmt.Errorf("%w: level %d has unvisited next page %d", ErrCorrupt, p.Level, p.Next)
+		if fullScan && p.Next != ^uint32(0) {
+			return navigationProblem(fmt.Errorf("%w: level %d has unvisited next page %d", ErrCorrupt, p.Level, p.Next), p.Number, schema.IndexID)
 		}
 	}
 	return scanCheck(r)
 }
 
 func decodeNode(b []byte, origin, limit int, s Schema, pk []int) (pageEntry, error) {
+	return decodeNodeSources(b, origin, limit, s, pk, false)
+}
+
+func decodeNodeSources(b []byte, origin, limit int, s Schema, pk []int, capture bool) (pageEntry, error) {
 	var e pageEntry
 	e.Record = Record{Start: origin - 5, Offset: origin, NextOffset: nextRecord(b, origin), Values: make([]any, len(s.Columns))}
+	if capture {
+		e.source = &RecordSource{Offset: origin, Node: true, Fields: make([]FieldSource, len(pk))}
+	}
 	// Internal records reserve the index's NULL bitmap, but no key is nullable.
 	nullable := 0
 	for _, c := range s.initialColumns() {
@@ -321,6 +329,9 @@ func decodeNode(b []byte, origin, limit int, s Schema, pk []int) (pageEntry, err
 	lengthPos := e.Start - 1
 	for i, column := range pk {
 		c := s.Columns[column]
+		if capture {
+			e.source.Fields[i] = FieldSource{Column: column, Position: i, Name: c.Name, Kind: "stored"}
+		}
 		lengths[i] = c.fixedWidth()
 		if c.isVariable() {
 			n, next, ext, err := readVariableLength(b, lengthPos, c.variableMaxBytes(), false)
@@ -329,6 +340,9 @@ func decodeNode(b []byte, origin, limit int, s Schema, pk []int) (pageEntry, err
 			}
 			if ext {
 				return e, fmt.Errorf("%w: external node key", ErrUnsupported)
+			}
+			if capture {
+				e.source.Fields[i].Length = &ByteSpan{next + 1, lengthPos + 1}
 			}
 			lengths[i], lengthPos = n, next
 		}
@@ -342,6 +356,9 @@ func decodeNode(b []byte, origin, limit int, s Schema, pk []int) (pageEntry, err
 			return e, fmt.Errorf("%w: truncated node key", ErrCorrupt)
 		}
 		raw := b[pos : pos+n]
+		if capture {
+			e.source.Fields[i].Data = &ByteSpan{pos, pos + n}
+		}
 		value, err := decodeKeyValue(c, raw)
 		if err != nil {
 			return e, err
@@ -361,6 +378,9 @@ func decodeNode(b []byte, origin, limit int, s Schema, pk []int) (pageEntry, err
 		value := rowIDValue(raw)
 		e.RowID = &value
 		e.key = indexKey{append([]byte{}, raw...)}
+		if capture {
+			e.source.Fields = append(e.source.Fields, systemSource("DB_ROW_ID", 0, pos, pos+6))
+		}
 		pos += 6
 	}
 
@@ -368,6 +388,9 @@ func decodeNode(b []byte, origin, limit int, s Schema, pk []int) (pageEntry, err
 		return e, fmt.Errorf("%w: truncated child pointer", ErrCorrupt)
 	}
 	e.child = be.Uint32(b[pos : pos+4])
+	if capture {
+		e.source.Fields = append(e.source.Fields, systemSource("child_page", len(e.source.Fields), pos, pos+4))
+	}
 	e.End = pos + 4
 	return e, nil
 }

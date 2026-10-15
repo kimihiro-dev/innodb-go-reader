@@ -75,4 +75,4 @@ flowchart TD
 
 Schema采集仅输出元数据。独立Python夹具工具在FOR EXPORT锁内取得SQL预期和物理文件，生产命令没有复制文件、锁表或恢复能力。根预检、Read/Scan/StreamLOB、聚簇/二级查询按原契约运行；未索引VIRTUAL仍需显式仅物化入口，FULLTEXT、索引化VIRTUAL及删除全文索引后残留隐藏DOC_ID等保持拒绝。每个新增补丁另实测七类不支持布局的CLI失败清理，见[拒绝报告](../mysql57-patch-validation/rejections-report.json)。
 
-代码入口：[版本校验](../../internal/mysql57/collect.go)、[独立采集工具](../../scripts/mysql57_schema.py)、[固定元数据转换测试](../../internal/mysql57/collect_test.go)、[新增物理/SQL测试](../../mysql57_patch_test.go)。产品改动只扩大明确版本白名单和命令范围描述，没有改变物理解码器；不扩大5.7分区、系统/通用表空间、其他页大小、压缩/加密、MVCC或恢复支持。
+代码入口：[版本校验](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/mysql57/collect.go)、[独立采集工具](../../scripts/mysql57_schema.py)、[固定元数据转换测试](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/mysql57/collect_test.go)、[新增物理/SQL测试](../../mysql57_patch_test.go)。产品改动只扩大明确版本白名单和命令范围描述，没有改变物理解码器；不扩大5.7分区、系统/通用表空间、其他页大小、压缩/加密、MVCC或恢复支持。

@@ -1,5 +1,7 @@
 # 81. 离线报告：从空间到索引与字节
 
+CLI与HTML实现由[独立应用项目](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/README.md)维护；本章应用命令在该仓库根目录执行，库API示例在基础库根目录执行。原始验证结果保留其采集时的范围。
+
 <a id="学习目标与层级"></a>
 
 ## 学习目标与前置概念
@@ -30,7 +32,7 @@ flowchart TD
 
 ## API 与保留内容
 
-[visual/report.go](../../visual/report.go)提供：
+[visual/report.go](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/visual/report.go)提供：
 
 ```go
 report, err := visual.Build(ctx, reader, size, visual.Options{
@@ -95,7 +97,7 @@ LOB路径按ExternalField.Chunks的逻辑顺序列出，显示数据页/偏移/�
 
 ## 精度、安全与资源边界
 
-[visual/render.go](../../visual/render.go)先由encoding/json编码，再用UseNumber把所有JSON数字转成精确十进制字符串。HTML数据里的页号/偏移也因此是字符串；JavaScript仅将受限页号/偏移/计数转成Number，LSN和大ID保持字符串或BigInt。uint64最大值18446744073709551615有明确测试，不能经过float64中转。
+[visual/render.go](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/internal/visual/render.go)先由encoding/json编码，再用UseNumber把所有JSON数字转成精确十进制字符串。HTML数据里的页号/偏移也因此是字符串；JavaScript仅将受限页号/偏移/计数转成Number，LSN和大ID保持字符串或BigInt。uint64最大值18446744073709551615有明确测试，不能经过float64中转。
 
 html/template转义标题和链接；嵌入JSON由encoding/json转义`<`、`>`、`&`及特殊分隔符，不能用名称关闭script标签。动态文字使用textContent，原始文件字节不会作为HTML执行。报告不加载CDN、不发网络请求，也不启动服务；本地手册链接可用`--manual-dir`配置。
 

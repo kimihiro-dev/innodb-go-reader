@@ -1,6 +1,6 @@
 # InnoDB 物理文件解析手册
 
-按真实样本逐步解释文件、页、记录、列、索引、LOB 与元数据。当前范围见[第 83 章](83-release-support-matrix.md)，复验和故障定位见[第 84 章](84-release-validation.md)；旧章的限制保留教学历史，不能当作现行兼容性。操作示例见[CLI 指南](../CLI.md)，全部文档入口见[文档导航](../README.md)。
+按真实样本逐步解释文件、页、记录、列、索引、LOB 与元数据。当前范围见[第 83 章](83-release-support-matrix.md)，复验和故障定位见[第 84 章](84-release-validation.md)；旧章的限制保留教学历史，不能当作现行兼容性。操作示例见[CLI 指南](https://github.com/kimihiro-dev/innodb-go-reader-cli/blob/main/docs/CLI.md)，全部文档入口见[文档导航](../README.md)。
 
 ## 阅读顺序
 
@@ -100,6 +100,12 @@
 | [92 5.7补丁兼容](92-mysql57-patch-compatibility.md) | 哪些明确补丁已验证，源码/物理布局和TLS连接有什么差异？ | 已实现、已验证 |
 | [93 8.0补丁兼容](93-mysql80-patch-compatibility.md) | SDI版本、旧INSTANT字段计数及早期LOB如何兼容？ | 已实现、已验证 |
 | [94 分区版本兼容](94-partition-version-compatibility.md) | 5.7可信目录与8.0补丁SDI如何验证完整集合？ | 已实现、已验证 |
+| [95 独立页与本地记录](95-local-page-reading.md) | 如何只读必要页并区分原始字节、局部记录、页外引用与完整行？ | 已实现、已验证 |
+| [96 字段级物理来源](96-field-provenance.md) | 如何定位载荷、NULL位、长度项及INSTANT默认，并区分DROP、系统与LOB来源？ | 已实现、已验证 |
+| [97 聚簇列投影](97-clustered-projection.md) | 如何扫描/查询所需列、按需读取LOB并保留来源、预算及完成边界？ | 已实现、已验证 |
+| [98 结构化校验与诊断](98-structured-diagnostics.md) | 如何收集独立问题、定位来源并区分失败、依赖缺失与诊断完成？ | 已实现、已验证 |
+| [99 行列存储分析](99-row-column-storage.md) | 如何精确分解列载荷、公共记录开销、INSTANT默认和去重LOB页容量？ | 已实现、已验证 |
+| [100 聚簇与二级交叉校验](100-index-consistency.md) | 如何在可信导出前提下发现缺项、多项、值错配并避免误认证？ | 已实现、已验证 |
 
 按主题和前置概念阅读上表章节；样本中的版本和局部假设用于解释物理格式，当前支持及限制统一见第83章。各章的真实字节、源码入口与验证方法直接用于理解现有实现。
 

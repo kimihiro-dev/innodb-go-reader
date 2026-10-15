@@ -14,6 +14,7 @@ type secondarySelection struct {
 	exactLower, exactUpper *secondaryBound
 	columns                []Column
 	reverse, empty         bool
+	fullScan               bool // Diagnostic tree recheck retains complete sibling boundaries.
 }
 
 func encodeSecondaryKey(key Key, fields []SecondaryField) (indexKey, error) {

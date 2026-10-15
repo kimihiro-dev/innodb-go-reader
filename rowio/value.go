@@ -6,7 +6,7 @@ import (
 	"encoding/binary"
 	"encoding/json"
 	"fmt"
-	innodb "innodb-go-reader"
+	innodb "github.com/kimihiro-dev/innodb-go-reader"
 	"io"
 	"math"
 	"reflect"

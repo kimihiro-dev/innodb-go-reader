@@ -1,62 +1,55 @@
 # InnoDB Go Reader
 
-用Go离线读取受支持的InnoDB物理快照，解析当前存储列、索引和空间结构，并提供中文解析手册及命令行工具。物理解析使用标准库，实例Schema采集使用go.mod锁定的MySQL驱动。
+用Go离线读取受支持的MySQL InnoDB物理文件，解析当前存储列、索引和空间结构。模块为`github.com/kimihiro-dev/innodb-go-reader`，根包名`innodb`；根包、可选`rowio`和`stats`均只依赖标准库。
 
-## 从这里开始
+## 库使用
 
-- [命令行使用指南](docs/CLI.md)：十个命令、输入准备、查询、导出和失败处理。
-- [当前需求](docs/REQUIREMENTS.md)与[支持矩阵](docs/format/83-release-support-matrix.md)：准确版本、类型/布局组合、API和资源契约。
-- [01–94章解析手册](docs/format/README.md)：真实字节、逐步解码及验证方法。
-- [文档导航与验证资料](docs/README.md)、[开发约定](docs/CONVENTIONS.md)、[当前任务](docs/TODO.md)。
+需要Go 1.25或更高版本。调用方管理io.ReaderAt及文件生命周期，保证物理输入和可信定义在调用期间稳定。8.0可自动发现SDI，5.7使用可信定义；准确版本和组合见[支持矩阵](docs/format/83-release-support-matrix.md)。
 
-源码与功能以当前分支的最新提交（`HEAD`）为准，开发和构建不锁定指定标签或提交。已有版本标签仅标识历史发布；最新提交的多平台命令见[构建指引](docs/RELEASING.md)。
-
-## 正式命令行与无损导出
-
-需要Go 1.25或更高版本，并取得go.mod中的锁定依赖。在项目目录运行：
+首次引入当前模块可选择最新主分支，Go会在调用方模块文件中记录实际版本；已有历史标签不代表当前模块边界：
 
 ```sh
-go build -o /tmp/innodb-reader ./cmd/innodb-reader
-/tmp/innodb-reader metadata testdata/mysql8045/lesson_rows.ibd
-/tmp/innodb-reader check --scope rows testdata/mysql8045/lesson_rows.ibd
-/tmp/innodb-reader export --format jsonl --physical testdata/mysql8045/lesson_rows.ibd
-/tmp/innodb-reader stats --view indexes testdata/mysql8045/lesson_rows.ibd
+go get github.com/kimihiro-dev/innodb-go-reader@main
 ```
 
-| 命令 | 用途 |
-|---|---|
-| metadata / page | 元数据发现/身份预检及页信息 |
-| export / query | 当前行导出及聚簇/二级查询 |
-| check / space | 明确请求范围的严格校验及空间分析 |
-| stats / visualize | 六类统计视图及分层离线HTML |
-| schema / manifest | 驱动采集可信定义及准备完整分区清单 |
+```go
+import innodb "github.com/kimihiro-dev/innodb-go-reader"
 
-JSONL/CSV采用带类型的无损协议，可由公开`rowio`包读回；stats输出精确整数字符串和比例分子/分母。stdout只写数据，stderr写执行摘要；`--output`完整成功后原子发布，默认不覆盖。JSONL须核对end，CSV须核对执行状态，流式失败可能保留前缀。
+result, err := innodb.ReadAuto(reader, size)
+if err != nil {
+    return err
+}
+for _, record := range result.Records {
+    consume(record.Values)
+}
+```
 
-5.7单表使用可信`--schema`及可选`--indexes`；8.0自动发现SDI。完整分区使用`--manifest`，分别采用8.0 SDI清单v1或5.7可信目录清单v2。Schema命令仅采元数据，物理快照由外部备份工具提供；操作及前提以CLI指南为准。
-
-Go读取例子：
+上例中的reader、size和consume由调用方提供。Read保留完整结果，Scan系列按行交付；流式消费者同时检查error与Complete。Diagnose及一致性报告还需区分Complete与Passed，局部/投影读取不认证未请求范围。
 
 ```sh
 go run ./examples/read testdata/mysql8045/lesson_rows.ibd testdata/mysql8045/lesson_rows.json
+go build ./...
+go test -race -timeout=25m ./...
+go vet ./...
 ```
 
-本例按聚簇键及schema列序输出：
+## 能力与文档
 
-```json
-[-3,42,"InnoDB"]
-[2,null,null]
-[7,0,""]
-[12,-5,"你好"]
-```
+- 元数据与严格读取：SDI、可信Schema、聚簇/二级索引、当前列值和LOB。
+- 按需访问：流式扫描、点查/范围、列投影、原始大LOB和完整分区集合。
+- 解释与校验：局部页、字段来源、结构化诊断、行列存储分析及有可信证据的索引交叉校验。
+- 辅助包：`rowio`提供带类型无损JSONL/CSV，`stats`提供精确空间统计。
+- [当前需求](docs/REQUIREMENTS.md)、[支持矩阵](docs/format/83-release-support-matrix.md)、[01–100章手册](docs/format/README.md)、[文档导航](docs/README.md)。
+- [项目边界与联合开发](docs/LIBRARY_ASSESSMENT.md)、[开发约定](docs/CONVENTIONS.md)、[验证与库交付](docs/RELEASING.md)。
 
-`Read/ReadAuto`保留完整结果，`Scan`系列按行交付；调用方管理ReaderAt及文件生命周期并保证定义/快照稳定。不同入口的成功范围、LOB物化、预算和取消边界见支持矩阵。
+## CLI与可视化
+
+十个命令、实例元数据采集和HTML报告已迁入独立的[innodb-go-reader-cli](https://github.com/kimihiro-dev/innodb-go-reader-cli)。本仓库不再包含cmd、采集器或HTML实现；CLI二进制仍名为innodb-reader。本地同级目录的联合开发方式见项目边界文档。
+
+旧导入`innodb-go-reader`须改为正式模块路径，rowio/stats沿用相应子包名；旧公开visual包迁为CLI内部实现，不保留转发层。外部消费者通过正式模块路径依赖已推送的库提交或版本；本地联合开发使用Go工作区。
 
 ## 支持边界
 
-- 明确验收的MySQL 5.7与8.0补丁、16 KiB、独立非压缩非加密表空间，DYNAMIC/COMPACT；版本白名单和具体组合见[当前矩阵](docs/format/83-release-support-matrix.md)。8.0.29不纳入兼容范围。
-- 支持已有数值、文本/二进制、时间、ENUM/SET、JSON、二维空间值、NULL及已验收的聚簇/普通二级、当前LOB、DML/DDL、生成列和分区组合；不推定任意类型/精度/版本组合均可读。
-- 不提供系统/通用表空间解析、压缩/加密、redo/undo/MVCC恢复、通用SQL或VIRTUAL表达式求值；系统空间教材不代表解析支持。
-- 完整类型物化单值上限仍为16 MiB；元数据或空间分析成功不等于列值、事务可见性及全部索引树均已认证。
+明确验收的5.7/8.0补丁、16KiB、独立非压缩非加密表空间，DYNAMIC/COMPACT；不推定任意类型/DDL/版本组合均受支持。完整物化单值上限16MiB，StreamLOB另按预算读取可信原始引用。不提供系统/通用表空间解析、redo/undo/MVCC恢复、通用SQL、VIRTUAL求值或双快照比较。物理格式与成功范围以支持矩阵为准。
 
-验证用`go test ./...`；按修改范围选择相关测试及[复验命令](docs/format/84-release-validation.md)。当前文档直接描述实现状态，不维护决议、历史施工计划或已完成任务流水。
+开发跟随当前分支最新提交，已有标签只标识历史版本；构建及验证记录实际源码，固定夹具与独立证据保持原样。
